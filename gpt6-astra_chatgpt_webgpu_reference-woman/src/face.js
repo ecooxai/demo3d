@@ -5,8 +5,8 @@ const PI=Math.PI, clamp=THREE.MathUtils.clamp;
 const gauss=(x,m,s)=>Math.exp(-(((x-m)/s)**2));
 const smooth=t=>t*t*(3-2*t);
 const profiles=[
- [-1.18,.015,.20,.13],[-1.12,.145,.40,.25],[-1.01,.285,.51,.35],
- [-.83,.435,.56,.45],[-.61,.585,.58,.54],[-.36,.71,.59,.62],
+ [-1.18,.015,.20,.13],[-1.12,.160,.40,.25],[-1.01,.311,.51,.35],
+ [-.83,.454,.56,.45],[-.61,.593,.58,.54],[-.36,.71,.59,.62],
  [-.10,.77,.58,.68],[.18,.79,.565,.71],[.45,.80,.58,.73],
  [.71,.775,.595,.72],[.96,.72,.56,.67],[1.18,.62,.46,.58],
  [1.37,.43,.29,.43],[1.50,.16,.10,.17],[1.54,.012,.01,.012]
@@ -15,33 +15,52 @@ function profile(y){
  let i=0;while(i<profiles.length-2&&y>profiles[i+1][0])i++;
  const p=profiles[i],q=profiles[i+1],t=clamp((y-p[0])/(q[0]-p[0]),0,1);
  const before=profiles[Math.max(0,i-1)],after=profiles[Math.min(profiles.length-1,i+2)];
- return [1,2,3].map(k=>{
+ const dimensions=[1,2,3].map(k=>{
   const h=q[0]-p[0], m0=(q[k]-before[k])/(q[0]-before[0]),m1=(after[k]-p[k])/(after[0]-p[0]);
   return (2*t*t*t-3*t*t+1)*p[k]+(t*t*t-2*t*t+t)*h*m0+(-2*t*t*t+3*t*t)*q[k]+(t*t*t-t*t)*h*m1;
  });
+ // A rounded chin cap meets the lower-face spline with the same width and tangent.
+ // This changes the silhouette itself without changing the crown/chin bounds or tessellation.
+ if(y<profiles[1][0]){
+  const h=profiles[1][0]-profiles[0][0],u=clamp(y-profiles[0][0],0,h);
+  const w0=profiles[0][1],w1=profiles[1][1],slope=(profiles[2][1]-w0)/(profiles[2][0]-profiles[0][0]);
+  const b=(2*w1*slope*h-(w1*w1-w0*w0))/(h*h),a=(w1*w1-w0*w0-b*h*h)/h;
+  dimensions[0]=Math.sqrt(w0*w0+a*u+b*u*u);
+ }
+ return dimensions;
 }
 function sculpt(x,y){
  let d=.058*gauss(Math.abs(x),.46,.24)*gauss(y,-.15,.28);
  d+=.050*gauss(Math.abs(x),.34,.25)*gauss(y,.04,.23);
- d+=.033*gauss(Math.abs(x),.34,.25)*gauss(y,.52,.18);
+ d+=.018*gauss(Math.abs(x),.34,.25)*gauss(y,.41,.14);
  d-=.022*gauss(Math.abs(x),.35,.25)*gauss(y,.25,.16);
  d+=.126*gauss(x,0,.124)*gauss(y,.20,.37);
  d+=.090*gauss(x,0,.125)*gauss(y,-.095,.23);
- d+=.169*gauss(x,0,.134)*gauss(y,-.237,.128);
- d+=.073*gauss(Math.abs(x),.143,.077)*gauss(y,-.285,.093);
- d+=.031*gauss(x,0,.057)*gauss(y,-.345,.071);
- d-=.009*gauss(Math.abs(x),.112,.047)*gauss(y,-.327,.031);
+ const nasalBlend=1-smooth(clamp((y+.04)/.13,0,1));
+ // Compact the local edit below the orbits, preserving the established eye and corneal surfaces.
+ d+=(.169-.019*nasalBlend)*gauss(x,0,.134+.005*nasalBlend)*gauss(y,-.237,.128+.004*nasalBlend);
+ d+=(.073-.005*nasalBlend)*gauss(Math.abs(x),.143,.077+.006*nasalBlend)*gauss(y,-.285,.093+.010*nasalBlend);
+ d+=(.031-.002*nasalBlend)*gauss(x,0,.057+.004*nasalBlend)*gauss(y,-.345,.071+.007*nasalBlend);
+ d-=(.009-.0025*nasalBlend)*gauss(Math.abs(x),.112,.047+.007*nasalBlend)*gauss(y,-.327,.031+.005*nasalBlend);
  d+=.037*gauss(x,0,.31)*gauss(y,-.58,.17);
  d-=.003*gauss(x,0,.046)*gauss(y,-.46,.080);
  d+=.004*gauss(Math.abs(x),.055,.033)*gauss(y,-.46,.085);
- d+=.037*gauss(x,0,.24)*gauss(y,-.92,.13);
- d-=.014*gauss(x,0,.20)*gauss(y,-.79,.05);
+ d+=.035*gauss(x,0,.265)*gauss(y,-.93,.16);
+ d-=.010*gauss(x,0,.225)*gauss(y,-.79,.067);
  return d;
+}
+function roundedSection(c,p){
+ const join=.40;
+ if(c>=join)return Math.pow(c,p);
+ // Match value, first derivative and second derivative at the transition.
+ // The finite slope at the side avoids a flat superellipse strip at the jaw.
+ const t=c/join,a=(p-3)*(p-5)/8,b=(p-1)*(5-p)/4,d=(p-1)*(p-3)/8;
+ return Math.pow(join,p)*t*(a+t*t*(b+d*t*t));
 }
 function unblendedZ(x,y){
  const [w,front]=profile(y);
  const co=Math.sqrt(Math.max(0,1-(x/w)**2));
- return front*Math.pow(co,.62)+sculpt(x,y)*Math.pow(co,.8);
+ return front*roundedSection(co,.62)+sculpt(x,y)*roundedSection(co,.8);
 }
 function orbitalRadius(x,y,s){
  const cx=s*.342,X=(x-cx)/.185,dy=y-.25-.013*s*X,Y=Math.abs(dy/(dy>=0?.080:.058));
@@ -129,7 +148,7 @@ function aperture(cx,s,a){
 }
 function makeEye(s,skin,texture){
  const cx=s*.342,cy=.25,g=new THREE.Group();g.name=s<0?'left-eye':'right-eye';
- const sclera=new THREE.MeshPhysicalMaterial({color:'#d9d4d0',roughness:.27,metalness:0,clearcoat:.4,clearcoatRoughness:.09,specularIntensity:.55});
+ const sclera=new THREE.MeshPhysicalMaterial({color:'#d9d4d0',roughness:.40,metalness:0,clearcoat:.03,clearcoatRoughness:.22,specularIntensity:.20,envMapIntensity:.45});
  const sp=[],si=[],su=[],SN=96,SR=24;
  for(let j=0;j<=SR;j++)for(let i=0;i<=SN;i++){
   const r=j/SR,a=i/SN*2*PI,[ex,ey]=aperture(cx,s,a),x=THREE.MathUtils.lerp(cx,ex,r),y=THREE.MathUtils.lerp(cy,ey,r);
@@ -159,9 +178,11 @@ function makeEye(s,skin,texture){
    if(my<cy+.080*h+.013*s*t-.001&&my>cy-.058*h+.013*s*t+.001)idx.push(...tri);
   }
  }
- const iris=new THREE.MeshPhysicalMaterial({color:texture?'#ffffff':'#4f2d1e',map:texture,roughness:.44,clearcoat:.08,clearcoatRoughness:.2,specularIntensity:.25});
+ const iris=new THREE.MeshPhysicalMaterial({color:texture?'#ffffff':'#4f2d1e',map:texture,roughness:.48,clearcoat:0,specularIntensity:.10,envMapIntensity:.40});
  g.add(mesh(buffer(pos,idx,uv),iris,'brown-iris-and-pupil'));
- const corneaMaterial=new THREE.MeshPhysicalMaterial({name:'corneal-tear-film',color:'#ffffff',roughness:.035,metalness:0,transmission:1,thickness:.018,ior:1.376,specularIntensity:1,clearcoat:1,clearcoatRoughness:.045,attenuationColor:'#fff8f0',attenuationDistance:2,envMapIntensity:.85,depthWrite:false});
+ // The cornea is one moist dielectric surface; an additional clearcoat would
+ // duplicate its reflections and make the photographed eye color look glazed.
+ const corneaMaterial=new THREE.MeshPhysicalMaterial({name:'corneal-tear-film',color:'#ffffff',roughness:.075,metalness:0,transmission:1,thickness:.009,ior:1.376,specularIntensity:.75,clearcoat:0,attenuationColor:'#fff8f0',attenuationDistance:2,envMapIntensity:.45,depthWrite:false});
  const cornea=mesh(buffer(corneaPos,idx,uv),corneaMaterial,'transparent-corneal-dome');
  cornea.castShadow=false;cornea.receiveShadow=false;cornea.renderOrder=2;g.add(cornea);
  // Small curved highlights describe the studio softboxes reflected by the tear film.
@@ -193,9 +214,9 @@ function makeEye(s,skin,texture){
   crease.push([THREE.MathUtils.lerp(p[0],ox,v),THREE.MathUtils.lerp(p[1],oy,v),faceZ(THREE.MathUtils.lerp(p[0],ox,v),THREE.MathUtils.lerp(p[1],oy,v))+.00015]);
  }
  g.add(mesh(tube(upper,.00115,64,5),rimMat,'upper-lash-margin'));
- g.add(mesh(tube(lower,.00080,64,5),new THREE.MeshPhysicalMaterial({color:'#b58b80',roughness:.39,clearcoat:.3,clearcoatRoughness:.10,specularIntensity:.24}),'lower-waterline'));
+ g.add(mesh(tube(lower,.00080,64,5),new THREE.MeshPhysicalMaterial({color:'#b58b80',roughness:.46,clearcoat:0,specularIntensity:.16,envMapIntensity:.45}),'lower-waterline'));
  const tearLine=lower.map(p=>[p[0],p[1]+.0003,p[2]+.0006]);
- const tearFilm=mesh(tube(tearLine,.00055,64,5),new THREE.MeshPhysicalMaterial({color:'#eed1c3',roughness:.055,clearcoat:1,clearcoatRoughness:.02,transparent:true,opacity:.14,depthWrite:false}),'lower-tear-meniscus');
+ const tearFilm=mesh(tube(tearLine,.00055,64,5),new THREE.MeshPhysicalMaterial({color:'#eed1c3',roughness:.14,clearcoat:0,specularIntensity:.20,envMapIntensity:.30,transparent:true,opacity:.065,depthWrite:false}),'lower-tear-meniscus');
  tearFilm.castShadow=false;g.add(tearFilm);
  const creaseCurve=crease.slice(7,58),creaseGeo=tube(creaseCurve,.00065,48,4),cp=creaseGeo.attributes.position,path=creaseGeo.parameters.path;
  for(let k=0;k<cp.count;k++){
@@ -216,7 +237,7 @@ function makeEye(s,skin,texture){
  }
  const lashGeo=mergeGeometries(lashes);lashes.forEach(x=>x.dispose());
  g.add(mesh(lashGeo,new THREE.MeshStandardMaterial({color:'#53423b',roughness:.58}),'individual-eyelashes'));
- const tear=mesh(new THREE.SphereGeometry(.011,16,12),new THREE.MeshPhysicalMaterial({color:'#bb7c78',roughness:.34}),'lacrimal-caruncle');
+ const tear=mesh(new THREE.SphereGeometry(.011,16,12),new THREE.MeshPhysicalMaterial({color:'#bb7c78',roughness:.52,specularIntensity:.18}),'lacrimal-caruncle');
  const ta=aperture(cx,s,s>0?PI:0);tear.position.set(...ta);tear.scale.set(1,.62,.46);g.add(tear);
  return g;
 }
@@ -228,7 +249,7 @@ function makeMouth(){
  for(const upper of [true,false]){
   const p=[],idx=[],c=[],uv=[];
   for(let j=0;j<=NY;j++)for(let i=0;i<=NX;i++){
-   const t=-1+2*i/NX,x=.273*t,v=j/NY,w=Math.max(0,1-t*t),sy=seam(t);
+   const t=-1+2*i/NX,x=.241*t,v=j/NY,w=Math.max(0,1-t*t),sy=seam(t);
    const cupid=(.81+.15*gauss(t,-.30,.28)+.12*gauss(t,.35,.25)-.07*gauss(t,-.025,.18));
    const edge=upper?sy+.088*w**.7*cupid:sy-.094*w**.72;
    const y=THREE.MathUtils.lerp(edge,sy,v),z=faceZ(x,y)+.001+w*(.024*smooth(v)+.022*Math.sin(v*PI));
@@ -240,7 +261,7 @@ function makeMouth(){
   group.add(mesh(buffer(p,idx,uv,c),new THREE.MeshPhysicalMaterial({vertexColors:true,roughness:.41,specularIntensity:.38,clearcoat:.12,clearcoatRoughness:.30,side:THREE.DoubleSide}),upper?'upper-lip':'lower-lip'));
  }
  const points=[];
- for(let i=0;i<=90;i++){const t=-1+2*i/90,x=t*.272,y=seam(t);points.push([x,y,faceZ(x,y)+.0018+.024*(1-t*t)]);}
+ for(let i=0;i<=90;i++){const t=-1+2*i/90,x=t*.240,y=seam(t);points.push([x,y,faceZ(x,y)+.0018+.024*(1-t*t)]);}
  group.add(mesh(tube(points,.0019,90,5),new THREE.MeshStandardMaterial({color:'#96605a',roughness:.65}),'closed-mouth-crease'));
  return group;
 }
@@ -351,6 +372,8 @@ export function createHead({textures=true}={}){
  const iris=textures?irisMap():null;
  root.add(makeEye(-1,skin,iris),makeEye(1,skin,iris),makeMouth(),makeNostrils(),makeEar(-1,skin),makeEar(1,skin),makeBrows());
  refineProportions(root);
- root.userData={source:'Original procedural anatomical surface; no external geometry, photo projection, or downloaded textures.',featureUnits:'head local; chin -1.18, crown 1.54'};
+ root.getObjectByName('individual-eyebrow-fibers').position.y=-.10;
+ const leftEar=root.getObjectByName('left-ear');leftEar.position.set(-.045,.13,.16);
+ root.userData={source:'Original procedural anatomical surface. Skin and eye color can be baked separately from the sole user-supplied reference; no external geometry.',featureUnits:'head local; chin -1.18, crown 1.54'};
  return root;
 }

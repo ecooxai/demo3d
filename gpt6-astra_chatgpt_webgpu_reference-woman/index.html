@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#e4edf0">
-  <meta name="description" content="An original three-dimensional portrait study, sculpted procedurally from one reference. Interactive WebGPU gallery by GPT-6 Astra.">
-  <title>GPT-6 Astra — Portrait No. 01</title>
+  <meta name="description" content="An original three-dimensional portrait study, sculpted procedurally from one reference. Interactive WebGPU gallery by GPT-6 Astra Pro.">
+  <title>GPT-6 Astra Pro — Portrait No. 01</title>
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -18,7 +18,7 @@
     <main>
       <section class="title-block" aria-labelledby="page-title">
         <p class="eyebrow"><span></span> ORIGINAL 3D STUDY <span></span></p>
-        <h1 id="page-title">GPT-6 Astra</h1>
+        <h1 id="page-title">GPT-6 Astra Pro</h1>
         <p class="subtitle">Portrait No. 01 <span>—</span> A study in quiet presence</p>
       </section>
       <section class="portrait-layout" aria-label="Interactive 3D portrait">
@@ -47,9 +47,9 @@
         <span class="control-divider export-divider"></span>
         <div class="export-actions"><button class="icon-button" id="capture-button" aria-label="Save portrait PNG" title="Save PNG"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5 6 8H3v12h18V8h-3l-2-3H8Z"/><circle cx="12" cy="13" r="3"/></svg></button><button class="icon-button" id="export-button" aria-label="Export 3D model as GLB" title="Export GLB"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 16v5h16v-5"/></svg></button></div>
       </section>
-      <section class="details-strip" aria-label="About this study"><div><span class="detail-heading">THE SUBJECT</span><p>Soft light. A familiar gaze.</p></div><div><span class="detail-heading">THE CRAFT</span><p>Original geometry & procedural materials</p></div><div class="performance"><span class="detail-heading" id="resolution-label">900 × 1200</span><p id="performance-label">Native rendering · demand driven</p></div></section>
+      <section class="details-strip" aria-label="About this study"><div><span class="detail-heading">THE SUBJECT</span><p>Soft light. A familiar gaze.</p></div><div><span class="detail-heading">THE CRAFT</span><p>Sculpted geometry · one photographic reference</p></div><div class="performance"><span class="detail-heading" id="resolution-label">900 × 1200</span><p id="performance-label">Native rendering · demand driven</p></div></section>
     </main>
-    <footer><span>GPT-6 ASTRA <span class="footer-dot">·</span> CHATGPT <span class="footer-dot">·</span> WEBGPU</span><span>2026 <span class="footer-dot">/</span> DIGITAL PORTRAIT SERIES</span></footer>
+    <footer><span>GPT-6 ASTRA PRO <span class="footer-dot">·</span> CHATGPT <span class="footer-dot">·</span> WEBGPU</span><span>2026 <span class="footer-dot">/</span> DIGITAL PORTRAIT SERIES</span></footer>
   </div>
   <aside class="settings-panel" id="settings-panel" hidden aria-labelledby="settings-title"><div class="settings-heading"><p class="eyebrow">YOUR STUDIO</p><button class="icon-button" id="settings-close" aria-label="Close settings">×</button></div><h2 id="settings-title">Display settings</h2><label for="backend-select">Renderer</label><select id="backend-select"><option value="webgpu">WebGPU · preferred</option><option value="webgl">WebGL · compatibility</option></select><p class="field-note">Renderer changes are always your choice.</p><label for="resolution-select">Render resolution</label><select id="resolution-select"><option value="900">900 × 1200 · default</option><option value="1080">1080 × 1440 · HD</option><option value="1280">1280 × 1707 · high</option><option value="2k">2048 × 2731 · 2K</option><option value="4k">3072 × 4096 · 4K</option></select><label for="orientation-select">Orientation</label><select id="orientation-select"><option value="portrait">Portrait</option><option value="landscape">Landscape</option></select><label for="lighting-select">Studio lighting</label><select id="lighting-select"><option value="soft">Soft daylight</option><option value="warm">Warm gallery</option><option value="sculpture">Sculpture study</option></select><button class="solid-button apply-settings" id="apply-settings">Apply display settings</button><p class="settings-bottom">Drag to orbit · scroll or pinch to zoom.<br>Rendering pauses while this tab is hidden.</p><div class="settings-stat" id="settings-stat">Preparing geometry…</div></aside>
   <div class="settings-shade" id="settings-shade" hidden></div><div class="toast" id="toast" role="status" aria-live="polite" hidden></div>

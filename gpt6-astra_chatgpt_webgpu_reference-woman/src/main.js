@@ -4,11 +4,14 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFExporter } from 'three/addons/exporters/GLTFExporter.js';
 import { createHead } from './face.js';
 import { applyReferenceSkin } from './reference-skin.js';
+import { applyReferenceNeck } from './reference-neck.js';
 import { createHair } from './hair.js';
+import { createFiberHair } from './hair-fibers.js';
 import { createBlouse, createNeck } from './blouse.js';
 
 const $ = (id) => document.getElementById(id);
-const state = { backend: new URLSearchParams(location.search).get('backend') === 'webgl' ? 'webgl' : 'webgpu', width: 900, height: 1200, iteration: 12, score: 61, renderedFrames: 0, renderMs: 0, rotating: false, view: 'front', ready: false, lighting: 'soft' };
+const fiberCandidate=new URLSearchParams(location.search).get('hair')==='fibers';
+const state = { backend: new URLSearchParams(location.search).get('backend') === 'webgl' ? 'webgl' : 'webgpu', width: 900, height: 1200, iteration: fiberCandidate?24:23, score: fiberCandidate?55:67, renderedFrames: 0, renderMs: 0, rotating: false, view: 'front', ready: false, lighting: 'soft' };
 const scene = new THREE.Scene();
 scene.background = new THREE.Color('#cbe3f3');
 const model = new THREE.Group();
@@ -17,10 +20,18 @@ const headPivot = new THREE.Group();
 headPivot.name = 'Head_pose';
 headPivot.position.y = 2.95;
 headPivot.rotation.z = -0.17;
+headPivot.rotation.y = 0.16;
 const anatomicalHead=createHead();
-const referenceReady=applyReferenceSkin(anatomicalHead).then(atlas=>{state.textureBakeMs=atlas.userData.bakeMs;return atlas;});
-headPivot.add(anatomicalHead, createHair());
-model.add(headPivot, createNeck(), createBlouse());
+const anatomicalHair=fiberCandidate?createFiberHair():createHair();
+const skinReady=applyReferenceSkin(anatomicalHead).then(atlas=>{state.textureBakeMs=atlas.userData.bakeMs;return atlas;});
+headPivot.add(anatomicalHead, anatomicalHair);
+const bodyPose=new THREE.Group();bodyPose.name='Relaxed shoulder counterpose';
+bodyPose.position.y=1;bodyPose.rotation.z=.045;
+const anatomicalNeck=createNeck(),anatomicalBlouse=createBlouse();
+anatomicalNeck.position.y=-1;anatomicalBlouse.position.y=-1;
+bodyPose.add(anatomicalNeck,anatomicalBlouse);
+model.add(headPivot,bodyPose);
+const referenceReady=Promise.all([skinReady,applyReferenceNeck(anatomicalNeck)]);
 scene.add(model);
 let triangles = 0, meshes = 0;
 model.traverse((object) => { if (object.isMesh) { meshes++; triangles += (object.geometry.index?.count || object.geometry.attributes.position.count) / 3; } });
@@ -85,7 +96,7 @@ function updateStats() {
   $('settings-stat').textContent = `${meshes.toLocaleString()} meshes · ${Math.round(triangles).toLocaleString()} triangles · ${state.renderMs.toFixed(1)} ms CPU submission${performance.memory ? ` · ${Math.round(performance.memory.usedJSHeapSize/1048576)} MB JS heap` : ''}`;
 }
 function updateProjection() {
-  const verticalSpan = state.view === 'detail' ? 3.0 : 6.2;
+  const verticalSpan = state.view === 'detail' ? 3.0 : 6.4;
   const aspect = state.width/state.height;
   // Keep the full bust visible when landscape orientation is requested.
   const viewHeight = Math.max(verticalSpan, (state.view === 'detail' ? 2.4 : 4.6)/aspect);
@@ -145,7 +156,7 @@ async function capture({download: shouldDownload=true, showcase=false}={}) {
     const source=canvas;canvas=document.createElement('canvas');canvas.width=state.width;canvas.height=state.height+Math.round(state.height*.1);
     const ctx=canvas.getContext('2d');ctx.drawImage(source,0,0);ctx.fillStyle='#07090c';ctx.fillRect(0,state.height,state.width,canvas.height-state.height);
     ctx.fillStyle='#fff';ctx.textAlign='center';ctx.font=`600 ${Math.round(state.width*.031)}px Arial`;
-    ctx.fillText('GPT-6 ASTRA  /  CHATGPT  /  WEBGPU',state.width/2,state.height+(canvas.height-state.height)*.60);
+    ctx.fillText('GPT-6 ASTRA PRO  /  CHATGPT  /  WEBGPU',state.width/2,state.height+(canvas.height-state.height)*.60);
   }
   const blob=await new Promise((resolve,reject)=>canvas.toBlob(b=>b?resolve(b):reject(new Error('PNG encoding failed')),'image/png'));
   if(shouldDownload)download(blob,`gpt6-astra_chatgpt_webgpu_portrait-${state.view}${showcase?'-showcase':''}.png`);

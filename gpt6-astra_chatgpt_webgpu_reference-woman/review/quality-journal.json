@@ -1,0 +1,15 @@
+{
+  "goal": 98,
+  "minimum_requested": 95,
+  "goal_achieved": false,
+  "method": "Visual self-assessment against the sole uploaded image, supplemented by independent agent review. Scores are subjective and are not a certification of AAA production quality.",
+  "scope": "Recorded assessments whose numeric results remain available. No missing historical scores have been invented.",
+  "current_accepted_iteration": 23,
+  "current_accepted_score": 67,
+  "assessments": [
+    {"iteration":20,"score":63,"reviewer":"reference_art_review","decision":"baseline at that time","notes":"Reference skin and revised face optics helped; hair coverage, roots, long clumps, and tailoring still limited realism."},
+    {"iteration":22,"score":67,"reviewer":"root and reference_art_review","decision":"accepted","notes":"Fuller card groom, finer fringe, cheek strap removed, brighter cotton and shoulder counterpose. Crown seams and regular long hair bundles remain visible."},
+    {"iteration":23,"score":67,"reviewer":"reference_art_review","decision":"accepted","notes":"Neck colors from the same uploaded reference improve continuity with the face. Keep facial proportions stable while correcting hair. Upper neck rim was subsequently tucked inside jaw geometry."},
+    {"iteration":24,"score":55,"reviewer":"root","decision":"rejected experimental fiber-only groom","notes":"Twelve thousand subpixel tubes produce sparse, noisy coverage, bald crown gaps and two uniform long bundles. Three million triangles did not improve visual quality. Default remains the accepted card groom."}
+  ]
+}
