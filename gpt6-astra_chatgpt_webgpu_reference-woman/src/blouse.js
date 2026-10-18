@@ -1,5 +1,21 @@
 import * as THREE from 'three';
 
+// Candidate98. Additional width belongs only to outer cotton and sleeves;
+// the central neckline, collar, placket and buttons keep their coordinates.
+const OUTER_WIDTH98=.12;
+function outerWidth98(x){
+  const a=Math.abs(x),q=Math.max(0,Math.min(1,(a-.84)/.76)),s=q*q*(3-2*q);
+  const ds=q>0&&q<1?6*q*(1-q)/.76:0;
+  return {x:x*(1+OUTER_WIDTH98*s),jacobian:1+OUTER_WIDTH98*s+OUTER_WIDTH98*a*ds};
+}
+function inverseOuterWidth98(x){
+  if(OUTER_WIDTH98===0)return x;
+  let old=x/(1+OUTER_WIDTH98);
+  for(let i=0;i<7;i++){const sample=outerWidth98(old);old-=(sample.x-x)/sample.jacobian;}
+  return old;
+}
+
+
 // Original procedural tailoring. No imported meshes, photographs or texture assets.
 // Bust coordinate system: crown 4.47, chin 1.83, shoulder contour 1.37, crop -1.45.
 const TAU = Math.PI * 2;
@@ -373,7 +389,7 @@ function contactSurfacePoint(x,y){
  * edgeWeight fades over .045 local units at open edges and normal.z .35-.65;
  * a valid sample may have zero weight. Callers should blend attraction by it.
  */
-export function sampleBlouseFrontAtXY(x,y){
+function sampleBlouseFrontAtXYBase98(x,y){
   const p=contactSurfacePoint(x,y);
   if(!p)return null;
   const normal=bodyNormal(p.sourceX,y);
@@ -628,8 +644,9 @@ function broadenShoulders(group) {
     for(let i=0;i<p.count;i++){
       const x=p.getX(i),a=Math.abs(x),q=clamp((a-.20)/.75,0,1),s=q*q*(3-2*q);
       const ds=(q>0&&q<1)?6*q*(1-q)/.75:0,scale=1+.13*s,jacobian=scale+.13*a*ds;
-      p.setX(i,x*scale);
-      const normal=new THREE.Vector3(n.getX(i)/jacobian,n.getY(i),n.getZ(i)).normalize();n.setXYZ(i,normal.x,normal.y,normal.z);
+      const outer=outerWidth98(x*scale);
+      p.setX(i,outer.x);
+      const normal=new THREE.Vector3(n.getX(i)/(jacobian*outer.jacobian),n.getY(i),n.getZ(i)).normalize();n.setXYZ(i,normal.x,normal.y,normal.z);
     }
     p.needsUpdate=true;n.needsUpdate=true;g.computeBoundingBox();g.computeBoundingSphere();
   });
@@ -702,4 +719,15 @@ export function createNeck() {
   g.setAttribute('color',new THREE.Float32BufferAttribute(colors,3));
   mesh(group,'neck-smooth-anatomical-surface',g,material);
   group.userData.originalGeometry=true;return group;
+}
+
+// The contact field receives the identical widened surface used by the mesh.
+export function sampleBlouseFrontAtXY(x,y){
+  if(!Number.isFinite(x)||!Number.isFinite(y))return null;
+  const sample=sampleBlouseFrontAtXYBase98(inverseOuterWidth98(x),y);
+  if(!sample||OUTER_WIDTH98===0)return sample;
+  const transform=outerWidth98(sample.point.x);
+  sample.point.x=transform.x;sample.normal.x/=transform.jacobian;sample.normal.normalize();
+  sample.xyResidual=Math.hypot(sample.point.x-x,sample.point.y-y);
+  return sample;
 }

@@ -1,0 +1,727 @@
+{
+  "audit": "portrait-balance99-contact",
+  "sourceOnly": true,
+  "native": false,
+  "sources": {
+    "harness": {
+      "file": "review/hair-contact86-audit.mjs",
+      "sha256": "09ff9d1c07c0592cf63c9f6c49f470c8e562268884b86adf03c41196efd9bd10",
+      "bytes": 14911
+    },
+    "face": {
+      "file": "src/face.js",
+      "sha256": "0c70ec7cff943e14445daed5cf40dd5aee251756897152c72a3f0b8ea3119321",
+      "bytes": 22966
+    },
+    "hair": {
+      "file": "review/hair-groom-candidate94.js",
+      "sha256": "c8bdbb5db4ccdd1de25ab5e7a50f3943e153c2ff3537a732a6c2f46e7466d6e4",
+      "bytes": 36672
+    },
+    "contact": {
+      "file": "review/hair-contact-candidate86.js",
+      "sha256": "d90133757b57670870566246ef774814e57a1e1b777119e3c772cc0ca50fe975",
+      "bytes": 4932
+    },
+    "blouse81": {
+      "file": "review/blouse-candidate81.js",
+      "sha256": "031961d1959f55342a93a6b56973805e1e1b5d124f9b799d86d17b41d276b6e4",
+      "bytes": 38166
+    },
+    "blouse98": {
+      "file": "review/blouse-candidate98.js",
+      "sha256": "0b453527a57b67e41b3871e48b9f8be6466c342d76c69a744a7d1ba08bb9351d",
+      "bytes": 39350
+    },
+    "balance": {
+      "file": "review/portrait-balance-candidate99.js",
+      "sha256": "467873c3ba67ae6411781bd3600f888d2d6af1fd7f83d392824da241e78fbb67",
+      "bytes": 8212
+    }
+  },
+  "shifts": [
+    0,
+    -0.12,
+    -0.24
+  ],
+  "formula": "Xprime=X+shiftX*(1-S5(abs(X);.90,1.75)*(1-S5(Y;1.30,2.00))); Y/Z fixed",
+  "sourceFormulaCheck": {
+    "samples": 5324,
+    "maximumAbsoluteWeightDifference": 0
+  },
+  "variants": [
+    {
+      "name": "frozen81-contact0.5",
+      "blouseSource": "review/blouse-candidate81.js",
+      "effectiveBlouseSHA256": "031961d1959f55342a93a6b56973805e1e1b5d124f9b799d86d17b41d276b6e4",
+      "outerWidth": 0,
+      "shoulderContact": 0.5,
+      "geometryConstruction": "Exact source surface(192,112,torsoPoint), original Float32 storage and source broadenShoulders; only primary torso/sleeves mesh.",
+      "approximation": {
+        "MASS": {
+          "vertices": 159210,
+          "triangles": 278400,
+          "bounds": {
+            "min": [
+              -1.3212219024803835,
+              -1.2773181429754614,
+              -1.1702299757912886
+            ],
+            "max": [
+              1.9176966139348952,
+              4.556559515674827,
+              1.20383023429122
+            ]
+          },
+          "edgeIncidencesEvaluated": 835200,
+          "centroidsEvaluated": 278400,
+          "byShift": [
+            {
+              "shiftX": 0,
+              "maximumMidpointXError": 0,
+              "maximumCentroidXError": 0
+            },
+            {
+              "shiftX": -0.12,
+              "maximumMidpointXError": 0.002056557995574546,
+              "maximumCentroidXError": 0.0017799475902058658
+            },
+            {
+              "shiftX": -0.24,
+              "maximumMidpointXError": 0.004113115991149092,
+              "maximumCentroidXError": 0.0035598951804117315
+            }
+          ],
+          "fullShiftThresholdCounts": {
+            "thresholds": [
+              0.001,
+              0.0005
+            ],
+            "edgeIncidences": [
+              7420,
+              30660
+            ],
+            "centroids": [
+              2341,
+              13340
+            ]
+          },
+          "worstMidpoint": {
+            "triangle": 127220,
+            "edge": [
+              72758,
+              72750
+            ],
+            "point": [
+              1.3893504611890786,
+              1.4090777363619327,
+              0.7218415739924912
+            ],
+            "weightError": 0.01713798329645455
+          },
+          "worstCentroid": {
+            "triangle": 127221,
+            "point": [
+              1.4084006416228396,
+              1.389192116756585,
+              0.7365968862169036
+            ],
+            "weightError": 0.014832896585048883
+          }
+        },
+        "DETAIL": {
+          "vertices": 646260,
+          "triangles": 623976,
+          "bounds": {
+            "min": [
+              -1.3183457812480917,
+              -1.2848241750308111,
+              -1.1744557024670523
+            ],
+            "max": [
+              1.9071613988577876,
+              4.576872888575343,
+              1.2099611121171208
+            ]
+          },
+          "edgeIncidencesEvaluated": 1871928,
+          "centroidsEvaluated": 623976,
+          "byShift": [
+            {
+              "shiftX": 0,
+              "maximumMidpointXError": 0,
+              "maximumCentroidXError": 0
+            },
+            {
+              "shiftX": -0.12,
+              "maximumMidpointXError": 0.005655157806753934,
+              "maximumCentroidXError": 0.005363259925382047
+            },
+            {
+              "shiftX": -0.24,
+              "maximumMidpointXError": 0.011310315613507867,
+              "maximumCentroidXError": 0.010726519850764093
+            }
+          ],
+          "fullShiftThresholdCounts": {
+            "thresholds": [
+              0.001,
+              0.0005
+            ],
+            "edgeIncidences": [
+              73649,
+              121285
+            ],
+            "centroids": [
+              32774,
+              56674
+            ]
+          },
+          "worstMidpoint": {
+            "triangle": 283948,
+            "edge": [
+              294090,
+              294088
+            ],
+            "point": [
+              1.3908956560732528,
+              1.4446451448054103,
+              0.6805401637273022
+            ],
+            "weightError": 0.047126315056282786
+          },
+          "worstCentroid": {
+            "triangle": 283949,
+            "point": [
+              1.4113632001927447,
+              1.3984129704506898,
+              0.7140021455551256
+            ],
+            "weightError": 0.044693832711517056
+          }
+        },
+        "cloth": {
+          "vertices": 21809,
+          "triangles": 43008,
+          "bounds": {
+            "min": [
+              -1.8055044282253776,
+              -1.5169066654285235,
+              -0.5836775302886963
+            ],
+            "max": [
+              1.8174608987862608,
+              1.7399026072860884,
+              0.8630034923553467
+            ]
+          },
+          "edgeIncidencesEvaluated": 129024,
+          "centroidsEvaluated": 43008,
+          "byShift": [
+            {
+              "shiftX": 0,
+              "maximumMidpointXError": 0,
+              "maximumCentroidXError": 0
+            },
+            {
+              "shiftX": -0.12,
+              "maximumMidpointXError": 0.0005823143736221436,
+              "maximumCentroidXError": 0.0004023895045038894
+            },
+            {
+              "shiftX": -0.24,
+              "maximumMidpointXError": 0.0011646287472442873,
+              "maximumCentroidXError": 0.0008047790090077788
+            }
+          ],
+          "fullShiftThresholdCounts": {
+            "thresholds": [
+              0.001,
+              0.0005
+            ],
+            "edgeIncidences": [
+              12,
+              1832
+            ],
+            "centroids": [
+              0,
+              523
+            ]
+          },
+          "worstMidpoint": {
+            "triangle": 12602,
+            "edge": [
+              6526,
+              6334
+            ],
+            "point": [
+              -1.4993901635704057,
+              0.8826994062709499,
+              0.302747905254364
+            ],
+            "weightError": 0.0048526197801845306
+          },
+          "worstCentroid": {
+            "triangle": 12987,
+            "point": [
+              -1.5188610206742068,
+              0.8531521295552381,
+              0.3017462392648061
+            ],
+            "weightError": 0.0033532458708657453
+          }
+        }
+      },
+      "ordering": {
+        "grid": {
+          "yMin": -1.5,
+          "yMax": 1.95,
+          "zMin": -0.9,
+          "zMax": 1.4,
+          "yCount": 115,
+          "zCount": 92,
+          "dy": 0.030000000000000002,
+          "dz": 0.024999999999999998
+        },
+        "rays": 10580,
+        "overlappingRays": 887,
+        "eligibleTriangleHitPairs": 42983,
+        "pairsWithOriginalGapBelowPoint03": 1146,
+        "minimumRequiredOriginalGap": 0.003,
+        "minimumObservedOriginalGap": 0.0030852078824723517,
+        "countedReversalTolerance": 0.001,
+        "sameHemisphereOnly": true,
+        "mass": {
+          "triangleHits": 149482,
+          "skippedEdgeOnTriangles": 0,
+          "byShift": [
+            {
+              "shiftX": 0,
+              "maximumRayHitXError": 0
+            },
+            {
+              "shiftX": -0.12,
+              "maximumRayHitXError": 0.001858190531170769
+            },
+            {
+              "shiftX": -0.24,
+              "maximumRayHitXError": 0.003716381062341538
+            }
+          ],
+          "worst": {
+            "triangle": 127224,
+            "point": [
+              1.4244275166263802,
+              1.4250000000000003,
+              0.6874999999999999
+            ],
+            "weightError": 0.015484921093089743
+          }
+        },
+        "cloth": {
+          "triangleHits": 10042,
+          "skippedEdgeOnTriangles": 0,
+          "byShift": [
+            {
+              "shiftX": 0,
+              "maximumRayHitXError": 0
+            },
+            {
+              "shiftX": -0.12,
+              "maximumRayHitXError": 0.00038277065111000483
+            },
+            {
+              "shiftX": -0.24,
+              "maximumRayHitXError": 0.0007655413022200097
+            }
+          ],
+          "worst": {
+            "triangle": 12819,
+            "point": [
+              1.117473894535412,
+              1.125,
+              -0.4125000000000001
+            ],
+            "weightError": 0.003189755425916707
+          }
+        },
+        "byShift": [
+          {
+            "shiftX": 0,
+            "reversalsAboveTolerance": 0,
+            "anyReversals": 0,
+            "maximumReversal": 0,
+            "minimumSignedGapAfter": 0.0030852078824723517,
+            "minimumExactContinuousGapAfter": 0.0030852078824723517,
+            "worstReversal": null
+          },
+          {
+            "shiftX": -0.12,
+            "reversalsAboveTolerance": 0,
+            "anyReversals": 0,
+            "maximumReversal": 0,
+            "minimumSignedGapAfter": 0.003051857095993058,
+            "minimumExactContinuousGapAfter": 0.0030852078824723517,
+            "worstReversal": null
+          },
+          {
+            "shiftX": -0.24,
+            "reversalsAboveTolerance": 0,
+            "anyReversals": 0,
+            "maximumReversal": 0,
+            "minimumSignedGapAfter": 0.0028918984946197223,
+            "minimumExactContinuousGapAfter": 0.0030340102643700018,
+            "worstReversal": null
+          }
+        ]
+      },
+      "elapsedMs": 2743.5
+    },
+    {
+      "name": "candidate98-width0.12-contact0.35",
+      "blouseSource": "review/blouse-candidate98.js",
+      "effectiveBlouseSHA256": "cd828e9f14ed62192cf172c327cc8432989f9d3780161c5234cba90485a56c82",
+      "outerWidth": 0.12,
+      "shoulderContact": 0.35,
+      "geometryConstruction": "Exact source surface(192,112,torsoPoint), original Float32 storage and source broadenShoulders; only primary torso/sleeves mesh.",
+      "approximation": {
+        "MASS": {
+          "vertices": 159210,
+          "triangles": 278400,
+          "bounds": {
+            "min": [
+              -1.3212219970407066,
+              -1.2773181429754614,
+              -1.1702299757912886
+            ],
+            "max": [
+              1.9176966139348952,
+              4.556559515674827,
+              1.2038284251281142
+            ]
+          },
+          "edgeIncidencesEvaluated": 835200,
+          "centroidsEvaluated": 278400,
+          "byShift": [
+            {
+              "shiftX": 0,
+              "maximumMidpointXError": 0,
+              "maximumCentroidXError": 0
+            },
+            {
+              "shiftX": -0.12,
+              "maximumMidpointXError": 0.00205655919946911,
+              "maximumCentroidXError": 0.0017799481607425971
+            },
+            {
+              "shiftX": -0.24,
+              "maximumMidpointXError": 0.00411311839893822,
+              "maximumCentroidXError": 0.0035598963214851943
+            }
+          ],
+          "fullShiftThresholdCounts": {
+            "thresholds": [
+              0.001,
+              0.0005
+            ],
+            "edgeIncidences": [
+              7420,
+              30660
+            ],
+            "centroids": [
+              2341,
+              13340
+            ]
+          },
+          "worstMidpoint": {
+            "triangle": 127220,
+            "edge": [
+              72758,
+              72750
+            ],
+            "point": [
+              1.3893505098688927,
+              1.4090777097339127,
+              0.7213256548584039
+            ],
+            "weightError": 0.01713799332890925
+          },
+          "worstCentroid": {
+            "triangle": 127221,
+            "point": [
+              1.408400684623164,
+              1.389192100016743,
+              0.7360599169676956
+            ],
+            "weightError": 0.014832901339521642
+          }
+        },
+        "DETAIL": {
+          "vertices": 646260,
+          "triangles": 623976,
+          "bounds": {
+            "min": [
+              -1.3183457650611505,
+              -1.2848241750308111,
+              -1.1744557024670523
+            ],
+            "max": [
+              1.9071613988577876,
+              4.576872888575343,
+              1.2099576179038656
+            ]
+          },
+          "edgeIncidencesEvaluated": 1871928,
+          "centroidsEvaluated": 623976,
+          "byShift": [
+            {
+              "shiftX": 0,
+              "maximumMidpointXError": 0,
+              "maximumCentroidXError": 0
+            },
+            {
+              "shiftX": -0.12,
+              "maximumMidpointXError": 0.005655155127197851,
+              "maximumCentroidXError": 0.00536326017646275
+            },
+            {
+              "shiftX": -0.24,
+              "maximumMidpointXError": 0.011310310254395701,
+              "maximumCentroidXError": 0.0107265203529255
+            }
+          ],
+          "fullShiftThresholdCounts": {
+            "thresholds": [
+              0.001,
+              0.0005
+            ],
+            "edgeIncidences": [
+              73649,
+              121285
+            ],
+            "centroids": [
+              32774,
+              56674
+            ]
+          },
+          "worstMidpoint": {
+            "triangle": 283948,
+            "edge": [
+              294090,
+              294088
+            ],
+            "point": [
+              1.3908956400504624,
+              1.4446451716301842,
+              0.6792562445710013
+            ],
+            "weightError": 0.047126292726648755
+          },
+          "worstCentroid": {
+            "triangle": 283949,
+            "point": [
+              1.4113632221591093,
+              1.3984129737761377,
+              0.7122908098616788
+            ],
+            "weightError": 0.04469383480385625
+          }
+        },
+        "cloth": {
+          "vertices": 21809,
+          "triangles": 43008,
+          "bounds": {
+            "min": [
+              -2.0231644679868808,
+              -1.5250970834544937,
+              -0.5836775302886963
+            ],
+            "max": [
+              2.03373784342528,
+              1.7399026072860884,
+              0.8630034923553467
+            ]
+          },
+          "edgeIncidencesEvaluated": 129024,
+          "centroidsEvaluated": 43008,
+          "byShift": [
+            {
+              "shiftX": 0,
+              "maximumMidpointXError": 0,
+              "maximumCentroidXError": 0
+            },
+            {
+              "shiftX": -0.12,
+              "maximumMidpointXError": 0.0014123332609128967,
+              "maximumCentroidXError": 0.000953866929052039
+            },
+            {
+              "shiftX": -0.24,
+              "maximumMidpointXError": 0.0028246665218257935,
+              "maximumCentroidXError": 0.001907733858104078
+            }
+          ],
+          "fullShiftThresholdCounts": {
+            "thresholds": [
+              0.001,
+              0.0005
+            ],
+            "edgeIncidences": [
+              600,
+              7304
+            ],
+            "centroids": [
+              46,
+              2843
+            ]
+          },
+          "worstMidpoint": {
+            "triangle": 11450,
+            "edge": [
+              5947,
+              5755
+            ],
+            "point": [
+              -1.5559780923600828,
+              0.9328078095988432,
+              0.3033231049776077
+            ],
+            "weightError": 0.011769443840940808
+          },
+          "worstCentroid": {
+            "triangle": 11451,
+            "point": [
+              -1.5523786263180286,
+              0.9232746234343355,
+              0.30439655979474384
+            ],
+            "weightError": 0.007948891075433659
+          }
+        }
+      },
+      "ordering": {
+        "grid": {
+          "yMin": -1.5,
+          "yMax": 1.95,
+          "zMin": -0.9,
+          "zMax": 1.4,
+          "yCount": 115,
+          "zCount": 92,
+          "dy": 0.030000000000000002,
+          "dz": 0.024999999999999998
+        },
+        "rays": 10580,
+        "overlappingRays": 883,
+        "eligibleTriangleHitPairs": 42944,
+        "pairsWithOriginalGapBelowPoint03": 1274,
+        "minimumRequiredOriginalGap": 0.003,
+        "minimumObservedOriginalGap": 0.0030630241635292155,
+        "countedReversalTolerance": 0.001,
+        "sameHemisphereOnly": true,
+        "mass": {
+          "triangleHits": 148698,
+          "skippedEdgeOnTriangles": 0,
+          "byShift": [
+            {
+              "shiftX": 0,
+              "maximumRayHitXError": 0
+            },
+            {
+              "shiftX": -0.12,
+              "maximumRayHitXError": 0.0018645760938719145
+            },
+            {
+              "shiftX": -0.24,
+              "maximumRayHitXError": 0.003729152187743829
+            }
+          ],
+          "worst": {
+            "triangle": 127224,
+            "point": [
+              1.4246283195239342,
+              1.4250000000000003,
+              0.6874999999999999
+            ],
+            "weightError": 0.01553813411559929
+          }
+        },
+        "cloth": {
+          "triangleHits": 10041,
+          "skippedEdgeOnTriangles": 0,
+          "byShift": [
+            {
+              "shiftX": 0,
+              "maximumRayHitXError": 0
+            },
+            {
+              "shiftX": -0.12,
+              "maximumRayHitXError": 0.0009677352312433723
+            },
+            {
+              "shiftX": -0.24,
+              "maximumRayHitXError": 0.0019354704624867445
+            }
+          ],
+          "worst": {
+            "triangle": 12220,
+            "point": [
+              -1.5690343637871247,
+              0.855,
+              0.3124999999999999
+            ],
+            "weightError": 0.008064460260361436
+          }
+        },
+        "byShift": [
+          {
+            "shiftX": 0,
+            "reversalsAboveTolerance": 0,
+            "anyReversals": 0,
+            "maximumReversal": 0,
+            "minimumSignedGapAfter": 0.0030630241635292155,
+            "minimumExactContinuousGapAfter": 0.0030630241635292155,
+            "worstReversal": null
+          },
+          {
+            "shiftX": -0.12,
+            "reversalsAboveTolerance": 0,
+            "anyReversals": 0,
+            "maximumReversal": 0,
+            "minimumSignedGapAfter": 0.003073373141496725,
+            "minimumExactContinuousGapAfter": 0.003054266881645096,
+            "worstReversal": null
+          },
+          {
+            "shiftX": -0.24,
+            "reversalsAboveTolerance": 0,
+            "anyReversals": 0,
+            "maximumReversal": 0,
+            "minimumSignedGapAfter": 0.0030628983343480164,
+            "minimumExactContinuousGapAfter": 0.003045509599760976,
+            "worstReversal": null
+          }
+        ]
+      },
+      "elapsedMs": 2821.5
+    }
+  ],
+  "limitations": [
+    "Hair uses the inherited source harness uniform Catmull-Rom implementation; native Three and material rendering are independently reviewed by the parent.",
+    "Midpoints, centroids and finite Y/Z rays are bounded approximation probes, not an exhaustive continuous collision proof or an adaptive tessellation certificate.",
+    "Ordering compares MASS with the primary blouse torso/sleeves only; separate collars, facings, buttons, seams, neck, and DETAIL-to-MASS attachment are outside this audit.",
+    "Triangle-hit pair counts may include coincident shared-edge hits. Pairs start with absolute X gap at least .003 and have the same X hemisphere.",
+    "The width .12 setting is substituted only in the in-memory candidate98 source; no frozen or production file is changed."
+  ],
+  "resources": {
+    "wallMs": 5571.7,
+    "cpuMs": 6778.4,
+    "peakRssMiB": 454.9,
+    "finalMemoryMiB": {
+      "rss": 271.7,
+      "heapTotal": 135.7,
+      "heapUsed": 4.9,
+      "external": 44.6,
+      "arrayBuffers": 0.1
+    }
+  }
+}

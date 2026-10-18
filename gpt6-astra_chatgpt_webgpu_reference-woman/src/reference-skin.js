@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import referenceURL from '../reference/image1-color.jpg';
+import { createBrowGuides } from './brow-guides.js';
 
 // Every correspondence below is placed by visual inspection of the user's sole
 // reference. This is a skin-color bake onto sculpted geometry, never a picture plane.
@@ -303,8 +304,8 @@ function makeSkinAtlas(source) {
     const browT=(Math.abs(x)-.14)/.49;
     if(browT>0&&browT<1){
       const browY=.228+.048*Math.sin(browT*Math.PI*.88)-.028*browT;
-      const width=.025*Math.sin(browT*Math.PI)**.30*(1-.4*browT);
-      const shade=.38*Math.exp(-(((y-browY)/Math.max(.001,width))**2))*Math.sin(browT*Math.PI)**.25;
+      const width=.028*Math.sin(browT*Math.PI)**.30*(1-.45*browT);
+      const shade=.33*Math.exp(-(((y-browY)/Math.max(.001,width))**2))*Math.sin(browT*Math.PI)**.25;
       for(let ch=0;ch<3;ch++)litSkin[ch]=litSkin[ch]*(1-shade)+[86,61,52][ch]*shade;
     }
     const edgeMatch=(1-a)*smooth((Math.abs(x)-.59)/.15);
@@ -315,13 +316,15 @@ function makeSkinAtlas(source) {
     out.data[k+3]=255;
   }
   context.putImageData(out,0,0);
-  let seed=19073;const random=()=>{seed=(Math.imul(seed,1664525)+1013904223)>>>0;return seed/4294967296;};
   const tx=x=>(x+1)/2*(canvas.width-1),ty=y=>(1.6-y)/2.85*(canvas.height-1);
-  for(const s of [-1,1])for(let i=0;i<680;i++){
-    const t=random(),x=s*(.14+t*.49),y=.228+.048*Math.sin(t*Math.PI*.88)-.028*t+(random()-.5)*.045*Math.sin(t*Math.PI)**.3;
-    const dx=s*(.007+.020*t),dy=.020*(1-t)**1.2-.004*t;
-    context.strokeStyle=`rgba(72,49,43,${.08+random()*.20})`;context.lineWidth=.35+random()*.45;
-    context.beginPath();context.moveTo(tx(x),ty(y));context.quadraticCurveTo(tx(x+dx*.5),ty(y+dy*.8),tx(x+dx),ty(y+dy));context.stroke();
+  context.lineCap='round';
+  for(const side of [-1,1])for(const [i,g] of createBrowGuides(side).entries()){
+    // The first155 guides also carry real geometry. Their texture is quieter
+    // so the two aligned contributions do not form an extra dark comb.
+    const alpha=g.opacity*(i<155?.55:1);
+    context.strokeStyle=`rgba(72,49,43,${alpha})`;context.lineWidth=g.lineWidth;
+    context.beginPath();context.moveTo(tx(g.root[0]),ty(g.root[1]));
+    context.quadraticCurveTo(tx(g.control[0]),ty(g.control[1]),tx(g.tip[0]),ty(g.tip[1]));context.stroke();
   }
   const texture=new THREE.CanvasTexture(canvas);texture.colorSpace=THREE.SRGBColorSpace;texture.anisotropy=8;
   texture.name='Skin color from uploaded image 1, hand-landmarked onto original 3D sculpt';

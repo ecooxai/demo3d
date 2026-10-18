@@ -1,0 +1,484 @@
+{
+  "candidate": 100,
+  "native": false,
+  "scoreUnchanged": 76,
+  "offIdentical": true,
+  "sourcePathChecks": [
+    {
+      "name": "left-crown-strand-strip",
+      "minJacobian": 0.5956137350306353,
+      "maxJacobian": 1.33423091964392,
+      "bounds": [
+        251.2367037416056,
+        55.217913523301085,
+        542.2717333482341,
+        323.0781681007394
+      ]
+    },
+    {
+      "name": "right-crown-strand-strip",
+      "minJacobian": 0.9039541614953969,
+      "maxJacobian": 1.083022728983768,
+      "bounds": [
+        625.2515480965382,
+        107.83455636694852,
+        807.8509205160024,
+        481.649899899364
+      ]
+    }
+  ],
+  "minTileWeight": 0.5229743414420227,
+  "results": [
+    {
+      "strength": 0.5,
+      "metrics": {
+        "version": "reference-crown-strand-space-100-v1",
+        "strength": 0.5,
+        "sourceRegions": "Two manually authored curved hair-only strips",
+        "sourceStrips": [
+          {
+            "name": "left-crown-strand-strip",
+            "manualCenterline": [
+              [
+                540,
+                73,
+                18
+              ],
+              [
+                493,
+                80,
+                22
+              ],
+              [
+                446,
+                95,
+                24
+              ],
+              [
+                411,
+                120,
+                26
+              ],
+              [
+                376,
+                152,
+                26
+              ],
+              [
+                348,
+                185,
+                25
+              ],
+              [
+                322,
+                220,
+                24
+              ],
+              [
+                302,
+                253,
+                23
+              ],
+              [
+                286,
+                286,
+                21
+              ],
+              [
+                265,
+                312,
+                18
+              ]
+            ],
+            "sourceBounds": [
+              251.30266422475972,
+              55.396465879521614,
+              542.3707813669492,
+              323.0373234006674
+            ],
+            "sourceLengthPixels": 382.7196731757066,
+            "meanSourceWidthPixels": 46.78551935803117,
+            "unwrappedWidth": 96,
+            "unwrappedHeight": 768,
+            "sampledTexels": 73728,
+            "logContrastMin": -0.47998731553073926,
+            "logContrastMax": 0.45500882379287977,
+            "logContrastRms": 0.25333671818035425,
+            "fineResidualRms": 0.5219089395155992,
+            "groupResidualRms": 0.38406646577831377,
+            "nearShoulderFraction": 0.07804361979166667,
+            "localMeanRadiiSourcePixels": [
+              3,
+              10
+            ],
+            "fineWeight": 0.92,
+            "groupWeight": 0.16
+          },
+          {
+            "name": "right-crown-strand-strip",
+            "manualCenterline": [
+              [
+                638,
+                120,
+                18
+              ],
+              [
+                680,
+                164,
+                20
+              ],
+              [
+                715,
+                212,
+                22
+              ],
+              [
+                745,
+                270,
+                23
+              ],
+              [
+                768,
+                340,
+                22
+              ],
+              [
+                782,
+                410,
+                20
+              ],
+              [
+                790,
+                480,
+                18
+              ]
+            ],
+            "sourceBounds": [
+              625.2965082652664,
+              107.87645203850258,
+              807.675427677035,
+              481.7599488721108
+            ],
+            "sourceLengthPixels": 400.7705661802078,
+            "meanSourceWidthPixels": 41.84754165350229,
+            "unwrappedWidth": 96,
+            "unwrappedHeight": 768,
+            "sampledTexels": 73728,
+            "logContrastMin": -0.4799824600940874,
+            "logContrastMax": 0.4472510631126257,
+            "logContrastRms": 0.2234337195812153,
+            "fineResidualRms": 0.395911682740169,
+            "groupResidualRms": 0.28113558403153305,
+            "nearShoulderFraction": 0.022515190972222224,
+            "localMeanRadiiSourcePixels": [
+              3,
+              10
+            ],
+            "fineWeight": 0.92,
+            "groupWeight": 0.16
+          }
+        ],
+        "sourceSignalBytes": 589824,
+        "mapping": "Cross-strand tile coordinate follows crown UV u; rectified source arc follows crown UV v/.73",
+        "screenRowMapping": false,
+        "tileCount": 10,
+        "visibleFrontTileCountApprox": 4,
+        "charts": [
+          {
+            "name": "left-crown-strand-strip",
+            "mappedTexels": 352803,
+            "weightedMeanGain": 0.9795808608767241,
+            "gainMin": 0.7867664937288077,
+            "gainMax": 1.2437372451135724,
+            "logGainRms": 0.11126826600442544
+          },
+          {
+            "name": "right-crown-strand-strip",
+            "mappedTexels": 312139,
+            "weightedMeanGain": 0.9850081774143196,
+            "gainMin": 0.7867683285234074,
+            "gainMax": 1.2313121586345528,
+            "logGainRms": 0.09804058391122977
+          }
+        ],
+        "atlasWidth": 2048,
+        "atlasHeight": 2048,
+        "headroom": 0.6,
+        "bakeMs": 533.8396860000003,
+        "allocatedTextureBytes": 18874368,
+        "addedUVBytes": 195640,
+        "replacedColorBytes": 391280,
+        "netTypedTextureAndAttributeBytes": 16972856,
+        "estimatedNetMipmappedGPUBytes": 22565261.333333332,
+        "sourcePixelBytes": 2228224,
+        "geometryPositionsChanged": false,
+        "originalUV0Changed": false,
+        "normalFieldChanged": false,
+        "coverageBytesChanged": false,
+        "additionalMeshes": 0,
+        "additionalTriangles": 0,
+        "additionalMaterialDraws": 0,
+        "perFrameCPUWork": 0,
+        "export": {
+          "baseColorTexCoord": 1,
+          "normalTexCoord": 0,
+          "coverageTexCoord": 0,
+          "requiresExportOnlyAlphaMerge": true,
+          "maxAtlasDimension": 2048,
+          "note": "The live material keeps source alpha in a UV0 alphaMap. Before shipping GLB, merge those alpha samples into the UV1 base-color atlas and omit alphaMap on the export-only clone. The normal map and its UV0 channel remain unchanged."
+        },
+        "elapsedMs": 534.5548330000001,
+        "status": "applied",
+        "changed": true
+      },
+      "identity": {
+        "foundationRGBMismatches": 0,
+        "alphaVertexMismatches": 0,
+        "coverageMismatches": 0,
+        "foundationTexelMismatches": 0,
+        "positionNormalUV0Index": "exact",
+        "normalTextureAndSampler": "exact",
+        "nonCrownMeshes": "same references",
+        "sameStrength": "same result"
+      },
+      "colorRange": [
+        0.0382043719291687,
+        0.13591128587722778
+      ]
+    },
+    {
+      "strength": 1,
+      "metrics": {
+        "version": "reference-crown-strand-space-100-v1",
+        "strength": 1,
+        "sourceRegions": "Two manually authored curved hair-only strips",
+        "sourceStrips": [
+          {
+            "name": "left-crown-strand-strip",
+            "manualCenterline": [
+              [
+                540,
+                73,
+                18
+              ],
+              [
+                493,
+                80,
+                22
+              ],
+              [
+                446,
+                95,
+                24
+              ],
+              [
+                411,
+                120,
+                26
+              ],
+              [
+                376,
+                152,
+                26
+              ],
+              [
+                348,
+                185,
+                25
+              ],
+              [
+                322,
+                220,
+                24
+              ],
+              [
+                302,
+                253,
+                23
+              ],
+              [
+                286,
+                286,
+                21
+              ],
+              [
+                265,
+                312,
+                18
+              ]
+            ],
+            "sourceBounds": [
+              251.30266422475972,
+              55.396465879521614,
+              542.3707813669492,
+              323.0373234006674
+            ],
+            "sourceLengthPixels": 382.7196731757066,
+            "meanSourceWidthPixels": 46.78551935803117,
+            "unwrappedWidth": 96,
+            "unwrappedHeight": 768,
+            "sampledTexels": 73728,
+            "logContrastMin": -0.47998731553073926,
+            "logContrastMax": 0.45500882379287977,
+            "logContrastRms": 0.25333671818035425,
+            "fineResidualRms": 0.5219089395155992,
+            "groupResidualRms": 0.38406646577831377,
+            "nearShoulderFraction": 0.07804361979166667,
+            "localMeanRadiiSourcePixels": [
+              3,
+              10
+            ],
+            "fineWeight": 0.92,
+            "groupWeight": 0.16
+          },
+          {
+            "name": "right-crown-strand-strip",
+            "manualCenterline": [
+              [
+                638,
+                120,
+                18
+              ],
+              [
+                680,
+                164,
+                20
+              ],
+              [
+                715,
+                212,
+                22
+              ],
+              [
+                745,
+                270,
+                23
+              ],
+              [
+                768,
+                340,
+                22
+              ],
+              [
+                782,
+                410,
+                20
+              ],
+              [
+                790,
+                480,
+                18
+              ]
+            ],
+            "sourceBounds": [
+              625.2965082652664,
+              107.87645203850258,
+              807.675427677035,
+              481.7599488721108
+            ],
+            "sourceLengthPixels": 400.7705661802078,
+            "meanSourceWidthPixels": 41.84754165350229,
+            "unwrappedWidth": 96,
+            "unwrappedHeight": 768,
+            "sampledTexels": 73728,
+            "logContrastMin": -0.4799824600940874,
+            "logContrastMax": 0.4472510631126257,
+            "logContrastRms": 0.2234337195812153,
+            "fineResidualRms": 0.395911682740169,
+            "groupResidualRms": 0.28113558403153305,
+            "nearShoulderFraction": 0.022515190972222224,
+            "localMeanRadiiSourcePixels": [
+              3,
+              10
+            ],
+            "fineWeight": 0.92,
+            "groupWeight": 0.16
+          }
+        ],
+        "sourceSignalBytes": 589824,
+        "mapping": "Cross-strand tile coordinate follows crown UV u; rectified source arc follows crown UV v/.73",
+        "screenRowMapping": false,
+        "tileCount": 10,
+        "visibleFrontTileCountApprox": 4,
+        "charts": [
+          {
+            "name": "left-crown-strand-strip",
+            "mappedTexels": 352803,
+            "weightedMeanGain": 0.9705004831574983,
+            "gainMin": 0.619001515654322,
+            "gainMax": 1.5468823348826988,
+            "logGainRms": 0.22253653200885085
+          },
+          {
+            "name": "right-crown-strand-strip",
+            "mappedTexels": 312139,
+            "weightedMeanGain": 0.9790487295303908,
+            "gainMin": 0.6190044027675163,
+            "gainMax": 1.5161296320012818,
+            "logGainRms": 0.1960811678224595
+          }
+        ],
+        "atlasWidth": 2048,
+        "atlasHeight": 2048,
+        "headroom": 0.6,
+        "bakeMs": 473.6327789999996,
+        "allocatedTextureBytes": 18874368,
+        "addedUVBytes": 195640,
+        "replacedColorBytes": 391280,
+        "netTypedTextureAndAttributeBytes": 16972856,
+        "estimatedNetMipmappedGPUBytes": 22565261.333333332,
+        "sourcePixelBytes": 2228224,
+        "geometryPositionsChanged": false,
+        "originalUV0Changed": false,
+        "normalFieldChanged": false,
+        "coverageBytesChanged": false,
+        "additionalMeshes": 0,
+        "additionalTriangles": 0,
+        "additionalMaterialDraws": 0,
+        "perFrameCPUWork": 0,
+        "export": {
+          "baseColorTexCoord": 1,
+          "normalTexCoord": 0,
+          "coverageTexCoord": 0,
+          "requiresExportOnlyAlphaMerge": true,
+          "maxAtlasDimension": 2048,
+          "note": "The live material keeps source alpha in a UV0 alphaMap. Before shipping GLB, merge those alpha samples into the UV1 base-color atlas and omit alphaMap on the export-only clone. The normal map and its UV0 channel remain unchanged."
+        },
+        "elapsedMs": 473.86749599999985,
+        "status": "applied",
+        "changed": true
+      },
+      "identity": {
+        "foundationRGBMismatches": 0,
+        "alphaVertexMismatches": 0,
+        "coverageMismatches": 0,
+        "foundationTexelMismatches": 0,
+        "positionNormalUV0Index": "exact",
+        "normalTextureAndSampler": "exact",
+        "nonCrownMeshes": "same references",
+        "sameStrength": "same result"
+      },
+      "colorRange": [
+        0.0382043719291687,
+        0.13591128587722778
+      ]
+    }
+  ],
+  "cost": {
+    "totalAuditWallMs": 5294.364224000001,
+    "totalAuditCpuMs": 6602.014,
+    "peakRSSMiB": 499.91796875,
+    "currentMemoryMiB": {
+      "rss": 266.16015625,
+      "heapTotal": 135.24609375,
+      "heapUsed": 4.750068664550781,
+      "external": 86.34110450744629,
+      "arrayBuffers": 83.46094036102295
+    }
+  },
+  "limitations": [
+    "Native shader/UV1/alphaMap comparison remains required.",
+    "The native alphaMap must be merged into UV1 atlas alpha on an export-only material before GLB shipping.",
+    "Foundation source texels/RGBA vertices are exact; atlas RGB mip filtering can differ at extreme minification. Coverage and normal maps remain on their exact original UV0 fields."
+  ]
+}

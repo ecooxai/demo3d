@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
 import { createEar } from './ear.js';
+import { createBrowGuides } from './brow-guides.js';
 
 const PI=Math.PI, clamp=THREE.MathUtils.clamp;
 const gauss=(x,m,s)=>Math.exp(-(((x-m)/s)**2));
@@ -301,12 +302,12 @@ function makeBrows(){
   }
   for(let j=0;j<M;j++)for(let i=0;i<N;i++){const a=j*(N+1)+i,b=a+N+1;bi.push(a,b,a+1,b,b+1,a+1);}
   g.add(mesh(exactFaceNormals(buffer(bp,bi,null,bc)),new THREE.MeshStandardMaterial({vertexColors:true,roughness:.74,side:THREE.DoubleSide}),'soft-brow-underlayer'));
-  for(let i=0;i<155;i++){
-   const t=(i+.3*Math.sin(i*3.18))/155,r=(Math.sin(i*137.178)+1)/2,x=s*(.14+t*.49);
-   const width=.039*Math.sin(PI*t)**.30*(1-.56*t),y=browY(t)+width*(r-.5);
-   const dx=s*(.008+.028*smooth(t)),dy=(.026*(1-t)**1.25-.006*t)*(.6+.4*r);
-   const points=[[x,y,faceZ(x,y)+.0018],[x+dx*.55,y+dy*.70,faceZ(x+dx*.55,y+dy*.70)+.0031],[x+dx,y+dy,faceZ(x+dx,y+dy)+.0018]];
-   const fiber=tube(points,.00090*(1-.63*t),5,3),fp=fiber.attributes.position,path=fiber.parameters.path;
+  const inverseFinalY=y=>{let lo=-1.18,hi=1.54;for(let k=0;k<24;k++){const m=(lo+hi)/2;if(portraitY(m)<y)lo=m;else hi=m;}return(lo+hi)/2;};
+  for(const guide of createBrowGuides(s,155)){
+   // The legacy brow group shifts down .10 after the initial face warp.
+   // Compensate only its stored Y; seat Z on the final facial surface.
+   const points=[guide.root,guide.control,guide.tip].map(([x,y],i)=>[x,inverseFinalY(y+.10),faceZ(x,inverseFinalY(y))+(i===1?.0027:.0016)]);
+   const fiber=tube(points,guide.radius,5,3),fp=fiber.attributes.position,path=fiber.parameters.path;
    for(let k=0;k<fp.count;k++){
     const u=Math.floor(k/4)/5,center=path.getPointAt(u),taper=1-.89*u;
     fp.setXYZ(k,center.x+(fp.getX(k)-center.x)*taper,center.y+(fp.getY(k)-center.y)*taper,center.z+(fp.getZ(k)-center.z)*taper);

@@ -8,6 +8,7 @@ import { applyReferenceNeck } from './reference-neck.js';
 import { compensateReferenceSkin } from './skin-illumination.js';
 import { applyPortraitProportions } from './portrait-proportions.js';
 import { applyPortraitPose } from './portrait-pose.js';
+import { applyPortraitBalance } from './portrait-balance.js';
 import { applyLowerCheekTaper } from './face-refinement.js';
 import { applyLipThicknessRefinement } from './lip-refinement.js';
 import { applyReferenceEarColor } from './reference-ear.js';
@@ -22,7 +23,7 @@ const hairChoice=new URLSearchParams(location.search).get('hair')||'groom';
 const fiberCandidate=hairChoice==='fibers';
 const groomCandidate=hairChoice==='groom';
 const coverageCandidate=hairChoice==='coverage';
-const state = { backend: new URLSearchParams(location.search).get('backend') === 'webgl' ? 'webgl' : 'webgpu', width: 900, height: 1200, iteration: groomCandidate?86:coverageCandidate?32:fiberCandidate?25:27, score: groomCandidate?76:fiberCandidate?61:68, renderedFrames: 0, renderMs: 0, rotating: false, view: 'front', ready: false, lighting: 'soft', antialiasing: 2, internalRender: null };
+const state = { backend: new URLSearchParams(location.search).get('backend') === 'webgl' ? 'webgl' : 'webgpu', width: 900, height: 1200, iteration: groomCandidate?99:coverageCandidate?32:fiberCandidate?25:27, score: groomCandidate?76:fiberCandidate?61:68, renderedFrames: 0, renderMs: 0, rotating: false, view: 'front', ready: false, lighting: 'soft', antialiasing: 2, internalRender: null };
 let portraitOutput=createPortraitOutput();
 const scene = new THREE.Scene();
 scene.background = new THREE.Color('#cbe3f3');
@@ -34,7 +35,7 @@ headPivot.position.y = 2.95;
 headPivot.rotation.z = -0.17;
 headPivot.rotation.y = 0.16;
 const anatomicalHead=createHead();
-const anatomicalHair=groomCandidate?createGroomHair({headShiftX:.26,shoulderContact:.5}):fiberCandidate?createFiberHair():createHair({coverage:coverageCandidate});
+const anatomicalHair=groomCandidate?createGroomHair({headShiftX:.26,shoulderContact:.35}):fiberCandidate?createFiberHair():createHair({coverage:coverageCandidate});
 const skinReady=applyReferenceSkin(anatomicalHead).then(atlas=>{state.textureBakeMs=atlas.userData.bakeMs;return atlas;});
 headPivot.add(anatomicalHead, anatomicalHair);
 const bodyPose=new THREE.Group();bodyPose.name='Relaxed shoulder counterpose';
@@ -212,6 +213,8 @@ async function initialize(backend=state.backend) {
     state.pose=applyPortraitPose(headPivot,anatomicalNeck,{shiftX:.26});
     detailTarget.x=.02+state.pose.shiftX;
     state.referenceEar=await applyReferenceEarColor(anatomicalHead,{strength:1});
+    state.balance=applyPortraitBalance(model,{shiftX:-.24});
+    detailTarget.x=.02+state.pose.shiftX+state.balance.shiftX;
     if(!skinIlluminationApplied){state.skinIllumination=compensateReferenceSkin(anatomicalHead,scene,{strength:.35});skinIlluminationApplied=true;}
     if(backend==='webgpu') {
       if(!navigator.gpu)throw new Error('WebGPU is not available in this browser or context. Use a supported browser on HTTPS or localhost, or choose WebGL below.');

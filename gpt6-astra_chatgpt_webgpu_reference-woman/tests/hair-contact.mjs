@@ -10,7 +10,7 @@ const hair=await readFile('review/hair-groom-candidate83.js','utf8');
 const contact=await readFile('review/hair-contact-candidate83.js','utf8');
 const blouse=await readFile('review/blouse-candidate81.js','utf8');
 const main=await readFile('src/main.js','utf8');
-const marker='createGroomHair({headShiftX:.26,shoulderContact:.5})';
+const marker=main.match(/createGroomHair\(\{headShiftX:\.26,shoulderContact:[.0-9]+\}\)/)?.[0];
 if(main.split(marker).length!==2)throw new Error('Expected one default groom call');
 const entry=main.replace(marker,"createGroomHair({headShiftX:.26,shoulderContact:new URLSearchParams(location.search).get('contact')==='on'})");
 const loads={hair:0,blouse:0};

@@ -4,7 +4,7 @@
   "goal_achieved": false,
   "method": "Visual self-assessment against the sole uploaded image, supplemented by independent agent review. Scores are subjective and are not a certification of AAA production quality.",
   "scope": "Recorded assessments whose numeric results remain available. No missing historical scores have been invented.",
-  "current_accepted_iteration": 86,
+  "current_accepted_iteration": 99,
   "current_accepted_score": 76,
   "assessments": [
     {
@@ -442,6 +442,76 @@
       "reviewer": "root",
       "decision": "diagnostic only; baseline retained",
       "notes": "Compared full3D eyebrow fibers, atlas-only, and lighter3D fibers. Repeating comb pattern persists in the painted atlas as well as the small geometry; hiding or lightening geometry alone does not resolve it. No accepted source change."
+    },
+    {
+      "iteration": 93,
+      "score": 75,
+      "reviewer": "root and quality_review_42",
+      "decision": "not adopted; full strength75 and half strength76",
+      "notes": "Reference-only per-fragment crown texture with unchanged geometry/UV0/coverage adds actual visible variation, but fullstrength produces broad wavy woodgrain islands and localized patterned patches in profiles. Halfstrength is less distracting but not enough convincing fine-strand gain. Net16.19MiB typed/21.52MiB estimated GPU with mipmaps; native bake185\u2013190ms. Export alpha merge deferred because art not accepted."
+    },
+    {
+      "iteration": 94,
+      "score": 76,
+      "reviewer": "root and hair_groom_director",
+      "decision": "accepted",
+      "notes": "14narrow rounded temple locks and413fine strands cover most of the exposed far-ear cartilage/lobe and join the existing side fall. Tiny lower-cheek skin wedge remains. Front/detail/right/back review finds no obvious plate edge or new protrusion. Original86geometry is exact prefix at.5contact; +46,480tri/+2.28MiB. Groom totals1,151,048tri/53.90MiB. Source finite; conservative ear probe supports visual result."
+    },
+    {
+      "iteration": 95,
+      "score": 76,
+      "reviewer": "root and cloth_review84",
+      "decision": "held for width refinement; not adopted as final brow",
+      "notes": "Aligned original stochastic guides for atlas and155real hairs per side remove repeated comb pattern and correct brow Z seating after the legacyYoffset. Same7440vertices/9300triangles. Native appearance becomes too thin and pencil-like through inner/middle brow, motivating96."
+    },
+    {
+      "iteration": 96,
+      "score": 76,
+      "reviewer": "root and hair_groom_director",
+      "decision": "accepted",
+      "notes": "Retains95irregular aligned flow and correct surface seating, broadens root scatter through inner/middle brow while preserving outer taper, modestly widens soft base tone. Native full/detail and previous95profile show less mechanical pattern and stable eye framing. Still crisper and thinner than source; overall score unchanged. Same7440vertices/9300triangles; skin atlas bake777ms in native comparison, no extra texture or draw."
+    },
+    {
+      "iteration": 97,
+      "score": 75,
+      "reviewer": "root and quality_review_42",
+      "decision": "not adopted; full75 and half76",
+      "notes": "Narrower source contrast extraction retained screen-row remapping and still produced wavy cross-flow woodgrain at full strength. Half strength offered too little gain. Native bake185-189ms, unchanged geometry and alpha. Motivated strand-coordinate100."
+    },
+    {
+      "iteration": 98,
+      "score": 76,
+      "reviewer": "root and cloth_review84",
+      "decision": "moderate width retained for102 contact refinement; .20 rejected",
+      "notes": "Additional outer width.12 improves hair-to-cloth frontal proportion; .20 makes the upper back too broad and rectangular. With accepted.5 contact, both widths expose an outward-loop profile regression. Protected collar/placket/buttons remain fixed. Defer integration until weaker-contact102 review."
+    },
+    {
+      "iteration": 99,
+      "score": 76,
+      "reviewer": "root and cloth_review84; source audits by hair_groom_director and shared_contact_review",
+      "decision": "accepted shift -.24 after102 width/contact",
+      "notes": "A shared C2 model-local X field moves the complete head/neck/collar/placket/button assembly left of the outer torso. Native0/-.12/-.24 five-view review favors-.24 for reference V/placket alignment and unequal front hair widths; no new obvious pinching or upper-shoulder strand detachment. Existing lower loops/broad separated locks remain.64meshes/1,184,094verts,1,177,995changed; actual35headmeshes/neck/collar/facing/buttons all preflightweight1. MinJac.470589,maxnormalLengtherror4.67e-8,94.3msnativeone-time, no extra geometry/maps.42,944sampled MASS-cloth order pairs have zero new reversals; maxDETAIL triangle interpolationerror.01131 remains a nonexhaustive attachment limit. Applied after ear-color bake and before skin illumination."
+    },
+    {
+      "iteration": 100,
+      "score": 76,
+      "reviewer": "root and hair_groom_director; source author quality_review_42",
+      "decision": "art accepted full1; production awaits104 export alpha merge",
+      "notes": "Two manually chosen curved hair-only source strips are rectified to cross-strand and arc coordinates, then tiled with unequal overlaps along crown UV flow. Full1 provides coherent longitudinal grain and reduces uniform crown coating without the93/97screen-row woodgrain. Half.5 too mild. Small forward-crown dark patches, cap junction and brushlike bangs remain. Geometry/UV0/normals/coverage exact; no extra triangles/draws/per-frame work. Native bake191-199ms; net16.19MiB typed/21.52MiB estimated mipmappedGPU. Export-only UV0alpha into UV1color atlas required before integrating100."
+    },
+    {
+      "iteration": 101,
+      "score": 75,
+      "reviewer": "root",
+      "decision": "not adopted",
+      "notes": "CROWN/MASS linear vertex color factors.70/.55, fine hair1.30 and reduced broad specular response reveal more actual fibers but expose sharp patch boundaries at crown, shoulders and rear. Original maps/geometry remain unchanged. Coverage mismatch prevents adopting this global layer contrast."
+    },
+    {
+      "iteration": 102,
+      "score": 76,
+      "reviewer": "root and cloth_review84",
+      "decision": "accepted .12 outer width with .35 shared contact",
+      "notes": "Retains wider front and back proportions while reducing angular compressed profiles from98. Lower separated locks remain; do not record loops or unsupported side gaps as resolved. .25 contact adds little visible benefit. Native WebGPU four views, no errors,1,528,947 total scene triangles.38,547cloth vertices/72,222tri unchanged;13,153outervertices changed;15,002protected neckline/collar/placket/button vertices fixed.1783source queries agree exactly with analytical widening; maxresidual.000133 within existing.001contract; geometry position error1.72e-7, normal error9.44e-8,minJac1/max1.37413. .35 contact maxdepthpull.0837946,41.9KiB field. Goal not met."
     }
   ]
 }

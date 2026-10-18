@@ -6,7 +6,7 @@ const iteration=Number(process.argv[2]||69);
 if(!Number.isInteger(iteration)||iteration<1)throw new Error('Pass a numeric candidate iteration');
 const contact=await readFile(`review/hair-contact-candidate${iteration<=91?83:86}.js`,'utf8');
 const main=await readFile('src/main.js','utf8');
-const entry=iteration<=91?main.replace('shoulderContact:.5','shoulderContact:0'):main;
+const entry=iteration<=91?main.replace(/shoulderContact:[.0-9]+/,'shoulderContact:0'):main;
 const hair=await readFile(`review/hair-groom-candidate${iteration}.js`,'utf8');
 await build({stdin:{contents:entry,resolveDir:path.resolve('src'),sourcefile:'main-crown-review.js',loader:'js'},bundle:true,format:'iife',target:['es2022'],minify:true,loader:{'.jpg':'dataurl'},outfile:`output/qa/app-hair-crown${iteration}.js`,logLevel:'silent',plugins:[{name:'candidate-hair69',setup(b){b.onLoad({filter:/[/\\]hair-contact\.js$/},()=>({contents:contact,loader:'js',resolveDir:path.resolve('src')}));b.onLoad({filter:/[/\\]hair-groom\.js$/},()=>({contents:hair,loader:'js',resolveDir:path.resolve('src')}));}}]});
 const browser=await chromium.launch({executablePath:path.resolve('../../../../../Applications/Google Chrome.app/Contents/MacOS/Google Chrome'),headless:true,args:['--enable-unsafe-webgpu','--use-angle=metal']});
