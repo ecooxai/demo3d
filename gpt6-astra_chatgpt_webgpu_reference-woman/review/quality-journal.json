@@ -386,6 +386,27 @@
       "reviewer": "root and cloth_review84",
       "decision": "accepted",
       "notes": "Blouse source81 adds unequal tapered middle and lower button pulls. Matched native WebGPU garment/front comparison and candidate left/right/back views show a modest cotton-drape improvement without button, placket, collar, opening or silhouette regression. Tight middle fold is acceptable; do not increase sharpness globally. Cloth geometry count unchanged. Integrated with accepted hair82, skin79 and ear70. Goal remains unmet."
+    },
+    {
+      "iteration": 87,
+      "score": 76,
+      "reviewer": "root",
+      "decision": "baseline retained",
+      "notes": "Stronger source-derived ear-cup tone was compared at three bounded levels on native WebGPU. The change did not provide a convincing improvement at portrait scale. Existing ear70 color stays. All 10,564 ear vertex colors remained finite in [0,1]; no geometry/material topology change."
+    },
+    {
+      "iteration": 88,
+      "score": 76,
+      "reviewer": "root",
+      "decision": "baseline retained",
+      "notes": "MASS normal-map spacing at 192, 48 and 24 lanes was compared with normalScale fixed at (.31,.09) and crown unchanged. Wider spacing alone made little visible difference; retain the accepted mapping. Native WebGPU front/detail/right/back variants produced no page errors."
+    },
+    {
+      "iteration": 89,
+      "score": 75,
+      "reviewer": "root",
+      "decision": "not adopted",
+      "notes": "An original procedural strand-pigment map retained exact alpha/UVs and mean linear albedo. Strength .45 made a small change; strength1 added conspicuous regular stripes and dark block-like bands on the broad crown. Neither resolved the smooth sheet appearance. Keep baseline while structural crown bundles are developed. Extra construction about87ms, two maps4MiB; no geometry change."
     }
   ]
 }
