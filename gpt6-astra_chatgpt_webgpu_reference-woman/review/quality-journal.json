@@ -4,7 +4,7 @@
   "goal_achieved": false,
   "method": "Visual self-assessment against the sole uploaded image, supplemented by independent agent review. Scores are subjective and are not a certification of AAA production quality.",
   "scope": "Recorded assessments whose numeric results remain available. No missing historical scores have been invented.",
-  "current_accepted_iteration": 82,
+  "current_accepted_iteration": 84,
   "current_accepted_score": 76,
   "assessments": [
     {
@@ -372,6 +372,20 @@
       "reviewer": "root and quality_review_42",
       "decision": "accepted clearer fine-fiber highlights",
       "notes": "Native baseline/soft/bright comparison changesDETAILmaterialonly. Selectedroughness.38,anisotropy.80,specularIntensity.75,envMapIntensity.65 withsame\u03c0/2direction. Individualcrown andlengthfibers catchlightmoreclearly, closer tosource sheen; no returnofwhitefringe streaks or widespreadmetalliclook. Crown/MASS andmattefringe/wisps unchanged; no newbuffers/maps/geometry. Stopfurtherintensityincreases. Capandshoulderairgapsremain; overall76."
+    },
+    {
+      "iteration": 83,
+      "score": 72,
+      "reviewer": "root",
+      "decision": "rejected; per-guide contact remains disabled",
+      "notes": "Actual blouse81 clearance passed 22,195 source ring samples, but native profiles reveal rope-like lattice crossings and front highlights/holes after independently fitting neighboring locks. Native preparation 1464.8 ms; complete groom construction 1953.7 ms; unchanged 1,104,568 hair triangles and 51.62 MiB geometry. Clearance alone was insufficient visual evidence. Replace guide-specific depth profiles with a shared smooth deformation. Production retains hair82."
+    },
+    {
+      "iteration": 84,
+      "score": 76,
+      "reviewer": "root and cloth_review84",
+      "decision": "accepted",
+      "notes": "Blouse source81 adds unequal tapered middle and lower button pulls. Matched native WebGPU garment/front comparison and candidate left/right/back views show a modest cotton-drape improvement without button, placket, collar, opening or silhouette regression. Tight middle fold is acceptable; do not increase sharpness globally. Cloth geometry count unchanged. Integrated with accepted hair82, skin79 and ear70. Goal remains unmet."
     }
   ]
 }

@@ -12,6 +12,11 @@ const BUTTON_Y=[.480,-.185,-.850];
 // turn below the V; retain the same centre at both the opening and crop.
 const placketX=y=>{const v=clamp((.780-y)/2.230,0,1);return -.022+.027*Math.sin(v*Math.PI)+.190*v*v+.084*smooth(0,.19,v);};
 const FOLD_SLOPES=[.17,-.14,-.235],FOLD_LENGTHS=[.26,.33,.24],FOLD_OFFSETS=[-.031,.024,-.019];
+const DRAPED_BUTTON_FOLDS=[
+  {slope:.08,length:.21,offset:-.018,curve:.020,strength:.40},
+  {slope:-.44,length:.39,offset:-.024,curve:.180,strength:1.00},
+  {slope:.50,length:.33,offset:.052,curve:-.220,strength:.85}
+];
 const NECK_LEVELS=[
   [.69,.565,.565,.24,.006],[.87,.490,.474,.275,-.005],
   [1.08,.415,.369,.292,-.029],[1.32,.345,.317,.291,-.059],
@@ -126,6 +131,18 @@ function profile(t) {
 
 const secondaryClothGate=y=>smooth(-1.45,-1.27,y)*(1-smooth(.49,.565,y));
 
+function buttonFoldEditWeight(x,y){
+  // Retain the sewn placket, collar supports, sleeve wrap and crop exactly.
+  // Only the loose front cotton between those fixed regions changes drape.
+  return smooth(-1.42,-1.25,y)*(1-smooth(.47,.53,y))
+    *(1-smooth(.84,.97,Math.abs(x)))*smooth(.115,.240,Math.abs(x-placketX(y)));
+}
+
+function drapedButtonFoldCentre(k,dx){
+  const f=DRAPED_BUTTON_FOLDS[k];
+  return BUTTON_Y[k]+f.offset+f.slope*dx+f.curve*dx*dx;
+}
+
 function secondaryClothRelief(x,y,front=true){
   const gate=secondaryClothGate(y);
   if(gate===0)return 0;
@@ -134,13 +151,18 @@ function secondaryClothRelief(x,y,front=true){
   if(front){
     // Broad rolls carry the button tension into the loose cotton. The narrower
     // primary creases share these paths, so their shoulders form one fold.
-    const side=x>=cx?1:-1;
+    const side=x>=cx?1:-1,reshape=buttonFoldEditWeight(x,y);
     for(let k=0;k<3;k++){
-      const dx=(x-placketX(BUTTON_Y[k]))*side;
+      const dx=(x-placketX(BUTTON_Y[k]))*side,f=DRAPED_BUTTON_FOLDS[k];
       const centre=BUTTON_Y[k]+FOLD_OFFSETS[k]+FOLD_SLOPES[k]*dx+.045*dx*dx;
       const w=.065+.054*Math.max(0,dx),preferredSide=k===1?-1:1;
       const amplitude=(side===preferredSide?1:.25)*(.037-k*.0025);
-      folds+=amplitude*gauss(dx-.24,FOLD_LENGTHS[k]+.115)*(gauss(y-centre,w)-.42*gauss(y-centre+.062,w*1.75))*smooth(.045,.15,dx);
+      const oldPull=amplitude*gauss(dx-.24,FOLD_LENGTHS[k]+.115)*(gauss(y-centre,w)-.42*gauss(y-centre+.062,w*1.75))*smooth(.045,.15,dx);
+      if(reshape===0){folds+=oldPull;continue;}
+      const centre2=drapedButtonFoldCentre(k,dx),w2=.031+.150*Math.max(0,dx);
+      const amplitude2=(side===preferredSide?1:.11)*(.037-k*.0025)*f.strength;
+      const newPull=amplitude2*gauss(dx-.24,f.length+.115)*(gauss(y-centre2,w2)-.42*gauss(y-centre2+.062,w2*1.75))*smooth(.045,.15,dx);
+      folds+=mix(oldPull,newPull,reshape);
     }
     // The narrow fold beside the placket turns into a broad hanging billow.
     const closeLine=cx+.144+.027*Math.sin(y*1.65+.4);
@@ -199,14 +221,21 @@ function sleeveSourceX(x,y){
 }
 
 function fabricRelief(x,y) {
-  const ax=Math.abs(x),side=x>=placketX(y)?1:-1;
+  const ax=Math.abs(x),side=x>=placketX(y)?1:-1,reshape=buttonFoldEditWeight(x,y);
   let folds=0;
   for(let k=0;k<3;k++){
-    const dx=(x-placketX(BUTTON_Y[k]))*side;
+    const dx=(x-placketX(BUTTON_Y[k]))*side,f=DRAPED_BUTTON_FOLDS[k];
     const centre=BUTTON_Y[k]+FOLD_OFFSETS[k]+FOLD_SLOPES[k]*dx+.045*dx*dx;
     const dist=y-centre,w=.028+.034*Math.max(0,dx);
     const preferredSide=k===1?-1:1,amplitude=(side===preferredSide?1:.35)*(.022-k*.0015);
-    folds+=amplitude*gauss(dx-.18,FOLD_LENGTHS[k])*(gauss(dist,w)-.30*gauss(dist,w*2.50))*smooth(.045,.14,dx);
+    const oldPull=amplitude*gauss(dx-.18,FOLD_LENGTHS[k])*(gauss(dist,w)-.30*gauss(dist,w*2.50))*smooth(.045,.14,dx);
+    if(reshape===0){folds+=oldPull;continue;}
+    const dist2=y-drapedButtonFoldCentre(k,dx),w2=.018+.080*Math.max(0,dx);
+    const amplitude2=(side===preferredSide?1:.12)*(.022-k*.0015)*f.strength;
+    const newPull=amplitude2*gauss(dx-.21,f.length)*(gauss(dist2,w2)-.30*gauss(dist2+.034,w2*1.80))*smooth(.045,.14,dx);
+    // Blend complete height fields, not their path parameters: the taper stays
+    // smooth while turning away from the unchanged sewn center strip.
+    folds+=mix(oldPull,newPull,reshape);
   }
   const lineA=(x<0?.81:.87)+.045*Math.sin(y*2.1+(x<0?.6:1.7)),lineB=(x<0?1.15:1.22)-.070*y;
   folds+=(x<0?.019:.013)*(gauss(ax-lineA,.079)-.36*gauss(ax-lineA-.065,.118))*smooth(-1.45,-.8,y)*(1-smooth(.35,.9,y));
@@ -307,6 +336,67 @@ function bodyNormal(x,y) {
   const zy=(bodyAtXY(x,y+e)[2]-bodyAtXY(x,y-e)[2])/(2*e);
   return new THREE.Vector3(-zx,-zy,1).normalize();
 }
+
+function contactBroadening(x){
+  const a=Math.abs(x),q=clamp((a-.20)/.75,0,1),s=q*q*(3-2*q);
+  const ds=q>0&&q<1?6*q*(1-q)/.75:0,scale=1+.13*s;
+  return {x:x*scale,jacobian:scale+.13*a*ds};
+}
+
+function contactSourceX(x){
+  let source=x/1.13;
+  for(let i=0;i<4;i++){
+    const b=contactBroadening(source);
+    source-=(b.x-x)/b.jacobian;
+  }
+  return source;
+}
+
+function contactSurfacePoint(x,y){
+  // Broad bounds only reject impossible inputs; the residual below checks the
+  // actual folded shoulder/opening instead of extending its clamped boundary.
+  if(!Number.isFinite(x)||!Number.isFinite(y)||Math.abs(x)>1.90||y< -1.45||y>1.75)return null;
+  const sourceX=contactSourceX(x),p=bodyAtXY(sourceX,y,true);
+  const px=contactBroadening(p[0]).x,residual=Math.hypot(px-x,p[1]-y);
+  if(!Number.isFinite(p[2])||!Number.isFinite(residual)||residual>.001)return null;
+  return {x:px,y:p[1],z:p[2],sourceX,residual};
+}
+
+/**
+ * Sample the front torso/sleeves in final blouse-local coordinates, after the
+ * sleeve warp and shoulder broadening. This is a pure source-surface query;
+ * it creates no mesh or texture and applies no Object3D/world transformation.
+ * The separate collar, facing, placket, buttons and seams are not included.
+ *
+ * Returns null outside support or when normal.z <= .35. Otherwise returns
+ * {point: Vector3, normal: Vector3, edgeWeight: number, xyResidual: number}.
+ * edgeWeight fades over .045 local units at open edges and normal.z .35-.65;
+ * a valid sample may have zero weight. Callers should blend attraction by it.
+ */
+export function sampleBlouseFrontAtXY(x,y){
+  const p=contactSurfacePoint(x,y);
+  if(!p)return null;
+  const normal=bodyNormal(p.sourceX,y);
+  normal.x/=contactBroadening(p.sourceX).jacobian;
+  normal.normalize();
+  if(!Number.isFinite(normal.x)||!Number.isFinite(normal.y)||!Number.isFinite(normal.z)||normal.z<=.35)return null;
+  const radius=.045;
+  let edgeDistance=radius;
+  for(const [dx,dy]of[[1,0],[-1,0],[0,1],[0,-1]]){
+    if(contactSurfacePoint(x+dx*radius,y+dy*radius))continue;
+    // Refine only near a missing neighbor. No mesh, global sampling grid or
+    // mutable cache is needed, and arbitrary shoulder heights stay supported.
+    let lo=0,hi=radius;
+    for(let i=0;i<8;i++){
+      const distance=(lo+hi)*.5;
+      if(contactSurfacePoint(x+dx*distance,y+dy*distance))lo=distance;else hi=distance;
+    }
+    edgeDistance=Math.min(edgeDistance,lo);
+  }
+  const edgeWeight=smooth(.002,radius,edgeDistance)*smooth(.35,.65,normal.z);
+  return {point:new THREE.Vector3(p.x,p.y,p.z),normal,edgeWeight,xyResidual:p.residual};
+}
+
 const collarTipDepth=[bodyAtXY(-.713,.583)[2]+.022,bodyAtXY(.713,.623)[2]+.022];
 
 function curveMesh(group,name,points,radius,mat,segments=64) {
@@ -583,7 +673,7 @@ export function createBlouse() {
   // Geometry, normals, seams and buttons all receive the same continuous transform.
   broadenShoulders(group);
   group.userData.originalGeometry=true;
-  group.userData.design='Cotton blouse with sloping shoulders, a tapered waist and hanging sleeve planes; soft unequal collar leaves above a fixed open V facing; broad asymmetrical button pulls and shoulder compressions that wrap around the sleeves; sewn yoke/sleeves, a thin closed curved placket, three body buttons and an open facing button.';
+  group.userData.design='Cotton blouse with sloping shoulders, a tapered waist and hanging sleeve planes; soft unequal collar leaves above a fixed open V facing; sparse tapered diagonal button folds that relax into the loose front cotton, with fixed shoulder compressions around the sleeves; sewn yoke/sleeves, a thin closed curved placket, three body buttons and an open facing button.';
   return group;
 }
 
