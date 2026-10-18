@@ -4,7 +4,7 @@
   "goal_achieved": false,
   "method": "Visual self-assessment against the sole uploaded image, supplemented by independent agent review. Scores are subjective and are not a certification of AAA production quality.",
   "scope": "Recorded assessments whose numeric results remain available. No missing historical scores have been invented.",
-  "current_accepted_iteration": 66,
+  "current_accepted_iteration": 67,
   "current_accepted_score": 76,
   "assessments": [
     {
@@ -271,16 +271,23 @@
     {
       "iteration": 65,
       "score": 75,
-      "reviewer": "root",
+      "reviewer": "root and reference_art_review",
       "decision": "accepted bounded outer-cheek tone correction at strength .60",
       "notes": "Compared0,.60,.90 at matched native detail and quarter views. Smoothly unioned a local ellipse centered(.588,-.700), radii(.142,.215) with the prior correction. Uses existing same-side colors from image1 with original fine residual bounded to +/-5. The dark pit recedes while soft tone remains; .90 offers no useful visual gain. Eyes, lips, nose, chin, UVs, geometry, and hidden-side field remain unchanged."
     },
     {
       "iteration": 66,
       "score": 76,
-      "reviewer": "root",
+      "reviewer": "root and reference_art_review",
       "decision": "accepted lower-hair flow candidate59 with the current cloth and face refinements",
       "notes": "Five native views reviewed. Rear ends now use physical drop, unequal terminal bends and fuller overlapping layers, improving the regular sawtooth hem and reducing vertical gaps. Identified short-curl and inner-front shoulder wedges are gathered; one outer-front family still protrudes and is assigned for repair. Hair triangles1104568 and buffers51.62MiB are unchanged from57. Actual browser heap251MiB; CPU submission2.2ms is not a GPU frame-time measurement. The crown still reads as a solid cap; goal remains unmet."
+    },
+    {
+      "iteration": 67,
+      "score": 76,
+      "reviewer": "root and reference_art_review",
+      "decision": "accepted 6 percent lip thickness restoration",
+      "notes": "Compared0,4,6,8 percent in native detail and quarter views with accepted cheek color65. Six percent modestly restores central lip volume;8 adds little benefit. Closed seam and corners stay fixed, with no visible shelf or border discontinuity. Native4366vertices changed across face and two lip meshes, maxshift .004584,minJacobian .806621. Existing UV, gloss, crease, and ear geometry preserved; same-strength calls are no-ops. No score increase for this small adjustment."
     }
   ]
 }
