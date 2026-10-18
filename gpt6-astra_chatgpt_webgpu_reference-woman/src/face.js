@@ -124,7 +124,7 @@ function makeEye(s,skin,texture){
  const edgeWarm=new THREE.Color('#bd897c');
  for(let r=0;r<=NR;r++)for(let k=0;k<=NS;k++){
   const v=r/NR,a=k/NS*2*PI,[ix,iy,iz]=aperture(cx,s,a),ca=Math.cos(a),sa=Math.sin(a);
-  const ox=cx+.311*ca,oy=cy+(sa>=0?.221:.181)*sa+.013*s*ca;
+  const ox=cx+.311*ca,oy=cy+(sa>=0?.161:.131)*sa+.013*s*ca;
   const x=THREE.MathUtils.lerp(ix,ox,v),y=THREE.MathUtils.lerp(iy,oy,v),z=faceZ(x,y)+.002+(iz-faceZ(ix,iy))*(1-smooth(v))+.006*Math.sin(PI*v);
   pp.push(x,y,z);uu.push((Math.asin(clamp(x/profile(y)[0],-.999,.999))+PI)/(2*PI),(y+1.18)/2.72);
   const col=skinColor(x,y).lerp(edgeWarm,(1-v)**4*(sa>0?.20:.13));cc.push(col.r,col.g,col.b);
@@ -136,7 +136,7 @@ function makeEye(s,skin,texture){
  for(let i=0;i<=64;i++){
   const a=i/64*PI,p=aperture(cx,s,a);upper.push([p[0],p[1],p[2]+.004]);
   const q=aperture(cx,s,PI+a);lower.push([q[0],q[1],q[2]+.004]);
-  const ca=Math.cos(a),sa=Math.sin(a),v=.50,ox=cx+.311*ca,oy=cy+.221*sa+.013*s*ca;
+  const ca=Math.cos(a),sa=Math.sin(a),v=.50,ox=cx+.311*ca,oy=cy+.161*sa+.013*s*ca;
   crease.push([THREE.MathUtils.lerp(p[0],ox,v),THREE.MathUtils.lerp(p[1],oy,v),faceZ(THREE.MathUtils.lerp(p[0],ox,v),THREE.MathUtils.lerp(p[1],oy,v))+.003+(p[2]-faceZ(p[0],p[1]))*(1-smooth(v))+.006*Math.sin(PI*v)]);
  }
  g.add(mesh(tube(upper,.0048,64,5),rimMat,'upper-lash-margin'));
@@ -235,7 +235,7 @@ export function createHead({textures=true}={}){
   const a=j*(nt+1)+i,b=a+nt+1;
   const midX=(pos[a*3]+pos[(a+1)*3]+pos[b*3]+pos[(b+1)*3])/4;
   const midY=(pos[a*3+1]+pos[b*3+1])/2,midZ=pos[a*3+2];
-  const cutEye=midZ>0&&[-.342,.342].some(cx=>((midX-cx)/.293)**2+((midY-.25)/.175)**2<1);
+  const cutEye=midZ>0&&[-.342,.342].some(cx=>((midX-cx)/.293)**2+((midY-.25)/.12)**2<1);
   if(!cutEye)idx.push(a,a+1,b,b,a+1,b+1);
  }
  const head=mesh(buffer(pos,idx,uv,col),skin,'continuous-face');root.add(head);
