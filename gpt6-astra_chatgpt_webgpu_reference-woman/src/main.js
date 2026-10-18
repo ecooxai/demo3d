@@ -12,6 +12,7 @@ import { applyPortraitBalance } from './portrait-balance.js';
 import { applyLowerCheekTaper } from './face-refinement.js';
 import { applyLipThicknessRefinement } from './lip-refinement.js';
 import { applyReferenceEarColor } from './reference-ear.js';
+import { applyNearEarYaw115 } from './near-ear.js';
 import { createHair } from './hair.js';
 import { createFiberHair } from './hair-fibers.js';
 import { createGroomHair } from './hair-groom.js';
@@ -24,7 +25,7 @@ const hairChoice=new URLSearchParams(location.search).get('hair')||'groom';
 const fiberCandidate=hairChoice==='fibers';
 const groomCandidate=hairChoice==='groom';
 const coverageCandidate=hairChoice==='coverage';
-const state = { backend: new URLSearchParams(location.search).get('backend') === 'webgl' ? 'webgl' : 'webgpu', width: 900, height: 1200, iteration: groomCandidate?112:coverageCandidate?32:fiberCandidate?25:27, score: groomCandidate?76:fiberCandidate?61:68, renderedFrames: 0, renderMs: 0, rotating: false, view: 'front', ready: false, lighting: 'soft', antialiasing: 2, internalRender: null };
+const state = { backend: new URLSearchParams(location.search).get('backend') === 'webgl' ? 'webgl' : 'webgpu', width: 900, height: 1200, iteration: groomCandidate?115:coverageCandidate?32:fiberCandidate?25:27, score: groomCandidate?76:fiberCandidate?61:68, renderedFrames: 0, renderMs: 0, rotating: false, view: 'front', ready: false, lighting: 'soft', antialiasing: 2, internalRender: null };
 let portraitOutput=createPortraitOutput();
 const scene = new THREE.Scene();
 scene.background = new THREE.Color('#cbe3f3');
@@ -219,6 +220,7 @@ async function initialize(backend=state.backend) {
       if(groomCandidate)state.referenceCrown=await applyReferenceCrownMicrocontrast100(anatomicalHair,{strength:1});
       detailTarget.x=.02+state.pose.shiftX;
       state.referenceEar=await applyReferenceEarColor(anatomicalHead,{strength:1});
+      state.nearEarYaw115=applyNearEarYaw115(anatomicalHead,{degrees:-25});
       state.balance=applyPortraitBalance(model,{shiftX:-.24});
       detailTarget.x=.02+state.pose.shiftX+state.balance.shiftX;
       if(!skinIlluminationApplied){state.skinIllumination=compensateReferenceSkin(anatomicalHead,scene,{strength:.35});skinIlluminationApplied=true;}

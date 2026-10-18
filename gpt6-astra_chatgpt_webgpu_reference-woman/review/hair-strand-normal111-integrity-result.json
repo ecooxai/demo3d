@@ -1,0 +1,67 @@
+{
+  "candidate": 111,
+  "sourceOnly": true,
+  "scoreUnchanged": 76,
+  "result": "PASS",
+  "checks": [
+    "Exact no-op bytes, reference and version pass.",
+    "Index widening before an explicitly native upload stage fails.",
+    "Documented Uint16-to-Uint32 first upload passes only after all index values and original bytes match.",
+    "An already verified native array remains valid during strict cleanup.",
+    "A second even byte-identical index array replacement fails.",
+    "Changed triangle winding fails with exact first mismatches.",
+    "Primitive-restart index remapping fails for these triangle meshes.",
+    "Mutation of the retained original index bytes fails.",
+    "A byte-identical Float32 geometry array replacement fails.",
+    "Any Float32 source value mutation fails.",
+    "Version-only changes are explicitly distinguished and still fail.",
+    "Layout/count changes cannot hide behind native widening.",
+    "Actual installed createAttribute widens indices once without a version increment; Float32 remains exact and restart remapping is rejected."
+  ],
+  "installedSourceCheck": {
+    "ran": true,
+    "sourceSHA256": "48e28e508ce6e881c2e8d41f215e8a3493f7b06479be965d72d3e53f0cbf643c",
+    "fixtureAllocations": 3,
+    "indexWidening": {
+      "stage": "actual-installed-createAttribute-CPU",
+      "labels": [
+        {
+          "mesh": "Controlled audit fixture",
+          "attribute": "index"
+        }
+      ],
+      "before": {
+        "type": "Uint16Array",
+        "length": 6,
+        "bytes": 12,
+        "hash": "e6681333c21d3bedc5c5d4ea4503e8acc5b95e8d8e2aabffd97d12425a145443",
+        "version": 0,
+        "itemSize": 1,
+        "count": 6,
+        "normalized": false
+      },
+      "after": {
+        "type": "Uint32Array",
+        "length": 6,
+        "bytes": 24,
+        "hash": "752a6e22358c492163d1de31bfafb249c23a54c303ce495a18abf04cf82e01b2",
+        "version": 0,
+        "itemSize": 1,
+        "count": 6,
+        "normalized": false
+      },
+      "originalArrayHashNow": "e6681333c21d3bedc5c5d4ea4503e8acc5b95e8d8e2aabffd97d12425a145443",
+      "originalArrayBytesUnchanged": true,
+      "sameOriginalArrayReference": false,
+      "versionChanged": false,
+      "indexValuesCompared": 6,
+      "indexValueMismatches": 0,
+      "indexValuesExact": true,
+      "firstIndexMismatches": [],
+      "classification": "verified-native-index-widening"
+    },
+    "float32Unchanged": true,
+    "primitiveRestartRemapRejected": true,
+    "limitation": "The installed CPU method ran with a minimal in-memory GPU buffer; no native GPU or image validation occurred."
+  }
+}

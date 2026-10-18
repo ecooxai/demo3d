@@ -4,7 +4,7 @@
   "goal_achieved": false,
   "method": "Visual self-assessment against the sole uploaded image, supplemented by independent agent review. Scores are subjective and are not a certification of AAA production quality.",
   "scope": "Recorded assessments whose numeric results remain available. No missing historical scores have been invented.",
-  "current_accepted_iteration": 112,
+  "current_accepted_iteration": 115,
   "current_accepted_score": 76,
   "assessments": [
     {
@@ -568,6 +568,48 @@
       "reviewer": "root",
       "decision": "accepted viewer repair",
       "notes": "Explicit backend-switch validation exposed two existing scene-lifetime defects after99balance: ear color guards rejected repeat preparation on changed geometry, and return fromWebGL reused an incompatible cached shadow target. Scene geometry and reference maps now prepare once through a cached promise; switching renderers disposes public light GPU resources and clears shadow target references for recreation. NativeWebGPU\u2192explicitWebGL\u2192WebGPU and missing-WebGPU\u2192explicitWebGL pass with identicalCROWN position/color/UV0/UV1/map/coverage hashes and the same bake object. MissingWebGPU still creates no renderer until explicit user choice. Detail images onbothbackends viewed;no uncaught errors. Artistic score unchanged76; source geometry remains108/crown100/blouse106/export104."
+    },
+    {
+      "iteration": 114,
+      "score": 73,
+      "reviewer": "root and quality_review_42",
+      "decision": "rejected",
+      "notes": "Original tucked near-ear transition with14small rounded locks and252fine ribbons reduces exposed ear pixels but reads as an opaque dark strap in front/detail; left profile exposes a floating loop with a sharp upper connection. Far side/back offer no compensating improvement. NativeWebGPUtrue, added26880tri/1.110786MiB, construction13.1ms, heap281MiB, normalerror4.279e-8 and no runtime errors. Keep production112; orientation and hair coverage need separate anatomical decisions."
+    },
+    {
+      "iteration": 110,
+      "score": 76,
+      "reviewer": "root and quality_review_42",
+      "decision": "not adopted; mild76 and full75",
+      "notes": "Common monotone model-local depth field adds fuller blouse volume while preserving head/crown/fringe/wisps/crop, UV/color/topology and modelXY to2.43e-7. Native0/.5/1 front/detail/bothprofiles/back/garment show that hanging hair also bows outward, so the contact crescent persists; full looks more inflated and strengthens lower pointed returns. No obvious broad fine-shading failure at ordinary size, but no useful contact or likeness gain. Native1160364verts1492787tri,352772changed,24geometryclones20326104B staging;minimumJ.714114/.618828, elapsed113.8/116.3ms,heaps278/300/321,nativeWebGPUtrue,errors[]. Source audits found148mild/522full fine/MASS interpolation reversals>.001, maxima.00460/.00739; do not call the field mesh-collision-proof. Production112/76 retained."
+    },
+    {
+      "iteration": 113,
+      "score": 76,
+      "reviewer": "root and hair_groom_director",
+      "decision": "not adopted; repair of109 does not improve enough on108",
+      "notes": "Retains all109fine geometry, shortens/tapers opaque carriers into the crown and omits3unsupported forward-left carriers, leaving39. Alpha release begins later with a floor;869CROWNalpha vertices differ from108. Exact108MASS/fringe/WISPS/CROWNpositionsnormalsUVindexRGBmaps. Actualtessellatedcrown audit936endvertices,zeroexposedends,minZburial.01429,minsupportalpha.98916. Native5views remove109pointed teeth and modestly smooth the left sweep, but hard release/broad cap remain near108 and small bright dots persist at rightedge. No profile/back benefit for+39120tri/+1.65MiB. Totalhair1154008tri54.14MiB,nativeconstruction943.3msheap282WebGPUtrueerrors[]. Production112/76 retained."
+    },
+    {
+      "iteration": 111,
+      "score": 76,
+      "reviewer": "root and glb_export_repair",
+      "decision": "not adopted; modes1/2 insufficient visual gain",
+      "notes": "MASS-only83unequal fixed-U normal ridges add faint lengthwise relief but leave the broad ribbon structure dominant at ordinary portrait size. Additional weak fixed-U pigment gives no persuasive gain. Both modes inspected in native front/detail/left/right/back; no107fingerprints or new edge defects. Original geometry/texture buffers/materials protected,coverageexact,mode0no-op,idle0,cleanuprestoresoriginalrefs. Nativeconstruction22/34.2ms;heap283.74baseline279.54normal294.55normal+RGBMiB;2/4MiBtexturesplusmips,no new geometry/draws/perframeCPU. Initialauditfalsefailure traced to installedr186WebGPU first-uploadUint16-to-Uint32 index storage, CROWN143232/WISPS94824valuesall exact,versions0to0,476112Brepresentationdelta. Guard now permits only that exactfirstconversion, remainsstrictforallFloat32arraysandlaterchanges. Allnativecheckpoints andcleanup pass; source hash record retained. Production geometry108 kept."
+    },
+    {
+      "iteration": 115,
+      "score": 76,
+      "reviewer": "root and quality_review_42",
+      "decision": "accepted minus25degree near-ear orientation",
+      "notes": "A C2 outer-cartilage yaw narrows the overly frontal near-ear oval while keeping its supported inner attachment exactly fixed. Native0/minus15/minus25 front/detail/bothprofiles/back and fixedearoblique favorminus25; helix,bowl,lobe remain continuous without hingecrease/detachment. Uppercartilage stillneedsreferencehaircoverage; not claimedsolved.3932of5282earverticeschanged,1350pinned,896anchoredsamplesfixed,minJacobian.780151,maxposterior.096375,maxlateral.037913,zero newembedding. ClosedEuler2shell,colorsUVindexothersunchanged,126768temporaryB. Native37.4/44.4msfor15/25,heaps300/282MiB,WebGPUtrue noerrors. Appliedafterear70colorbeforebalance99inside112one-timepreparation;no new geometry/drawcalls/maps."
+    },
+    {
+      "iteration": 116,
+      "score": 75,
+      "reviewer": "root and hair_groom_director",
+      "decision": "not adopted; full75, mild76, production115 retained",
+      "notes": "Registered source hair color through37 manual crown correspondences reuses100 UV1 atlas and shares a medium-scale field with upper MASS/DETAIL roots. Native0/.65/1 all five views plus moved-key detail show full-strength cloudy dark patches above near ear and across the sweep/right temple; mild is quieter but does not resolve broad cap, sharp part or organized fringe groups. Patches remain fixed under changed light. Profiles/back preserved without compensating realism gain. Exact geometry/UV0/UV1/alpha/coverage/fringe/wisps/physical settings; unchanged1114888hairtri/52.49MiB. Native bake438.8/429.3ms at.65/1, heaps304.8/302.2MiB, WebGPUtrue noerrors. No retained texture/geometry increase. Medium filtered field reduced coarse root-triangle interpolation error but actual DETAIL95th-percentile error10.16% remains. Do not equate image registration with structural realism;119 must change coupled root geometry."
     }
   ]
 }

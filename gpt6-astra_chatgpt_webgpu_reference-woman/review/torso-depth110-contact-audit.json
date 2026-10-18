@@ -1,0 +1,1239 @@
+{
+  "audit": "torso-depth110-contact",
+  "sourceOnly": true,
+  "native": false,
+  "sources": {
+    "candidate": {
+      "file": "review/torso-depth-candidate110.js",
+      "bytes": 12263,
+      "sha256": "d9cdfb9f3be2142cedf6709853230a2ca3e99e2b64683b81794a7ac884ce0702"
+    },
+    "hair": {
+      "file": "src/hair-groom.js",
+      "bytes": 37686,
+      "sha256": "a66000a89de8c0cd42cffc91bb2522cfcf0f4cf786dd98b68e7b13c62d25ba6b"
+    },
+    "cloth": {
+      "file": "src/blouse.js",
+      "bytes": 40273,
+      "sha256": "553d31df6a497055d6d669f6c31d1dae476a9ef7d4c31529684b34c47feca233"
+    },
+    "contact": {
+      "file": "src/hair-contact.js",
+      "bytes": 4932,
+      "sha256": "d90133757b57670870566246ef774814e57a1e1b777119e3c772cc0ca50fe975"
+    },
+    "balance": {
+      "file": "src/portrait-balance.js",
+      "bytes": 8212,
+      "sha256": "467873c3ba67ae6411781bd3600f888d2d6af1fd7f83d392824da241e78fbb67"
+    }
+  },
+  "construction": "Current exact source108 groom, .35 contact, current106/102 cloth width.12, body/head pose, then actual99 function at-.24 on source Float32 geometry. No tessellation change.",
+  "formulaCheck": {
+    "samples": 3927,
+    "maxDifference": 5.551115123125783e-17
+  },
+  "grid": {
+    "xMin": -2.25,
+    "xMax": 2.25,
+    "yMin": -1.55,
+    "yMax": 1.65,
+    "nx": 164,
+    "ny": 128,
+    "dx": 0.027439024390243903,
+    "dy": 0.025
+  },
+  "approximations": {
+    "CROWN": {
+      "vertices": 24455,
+      "triangles": 47744,
+      "bounds": {
+        "min": [
+          -0.8863582530466827,
+          2.3867771901283446,
+          -0.948255300821277
+        ],
+        "max": [
+          1.0382619776042312,
+          4.574978028934616,
+          0.6374605060281512
+        ]
+      },
+      "edgeIncidences": 143232,
+      "centroids": 47744,
+      "presets": [
+        {
+          "strength": 0.5,
+          "front": 0.18,
+          "rear": 0.05,
+          "maxEdgeMidpointError": 0,
+          "maxCentroidError": 0,
+          "edgeIncidencesAbovePoint001": 0,
+          "centroidsAbovePoint001": 0,
+          "worstEdge": null,
+          "worstCentroid": null
+        },
+        {
+          "strength": 1,
+          "front": 0.24,
+          "rear": 0.08,
+          "maxEdgeMidpointError": 0,
+          "maxCentroidError": 0,
+          "edgeIncidencesAbovePoint001": 0,
+          "centroidsAbovePoint001": 0,
+          "worstEdge": null,
+          "worstCentroid": null
+        }
+      ]
+    },
+    "MASS": {
+      "vertices": 159210,
+      "triangles": 278400,
+      "bounds": {
+        "min": [
+          -1.4432219864078961,
+          -1.2773183115699203,
+          -1.1702299881050786
+        ],
+        "max": [
+          1.9176966139348954,
+          4.556559465201482,
+          1.203828307441451
+        ]
+      },
+      "edgeIncidences": 835200,
+      "centroids": 278400,
+      "presets": [
+        {
+          "strength": 0.5,
+          "front": 0.18,
+          "rear": 0.05,
+          "maxEdgeMidpointError": 0.002511352339256416,
+          "maxCentroidError": 0.002178785647497466,
+          "edgeIncidencesAbovePoint001": 5148,
+          "centroidsAbovePoint001": 1528,
+          "worstEdge": {
+            "triangle": 65056,
+            "edge": [
+              37206,
+              37198
+            ],
+            "point": [
+              -1.0899871764055207,
+              -0.3408597178918382,
+              0.9502815427116398
+            ]
+          },
+          "worstCentroid": {
+            "triangle": 65056,
+            "point": [
+              -1.0942341004929714,
+              -0.31230514044255414,
+              0.9455623283395157
+            ]
+          }
+        },
+        {
+          "strength": 1,
+          "front": 0.24,
+          "rear": 0.08,
+          "maxEdgeMidpointError": 0.003348366742148225,
+          "maxCentroidError": 0.0029049804512984436,
+          "edgeIncidencesAbovePoint001": 11828,
+          "centroidsAbovePoint001": 4230,
+          "worstEdge": {
+            "triangle": 65056,
+            "edge": [
+              37206,
+              37198
+            ],
+            "point": [
+              -1.0899871764055207,
+              -0.3408597178918382,
+              0.9502815427116398
+            ]
+          },
+          "worstCentroid": {
+            "triangle": 65056,
+            "point": [
+              -1.0942341004929714,
+              -0.31230514044255414,
+              0.9455623283395157
+            ]
+          }
+        }
+      ]
+    },
+    "DETAIL": {
+      "vertices": 646260,
+      "triangles": 623976,
+      "bounds": {
+        "min": [
+          -1.441868090570723,
+          -1.2848243467765368,
+          -1.1744557147808428
+        ],
+        "max": [
+          1.9071613988577878,
+          4.576872834320477,
+          1.2099576179038656
+        ]
+      },
+      "edgeIncidences": 1871928,
+      "centroids": 623976,
+      "presets": [
+        {
+          "strength": 0.5,
+          "front": 0.18,
+          "rear": 0.05,
+          "maxEdgeMidpointError": 0.01020319070939422,
+          "maxCentroidError": 0.009446186874690059,
+          "edgeIncidencesAbovePoint001": 154853,
+          "centroidsAbovePoint001": 70042,
+          "worstEdge": {
+            "triangle": 133325,
+            "edge": [
+              138085,
+              138087
+            ],
+            "point": [
+              -1.0283442371800886,
+              -0.43447413861384687,
+              0.9274162947054336
+            ]
+          },
+          "worstCentroid": {
+            "triangle": 133324,
+            "point": [
+              -1.0302480629794162,
+              -0.3704067234245831,
+              0.9241232230372155
+            ]
+          }
+        },
+        {
+          "strength": 1,
+          "front": 0.24,
+          "rear": 0.08,
+          "maxEdgeMidpointError": 0.013603945495629311,
+          "maxCentroidError": 0.012594613345005865,
+          "edgeIncidencesAbovePoint001": 192619,
+          "centroidsAbovePoint001": 88688,
+          "worstEdge": {
+            "triangle": 133325,
+            "edge": [
+              138085,
+              138087
+            ],
+            "point": [
+              -1.0283442371800886,
+              -0.43447413861384687,
+              0.9274162947054336
+            ]
+          },
+          "worstCentroid": {
+            "triangle": 133324,
+            "point": [
+              -1.0302480629794162,
+              -0.3704067234245831,
+              0.9241232230372155
+            ]
+          }
+        }
+      ]
+    },
+    "FRINGE": {
+      "vertices": 92568,
+      "triangles": 133160,
+      "bounds": {
+        "min": [
+          -0.7074468542916645,
+          2.807051239253247,
+          -0.028263242709209366
+        ],
+        "max": [
+          0.9055755214855076,
+          4.384985623162272,
+          0.691837623703747
+        ]
+      },
+      "edgeIncidences": 399480,
+      "centroids": 133160,
+      "presets": [
+        {
+          "strength": 0.5,
+          "front": 0.18,
+          "rear": 0.05,
+          "maxEdgeMidpointError": 0,
+          "maxCentroidError": 0,
+          "edgeIncidencesAbovePoint001": 0,
+          "centroidsAbovePoint001": 0,
+          "worstEdge": null,
+          "worstCentroid": null
+        },
+        {
+          "strength": 1,
+          "front": 0.24,
+          "rear": 0.08,
+          "maxEdgeMidpointError": 0,
+          "maxCentroidError": 0,
+          "edgeIncidencesAbovePoint001": 0,
+          "centroidsAbovePoint001": 0,
+          "worstEdge": null,
+          "worstCentroid": null
+        }
+      ]
+    },
+    "WISPS": {
+      "vertices": 32892,
+      "triangles": 31608,
+      "bounds": {
+        "min": [
+          -0.8732064433315923,
+          2.331882186749423,
+          -0.16182303459681313
+        ],
+        "max": [
+          0.9817025896825343,
+          4.237026845464582,
+          0.6977081946411199
+        ]
+      },
+      "edgeIncidences": 94824,
+      "centroids": 31608,
+      "presets": [
+        {
+          "strength": 0.5,
+          "front": 0.18,
+          "rear": 0.05,
+          "maxEdgeMidpointError": 0,
+          "maxCentroidError": 0,
+          "edgeIncidencesAbovePoint001": 0,
+          "centroidsAbovePoint001": 0,
+          "worstEdge": null,
+          "worstCentroid": null
+        },
+        {
+          "strength": 1,
+          "front": 0.24,
+          "rear": 0.08,
+          "maxEdgeMidpointError": 0,
+          "maxCentroidError": 0,
+          "edgeIncidencesAbovePoint001": 0,
+          "centroidsAbovePoint001": 0,
+          "worstEdge": null,
+          "worstCentroid": null
+        }
+      ]
+    },
+    "cloth": {
+      "vertices": 21809,
+      "triangles": 43008,
+      "bounds": {
+        "min": [
+          -2.021595229926545,
+          -1.5250970868233769,
+          -0.5836775302886963
+        ],
+        "max": [
+          2.0325497552942076,
+          1.739902560503885,
+          0.8630034923553467
+        ]
+      },
+      "edgeIncidences": 129024,
+      "centroids": 43008,
+      "presets": [
+        {
+          "strength": 0.5,
+          "front": 0.18,
+          "rear": 0.05,
+          "maxEdgeMidpointError": 0.0003897991270389158,
+          "maxCentroidError": 0.0003051240454000006,
+          "edgeIncidencesAbovePoint001": 0,
+          "centroidsAbovePoint001": 0,
+          "worstEdge": {
+            "triangle": 20364,
+            "edge": [
+              10428,
+              10236
+            ],
+            "point": [
+              0.15155583193316596,
+              -0.299590371160518,
+              0.8250523209571838
+            ]
+          },
+          "worstCentroid": {
+            "triangle": 20365,
+            "point": [
+              0.16027077043565938,
+              -0.30218843059999934,
+              0.8312152425448099
+            ]
+          }
+        },
+        {
+          "strength": 1,
+          "front": 0.24,
+          "rear": 0.08,
+          "maxEdgeMidpointError": 0.000520047238559098,
+          "maxCentroidError": 0.0004071017829372149,
+          "edgeIncidencesAbovePoint001": 0,
+          "centroidsAbovePoint001": 0,
+          "worstEdge": {
+            "triangle": 20364,
+            "edge": [
+              10428,
+              10236
+            ],
+            "point": [
+              0.15155583193316596,
+              -0.299590371160518,
+              0.8250523209571838
+            ]
+          },
+          "worstCentroid": {
+            "triangle": 20365,
+            "point": [
+              0.16027077043565938,
+              -0.30218843059999934,
+              0.8312152425448099
+            ]
+          }
+        }
+      ]
+    },
+    "collar--1": {
+      "vertices": 2450,
+      "triangles": 4896,
+      "bounds": {
+        "min": [
+          -1.0228305854221003,
+          0.5173684877347849,
+          0.10974942892789841
+        ],
+        "max": [
+          -0.5024781631732042,
+          1.541899530669502,
+          0.6066595911979675
+        ]
+      },
+      "edgeIncidences": 14688,
+      "centroids": 4896,
+      "presets": [
+        {
+          "strength": 0.5,
+          "front": 0.18,
+          "rear": 0.05,
+          "maxEdgeMidpointError": 0.00005108821209245655,
+          "maxCentroidError": 0.00004175541928407887,
+          "edgeIncidencesAbovePoint001": 0,
+          "centroidsAbovePoint001": 0,
+          "worstEdge": {
+            "triangle": 4756,
+            "edge": [
+              1221,
+              2447
+            ],
+            "point": [
+              -0.9459907525501985,
+              0.594375924388139,
+              0.5908492803573608
+            ]
+          },
+          "worstCentroid": {
+            "triangle": 4752,
+            "point": [
+              -0.9951034208391576,
+              0.5281637851738415,
+              0.5945254762967428
+            ]
+          }
+        },
+        {
+          "strength": 1,
+          "front": 0.24,
+          "rear": 0.08,
+          "maxEdgeMidpointError": 0.00006815712158181497,
+          "maxCentroidError": 0.00005564216103940339,
+          "edgeIncidencesAbovePoint001": 0,
+          "centroidsAbovePoint001": 0,
+          "worstEdge": {
+            "triangle": 4756,
+            "edge": [
+              1221,
+              2447
+            ],
+            "point": [
+              -0.9459907525501985,
+              0.594375924388139,
+              0.5908492803573608
+            ]
+          },
+          "worstCentroid": {
+            "triangle": 4752,
+            "point": [
+              -0.9951034208391576,
+              0.5281637851738415,
+              0.5945254762967428
+            ]
+          }
+        }
+      ]
+    },
+    "facing--1": {
+      "vertices": 441,
+      "triangles": 768,
+      "bounds": {
+        "min": [
+          -0.700018373422314,
+          0.7759941239681882,
+          0.10502389073371887
+        ],
+        "max": [
+          -0.2520810739327794,
+          1.52427954736267,
+          0.5850258469581604
+        ]
+      },
+      "edgeIncidences": 2304,
+      "centroids": 768,
+      "presets": [
+        {
+          "strength": 0.5,
+          "front": 0.18,
+          "rear": 0.05,
+          "maxEdgeMidpointError": 0.00003317095041040653,
+          "maxCentroidError": 0.000026395059670758545,
+          "edgeIncidencesAbovePoint001": 0,
+          "centroidsAbovePoint001": 0,
+          "worstEdge": {
+            "triangle": 464,
+            "edge": [
+              261,
+              270
+            ],
+            "point": [
+              -0.46409260794833035,
+              1.1621303371241893,
+              0.46473613381385803
+            ]
+          },
+          "worstCentroid": {
+            "triangle": 460,
+            "point": [
+              -0.5308321445679397,
+              1.1755112780924162,
+              0.468170960744222
+            ]
+          }
+        },
+        {
+          "strength": 1,
+          "front": 0.24,
+          "rear": 0.08,
+          "maxEdgeMidpointError": 0.00004427384309606992,
+          "maxCentroidError": 0.00003522806361185633,
+          "edgeIncidencesAbovePoint001": 0,
+          "centroidsAbovePoint001": 0,
+          "worstEdge": {
+            "triangle": 464,
+            "edge": [
+              261,
+              270
+            ],
+            "point": [
+              -0.46409260794833035,
+              1.1621303371241893,
+              0.46473613381385803
+            ]
+          },
+          "worstCentroid": {
+            "triangle": 460,
+            "point": [
+              -0.5308321445679397,
+              1.1755112780924162,
+              0.468170960744222
+            ]
+          }
+        }
+      ]
+    },
+    "collar-1": {
+      "vertices": 2450,
+      "triangles": 4896,
+      "bounds": {
+        "min": [
+          0.008688785605248314,
+          0.6356772946828604,
+          0.10836575925350189
+        ],
+        "max": [
+          0.5609280716899798,
+          1.5704732645531583,
+          0.6084542870521545
+        ]
+      },
+      "edgeIncidences": 14688,
+      "centroids": 4896,
+      "presets": [
+        {
+          "strength": 0.5,
+          "front": 0.18,
+          "rear": 0.05,
+          "maxEdgeMidpointError": 0.00003849508230682978,
+          "maxCentroidError": 0.000030665690564982556,
+          "edgeIncidencesAbovePoint001": 0,
+          "centroidsAbovePoint001": 0,
+          "worstEdge": {
+            "triangle": 4752,
+            "edge": [
+              1223,
+              2449
+            ],
+            "point": [
+              0.5473834137133458,
+              0.6503431847173367,
+              0.589731365442276
+            ]
+          },
+          "worstCentroid": {
+            "triangle": 4752,
+            "point": [
+              0.5518982997055571,
+              0.6457827252239557,
+              0.5902856985727946
+            ]
+          }
+        },
+        {
+          "strength": 1,
+          "front": 0.24,
+          "rear": 0.08,
+          "maxEdgeMidpointError": 0.00005136520403025285,
+          "maxCentroidError": 0.00004090318737878795,
+          "edgeIncidencesAbovePoint001": 0,
+          "centroidsAbovePoint001": 0,
+          "worstEdge": {
+            "triangle": 4752,
+            "edge": [
+              1223,
+              2449
+            ],
+            "point": [
+              0.5473834137133458,
+              0.6503431847173367,
+              0.589731365442276
+            ]
+          },
+          "worstCentroid": {
+            "triangle": 4752,
+            "point": [
+              0.5518982997055571,
+              0.6457827252239557,
+              0.5902856985727946
+            ]
+          }
+        }
+      ]
+    },
+    "facing-1": {
+      "vertices": 441,
+      "triangles": 768,
+      "bounds": {
+        "min": [
+          -0.2520810739327794,
+          0.7792330304394719,
+          0.09149128198623657
+        ],
+        "max": [
+          0.17461424617718224,
+          1.5586231036131448,
+          0.5780584216117859
+        ]
+      },
+      "edgeIncidences": 2304,
+      "centroids": 768,
+      "presets": [
+        {
+          "strength": 0.5,
+          "front": 0.18,
+          "rear": 0.05,
+          "maxEdgeMidpointError": 0.00003559691066077174,
+          "maxCentroidError": 0.00002994167783385494,
+          "edgeIncidencesAbovePoint001": 0,
+          "centroidsAbovePoint001": 0,
+          "worstEdge": {
+            "triangle": 464,
+            "edge": [
+              261,
+              270
+            ],
+            "point": [
+              -0.037692990118495265,
+              1.181331282314559,
+              0.4677847623825073
+            ]
+          },
+          "worstCentroid": {
+            "triangle": 464,
+            "point": [
+              -0.03323698168269515,
+              1.1848646287099587,
+              0.4662899672985077
+            ]
+          }
+        },
+        {
+          "strength": 1,
+          "front": 0.24,
+          "rear": 0.08,
+          "maxEdgeMidpointError": 0.000047503182452348845,
+          "maxCentroidError": 0.00003995575468526923,
+          "edgeIncidencesAbovePoint001": 0,
+          "centroidsAbovePoint001": 0,
+          "worstEdge": {
+            "triangle": 464,
+            "edge": [
+              261,
+              270
+            ],
+            "point": [
+              -0.037692990118495265,
+              1.181331282314559,
+              0.4677847623825073
+            ]
+          },
+          "worstCentroid": {
+            "triangle": 464,
+            "point": [
+              -0.03323698168269515,
+              1.1848646287099587,
+              0.4662899672985077
+            ]
+          }
+        }
+      ]
+    },
+    "placket": {
+      "vertices": 1650,
+      "triangles": 3296,
+      "bounds": {
+        "min": [
+          -0.3389929839096046,
+          -1.4404122869660012,
+          0.5663955211639404
+        ],
+        "max": [
+          0.22030795002366443,
+          0.7831467091481336,
+          0.8155226111412048
+        ]
+      },
+      "edgeIncidences": 9888,
+      "centroids": 3296,
+      "presets": [
+        {
+          "strength": 0.5,
+          "front": 0.18,
+          "rear": 0.05,
+          "maxEdgeMidpointError": 0.00009302027712033194,
+          "maxCentroidError": 0.00008341569718135487,
+          "edgeIncidencesAbovePoint001": 0,
+          "centroidsAbovePoint001": 0,
+          "worstEdge": {
+            "triangle": 738,
+            "edge": [
+              416,
+              406
+            ],
+            "point": [
+              0.0358324696242636,
+              -0.30884913201004127,
+              0.8058497905731201
+            ]
+          },
+          "worstCentroid": {
+            "triangle": 759,
+            "point": [
+              0.04356423505346774,
+              -0.3436942553574605,
+              0.8032265504201254
+            ]
+          }
+        },
+        {
+          "strength": 1,
+          "front": 0.24,
+          "rear": 0.08,
+          "maxEdgeMidpointError": 0.00012403885868239587,
+          "maxCentroidError": 0.00011122770633194708,
+          "edgeIncidencesAbovePoint001": 0,
+          "centroidsAbovePoint001": 0,
+          "worstEdge": {
+            "triangle": 738,
+            "edge": [
+              416,
+              406
+            ],
+            "point": [
+              0.0358324696242636,
+              -0.30884913201004127,
+              0.8058497905731201
+            ]
+          },
+          "worstCentroid": {
+            "triangle": 759,
+            "point": [
+              0.04356423505346774,
+              -0.3436942553574605,
+              0.8032265504201254
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "rayHits": {
+    "MASS": {
+      "name": "MASS",
+      "triangleHits": 263058,
+      "skippedEdgeOn": 0,
+      "maximumHitInterpolationErrorByPreset": [
+        0.0024405940703077235,
+        0.003254022600614868
+      ]
+    },
+    "DETAIL": {
+      "name": "DETAIL",
+      "triangleHits": 44194,
+      "skippedEdgeOn": 0,
+      "maximumHitInterpolationErrorByPreset": [
+        0.010230119046633047,
+        0.013639843372676427
+      ]
+    },
+    "cloth": {
+      "name": "cloth",
+      "triangleHits": 31898,
+      "skippedEdgeOn": 0,
+      "maximumHitInterpolationErrorByPreset": [
+        0.00031607481664203347,
+        0.0004217272580734298
+      ]
+    },
+    "collar--1": {
+      "name": "collar--1",
+      "triangleHits": 862,
+      "skippedEdgeOn": 0,
+      "maximumHitInterpolationErrorByPreset": [
+        0.00003799702895843677,
+        0.0000506164238379074
+      ]
+    },
+    "facing--1": {
+      "name": "facing--1",
+      "triangleHits": 82,
+      "skippedEdgeOn": 0,
+      "maximumHitInterpolationErrorByPreset": [
+        0.00003161099462248426,
+        0.00004219189532805187
+      ]
+    },
+    "collar-1": {
+      "name": "collar-1",
+      "triangleHits": 812,
+      "skippedEdgeOn": 0,
+      "maximumHitInterpolationErrorByPreset": [
+        0.00002827434265715134,
+        0.00003772083064177312
+      ]
+    },
+    "facing-1": {
+      "name": "facing-1",
+      "triangleHits": 79,
+      "skippedEdgeOn": 0,
+      "maximumHitInterpolationErrorByPreset": [
+        0.000028536699409056362,
+        0.000038086613791483284
+      ]
+    },
+    "placket": {
+      "name": "placket",
+      "triangleHits": 1176,
+      "skippedEdgeOn": 0,
+      "maximumHitInterpolationErrorByPreset": [
+        0.00009211609608878638,
+        0.00012283028986482525
+      ]
+    }
+  },
+  "ordering": [
+    {
+      "label": "MASS / primary cloth",
+      "overlappingRays": 11016,
+      "eligiblePairs": 494659,
+      "closePairsBelowPoint03": 3583,
+      "minimumOriginalGap": 0.0030006555075018926,
+      "requiredGap": 0.003,
+      "excludeSameGuide": false,
+      "presets": [
+        {
+          "strength": 0.5,
+          "front": 0.18,
+          "rear": 0.05,
+          "anyReversals": 0,
+          "reversalsAbovePoint001": 0,
+          "maximumReversal": 0,
+          "minimumGapAfter": 0.0028481420688367155,
+          "minimumExactGapAfter": 0.0030735784668102467,
+          "maximumGapReduction": 0.07659566265854811,
+          "worst": null
+        },
+        {
+          "strength": 1,
+          "front": 0.24,
+          "rear": 0.08,
+          "anyReversals": 0,
+          "reversalsAbovePoint001": 0,
+          "maximumReversal": 0,
+          "minimumGapAfter": 0.002757807087295911,
+          "minimumExactGapAfter": 0.0030995955036261487,
+          "maximumGapReduction": 0.10204859504145469,
+          "worst": null
+        }
+      ]
+    },
+    {
+      "label": "DETAIL / primary cloth",
+      "overlappingRays": 8657,
+      "eligiblePairs": 83483,
+      "closePairsBelowPoint03": 331,
+      "minimumOriginalGap": 0.0030834393417508155,
+      "requiredGap": 0.003,
+      "excludeSameGuide": false,
+      "presets": [
+        {
+          "strength": 0.5,
+          "front": 0.18,
+          "rear": 0.05,
+          "anyReversals": 0,
+          "reversalsAbovePoint001": 0,
+          "maximumReversal": 0,
+          "minimumGapAfter": 0.0027866801616011896,
+          "minimumExactGapAfter": 0.0031619007628306294,
+          "maximumGapReduction": 0.07744139692802349,
+          "worst": null
+        },
+        {
+          "strength": 1,
+          "front": 0.24,
+          "rear": 0.08,
+          "anyReversals": 0,
+          "reversalsAbovePoint001": 0,
+          "maximumReversal": 0,
+          "minimumGapAfter": 0.0026008756059785333,
+          "minimumExactGapAfter": 0.0032029095528106426,
+          "maximumGapReduction": 0.10317203034948286,
+          "worst": null
+        }
+      ]
+    },
+    {
+      "label": "MASS / other MASS guide",
+      "overlappingRays": 11308,
+      "eligiblePairs": 4531535,
+      "closePairsBelowPoint03": 780880,
+      "minimumOriginalGap": 0.003000041055483571,
+      "requiredGap": 0.003,
+      "excludeSameGuide": true,
+      "presets": [
+        {
+          "strength": 0.5,
+          "front": 0.18,
+          "rear": 0.05,
+          "anyReversals": 0,
+          "reversalsAbovePoint001": 0,
+          "maximumReversal": 0,
+          "minimumGapAfter": 0.0005820595097891377,
+          "minimumExactGapAfter": 0.00215463814457252,
+          "maximumGapReduction": 0.07984878782488292,
+          "worst": null
+        },
+        {
+          "strength": 1,
+          "front": 0.24,
+          "rear": 0.08,
+          "anyReversals": 1,
+          "reversalsAbovePoint001": 0,
+          "maximumReversal": 0.00029043207714270685,
+          "minimumGapAfter": -0.00029043207714270685,
+          "minimumExactGapAfter": 0.0018677684285245447,
+          "maximumGapReduction": 0.10641392289753304,
+          "worst": {
+            "rayX": -1.2210365853658536,
+            "rayY": -0.3374999999999999,
+            "aTriangle": 80490,
+            "bTriangle": 73709,
+            "aZ": 0.94942214302959,
+            "bZ": 0.9526224345909036,
+            "originalGap": 0.0032002915613135174,
+            "after": -0.00029043207714270685,
+            "continuousAfter": 0.002333754951769369
+          }
+        }
+      ]
+    },
+    {
+      "label": "DETAIL / MASS",
+      "overlappingRays": 8855,
+      "eligiblePairs": 1704527,
+      "closePairsBelowPoint03": 275252,
+      "minimumOriginalGap": 0.0030000283870955657,
+      "requiredGap": 0.003,
+      "excludeSameGuide": false,
+      "presets": [
+        {
+          "strength": 0.5,
+          "front": 0.18,
+          "rear": 0.05,
+          "anyReversals": 373,
+          "reversalsAbovePoint001": 148,
+          "maximumReversal": 0.004597473815633376,
+          "minimumGapAfter": -0.004597473815633376,
+          "minimumExactGapAfter": 0.002146456055997564,
+          "maximumGapReduction": 0.08030765150023489,
+          "worst": {
+            "rayX": -1.166158536585366,
+            "rayY": -0.36250000000000004,
+            "aTriangle": 154772,
+            "bTriangle": 74661,
+            "aZ": 1.0126211236776357,
+            "bZ": 1.0088438130419897,
+            "originalGap": 0.003777310635646014,
+            "after": -0.004597473815633376,
+            "continuousAfter": 0.002888509200977375
+          }
+        },
+        {
+          "strength": 1,
+          "front": 0.24,
+          "rear": 0.08,
+          "anyReversals": 1166,
+          "reversalsAbovePoint001": 522,
+          "maximumReversal": 0.007388809767349393,
+          "minimumGapAfter": -0.007388809767349393,
+          "minimumExactGapAfter": 0.0018616430019776252,
+          "maximumGapReduction": 0.10702134005827107,
+          "worst": {
+            "rayX": -1.166158536585366,
+            "rayY": -0.36250000000000004,
+            "aTriangle": 154772,
+            "bTriangle": 74661,
+            "aZ": 1.0126211236776357,
+            "bZ": 1.0088438130419897,
+            "originalGap": 0.003777310635646014,
+            "after": -0.007388809767349393,
+            "continuousAfter": 0.0025923593321306605
+          }
+        }
+      ]
+    },
+    {
+      "label": "collar--1 / primary cloth",
+      "overlappingRays": 431,
+      "eligiblePairs": 1710,
+      "closePairsBelowPoint03": 51,
+      "minimumOriginalGap": 0.004000035481611153,
+      "requiredGap": 0.003,
+      "excludeSameGuide": false,
+      "presets": [
+        {
+          "strength": 0.5,
+          "front": 0.18,
+          "rear": 0.05,
+          "anyReversals": 0,
+          "reversalsAbovePoint001": 0,
+          "maximumReversal": 0,
+          "minimumGapAfter": 0.00400453632633473,
+          "minimumExactGapAfter": 0.00400382521647571,
+          "maximumGapReduction": 0,
+          "worst": null
+        },
+        {
+          "strength": 1,
+          "front": 0.24,
+          "rear": 0.08,
+          "anyReversals": 0,
+          "reversalsAbovePoint001": 0,
+          "maximumReversal": 0,
+          "minimumGapAfter": 0.004006241460551731,
+          "minimumExactGapAfter": 0.0040052807209149085,
+          "maximumGapReduction": 0,
+          "worst": null
+        }
+      ]
+    },
+    {
+      "label": "collar-1 / primary cloth",
+      "overlappingRays": 406,
+      "eligiblePairs": 1608,
+      "closePairsBelowPoint03": 29,
+      "minimumOriginalGap": 0.005197439599816611,
+      "requiredGap": 0.003,
+      "excludeSameGuide": false,
+      "presets": [
+        {
+          "strength": 0.5,
+          "front": 0.18,
+          "rear": 0.05,
+          "anyReversals": 0,
+          "reversalsAbovePoint001": 0,
+          "maximumReversal": 0,
+          "minimumGapAfter": 0.0051990009273839965,
+          "minimumExactGapAfter": 0.00519833762217698,
+          "maximumGapReduction": 0,
+          "worst": null
+        },
+        {
+          "strength": 1,
+          "front": 0.24,
+          "rear": 0.08,
+          "anyReversals": 0,
+          "reversalsAbovePoint001": 0,
+          "maximumReversal": 0,
+          "minimumGapAfter": 0.005199562444098375,
+          "minimumExactGapAfter": 0.005198681196916599,
+          "maximumGapReduction": 0,
+          "worst": null
+        }
+      ]
+    },
+    {
+      "label": "facing--1 / primary cloth",
+      "overlappingRays": 82,
+      "eligiblePairs": 164,
+      "closePairsBelowPoint03": 82,
+      "minimumOriginalGap": 0.008303555564224352,
+      "requiredGap": 0.003,
+      "excludeSameGuide": false,
+      "presets": [
+        {
+          "strength": 0.5,
+          "front": 0.18,
+          "rear": 0.05,
+          "anyReversals": 0,
+          "reversalsAbovePoint001": 0,
+          "maximumReversal": 0,
+          "minimumGapAfter": 0.008550023088409273,
+          "minimumExactGapAfter": 0.00854974115170595,
+          "maximumGapReduction": 0,
+          "worst": null
+        },
+        {
+          "strength": 1,
+          "front": 0.24,
+          "rear": 0.08,
+          "anyReversals": 0,
+          "reversalsAbovePoint001": 0,
+          "maximumReversal": 0,
+          "minimumGapAfter": 0.008578110602740253,
+          "minimumExactGapAfter": 0.008577733100806442,
+          "maximumGapReduction": 0,
+          "worst": null
+        }
+      ]
+    },
+    {
+      "label": "facing-1 / primary cloth",
+      "overlappingRays": 79,
+      "eligiblePairs": 152,
+      "closePairsBelowPoint03": 73,
+      "minimumOriginalGap": 0.008982595510345526,
+      "requiredGap": 0.003,
+      "excludeSameGuide": false,
+      "presets": [
+        {
+          "strength": 0.5,
+          "front": 0.18,
+          "rear": 0.05,
+          "anyReversals": 0,
+          "reversalsAbovePoint001": 0,
+          "maximumReversal": 0,
+          "minimumGapAfter": 0.009362109602038598,
+          "minimumExactGapAfter": 0.009362997085808187,
+          "maximumGapReduction": 0,
+          "worst": null
+        },
+        {
+          "strength": 1,
+          "front": 0.24,
+          "rear": 0.08,
+          "anyReversals": 0,
+          "reversalsAbovePoint001": 0,
+          "maximumReversal": 0,
+          "minimumGapAfter": 0.00937252683969403,
+          "minimumExactGapAfter": 0.00937370848848752,
+          "maximumGapReduction": 0,
+          "worst": null
+        }
+      ]
+    },
+    {
+      "label": "placket / primary cloth",
+      "overlappingRays": 588,
+      "eligiblePairs": 2328,
+      "closePairsBelowPoint03": 1152,
+      "minimumOriginalGap": 0.0030119896972720106,
+      "requiredGap": 0.003,
+      "excludeSameGuide": false,
+      "presets": [
+        {
+          "strength": 0.5,
+          "front": 0.18,
+          "rear": 0.05,
+          "anyReversals": 0,
+          "reversalsAbovePoint001": 0,
+          "maximumReversal": 0,
+          "minimumGapAfter": 0.003040347752025667,
+          "minimumExactGapAfter": 0.0030275114517425575,
+          "maximumGapReduction": 0.0009874522576785016,
+          "worst": null
+        },
+        {
+          "strength": 1,
+          "front": 0.24,
+          "rear": 0.08,
+          "anyReversals": 0,
+          "reversalsAbovePoint001": 0,
+          "maximumReversal": 0,
+          "minimumGapAfter": 0.003030818827757387,
+          "minimumExactGapAfter": 0.0030303710503020004,
+          "maximumGapReduction": 0.001313638793129672,
+          "worst": null
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Finite edge-midpoint/centroid/XY-ray probes are not an exhaustive continuous collision certificate.",
+    "Raw opaque source triangles are sampled regardless of hair alpha; shared-edge hit duplication is possible.",
+    "Ordering omits original gaps below.003 and compares only the listed components. Existing self-intersections are not repaired.",
+    "Collar/facing/placket primary surfaces are exact, but sewn tubes, detailed buttons, neck and face are outside this order audit; all native mesh positions/normals are separately preflighted.",
+    "The source harness supplies uniform Catmull-Rom and geometry math; native Three material rendering and full hidden-side anatomy require visual review."
+  ],
+  "resources": {
+    "wallMs": 4189.161652000001,
+    "cpuMs": 5057.453,
+    "peakRssMiB": 453.30859375,
+    "finalMiB": {
+      "rss": 293.3,
+      "heapTotal": 138,
+      "heapUsed": 26.2,
+      "external": 120.7,
+      "arrayBuffers": 118.6
+    }
+  }
+}

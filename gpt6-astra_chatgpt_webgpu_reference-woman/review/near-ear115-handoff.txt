@@ -1,0 +1,70 @@
+Candidate 115 — frozen source handoff
+
+Status: source checks pass; native art acceptance is pending. Baseline score remains 76/100.
+Production files, candidate 110, and frozen candidates were not edited.
+
+Native files to transfer:
+  review/near-ear-candidate115.js (11,455 bytes)
+    SHA256 fb07d572e9759ace39417cb411b5efb7274ef54f1aaaf9ce38900fefbc6ee4fb
+  review/near-ear115-native.mjs (5,717 bytes)
+    SHA256 e22efd54c508cf581b8f3d676b48c9e8e9f313aaf8a4502d60b9f1b46516f729
+
+Run:
+  node review/near-ear115-native.mjs
+
+The native script builds a virtual main entry and inserts applyNearEarYaw115(anatomicalHead,
+{ degrees }) after referenceEarColor70 and immediately before balance99 inside the existing
+one-time preparation. It compares fresh pages at 0, -15 and -25 degrees. Output is
+output/qa/near-ear-115-{0,15,25}-{front,detail,left,right,back,ear-oblique}.png, plus
+output/qa/near-ear115-native-audit.json. Oblique views share the baseline ear target, with hair
+hidden and the anatomical face retained, to expose attachment and cartilage shape.
+
+Map: a C2 lateral weight rotates only the near-ear shell's free outer cartilage around the
+head-local hinge (-.73, .22) in X/Z. All x >= -.790 is exactly pinned; full turn is reached
+by x = -.920. Negative angles move all affected vertices posteriorly. Exact Jacobian
+inverse-transpose normals are conjugated through full mesh-to-head matrices. Topology,
+UVs, colors, index and all other meshes remain unchanged. Zero performs no allocation,
+traversal or mutation. Repeating the same angle is a no-op; changing the angle requires a
+fresh head. The staged geometry clone is committed only after all checks pass.
+
+The pin is based on actual current continuous-face triangles, not an assumed ellipsoid.
+In the source fixture, 752 vertices are embedded and 280 are within .005 of the facial
+surface (896 anchored vertices after overlap). All are among the 1,350 pinned vertices.
+The leftmost anchored sample is x=-.7836329; a tentative -.770 pin would have moved
+attached cartilage and was therefore rejected before implementation. The native module
+repeats this attachment check against the actual scene before applying the map.
+
+Source audit:
+  review/near-ear115-audit.mjs
+  review/near-ear115-source.mjs
+  review/near-ear115-source-audit.json
+
+Ear: 5,282 vertices / 10,560 triangles; 3,932 moved, 1,350 pinned; one geometry clone;
+126,768 staged bytes. No newly embedded vertices or anterior displacement at -15/-25/-35.
+Closed edge incidence remains two with Euler characteristic two; no zero-area triangles.
+
+Angle        sampled min J   conservative min J   max posterior Z   max |delta X|
+-15 deg      .8680905        .8019491               .0597532          .0180405
+-25 deg      .7801508        .6699152               .0963751          .0379130
+-35 stress   .6922111        .5378813               .1291200          .0635382
+
+Maximum source edge-midpoint interpolation error: .0004154 / .0007235 / .0010576.
+Unoccluded whole-ear projected width falls about 2.4% at -15 and 6.9% at -25; this is
+not a prediction of visible ear width, which depends on native face/hair occlusion.
+Signed volume ratios: .98694 / .97814 / .96927. Typical source apply time: 94-115 ms.
+The full audit took .951 s wall time and 114.4 MiB peak RSS.
+
+Audit also covers exact pinned bytes, protected color/UV/index references, untouched face
+and far ear, shared-geometry isolation, same-argument idempotence, four atomic failures,
+and nonuniform/sheared matrices including a negative determinant. Maximum position map
+error is 3.45e-8; finite-difference normal angle error is .00000242 degrees. All native
+model attributes except the intended near-ear position/normal changes are hashed for
+comparison. The native source is authoritative: the local geometry-only harness uses a
+matching Catmull-Rom implementation and omits material color adjustment.
+
+Art acceptance must check a narrower, more posterior near-ear presentation without a
+hard hinge, pinched lobe, flattened bowl, exposed facial seam or extra scalp burial.
+The sole photo also covers much of the upper ear with hair; this rotation alone does not
+reconstruct that coverage. -15 may be too subtle and -25 may be excessive from a profile.
+Source topology and Jacobian checks do not replace those native views or prove exhaustive
+surface self-intersection absence. No visual score increase is claimed.

@@ -1,0 +1,167 @@
+{
+  "native": false,
+  "sourceHarness": true,
+  "base": "frozen108",
+  "cloth": "width98 .12 with unchanged86 contact .35",
+  "finite": true,
+  "meshes": [
+    {
+      "name": "Continuous parted crown with longitudinal fiber flow",
+      "vertices": 24455,
+      "triangles": 47744,
+      "changedAttributes": [
+        "color"
+      ]
+    },
+    {
+      "name": "Overlapping layered S-wave hair around front back and shoulders",
+      "vertices": 159210,
+      "triangles": 278400,
+      "changedAttributes": []
+    },
+    {
+      "name": "Independent fine crown lengths and silhouette strands",
+      "vertices": 666168,
+      "triangles": 643128,
+      "changedAttributes": [
+        "position",
+        "color",
+        "uv",
+        "normal"
+      ]
+    },
+    {
+      "name": "Dense fine bowed brown fringe strands",
+      "vertices": 92568,
+      "triangles": 133160,
+      "changedAttributes": []
+    },
+    {
+      "name": "Sparse short temple edge and hairline wisps",
+      "vertices": 32892,
+      "triangles": 31608,
+      "changedAttributes": []
+    },
+    {
+      "name": "Shallow overlapping crown root locks with staggered fine ends",
+      "vertices": 11583,
+      "triangles": 19968,
+      "changedAttributes": []
+    }
+  ],
+  "crown": {
+    "positionsNormalsUV0IndexRGBMapsExact": true,
+    "foundationExact": true,
+    "vertexAlphaChanged": 869,
+    "alphaRange": [
+      0.0004199999966658652,
+      1
+    ],
+    "textureCoverageBytesUnchanged": true,
+    "export104LayoutUnchanged": true
+  },
+  "fine": {
+    "oldCrownRange": [
+      483894,
+      608094
+    ],
+    "changed": {
+      "vertices": 29171,
+      "maximumDisplacement": 0.008353299753973366,
+      "minimumY": 0.28702184557914734,
+      "maximumY": 1.4787940979003906
+    },
+    "oldOtherFibersExact": true,
+    "appended": {
+      "vertices": 19908,
+      "skinTested": 17953,
+      "skinPenetrations": 0,
+      "minimumSkinClearance": 0.09366522342054057,
+      "normalLength": [
+        0.9999999548839832,
+        1.000000043093114
+      ],
+      "minimumTriangleArea": 2.8441900284408387e-8,
+      "degenerateTriangles": 0,
+      "bounds": {
+        "min": [
+          -0.7278255820274353,
+          0.3960787057876587,
+          0.11187374591827393
+        ],
+        "max": [
+          0.7556668519973755,
+          1.5774246454238892,
+          0.6551405787467957
+        ]
+      }
+    }
+  },
+  "newCarriers": {
+    "vertices": 11583,
+    "skinTested": 11583,
+    "skinPenetrations": 0,
+    "minimumSkinClearance": 0.08585469501065507,
+    "normalLength": [
+      0.9999999529776822,
+      1.0000000439745846
+    ],
+    "minimumTriangleArea": 1.8337052849963957e-8,
+    "degenerateTriangles": 0,
+    "bounds": {
+      "min": [
+        -0.6219280958175659,
+        0.5488662719726562,
+        0.3741002678871155
+      ],
+      "max": [
+        0.7238777279853821,
+        1.4335991144180298,
+        0.6223047971725464
+      ]
+    }
+  },
+  "transition": {
+    "carriers": 39,
+    "fineFibers": 378,
+    "unchangedCrownUV0": true,
+    "unchangedCrownPositions": true,
+    "unchangedVisibleFringe": true,
+    "partCrossings": 12,
+    "opaqueCarrierEndsBuried": true,
+    "retainedFine109": true,
+    "coverageRestoredBeforeV": 0.82,
+    "unsupportedOpaqueCarriersOmitted": 3
+  },
+  "unchangedMassFringeWispsContactTemple": true,
+  "unchangedMaterials": true,
+  "fine109FullyExact": true,
+  "carrierEndBurial": {
+    "carriers": 39,
+    "ringsPerCarrier": 3,
+    "testedVertices": 936,
+    "unsupportedVertices": 0,
+    "exposedVertices": 0,
+    "minimumDepthBelowCrown": 0.014291344162554842,
+    "maximumDepthBelowCrown": 0.030340436088895695,
+    "minimumEffectiveBedAlpha": 0.9891558544074249,
+    "examples": []
+  },
+  "geometry": {
+    "triangles": 1154008,
+    "triangleDelta": 39120,
+    "MiB": 54.14,
+    "MiBDelta": 1.65,
+    "constructionMs": 2533.3
+  },
+  "cost": {
+    "wallMs": 8028.201983,
+    "cpuMs": 9641.108,
+    "rssMiB": 478.1796875
+  },
+  "limitations": [
+    "Source harness is not native Three/WebGPU; art acceptance requires five native views.",
+    "Skin clearance is a projected primary-face check on new geometry, excluding the outer silhouette and accessory meshes.",
+    "Crown vertex-alpha changes need native104 edge review even though UV charts and its alpha merge algorithm are unchanged."
+  ]
+}

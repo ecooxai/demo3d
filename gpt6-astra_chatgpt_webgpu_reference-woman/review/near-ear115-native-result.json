@@ -1,0 +1,2555 @@
+[
+  {
+    "iteration": 115,
+    "degrees": 0,
+    "nativeWebGPU": true,
+    "ear": {
+      "version": "near-ear-outer-cartilage-yaw-115",
+      "degrees": 0,
+      "applied": false,
+      "changedVertices": 0,
+      "minimumJacobian": 1,
+      "elapsedMs": 0
+    },
+    "earBounds": {
+      "isBox3": true,
+      "min": {
+        "x": -1.1985191106796265,
+        "y": -0.3345052897930145,
+        "z": 0.12931306660175323
+      },
+      "max": {
+        "x": -0.9425190687179565,
+        "y": 0.23459625244140625,
+        "z": 0.23939459025859833
+      }
+    },
+    "earCenter": [
+      -0.7605835301598523,
+      3.081878521671132,
+      0.3514402123986572
+    ],
+    "meshes": 64,
+    "vertices": 1160364,
+    "triangles": 1492787,
+    "nonfinite": 0,
+    "normalError": 4.9655871747766867e-8,
+    "zeroNormals": 5841,
+    "parts": [
+      {
+        "name": "continuous-face",
+        "near": false,
+        "vertices": 110871,
+        "triangles": 218608,
+        "index": "9697a4bc",
+        "attributes": {
+          "position": "d564044a",
+          "uv": "84fd4586",
+          "color": "c3f1b192",
+          "normal": "a123f9c3"
+        }
+      },
+      {
+        "name": "scleral-globe",
+        "near": false,
+        "vertices": 2425,
+        "triangles": 1060,
+        "index": "1b8e55cd",
+        "attributes": {
+          "position": "6ac85e18",
+          "uv": "450094d8",
+          "normal": "61495dd0"
+        }
+      },
+      {
+        "name": "brown-iris-and-pupil",
+        "near": false,
+        "vertices": 3277,
+        "triangles": 5120,
+        "index": "f3d6fbbd",
+        "attributes": {
+          "position": "77ba56c7",
+          "uv": "fe863aec",
+          "normal": "eeff6484"
+        }
+      },
+      {
+        "name": "transparent-corneal-dome",
+        "near": false,
+        "vertices": 3277,
+        "triangles": 5120,
+        "index": "f3d6fbbd",
+        "attributes": {
+          "position": "a2ebbb3d",
+          "uv": "a5ef6435",
+          "normal": "a339d9da"
+        }
+      },
+      {
+        "name": "corneal-softbox-reflection",
+        "near": false,
+        "vertices": 187,
+        "triangles": 288,
+        "index": "d036f0d5",
+        "attributes": {
+          "position": "d2a69b12",
+          "normal": "1d65e85",
+          "uv": "2bc30f97"
+        }
+      },
+      {
+        "name": "corneal-softbox-reflection",
+        "near": false,
+        "vertices": 187,
+        "triangles": 288,
+        "index": "d036f0d5",
+        "attributes": {
+          "position": "7dbfe92c",
+          "normal": "73e5ea58",
+          "uv": "2bc30f97"
+        }
+      },
+      {
+        "name": "sculpted-eyelids",
+        "near": false,
+        "vertices": 1677,
+        "triangles": 3072,
+        "index": "de38a287",
+        "attributes": {
+          "position": "661fd3f",
+          "uv": "5430a5d7",
+          "color": "eba1d339",
+          "normal": "819b262b"
+        }
+      },
+      {
+        "name": "upper-lash-margin",
+        "near": false,
+        "vertices": 390,
+        "triangles": 640,
+        "index": "9d65ea85",
+        "attributes": {
+          "position": "95055671",
+          "normal": "6ff7b47f",
+          "uv": "5f651809"
+        }
+      },
+      {
+        "name": "lower-waterline",
+        "near": false,
+        "vertices": 390,
+        "triangles": 640,
+        "index": "9d65ea85",
+        "attributes": {
+          "position": "2717c91d",
+          "normal": "28fa8753",
+          "uv": "5f651809"
+        }
+      },
+      {
+        "name": "lower-tear-meniscus",
+        "near": false,
+        "vertices": 390,
+        "triangles": 640,
+        "index": "9d65ea85",
+        "attributes": {
+          "position": "497a9f64",
+          "normal": "2ea9eb7a",
+          "uv": "5f651809"
+        }
+      },
+      {
+        "name": "upper-lid-fold",
+        "near": false,
+        "vertices": 245,
+        "triangles": 384,
+        "index": "e94c4485",
+        "attributes": {
+          "position": "e01d1d05",
+          "normal": "8a48ad10",
+          "uv": "4ccd4b63"
+        }
+      },
+      {
+        "name": "individual-eyelashes",
+        "near": false,
+        "vertices": 1032,
+        "triangles": 1308,
+        "index": "165247ed",
+        "attributes": {
+          "position": "66c90370",
+          "normal": "9200cb7c",
+          "uv": "da4104a5"
+        }
+      },
+      {
+        "name": "lacrimal-caruncle",
+        "near": false,
+        "vertices": 221,
+        "triangles": 352,
+        "index": "fef62615",
+        "attributes": {
+          "position": "23635ed3",
+          "normal": "e8311783",
+          "uv": "247c0ebb"
+        }
+      },
+      {
+        "name": "scleral-globe",
+        "near": false,
+        "vertices": 2425,
+        "triangles": 1059,
+        "index": "5a622697",
+        "attributes": {
+          "position": "c045b136",
+          "uv": "30a8eef7",
+          "normal": "3ee79475"
+        }
+      },
+      {
+        "name": "brown-iris-and-pupil",
+        "near": false,
+        "vertices": 3277,
+        "triangles": 5123,
+        "index": "1d4b6362",
+        "attributes": {
+          "position": "413f7909",
+          "uv": "62bb2b6c",
+          "normal": "b43d3e8a"
+        }
+      },
+      {
+        "name": "transparent-corneal-dome",
+        "near": false,
+        "vertices": 3277,
+        "triangles": 5123,
+        "index": "1d4b6362",
+        "attributes": {
+          "position": "15381f",
+          "uv": "a5ef6435",
+          "normal": "6c5b2727"
+        }
+      },
+      {
+        "name": "corneal-softbox-reflection",
+        "near": false,
+        "vertices": 187,
+        "triangles": 288,
+        "index": "d036f0d5",
+        "attributes": {
+          "position": "44e6d44b",
+          "normal": "1d65e85",
+          "uv": "2bc30f97"
+        }
+      },
+      {
+        "name": "corneal-softbox-reflection",
+        "near": false,
+        "vertices": 187,
+        "triangles": 288,
+        "index": "d036f0d5",
+        "attributes": {
+          "position": "63d0e8a0",
+          "normal": "73e5ea58",
+          "uv": "2bc30f97"
+        }
+      },
+      {
+        "name": "sculpted-eyelids",
+        "near": false,
+        "vertices": 1677,
+        "triangles": 3072,
+        "index": "de38a287",
+        "attributes": {
+          "position": "6d938e62",
+          "uv": "583f22bb",
+          "color": "eb1bb84b",
+          "normal": "f0a9d54d"
+        }
+      },
+      {
+        "name": "upper-lash-margin",
+        "near": false,
+        "vertices": 390,
+        "triangles": 640,
+        "index": "9d65ea85",
+        "attributes": {
+          "position": "b4b7bc1e",
+          "normal": "50252c09",
+          "uv": "5f651809"
+        }
+      },
+      {
+        "name": "lower-waterline",
+        "near": false,
+        "vertices": 390,
+        "triangles": 640,
+        "index": "9d65ea85",
+        "attributes": {
+          "position": "a7bad3e1",
+          "normal": "6089675d",
+          "uv": "5f651809"
+        }
+      },
+      {
+        "name": "lower-tear-meniscus",
+        "near": false,
+        "vertices": 390,
+        "triangles": 640,
+        "index": "9d65ea85",
+        "attributes": {
+          "position": "8daa9d4c",
+          "normal": "3345d082",
+          "uv": "5f651809"
+        }
+      },
+      {
+        "name": "upper-lid-fold",
+        "near": false,
+        "vertices": 245,
+        "triangles": 384,
+        "index": "e94c4485",
+        "attributes": {
+          "position": "c32dcb19",
+          "normal": "63842228",
+          "uv": "4ccd4b63"
+        }
+      },
+      {
+        "name": "individual-eyelashes",
+        "near": false,
+        "vertices": 1032,
+        "triangles": 1308,
+        "index": "165247ed",
+        "attributes": {
+          "position": "8e6d0bfc",
+          "normal": "7a408302",
+          "uv": "da4104a5"
+        }
+      },
+      {
+        "name": "lacrimal-caruncle",
+        "near": false,
+        "vertices": 221,
+        "triangles": 352,
+        "index": "fef62615",
+        "attributes": {
+          "position": "1eb69e94",
+          "normal": "e8311783",
+          "uv": "247c0ebb"
+        }
+      },
+      {
+        "name": "upper-lip",
+        "near": false,
+        "vertices": 1717,
+        "triangles": 3200,
+        "index": "d6ebdc57",
+        "attributes": {
+          "position": "bb5e53b8",
+          "uv": "c27ecc37",
+          "color": "a24a37ff",
+          "normal": "a5087308"
+        }
+      },
+      {
+        "name": "lower-lip",
+        "near": false,
+        "vertices": 1717,
+        "triangles": 3200,
+        "index": "f5897af",
+        "attributes": {
+          "position": "e6bfa887",
+          "uv": "678ac8bf",
+          "color": "91f47774",
+          "normal": "541f5427"
+        }
+      },
+      {
+        "name": "closed-mouth-crease",
+        "near": false,
+        "vertices": 546,
+        "triangles": 900,
+        "index": "4b6a9971",
+        "attributes": {
+          "position": "df55edc2",
+          "normal": "5d78483d",
+          "uv": "d6f5f3ed"
+        }
+      },
+      {
+        "name": "naris--1",
+        "near": false,
+        "vertices": 539,
+        "triangles": 960,
+        "index": "ecc39457",
+        "attributes": {
+          "position": "adab7d5",
+          "color": "1c219c51",
+          "normal": "54893103",
+          "uv": "d70afb6e"
+        }
+      },
+      {
+        "name": "naris-1",
+        "near": false,
+        "vertices": 539,
+        "triangles": 960,
+        "index": "ecc39457",
+        "attributes": {
+          "position": "5305aac9",
+          "color": "3ec7ca4c",
+          "normal": "bfd6123d",
+          "uv": "aec1d542"
+        }
+      },
+      {
+        "name": "soft-brow-underlayer",
+        "near": false,
+        "vertices": 729,
+        "triangles": 1280,
+        "index": "dd1176eb",
+        "attributes": {
+          "position": "ea2380ea",
+          "color": "70ec506a",
+          "normal": "7be2cc05"
+        }
+      },
+      {
+        "name": "soft-brow-underlayer",
+        "near": false,
+        "vertices": 729,
+        "triangles": 1280,
+        "index": "dd1176eb",
+        "attributes": {
+          "position": "3992de4d",
+          "color": "4b55216",
+          "normal": "5473b085"
+        }
+      },
+      {
+        "name": "tapered-brow-hairs",
+        "near": false,
+        "vertices": 7440,
+        "triangles": 9300,
+        "index": "17f2c64d",
+        "attributes": {
+          "position": "45db3a0d",
+          "normal": "56ff950c",
+          "uv": "f99ef415"
+        }
+      },
+      {
+        "name": "ear-continuous-anatomical-shell",
+        "near": true,
+        "vertices": 5282,
+        "triangles": 10560,
+        "index": "15688901",
+        "attributes": {
+          "color": "9816ed5",
+          "uv": "3073a1a8"
+        }
+      },
+      {
+        "name": "ear-continuous-anatomical-shell",
+        "near": false,
+        "vertices": 5282,
+        "triangles": 10560,
+        "index": "8bb6b6b9",
+        "attributes": {
+          "position": "8b21758b",
+          "color": "9ff24abf",
+          "uv": "3073a1a8",
+          "normal": "153f9dd4"
+        }
+      },
+      {
+        "name": "Continuous parted crown with longitudinal fiber flow",
+        "near": false,
+        "vertices": 24455,
+        "triangles": 47744,
+        "index": "76717c5e",
+        "attributes": {
+          "position": "cdb33367",
+          "color": "af92f49f",
+          "uv": "b4905ed2",
+          "normal": "6d70c703",
+          "uv1": "ea705695"
+        }
+      },
+      {
+        "name": "Overlapping layered S-wave hair around front back and shoulders",
+        "near": false,
+        "vertices": 159210,
+        "triangles": 278400,
+        "index": "29d83b98",
+        "attributes": {
+          "position": "be6e9072",
+          "color": "3694ede0",
+          "uv": "e797b8f5",
+          "normal": "10bb32f2"
+        }
+      },
+      {
+        "name": "Independent fine crown lengths and silhouette strands",
+        "near": false,
+        "vertices": 646260,
+        "triangles": 623976,
+        "index": "31a6e1d1",
+        "attributes": {
+          "position": "84ff0988",
+          "color": "9e29d8b9",
+          "uv": "1da45b29",
+          "normal": "d69bc351"
+        }
+      },
+      {
+        "name": "Dense fine bowed brown fringe strands",
+        "near": false,
+        "vertices": 92568,
+        "triangles": 133160,
+        "index": "42860b63",
+        "attributes": {
+          "position": "b7688305",
+          "color": "6c8e2c88",
+          "uv": "d3fe23dc",
+          "normal": "7584f2e2"
+        }
+      },
+      {
+        "name": "Sparse short temple edge and hairline wisps",
+        "near": false,
+        "vertices": 32892,
+        "triangles": 31608,
+        "index": "65dfd659",
+        "attributes": {
+          "position": "48303b6f",
+          "color": "28cda1fd",
+          "uv": "6135082d",
+          "normal": "6a64190e"
+        }
+      },
+      {
+        "name": "neck-smooth-anatomical-surface",
+        "near": false,
+        "vertices": 3645,
+        "triangles": 7040,
+        "index": "6706b407",
+        "attributes": {
+          "position": "b3ecafdd",
+          "uv": "993914fd",
+          "normal": "58c43dd3",
+          "color": "383fa55b"
+        }
+      },
+      {
+        "name": "blouse-continuous-torso-and-sleeves",
+        "near": false,
+        "vertices": 21809,
+        "triangles": 43008,
+        "index": "c8ee3ec6",
+        "attributes": {
+          "position": "b22c8316",
+          "uv": "26904013",
+          "normal": "de59cd0d",
+          "color": "c7d21343"
+        }
+      },
+      {
+        "name": "blouse-finished-bust-base",
+        "near": false,
+        "vertices": 96,
+        "triangles": 94,
+        "index": "e789a755",
+        "attributes": {
+          "position": "8cddba64",
+          "normal": "bf0bf138",
+          "uv": "b1250fbd",
+          "color": "490752c5"
+        }
+      },
+      {
+        "name": "blouse-left-neck-opening-facing",
+        "near": false,
+        "vertices": 441,
+        "triangles": 768,
+        "index": "8821df12",
+        "attributes": {
+          "position": "317b4046",
+          "uv": "a4446ddb",
+          "normal": "5dd19b94",
+          "color": "598a2175"
+        }
+      },
+      {
+        "name": "blouse-left-facing-stitch",
+        "near": false,
+        "vertices": 245,
+        "triangles": 384,
+        "index": "e94c4485",
+        "attributes": {
+          "position": "7b7c8ad2",
+          "normal": "9a52ced3",
+          "uv": "4ccd4b63"
+        }
+      },
+      {
+        "name": "blouse-right-neck-opening-facing",
+        "near": false,
+        "vertices": 441,
+        "triangles": 768,
+        "index": "500d863a",
+        "attributes": {
+          "position": "865a9819",
+          "uv": "a4446ddb",
+          "normal": "863a2118",
+          "color": "598a2175"
+        }
+      },
+      {
+        "name": "blouse-right-facing-stitch",
+        "near": false,
+        "vertices": 245,
+        "triangles": 384,
+        "index": "e94c4485",
+        "attributes": {
+          "position": "339798c2",
+          "normal": "ee417f6f",
+          "uv": "4ccd4b63"
+        }
+      },
+      {
+        "name": "blouse-left-spread-collar",
+        "near": false,
+        "vertices": 2450,
+        "triangles": 4896,
+        "index": "54a515fe",
+        "attributes": {
+          "position": "72dcfdf",
+          "normal": "808a8e62",
+          "uv": "e4e9c5ad",
+          "color": "b8225fc9"
+        }
+      },
+      {
+        "name": "blouse-left-collar-edge",
+        "near": false,
+        "vertices": 485,
+        "triangles": 768,
+        "index": "9dbf4fb2",
+        "attributes": {
+          "position": "60d5569d",
+          "normal": "2927dc02",
+          "uv": "d147f4cc"
+        }
+      },
+      {
+        "name": "blouse-left-collar-fold",
+        "near": false,
+        "vertices": 405,
+        "triangles": 640,
+        "index": "b2957bd2",
+        "attributes": {
+          "position": "64a16b33",
+          "normal": "55da1313",
+          "uv": "47bd1173",
+          "color": "aff22de8"
+        }
+      },
+      {
+        "name": "blouse-right-spread-collar",
+        "near": false,
+        "vertices": 2450,
+        "triangles": 4896,
+        "index": "cde68616",
+        "attributes": {
+          "position": "6659520f",
+          "normal": "d859927d",
+          "uv": "e4e9c5ad",
+          "color": "2a1322f5"
+        }
+      },
+      {
+        "name": "blouse-right-collar-edge",
+        "near": false,
+        "vertices": 485,
+        "triangles": 768,
+        "index": "9dbf4fb2",
+        "attributes": {
+          "position": "7a0521fc",
+          "normal": "9a195a3e",
+          "uv": "d147f4cc"
+        }
+      },
+      {
+        "name": "blouse-right-collar-fold",
+        "near": false,
+        "vertices": 405,
+        "triangles": 640,
+        "index": "b2957bd2",
+        "attributes": {
+          "position": "4c974738",
+          "normal": "ab93c53a",
+          "uv": "47bd1173",
+          "color": "aff22de8"
+        }
+      },
+      {
+        "name": "blouse-finished-neckline",
+        "near": false,
+        "vertices": 645,
+        "triangles": 1024,
+        "index": "a3b65063",
+        "attributes": {
+          "position": "c234a86d",
+          "normal": "15c29aca",
+          "uv": "1fc4422f",
+          "color": "a29f2368"
+        }
+      },
+      {
+        "name": "blouse-back-yoke-seam",
+        "near": false,
+        "vertices": 425,
+        "triangles": 672,
+        "index": "19d731b2",
+        "attributes": {
+          "position": "7541893c",
+          "normal": "5686c5e4",
+          "uv": "7cd27a1a"
+        }
+      },
+      {
+        "name": "blouse-sleeve-attachment--1",
+        "near": false,
+        "vertices": 285,
+        "triangles": 448,
+        "index": "9a66be52",
+        "attributes": {
+          "position": "4ada18eb",
+          "normal": "807f4e56",
+          "uv": "8d855c51"
+        }
+      },
+      {
+        "name": "blouse-sleeve-attachment-1",
+        "near": false,
+        "vertices": 285,
+        "triangles": 448,
+        "index": "9a66be52",
+        "attributes": {
+          "position": "4c328db1",
+          "normal": "b6b3e73",
+          "uv": "8d855c51"
+        }
+      },
+      {
+        "name": "blouse-curved-centre-placket",
+        "near": false,
+        "vertices": 1650,
+        "triangles": 3296,
+        "index": "a2b1875b",
+        "attributes": {
+          "position": "aa95fb39",
+          "normal": "63a0d19b",
+          "uv": "455bca99",
+          "color": "47ef17b5"
+        }
+      },
+      {
+        "name": "blouse-placket-seam--1",
+        "near": false,
+        "vertices": 385,
+        "triangles": 608,
+        "index": "d96158d2",
+        "attributes": {
+          "position": "7bfa7309",
+          "normal": "c85550f2",
+          "uv": "6d20bbd0"
+        }
+      },
+      {
+        "name": "blouse-placket-seam-1",
+        "near": false,
+        "vertices": 385,
+        "triangles": 608,
+        "index": "d96158d2",
+        "attributes": {
+          "position": "46e54586",
+          "normal": "98bca4f1",
+          "uv": "6d20bbd0"
+        }
+      },
+      {
+        "name": "blouse-bust-crop-hem",
+        "near": false,
+        "vertices": 645,
+        "triangles": 1024,
+        "index": "a3b65063",
+        "attributes": {
+          "position": "4c6177a7",
+          "normal": "92a1494a",
+          "uv": "1fc4422f"
+        }
+      },
+      {
+        "name": "buttons-batched-blouse-ivory-buttons",
+        "near": false,
+        "vertices": 3309,
+        "triangles": 5664,
+        "index": "e186ba1f",
+        "attributes": {
+          "position": "f668c45f",
+          "normal": "562a22e2",
+          "uv": "501e00ba"
+        }
+      },
+      {
+        "name": "buttons-batched-button-recesses",
+        "near": false,
+        "vertices": 256,
+        "triangles": 224,
+        "index": "2db914c5",
+        "attributes": {
+          "position": "c29bfc02",
+          "normal": "c3e42a7a",
+          "uv": "89ce01c5"
+        }
+      },
+      {
+        "name": "buttons-batched-button-threads",
+        "near": false,
+        "vertices": 320,
+        "triangles": 192,
+        "index": "a285e2ed",
+        "attributes": {
+          "position": "cd3fa631",
+          "normal": "5ce74634",
+          "uv": "8a368d45"
+        }
+      }
+    ],
+    "heapMiB": 280,
+    "errors": []
+  },
+  {
+    "iteration": 115,
+    "degrees": -15,
+    "nativeWebGPU": true,
+    "ear": {
+      "version": "near-ear-outer-cartilage-yaw-115",
+      "degrees": -15,
+      "applied": true,
+      "hinge": {
+        "x": -0.73,
+        "z": 0.22
+      },
+      "pinX": -0.79,
+      "fullTurnX": -0.92,
+      "vertices": 5282,
+      "triangles": 10560,
+      "changedVertices": 3932,
+      "pinnedVertices": 1350,
+      "embeddedVertices": 752,
+      "nearSurfaceVertices": 280,
+      "anchoredVertices": 896,
+      "supportedVerticesMoved": 0,
+      "minimumEmbeddedX": -0.7779083251953123,
+      "minimumNearSurfaceX": -0.7836328744888303,
+      "minimumJacobian": 0.8680904814458609,
+      "analyticMinimumJacobian": 0.8019491331380861,
+      "maximumJacobian": 1.1163967765098064,
+      "maximumPosteriorDisplacement": 0.05975317253346732,
+      "maximumAnteriorDisplacement": 0,
+      "maximumLateralDisplacement": 0.01804045977807056,
+      "maximumHeadYRoundoff": 2.190666877182108e-19,
+      "maximumNormalLengthError": 4.135908526770038e-8,
+      "zeroNormalsPreserved": 0,
+      "newlyEmbeddedVertices": 0,
+      "maximumNewEmbedding": 0,
+      "sourceAttachmentTriangles": 1892,
+      "stagedAttributeBytes": 126768,
+      "elapsedMs": 37.399999998509884
+    },
+    "earBounds": {
+      "isBox3": true,
+      "min": {
+        "x": -1.182389497756958,
+        "y": -0.3345052897930145,
+        "z": 0.08508896082639694
+      },
+      "max": {
+        "x": -0.9425190687179565,
+        "y": 0.23459625244140625,
+        "z": 0.23939459025859833
+      }
+    },
+    "earCenter": [
+      -0.7562593569558993,
+      3.0805140987692328,
+      0.32834424170216475
+    ],
+    "meshes": 64,
+    "vertices": 1160364,
+    "triangles": 1492787,
+    "nonfinite": 0,
+    "normalError": 4.9655871747766867e-8,
+    "zeroNormals": 5841,
+    "parts": [
+      {
+        "name": "continuous-face",
+        "near": false,
+        "vertices": 110871,
+        "triangles": 218608,
+        "index": "9697a4bc",
+        "attributes": {
+          "position": "d564044a",
+          "uv": "84fd4586",
+          "color": "c3f1b192",
+          "normal": "a123f9c3"
+        }
+      },
+      {
+        "name": "scleral-globe",
+        "near": false,
+        "vertices": 2425,
+        "triangles": 1060,
+        "index": "1b8e55cd",
+        "attributes": {
+          "position": "6ac85e18",
+          "uv": "450094d8",
+          "normal": "61495dd0"
+        }
+      },
+      {
+        "name": "brown-iris-and-pupil",
+        "near": false,
+        "vertices": 3277,
+        "triangles": 5120,
+        "index": "f3d6fbbd",
+        "attributes": {
+          "position": "77ba56c7",
+          "uv": "fe863aec",
+          "normal": "eeff6484"
+        }
+      },
+      {
+        "name": "transparent-corneal-dome",
+        "near": false,
+        "vertices": 3277,
+        "triangles": 5120,
+        "index": "f3d6fbbd",
+        "attributes": {
+          "position": "a2ebbb3d",
+          "uv": "a5ef6435",
+          "normal": "a339d9da"
+        }
+      },
+      {
+        "name": "corneal-softbox-reflection",
+        "near": false,
+        "vertices": 187,
+        "triangles": 288,
+        "index": "d036f0d5",
+        "attributes": {
+          "position": "d2a69b12",
+          "normal": "1d65e85",
+          "uv": "2bc30f97"
+        }
+      },
+      {
+        "name": "corneal-softbox-reflection",
+        "near": false,
+        "vertices": 187,
+        "triangles": 288,
+        "index": "d036f0d5",
+        "attributes": {
+          "position": "7dbfe92c",
+          "normal": "73e5ea58",
+          "uv": "2bc30f97"
+        }
+      },
+      {
+        "name": "sculpted-eyelids",
+        "near": false,
+        "vertices": 1677,
+        "triangles": 3072,
+        "index": "de38a287",
+        "attributes": {
+          "position": "661fd3f",
+          "uv": "5430a5d7",
+          "color": "eba1d339",
+          "normal": "819b262b"
+        }
+      },
+      {
+        "name": "upper-lash-margin",
+        "near": false,
+        "vertices": 390,
+        "triangles": 640,
+        "index": "9d65ea85",
+        "attributes": {
+          "position": "95055671",
+          "normal": "6ff7b47f",
+          "uv": "5f651809"
+        }
+      },
+      {
+        "name": "lower-waterline",
+        "near": false,
+        "vertices": 390,
+        "triangles": 640,
+        "index": "9d65ea85",
+        "attributes": {
+          "position": "2717c91d",
+          "normal": "28fa8753",
+          "uv": "5f651809"
+        }
+      },
+      {
+        "name": "lower-tear-meniscus",
+        "near": false,
+        "vertices": 390,
+        "triangles": 640,
+        "index": "9d65ea85",
+        "attributes": {
+          "position": "497a9f64",
+          "normal": "2ea9eb7a",
+          "uv": "5f651809"
+        }
+      },
+      {
+        "name": "upper-lid-fold",
+        "near": false,
+        "vertices": 245,
+        "triangles": 384,
+        "index": "e94c4485",
+        "attributes": {
+          "position": "e01d1d05",
+          "normal": "8a48ad10",
+          "uv": "4ccd4b63"
+        }
+      },
+      {
+        "name": "individual-eyelashes",
+        "near": false,
+        "vertices": 1032,
+        "triangles": 1308,
+        "index": "165247ed",
+        "attributes": {
+          "position": "66c90370",
+          "normal": "9200cb7c",
+          "uv": "da4104a5"
+        }
+      },
+      {
+        "name": "lacrimal-caruncle",
+        "near": false,
+        "vertices": 221,
+        "triangles": 352,
+        "index": "fef62615",
+        "attributes": {
+          "position": "23635ed3",
+          "normal": "e8311783",
+          "uv": "247c0ebb"
+        }
+      },
+      {
+        "name": "scleral-globe",
+        "near": false,
+        "vertices": 2425,
+        "triangles": 1059,
+        "index": "5a622697",
+        "attributes": {
+          "position": "c045b136",
+          "uv": "30a8eef7",
+          "normal": "3ee79475"
+        }
+      },
+      {
+        "name": "brown-iris-and-pupil",
+        "near": false,
+        "vertices": 3277,
+        "triangles": 5123,
+        "index": "1d4b6362",
+        "attributes": {
+          "position": "413f7909",
+          "uv": "62bb2b6c",
+          "normal": "b43d3e8a"
+        }
+      },
+      {
+        "name": "transparent-corneal-dome",
+        "near": false,
+        "vertices": 3277,
+        "triangles": 5123,
+        "index": "1d4b6362",
+        "attributes": {
+          "position": "15381f",
+          "uv": "a5ef6435",
+          "normal": "6c5b2727"
+        }
+      },
+      {
+        "name": "corneal-softbox-reflection",
+        "near": false,
+        "vertices": 187,
+        "triangles": 288,
+        "index": "d036f0d5",
+        "attributes": {
+          "position": "44e6d44b",
+          "normal": "1d65e85",
+          "uv": "2bc30f97"
+        }
+      },
+      {
+        "name": "corneal-softbox-reflection",
+        "near": false,
+        "vertices": 187,
+        "triangles": 288,
+        "index": "d036f0d5",
+        "attributes": {
+          "position": "63d0e8a0",
+          "normal": "73e5ea58",
+          "uv": "2bc30f97"
+        }
+      },
+      {
+        "name": "sculpted-eyelids",
+        "near": false,
+        "vertices": 1677,
+        "triangles": 3072,
+        "index": "de38a287",
+        "attributes": {
+          "position": "6d938e62",
+          "uv": "583f22bb",
+          "color": "eb1bb84b",
+          "normal": "f0a9d54d"
+        }
+      },
+      {
+        "name": "upper-lash-margin",
+        "near": false,
+        "vertices": 390,
+        "triangles": 640,
+        "index": "9d65ea85",
+        "attributes": {
+          "position": "b4b7bc1e",
+          "normal": "50252c09",
+          "uv": "5f651809"
+        }
+      },
+      {
+        "name": "lower-waterline",
+        "near": false,
+        "vertices": 390,
+        "triangles": 640,
+        "index": "9d65ea85",
+        "attributes": {
+          "position": "a7bad3e1",
+          "normal": "6089675d",
+          "uv": "5f651809"
+        }
+      },
+      {
+        "name": "lower-tear-meniscus",
+        "near": false,
+        "vertices": 390,
+        "triangles": 640,
+        "index": "9d65ea85",
+        "attributes": {
+          "position": "8daa9d4c",
+          "normal": "3345d082",
+          "uv": "5f651809"
+        }
+      },
+      {
+        "name": "upper-lid-fold",
+        "near": false,
+        "vertices": 245,
+        "triangles": 384,
+        "index": "e94c4485",
+        "attributes": {
+          "position": "c32dcb19",
+          "normal": "63842228",
+          "uv": "4ccd4b63"
+        }
+      },
+      {
+        "name": "individual-eyelashes",
+        "near": false,
+        "vertices": 1032,
+        "triangles": 1308,
+        "index": "165247ed",
+        "attributes": {
+          "position": "8e6d0bfc",
+          "normal": "7a408302",
+          "uv": "da4104a5"
+        }
+      },
+      {
+        "name": "lacrimal-caruncle",
+        "near": false,
+        "vertices": 221,
+        "triangles": 352,
+        "index": "fef62615",
+        "attributes": {
+          "position": "1eb69e94",
+          "normal": "e8311783",
+          "uv": "247c0ebb"
+        }
+      },
+      {
+        "name": "upper-lip",
+        "near": false,
+        "vertices": 1717,
+        "triangles": 3200,
+        "index": "d6ebdc57",
+        "attributes": {
+          "position": "bb5e53b8",
+          "uv": "c27ecc37",
+          "color": "a24a37ff",
+          "normal": "a5087308"
+        }
+      },
+      {
+        "name": "lower-lip",
+        "near": false,
+        "vertices": 1717,
+        "triangles": 3200,
+        "index": "f5897af",
+        "attributes": {
+          "position": "e6bfa887",
+          "uv": "678ac8bf",
+          "color": "91f47774",
+          "normal": "541f5427"
+        }
+      },
+      {
+        "name": "closed-mouth-crease",
+        "near": false,
+        "vertices": 546,
+        "triangles": 900,
+        "index": "4b6a9971",
+        "attributes": {
+          "position": "df55edc2",
+          "normal": "5d78483d",
+          "uv": "d6f5f3ed"
+        }
+      },
+      {
+        "name": "naris--1",
+        "near": false,
+        "vertices": 539,
+        "triangles": 960,
+        "index": "ecc39457",
+        "attributes": {
+          "position": "adab7d5",
+          "color": "1c219c51",
+          "normal": "54893103",
+          "uv": "d70afb6e"
+        }
+      },
+      {
+        "name": "naris-1",
+        "near": false,
+        "vertices": 539,
+        "triangles": 960,
+        "index": "ecc39457",
+        "attributes": {
+          "position": "5305aac9",
+          "color": "3ec7ca4c",
+          "normal": "bfd6123d",
+          "uv": "aec1d542"
+        }
+      },
+      {
+        "name": "soft-brow-underlayer",
+        "near": false,
+        "vertices": 729,
+        "triangles": 1280,
+        "index": "dd1176eb",
+        "attributes": {
+          "position": "ea2380ea",
+          "color": "70ec506a",
+          "normal": "7be2cc05"
+        }
+      },
+      {
+        "name": "soft-brow-underlayer",
+        "near": false,
+        "vertices": 729,
+        "triangles": 1280,
+        "index": "dd1176eb",
+        "attributes": {
+          "position": "3992de4d",
+          "color": "4b55216",
+          "normal": "5473b085"
+        }
+      },
+      {
+        "name": "tapered-brow-hairs",
+        "near": false,
+        "vertices": 7440,
+        "triangles": 9300,
+        "index": "17f2c64d",
+        "attributes": {
+          "position": "45db3a0d",
+          "normal": "56ff950c",
+          "uv": "f99ef415"
+        }
+      },
+      {
+        "name": "ear-continuous-anatomical-shell",
+        "near": true,
+        "vertices": 5282,
+        "triangles": 10560,
+        "index": "15688901",
+        "attributes": {
+          "color": "9816ed5",
+          "uv": "3073a1a8"
+        }
+      },
+      {
+        "name": "ear-continuous-anatomical-shell",
+        "near": false,
+        "vertices": 5282,
+        "triangles": 10560,
+        "index": "8bb6b6b9",
+        "attributes": {
+          "position": "8b21758b",
+          "color": "9ff24abf",
+          "uv": "3073a1a8",
+          "normal": "153f9dd4"
+        }
+      },
+      {
+        "name": "Continuous parted crown with longitudinal fiber flow",
+        "near": false,
+        "vertices": 24455,
+        "triangles": 47744,
+        "index": "76717c5e",
+        "attributes": {
+          "position": "cdb33367",
+          "color": "af92f49f",
+          "uv": "b4905ed2",
+          "normal": "6d70c703",
+          "uv1": "ea705695"
+        }
+      },
+      {
+        "name": "Overlapping layered S-wave hair around front back and shoulders",
+        "near": false,
+        "vertices": 159210,
+        "triangles": 278400,
+        "index": "29d83b98",
+        "attributes": {
+          "position": "be6e9072",
+          "color": "3694ede0",
+          "uv": "e797b8f5",
+          "normal": "10bb32f2"
+        }
+      },
+      {
+        "name": "Independent fine crown lengths and silhouette strands",
+        "near": false,
+        "vertices": 646260,
+        "triangles": 623976,
+        "index": "31a6e1d1",
+        "attributes": {
+          "position": "84ff0988",
+          "color": "9e29d8b9",
+          "uv": "1da45b29",
+          "normal": "d69bc351"
+        }
+      },
+      {
+        "name": "Dense fine bowed brown fringe strands",
+        "near": false,
+        "vertices": 92568,
+        "triangles": 133160,
+        "index": "42860b63",
+        "attributes": {
+          "position": "b7688305",
+          "color": "6c8e2c88",
+          "uv": "d3fe23dc",
+          "normal": "7584f2e2"
+        }
+      },
+      {
+        "name": "Sparse short temple edge and hairline wisps",
+        "near": false,
+        "vertices": 32892,
+        "triangles": 31608,
+        "index": "65dfd659",
+        "attributes": {
+          "position": "48303b6f",
+          "color": "28cda1fd",
+          "uv": "6135082d",
+          "normal": "6a64190e"
+        }
+      },
+      {
+        "name": "neck-smooth-anatomical-surface",
+        "near": false,
+        "vertices": 3645,
+        "triangles": 7040,
+        "index": "6706b407",
+        "attributes": {
+          "position": "b3ecafdd",
+          "uv": "993914fd",
+          "normal": "58c43dd3",
+          "color": "383fa55b"
+        }
+      },
+      {
+        "name": "blouse-continuous-torso-and-sleeves",
+        "near": false,
+        "vertices": 21809,
+        "triangles": 43008,
+        "index": "c8ee3ec6",
+        "attributes": {
+          "position": "b22c8316",
+          "uv": "26904013",
+          "normal": "de59cd0d",
+          "color": "c7d21343"
+        }
+      },
+      {
+        "name": "blouse-finished-bust-base",
+        "near": false,
+        "vertices": 96,
+        "triangles": 94,
+        "index": "e789a755",
+        "attributes": {
+          "position": "8cddba64",
+          "normal": "bf0bf138",
+          "uv": "b1250fbd",
+          "color": "490752c5"
+        }
+      },
+      {
+        "name": "blouse-left-neck-opening-facing",
+        "near": false,
+        "vertices": 441,
+        "triangles": 768,
+        "index": "8821df12",
+        "attributes": {
+          "position": "317b4046",
+          "uv": "a4446ddb",
+          "normal": "5dd19b94",
+          "color": "598a2175"
+        }
+      },
+      {
+        "name": "blouse-left-facing-stitch",
+        "near": false,
+        "vertices": 245,
+        "triangles": 384,
+        "index": "e94c4485",
+        "attributes": {
+          "position": "7b7c8ad2",
+          "normal": "9a52ced3",
+          "uv": "4ccd4b63"
+        }
+      },
+      {
+        "name": "blouse-right-neck-opening-facing",
+        "near": false,
+        "vertices": 441,
+        "triangles": 768,
+        "index": "500d863a",
+        "attributes": {
+          "position": "865a9819",
+          "uv": "a4446ddb",
+          "normal": "863a2118",
+          "color": "598a2175"
+        }
+      },
+      {
+        "name": "blouse-right-facing-stitch",
+        "near": false,
+        "vertices": 245,
+        "triangles": 384,
+        "index": "e94c4485",
+        "attributes": {
+          "position": "339798c2",
+          "normal": "ee417f6f",
+          "uv": "4ccd4b63"
+        }
+      },
+      {
+        "name": "blouse-left-spread-collar",
+        "near": false,
+        "vertices": 2450,
+        "triangles": 4896,
+        "index": "54a515fe",
+        "attributes": {
+          "position": "72dcfdf",
+          "normal": "808a8e62",
+          "uv": "e4e9c5ad",
+          "color": "b8225fc9"
+        }
+      },
+      {
+        "name": "blouse-left-collar-edge",
+        "near": false,
+        "vertices": 485,
+        "triangles": 768,
+        "index": "9dbf4fb2",
+        "attributes": {
+          "position": "60d5569d",
+          "normal": "2927dc02",
+          "uv": "d147f4cc"
+        }
+      },
+      {
+        "name": "blouse-left-collar-fold",
+        "near": false,
+        "vertices": 405,
+        "triangles": 640,
+        "index": "b2957bd2",
+        "attributes": {
+          "position": "64a16b33",
+          "normal": "55da1313",
+          "uv": "47bd1173",
+          "color": "aff22de8"
+        }
+      },
+      {
+        "name": "blouse-right-spread-collar",
+        "near": false,
+        "vertices": 2450,
+        "triangles": 4896,
+        "index": "cde68616",
+        "attributes": {
+          "position": "6659520f",
+          "normal": "d859927d",
+          "uv": "e4e9c5ad",
+          "color": "2a1322f5"
+        }
+      },
+      {
+        "name": "blouse-right-collar-edge",
+        "near": false,
+        "vertices": 485,
+        "triangles": 768,
+        "index": "9dbf4fb2",
+        "attributes": {
+          "position": "7a0521fc",
+          "normal": "9a195a3e",
+          "uv": "d147f4cc"
+        }
+      },
+      {
+        "name": "blouse-right-collar-fold",
+        "near": false,
+        "vertices": 405,
+        "triangles": 640,
+        "index": "b2957bd2",
+        "attributes": {
+          "position": "4c974738",
+          "normal": "ab93c53a",
+          "uv": "47bd1173",
+          "color": "aff22de8"
+        }
+      },
+      {
+        "name": "blouse-finished-neckline",
+        "near": false,
+        "vertices": 645,
+        "triangles": 1024,
+        "index": "a3b65063",
+        "attributes": {
+          "position": "c234a86d",
+          "normal": "15c29aca",
+          "uv": "1fc4422f",
+          "color": "a29f2368"
+        }
+      },
+      {
+        "name": "blouse-back-yoke-seam",
+        "near": false,
+        "vertices": 425,
+        "triangles": 672,
+        "index": "19d731b2",
+        "attributes": {
+          "position": "7541893c",
+          "normal": "5686c5e4",
+          "uv": "7cd27a1a"
+        }
+      },
+      {
+        "name": "blouse-sleeve-attachment--1",
+        "near": false,
+        "vertices": 285,
+        "triangles": 448,
+        "index": "9a66be52",
+        "attributes": {
+          "position": "4ada18eb",
+          "normal": "807f4e56",
+          "uv": "8d855c51"
+        }
+      },
+      {
+        "name": "blouse-sleeve-attachment-1",
+        "near": false,
+        "vertices": 285,
+        "triangles": 448,
+        "index": "9a66be52",
+        "attributes": {
+          "position": "4c328db1",
+          "normal": "b6b3e73",
+          "uv": "8d855c51"
+        }
+      },
+      {
+        "name": "blouse-curved-centre-placket",
+        "near": false,
+        "vertices": 1650,
+        "triangles": 3296,
+        "index": "a2b1875b",
+        "attributes": {
+          "position": "aa95fb39",
+          "normal": "63a0d19b",
+          "uv": "455bca99",
+          "color": "47ef17b5"
+        }
+      },
+      {
+        "name": "blouse-placket-seam--1",
+        "near": false,
+        "vertices": 385,
+        "triangles": 608,
+        "index": "d96158d2",
+        "attributes": {
+          "position": "7bfa7309",
+          "normal": "c85550f2",
+          "uv": "6d20bbd0"
+        }
+      },
+      {
+        "name": "blouse-placket-seam-1",
+        "near": false,
+        "vertices": 385,
+        "triangles": 608,
+        "index": "d96158d2",
+        "attributes": {
+          "position": "46e54586",
+          "normal": "98bca4f1",
+          "uv": "6d20bbd0"
+        }
+      },
+      {
+        "name": "blouse-bust-crop-hem",
+        "near": false,
+        "vertices": 645,
+        "triangles": 1024,
+        "index": "a3b65063",
+        "attributes": {
+          "position": "4c6177a7",
+          "normal": "92a1494a",
+          "uv": "1fc4422f"
+        }
+      },
+      {
+        "name": "buttons-batched-blouse-ivory-buttons",
+        "near": false,
+        "vertices": 3309,
+        "triangles": 5664,
+        "index": "e186ba1f",
+        "attributes": {
+          "position": "f668c45f",
+          "normal": "562a22e2",
+          "uv": "501e00ba"
+        }
+      },
+      {
+        "name": "buttons-batched-button-recesses",
+        "near": false,
+        "vertices": 256,
+        "triangles": 224,
+        "index": "2db914c5",
+        "attributes": {
+          "position": "c29bfc02",
+          "normal": "c3e42a7a",
+          "uv": "89ce01c5"
+        }
+      },
+      {
+        "name": "buttons-batched-button-threads",
+        "near": false,
+        "vertices": 320,
+        "triangles": 192,
+        "index": "a285e2ed",
+        "attributes": {
+          "position": "cd3fa631",
+          "normal": "5ce74634",
+          "uv": "8a368d45"
+        }
+      }
+    ],
+    "heapMiB": 300,
+    "errors": []
+  },
+  {
+    "iteration": 115,
+    "degrees": -25,
+    "nativeWebGPU": true,
+    "ear": {
+      "version": "near-ear-outer-cartilage-yaw-115",
+      "degrees": -25,
+      "applied": true,
+      "hinge": {
+        "x": -0.73,
+        "z": 0.22
+      },
+      "pinX": -0.79,
+      "fullTurnX": -0.92,
+      "vertices": 5282,
+      "triangles": 10560,
+      "changedVertices": 3932,
+      "pinnedVertices": 1350,
+      "embeddedVertices": 752,
+      "nearSurfaceVertices": 280,
+      "anchoredVertices": 896,
+      "supportedVerticesMoved": 0,
+      "minimumEmbeddedX": -0.7779083251953123,
+      "minimumNearSurfaceX": -0.7836328744888303,
+      "minimumJacobian": 0.7801508024097681,
+      "analyticMinimumJacobian": 0.6699152218968101,
+      "maximumJacobian": 1.193994627516344,
+      "maximumPosteriorDisplacement": 0.09637508485585122,
+      "maximumAnteriorDisplacement": 0,
+      "maximumLateralDisplacement": 0.0379130067343636,
+      "maximumHeadYRoundoff": 4.603802946134587e-19,
+      "maximumNormalLengthError": 4.067502690219271e-8,
+      "zeroNormalsPreserved": 0,
+      "newlyEmbeddedVertices": 0,
+      "maximumNewEmbedding": 0,
+      "sourceAttachmentTriangles": 2148,
+      "stagedAttributeBytes": 126768,
+      "elapsedMs": 44.399999998509884
+    },
+    "earBounds": {
+      "isBox3": true,
+      "min": {
+        "x": -1.1633206605911255,
+        "y": -0.3345052897930145,
+        "z": 0.05021544173359871
+      },
+      "max": {
+        "x": -0.9425190687179565,
+        "y": 0.23459625244140625,
+        "z": 0.23939459025859833
+      }
+    },
+    "earCenter": [
+      -0.749760397432834,
+      3.078901043436387,
+      0.30963308730688655
+    ],
+    "meshes": 64,
+    "vertices": 1160364,
+    "triangles": 1492787,
+    "nonfinite": 0,
+    "normalError": 4.9655871747766867e-8,
+    "zeroNormals": 5841,
+    "parts": [
+      {
+        "name": "continuous-face",
+        "near": false,
+        "vertices": 110871,
+        "triangles": 218608,
+        "index": "9697a4bc",
+        "attributes": {
+          "position": "d564044a",
+          "uv": "84fd4586",
+          "color": "c3f1b192",
+          "normal": "a123f9c3"
+        }
+      },
+      {
+        "name": "scleral-globe",
+        "near": false,
+        "vertices": 2425,
+        "triangles": 1060,
+        "index": "1b8e55cd",
+        "attributes": {
+          "position": "6ac85e18",
+          "uv": "450094d8",
+          "normal": "61495dd0"
+        }
+      },
+      {
+        "name": "brown-iris-and-pupil",
+        "near": false,
+        "vertices": 3277,
+        "triangles": 5120,
+        "index": "f3d6fbbd",
+        "attributes": {
+          "position": "77ba56c7",
+          "uv": "fe863aec",
+          "normal": "eeff6484"
+        }
+      },
+      {
+        "name": "transparent-corneal-dome",
+        "near": false,
+        "vertices": 3277,
+        "triangles": 5120,
+        "index": "f3d6fbbd",
+        "attributes": {
+          "position": "a2ebbb3d",
+          "uv": "a5ef6435",
+          "normal": "a339d9da"
+        }
+      },
+      {
+        "name": "corneal-softbox-reflection",
+        "near": false,
+        "vertices": 187,
+        "triangles": 288,
+        "index": "d036f0d5",
+        "attributes": {
+          "position": "d2a69b12",
+          "normal": "1d65e85",
+          "uv": "2bc30f97"
+        }
+      },
+      {
+        "name": "corneal-softbox-reflection",
+        "near": false,
+        "vertices": 187,
+        "triangles": 288,
+        "index": "d036f0d5",
+        "attributes": {
+          "position": "7dbfe92c",
+          "normal": "73e5ea58",
+          "uv": "2bc30f97"
+        }
+      },
+      {
+        "name": "sculpted-eyelids",
+        "near": false,
+        "vertices": 1677,
+        "triangles": 3072,
+        "index": "de38a287",
+        "attributes": {
+          "position": "661fd3f",
+          "uv": "5430a5d7",
+          "color": "eba1d339",
+          "normal": "819b262b"
+        }
+      },
+      {
+        "name": "upper-lash-margin",
+        "near": false,
+        "vertices": 390,
+        "triangles": 640,
+        "index": "9d65ea85",
+        "attributes": {
+          "position": "95055671",
+          "normal": "6ff7b47f",
+          "uv": "5f651809"
+        }
+      },
+      {
+        "name": "lower-waterline",
+        "near": false,
+        "vertices": 390,
+        "triangles": 640,
+        "index": "9d65ea85",
+        "attributes": {
+          "position": "2717c91d",
+          "normal": "28fa8753",
+          "uv": "5f651809"
+        }
+      },
+      {
+        "name": "lower-tear-meniscus",
+        "near": false,
+        "vertices": 390,
+        "triangles": 640,
+        "index": "9d65ea85",
+        "attributes": {
+          "position": "497a9f64",
+          "normal": "2ea9eb7a",
+          "uv": "5f651809"
+        }
+      },
+      {
+        "name": "upper-lid-fold",
+        "near": false,
+        "vertices": 245,
+        "triangles": 384,
+        "index": "e94c4485",
+        "attributes": {
+          "position": "e01d1d05",
+          "normal": "8a48ad10",
+          "uv": "4ccd4b63"
+        }
+      },
+      {
+        "name": "individual-eyelashes",
+        "near": false,
+        "vertices": 1032,
+        "triangles": 1308,
+        "index": "165247ed",
+        "attributes": {
+          "position": "66c90370",
+          "normal": "9200cb7c",
+          "uv": "da4104a5"
+        }
+      },
+      {
+        "name": "lacrimal-caruncle",
+        "near": false,
+        "vertices": 221,
+        "triangles": 352,
+        "index": "fef62615",
+        "attributes": {
+          "position": "23635ed3",
+          "normal": "e8311783",
+          "uv": "247c0ebb"
+        }
+      },
+      {
+        "name": "scleral-globe",
+        "near": false,
+        "vertices": 2425,
+        "triangles": 1059,
+        "index": "5a622697",
+        "attributes": {
+          "position": "c045b136",
+          "uv": "30a8eef7",
+          "normal": "3ee79475"
+        }
+      },
+      {
+        "name": "brown-iris-and-pupil",
+        "near": false,
+        "vertices": 3277,
+        "triangles": 5123,
+        "index": "1d4b6362",
+        "attributes": {
+          "position": "413f7909",
+          "uv": "62bb2b6c",
+          "normal": "b43d3e8a"
+        }
+      },
+      {
+        "name": "transparent-corneal-dome",
+        "near": false,
+        "vertices": 3277,
+        "triangles": 5123,
+        "index": "1d4b6362",
+        "attributes": {
+          "position": "15381f",
+          "uv": "a5ef6435",
+          "normal": "6c5b2727"
+        }
+      },
+      {
+        "name": "corneal-softbox-reflection",
+        "near": false,
+        "vertices": 187,
+        "triangles": 288,
+        "index": "d036f0d5",
+        "attributes": {
+          "position": "44e6d44b",
+          "normal": "1d65e85",
+          "uv": "2bc30f97"
+        }
+      },
+      {
+        "name": "corneal-softbox-reflection",
+        "near": false,
+        "vertices": 187,
+        "triangles": 288,
+        "index": "d036f0d5",
+        "attributes": {
+          "position": "63d0e8a0",
+          "normal": "73e5ea58",
+          "uv": "2bc30f97"
+        }
+      },
+      {
+        "name": "sculpted-eyelids",
+        "near": false,
+        "vertices": 1677,
+        "triangles": 3072,
+        "index": "de38a287",
+        "attributes": {
+          "position": "6d938e62",
+          "uv": "583f22bb",
+          "color": "eb1bb84b",
+          "normal": "f0a9d54d"
+        }
+      },
+      {
+        "name": "upper-lash-margin",
+        "near": false,
+        "vertices": 390,
+        "triangles": 640,
+        "index": "9d65ea85",
+        "attributes": {
+          "position": "b4b7bc1e",
+          "normal": "50252c09",
+          "uv": "5f651809"
+        }
+      },
+      {
+        "name": "lower-waterline",
+        "near": false,
+        "vertices": 390,
+        "triangles": 640,
+        "index": "9d65ea85",
+        "attributes": {
+          "position": "a7bad3e1",
+          "normal": "6089675d",
+          "uv": "5f651809"
+        }
+      },
+      {
+        "name": "lower-tear-meniscus",
+        "near": false,
+        "vertices": 390,
+        "triangles": 640,
+        "index": "9d65ea85",
+        "attributes": {
+          "position": "8daa9d4c",
+          "normal": "3345d082",
+          "uv": "5f651809"
+        }
+      },
+      {
+        "name": "upper-lid-fold",
+        "near": false,
+        "vertices": 245,
+        "triangles": 384,
+        "index": "e94c4485",
+        "attributes": {
+          "position": "c32dcb19",
+          "normal": "63842228",
+          "uv": "4ccd4b63"
+        }
+      },
+      {
+        "name": "individual-eyelashes",
+        "near": false,
+        "vertices": 1032,
+        "triangles": 1308,
+        "index": "165247ed",
+        "attributes": {
+          "position": "8e6d0bfc",
+          "normal": "7a408302",
+          "uv": "da4104a5"
+        }
+      },
+      {
+        "name": "lacrimal-caruncle",
+        "near": false,
+        "vertices": 221,
+        "triangles": 352,
+        "index": "fef62615",
+        "attributes": {
+          "position": "1eb69e94",
+          "normal": "e8311783",
+          "uv": "247c0ebb"
+        }
+      },
+      {
+        "name": "upper-lip",
+        "near": false,
+        "vertices": 1717,
+        "triangles": 3200,
+        "index": "d6ebdc57",
+        "attributes": {
+          "position": "bb5e53b8",
+          "uv": "c27ecc37",
+          "color": "a24a37ff",
+          "normal": "a5087308"
+        }
+      },
+      {
+        "name": "lower-lip",
+        "near": false,
+        "vertices": 1717,
+        "triangles": 3200,
+        "index": "f5897af",
+        "attributes": {
+          "position": "e6bfa887",
+          "uv": "678ac8bf",
+          "color": "91f47774",
+          "normal": "541f5427"
+        }
+      },
+      {
+        "name": "closed-mouth-crease",
+        "near": false,
+        "vertices": 546,
+        "triangles": 900,
+        "index": "4b6a9971",
+        "attributes": {
+          "position": "df55edc2",
+          "normal": "5d78483d",
+          "uv": "d6f5f3ed"
+        }
+      },
+      {
+        "name": "naris--1",
+        "near": false,
+        "vertices": 539,
+        "triangles": 960,
+        "index": "ecc39457",
+        "attributes": {
+          "position": "adab7d5",
+          "color": "1c219c51",
+          "normal": "54893103",
+          "uv": "d70afb6e"
+        }
+      },
+      {
+        "name": "naris-1",
+        "near": false,
+        "vertices": 539,
+        "triangles": 960,
+        "index": "ecc39457",
+        "attributes": {
+          "position": "5305aac9",
+          "color": "3ec7ca4c",
+          "normal": "bfd6123d",
+          "uv": "aec1d542"
+        }
+      },
+      {
+        "name": "soft-brow-underlayer",
+        "near": false,
+        "vertices": 729,
+        "triangles": 1280,
+        "index": "dd1176eb",
+        "attributes": {
+          "position": "ea2380ea",
+          "color": "70ec506a",
+          "normal": "7be2cc05"
+        }
+      },
+      {
+        "name": "soft-brow-underlayer",
+        "near": false,
+        "vertices": 729,
+        "triangles": 1280,
+        "index": "dd1176eb",
+        "attributes": {
+          "position": "3992de4d",
+          "color": "4b55216",
+          "normal": "5473b085"
+        }
+      },
+      {
+        "name": "tapered-brow-hairs",
+        "near": false,
+        "vertices": 7440,
+        "triangles": 9300,
+        "index": "17f2c64d",
+        "attributes": {
+          "position": "45db3a0d",
+          "normal": "56ff950c",
+          "uv": "f99ef415"
+        }
+      },
+      {
+        "name": "ear-continuous-anatomical-shell",
+        "near": true,
+        "vertices": 5282,
+        "triangles": 10560,
+        "index": "15688901",
+        "attributes": {
+          "color": "9816ed5",
+          "uv": "3073a1a8"
+        }
+      },
+      {
+        "name": "ear-continuous-anatomical-shell",
+        "near": false,
+        "vertices": 5282,
+        "triangles": 10560,
+        "index": "8bb6b6b9",
+        "attributes": {
+          "position": "8b21758b",
+          "color": "9ff24abf",
+          "uv": "3073a1a8",
+          "normal": "153f9dd4"
+        }
+      },
+      {
+        "name": "Continuous parted crown with longitudinal fiber flow",
+        "near": false,
+        "vertices": 24455,
+        "triangles": 47744,
+        "index": "76717c5e",
+        "attributes": {
+          "position": "cdb33367",
+          "color": "af92f49f",
+          "uv": "b4905ed2",
+          "normal": "6d70c703",
+          "uv1": "ea705695"
+        }
+      },
+      {
+        "name": "Overlapping layered S-wave hair around front back and shoulders",
+        "near": false,
+        "vertices": 159210,
+        "triangles": 278400,
+        "index": "29d83b98",
+        "attributes": {
+          "position": "be6e9072",
+          "color": "3694ede0",
+          "uv": "e797b8f5",
+          "normal": "10bb32f2"
+        }
+      },
+      {
+        "name": "Independent fine crown lengths and silhouette strands",
+        "near": false,
+        "vertices": 646260,
+        "triangles": 623976,
+        "index": "31a6e1d1",
+        "attributes": {
+          "position": "84ff0988",
+          "color": "9e29d8b9",
+          "uv": "1da45b29",
+          "normal": "d69bc351"
+        }
+      },
+      {
+        "name": "Dense fine bowed brown fringe strands",
+        "near": false,
+        "vertices": 92568,
+        "triangles": 133160,
+        "index": "42860b63",
+        "attributes": {
+          "position": "b7688305",
+          "color": "6c8e2c88",
+          "uv": "d3fe23dc",
+          "normal": "7584f2e2"
+        }
+      },
+      {
+        "name": "Sparse short temple edge and hairline wisps",
+        "near": false,
+        "vertices": 32892,
+        "triangles": 31608,
+        "index": "65dfd659",
+        "attributes": {
+          "position": "48303b6f",
+          "color": "28cda1fd",
+          "uv": "6135082d",
+          "normal": "6a64190e"
+        }
+      },
+      {
+        "name": "neck-smooth-anatomical-surface",
+        "near": false,
+        "vertices": 3645,
+        "triangles": 7040,
+        "index": "6706b407",
+        "attributes": {
+          "position": "b3ecafdd",
+          "uv": "993914fd",
+          "normal": "58c43dd3",
+          "color": "383fa55b"
+        }
+      },
+      {
+        "name": "blouse-continuous-torso-and-sleeves",
+        "near": false,
+        "vertices": 21809,
+        "triangles": 43008,
+        "index": "c8ee3ec6",
+        "attributes": {
+          "position": "b22c8316",
+          "uv": "26904013",
+          "normal": "de59cd0d",
+          "color": "c7d21343"
+        }
+      },
+      {
+        "name": "blouse-finished-bust-base",
+        "near": false,
+        "vertices": 96,
+        "triangles": 94,
+        "index": "e789a755",
+        "attributes": {
+          "position": "8cddba64",
+          "normal": "bf0bf138",
+          "uv": "b1250fbd",
+          "color": "490752c5"
+        }
+      },
+      {
+        "name": "blouse-left-neck-opening-facing",
+        "near": false,
+        "vertices": 441,
+        "triangles": 768,
+        "index": "8821df12",
+        "attributes": {
+          "position": "317b4046",
+          "uv": "a4446ddb",
+          "normal": "5dd19b94",
+          "color": "598a2175"
+        }
+      },
+      {
+        "name": "blouse-left-facing-stitch",
+        "near": false,
+        "vertices": 245,
+        "triangles": 384,
+        "index": "e94c4485",
+        "attributes": {
+          "position": "7b7c8ad2",
+          "normal": "9a52ced3",
+          "uv": "4ccd4b63"
+        }
+      },
+      {
+        "name": "blouse-right-neck-opening-facing",
+        "near": false,
+        "vertices": 441,
+        "triangles": 768,
+        "index": "500d863a",
+        "attributes": {
+          "position": "865a9819",
+          "uv": "a4446ddb",
+          "normal": "863a2118",
+          "color": "598a2175"
+        }
+      },
+      {
+        "name": "blouse-right-facing-stitch",
+        "near": false,
+        "vertices": 245,
+        "triangles": 384,
+        "index": "e94c4485",
+        "attributes": {
+          "position": "339798c2",
+          "normal": "ee417f6f",
+          "uv": "4ccd4b63"
+        }
+      },
+      {
+        "name": "blouse-left-spread-collar",
+        "near": false,
+        "vertices": 2450,
+        "triangles": 4896,
+        "index": "54a515fe",
+        "attributes": {
+          "position": "72dcfdf",
+          "normal": "808a8e62",
+          "uv": "e4e9c5ad",
+          "color": "b8225fc9"
+        }
+      },
+      {
+        "name": "blouse-left-collar-edge",
+        "near": false,
+        "vertices": 485,
+        "triangles": 768,
+        "index": "9dbf4fb2",
+        "attributes": {
+          "position": "60d5569d",
+          "normal": "2927dc02",
+          "uv": "d147f4cc"
+        }
+      },
+      {
+        "name": "blouse-left-collar-fold",
+        "near": false,
+        "vertices": 405,
+        "triangles": 640,
+        "index": "b2957bd2",
+        "attributes": {
+          "position": "64a16b33",
+          "normal": "55da1313",
+          "uv": "47bd1173",
+          "color": "aff22de8"
+        }
+      },
+      {
+        "name": "blouse-right-spread-collar",
+        "near": false,
+        "vertices": 2450,
+        "triangles": 4896,
+        "index": "cde68616",
+        "attributes": {
+          "position": "6659520f",
+          "normal": "d859927d",
+          "uv": "e4e9c5ad",
+          "color": "2a1322f5"
+        }
+      },
+      {
+        "name": "blouse-right-collar-edge",
+        "near": false,
+        "vertices": 485,
+        "triangles": 768,
+        "index": "9dbf4fb2",
+        "attributes": {
+          "position": "7a0521fc",
+          "normal": "9a195a3e",
+          "uv": "d147f4cc"
+        }
+      },
+      {
+        "name": "blouse-right-collar-fold",
+        "near": false,
+        "vertices": 405,
+        "triangles": 640,
+        "index": "b2957bd2",
+        "attributes": {
+          "position": "4c974738",
+          "normal": "ab93c53a",
+          "uv": "47bd1173",
+          "color": "aff22de8"
+        }
+      },
+      {
+        "name": "blouse-finished-neckline",
+        "near": false,
+        "vertices": 645,
+        "triangles": 1024,
+        "index": "a3b65063",
+        "attributes": {
+          "position": "c234a86d",
+          "normal": "15c29aca",
+          "uv": "1fc4422f",
+          "color": "a29f2368"
+        }
+      },
+      {
+        "name": "blouse-back-yoke-seam",
+        "near": false,
+        "vertices": 425,
+        "triangles": 672,
+        "index": "19d731b2",
+        "attributes": {
+          "position": "7541893c",
+          "normal": "5686c5e4",
+          "uv": "7cd27a1a"
+        }
+      },
+      {
+        "name": "blouse-sleeve-attachment--1",
+        "near": false,
+        "vertices": 285,
+        "triangles": 448,
+        "index": "9a66be52",
+        "attributes": {
+          "position": "4ada18eb",
+          "normal": "807f4e56",
+          "uv": "8d855c51"
+        }
+      },
+      {
+        "name": "blouse-sleeve-attachment-1",
+        "near": false,
+        "vertices": 285,
+        "triangles": 448,
+        "index": "9a66be52",
+        "attributes": {
+          "position": "4c328db1",
+          "normal": "b6b3e73",
+          "uv": "8d855c51"
+        }
+      },
+      {
+        "name": "blouse-curved-centre-placket",
+        "near": false,
+        "vertices": 1650,
+        "triangles": 3296,
+        "index": "a2b1875b",
+        "attributes": {
+          "position": "aa95fb39",
+          "normal": "63a0d19b",
+          "uv": "455bca99",
+          "color": "47ef17b5"
+        }
+      },
+      {
+        "name": "blouse-placket-seam--1",
+        "near": false,
+        "vertices": 385,
+        "triangles": 608,
+        "index": "d96158d2",
+        "attributes": {
+          "position": "7bfa7309",
+          "normal": "c85550f2",
+          "uv": "6d20bbd0"
+        }
+      },
+      {
+        "name": "blouse-placket-seam-1",
+        "near": false,
+        "vertices": 385,
+        "triangles": 608,
+        "index": "d96158d2",
+        "attributes": {
+          "position": "46e54586",
+          "normal": "98bca4f1",
+          "uv": "6d20bbd0"
+        }
+      },
+      {
+        "name": "blouse-bust-crop-hem",
+        "near": false,
+        "vertices": 645,
+        "triangles": 1024,
+        "index": "a3b65063",
+        "attributes": {
+          "position": "4c6177a7",
+          "normal": "92a1494a",
+          "uv": "1fc4422f"
+        }
+      },
+      {
+        "name": "buttons-batched-blouse-ivory-buttons",
+        "near": false,
+        "vertices": 3309,
+        "triangles": 5664,
+        "index": "e186ba1f",
+        "attributes": {
+          "position": "f668c45f",
+          "normal": "562a22e2",
+          "uv": "501e00ba"
+        }
+      },
+      {
+        "name": "buttons-batched-button-recesses",
+        "near": false,
+        "vertices": 256,
+        "triangles": 224,
+        "index": "2db914c5",
+        "attributes": {
+          "position": "c29bfc02",
+          "normal": "c3e42a7a",
+          "uv": "89ce01c5"
+        }
+      },
+      {
+        "name": "buttons-batched-button-threads",
+        "near": false,
+        "vertices": 320,
+        "triangles": 192,
+        "index": "a285e2ed",
+        "attributes": {
+          "position": "cd3fa631",
+          "normal": "5ce74634",
+          "uv": "8a368d45"
+        }
+      }
+    ],
+    "heapMiB": 282,
+    "errors": []
+  }
+]
