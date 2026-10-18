@@ -3,20 +3,23 @@ import { WebGPURenderer } from 'three/webgpu';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFExporter } from 'three/addons/exporters/GLTFExporter.js';
 import { createHead } from './face.js';
+import { applyReferenceSkin } from './reference-skin.js';
 import { createHair } from './hair.js';
 import { createBlouse, createNeck } from './blouse.js';
 
 const $ = (id) => document.getElementById(id);
-const state = { backend: new URLSearchParams(location.search).get('backend') === 'webgl' ? 'webgl' : 'webgpu', width: 900, height: 1200, iteration: 7, score: 45, renderedFrames: 0, renderMs: 0, rotating: false, view: 'front', ready: false, lighting: 'soft' };
+const state = { backend: new URLSearchParams(location.search).get('backend') === 'webgl' ? 'webgl' : 'webgpu', width: 900, height: 1200, iteration: 12, score: 61, renderedFrames: 0, renderMs: 0, rotating: false, view: 'front', ready: false, lighting: 'soft' };
 const scene = new THREE.Scene();
-scene.background = new THREE.Color('#dae9ed');
+scene.background = new THREE.Color('#cbe3f3');
 const model = new THREE.Group();
 model.name = 'GPT-6_Astra_ChatGPT_WebGPU_Reference_Portrait';
 const headPivot = new THREE.Group();
 headPivot.name = 'Head_pose';
 headPivot.position.y = 2.95;
-headPivot.rotation.z = -0.13;
-headPivot.add(createHead(), createHair());
+headPivot.rotation.z = -0.17;
+const anatomicalHead=createHead();
+const referenceReady=applyReferenceSkin(anatomicalHead).then(atlas=>{state.textureBakeMs=atlas.userData.bakeMs;return atlas;});
+headPivot.add(anatomicalHead, createHair());
 model.add(headPivot, createNeck(), createBlouse());
 scene.add(model);
 let triangles = 0, meshes = 0;
@@ -40,12 +43,13 @@ function studioEnvironment() {
   return texture;
 }
 scene.environment = studioEnvironment();
-scene.environmentIntensity = .58;
-const ambient = new THREE.AmbientLight('#f3f1f0', .7);
-const key = new THREE.DirectionalLight('#fff3e9', 2.3); key.position.set(-3.8,6.5,7);
-const fill = new THREE.DirectionalLight('#d7eaff', .85); fill.position.set(4,3,5);
-const rim = new THREE.DirectionalLight('#f6f4ff', 1.5); rim.position.set(2,5,-4);
-scene.add(ambient,key,fill,rim);
+scene.environmentIntensity = .5;
+const ambient = new THREE.AmbientLight('#ffffff', .8);
+const key = new THREE.DirectionalLight('#fff5ed', 1.65); key.position.set(-3.8,6.5,7);
+const fill = new THREE.DirectionalLight('#e8f0ff', 1.15); fill.position.set(4,3,5);
+const rim = new THREE.DirectionalLight('#f6f4ff', 1.0); rim.position.set(2,5,-4);
+key.castShadow=true;key.shadow.mapSize.set(1024,1024);key.shadow.radius=4;key.shadow.blurSamples=8;key.shadow.bias=-.0002;key.shadow.normalBias=.012;key.shadow.camera.left=-3.4;key.shadow.camera.right=3.4;key.shadow.camera.top=3.8;key.shadow.camera.bottom=-3.8;key.shadow.camera.near=.5;key.shadow.camera.far=20;key.target.position.set(0,1.7,0);
+scene.add(ambient,key,fill,rim,key.target);
 
 const camera = new THREE.OrthographicCamera(-2.7,2.7,3.6,-3.6,.05,100);
 camera.position.set(0,1.55,13);
@@ -81,7 +85,7 @@ function updateStats() {
   $('settings-stat').textContent = `${meshes.toLocaleString()} meshes · ${Math.round(triangles).toLocaleString()} triangles · ${state.renderMs.toFixed(1)} ms CPU submission${performance.memory ? ` · ${Math.round(performance.memory.usedJSHeapSize/1048576)} MB JS heap` : ''}`;
 }
 function updateProjection() {
-  const verticalSpan = state.view === 'detail' ? 3.0 : 7.12;
+  const verticalSpan = state.view === 'detail' ? 3.0 : 6.2;
   const aspect = state.width/state.height;
   // Keep the full bust visible when landscape orientation is requested.
   const viewHeight = Math.max(verticalSpan, (state.view === 'detail' ? 2.4 : 4.6)/aspect);
@@ -158,7 +162,7 @@ function setLighting(name) {
   state.lighting=name;
   if(name==='warm') {key.color.set('#ffdfbd');fill.color.set('#e9e3f3');key.intensity=2.2;fill.intensity=.85;ambient.intensity=.75;scene.background.set('#e4e6df');}
   else if(name==='sculpture') {key.color.set('#ffffff');fill.color.set('#c4d7f1');key.intensity=2.8;fill.intensity=.4;ambient.intensity=.4;scene.background.set('#ccdfe6');}
-  else {key.color.set('#fff3e9');fill.color.set('#d7eaff');key.intensity=2.3;fill.intensity=.85;ambient.intensity=.7;scene.background.set('#dae9ed');}
+  else {key.color.set('#fff5ed');fill.color.set('#e8f0ff');key.intensity=1.65;fill.intensity=1.15;ambient.intensity=.8;scene.background.set('#cbe3f3');}
   requestRender();
 }
 function setSettingsOpen(open) {
@@ -172,6 +176,7 @@ async function initialize(backend=state.backend) {
   $('loading').hidden=false;$('backend-gate').hidden=true;
   $('backend-label').textContent=`INITIALIZING ${backend.toUpperCase()}`;
   try {
+    await referenceReady;
     if(backend==='webgpu') {
       if(!navigator.gpu)throw new Error('WebGPU is not available in this browser or context. Use a supported browser on HTTPS or localhost, or choose WebGL below.');
       const adapter=await navigator.gpu.requestAdapter({powerPreference:'high-performance'});
@@ -184,7 +189,7 @@ async function initialize(backend=state.backend) {
       await next.init();
       if(!next.backend?.isWebGPUBackend){next.dispose();throw new Error('The renderer attempted a compatibility backend. WebGPU was requested, so rendering has stopped. Choose WebGL explicitly to continue.');}
     }else next=new THREE.WebGLRenderer({antialias:true,alpha:false,powerPreference:'high-performance',preserveDrawingBuffer:true});
-    renderer=next;renderer.setPixelRatio(1);
+    renderer=next;renderer.setPixelRatio(1);renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.VSMShadowMap;
     renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.0;
     renderer.outputColorSpace=THREE.SRGBColorSpace;
     renderer.domElement.setAttribute('aria-label','Interactive three-dimensional portrait. Drag to orbit, scroll or pinch to zoom.');
