@@ -4,8 +4,8 @@
   "goal_achieved": false,
   "method": "Visual self-assessment against the sole uploaded image, supplemented by independent agent review. Scores are subjective and are not a certification of AAA production quality.",
   "scope": "Recorded assessments whose numeric results remain available. No missing historical scores have been invented.",
-  "current_accepted_iteration": 58,
-  "current_accepted_score": 75,
+  "current_accepted_iteration": 66,
+  "current_accepted_score": 76,
   "assessments": [
     {
       "iteration": 20,
@@ -246,6 +246,41 @@
       "reviewer": "root and quality_review_42",
       "decision": "accepted 2.5 percent guarded lower-cheek taper",
       "notes": "Compared fresh native WebGPU front, detail, and quarter views at 0, 2.5, and 4 percent. Selected 2.5 percent: slightly closer soft lower-face contour; 4 percent begins to pinch. Continuous-face X alone changes before skin compensation; eye, lip, ear, UV, head-space Y and Z preserved. Actual minimum Jacobian .874585, 24156 changed vertices, maximum displacement .016347. No new ear gap visible. Small refinement does not alone raise the overall score."
+    },
+    {
+      "iteration": 60,
+      "score": 75,
+      "reviewer": "root",
+      "decision": "accepted broader cloth folds and closed placket edge",
+      "notes": "Native front, isolated garment, and both profiles reviewed. Broader unequal button rolls, continuous placket trough, hanging fold, and shoulder compression improve drape. Closed placket thickness .0045, 1816 extra triangles, no extra draw calls. Neck, upper opening, collar, facing, crop, placket XY, and 3+1 button layout fixed. No new visible hair collision. Cloth remains too smooth for the requested production standard."
+    },
+    {
+      "iteration": 61,
+      "score": 75,
+      "reviewer": "root",
+      "decision": "retained existing socket cap after comparison",
+      "notes": "Compared maximum outer-socket lifts14,20,26 with the same aperture/lid guards, nose cap7 and geometry. Larger cap alone gives little useful improvement; the production atlas retains14. No higher score or default change from this trial."
+    },
+    {
+      "iteration": 64,
+      "score": 75,
+      "reviewer": "root",
+      "decision": "localized quarter-view cheek artifact to photographed color",
+      "notes": "Uniform-lit geometry has no cheek pit; the unlit photo map retains it. Raycast of visible patch maps to canonical X about.566-.629 and Y-.72 to-.64, outside the prior local albedo support. This identifies the correction region without changing geometry or analyzing another image."
+    },
+    {
+      "iteration": 65,
+      "score": 75,
+      "reviewer": "root",
+      "decision": "accepted bounded outer-cheek tone correction at strength .60",
+      "notes": "Compared0,.60,.90 at matched native detail and quarter views. Smoothly unioned a local ellipse centered(.588,-.700), radii(.142,.215) with the prior correction. Uses existing same-side colors from image1 with original fine residual bounded to +/-5. The dark pit recedes while soft tone remains; .90 offers no useful visual gain. Eyes, lips, nose, chin, UVs, geometry, and hidden-side field remain unchanged."
+    },
+    {
+      "iteration": 66,
+      "score": 76,
+      "reviewer": "root",
+      "decision": "accepted lower-hair flow candidate59 with the current cloth and face refinements",
+      "notes": "Five native views reviewed. Rear ends now use physical drop, unequal terminal bends and fuller overlapping layers, improving the regular sawtooth hem and reducing vertical gaps. Identified short-curl and inner-front shoulder wedges are gathered; one outer-front family still protrudes and is assigned for repair. Hair triangles1104568 and buffers51.62MiB are unchanged from57. Actual browser heap251MiB; CPU submission2.2ms is not a GPU frame-time measurement. The crown still reads as a solid cap; goal remains unmet."
     }
   ]
 }

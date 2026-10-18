@@ -97,7 +97,11 @@ function jawSampleConfidence(u,v){
 // broad photographic shading only; correspondences and photo weights stay put.
 function localAlbedoWeights(x,y){
   const ellipse=(cx,cy,rx,ry)=>1-smooth((Math.hypot((x-cx)/rx,(y-cy)/ry)-.30)/.70);
-  const cheek=.97*ellipse(.422,-.815,.158,.145);
+  const innerCheek=.97*ellipse(.422,-.815,.158,.145);
+  // Native quarter-view material isolation located a second photographed
+  // cheek shadow outside the earlier support. Soften its broad tone only.
+  const outerCheek=.60*ellipse(.588,-.700,.142,.215);
+  const cheek=1-(1-innerCheek)*(1-outerCheek);
   const chin=.96*ellipse(-.012,-1.085,.230,.130)*smooth((y+1.176)/.048);
   return [cheek,chin];
 }

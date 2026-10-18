@@ -132,38 +132,52 @@ function secondaryClothRelief(x,y,front=true){
   const ax=Math.abs(x),cx=placketX(y);
   let folds=0;
   if(front){
-    // A few longer tension folds follow the button pulls in the reference.
-    // They grow from the same paths as the primary folds, without parallel ribs.
+    // Broad rolls carry the button tension into the loose cotton. The narrower
+    // primary creases share these paths, so their shoulders form one fold.
     const side=x>=cx?1:-1;
     for(let k=0;k<3;k++){
       const dx=(x-placketX(BUTTON_Y[k]))*side;
       const centre=BUTTON_Y[k]+FOLD_OFFSETS[k]+FOLD_SLOPES[k]*dx+.045*dx*dx;
-      const w=.038+.035*Math.max(0,dx),preferredSide=k===1?-1:1;
-      const amplitude=(side===preferredSide?1:.28)*(.021-k*.002);
-      folds+=amplitude*gauss(dx-.22,FOLD_LENGTHS[k]+.075)*(gauss(y-centre,w)-.34*gauss(y-centre,w*2.25))*smooth(.055,.15,dx);
+      const w=.065+.054*Math.max(0,dx),preferredSide=k===1?-1:1;
+      const amplitude=(side===preferredSide?1:.25)*(.037-k*.0025);
+      folds+=amplitude*gauss(dx-.24,FOLD_LENGTHS[k]+.115)*(gauss(y-centre,w)-.42*gauss(y-centre+.062,w*1.75))*smooth(.045,.15,dx);
     }
     // The narrow fold beside the placket turns into a broad hanging billow.
-    const closeLine=cx+.157+.022*Math.sin(y*2.35+.5);
-    folds+=.026*gauss(y+.26,.78)*(gauss(x-closeLine-.055,.105)-.62*gauss(x-closeLine,.047));
-    const hangingLine=cx-.32-.052*smooth(-1.08,.31,y)+.024*Math.sin(y*2.10+.4);
-    folds+=.033*gauss(y+.37,.79)*(gauss(x-hangingLine,.108)-.42*gauss(x-hangingLine+.092,.176));
+    const closeLine=cx+.144+.027*Math.sin(y*1.65+.4);
+    folds+=.053*gauss(y+.29,.89)*(gauss(x-closeLine-.123,.137)-.86*gauss(x-closeLine,.057));
+    const hangingLine=cx-.29-.100*smooth(-1.08,.31,y)+.035*Math.sin(y*2.10+.4);
+    folds+=.051*gauss(y+.37,.88)*(gauss(x-hangingLine,.155)-.62*gauss(x-hangingLine+.126,.098));
     // One low diagonal gather carries the unequal drape into the cropped waist.
-    const lowerPull=y+.99+.39*(x+.10);
-    folds+=.034*gauss(x+.35,.43)*(gauss(lowerPull,.094)-.34*gauss(lowerPull+.092,.173));
+    const lowerPull=y+.99+.35*(x+.13)+.10*(x+.13)*(x+.13);
+    folds+=.045*gauss(x+.35,.47)*(gauss(lowerPull,.132)-.43*gauss(lowerPull+.110,.212));
     const sleeveLine=(x<0?1.31:1.38)+(x<0?.095:.14)*(y+.33);
-    folds+=.021*gauss(y+(x<0?.50:.28),.67)*(gauss(ax-sleeveLine,.10)-.40*gauss(ax-sleeveLine+.085,.17));
+    folds+=.033*gauss(y+(x<0?.50:.28),.74)*(gauss(ax-sleeveLine,.125)-.53*gauss(ax-sleeveLine+.112,.078));
   }else{
     // Unequal loose folds on the back stay broad under the hanging hair.
     const a=x-.44-.038*y,b=x+.58+.025*y;
-    folds+=.022*gauss(y+.39,.79)*(gauss(a,.12)-.38*gauss(a+.10,.20));
-    folds+=.017*gauss(y+.62,.69)*(gauss(b,.145)-.34*gauss(b-.12,.23));
+    folds+=.032*gauss(y+.39,.86)*(gauss(a,.165)-.52*gauss(a+.135,.107));
+    folds+=.027*gauss(y+.62,.76)*(gauss(b,.185)-.46*gauss(b-.16,.12));
     const sleeveLine=1.27+.07*(y+.4);
-    folds+=.014*gauss(y+.39,.71)*(gauss(ax-sleeveLine,.13)-.36*gauss(ax-sleeveLine+.09,.20));
+    folds+=.025*gauss(y+.39,.78)*(gauss(ax-sleeveLine,.16)-.46*gauss(ax-sleeveLine+.13,.105));
   }
-  // Limit additional lift to .032 world units.
-  // This protects the established hair clearance and leaves the upper garment fixed.
-  const bound=folds>=0?.032:.042;
+  // Bounded broad relief keeps the established silhouette and dies out before
+  // the collar and the closed lower crop. No random wrinkle field is added.
+  const bound=folds>=0?.053:.060;
   return gate*bound*Math.tanh(folds/bound);
+}
+
+function shoulderClothRelief(x,y,front=true){
+  const ax=Math.abs(x),outer=smooth(.98,1.14,ax)*(1-smooth(1.53,1.67,ax));
+  if(outer===0)return 0;
+  const crop=smooth(-1.40,-1.12,y),left=x<0;
+  // Compression descends from the sleeve attachment. One wide roll and one
+  // shorter fold have unequal slopes; the crest of the shoulder remains smooth.
+  const first=y-(left?1.04:.945)+(left?.31:.44)*(ax-1.25);
+  const second=y-(left?.64:.57)+(left?.82:1.02)*(ax-1.33);
+  let folds=.044*gauss(ax-1.34,.29)*(gauss(first,.125)-.62*gauss(first+.090,.074));
+  folds+=(left?.030:.023)*gauss(ax-1.43,.23)*(gauss(second,.105)-.52*gauss(second+.086,.066));
+  if(!front)folds*=.60;
+  return outer*crop*.047*Math.tanh(folds/.047);
 }
 
 function fabricRelief(x,y) {
@@ -192,7 +206,16 @@ function fabricRelief(x,y) {
   // One shallow compression leaves room for unbroken cloth below the collar.
   const collarD=y-.57+.49*(x+.40);
   folds+=.014*gauss(x+.44,.22)*(gauss(collarD,.054)-.31*gauss(collarD-.065,.103));
-  return folds+secondaryClothRelief(x,y,true);
+  return folds+secondaryClothRelief(x,y,true)+shoulderClothRelief(x,y,true);
+}
+
+function clothFoldOcclusion(x,y,front=true){
+  const height=(a,b)=>front?fabricRelief(a,b):secondaryClothRelief(a,b,false)+shoulderClothRelief(a,b,false);
+  const h=height(x,y),e=.082,l=height(x-e,y),r=height(x+e,y),u=height(x,y+e),d=height(x,y-e);
+  // Occlusion is positive only where neighboring cotton rises around a hollow.
+  // It is independent of the viewing direction and leaves exposed crests bright.
+  const hollow=Math.max(0,(l+r+u+d)*.25-h),wall=Math.max(0,Math.max(l,r,u,d)-h);
+  return clamp(hollow*2.8+wall*1.65,0,.19);
 }
 
 function roundedShoulderWeight(c){
@@ -238,7 +261,7 @@ function torsoPoint(u,t) {
     z-=.063*gauss(ax-armSeam,.102)*smooth(.39,.61,t)*(1-smooth(.96,1,t))*c;
   } else {
     const backFold=.021*gauss(x-.46-.025*y,.098)-.014*gauss(x+.57+.04*y,.118);
-    z-=gate*(backFold+.014*gauss(x,.062)*gauss(y-.23,.66)+secondaryClothRelief(x,y,false)*Math.abs(c));
+    z-=gate*(backFold+.014*gauss(x,.062)*gauss(y-.23,.66)+(secondaryClothRelief(x,y,false)+shoulderClothRelief(x,y,false))*Math.abs(c));
     z+=.060*Math.abs(c)*smooth(1.13,1.48,Math.abs(x))*gauss(y-.20,.91);
   }
   y+=.007*Math.sin(a*3.0+.4)*smooth(.50,.85,t)*(1-smooth(.93,1,t));
@@ -441,19 +464,19 @@ function clothGeometry() {
     const x=p.getX(i),y=p.getY(i),z=p.getZ(i),a=Math.abs(x);
     let shade=0;
     if(z>0){
-      const fold=fabricRelief(x,y),slope=(fabricRelief(x+.027,y+.016)-fabricRelief(x-.027,y-.016))/.063;
+      const fold=fabricRelief(x,y);
       const leafU=clamp((a-.258)/.455,0,1),leafEdge=mix(1.155,.605,leafU)+.045*Math.sin(leafU*Math.PI)+(x<0?-.022:.018);
       const beneathCollar=.17*gauss(y-(leafEdge-.040),.064)*smooth(.20,.275,a)*(1-smooth(.67,.78,a));
-      const seamShade=.080*gauss(a-1.205-.062*y,.112)*gauss(y+.5,.91)+.047*gauss(x-placketX(y)-.10,.036);
-      // Soft directional ambient occlusion follows the authored relief. PBR lighting
-      // still shades the same real folds from every view; no photographic texture.
-      shade=beneathCollar+seamShade+Math.max(0,-fold)*3.1+.16*clamp(slope,-.60,.75);
+      const seamShade=.080*gauss(a-1.205-.062*y,.112)*gauss(y+.5,.91)+.082*gauss(x-placketX(y)-.103,.041);
+      // Ambient attenuation follows the same rounded folds as the real geometry;
+      // directional highlights and shadows remain the renderer's responsibility.
+      shade=beneathCollar+seamShade+Math.max(0,-fold)*2.7+clothFoldOcclusion(x,y,true);
     }else{
       shade=.035*gauss(x,.083)*gauss(y-.25,.67)+.055*gauss(x+.57+.04*y,.080)*gauss(y+.15,.80);
       shade+=.032*gauss(y-(.77+.095*x*x),.035);
-      shade+=Math.max(0,-secondaryClothRelief(x,y,false))*2.2;
+      shade+=Math.max(0,-secondaryClothRelief(x,y,false))*2.2+clothFoldOcclusion(x,y,false)*.78;
     }
-    colors.push(clamp(1-shade,.67,1.045),clamp(1-shade*.985,.68,1.042),clamp(1-shade*.77,.73,1.025));
+    colors.push(clamp(1-shade,.62,1),clamp(1-shade*.985,.64,1),clamp(1-shade*.80,.70,1));
   }
   g.setAttribute('color',new THREE.Float32BufferAttribute(colors,3));return g;
 }
@@ -503,10 +526,10 @@ export function createBlouse() {
   addCollar(group,-1,collarMat,seamMat);addCollar(group,1,collarMat,seamMat);
   addTailoring(group,seamMat,cloth);
   // Raised centre placket shares exactly the body depth and remains closed below the V.
-  mesh(group,'blouse-curved-centre-placket',surface(10,74,(u,v)=>{
+  mesh(group,'blouse-curved-centre-placket',solidifyGrid(surface(10,74,(u,v)=>{
     const y=mix(.780,-1.45,v),cx=placketX(y),x=cx+(u-.5)*(.174+.014*v),p=bodyAtXY(x,y);
     return [x,y,p[2]+.007+.006*Math.pow(Math.sin(u*Math.PI),.70)];
-  }),placketMat);
+  }),10,74,.0045),placketMat);
   for(const side of[-1,1]){
     const line=[];for(let i=0;i<=55;i++){const v=i/55,y=mix(.773,-1.446,v),x=placketX(y)+side*(.077+.007*v),p=bodyAtXY(x,y);line.push([x,y,p[2]+.014]);}
     curveMesh(group,`blouse-placket-seam-${side}`,line,.0017,seamMat,76);
@@ -521,7 +544,7 @@ export function createBlouse() {
   // Geometry, normals, seams and buttons all receive the same continuous transform.
   broadenShoulders(group);
   group.userData.originalGeometry=true;
-  group.userData.design='Cotton blouse with sloping shoulders, a tapered waist and hanging sleeve planes; separately folded pointed collar leaves above an open V facing; localized asymmetrical gathers, curved placket, sewn yoke/sleeves, three body buttons and an open facing button.';
+  group.userData.design='Cotton blouse with sloping shoulders, a tapered waist and hanging sleeve planes; separately folded pointed collar leaves above an open V facing; broad asymmetrical button pulls, hanging cloth rolls and shoulder compression; sewn yoke/sleeves, a thin closed curved placket, three body buttons and an open facing button.';
   return group;
 }
 
