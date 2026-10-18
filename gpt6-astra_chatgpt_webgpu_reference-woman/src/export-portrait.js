@@ -8,7 +8,7 @@ import { GLTFExporter } from 'three/addons/exporters/GLTFExporter.js';
 export function createPortraitExport(model) {
   const materials = new Map(), textures = new Map(), normalTextures = new Map();
   const ownedTextures = new Set(), ownedCanvases = new Set();
-  const report = { materials: 0, textures: 0, normalCanvases: 0, sharedGeometries: 0, normalScaleBakes: [] };
+  const report = { materials: 0, textures: 0, normalCanvases: 0, sharedGeometries: 0, normalScaleBakes: [], alphaMerges: [] };
   let exportModel = null, disposed = false;
 
   function dispose() {
@@ -101,13 +101,120 @@ export function createPortraitExport(model) {
     return { texture, scaleX: scaleX < 0 ? -scalar : scalar, scaleY: scaleY < 0 ? -scalar : scalar };
   }
 
-  function cloneMaterial(source) {
+  // Candidate 100 alone uses an independent UV0 alphaMap with its UV1 atlas.
+  // glTF has no second base-color alpha sampler. This export-only merge uses
+  // the validated affine chart inverse; it never changes a live attribute/map.
+  function needsCrownMerge104(material) {
+    const metadata = material.userData?.referenceCrownMicrocontrast;
+    if (!metadata?.export?.requiresExportOnlyAlphaMerge) return false;
+    if (metadata.version !== 'reference-crown-strand-space-100-v1') {
+      throw new Error('Unknown reference-crown atlas layout; refusing an incorrect alpha merge.');
+    }
+    return true;
+  }
+
+  function validateCrownMerge104(material, geometry) {
+    const atlas = material.map, alpha = material.alphaMap;
+    const rgba8 = (texture, width, height) => texture?.isDataTexture && texture.format === THREE.RGBAFormat &&
+      texture.type === THREE.UnsignedByteType && texture.image.width === width && texture.image.height === height &&
+      texture.image.data instanceof Uint8Array && texture.image.data.length === width * height * 4;
+    if (!rgba8(atlas, 2048, 2048) || !rgba8(alpha, 512, 1024) || atlas.channel !== 1 || alpha.channel !== 0 ||
+        atlas.colorSpace !== THREE.SRGBColorSpace || alpha.colorSpace !== THREE.NoColorSpace || material.normalMap?.channel !== 0) {
+      throw new Error('Reference-crown export requires the accepted UV1 RGBA8 atlas and UV0 coverage/normal maps.');
+    }
+    for (const texture of [atlas, alpha]) {
+      if (texture.flipY !== false || texture.wrapS !== THREE.RepeatWrapping || texture.wrapT !== THREE.ClampToEdgeWrapping ||
+          texture.minFilter !== THREE.LinearMipmapLinearFilter || texture.magFilter !== THREE.LinearFilter ||
+          texture.rotation !== 0 || texture.repeat.x !== 1 || texture.repeat.y !== 1 ||
+          texture.offset.x !== 0 || texture.offset.y !== 0 || texture.center.x !== 0 || texture.center.y !== 0) {
+        throw new Error('Reference-crown sampler/UV transform changed; its alpha inverse needs an explicit update.');
+      }
+      const identity = [1,0,0,0,1,0,0,0,1];
+      if (!texture.matrix.elements.every((value, index) => value === identity[index])) {
+        throw new Error('Reference-crown texture matrix is no longer the accepted identity.');
+      }
+    }
+    const uv = geometry?.getAttribute('uv'), uv1 = geometry?.getAttribute('uv1'), color = geometry?.getAttribute('color');
+    if (uv?.count !== 24455 || uv1?.count !== 24455 || color?.count !== 24455 || color.itemSize !== 4) {
+      throw new Error('Reference-crown export requires the accepted foundation/two-sheet topology and vertex alpha.');
+    }
+    for (let i = 0; i < uv.count; i++) {
+      const u = uv.getX(i), v = uv.getY(i), foundation = i < 7685;
+      const x = foundation ? 16 + u * 512 : (i < 16070 ? 16 : 1040) + u * 992;
+      const y = foundation ? 1040 + v * 1024 : 16 + v * 992;
+      if (!Number.isFinite(u) || !Number.isFinite(v) || Math.abs(uv1.getX(i) - x / 2048) > 6e-8 || Math.abs(uv1.getY(i) - y / 2048) > 6e-8) {
+        throw new Error('Reference-crown UV1 no longer matches the known affine UV0 chart mapping.');
+      }
+    }
+  }
+
+  function mergeCrownAlpha104(source) {
+    const started = performance.now(), atlas = source.map, coverage = source.alphaMap.image;
+    const data = atlas.image.data.slice();
+    const width = coverage.width, height = coverage.height, bytes = coverage.data;
+    const sample = (u, v) => {
+      const x = (u - Math.floor(u)) * width - .5, y = Math.max(0, Math.min(height - 1, v * height - .5));
+      const ix = Math.floor(x), iy = Math.floor(y), fx = x - ix, fy = y - iy;
+      const xa = (ix + width) % width, xb = (ix + 1 + width) % width, yb = Math.min(height - 1, iy + 1);
+      const a = bytes[(iy * width + xa) * 4 + 1], b = bytes[(iy * width + xb) * 4 + 1];
+      const c = bytes[(yb * width + xa) * 4 + 1], d = bytes[(yb * width + xb) * 4 + 1];
+      return (a + (b - a) * fx) * (1 - fy) + (c + (d - c) * fx) * fy;
+    };
+    let texels = 0, partial = 0, transparent = 0, maxQuantizationError = 0;
+    const write = (x, y, u, v) => {
+      const at = (y * 2048 + x) * 4 + 3, exact = data[at] * sample(u, v) / 255;
+      const value = Math.round(exact); data[at] = value;
+      maxQuantizationError = Math.max(maxQuantizationError, Math.abs(value - exact) / 255);
+      if (value === 0) transparent++; else if (value < 255) partial++;
+      texels++;
+    };
+    // Extend the sampler through each full 16-pixel gutter. The original alpha
+    // repeats U: clamping a chart's edge alpha would break the u=0/1 seam.
+    for (let y = 0; y < 1024; y++) for (let x = 0; x < 2048; x++) {
+      const originX = x < 1024 ? 16 : 1040;
+      write(x, y, (x + .5 - originX) / 992, (y + .5 - 16) / 992);
+    }
+    // Foundation texel centers have an exact 1:1 inverse, including its gutters.
+    for (let y = 1024; y < 2048; y++) for (let x = 0; x < 544; x++) {
+      write(x, y, (x + .5 - 16) / 512, (y + .5 - 1040) / 1024);
+    }
+    const texture = copyTexture(atlas, { data, width: 2048, height: 2048 });
+    const metrics = {
+      version: 'reference-crown-alpha-export-104-v1', sourceVersion: 'reference-crown-strand-space-100-v1',
+      atlasDimensions: [2048, 2048], sourceCoverageDimensions: [512, 1024],
+      colorTexCoord: 1, normalTexCoord: 0, sourceCoverageTexCoord: 0, coverageChannel: 'green',
+      mergedTexels: texels, partialAlphaTexels: partial, transparentTexels: transparent,
+      maxTexelAlphaQuantizationError: maxQuantizationError, allocatedBytes: data.byteLength,
+      foundationSampling: 'Exact source texel centers', sheetSampling: 'Bilinear source coverage through the affine chart inverse',
+      gutterSampling: 'Extrapolated UV0 with original repeat-U/clamp-V',
+      rgbBytesChanged: false, vertexAlphaChanged: false, liveAttributesChanged: false, perFrameWork: 0,
+      limitation: 'Sheet resampling and glTF mip filtering can differ between original bilinear knots; validate effective coverage before acceptance.',
+      milliseconds: performance.now() - started,
+    };
+    report.alphaMerges.push(metrics);
+    return { texture, metrics };
+  }
+
+  function cloneMaterial(source, geometry) {
+    const mergeCrown = needsCrownMerge104(source);
+    if (mergeCrown) validateCrownMerge104(source, geometry);
     if (materials.has(source)) return materials.get(source);
     const material = source.clone();
     materials.set(source, material);
     report.materials++;
     for (const [property, value] of Object.entries(source)) {
-      if (value?.isTexture && property !== 'normalMap') material[property] = cloneTexture(value);
+      if (value?.isTexture && property !== 'normalMap' && !(mergeCrown && (property === 'map' || property === 'alphaMap'))) material[property] = cloneTexture(value);
+    }
+    if (mergeCrown) {
+      const merged = mergeCrownAlpha104(source);
+      material.map = merged.texture;
+      material.alphaMap = null;
+      const metadata = material.userData.referenceCrownMicrocontrast;
+      material.userData.referenceCrownMicrocontrast = {
+        ...metadata,
+        export: { ...metadata.export, requiresExportOnlyAlphaMerge: false, coverageMergedToBaseColor: true, coverageTexCoord: 1 },
+        alphaMerge: merged.metrics,
+      };
     }
     if (source.normalMap) {
       const prepared = normalTexture(source.normalMap, source.normalScale?.x ?? 1, source.normalScale?.y ?? 1);
@@ -122,7 +229,7 @@ export function createPortraitExport(model) {
     exportModel.traverse(object => {
       if (object.geometry) report.sharedGeometries++;
       if (!object.material) return;
-      object.material = Array.isArray(object.material) ? object.material.map(cloneMaterial) : cloneMaterial(object.material);
+      object.material = Array.isArray(object.material) ? object.material.map(material => cloneMaterial(material, object.geometry)) : cloneMaterial(object.material, object.geometry);
     });
     return { model: exportModel, report, dispose };
   } catch (error) {

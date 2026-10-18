@@ -132,9 +132,9 @@ function ribbon(b,c,width,color,steps=28,front=true,phase=0,tip=.83,deformEar=tr
  }
  for(let j=0;j<steps;j++){const a=first+j*2,c=a+2;b.i.push(a,a+1,c,a+1,c+1,c);}
 }
-function roundFiber(b,c,r,color,steps=20){
+function roundFiber(b,c,r,color,steps=20,tip=.79){
  const first=b.p.length/3;
- for(let j=0;j<=steps;j++){const t=j/steps,f=frame(c,t,true),radius=r*(.35+.65*smooth(0,.03,t))*(.035+.965*(1-smooth(.79,1,t)));for(let k=0;k<=4;k++){const a=k*TAU/4,p=f.p.clone().addScaledVector(f.s,radius*Math.cos(a)).addScaledVector(f.n,radius*Math.sin(a));vertex(b,p,color,k/4,t*.74,1,false);}(b.normalSeams??=[]).push(first+j*5,first+j*5+4);}
+ for(let j=0;j<=steps;j++){const t=j/steps,f=frame(c,t,true),radius=r*(.35+.65*smooth(0,.03,t))*(.035+.965*(1-smooth(tip,1,t)));for(let k=0;k<=4;k++){const a=k*TAU/4,p=f.p.clone().addScaledVector(f.s,radius*Math.cos(a)).addScaledVector(f.n,radius*Math.sin(a));vertex(b,p,color,k/4,t*.74,1,false);}(b.normalSeams??=[]).push(first+j*5,first+j*5+4);}
  for(let j=0;j<steps;j++)for(let k=0;k<4;k++){const a=first+j*5+k,c=a+5;b.i.push(a,c,a+1,a+1,c,c+1);}
 }
 function shoulderClearance(p,route=1){
@@ -350,7 +350,8 @@ export function createGroomHair({headTilt=-.17,headShiftX=.26,shoulderContact=0}
   for(let j=0;j<=20;j++){const v=j/20*end,e=crownEnvelope(u,v),wander=e*((upper?.005:.0025)*Math.sin(v*3.7+family[4])+.0012*Math.sin(v*7+phase)),height=.0056+random()*.0004+e*(.004+.0075*gathered+(upper?.004:0)),p=crown(side,clamp(u+wander),v,height);ps.push(p);}
   ribbon(detail,curve(ps),.00048+random()*.00028,pick(),26,false,phase,.96);fiberCount++;
  }
- // Round cores and sparse companions form unequal bowed fringe families.
+ // Retain94's accepted bowed trajectories. Continuous lanes and thinner,
+ // unequally tapered cores soften the isolated brush groups without new hooks.
  const bangGuides=[
   {n:270,w:.075,u:.810,v:.76,points:[[.17,1.44],[-.12,1.20],[-.37,.90],[-.52,.48],[-.67,-.20]]},
   {n:245,w:.069,u:.900,v:.72,points:[[.21,1.42],[.03,1.18],[-.18,.85],[-.32,.46],[-.44,.12]]},
@@ -360,10 +361,14 @@ export function createGroomHair({headTilt=-.17,headShiftX=.26,shoulderContact=0}
   {n:95,w:.031,u:.770,v:.62,points:[[.33,1.38],[.51,1.08],[.55,.77],[.54,.47],[.40,.16]]},
   {n:170,w:.045,u:.715,v:.53,points:[[.35,1.40],[.61,1.10],[.69,.75],[.71,.38],[.66,0]]}
  ];
+ const fringeStats108={roundCores:0,fineCompanions:0,omittedCores:0,sourceSlots:0,groups:[]};
  for(let group=0;group<bangGuides.length;group++){
-  const g=bangGuides[group];
+  const g=bangGuides[group],row={group,roundCores:0,fineCompanions:0};fringeStats108.groups.push(row);
   for(let k=0;k<g.n;k++){
-   const family=k%(group%2?9:8),phase=family*2.399+group*.71,loose=k%4===0,center=Math.sin(phase)*g.w*.82,spread=(random()-.5)*g.w*(loose?2.9:.23),lift=.068+.023*Math.cos(group*.91)+.012*Math.sin(phase),ps=[];
+   // A stratified coordinate replaces the repeated8/9 lane centers. Nearby
+   // cores retain a common bow while fine companions wander through its gaps.
+   const noise=random(),q=(k+.15+.70*noise)/g.n*2-1,lane=q+.045*Math.sin(q*Math.PI*2.15+group*.71)*(1-q*q),phase=lane*Math.PI+group*.71+.18*(noise-.5),loose=k%4===0;
+   const center=lane*g.w*.76,spread=(noise-.5)*g.w*(loose?2.55:.58),lift=.068+.023*Math.cos(group*.91)+.012*Math.sin(phase),ps=[];
    for(let j=0;j<g.points.length;j++){
     const t=j/(g.points.length-1),bow=Math.sin(t*Math.PI),x=g.points[j][0]+center*(.15+.85*bow)+spread*(.12+.88*t)+.024*Math.sin(phase+t*4.4)*bow,y=g.points[j][1]+.026*Math.sin(phase)*t+(random()-.5)*.018*t;
     const z=forehead(x,Math.max(.22,y))+.024+lift*Math.pow(bow,.8)+.004*Math.sin(k*2.7)*bow+(y<.22?(.22-y)*.045:0);ps.push(V(x,y,z));
@@ -371,9 +376,14 @@ export function createGroomHair({headTilt=-.17,headShiftX=.26,shoulderContact=0}
    const side=group<3?-1:1,u=g.u+center*.20+spread*.13,v0=.012+.064*(.5+.5*Math.sin(phase*1.37+group*.61))+(loose?.019:0),v1=g.v+.018*Math.sin(phase),root=[];
    for(let j=0;j<4;j++){const v=mix(v0,v1,j/3);root.push(crown(side,u,v,.003+.006*smooth(v0,v1,v)+.001*Math.sin(k*1.19)));}
    // Crown roots join bowed lower controls and unequal ends above the forehead.
-   const c=curve([...root,...ps.slice(2)]),cut=clamp(.88+.10*(.5+.5*Math.sin(phase+1.2))+(loose?-.06+random()*.12:-.01+random()*.05)+(group===0?.025:0)),end=1-(1-cut)*4/6,trim=[];
+   const endNoise=random(),c=curve([...root,...ps.slice(2)]),cut=clamp(.815+.235*endNoise+.025*Math.sin(phase+1.2)+(group===0?.025:0)),end=1-(1-cut)*4/6,trim=[];
    for(let j=0;j<=20;j++){const p=c.getPoint(j/20*end),delta=forehead(p.x,Math.max(.22,p.y))+.040-p.z;p.z+=.5*(delta+Math.hypot(delta,.006))*smooth(.14,.26,p.y)*(1-smooth(1.37,1.48,p.y));trim.push(p);}
-   const col=pick().lerp(new THREE.Color('#655652'),.16),strand=curve(trim);if(loose)ribbon(fringe,strand,.00031+random()*.00016,col,20,true,phase,.82+random()*.10,false);else roundFiber(fringe,strand,.00042+random()*.00024,col);fiberCount++;
+   const col=pick().lerp(new THREE.Color('#655652'),.16),strand=curve(trim),widthNoise=random(),keepCore=(k*37+group*11)%13<10;fringeStats108.sourceSlots++;
+   // Advance every accepted random draw, including omitted cores, so crown,
+   // later wisps, flyaways and the far-temple layer stay byte-identical to94.
+   if(loose){const taperNoise=random();ribbon(fringe,strand,.00027+widthNoise*.00014,col,20,true,phase,.72+taperNoise*.18,false);fringeStats108.fineCompanions++;row.fineCompanions++;fiberCount++;}
+   else if(keepCore){roundFiber(fringe,strand,.00033+widthNoise*.00020,col,20,.69+.14*noise);fringeStats108.roundCores++;row.roundCores++;fiberCount++;}
+   else fringeStats108.omittedCores++;
   }
  }
  // Short edge hairs continue the crown tangent into sparse outer wisps.
@@ -403,9 +413,10 @@ export function createGroomHair({headTilt=-.17,headShiftX=.26,shoulderContact=0}
  root.add(makeMesh(crownBatch,crownMaterial,'Continuous parted crown with longitudinal fiber flow',headTilt),makeMesh(mass,material,'Overlapping layered S-wave hair around front back and shoulders',headTilt,true,true,contact),makeMesh(detail,fineMaterial,'Independent fine crown lengths and silhouette strands',headTilt,false,true,contact),makeMesh(fringe,fringeMaterial,'Dense fine bowed brown fringe strands',headTilt,false),makeMesh(wisps,wispMaterial,'Sparse short temple edge and hairline wisps',headTilt,false,false));
  root.children[root.children.length-2].renderOrder=3;root.children[root.children.length-1].renderOrder=4;
  let triangles=0,bytes=0;root.traverse(o=>{if(!o.isMesh)return;triangles+=o.geometry.index.count/3;bytes+=o.geometry.index.array.byteLength;for(const a of Object.values(o.geometry.attributes))bytes+=a.array.byteLength;});
- root.userData={procedural:true,continuousCrownSheets:2,closedInsetScalp:true,smoothSingleEarTuck:true,opaqueBuriedRoots:true,roundedFringe:true,fringeStrands:bangGuides.reduce((n,g)=>n+g.n,0),fiberSeamNormals:true,matchedMassFiberAlbedo:true,lowVarianceFiberAlbedo:true,originalLayeredLocks:guides.length,individualStrands:fiberCount,triangles,geometryMiB:Number((bytes/1048576).toFixed(2)),constructionMs:Number((performance.now()-start).toFixed(1)),source:'Only the supplied image guided this original 3D groom. All geometry and longitudinal hair maps were authored mathematically; no hair photos or external assets.',headTiltCompensation:headTilt,lowerHairYawCompensation:.16};
+ root.userData={procedural:true,continuousCrownSheets:2,closedInsetScalp:true,smoothSingleEarTuck:true,opaqueBuriedRoots:true,roundedFringe:true,fringeStrands:fringeStats108.roundCores+fringeStats108.fineCompanions,fiberSeamNormals:true,matchedMassFiberAlbedo:true,lowVarianceFiberAlbedo:true,originalLayeredLocks:guides.length,individualStrands:fiberCount,triangles,geometryMiB:Number((bytes/1048576).toFixed(2)),constructionMs:Number((performance.now()-start).toFixed(1)),source:'Only the supplied image guided this original 3D groom. All geometry and longitudinal hair maps were authored mathematically; no hair photos or external assets.',headTiltCompensation:headTilt,lowerHairYawCompensation:.16};
  root.userData.frontRootJoins=[90,91,114].map(id=>({guide:id,...guides[id].c.debug}));
  root.userData.farTempleLayer=temple;
+ root.userData.fringeDistribution108=fringeStats108;
  if(contact)root.userData.shoulderContact=contact.metrics;
  return root;
 }

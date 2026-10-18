@@ -1,0 +1,465 @@
+{
+  "candidate": 107,
+  "native": false,
+  "scoreUnchanged": 76,
+  "offIdentical": true,
+  "offDecodeCalls": 0,
+  "sourcePathChecks": [
+    {
+      "name": "left-long-strand-strip",
+      "minJacobian": 0.8916987301521242,
+      "maxJacobian": 1.0955833246889386,
+      "bounds": [
+        140.17877679195632,
+        523.2776989346683,
+        261.8755659977792,
+        889.0790382518112
+      ]
+    },
+    {
+      "name": "right-long-strand-strip",
+      "minJacobian": 0.8387538859926078,
+      "maxJacobian": 1.1365546549155878,
+      "bounds": [
+        723.000007865367,
+        518.6836803781938,
+        825.1030919014398,
+        1059.5992956813727
+      ]
+    }
+  ],
+  "seamValueError": 0,
+  "seamDerivativeError": 0.01051247607158956,
+  "results": [
+    {
+      "strength": 0.5,
+      "metrics": {
+        "version": "reference-lengths-strand-space-107-v1",
+        "strength": 0.5,
+        "lockCount": 290,
+        "sourceStrips": [
+          {
+            "name": "left-long-strand-strip",
+            "manualCenterline": [
+              [
+                246,
+                525,
+                16
+              ],
+              [
+                240,
+                575,
+                19
+              ],
+              [
+                223,
+                650,
+                20
+              ],
+              [
+                199,
+                722,
+                20
+              ],
+              [
+                175,
+                786,
+                19
+              ],
+              [
+                163,
+                838,
+                18
+              ],
+              [
+                156,
+                887,
+                16
+              ]
+            ],
+            "sourceBounds": [
+              140.3348319165814,
+              523.205536015922,
+              261.71524866490296,
+              889.1473301726708
+            ],
+            "sourceLengthPixels": 374.30984316912696,
+            "meanSourceWidthPixels": 37.88139174738027,
+            "unwrappedWidth": 96,
+            "unwrappedHeight": 2048,
+            "sampledTexels": 196608,
+            "logContrastMin": -0.4772182807323436,
+            "logContrastMax": 0.4453217915666721,
+            "logContrastRms": 0.20928960898375823,
+            "fineResidualRms": 0.34366588522052444,
+            "groupResidualRms": 0.39579128485084347,
+            "nearShoulderFraction": 0.013529459635416666,
+            "localMeanRadiiSourcePixels": [
+              3,
+              10
+            ],
+            "fineWeight": 0.92,
+            "groupWeight": 0.16
+          },
+          {
+            "name": "right-long-strand-strip",
+            "manualCenterline": [
+              [
+                746,
+                520,
+                18
+              ],
+              [
+                753,
+                600,
+                21
+              ],
+              [
+                750,
+                690,
+                23
+              ],
+              [
+                746,
+                775,
+                23
+              ],
+              [
+                751,
+                855,
+                23
+              ],
+              [
+                764,
+                930,
+                22
+              ],
+              [
+                782,
+                996,
+                21
+              ],
+              [
+                809,
+                1052,
+                18
+              ]
+            ],
+            "sourceBounds": [
+              723.2395869127529,
+              518.5737284256256,
+              824.9895615497672,
+              1059.6268139406402
+            ],
+            "sourceLengthPixels": 542.272363965696,
+            "meanSourceWidthPixels": 43.466097557402954,
+            "unwrappedWidth": 96,
+            "unwrappedHeight": 2048,
+            "sampledTexels": 196608,
+            "logContrastMin": -0.47876037626098067,
+            "logContrastMax": 0.4400847459439404,
+            "logContrastRms": 0.2063981342252132,
+            "fineResidualRms": 0.3472472147953543,
+            "groupResidualRms": 0.31884485199280155,
+            "nearShoulderFraction": 0.016082763671875,
+            "localMeanRadiiSourcePixels": [
+              3,
+              10
+            ],
+            "fineWeight": 0.92,
+            "groupWeight": 0.16
+          }
+        ],
+        "sourceSignalBytes": 1572864,
+        "mapping": "One periodic source-strip width across existing circumference U; source strand arc along guide V",
+        "sourcePeriod": 0.86,
+        "sourceMix": [
+          0.62,
+          0.38
+        ],
+        "rootFadeV": [
+          0.18,
+          0.36
+        ],
+        "tipFadeV": [
+          0.89,
+          1
+        ],
+        "normalization": "Original-luminance-weighted arithmetic gain is exactly one on each texture row before RGBA8 quantization",
+        "headroom": 0.6,
+        "gainMin": 0.8125398537473457,
+        "gainMax": 1.23864764517553,
+        "logGainRms": 0.06144964314322046,
+        "changedTexels": 429056,
+        "compressedRows": 0,
+        "compressionMin": 1,
+        "rowMeanErrorMax": 2.6645352591003757e-15,
+        "quantizedRowMeanErrorMax": 0.002325164109153288,
+        "alphaMismatches": 0,
+        "vertexColorRange": [
+          0.07077372819185257,
+          0.13590051233768463
+        ],
+        "bakeMs": 198.08460000000014,
+        "textureBytes": 2097152,
+        "replacedColorBytes": 1910520,
+        "netRetainedTextureBytes": 0,
+        "netRetainedAttributeBytes": 0,
+        "estimatedNetMipmappedGPUBytes": 0,
+        "sourcePixelBytes": 6291456,
+        "geometryPositionsChanged": false,
+        "originalUV0Changed": false,
+        "normalFieldChanged": false,
+        "coverageBytesChanged": false,
+        "additionalMeshes": 0,
+        "additionalTriangles": 0,
+        "additionalMaterialDraws": 0,
+        "perFrameCPUWork": 0,
+        "export": {
+          "baseColorTexCoord": 0,
+          "normalTexCoord": 0,
+          "inlineRGBAAlpha": true,
+          "requiresAlphaMerge": false,
+          "maxMapDimension": 1024
+        },
+        "elapsedMs": 198.63867100000016,
+        "status": "applied",
+        "changed": true
+      },
+      "identity": {
+        "positionNormalUV0Index": "exact",
+        "UV1": "same reference",
+        "normalTextureAndSampler": "exact",
+        "materialSettings": "exact",
+        "nonMassMeshes": "same geometry, attributes and material references",
+        "coverageMismatches": 0,
+        "compensatedVertexError": 4.470348355378739e-9,
+        "sameStrength": "same result"
+      }
+    },
+    {
+      "strength": 1,
+      "metrics": {
+        "version": "reference-lengths-strand-space-107-v1",
+        "strength": 1,
+        "lockCount": 290,
+        "sourceStrips": [
+          {
+            "name": "left-long-strand-strip",
+            "manualCenterline": [
+              [
+                246,
+                525,
+                16
+              ],
+              [
+                240,
+                575,
+                19
+              ],
+              [
+                223,
+                650,
+                20
+              ],
+              [
+                199,
+                722,
+                20
+              ],
+              [
+                175,
+                786,
+                19
+              ],
+              [
+                163,
+                838,
+                18
+              ],
+              [
+                156,
+                887,
+                16
+              ]
+            ],
+            "sourceBounds": [
+              140.3348319165814,
+              523.205536015922,
+              261.71524866490296,
+              889.1473301726708
+            ],
+            "sourceLengthPixels": 374.30984316912696,
+            "meanSourceWidthPixels": 37.88139174738027,
+            "unwrappedWidth": 96,
+            "unwrappedHeight": 2048,
+            "sampledTexels": 196608,
+            "logContrastMin": -0.4772182807323436,
+            "logContrastMax": 0.4453217915666721,
+            "logContrastRms": 0.20928960898375823,
+            "fineResidualRms": 0.34366588522052444,
+            "groupResidualRms": 0.39579128485084347,
+            "nearShoulderFraction": 0.013529459635416666,
+            "localMeanRadiiSourcePixels": [
+              3,
+              10
+            ],
+            "fineWeight": 0.92,
+            "groupWeight": 0.16
+          },
+          {
+            "name": "right-long-strand-strip",
+            "manualCenterline": [
+              [
+                746,
+                520,
+                18
+              ],
+              [
+                753,
+                600,
+                21
+              ],
+              [
+                750,
+                690,
+                23
+              ],
+              [
+                746,
+                775,
+                23
+              ],
+              [
+                751,
+                855,
+                23
+              ],
+              [
+                764,
+                930,
+                22
+              ],
+              [
+                782,
+                996,
+                21
+              ],
+              [
+                809,
+                1052,
+                18
+              ]
+            ],
+            "sourceBounds": [
+              723.2395869127529,
+              518.5737284256256,
+              824.9895615497672,
+              1059.6268139406402
+            ],
+            "sourceLengthPixels": 542.272363965696,
+            "meanSourceWidthPixels": 43.466097557402954,
+            "unwrappedWidth": 96,
+            "unwrappedHeight": 2048,
+            "sampledTexels": 196608,
+            "logContrastMin": -0.47876037626098067,
+            "logContrastMax": 0.4400847459439404,
+            "logContrastRms": 0.2063981342252132,
+            "fineResidualRms": 0.3472472147953543,
+            "groupResidualRms": 0.31884485199280155,
+            "nearShoulderFraction": 0.016082763671875,
+            "localMeanRadiiSourcePixels": [
+              3,
+              10
+            ],
+            "fineWeight": 0.92,
+            "groupWeight": 0.16
+          }
+        ],
+        "sourceSignalBytes": 1572864,
+        "mapping": "One periodic source-strip width across existing circumference U; source strand arc along guide V",
+        "sourcePeriod": 0.86,
+        "sourceMix": [
+          0.62,
+          0.38
+        ],
+        "rootFadeV": [
+          0.18,
+          0.36
+        ],
+        "tipFadeV": [
+          0.89,
+          1
+        ],
+        "normalization": "Original-luminance-weighted arithmetic gain is exactly one on each texture row before RGBA8 quantization",
+        "headroom": 0.6,
+        "gainMin": 0.6560925811290106,
+        "gainMax": 1.5236817523655568,
+        "logGainRms": 0.12312868626501061,
+        "changedTexels": 429056,
+        "compressedRows": 0,
+        "compressionMin": 1,
+        "rowMeanErrorMax": 2.6645352591003757e-15,
+        "quantizedRowMeanErrorMax": 0.002325164109153288,
+        "alphaMismatches": 0,
+        "vertexColorRange": [
+          0.07077372819185257,
+          0.13590051233768463
+        ],
+        "bakeMs": 181.16296800000055,
+        "textureBytes": 2097152,
+        "replacedColorBytes": 1910520,
+        "netRetainedTextureBytes": 0,
+        "netRetainedAttributeBytes": 0,
+        "estimatedNetMipmappedGPUBytes": 0,
+        "sourcePixelBytes": 6291456,
+        "geometryPositionsChanged": false,
+        "originalUV0Changed": false,
+        "normalFieldChanged": false,
+        "coverageBytesChanged": false,
+        "additionalMeshes": 0,
+        "additionalTriangles": 0,
+        "additionalMaterialDraws": 0,
+        "perFrameCPUWork": 0,
+        "export": {
+          "baseColorTexCoord": 0,
+          "normalTexCoord": 0,
+          "inlineRGBAAlpha": true,
+          "requiresAlphaMerge": false,
+          "maxMapDimension": 1024
+        },
+        "elapsedMs": 181.2884009999998,
+        "status": "applied",
+        "changed": true
+      },
+      "identity": {
+        "positionNormalUV0Index": "exact",
+        "UV1": "same reference",
+        "normalTextureAndSampler": "exact",
+        "materialSettings": "exact",
+        "nonMassMeshes": "same geometry, attributes and material references",
+        "coverageMismatches": 0,
+        "compensatedVertexError": 4.470348355378739e-9,
+        "sameStrength": "same result"
+      }
+    }
+  ],
+  "cost": {
+    "totalAuditWallMs": 4782.829556,
+    "totalAuditCpuMs": 5852.668,
+    "peakRSSMiB": 517.390625,
+    "currentMemoryMiB": {
+      "rss": 322.7265625,
+      "heapTotal": 135.49609375,
+      "heapUsed": 4.7317047119140625,
+      "external": 149.1370449066162,
+      "arrayBuffers": 128.19407558441162
+    }
+  },
+  "limitations": [
+    "Native ordinary-size, profile and back art review remains required.",
+    "Source hair-only strips were selected manually by vision; the path audit checks geometric folds and bounds only.",
+    "Whole-row mean is preserved; individual visible partial circumferences can vary with the accepted per-guide UV phase.",
+    "Original map and RGB attribute are replaced at unchanged dimensions; the temporary source arrays are discarded after construction."
+  ]
+}

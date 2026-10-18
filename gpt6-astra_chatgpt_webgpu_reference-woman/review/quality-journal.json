@@ -4,7 +4,7 @@
   "goal_achieved": false,
   "method": "Visual self-assessment against the sole uploaded image, supplemented by independent agent review. Scores are subjective and are not a certification of AAA production quality.",
   "scope": "Recorded assessments whose numeric results remain available. No missing historical scores have been invented.",
-  "current_accepted_iteration": 99,
+  "current_accepted_iteration": 112,
   "current_accepted_score": 76,
   "assessments": [
     {
@@ -496,8 +496,8 @@
       "iteration": 100,
       "score": 76,
       "reviewer": "root and hair_groom_director; source author quality_review_42",
-      "decision": "art accepted full1; production awaits104 export alpha merge",
-      "notes": "Two manually chosen curved hair-only source strips are rectified to cross-strand and arc coordinates, then tiled with unequal overlaps along crown UV flow. Full1 provides coherent longitudinal grain and reduces uniform crown coating without the93/97screen-row woodgrain. Half.5 too mild. Small forward-crown dark patches, cap junction and brushlike bangs remain. Geometry/UV0/normals/coverage exact; no extra triangles/draws/per-frame work. Native bake191-199ms; net16.19MiB typed/21.52MiB estimated mipmappedGPU. Export-only UV0alpha into UV1color atlas required before integrating100."
+      "decision": "accepted full1 with104 export support",
+      "notes": "Two manually chosen curved hair-only source strips are rectified to cross-strand and arc coordinates, then tiled with unequal overlaps along crown UV flow. Full1 provides coherent longitudinal grain and reduces uniform crown coating without the93/97screen-row woodgrain. Half.5 too mild. Small forward-crown dark patches, cap junction and brushlike bangs remain. Geometry/UV0/normals/coverage exact; no extra triangles/draws/per-frame work. Native bake191-199ms; net16.19MiB typed/21.52MiB estimated mipmappedGPU. Export-only UV0alpha into UV1color atlas required before integrating100. Integrated after104 staged native diagnosis passed."
     },
     {
       "iteration": 101,
@@ -512,6 +512,62 @@
       "reviewer": "root and cloth_review84",
       "decision": "accepted .12 outer width with .35 shared contact",
       "notes": "Retains wider front and back proportions while reducing angular compressed profiles from98. Lower separated locks remain; do not record loops or unsupported side gaps as resolved. .25 contact adds little visible benefit. Native WebGPU four views, no errors,1,528,947 total scene triangles.38,547cloth vertices/72,222tri unchanged;13,153outervertices changed;15,002protected neckline/collar/placket/button vertices fixed.1783source queries agree exactly with analytical widening; maxresidual.000133 within existing.001contract; geometry position error1.72e-7, normal error9.44e-8,minJac1/max1.37413. .35 contact maxdepthpull.0837946,41.9KiB field. Goal not met."
+    },
+    {
+      "iteration": 103,
+      "score": 76,
+      "reviewer": "root",
+      "decision": "not adopted",
+      "notes": "Varied crown roughness along accepted100 source-strand signal, comparing0/.6/1.2 with geometry, coverage, normals and specular intensity fixed. Full roughness range.38-.69. Native detail/profile comparison shows negligible useful difference despite16MiBadditionalcanvas/21.33MiBestimatedGPU;27-28msbake. Retain constant.52crown roughness. No production or export changes."
+    },
+    {
+      "iteration": 104,
+      "score": 76,
+      "reviewer": "root and glb_export_repair",
+      "decision": "accepted export-only coverage merge; comparison test defect corrected",
+      "notes": "Exports100 UV1 crown color with original UV0 alpha samples merged into an export-only 2048-square atlas; live geometry/texture data/versions remain unchanged. Native GLB73863932bytes, exact RGB/alpha merge and normal error.000862745. Sheet resampling is approximate: effectivealphaRMS.002886, uniformcutoffchangefraction.000322, releaseband.002392. Source/loaded-crown front/detail/profile visual review found no obvious boundary change. A prior comparison compileAsync on the default target turned source corneas black; staged compositor checks showed original eyes unchanged through export, load, cleanup and crown replacement, while an opt-in compile probe reproduced the defect. Normal comparison now uses the actual portrait offscreen render path. No eye art/material change. Goal not met."
+    },
+    {
+      "iteration": 105,
+      "score": 72,
+      "reviewer": "root and hair_groom_director",
+      "decision": "rejected",
+      "notes": "The crown-tangent fringe reconstruction passed finite geometry, no sampled skin penetration and exact preservation of non-fringe components, but native front/detail/profiles revealed opaque triangular blades, hooked right-center bends and diamond-shaped forehead holes. Native WebGPU true, heap293MiB, no runtime errors. Keep94 until108; do not equate smooth mathematical joins with natural hair flow."
+    },
+    {
+      "iteration": 106,
+      "score": 76,
+      "reviewer": "root and hair_groom_director; source author cloth_review84",
+      "decision": "accepted and integrated",
+      "notes": "Unequal broader sleeve folds reduce inflated shoulder smoothness in garment/front/both profiles/back without new incised creases or visible contact failures. Protected collar, opening, facings, placket, buttons and lower crop unchanged. Torso21809verts/43008tri,6419changed;maxdisplacement.0362667;zero reversedtriangles,minarearatio.779666. Real source query positionerror2.12e-6,normalerror.00079843, maxmeshchorderror.00963805. Overall source correspondence still limited; native build139.4ms, no errors. Candidate based102 width.12/contact.35."
+    },
+    {
+      "iteration": 107,
+      "score": 75,
+      "reviewer": "root and quality_review_42",
+      "decision": "not adopted; full75 and half76",
+      "notes": "Reference-only per-fragment long-lock texture preserves geometry, UV0, normals, coverage and row mean luminance, but native full strength produces wavy fingerprint-like ridges on the rear and diagonal bands behind the neck. Half strength too subtle to justify adoption. Original290MASSlocks/159210vertices unchanged;net retained texture/attribute bytes0. Native bake89.7/92.5ms at.5/1, elapsed95/98.4ms;heaps278baseline294half293full, nativeWebGPUtrue and noerrors. Visual signal mapping remains unsuitable."
+    },
+    {
+      "iteration": 108,
+      "score": 76,
+      "reviewer": "root and hair_groom_director",
+      "decision": "accepted and integrated",
+      "notes": "Returns to94 visible bowed trajectories, replaces repeated8/9lane centers with continuous scatter, thins round cores and varies ends/taper.750roundcores+329finecompanions=1079strands;hair1114888tri/52.49MiB,36160fewertri and1.41MiBless than94. Native all5views show softer less opaque bangs without105hooks or new profile/temple/back regressions. Family gaps and dusty fine hairs remain. CROWN/MASS/DETAIL/WISPS maps/attributes/index and all materials exact94;no sampled forehead penetration, minclearance.01024. NativeWebGPUtrue heap287MiB noerrors; goal not met."
+    },
+    {
+      "iteration": 109,
+      "score": 75,
+      "reviewer": "root and hair_groom_director",
+      "decision": "rejected;113 diagnostic repair pending",
+      "notes": "Coordinated front crown vertex-alpha release with42rounded root locks and378fine fibers modestly improves upper-left flow but creates pointed dark teeth at the right crown edge and dotted bright defects at both release edges. Native all5views retain accepted profile/back shape but front/detail regressions dominate. Exact108MASS/fringe/WISPS/materials;CROWN positions/normals/UV0/index/RGB/maps exact,1552vertex-alpha values change. Added40656tri/1.70MiB;totalhair1155544tri54.19MiB;nativeconstruction1011.3msheap292MiBWebGPUtrue noerrors. Do not assume bright defects are holes until layer isolation separates coverage from grazing highlights."
+    },
+    {
+      "iteration": 112,
+      "score": 76,
+      "reviewer": "root",
+      "decision": "accepted viewer repair",
+      "notes": "Explicit backend-switch validation exposed two existing scene-lifetime defects after99balance: ear color guards rejected repeat preparation on changed geometry, and return fromWebGL reused an incompatible cached shadow target. Scene geometry and reference maps now prepare once through a cached promise; switching renderers disposes public light GPU resources and clears shadow target references for recreation. NativeWebGPU\u2192explicitWebGL\u2192WebGPU and missing-WebGPU\u2192explicitWebGL pass with identicalCROWN position/color/UV0/UV1/map/coverage hashes and the same bake object. MissingWebGPU still creates no renderer until explicit user choice. Detail images onbothbackends viewed;no uncaught errors. Artistic score unchanged76; source geometry remains108/crown100/blouse106/export104."
     }
   ]
 }

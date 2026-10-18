@@ -1,0 +1,367 @@
+{
+  "sourceHarness": true,
+  "native": false,
+  "base": "frozen94",
+  "cloth": "candidate98 width .12",
+  "shoulderContact": 0.35,
+  "balance": "not applied in this audit;99 is a later shared deformation",
+  "finite": true,
+  "nonFringeByteMismatches": 0,
+  "unchangedCrownTopologyUVColorAndMaps": true,
+  "unchangedMassDetailWispsContactAndTemple": true,
+  "unchangedMaterials": true,
+  "meshes": [
+    {
+      "name": "Continuous parted crown with longitudinal fiber flow",
+      "vertices": 24455,
+      "triangles": 47744,
+      "vertexDelta": 0,
+      "triangleDelta": 0,
+      "changedAttributes": [],
+      "indexIdentical": true
+    },
+    {
+      "name": "Overlapping layered S-wave hair around front back and shoulders",
+      "vertices": 159210,
+      "triangles": 278400,
+      "vertexDelta": 0,
+      "triangleDelta": 0,
+      "changedAttributes": [],
+      "indexIdentical": true
+    },
+    {
+      "name": "Independent fine crown lengths and silhouette strands",
+      "vertices": 646260,
+      "triangles": 623976,
+      "vertexDelta": 0,
+      "triangleDelta": 0,
+      "changedAttributes": [],
+      "indexIdentical": true
+    },
+    {
+      "name": "Dense fine bowed brown fringe strands",
+      "vertices": 138450,
+      "triangles": 203184,
+      "vertexDelta": 22152,
+      "triangleDelta": 33864,
+      "changedAttributes": [
+        "position",
+        "color",
+        "uv",
+        "normal"
+      ],
+      "indexIdentical": false
+    },
+    {
+      "name": "Sparse short temple edge and hairline wisps",
+      "vertices": 32892,
+      "triangles": 31608,
+      "vertexDelta": 0,
+      "triangleDelta": 0,
+      "changedAttributes": [],
+      "indexIdentical": true
+    }
+  ],
+  "baselineFringe": {
+    "bounds": {
+      "min": [
+        -0.7771121263504028,
+        -0.24465498328208923,
+        0.11943269520998001
+      ],
+      "max": [
+        0.7635789513587952,
+        1.4894009828567505,
+        0.7061251997947693
+      ]
+    },
+    "normalLength": {
+      "min": 0.9999999534876814,
+      "max": 1.0000000486914942
+    },
+    "skinProjection": {
+      "testedVertices": 60210,
+      "minimumZClearance": 0.010007130011378762,
+      "penetratingVertices": 0,
+      "tolerance": 0.0005
+    },
+    "minTriangleArea": 4.720275702433976e-7,
+    "degenerateTriangles": 0
+  },
+  "candidateFringe": {
+    "bounds": {
+      "min": [
+        -0.7194561958312988,
+        -0.2733193635940552,
+        0.2755729556083679
+      ],
+      "max": [
+        0.7149205207824707,
+        1.4829344749450684,
+        0.7029841542243958
+      ]
+    },
+    "normalLength": {
+      "min": 0.9999999534838959,
+      "max": 1.0000000454473799
+    },
+    "skinProjection": {
+      "testedVertices": 92613,
+      "minimumZClearance": 0.021937690042552083,
+      "penetratingVertices": 0,
+      "tolerance": 0.0005
+    },
+    "minTriangleArea": 1.840052528535815e-7,
+    "degenerateTriangles": 0
+  },
+  "guideAudit": {
+    "strands": 1305,
+    "maximumJoinPositionDifferenceAtPlusMinus1eMinus7": 3.932741366526718e-7,
+    "maximumJoinTangentAngleDegrees": 0.00045244364772301684,
+    "minimumControlDrop": 0.1076845103516384,
+    "postRootUpwardSteps": 0,
+    "maximumPostRootUpwardStep": 0,
+    "maximumPostRootTurnDegrees": 10.712514328270382,
+    "rootRows": [
+      {
+        "side": -1,
+        "u": 0.8066382165694232,
+        "exitV": 0.8505778447360878,
+        "cuts": [
+          0,
+          0.4320376953989239,
+          0.6086883926488271,
+          1
+        ],
+        "crownExit": [
+          -0.4163578005501173,
+          0.9108262661090989,
+          0.6085998980472161
+        ],
+        "mid": [
+          -0.5270909203657405,
+          0.5980589553390465,
+          0.5655466687981485
+        ],
+        "end": [
+          -0.6743118182502358,
+          -0.11877511870615165,
+          0.42885422284041225
+        ],
+        "rootTangent": [
+          -0.5326592316996648,
+          -0.8451096915687868,
+          -0.045428538405203125
+        ],
+        "minimumControlDrop": 0.3127673107700524
+      },
+      {
+        "side": -1,
+        "u": 0.8699648247471927,
+        "exitV": 0.8448142650820423,
+        "cuts": [
+          0,
+          0.33823579500820145,
+          0.620295680359245,
+          1
+        ],
+        "crownExit": [
+          -0.23911247375414635,
+          1.0775533989326687,
+          0.6109951725901666
+        ],
+        "mid": [
+          -0.3344916747165099,
+          0.6702735398257643,
+          0.6331770325302428
+        ],
+        "end": [
+          -0.41525766039888395,
+          0.10712792652789699,
+          0.581254006753627
+        ],
+        "rootTangent": [
+          -0.709125715820705,
+          -0.7049242172142783,
+          -0.01491868447986536
+        ],
+        "minimumControlDrop": 0.40727985910690434
+      },
+      {
+        "side": -1,
+        "u": 0.9255012404074177,
+        "exitV": 0.8321375307199143,
+        "cuts": [
+          0,
+          0.2565004776536204,
+          0.5549509411707297,
+          1
+        ],
+        "crownExit": [
+          -0.11219603434320084,
+          1.1120479148645508,
+          0.6230712251608751
+        ],
+        "mid": [
+          -0.1784616578412365,
+          0.7612418983854411,
+          0.6471660971243522
+        ],
+        "end": [
+          -0.24327867917104984,
+          0.21774947397632782,
+          0.5998666222311112
+        ],
+        "rootTangent": [
+          -0.8167754635080101,
+          -0.5753036322971049,
+          -0.04362995389675604
+        ],
+        "minimumControlDrop": 0.3508060164791097
+      },
+      {
+        "side": 1,
+        "u": 0.9297235630316962,
+        "exitV": 0.7975759428118867,
+        "cuts": [
+          0,
+          0.18265770750956994,
+          0.4782774900101675,
+          1
+        ],
+        "crownExit": [
+          0.18975481490529697,
+          1.0586460870811352,
+          0.6325718899531401
+        ],
+        "mid": [
+          0.11164777316017589,
+          0.7939908933077681,
+          0.6579104622234684
+        ],
+        "end": [
+          -0.004411086056590708,
+          0.3156785761651593,
+          0.6793113380232392
+        ],
+        "rootTangent": [
+          0.026469495131244265,
+          -0.9586294234245895,
+          0.2834237011474806
+        ],
+        "minimumControlDrop": 0.2646551937733671
+      },
+      {
+        "side": 1,
+        "u": 0.8747986507551319,
+        "exitV": 0.799909095106231,
+        "cuts": [
+          0,
+          0.2778954148184677,
+          0.5636819133963423,
+          1
+        ],
+        "crownExit": [
+          0.31867118928694704,
+          0.9977013357946114,
+          0.624283685356806
+        ],
+        "mid": [
+          0.3219914382303385,
+          0.6411812462997124,
+          0.6514250283381693
+        ],
+        "end": [
+          0.11209472237389013,
+          0.1326486565911428,
+          0.6501019320969034
+        ],
+        "rootTangent": [
+          0.22492161050213155,
+          -0.9509003915941873,
+          0.21259989274491325
+        ],
+        "minimumControlDrop": 0.356520089494899
+      },
+      {
+        "side": 1,
+        "u": 0.8077153493331373,
+        "exitV": 0.7393496717521657,
+        "cuts": [
+          0,
+          0.5015848474379617,
+          0.7219159177308349,
+          1
+        ],
+        "crownExit": [
+          0.48132710019566816,
+          0.8476081934156208,
+          0.6085767868852391
+        ],
+        "mid": [
+          0.4710274071162229,
+          0.5650914988512528,
+          0.5847152406397024
+        ],
+        "end": [
+          0.3470522546201314,
+          0.2251596019154996,
+          0.5831809984666487
+        ],
+        "rootTangent": [
+          0.27082847404577814,
+          -0.9557265816648176,
+          0.11505928361204952
+        ],
+        "minimumControlDrop": 0.282516694564368
+      },
+      {
+        "side": 1,
+        "u": 0.7421494142102817,
+        "exitV": 0.7496345596534981,
+        "cuts": [
+          0,
+          0.5487437405211366,
+          0.7167200531941211,
+          1
+        ],
+        "crownExit": [
+          0.635440243189068,
+          0.7422159885147631,
+          0.5308555581688197
+        ],
+        "mid": [
+          0.6258006970895394,
+          0.47942642257887147,
+          0.48584395656683815
+        ],
+        "end": [
+          0.6174922706167665,
+          0.026727358675861543,
+          0.46611437583036247
+        ],
+        "rootTangent": [
+          0.2651081420800952,
+          -0.9637439953806396,
+          0.03025201432304654
+        ],
+        "minimumControlDrop": 0.26278956593589164
+      }
+    ]
+  },
+  "geometry": {
+    "triangles": 1184912,
+    "MiB": 55.21,
+    "constructionMs": 2471.7
+  },
+  "cost": {
+    "wallMs": 5089.834271,
+    "cpuMs": 6517.009,
+    "rssMiB": 433.75390625
+  },
+  "limitations": [
+    "Source harness, not native Three/WebGPU; visual acceptance pending.",
+    "Skin projection checks the accepted50 head height and primary face surface for fringe vertices betweenY .14 and1.10, excluding the lateral silhouette; it is not an exhaustive accessory collision test.",
+    "Shared99 later preserves continuous geometry relations but may introduce bounded differences from separate triangle tessellations."
+  ]
+}

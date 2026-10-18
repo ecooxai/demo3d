@@ -208,13 +208,26 @@ function shoulderClothRelief(x,y,front=true){
   const ax=Math.abs(x),outer=smooth(.98,1.14,ax)*(1-smooth(1.53,1.67,ax));
   if(outer===0)return 0;
   const crop=smooth(-1.40,-1.12,y),left=x<0;
-  // Unequal diagonal compressions turn from the shoulder seam onto the sleeve.
-  // Their broad rolls carry the cloth's weight; the lower trough is shorter.
+  // Candidate106. The first shoulder roll is quieter, so the cotton does not
+  // inflate into a padded cap. Keep its attachment and its broad support.
   const first=y-(left?1.08:1.015)+(left?.92:1.05)*(ax-1.24);
-  const second=y-(left?.61:.53)+(left?.76:.94)*(ax-1.33);
-  let folds=.076*gauss(ax-1.34,.31)*(gauss(first,.142)-.68*gauss(first+.132,.093));
-  folds+=(left?.044:.035)*gauss(ax-1.43,.25)*(gauss(second,.134)-.57*gauss(second+.112,.079));
-  if(!front)folds*=.60;
+  let folds=(left?.063:.069)*gauss(ax-1.34,.31)*(gauss(first,.142)-.68*gauss(first+.132,.093));
+  // A few unequal folds fan from the sleeve attachment into loose cotton.
+  // Their width opens outward; neither path is a straight repeated stripe.
+  const spread=smooth(1.12,1.57,ax),d=ax-(left?1.24:1.22);
+  const upperLine=(left?.55:.46)-(left?1.20:1.38)*d+(left?.48:-.31)*d*d;
+  const upper=y-upperLine,width=.064+.078*spread;
+  folds+=(left?.039:.030)*gauss(ax-(left?1.39:1.36),.29)
+    *(gauss(upper,width)-.49*gauss(upper+.081+.035*spread,width*.76));
+  // The lower, softer roll breaks the long uncreased sleeve plane. It ends
+  // well above the fixed crop and is deliberately weaker on the right side.
+  const lowerLine=(left?-.39:-.57)-(left?.69:1.03)*(ax-1.32)+(left?.24:-.18)*(ax-1.32)**2;
+  const lower=y-lowerLine,lowerWidth=.068+.082*spread;
+  folds+=(left?.022:.015)*gauss(ax-(left?1.43:1.37),left?.28:.25)
+    *(gauss(lower,lowerWidth)-.43*gauss(lower+.091,lowerWidth*.86));
+  if(!front)folds*=left?.49:.54;
+  // The existing transverse sleeve warp, its inverse and the contact query
+  // all consume this same bounded field. No separate cloth approximation.
   return outer*crop*.072*Math.tanh(folds/.072);
 }
 
@@ -690,7 +703,7 @@ export function createBlouse() {
   // Geometry, normals, seams and buttons all receive the same continuous transform.
   broadenShoulders(group);
   group.userData.originalGeometry=true;
-  group.userData.design='Cotton blouse with sloping shoulders, a tapered waist and hanging sleeve planes; soft unequal collar leaves above a fixed open V facing; sparse tapered diagonal button folds that relax into the loose front cotton, with fixed shoulder compressions around the sleeves; sewn yoke/sleeves, a thin closed curved placket, three body buttons and an open facing button.';
+  group.userData.design='Cotton blouse with sloping shoulders, a tapered waist and hanging sleeve planes; soft unequal collar leaves above a fixed open V facing; sparse tapered diagonal button folds and unequal sleeve folds that fan from the attachment into loose cotton beneath a quieter shoulder roll; sewn yoke/sleeves, a thin closed curved placket, three body buttons and an open facing button.';
   return group;
 }
 

@@ -15,6 +15,7 @@ import { applyReferenceEarColor } from './reference-ear.js';
 import { createHair } from './hair.js';
 import { createFiberHair } from './hair-fibers.js';
 import { createGroomHair } from './hair-groom.js';
+import { applyReferenceCrownMicrocontrast100 } from './reference-crown.js';
 import { createPortraitOutput } from './render-quality.js';
 import { createBlouse, createNeck } from './blouse.js';
 
@@ -23,7 +24,7 @@ const hairChoice=new URLSearchParams(location.search).get('hair')||'groom';
 const fiberCandidate=hairChoice==='fibers';
 const groomCandidate=hairChoice==='groom';
 const coverageCandidate=hairChoice==='coverage';
-const state = { backend: new URLSearchParams(location.search).get('backend') === 'webgl' ? 'webgl' : 'webgpu', width: 900, height: 1200, iteration: groomCandidate?99:coverageCandidate?32:fiberCandidate?25:27, score: groomCandidate?76:fiberCandidate?61:68, renderedFrames: 0, renderMs: 0, rotating: false, view: 'front', ready: false, lighting: 'soft', antialiasing: 2, internalRender: null };
+const state = { backend: new URLSearchParams(location.search).get('backend') === 'webgl' ? 'webgl' : 'webgpu', width: 900, height: 1200, iteration: groomCandidate?112:coverageCandidate?32:fiberCandidate?25:27, score: groomCandidate?76:fiberCandidate?61:68, renderedFrames: 0, renderMs: 0, rotating: false, view: 'front', ready: false, lighting: 'soft', antialiasing: 2, internalRender: null };
 let portraitOutput=createPortraitOutput();
 const scene = new THREE.Scene();
 scene.background = new THREE.Color('#cbe3f3');
@@ -45,6 +46,7 @@ anatomicalNeck.position.y=-1;anatomicalBlouse.position.y=-1;
 bodyPose.add(anatomicalNeck,anatomicalBlouse);
 model.add(headPivot,bodyPose);
 const referenceReady=Promise.all([skinReady,applyReferenceNeck(anatomicalNeck)]);
+let scenePreparationPromise;
 scene.add(model);
 let triangles = 0, meshes = 0;
 model.traverse((object) => { if (object.isMesh) { meshes++; triangles += (object.geometry.index?.count || object.geometry.attributes.position.count) / 3; } });
@@ -206,22 +208,34 @@ async function initialize(backend=state.backend) {
   $('loading').hidden=false;$('backend-gate').hidden=true;
   $('backend-label').textContent=`INITIALIZING ${backend.toUpperCase()}`;
   try {
-    await referenceReady;
-    state.proportions=applyPortraitProportions(anatomicalHead,anatomicalNeck);
-    state.cheek=applyLowerCheekTaper(anatomicalHead,{strength:.025});
-    state.lipRefinement=applyLipThicknessRefinement(anatomicalHead,{strength:.06});
-    state.pose=applyPortraitPose(headPivot,anatomicalNeck,{shiftX:.26});
-    detailTarget.x=.02+state.pose.shiftX;
-    state.referenceEar=await applyReferenceEarColor(anatomicalHead,{strength:1});
-    state.balance=applyPortraitBalance(model,{shiftX:-.24});
-    detailTarget.x=.02+state.pose.shiftX+state.balance.shiftX;
-    if(!skinIlluminationApplied){state.skinIllumination=compensateReferenceSkin(anatomicalHead,scene,{strength:.35});skinIlluminationApplied=true;}
+    // Scene construction is shared by every backend. Later deformations make
+    // the original texture-bake geometry intentionally different from its input.
+    scenePreparationPromise??=(async()=>{
+      await referenceReady;
+      state.proportions=applyPortraitProportions(anatomicalHead,anatomicalNeck);
+      state.cheek=applyLowerCheekTaper(anatomicalHead,{strength:.025});
+      state.lipRefinement=applyLipThicknessRefinement(anatomicalHead,{strength:.06});
+      state.pose=applyPortraitPose(headPivot,anatomicalNeck,{shiftX:.26});
+      if(groomCandidate)state.referenceCrown=await applyReferenceCrownMicrocontrast100(anatomicalHair,{strength:1});
+      detailTarget.x=.02+state.pose.shiftX;
+      state.referenceEar=await applyReferenceEarColor(anatomicalHead,{strength:1});
+      state.balance=applyPortraitBalance(model,{shiftX:-.24});
+      detailTarget.x=.02+state.pose.shiftX+state.balance.shiftX;
+      if(!skinIlluminationApplied){state.skinIllumination=compensateReferenceSkin(anatomicalHead,scene,{strength:.35});skinIlluminationApplied=true;}
+    })();
+    await scenePreparationPromise;
     if(backend==='webgpu') {
       if(!navigator.gpu)throw new Error('WebGPU is not available in this browser or context. Use a supported browser on HTTPS or localhost, or choose WebGL below.');
       const adapter=await navigator.gpu.requestAdapter({powerPreference:'high-performance'});
       if(!adapter)throw new Error('This device did not provide a WebGPU adapter. You can explicitly choose WebGL below.');
     }
-    controls?.dispose();portraitOutput.dispose();renderer?.dispose();renderer=undefined;portraitOutput=createPortraitOutput();
+    controls?.dispose();
+    if(renderer)scene.traverse(light=>{
+      if(!light.isLight||!light.shadow)return;
+      // Backend shadow maps and cached shadow nodes cannot cross renderer types.
+      light.dispose();light.shadow.map=null;light.shadow.mapPass=null;light.shadow.needsUpdate=true;
+    });
+    portraitOutput.dispose();renderer?.dispose();renderer=undefined;portraitOutput=createPortraitOutput();
     let next;
     if(backend==='webgpu') {
       next=new WebGPURenderer({antialias:true,alpha:false,powerPreference:'high-performance'});

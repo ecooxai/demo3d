@@ -1,0 +1,206 @@
+{
+  "candidate": 106,
+  "nativeThree": true,
+  "sourceOnlyHarness": false,
+  "visualScore": 76,
+  "visualAcceptance": "pending native art review",
+  "baseline": "review/blouse-candidate102.js",
+  "candidateFile": "review/blouse-candidate106.js",
+  "sha256": [
+    "2f285c221cf8905165c17965218414c38bf9bc974be5a0b17c976ccfce72a495",
+    "553d31df6a497055d6d669f6c31d1dae476a9ef7d4c31529684b34c47feca233"
+  ],
+  "scope": "Only shoulderClothRelief and design description changed; OUTER_WIDTH98 remains .12.",
+  "geometry": {
+    "vertices": 21809,
+    "triangles": 43008,
+    "changedVertices": 6419,
+    "protectedVertices": 12353,
+    "maxPositionDelta": 0.03626666692391439,
+    "maxAxisDelta": [
+      0.030040264129638672,
+      0,
+      0.021159380674362183
+    ],
+    "minNormalDot": 0.8179126911414057,
+    "maxNormalLengthError": 4.1446977627757065e-8,
+    "maxColorDelta": 0.1416735053062439,
+    "bounds": [
+      [
+        -2.033552885055542,
+        -1.4500000476837158,
+        -0.5836775302886963,
+        2.0243337154388428,
+        1.7400000095367432,
+        0.8630034923553467
+      ],
+      [
+        -2.031939744949341,
+        -1.4500000476837158,
+        -0.5836775302886963,
+        2.0243237018585205,
+        1.7400000095367432,
+        0.8630034923553467
+      ]
+    ],
+    "widthDelta": -0.0016231536865234375,
+    "trianglesAudited": 43008,
+    "reversedTriangles": 0,
+    "minAreaRatio": 0.7796664199854578,
+    "maxAreaRatio": 1.3601743208126902,
+    "minTriangleNormalDot": 0.825034469699738
+  },
+  "protection": {
+    "protectedSurfaceSamples": 8194,
+    "centralSourceXLimit": 0.95,
+    "fixedCropY": -1.4,
+    "nativeMeshCount": 23,
+    "nativeProtectedMeshes": [
+      "blouse-finished-bust-base",
+      "blouse-left-neck-opening-facing",
+      "blouse-left-facing-stitch",
+      "blouse-right-neck-opening-facing",
+      "blouse-right-facing-stitch",
+      "blouse-left-spread-collar",
+      "blouse-left-collar-edge",
+      "blouse-left-collar-fold",
+      "blouse-right-spread-collar",
+      "blouse-right-collar-edge",
+      "blouse-right-collar-fold",
+      "blouse-finished-neckline",
+      "blouse-curved-centre-placket",
+      "blouse-placket-seam--1",
+      "blouse-placket-seam-1",
+      "blouse-bust-crop-hem",
+      "buttons-batched-blouse-ivory-buttons",
+      "buttons-batched-button-recesses",
+      "buttons-batched-button-threads"
+    ]
+  },
+  "inverse": {
+    "warpSamples": 10494,
+    "minWarpJacobian": 0.7327511259314078,
+    "maxWarpJacobian": 1.4449230507196373,
+    "maxInverseError": 2.220446049250313e-16,
+    "maxSleeveXDelta": 0.021230834686298605
+  },
+  "surfaceQueries": [
+    {
+      "samples": 1034,
+      "misses": 1,
+      "maxPositionError": 0.0000021132706570318204,
+      "maxNormalError": 0.0007175615597891276,
+      "maxXYResidual": 0.0000012413072143594573,
+      "maxUnitNormalError": 4.440892098500626e-16,
+      "worstPosition": {
+        "u": 0.7708333333333334,
+        "t": 0.11607142857142858,
+        "p": [
+          -0.8794513609143327,
+          1.4690719388476114,
+          0.08272189574260727
+        ],
+        "q": [
+          -0.8794513609143327,
+          1.4690728057620865,
+          0.08271996847195613
+        ]
+      },
+      "worstNormal": {
+        "u": 0.7864583333333334,
+        "t": 0.22321428571428573,
+        "p": [
+          -1.4831369950975393,
+          1.294941651297814,
+          0.15689536665270196
+        ],
+        "normal": [
+          -0.1968250244500431,
+          0.6726145965992636,
+          0.7133368868857476
+        ],
+        "n": [
+          -0.19725325756763598,
+          0.6729696266489567,
+          0.712883604795986
+        ]
+      }
+    },
+    {
+      "samples": 1034,
+      "misses": 1,
+      "maxPositionError": 0.0000021132706570318204,
+      "maxNormalError": 0.0007984322038847218,
+      "maxXYResidual": 0.0000012308897612765283,
+      "maxUnitNormalError": 3.3306690738754696e-16,
+      "worstPosition": {
+        "u": 0.7708333333333334,
+        "t": 0.11607142857142858,
+        "p": [
+          -0.8794513609143327,
+          1.4690719388476114,
+          0.08272189574260727
+        ],
+        "q": [
+          -0.8794513609143327,
+          1.4690728057620865,
+          0.08271996847195613
+        ]
+      },
+      "worstNormal": {
+        "u": 0.7708333333333334,
+        "t": 0.2767857142857143,
+        "p": [
+          -1.7770170757648096,
+          1.2510752878392228,
+          0.08921813488784641
+        ],
+        "normal": [
+          -0.37203384498278036,
+          0.7561182102570013,
+          0.538401402584612
+        ],
+        "n": [
+          -0.3714076630281248,
+          0.7565702149302371,
+          0.5381987158331039
+        ]
+      }
+    }
+  ],
+  "chordQueries": [
+    {
+      "samples": 683,
+      "maxDepthDifference": 0.0074699654564675255,
+      "worst": {
+        "triangle": 19283,
+        "centre": [
+          1.944413105646769,
+          0.525496353705724,
+          0.13674068450927734
+        ],
+        "surfaceZ": 0.12927071905280982
+      }
+    },
+    {
+      "samples": 683,
+      "maxDepthDifference": 0.009638050451882818,
+      "worst": {
+        "triangle": 16951,
+        "centre": [
+          1.5800386667251587,
+          0.4100334942340851,
+          0.4496013820171356
+        ],
+        "surfaceZ": 0.45923943246901844
+      }
+    }
+  ],
+  "cost": {
+    "baselineClothMs": 141.285459,
+    "candidateClothMs": 139.40066699999997,
+    "totalWallMs": 1563.20075,
+    "totalCpuMs": 1947.083,
+    "rssMiB": 94.654296875
+  }
+}
