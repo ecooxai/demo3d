@@ -45,6 +45,12 @@ function ellipse(u, v, cx, cy, rx, ry) {
   return Math.exp(-(((u-cx)/rx)**2+((v-cy)/ry)**2));
 }
 
+function bowl(u, v, cx, cy, rx, ry) {
+  // A shallow floor and a steeper cartilage wall, with a smooth transition.
+  const q=((u-cx)/rx)**2+((v-cy)/ry)**2;
+  return Math.exp(-Math.pow(q,1.55));
+}
+
 function outline(count) {
   // An asymmetric outline: fuller upper cartilage, an attached inward edge,
   // and a soft lower lobe. The helix is deliberately not a concentric ring.
@@ -91,11 +97,11 @@ export function createEar(side, skinMaterial) {
   const helix=line([
     [-.68,.46],[-.68,.72],[-.19,.90],[.40,.83],
     [.72,.55],[.82,.15],[.65,-.30],[.34,-.66],[-.07,-.84]
-  ],.041,.0175,64);
-  const antihelix=line([[-.19,-.62],[.065,-.36],[.21,-.065],[.115,.22]],.021,.014,36);
-  const upperBranch=line([[.115,.20],[.34,.40],[.36,.62]],.018,.012,28);
-  const innerBranch=line([[.12,.23],[-.13,.33],[-.40,.35]],.013,.012,28);
-  const crus=line([[-.65,.53],[-.46,.31],[-.31,.16],[-.42,.07]],.015,.013,30);
+  ],.0355,.013,64);
+  const antihelix=line([[-.18,-.52],[.04,-.35],[.20,-.06],[.105,.22]],.023,.0117,36);
+  const upperBranch=line([[.105,.18],[.38,.40],[.36,.63]],.018,.0105,28);
+  const innerBranch=line([[.12,.22],[-.12,.36],[-.42,.36]],.0135,.0105,28);
+  const crus=line([[-.65,.50],[-.44,.28],[-.23,.15],[-.40,.04]],.0155,.011,30);
   const ridges=[helix,antihelix,upperBranch,innerBranch,crus];
   const base=new THREE.Color('#e2b3a7');
   const warm=new THREE.Color('#c98b81');
@@ -105,25 +111,35 @@ export function createEar(side, skinMaterial) {
 
   function addVertex(u,v,r,front) {
     const x=u*X_RADIUS,y=finalY(v)-Y_CENTER;
-    const concha=ellipse(u,v,-.25,-.14,.38,.24);
-    const canal=ellipse(u,v,-.49,-.18,.17,.13);
-    const lobe=ellipse(u,v,-.09,-.79,.62,.25);
-    const tragus=ellipse(u,v,-.67,-.14,.17,.11);
-    const antiTragus=ellipse(u,v,-.24,-.50,.21,.10);
-    const fossa=ellipse(u,v,-.08,.48,.25,.18);
-    let relief=-.023*concha-.005*canal-.008*fossa;
-    for (const ridge of ridges) relief+=ridgeAt(x,y,ridge);
-    relief+=.019*lobe+.026*tragus+.016*antiTragus;
+    const concha=bowl(u,v,-.29,-.19,.33,.265);
+    const cymba=ellipse(u,v,-.36,.24,.29,.17);
+    const canal=ellipse(u,v,-.50,-.19,.135,.11);
+    const lobe=ellipse(u,v,-.09,-.80,.60,.22);
+    // Place the tragus inside the inward notch; a ridge centered on the shared
+    // perimeter is flattened to zero by the edge closure and disappears.
+    const tragus=ellipse(u,v,-.50,-.02,.14,.11);
+    const antiTragus=ellipse(u,v,-.27,-.49,.18,.115);
+    const fossa=ellipse(u,v,.02,.50,.24,.18);
+    const scapha=ellipse(u,v,.49,.33,.15,.42);
+    let ridgeRelief=0;
+    for (const ridge of ridges) ridgeRelief+=ridgeAt(x,y,ridge);
+    let relief=ridgeRelief-.035*concha-.019*cymba-.009*canal-.010*fossa-.006*scapha;
+    relief-=.004*ellipse(u,v,.46,-.27,.17,.25);
+    relief+=.021*lobe+.025*tragus+.021*antiTragus;
 
     // A gentle posterior sweep gives the ear volume when viewed in profile.
     // The front and back share their perimeter; its rounded transition has no
     // separate torus, floating cartilage tubes, or open cut face.
     const plane=.056-.030*u+.010*v;
     const edge=Math.sqrt(Math.max(0,1-r**8));
-    const z=front?plane+edge*(.009+relief):plane-edge*(.037+.007*lobe);
-    p.push(s*(.792+x)+offsetX,finalY(v)+offsetY,z+offsetZ);
+    const worldY=finalY(v)+offsetY,baseZ=plane+offsetZ;
+    // The back follows the cartilage's actual form. A positive wall thickness
+    // prevents a deepened bowl from crossing a formerly flat back surface.
+    const thickness=.027+.015*lobe+.004*clamp(ridgeRelief/.036,0,1);
+    const depth=.009+relief-(front?0:thickness);
+    p.push(s*(.792+x)+offsetX,worldY,baseZ+edge*depth);
     const color=base.clone();
-    const interior=.13*concha+.09*canal+.025*fossa;
+    const interior=.13*concha+.09*canal+.06*cymba+.025*fossa;
     color.lerp(warm,front?interior:.045);
     color.lerp(rimTint,front?.11*clamp(relief/.044,0,1):.035);
     color.lerp(lobeTint,.20*lobe);
@@ -172,6 +188,7 @@ export function createEar(side, skinMaterial) {
   group.userData={
     source:'Original closed ear geometry and pigment colors, visually based only on image 1.',
     coordinateSpace:'Final head-local coordinates; add after refineProportions, without additional ear group offsets.',
+    attachment:'The original ear placement and perimeter are retained. Both cartilage surfaces remain single-valued over the same closed outline.',
     triangles:indices.length/3
   };
   return group;

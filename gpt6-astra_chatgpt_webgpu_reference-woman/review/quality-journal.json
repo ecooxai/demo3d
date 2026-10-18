@@ -4,7 +4,7 @@
   "goal_achieved": false,
   "method": "Visual self-assessment against the sole uploaded image, supplemented by independent agent review. Scores are subjective and are not a certification of AAA production quality.",
   "scope": "Recorded assessments whose numeric results remain available. No missing historical scores have been invented.",
-  "current_accepted_iteration": 42,
+  "current_accepted_iteration": 45,
   "current_accepted_score": 72,
   "assessments": [
     {
@@ -161,6 +161,28 @@
       "reviewer": "root",
       "decision": "retained softer portrait lighting after cloth comparison",
       "notes": "Compared baseline cotton, removal of previous cloth color boost, and stronger lateral key light. Stronger light shows cloth relief but changes neck/face tone; no global lighting or cloth color change adopted."
+    },
+    {
+      "iteration": 45,
+      "score": 72,
+      "reviewer": "root and quality_review_42",
+      "decision": "accepted ear anatomy and localized skin tone repairs",
+      "notes": "Integrated source candidates41 and43. Closed ear shell retains outline and triangle budget; right head seat clears buried cartilage. Geometry tests pass and five-view inspection shows no regression. Confirmed cheek/chin source-shadow patches are locally neutralized while protected features and fine source detail remain."
+    },
+    {
+      "iteration": 47,
+      "score": 72,
+      "provisional_score_after_join_repair": 73,
+      "reviewer": "root and quality_review_42",
+      "decision": "6 percent lower-face candidate selected; acceptance waits for neck repair",
+      "notes": "Compared0,4,6,8 percent shortening below fixed eye level with attached UV colors. Independent reviewer prefers6 percent. Small neck edge becomes exposed, so this runtime-only deformation is not yet accepted as default. Full portrait and profile recheck pending."
+    },
+    {
+      "iteration": 48,
+      "score": 72,
+      "reviewer": "root",
+      "decision": "antialiasing experiment shows benefit; integration pending",
+      "notes": "Twice internal resolution improves thin-strand edge quality at the same displayed size. A12-sample diagnostic measured queue medians9.5ms at900x1200 and17.7ms at1800x2400; these are small-sample measurements, not an FPS guarantee. Requested output dimensions must remain unchanged if adopted."
     }
   ]
 }

@@ -325,6 +325,28 @@ function portraitY(y){
  const m0=(q[1]-prev[1])/(q[0]-prev[0]),m1=(next[1]-p[1])/(next[0]-p[0]);
  return (2*t*t*t-3*t*t+1)*p[1]+(t*t*t-2*t*t+t)*h*m0+(-2*t*t*t+3*t*t)*q[1]+(t*t*t-t*t)*h*m1;
 }
+function refineEarBed(geometry){
+ // The far ear's inner bowl was embedded in the unbroken head side. Make a
+ // compact, smooth seat under that pinna, leaving the front cheek and every
+ // facial landmark untouched. The mesh remains closed and its UVs are retained.
+ const p=geometry.attributes.position,n=geometry.attributes.normal;
+ const centerY=-.165,centerZ=.045,radiusY=.25,radiusZ=.17,depth=.078;
+ for(let i=0;i<p.count;i++){
+  const x=p.getX(i),y=p.getY(i),z=p.getZ(i);
+  if(x<.50)continue;
+  const dy=y-centerY,dz=z-centerZ,q=(dy/radiusY)**2+(dz/radiusZ)**2;
+  if(q>=1)continue;
+  const falloff=1-q,amount=depth*falloff**3;
+  const derivativeY=-6*depth*falloff*falloff*dy/(radiusY*radiusY);
+  const derivativeZ=-6*depth*falloff*falloff*dz/(radiusZ*radiusZ);
+  p.setX(i,x-amount);
+  // Apply this local deformation's inverse transpose to the existing normals;
+  // do not discard the accepted analytic eye normals elsewhere on the face.
+  const nx=n.getX(i),normal=new THREE.Vector3(nx,n.getY(i)+derivativeY*nx,n.getZ(i)+derivativeZ*nx).normalize();
+  n.setXYZ(i,normal.x,normal.y,normal.z);
+ }
+ geometry.computeBoundingBox();geometry.computeBoundingSphere();
+}
 function refineProportions(root){
  root.updateMatrixWorld(true);
  root.traverse(o=>{
@@ -366,6 +388,7 @@ export function createHead({textures=true}={}){
  const iris=textures?irisMap():null;
  root.add(makeEye(-1,skin,iris),makeEye(1,skin,iris),makeMouth(),makeNostrils(),makeBrows());
  refineProportions(root);
+ refineEarBed(faceGeometry);
  root.add(createEar(-1,skin),createEar(1,skin));
  root.getObjectByName('individual-eyebrow-fibers').position.y=-.10;
  root.userData={source:'Original procedural anatomical surface. Skin and eye color can be baked separately from the sole user-supplied reference; no external geometry.',featureUnits:'head local; chin -1.18, crown 1.54'};

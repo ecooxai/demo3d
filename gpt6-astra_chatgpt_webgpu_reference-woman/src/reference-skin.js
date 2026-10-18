@@ -92,6 +92,16 @@ function jawSampleConfidence(u,v){
   return Math.min(smooth((u-left+2)/12),smooth((right-u+2-rightInset)/rightFeather));
 }
 
+// Candidate 43: the two remaining brown patches are inside valid photo bounds,
+// not failures of the jaw silhouette mask. These compact supports address the
+// broad photographic shading only; correspondences and photo weights stay put.
+function localAlbedoWeights(x,y){
+  const ellipse=(cx,cy,rx,ry)=>1-smooth((Math.hypot((x-cx)/rx,(y-cy)/ry)-.30)/.70);
+  const cheek=.97*ellipse(.422,-.815,.158,.145);
+  const chin=.96*ellipse(-.012,-1.085,.230,.130)*smooth((y+1.176)/.048);
+  return [cheek,chin];
+}
+
 function makeSkinAtlas(source) {
   const c=document.createElement('canvas');c.width=source.naturalWidth;c.height=source.naturalHeight;
   const cx=c.getContext('2d',{willReadFrequently:true});cx.drawImage(source,0,0);
@@ -143,6 +153,25 @@ function makeSkinAtlas(source) {
     const upper=smooth((y-.02)/.28);
     return base.map((v,ch)=>(v*(1-amount)+edge[ch]*amount)*(1-upper)+(foreheadColor[ch]+(ch===0?-6:-9)*x)*upper);
   };
+  // A small, smooth low-frequency field separates source pores from the baked
+  // jaw/chin shadow. It is sampled only inside the two local supports above.
+  // No new imagery is introduced: detail and replacement tones all come from
+  // manually selected skin in image 1. The hidden-side color field is unchanged.
+  const lowX=448,lowY=616,lowStep=8,lowW=29,lowH=19;
+  const lowFrequency=new Float32Array(lowW*lowH*3);
+  for(let j=0;j<lowH;j++)for(let i=0;i<lowW;i++){
+    const rgb=patch(lowX+i*lowStep,lowY+j*lowStep,12,12),k=(j*lowW+i)*3;
+    for(let ch=0;ch<3;ch++)lowFrequency[k+ch]=rgb[ch];
+  }
+  const lowSource=(u,v)=>{
+    const sx=Math.max(0,Math.min(lowW-1,(u-lowX)/lowStep));
+    const sy=Math.max(0,Math.min(lowH-1,(v-lowY)/lowStep));
+    const i=Math.min(lowW-2,Math.floor(sx)),j=Math.min(lowH-2,Math.floor(sy));
+    const fx=sx-i,fy=sy-j,k=(j*lowW+i)*3;
+    return [0,1,2].map(ch=>(lowFrequency[k+ch]*(1-fx)+lowFrequency[k+3+ch]*fx)*(1-fy)
+      +(lowFrequency[k+lowW*3+ch]*(1-fx)+lowFrequency[k+lowW*3+3+ch]*fx)*fy);
+  };
+  const chinTone=patch(499,719,11,9);
   for(let j=0;j<canvas.height;j++)for(let i=0;i<canvas.width;i++) {
     const x=i/(canvas.width-1)*2-1,y=1.6-j/(canvas.height-1)*2.85,a=photoWeight(x,y),k=(j*canvas.width+i)*4;
     const lateral=cleanLateral(x,y,edgeTints[j]);
@@ -155,6 +184,17 @@ function makeSkinAtlas(source) {
     const templeBand=smooth((y+.53)/.12)*(1-smooth((y-.20)/.15));
     const templeClean=templeBand*(x<0?smooth((-x-.575)/.095):smooth((x-.65)/.08));
     const skinRGB=rgb.map((v,ch)=>v*(1-templeClean)+edgeTints[j][x<0?0:1][ch]*templeClean);
+    const [cheekFix,chinFix]=localAlbedoWeights(x,y);
+    if(sourceUV&&safePhoto>0&&(cheekFix>0||chinFix>0)){
+      const broad=lowSource(...sourceUV);
+      for(let ch=0;ch<3;ch++){
+        // Retain small original texture variations, while preventing individual
+        // dark hair/contact pixels from surviving as a second sharp crease.
+        const detail=Math.max(-5,Math.min(5,rgb[ch]-broad[ch]));
+        skinRGB[ch]=skinRGB[ch]*(1-cheekFix)+(lateral[ch]+detail)*cheekFix;
+        skinRGB[ch]=skinRGB[ch]*(1-chinFix)+(chinTone[ch]+detail)*chinFix;
+      }
+    }
     // Replace photographic fringe in the forehead color with clean skin; the
     // actual fringe is independent three-dimensional hair above this surface.
     const forehead=smooth((y-.15)/.095);
