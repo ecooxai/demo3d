@@ -4,7 +4,7 @@
   "goal_achieved": false,
   "method": "Visual self-assessment against the sole uploaded image, supplemented by independent agent review. Scores are subjective and are not a certification of AAA production quality.",
   "scope": "Recorded assessments whose numeric results remain available. No missing historical scores have been invented.",
-  "current_accepted_iteration": 57,
+  "current_accepted_iteration": 58,
   "current_accepted_score": 75,
   "assessments": [
     {
@@ -239,6 +239,13 @@
       "reviewer": "root and quality_review_42",
       "decision": "accepted combined pose, blouse, and hair material checkpoint",
       "notes": "Native front, detail, both profiles, and back reviewed. Matte 1305-strand fringe removes white glints; near-white albedo flow map preserves original alpha and reduces broad crown patches. Ring seam normals welded. Reference resemblance estimated 76 and multiview finish 70; subjective overall 75. Remaining priorities: cap-like crown, regular rear sawtooth hem and gaps, separated neck-height locks, facial silhouette, and cloth realism."
+    },
+    {
+      "iteration": 58,
+      "score": 75,
+      "reviewer": "root and quality_review_42",
+      "decision": "accepted 2.5 percent guarded lower-cheek taper",
+      "notes": "Compared fresh native WebGPU front, detail, and quarter views at 0, 2.5, and 4 percent. Selected 2.5 percent: slightly closer soft lower-face contour; 4 percent begins to pinch. Continuous-face X alone changes before skin compensation; eye, lip, ear, UV, head-space Y and Z preserved. Actual minimum Jacobian .874585, 24156 changed vertices, maximum displacement .016347. No new ear gap visible. Small refinement does not alone raise the overall score."
     }
   ]
 }

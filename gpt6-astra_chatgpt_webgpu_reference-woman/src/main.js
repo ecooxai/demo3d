@@ -8,6 +8,7 @@ import { applyReferenceNeck } from './reference-neck.js';
 import { compensateReferenceSkin } from './skin-illumination.js';
 import { applyPortraitProportions } from './portrait-proportions.js';
 import { applyPortraitPose } from './portrait-pose.js';
+import { applyLowerCheekTaper } from './face-refinement.js';
 import { createHair } from './hair.js';
 import { createFiberHair } from './hair-fibers.js';
 import { createGroomHair } from './hair-groom.js';
@@ -19,7 +20,7 @@ const hairChoice=new URLSearchParams(location.search).get('hair')||'groom';
 const fiberCandidate=hairChoice==='fibers';
 const groomCandidate=hairChoice==='groom';
 const coverageCandidate=hairChoice==='coverage';
-const state = { backend: new URLSearchParams(location.search).get('backend') === 'webgl' ? 'webgl' : 'webgpu', width: 900, height: 1200, iteration: groomCandidate?57:coverageCandidate?32:fiberCandidate?25:27, score: groomCandidate?75:fiberCandidate?61:68, renderedFrames: 0, renderMs: 0, rotating: false, view: 'front', ready: false, lighting: 'soft', antialiasing: 2, internalRender: null };
+const state = { backend: new URLSearchParams(location.search).get('backend') === 'webgl' ? 'webgl' : 'webgpu', width: 900, height: 1200, iteration: groomCandidate?58:coverageCandidate?32:fiberCandidate?25:27, score: groomCandidate?75:fiberCandidate?61:68, renderedFrames: 0, renderMs: 0, rotating: false, view: 'front', ready: false, lighting: 'soft', antialiasing: 2, internalRender: null };
 let portraitOutput=createPortraitOutput();
 const scene = new THREE.Scene();
 scene.background = new THREE.Color('#cbe3f3');
@@ -204,6 +205,7 @@ async function initialize(backend=state.backend) {
   try {
     await referenceReady;
     state.proportions=applyPortraitProportions(anatomicalHead,anatomicalNeck);
+    state.cheek=applyLowerCheekTaper(anatomicalHead,{strength:.025});
     state.pose=applyPortraitPose(headPivot,anatomicalNeck,{shiftX:.26});
     detailTarget.x=.02+state.pose.shiftX;
     if(!skinIlluminationApplied){state.skinIllumination=compensateReferenceSkin(anatomicalHead,scene,{strength:.35});skinIlluminationApplied=true;}
