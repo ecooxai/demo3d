@@ -254,6 +254,18 @@ export function createHair({headTilt=-.17,coverage=false}={}){
   ribbon(strands,curve(ps),.00055+random()*.00035,colors[k%colors.length],false,k*.3,32,1,true);
  }
  for(let k=0;k<28;k++){let side=k%2?-1:1,t=(k%14)/13,y=1.15-t*4,x=side*(.94+.18*Math.sin(t*Math.PI)),z=.14+.6*random();let c=curve([[x,y,z],[x+side*.028,y-.2,z+.018],[x+side*.055,y-.49,z+.012],[x+side*.01,y-.78,z-.02]]);ribbon(strands,c,.0008,'#523d40',true,k,16,1,true);}
+ if(coverage){
+  // Broad color jumps between otherwise neighboring locks read as painted
+  // stripes. Keep their small natural variations around one chestnut base.
+  const target=new THREE.Color('#51413c');
+  for(const b of [locks,bangs]){
+   const count=b.c.length/3,mean=[0,0,0];
+   for(let i=0;i<b.c.length;i++)mean[i%3]+=b.c[i]/count;
+   const components=[target.r,target.g,target.b];
+   for(let i=0;i<b.c.length;i++)b.c[i]=components[i%3]*(.94+.06*b.c[i]/mean[i%3]);
+  }
+  mat.roughness=.55;mat.specularIntensity=.22;mat.anisotropy=.65;mat.envMapIntensity=.35;
+ }
  root.add(mesh(shell,shellMat,'Hair feathered scalp and short nape core'),mesh(locks,mat,'Hair 366 fine layered continuous strand cards'),mesh(bangs,mat,'Hair fine parted crown layers'),mesh(strands,fineMat,'Hair fine geometric lengths and 1800 crown fibers'),mesh(fringe,fringeMat,'Hair seven full flowing fringe groups with 1740 strands'));
  root.children.forEach((o,i)=>o.renderOrder=i===0?0:i===4?3:2);
  root.children[3].castShadow=false;root.children[4].castShadow=false;

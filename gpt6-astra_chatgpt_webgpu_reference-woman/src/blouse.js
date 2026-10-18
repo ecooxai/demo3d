@@ -28,6 +28,11 @@ function neckSection(y,k){
   const seating=smooth(1.70,2.08,y);
   if(k===1)value-=.053*seating;
   if(k===4)value+=.024*seating;
+  // The lower neck eases into the clavicles instead of continuing as a straight
+  // column. The entire correction ends below the fixed jaw seating and UV span.
+  const baseEase=gauss(y-1.02,.28)*(1-smooth(1.31,1.50,y));
+  if(k===1)value+=.034*baseEase;
+  if(k===2)value-=.009*gauss(y-.90,.20)*(1-smooth(1.25,1.48,y));
   return value;
 }
 
@@ -37,9 +42,9 @@ function neckPoint(a,y){
   if(c>0){
     const axis=.63-.17*smooth(.93,1.8,y);
     const tendon=.023*gauss(Math.abs(s)-axis,.17)*gauss(y-1.31,.43);
-    const suprasternal=-.035*gauss(x+.042,.121)*gauss(y-1.115,.133);
+    const suprasternal=-.029*gauss(x+.042,.145)*gauss(y-1.115,.150);
     const clavicleLine=1.182-.17*Math.abs(x+.04);
-    const clavicle=.022*gauss(y-clavicleLine,.062)*gauss(x+.04,.46)*(1-.45*gauss(x+.04,.07));
+    const clavicle=.019*gauss(y-clavicleLine,.079)*gauss(x+.04,.46)*(1-.45*gauss(x+.04,.07));
     const neckPlane=-.012*gauss(x+.075,.092)*gauss(y-1.48,.255);
     z+=tendon+(suprasternal+clavicle+neckPlane)*c*c;
   }
@@ -131,7 +136,7 @@ function fabricRelief(x,y) {
   folds+=(x<0?.019:.013)*(gauss(ax-lineA,.079)-.36*gauss(ax-lineA-.065,.118))*smooth(-1.45,-.8,y)*(1-smooth(.35,.9,y));
   folds+=(x<0?.021:.027)*(gauss(ax-lineB,.086)-.34*gauss(ax-lineB-.07,.125))*gauss(y+(x<0?.61:.31),.73);
   const shoulderD=y-(x<0?1.04:.945)+(x<0?.31:.44)*(ax-1.25);
-  folds+=(x<0?.020:.026)*gauss(ax-1.34,.26)*(gauss(shoulderD,.061)-.34*gauss(shoulderD,.122));
+  folds+=(x<0?.026:.032)*gauss(ax-1.34,.26)*(gauss(shoulderD,.072)-.34*gauss(shoulderD,.144));
   // A broad sleeve fold remains legible around the outside of the hair silhouette.
   const sleeveLine=(x<0?1.43:1.48)+(x<0?.10:.16)*(y+.4);
   folds+=.023*gauss(y+(x<0?.55:.24),.68)*(gauss(ax-sleeveLine,.083)-.34*gauss(ax-sleeveLine-.08,.14));
@@ -164,7 +169,14 @@ function torsoPoint(u,t) {
   const roundedY=mix(p[4],roundedEnd,roundedShoulderWeight(co));
   let y=mix(mix(p[4],endY,Math.pow(co,1.32)),roundedY,shoulder);
   // Cut a real V in the front pattern, with gently eased edges at the shirt body.
-  if(front){const vY=p[3]+(p[4]-p[3])*Math.pow(Math.abs(s),.87);y=mix(y,vY,1-smooth(.035,.265,t));}
+  if(front){
+    const q=Math.abs(s),opening=q*(.28+.72*Math.pow(q,.38));
+    const vY=p[3]+(p[4]-p[3])*opening;
+    y=mix(y,vY,1-smooth(.035,.265,t));
+  }
+  // Ease the upper corner down to the collar roll on both sides of the seam.
+  // A sharp top corner used to remain visible as a white tooth at the neck.
+  y-=.026*smooth(.67,.95,Math.abs(s))*(1-smooth(.03,.18,t));
   y-=.022*shoulder*Math.pow(1-smooth(0,.62,co),2);
   y+=.042*s*Math.sin(Math.PI*t)*(1-smooth(.62,1,t));
   let z=(front?p[1]:p[2])*c;
@@ -216,6 +228,17 @@ function curveMesh(group,name,points,radius,mat,segments=64) {
   return mesh(group,name,new THREE.TubeGeometry(c,segments,radius,4,false),mat);
 }
 
+function supportedDepth(x,y,z,clearance){
+  const roundedLift=d=>.5*(d+Math.sqrt(d*d+.003*.003));
+  const skin=neckFrontZ(x,y);
+  if(Number.isFinite(skin))z+=roundedLift(skin+clearance-z);
+  const shirt=bodyAtXY(x,y),distance=Math.hypot(shirt[0]-x,shirt[1]-y);
+  // A hard inside/outside test created one-row steps where the collar crossed
+  // the shirt opening. Taper contact continuously through that narrow region.
+  const contact=1-smooth(.003,.055,distance);
+  return z+contact*roundedLift(shirt[2]+clearance-z);
+}
+
 function collarPoint(side,u,v) {
   // The folded leaf ends above the opening on its inside and lower on its outside.
   // A separate facing follows the V, so no broad horizontal join crosses the chest.
@@ -242,26 +265,18 @@ function collarPoint(side,u,v) {
   if(side<0)p.z-=.008*v;
   // The collar is a separate folded layer. Test its entire surface against both
   // the shirt and the tilted neck instead of supporting only its pointed tip.
-  const shirt=bodyAtXY(p.x,p.y);
-  let support=neckFrontZ(p.x,p.y);
-  if(Math.abs(shirt[0]-p.x)<.018&&Math.abs(shirt[1]-p.y)<.024)support=Math.max(support,shirt[2]);
-  if(Number.isFinite(support)){
-    const arch=Math.sin(v*Math.PI);
-    const clearance=.019+.098*arch*(.4+.6*u)+.115*Math.pow(1-u,1.30)*smooth(.53,1,v)+.025*Math.sin(u*Math.PI)*smooth(.30,1,v);
-    const target=support+clearance,d=p.z-target;
-    p.z=.5*(p.z+target+Math.sqrt(d*d+.004*.004));
-  }
+  const arch=Math.sin(v*Math.PI);
+  const clearance=.015+.064*arch*(.35+.65*u)+.066*Math.pow(1-u,1.40)*smooth(.50,1,v)+.015*Math.sin(u*Math.PI)*smooth(.30,1,v);
+  p.z=supportedDepth(p.x,p.y,p.z,clearance);
   return [p.x,p.y,p.z];
 }
 
 function facingPoint(side,u,v){
   const upperTurn=1-smooth(0,.25,v),edge=torsoPoint(side*(1-v)*.25,0);
-  const x=edge[0]+side*u*(.076+.010*v-.020*upperTurn)+placketX(.780)*Math.pow(v,4);
-  const y=edge[1]-.014*u*Math.sin(v*Math.PI)-.030*u*upperTurn,shirt=bodyAtXY(x,y);
-  let z=edge[2];
-  if(Math.abs(shirt[0]-x)<.018&&Math.abs(shirt[1]-y)<.024)z=shirt[2];
-  z=Math.max(z,neckFrontZ(x,y));
-  return [x,y,z+.010+.006*Math.sin(u*Math.PI)+.022*u*Math.sin(v*Math.PI)+.020*u*upperTurn];
+  const x=edge[0]+side*u*(.062+.010*v-.012*upperTurn)+placketX(.780)*Math.pow(v,4);
+  const y=edge[1]-.014*u*Math.sin(v*Math.PI)-(.012+.038*u)*upperTurn;
+  const z=supportedDepth(x,y,edge[2],.008);
+  return [x,y,z+.003*Math.sin(u*Math.PI)+.016*u*Math.sin(v*Math.PI)+.012*u*upperTurn];
 }
 
 function facingNormal(side,u,v){
@@ -290,9 +305,9 @@ function solidifyGrid(g,nu,nv,depth=.006) {
 
 function addCollar(group,side,cloth,seamMat) {
   const n=side>0?'right':'left';
-  const g=surface(22,32,(u,v)=>collarPoint(side,u,v));
+  const nu=24,nv=48,g=surface(nu,nv,(u,v)=>collarPoint(side,u,v));
   if(side<0){const idx=g.index;for(let i=0;i<idx.count;i+=3){const b=idx.getX(i+1);idx.setX(i+1,idx.getX(i+2));idx.setX(i+2,b);}g.computeVertexNormals();}
-  const solid=solidifyGrid(g,22,32),colors=[],uv=solid.getAttribute('uv'),half=solid.getAttribute('position').count/2;
+  const solid=solidifyGrid(g,nu,nv,.0045),colors=[],uv=solid.getAttribute('uv'),half=solid.getAttribute('position').count/2;
   for(let i=0;i<uv.count;i++){
     const u=uv.getX(i),v=uv.getY(i);
     const shade=.075*gauss(u-.075,.23)*(.38+.62*Math.sin(v*Math.PI))+.022*smooth(.73,1,v)+(i>=half?.125:0);
@@ -302,13 +317,13 @@ function addCollar(group,side,cloth,seamMat) {
   mesh(group,`blouse-${n}-spread-collar`,solid,cloth);
   const edge=[];for(let j=0;j<=28;j++){const p=collarPoint(side,.985,j/28);p[2]+=.001;edge.push(p);}
   for(let j=1;j<=20;j++){const p=collarPoint(side,1-j/20,.985);p[2]+=.001;edge.push(p);}
-  curveMesh(group,`blouse-${n}-collar-edge`,edge,.0037,seamMat,88);
-  const roll=[];for(let j=0;j<=36;j++){const p=collarPoint(side,.12,j/36);p[2]+=.002;roll.push(p);}
-  curveMesh(group,`blouse-${n}-collar-fold`,roll,.0045,cloth,64);
+  curveMesh(group,`blouse-${n}-collar-edge`,edge,.0026,seamMat,96);
+  const roll=[];for(let j=0;j<=48;j++){const p=collarPoint(side,.12,mix(.035,.965,j/48));p[2]+=.001;roll.push(p);}
+  curveMesh(group,`blouse-${n}-collar-fold`,roll,.0016,cloth,80);
 }
 
 function addFacing(group,side,cloth,seamMat){
-  const n=side>0?'right':'left',g=surface(6,36,(u,v)=>facingPoint(side,u,v));
+  const n=side>0?'right':'left',g=surface(8,48,(u,v)=>facingPoint(side,u,v));
   if(side<0){const idx=g.index;for(let i=0;i<idx.count;i+=3){const b=idx.getX(i+1);idx.setX(i+1,idx.getX(i+2));idx.setX(i+2,b);}g.computeVertexNormals();}
   const uv=g.getAttribute('uv'),colors=[];
   for(let i=0;i<uv.count;i++){

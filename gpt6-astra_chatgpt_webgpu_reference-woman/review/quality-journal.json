@@ -4,8 +4,8 @@
   "goal_achieved": false,
   "method": "Visual self-assessment against the sole uploaded image, supplemented by independent agent review. Scores are subjective and are not a certification of AAA production quality.",
   "scope": "Recorded assessments whose numeric results remain available. No missing historical scores have been invented.",
-  "current_accepted_iteration": 29,
-  "current_accepted_score": 68,
+  "current_accepted_iteration": 33,
+  "current_accepted_score": 70,
   "assessments": [
     {
       "iteration": 20,
@@ -77,6 +77,34 @@
       "reviewer": "root",
       "decision": "not adopted; crown frame correction pending",
       "notes": "Corrected palette mutation and continuous nape improve experimental groom. Crown comb ridges, raised roots, broad flat temple flaps and uniformly fanned tips remain. Skin illumination compensation at 0.35 adopted after independent comparison, without a score increase."
+    },
+    {
+      "iteration": 31,
+      "score": 68,
+      "reviewer": "root",
+      "decision": "accepted restrained color and material calibration on existing groom",
+      "notes": "Controlled comparison shows large inter-lock color differences cause painted stripes. Compressed those differences and selected moderate anisotropy. Strong white reflections expose broad card geometry and were not adopted on the old groom."
+    },
+    {
+      "iteration": 32,
+      "score": 68,
+      "reviewer": "root and collar_surface_refine",
+      "decision": "accepted continuous collar support and shared eye tangent correction",
+      "notes": "Removed the hard collar support discontinuity and aligned upper facing. Eye surfaces share a small depth correction reducing outward center tilt, without moving the aperture corners. Front and profile renders remain coherent; anatomy checks pass."
+    },
+    {
+      "iteration": 33,
+      "score": 70,
+      "reviewer": "root and fiber_hair",
+      "decision": "accepted new groom as default",
+      "notes": "Correct ellipsoid frames, softer ash chestnut surface, varied waves and improved shoulder contact now outweigh the previous groom. Remaining defects include large lower gaps, opaque temple flaps, gray fringe and crown patch boundaries. Independent overall score 70."
+    },
+    {
+      "iteration": 34,
+      "score": 70,
+      "reviewer": "root",
+      "decision": "retained accepted corneal material after diagnostic comparison",
+      "notes": "Compared baseline, no environment reflection, hidden cornea and reduced refraction in front and oblique views. Material-only changes offer little convincing improvement; physical corneal baseline retained. No score increase."
     }
   ]
 }

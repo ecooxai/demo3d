@@ -12,10 +12,11 @@ import { createGroomHair } from './hair-groom.js';
 import { createBlouse, createNeck } from './blouse.js';
 
 const $ = (id) => document.getElementById(id);
-const fiberCandidate=new URLSearchParams(location.search).get('hair')==='fibers';
-const groomCandidate=new URLSearchParams(location.search).get('hair')==='groom';
-const coverageCandidate=(new URLSearchParams(location.search).get('hair')||'coverage')==='coverage';
-const state = { backend: new URLSearchParams(location.search).get('backend') === 'webgl' ? 'webgl' : 'webgpu', width: 900, height: 1200, iteration: groomCandidate?30:coverageCandidate?29:fiberCandidate?25:27, score: groomCandidate?62:fiberCandidate?61:68, renderedFrames: 0, renderMs: 0, rotating: false, view: 'front', ready: false, lighting: 'soft' };
+const hairChoice=new URLSearchParams(location.search).get('hair')||'groom';
+const fiberCandidate=hairChoice==='fibers';
+const groomCandidate=hairChoice==='groom';
+const coverageCandidate=hairChoice==='coverage';
+const state = { backend: new URLSearchParams(location.search).get('backend') === 'webgl' ? 'webgl' : 'webgpu', width: 900, height: 1200, iteration: groomCandidate?33:coverageCandidate?32:fiberCandidate?25:27, score: groomCandidate?70:fiberCandidate?61:68, renderedFrames: 0, renderMs: 0, rotating: false, view: 'front', ready: false, lighting: 'soft' };
 const scene = new THREE.Scene();
 scene.background = new THREE.Color('#cbe3f3');
 const model = new THREE.Group();

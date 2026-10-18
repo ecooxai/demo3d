@@ -67,9 +67,17 @@ function orbitalRadius(x,y,s){
  const cx=s*.342,X=(x-cx)/.185,dy=y-.25-.013*s*X,Y=Math.abs(dy/(dy>=0?.080:.058));
  return (Y+Math.sqrt(Y*Y+4*X*X))/2;
 }
+const eyeSurfaceSlopes=[-1,1].map(s=>{
+ const x=s*.342,e=.0001;
+ return (unblendedZ(x+e,.25)-unblendedZ(x-e,.25))/(2*e);
+});
 function eyeSurfaceZ(x,y,s){
  const dx=(x-s*.342)/.185,dy=y-.25;
- return unblendedZ(x,.25)+.027*Math.max(0,1-dx*dx)-.90*dy*dy+.0015;
+ // The eyeball axes should not inherit the cheek's outward-facing tangent.
+ // This shallow correction is shared by the globe, iris, cornea and aperture;
+ // both its value and first derivative vanish at the inner and outer canthi.
+ const alignment=.65*eyeSurfaceSlopes[s<0?0:1]*(x-s*.342)*Math.max(0,1-dx*dx)**2;
+ return unblendedZ(x,.25)-alignment+.027*Math.max(0,1-dx*dx)-.90*dy*dy+.0015;
 }
 export function faceZ(x,y){
  let z=unblendedZ(x,y);
