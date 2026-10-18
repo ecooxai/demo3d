@@ -58,7 +58,7 @@ function ribbon(b,c,w,color,front=false,phase=0,steps=46,across=6,thin=false,hug
  }
  for(let j=0;j<steps;j++)for(let k=0;k<across;k++){let a=first+j*(across+1)+k;quad(b,a,a+across+1,a+across+2,a+1);}
 }
-function fiberMaps(){
+function fiberMaps(denseCoverage=false){
  const width=512,height=1024,pixels=new Uint8Array(width*height*4),normals=new Uint8Array(width*height*4),rand=rng(328171);
  for(let i=0;i<width*height;i++){let k=i*4;pixels[k]=205;pixels[k+1]=203;pixels[k+2]=207;pixels[k+3]=0;normals[k]=normals[k+1]=128;normals[k+2]=normals[k+3]=255;}
  // Dense continuous fibers overlap through the body of a lock, with only its
@@ -79,6 +79,11 @@ function fiberMaps(){
     normals[k]=Math.round(127.5*(nx*inv+1));normals[k+1]=Math.round(127.5*(ny*inv+1));normals[k+2]=Math.round(127.5*(inv+1));
    }
   }
+ }
+ if(denseCoverage)for(let y=0;y<height;y++)for(let x=0;x<width;x++){
+  const u=x/(width-1),v=y/(height-1),k=(y*width+x)*4;
+  const body=smooth(0,.022,v)*(1-smooth(.77,.993,v))*smooth(0,.035,u)*(1-smooth(.965,1,u));
+  pixels[k+3]=Math.max(pixels[k+3],Math.round(body*255));
  }
  const make=data=>{let t=new THREE.DataTexture(data,width,height,THREE.RGBAFormat);t.wrapS=t.wrapT=THREE.ClampToEdgeWrapping;t.minFilter=THREE.LinearMipmapLinearFilter;t.magFilter=THREE.LinearFilter;t.generateMipmaps=true;t.anisotropy=8;t.needsUpdate=true;return t;};
  let map=make(pixels),normalMap=make(normals);map.colorSpace=THREE.SRGBColorSpace;map.name='64 original continuous mathematical hair fibers';normalMap.name='Original tangential fiber normals';return{map,normalMap};
@@ -106,7 +111,7 @@ function scalp(theta,phi,offset=0){
  if(front*edge>0){let contact=hugForehead(p.clone(),.018+offset);p.lerp(contact,front*edge);}
  return p;
 }
-function foundation(b){
+function foundation(b,denseCoverage=false){
  let col=new THREE.Color('#352523'),az=128,lat=40,start=b.p.length/3;
  for(let j=0;j<=lat;j++)for(let k=0;k<=az;k++){
   let phi=k/az*TAU,front=Math.pow(Math.max(0,Math.cos(phi)),2.2),limit=2.32-1.195*front-.72*Math.exp(-Math.pow((phi-4.91)/.42,4))+front*(.010*Math.sin(phi*53)+.004*Math.sin(phi*137));
@@ -119,21 +124,21 @@ function foundation(b){
   let t=j/down,phi=1.16+k/angular*(TAU-2.43),lower=smooth(.54,1,t),radius=.66+.15*Math.sin(t*Math.PI*.83)-.075*lower;
   // Only the nape needs an opaque core. Keeping it above the shoulder avoids
   // a dark cone or a blunt hem competing with the independently falling locks.
-  let y=.82-2.13*t+(.10*Math.sin(phi*3.1)+.025*Math.sin(phi*9.3))*lower;
+  let y=.82-(denseCoverage?1.28:2.13)*t+(.10*Math.sin(phi*3.1)+.025*Math.sin(phi*9.3))*lower;
   let z=-.075+Math.cos(phi)*(.64+.075*Math.sin(t*Math.PI)-.05*lower);
   vert(b,V(Math.sin(phi)*radius,y,z),col.clone().multiplyScalar(.87+.07*Math.sin(phi*21)),[k/angular,t]);
  }
  for(let j=0;j<down;j++)for(let k=0;k<angular;k++){let a=start+j*(angular+1)+k;quad(b,a,a+angular+1,a+angular+2,a+1);}
 }
-export function createHair({headTilt=-.17}={}){
+export function createHair({headTilt=-.17,coverage=false}={}){
  let root=new THREE.Group();root.name='Original chestnut hair with flowing geometric fringe';
  let random=rng(),shell=batch(),locks=batch(),strands=batch(),bangs=batch(),fringe=batch(),paths=[];shell.rgba=true;
- let maps=fiberMaps();
- let mat=new THREE.MeshPhysicalMaterial({vertexColors:true,map:maps.map,normalMap:maps.normalMap,normalScale:new THREE.Vector2(.055,.016),alphaTest:.008,alphaToCoverage:false,transparent:true,depthWrite:false,forceSinglePass:true,roughness:.71,metalness:0,side:THREE.DoubleSide,anisotropy:.08,anisotropyRotation:Math.PI*.5,clearcoat:0,specularIntensity:.075,specularColor:'#b49a8d',envMapIntensity:.28});
+ let maps=fiberMaps(coverage);
+ let mat=new THREE.MeshPhysicalMaterial({vertexColors:true,map:maps.map,normalMap:maps.normalMap,normalScale:new THREE.Vector2(.055,.016),alphaTest:coverage?.10:.008,alphaToCoverage:coverage,transparent:!coverage,depthWrite:coverage,forceSinglePass:true,roughness:.71,metalness:0,side:THREE.DoubleSide,anisotropy:.08,anisotropyRotation:Math.PI*.5,clearcoat:0,specularIntensity:.075,specularColor:'#b49a8d',envMapIntensity:.28});
  let fineMat=new THREE.MeshPhysicalMaterial({vertexColors:true,roughness:.64,specularIntensity:.10,specularColor:'#c2aba0',envMapIntensity:.25,transparent:true,opacity:.71,depthWrite:false,side:THREE.DoubleSide,forceSinglePass:true});
  let fringeMat=fineMat.clone();fringeMat.opacity=.82;fringeMat.roughness=.68;fringeMat.specularIntensity=.07;
  let shellMat=mat.clone();shellMat.map=null;shellMat.normalMap=null;shellMat.alphaTest=0;shellMat.alphaToCoverage=false;shellMat.transparent=true;shellMat.depthWrite=false;shellMat.anisotropy=0;shellMat.roughness=1;shellMat.specularIntensity=0;shellMat.envMapIntensity=0;
- foundation(shell);
+ foundation(shell,coverage);
  // Independent rounded rear wave groups replace the entire skirt-like foundation.
  for(let k=0;k<64;k++){
   let phi=.84+k/63*(TAU-2.03)+(random()-.5)*.022,side=Math.sin(phi),back=Math.cos(phi),phase=phi*1.65+.20*Math.sin(k*1.3),amp=.05+.060*random();
@@ -141,7 +146,7 @@ export function createHair({headTilt=-.17}={}){
   let end=-3.61+.14*Math.sin(k*.61)+.09*Math.sin(k*2.07)+.17*Math.sin(phi*2.2);
   let ps=[scalp(.07+(k%3)*.02,phi,.003),scalp(.47,phi,.012),scalp(.98,phi,.027),scalp(1.55,phi,.032),pt(-.52,.98,.87,0),pt(-1.36,1.10,.92,.8),pt(-2.13,1.22,.89,2),pt(-2.81,1.16,.84,3.2),pt(end+.21,.99,.75,4.3),pt(end,.91,.71,4.8)];
   let c=curve(ps),w=.071+random()*.017;
-  volumeLock(locks,c,w,k%4?'#543D38':'#624B45',false,phase,40,.023+random()*.010);
+  volumeLock(locks,c,w*(coverage?1.04:1),k%4?'#543D38':'#624B45',false,phase,40,.023+random()*.010);
   paths.push({c,w,front:false,phase:k});
  }
  // Front lengths overlap as several fuller, differently phased waves over the chest.
@@ -159,7 +164,7 @@ export function createHair({headTilt=-.17}={}){
    [side*(.42+q*.69+.10*Math.sin(phase+4.5)),end,.74+.06*Math.cos(phase+2.4)]];
   if(left)for(let point of ps){let p=point.isVector3?point:V(...point),spread=smooth(1.05,2.65,-p.y)*(.035+.30*q);p.x-=spread;if(!point.isVector3)point[0]=p.x;}
   let c=curve(ps),w=.046+.021*random();
-  volumeLock(locks,c,w,k%4?'#563F3A':'#654C46',true,phase,44,.026+.010*random());
+  volumeLock(locks,c,w*(coverage?1.12:1),k%4?'#563F3A':'#654C46',true,phase,44,.026+.010*random());
   paths.push({c,w,front:true,phase:k+side});
  }
  let colors=['#4E3934','#5A413A','#46332E','#624941','#3D2C29','#6C5148'];

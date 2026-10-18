@@ -98,10 +98,10 @@ const torsoStations=[
   [0,.375,.555,.30,.780,1.58,1.74],
   [.12,.81,.636,.46,.49,1.52,1.42],
   [.27,1.395,.710,.548,.23,1.34,1.02],
-  [.365,1.590,.723,.565,.025,1.08,.73],
-  [.49,1.575,.745,.572,-.38,.34,.19],
-  [.70,1.525,.713,.562,-.80,-.44,-.54],
-  [1,1.49,.637,.54,-1.45,-1.45,-1.45]
+  [.365,1.590,.738,.565,.025,1.08,.73],
+  [.49,1.553,.764,.568,-.38,.34,.19],
+  [.70,1.449,.722,.529,-.80,-.44,-.54],
+  [1,1.365,.614,.486,-1.45,-1.45,-1.45]
 ];
 
 function profile(t) {
@@ -135,35 +135,51 @@ function fabricRelief(x,y) {
   // A broad sleeve fold remains legible around the outside of the hair silhouette.
   const sleeveLine=(x<0?1.43:1.48)+(x<0?.10:.16)*(y+.4);
   folds+=.023*gauss(y+(x<0?.55:.24),.68)*(gauss(ax-sleeveLine,.083)-.34*gauss(ax-sleeveLine-.08,.14));
-  // One oblique lower gather replaces the former symmetrical horizontal hem band.
-  const hemD=y+1.18+.43*(x+.30);
-  folds+=.019*gauss(x+.62,.43)*(gauss(hemD,.078)-.33*gauss(hemD-.073,.13));
-  // Small diagonal compression immediately below the left collar point.
-  const collarD=y-.72+.37*(x+.41);
-  folds+=.013*gauss(x+.43,.23)*(gauss(collarD,.043)-.33*gauss(collarD-.055,.080));
+  // Unequal diagonal gathers descend from the underarm and ease toward the waist.
+  const underarmD=y-.10+.57*(x+.68);
+  folds+=.026*gauss(x+.84,.41)*(gauss(underarmD,.073)-.29*gauss(underarmD-.085,.14));
+  const waistD=y+.98+.33*(x+.13);
+  folds+=.029*gauss(x+.49,.45)*(gauss(waistD,.091)-.31*gauss(waistD-.094,.17));
+  // One shallow compression leaves room for unbroken cloth below the collar.
+  const collarD=y-.57+.49*(x+.40);
+  folds+=.014*gauss(x+.44,.22)*(gauss(collarD,.054)-.31*gauss(collarD-.065,.103));
   return folds;
+}
+
+function roundedShoulderWeight(c){
+  const join=.62;
+  if(c>=join)return Math.pow(c,1.32);
+  // An even polynomial has finite curvature at the crest and matches the
+  // surrounding section's value, slope and curvature at the join.
+  const q=c/join,q2=q*q;
+  return Math.pow(join,1.32)*q2*(1.5678-.7956*q2+.2278*q2*q2);
 }
 
 function torsoPoint(u,t) {
   const a=u*TAU,s=Math.sin(a),c=Math.cos(a),p=profile(t);
   const x=p[0]*s;
-  const front=c>=0;
-  let y=mix(p[4],front?p[3]:p[5],Math.pow(Math.abs(c),1.32));
+  const front=c>=0,co=Math.abs(c),endY=front?p[3]:p[5];
+  const shoulder=smooth(.06,.19,t)*(1-smooth(.47,.68,t));
+  const roundedEnd=mix((p[3]+p[5])*.5,endY,smooth(0,.62,co));
+  const roundedY=mix(p[4],roundedEnd,roundedShoulderWeight(co));
+  let y=mix(mix(p[4],endY,Math.pow(co,1.32)),roundedY,shoulder);
   // Cut a real V in the front pattern, with gently eased edges at the shirt body.
   if(front){const vY=p[3]+(p[4]-p[3])*Math.pow(Math.abs(s),.87);y=mix(y,vY,1-smooth(.035,.265,t));}
+  y-=.022*shoulder*Math.pow(1-smooth(0,.62,co),2);
   y+=.042*s*Math.sin(Math.PI*t)*(1-smooth(.62,1,t));
   let z=(front?p[1]:p[2])*c;
   const gate=smooth(.12,.35,t)*(1-smooth(.94,1.0,t));
   if(front) {
     const ax=Math.abs(x);
     // Soft draped volume between the chest and waist, with generous unwrinkled areas.
-    z+=.051*gauss(ax-.52,.43)*gauss(y+.22,.60)*c;
-    z+=.017*gauss(ax-.74,.48)*gauss(y+1.12,.36);
+    z+=.078*gauss(ax-.51,.45)*gauss(y+.20,.62)*c;
+    z+=.017*gauss(ax-.74,.48)*gauss(y+1.12,.36)*c;
     z+=fabricRelief(x,y)*gate*c;
     // Hanging sleeves turn away from the chest plane after the shoulder seam.
     z-=.105*c*smooth(1.11,1.47,ax)*gauss(y-.26,.91);
     // The sleeve attachment is a soft inset instead of a periodic ribbed surface.
-    z-=.036*gauss(ax-1.225-.025*y,.086)*smooth(.43,.67,t)*(1-smooth(.96,1,t));
+    const armSeam=1.205+.062*y;
+    z-=.063*gauss(ax-armSeam,.102)*smooth(.39,.61,t)*(1-smooth(.96,1,t))*c;
   } else {
     const backFold=.021*gauss(x-.46-.025*y,.098)-.014*gauss(x+.57+.04*y,.118);
     z-=gate*(backFold+.014*gauss(x,.062)*gauss(y-.23,.66));
@@ -193,7 +209,7 @@ function bodyNormal(x,y) {
   const zy=(bodyAtXY(x,y+e)[2]-bodyAtXY(x,y-e)[2])/(2*e);
   return new THREE.Vector3(-zx,-zy,1).normalize();
 }
-const collarTipDepth=[bodyAtXY(-.654,.805)[2]+.027,bodyAtXY(.654,.805)[2]+.027];
+const collarTipDepth=[bodyAtXY(-.713,.583)[2]+.022,bodyAtXY(.713,.623)[2]+.022];
 
 function curveMesh(group,name,points,radius,mat,segments=64) {
   const c=new THREE.CatmullRomCurve3(points.map(p=>new THREE.Vector3(...p)));
@@ -201,40 +217,55 @@ function curveMesh(group,name,points,radius,mat,segments=64) {
 }
 
 function collarPoint(side,u,v) {
-  // A short spread collar rolls outward from the neck into a distinct pointed tip.
-  // The inner fold continues toward the open V; the outside arches over the shirt.
-  const topIn=new THREE.Vector3(.307,1.655,.092),topOut=new THREE.Vector3(.520,1.598,-.028);
-  const bottomIn=new THREE.Vector3(.029,.808,.594),bottomOut=new THREE.Vector3(.654,.805,.60);
+  // The folded leaf ends above the opening on its inside and lower on its outside.
+  // A separate facing follows the V, so no broad horizontal join crosses the chest.
+  const topIn=new THREE.Vector3(.315,1.625,.072),topOut=new THREE.Vector3(.485,1.596,-.055);
+  const bottomIn=new THREE.Vector3(.258,1.155,.602),bottomOut=new THREE.Vector3(.713,.605,.60);
   bottomOut.z=collarTipDepth[side<0?0:1];
   const inn=topIn.clone().lerp(bottomIn,v),out=topOut.clone().lerp(bottomOut,v);
-  inn.x+=.072*Math.sin(v*Math.PI);inn.z-=.023*Math.sin(v*Math.PI);
-  out.x+=.135*Math.sin(v*Math.PI);out.y+=.045*Math.sin(v*Math.PI);out.z+=.058*Math.sin(v*Math.PI);
+  inn.x+=.025*Math.sin(v*Math.PI);inn.y-=.012*Math.sin(v*Math.PI);inn.z+=.040*Math.sin(v*Math.PI);
+  out.x+=.085*Math.sin(v*Math.PI);out.y+=.130*Math.sin(v*Math.PI);out.z+=.024*Math.sin(v*Math.PI);
   const p=inn.lerp(out,u);
-  // Soft rolled turn, not a planar polygon, with a crisp supported point.
-  p.z+=.085*Math.sin(u*Math.PI)*Math.sin(v*Math.PI*.90);
-  p.y-=.019*Math.sin(u*Math.PI)*Math.sin(v*Math.PI);
-  p.z+=.009*Math.sin(u*Math.PI*1.7)*Math.sin(v*Math.PI);
-  p.z+=.041*gauss(u-.19,.155)*Math.sin(v*Math.PI);
-  p.z+=(side<0?.016:-.012)*Math.sin(u*Math.PI)*gauss(v-.68,.22);
-  p.y+=(side<0?.017:-.009)*Math.sin(u*Math.PI)*Math.sin(v*Math.PI);
+  // Turn the upper collar outward instead of leaving a squared upright wall.
+  // This roll fades above the existing free edge and opening connection.
+  const upperRoll=1-smooth(0,.38,v);
+  p.x+=.035*u*upperRoll;
+  p.y-=.105*(.65+.35*u)*upperRoll;
+  p.y+=.015*Math.sin(u*Math.PI)*upperRoll;
+  p.z+=(.13*(.30+.70*u)+.026*Math.sin(u*Math.PI))*upperRoll;
+  p.y+=.045*Math.sin(u*Math.PI)*smooth(.45,1,v);
+  p.z+=.055*Math.sin(u*Math.PI)*Math.sin(v*Math.PI*.92);
+  p.z+=.010*Math.sin(u*Math.PI*1.65)*Math.sin(v*Math.PI);
+  p.z+=(side<0?.014:-.009)*Math.sin(u*Math.PI)*gauss(v-.72,.22);
   p.x*=side;
-  if(side<0){p.y+=.025*v;p.z-=.010*v;}
+  p.y+=(side<0?-.022:.018)*v;
+  if(side<0)p.z-=.008*v;
   // The collar is a separate folded layer. Test its entire surface against both
   // the shirt and the tilted neck instead of supporting only its pointed tip.
   const shirt=bodyAtXY(p.x,p.y);
   let support=neckFrontZ(p.x,p.y);
   if(Math.abs(shirt[0]-p.x)<.018&&Math.abs(shirt[1]-p.y)<.024)support=Math.max(support,shirt[2]);
   if(Number.isFinite(support)){
-    const arch=Math.pow(Math.sin(v*Math.PI),1.20);
-    const clearance=.020+.128*Math.pow(u,.80)*arch+.035*Math.sin(u*Math.PI)*arch+.014*gauss(u-.19,.17)*Math.sin(v*Math.PI);
+    const arch=Math.sin(v*Math.PI);
+    const clearance=.019+.098*arch*(.4+.6*u)+.115*Math.pow(1-u,1.30)*smooth(.53,1,v)+.025*Math.sin(u*Math.PI)*smooth(.30,1,v);
     const target=support+clearance,d=p.z-target;
     p.z=.5*(p.z+target+Math.sqrt(d*d+.004*.004));
   }
   return [p.x,p.y,p.z];
 }
 
-function collarNormal(side,u,v){
-  const e=.0007,a=collarPoint(side,u-e,v),b=collarPoint(side,u+e,v),c=collarPoint(side,u,v-e),d=collarPoint(side,u,v+e);
+function facingPoint(side,u,v){
+  const upperTurn=1-smooth(0,.25,v),edge=torsoPoint(side*(1-v)*.25,0);
+  const x=edge[0]+side*u*(.076+.010*v-.020*upperTurn)+placketX(.780)*Math.pow(v,4);
+  const y=edge[1]-.014*u*Math.sin(v*Math.PI)-.030*u*upperTurn,shirt=bodyAtXY(x,y);
+  let z=edge[2];
+  if(Math.abs(shirt[0]-x)<.018&&Math.abs(shirt[1]-y)<.024)z=shirt[2];
+  z=Math.max(z,neckFrontZ(x,y));
+  return [x,y,z+.010+.006*Math.sin(u*Math.PI)+.022*u*Math.sin(v*Math.PI)+.020*u*upperTurn];
+}
+
+function facingNormal(side,u,v){
+  const e=.0007,a=facingPoint(side,u-e,v),b=facingPoint(side,u+e,v),c=facingPoint(side,u,v-e),d=facingPoint(side,u,v+e);
   const du=new THREE.Vector3(b[0]-a[0],b[1]-a[1],b[2]-a[2]),dv=new THREE.Vector3(d[0]-c[0],d[1]-c[1],d[2]-c[2]);
   const normal=new THREE.Vector3().crossVectors(dv,du).normalize();
   if(normal.z<0)normal.negate();return normal;
@@ -264,7 +295,7 @@ function addCollar(group,side,cloth,seamMat) {
   const solid=solidifyGrid(g,22,32),colors=[],uv=solid.getAttribute('uv'),half=solid.getAttribute('position').count/2;
   for(let i=0;i<uv.count;i++){
     const u=uv.getX(i),v=uv.getY(i);
-    const shade=.10*gauss(u-.075,.23)*(.38+.62*Math.sin(v*Math.PI))+.034*smooth(.73,1,v)+(i>=half?.09:0);
+    const shade=.075*gauss(u-.075,.23)*(.38+.62*Math.sin(v*Math.PI))+.022*smooth(.73,1,v)+(i>=half?.125:0);
     colors.push(1-shade,1-shade*.98,1-shade*.78);
   }
   solid.setAttribute('color',new THREE.Float32BufferAttribute(colors,3));
@@ -274,6 +305,20 @@ function addCollar(group,side,cloth,seamMat) {
   curveMesh(group,`blouse-${n}-collar-edge`,edge,.0037,seamMat,88);
   const roll=[];for(let j=0;j<=36;j++){const p=collarPoint(side,.12,j/36);p[2]+=.002;roll.push(p);}
   curveMesh(group,`blouse-${n}-collar-fold`,roll,.0045,cloth,64);
+}
+
+function addFacing(group,side,cloth,seamMat){
+  const n=side>0?'right':'left',g=surface(6,36,(u,v)=>facingPoint(side,u,v));
+  if(side<0){const idx=g.index;for(let i=0;i<idx.count;i+=3){const b=idx.getX(i+1);idx.setX(i+1,idx.getX(i+2));idx.setX(i+2,b);}g.computeVertexNormals();}
+  const uv=g.getAttribute('uv'),colors=[];
+  for(let i=0;i<uv.count;i++){
+    const u=uv.getX(i),v=uv.getY(i),shade=.045*Math.sin(v*Math.PI)*(.3+.7*u);
+    colors.push(1-shade,1-shade*.985,1-shade*.80);
+  }
+  g.setAttribute('color',new THREE.Float32BufferAttribute(colors,3));
+  mesh(group,`blouse-${n}-neck-opening-facing`,g,cloth);
+  const seam=[];for(let j=0;j<=36;j++){const p=facingPoint(side,.90,mix(.10,1,j/36));p[2]+=.0018;seam.push(p);}
+  curveMesh(group,`blouse-${n}-facing-stitch`,seam,.0014,seamMat,48);
 }
 
 function batchButtons(group) {
@@ -298,11 +343,11 @@ function addButtons(group,buttonMat,holeMat,threadMat) {
   const threadGeometry=new THREE.CylinderGeometry(.0018,.0018,.018,5);
   for(let i=0;i<5;i++) {
     const y=i<4?BUTTON_Y[i]:1.104,x=i<4?placketX(y):.180;
-    const p=i<4?bodyAtXY(x,y):collarPoint(1,.080,.730);
+    const p=i<4?bodyAtXY(x,y):facingPoint(1,.68,.735);
     const button=new THREE.Group();button.name=`blouse-ivory-four-hole-button-${i+1}`;
     button.position.set(i<4?x:p[0],i<4?y:p[1],p[2]+.027);
     if(i<4)button.quaternion.setFromUnitVectors(new THREE.Vector3(0,0,1),bodyNormal(x,y));
-    else{button.quaternion.setFromUnitVectors(new THREE.Vector3(0,0,1),collarNormal(1,.080,.730));button.scale.setScalar(.91);}
+    else{button.quaternion.setFromUnitVectors(new THREE.Vector3(0,0,1),facingNormal(1,.68,.735));button.scale.setScalar(.91);}
     const disc=mesh(button,'button-pearl-disc',buttonGeometry,buttonMat);disc.rotation.x=Math.PI/2;
     const rim=mesh(button,'button-rounded-rim',edgeGeometry,buttonMat);rim.position.z=.0095;
     for(const sx of[-1,1])for(const sy of[-1,1]) {
@@ -317,7 +362,7 @@ function addButtons(group,buttonMat,holeMat,threadMat) {
 }
 
 function clothGeometry() {
-  const nu=148,nv=80,g=surface(nu,nv,torsoPoint),p=g.attributes.position,n=g.attributes.normal,colors=[];
+  const nu=144,nv=76,g=surface(nu,nv,torsoPoint),p=g.attributes.position,n=g.attributes.normal,colors=[];
   // Surface tangents prevent triangle-sized normal changes on the shoulder
   // and keep the wrapped centre seam continuous at both copies of the UV boundary.
   const e=.00013;
@@ -332,8 +377,9 @@ function clothGeometry() {
     let shade=0;
     if(z>0){
       const fold=fabricRelief(x,y),slope=(fabricRelief(x+.027,y+.016)-fabricRelief(x-.027,y-.016))/.063;
-      const beneathCollar=.19*gauss(y-(1.028-.48*a),.080)*smooth(.085,.21,a)*(1-smooth(.76,.88,a));
-      const seamShade=.070*gauss(a-1.225-.025*y,.103)*gauss(y+.5,.91)+.047*gauss(x-placketX(y)-.10,.036);
+      const leafU=clamp((a-.258)/.455,0,1),leafEdge=mix(1.155,.605,leafU)+.045*Math.sin(leafU*Math.PI)+(x<0?-.022:.018);
+      const beneathCollar=.17*gauss(y-(leafEdge-.040),.064)*smooth(.20,.275,a)*(1-smooth(.67,.78,a));
+      const seamShade=.080*gauss(a-1.205-.062*y,.112)*gauss(y+.5,.91)+.047*gauss(x-placketX(y)-.10,.036);
       // Soft directional ambient occlusion follows the authored relief. PBR lighting
       // still shades the same real folds from every view; no photographic texture.
       shade=beneathCollar+seamShade+Math.max(0,-fold)*3.1+.16*clamp(slope,-.60,.75);
@@ -383,10 +429,11 @@ export function createBlouse() {
   for(const fabric of[cloth,collarMat,placketMat,seamMat])fabric.color.multiplyScalar(1.28);
   mesh(group,'blouse-continuous-torso-and-sleeves',clothGeometry(),cloth);
   // Closed crop, inset half a millimetre to avoid coplanar shimmer on turntable views.
-  const cap=[];for(let i=0;i<96;i++){const a=i/96*TAU;cap.push(new THREE.Vector2(1.49*Math.sin(a),.637*Math.cos(a)*(Math.cos(a)>0?1:.54/.637)));}
+  const cap=[];for(let i=0;i<96;i++){const p=torsoPoint(i/96,1);cap.push(new THREE.Vector2(p[0],p[2]));}
   const bottomGeo=new THREE.ShapeGeometry(new THREE.Shape(cap));bottomGeo.rotateX(Math.PI/2);bottomGeo.translate(0,-1.449,0);
   mesh(group,'blouse-finished-bust-base',bottomGeo,cloth);
 
+  addFacing(group,-1,placketMat,seamMat);addFacing(group,1,placketMat,seamMat);
   addCollar(group,-1,collarMat,seamMat);addCollar(group,1,collarMat,seamMat);
   addTailoring(group,seamMat,cloth);
   // Raised centre placket shares exactly the body depth and remains closed below the V.
@@ -408,7 +455,7 @@ export function createBlouse() {
   // Geometry, normals, seams and buttons all receive the same continuous transform.
   broadenShoulders(group);
   group.userData.originalGeometry=true;
-  group.userData.design='Cotton blouse with sloping shoulders and hanging sleeve planes, soft rolled spread collar, localized asymmetrical gathers, curved placket, sewn yoke/sleeves, four body buttons and open collar button.';
+  group.userData.design='Cotton blouse with sloping shoulders, a tapered waist and hanging sleeve planes; separately folded pointed collar leaves above an open V facing; localized asymmetrical gathers, curved placket, sewn yoke/sleeves, four body buttons and an open facing button.';
   return group;
 }
 

@@ -81,25 +81,35 @@ function makeSkinAtlas(source) {
     const [u,v]=mapping(x,y),ix=Math.max(0,Math.min(c.width-2,Math.floor(u))),iy=Math.max(0,Math.min(c.height-2,Math.floor(v))),fx=Math.max(0,Math.min(1,u-ix)),fy=Math.max(0,Math.min(1,v-iy)),p=(iy*c.width+ix)*4;
     return [0,1,2].map(ch=>(pixels[p+ch]*(1-fx)+pixels[p+4+ch]*fx)*(1-fy)+(pixels[p+c.width*4+ch]*(1-fx)+pixels[p+c.width*4+4+ch]*fx)*fy);
   };
-  // Lateral transitions inherit a nearby skin tone from this same reference,
-  // preserving a rounded cheek instead of a constant-color polygonal border.
-  const edgeTints=Array.from({length:canvas.height},(_,j)=>{
-    const y=1.6-j/(canvas.height-1)*2.85,w=widthAt(y);
-    return [-1,1].map(side=>y<.14&&y>-1.18?sample(side*Math.max(.012,w-.12),y):base);
-  });
   const foreheadColor=[0,0,0];
   for(let yy=343;yy<367;yy++)for(let xx=612;xx<634;xx++)for(let ch=0;ch<3;ch++)foreheadColor[ch]+=pixels[(yy*c.width+xx)*4+ch]/528;
+  // The temple tint comes from clean upper-cheek skin in the same reference.
+  // Sampling the photographed fringe at eye height would smear that hair
+  // across the lateral face, even when the independently modeled hair is hidden.
+  const edgeTints=Array.from({length:canvas.height},(_,j)=>{
+    const y=1.6-j/(canvas.height-1)*2.85,w=widthAt(y);
+    return [-1,1].map(side=>{
+      if(y>=.30||y<=-1.18)return y>=.30?foreheadColor:base;
+      const safeY=Math.min(y,-.23),safeX=Math.max(.012,Math.min(.53,widthAt(safeY)-.15));
+      const color=sample(side*safeX,safeY),blend=smooth((y+.23)/.53);
+      return color.map((v,ch)=>v*(1-blend)+foreheadColor[ch]*blend);
+    });
+  });
   for(let j=0;j<canvas.height;j++)for(let i=0;i<canvas.width;i++) {
     const x=i/(canvas.width-1)*2-1,y=1.6-j/(canvas.height-1)*2.85,a=photoWeight(x,y),k=(j*canvas.width+i)*4;
     const edgeAmount=.72*smooth((.92-Math.abs(x))/.20)*smooth((y+1.21)/.12)*(1-smooth((y-.12)/.16));
     const lateral=base.map((v,ch)=>v*(1-edgeAmount)+edgeTints[j][x<0?0:1][ch]*edgeAmount);
     const rgb=a>0?sample(x,y):lateral;
+    const templeBand=smooth((y+.53)/.12)*(1-smooth((y-.20)/.15));
+    const templeClean=templeBand*(x<0?smooth((-x-.575)/.095):smooth((x-.65)/.08));
+    const skinRGB=rgb.map((v,ch)=>v*(1-templeClean)+edgeTints[j][x<0?0:1][ch]*templeClean);
     // Replace photographic fringe in the forehead color with clean skin; the
     // actual fringe is independent three-dimensional hair above this surface.
     const forehead=smooth((y-.15)/.095);
     const centralFringe=smooth((y-.055)/.075)*(1-smooth((Math.abs(x)-.075)/.085));
+    const outerFringe=smooth((-x-.51)/.07)*smooth((y-.07)/.05)*(1-smooth((y-.26)/.10));
     const foreheadCoverage=Math.max(a,smooth((.92-Math.abs(x))/.20)*smooth((1.57-y)/.20));
-    const clean=Math.max(forehead,centralFringe)*foreheadCoverage;
+    const clean=Math.max(forehead,centralFringe,outerFringe)*foreheadCoverage;
     const noise=(Math.sin(i*13.31+j*17.19)*43758.5453)%1*.48;
     const litSkin=foreheadColor.map((v,ch)=>v+(ch===0?-6:-9)*x+noise);
     const browT=(Math.abs(x)-.14)/.49;
@@ -109,7 +119,7 @@ function makeSkinAtlas(source) {
       const shade=.38*Math.exp(-(((y-browY)/Math.max(.001,width))**2))*Math.sin(browT*Math.PI)**.25;
       for(let ch=0;ch<3;ch++)litSkin[ch]=litSkin[ch]*(1-shade)+[86,61,52][ch]*shade;
     }
-    for(let ch=0;ch<3;ch++)out.data[k+ch]=(lateral[ch]*(1-a)+rgb[ch]*a)*(1-clean)+litSkin[ch]*clean;
+    for(let ch=0;ch<3;ch++)out.data[k+ch]=(lateral[ch]*(1-a)+skinRGB[ch]*a)*(1-clean)+litSkin[ch]*clean;
     out.data[k+3]=255;
   }
   context.putImageData(out,0,0);
@@ -147,6 +157,12 @@ export async function applyReferenceSkin(head) {
     assignUV(o.geometry);
     const original=o.material,mat=original.clone();mat.map=atlas;mat.color.set('#ffffff');mat.vertexColors=false;
     mat.roughness=o.name.includes('lip')?.44:.53;mat.specularIntensity=.28;
+    if(!eyeSurface&&!o.name.startsWith('naris-')){
+      // A small diffuse fill prevents the source illumination and live key
+      // from doubling the darkest skin transitions. Geometry remains lit.
+      mat.emissiveMap=atlas;mat.emissive.set('#ffffff');mat.emissiveIntensity=.04;
+      mat.specularIntensity=.23;mat.bumpScale=.0015;
+    }
     if(o.name==='scleral-globe'){mat.roughness=.40;mat.specularIntensity=.20;mat.clearcoat=.03;mat.clearcoatRoughness=.22;}
     if(o.name==='brown-iris-and-pupil'){mat.roughness=.48;mat.specularIntensity=.10;mat.clearcoat=0;}
     mat.needsUpdate=true;

@@ -5,13 +5,17 @@ import { GLTFExporter } from 'three/addons/exporters/GLTFExporter.js';
 import { createHead } from './face.js';
 import { applyReferenceSkin } from './reference-skin.js';
 import { applyReferenceNeck } from './reference-neck.js';
+import { compensateReferenceSkin } from './skin-illumination.js';
 import { createHair } from './hair.js';
 import { createFiberHair } from './hair-fibers.js';
+import { createGroomHair } from './hair-groom.js';
 import { createBlouse, createNeck } from './blouse.js';
 
 const $ = (id) => document.getElementById(id);
 const fiberCandidate=new URLSearchParams(location.search).get('hair')==='fibers';
-const state = { backend: new URLSearchParams(location.search).get('backend') === 'webgl' ? 'webgl' : 'webgpu', width: 900, height: 1200, iteration: fiberCandidate?24:23, score: fiberCandidate?55:67, renderedFrames: 0, renderMs: 0, rotating: false, view: 'front', ready: false, lighting: 'soft' };
+const groomCandidate=new URLSearchParams(location.search).get('hair')==='groom';
+const coverageCandidate=(new URLSearchParams(location.search).get('hair')||'coverage')==='coverage';
+const state = { backend: new URLSearchParams(location.search).get('backend') === 'webgl' ? 'webgl' : 'webgpu', width: 900, height: 1200, iteration: groomCandidate?30:coverageCandidate?29:fiberCandidate?25:27, score: groomCandidate?62:fiberCandidate?61:68, renderedFrames: 0, renderMs: 0, rotating: false, view: 'front', ready: false, lighting: 'soft' };
 const scene = new THREE.Scene();
 scene.background = new THREE.Color('#cbe3f3');
 const model = new THREE.Group();
@@ -22,7 +26,7 @@ headPivot.position.y = 2.95;
 headPivot.rotation.z = -0.17;
 headPivot.rotation.y = 0.16;
 const anatomicalHead=createHead();
-const anatomicalHair=fiberCandidate?createFiberHair():createHair();
+const anatomicalHair=groomCandidate?createGroomHair():fiberCandidate?createFiberHair():createHair({coverage:coverageCandidate});
 const skinReady=applyReferenceSkin(anatomicalHead).then(atlas=>{state.textureBakeMs=atlas.userData.bakeMs;return atlas;});
 headPivot.add(anatomicalHead, anatomicalHair);
 const bodyPose=new THREE.Group();bodyPose.name='Relaxed shoulder counterpose';
@@ -55,17 +59,17 @@ function studioEnvironment() {
 }
 scene.environment = studioEnvironment();
 scene.environmentIntensity = .5;
-const ambient = new THREE.AmbientLight('#ffffff', .8);
-const key = new THREE.DirectionalLight('#fff5ed', 1.65); key.position.set(-3.8,6.5,7);
-const fill = new THREE.DirectionalLight('#e8f0ff', 1.15); fill.position.set(4,3,5);
-const rim = new THREE.DirectionalLight('#f6f4ff', 1.0); rim.position.set(2,5,-4);
+const ambient = new THREE.AmbientLight('#ffffff', 1.10);
+const key = new THREE.DirectionalLight('#fff5ed', 1.05); key.position.set(-3,6,8);
+const fill = new THREE.DirectionalLight('#e8f0ff', 1.00); fill.position.set(4,3,8);
+const rim = new THREE.DirectionalLight('#f6f4ff', .75); rim.position.set(2,5,-4);
 key.castShadow=true;key.shadow.mapSize.set(1024,1024);key.shadow.radius=4;key.shadow.blurSamples=8;key.shadow.bias=-.0002;key.shadow.normalBias=.012;key.shadow.camera.left=-3.4;key.shadow.camera.right=3.4;key.shadow.camera.top=3.8;key.shadow.camera.bottom=-3.8;key.shadow.camera.near=.5;key.shadow.camera.far=20;key.target.position.set(0,1.7,0);
 scene.add(ambient,key,fill,rim,key.target);
 
 const camera = new THREE.OrthographicCamera(-2.7,2.7,3.6,-3.6,.05,100);
 camera.position.set(0,1.55,13);
 camera.lookAt(0,1.55,0);
-let renderer, controls, raf = 0, lastTimestamp = 0, toastTimer, initializing = false;
+let renderer, controls, raf = 0, lastTimestamp = 0, toastTimer, initializing = false, skinIlluminationApplied=false;
 const fullTarget = new THREE.Vector3(0,1.55,0);
 const detailTarget = new THREE.Vector3(.02,3.03,.30);
 const viewDirections = { front: [0,0,13], left: [-13,0,0], right: [13,0,0], back: [0,0,-13], detail: [0,0,13] };
@@ -171,9 +175,9 @@ async function exportGLB({download:shouldDownload=true}={}) {
 }
 function setLighting(name) {
   state.lighting=name;
-  if(name==='warm') {key.color.set('#ffdfbd');fill.color.set('#e9e3f3');key.intensity=2.2;fill.intensity=.85;ambient.intensity=.75;scene.background.set('#e4e6df');}
-  else if(name==='sculpture') {key.color.set('#ffffff');fill.color.set('#c4d7f1');key.intensity=2.8;fill.intensity=.4;ambient.intensity=.4;scene.background.set('#ccdfe6');}
-  else {key.color.set('#fff5ed');fill.color.set('#e8f0ff');key.intensity=1.65;fill.intensity=1.15;ambient.intensity=.8;scene.background.set('#cbe3f3');}
+  if(name==='warm') {key.color.set('#ffdfbd');fill.color.set('#e9e3f3');key.intensity=2.2;fill.intensity=.85;ambient.intensity=.75;rim.intensity=.8;scene.background.set('#e4e6df');}
+  else if(name==='sculpture') {key.color.set('#ffffff');fill.color.set('#c4d7f1');key.intensity=2.8;fill.intensity=.4;ambient.intensity=.4;rim.intensity=1.0;scene.background.set('#ccdfe6');}
+  else {key.color.set('#fff5ed');fill.color.set('#e8f0ff');key.intensity=1.05;fill.intensity=1.00;ambient.intensity=1.10;rim.intensity=.75;scene.background.set('#cbe3f3');}
   requestRender();
 }
 function setSettingsOpen(open) {
@@ -188,6 +192,7 @@ async function initialize(backend=state.backend) {
   $('backend-label').textContent=`INITIALIZING ${backend.toUpperCase()}`;
   try {
     await referenceReady;
+    if(!skinIlluminationApplied){state.skinIllumination=compensateReferenceSkin(anatomicalHead,scene,{strength:.35});skinIlluminationApplied=true;}
     if(backend==='webgpu') {
       if(!navigator.gpu)throw new Error('WebGPU is not available in this browser or context. Use a supported browser on HTTPS or localhost, or choose WebGL below.');
       const adapter=await navigator.gpu.requestAdapter({powerPreference:'high-performance'});
@@ -242,6 +247,6 @@ $('apply-settings').addEventListener('click',async()=>{
 });
 document.addEventListener('visibilitychange',()=>{if(document.hidden){cancelAnimationFrame(raf);raf=0;}else{lastTimestamp=performance.now();requestRender();}});
 window.addEventListener('pagehide',()=>{cancelAnimationFrame(raf);controls?.dispose();renderer?.dispose();});
-window.portrait={scene,model,headPivot,camera,get renderer(){return renderer;},get controls(){return controls;},state,get ready(){return state.ready;},setView,render:requestRender,renderNow:()=>{cancelAnimationFrame(raf);raf=0;if(state.ready)renderFrame(performance.now());},exportGLB,capture,setScore,startTurntable,setLighting,setResolution:applyResolution,initialize};
+window.portrait={scene,model,headPivot,camera,get renderer(){return renderer;},get controls(){return controls;},state,get ready(){return state.ready;},setView,render:requestRender,renderNow:()=>{cancelAnimationFrame(raf);raf=0;if(state.ready)renderFrame(performance.now());},exportGLB,capture,setScore,startTurntable,setLighting,setResolution:applyResolution,initialize,applySkinCompensation:strength=>{const metrics=compensateReferenceSkin(anatomicalHead,scene,{strength});requestRender();return metrics;}};
 setScore(state.iteration,state.score);
 initialize();

@@ -4,12 +4,79 @@
   "goal_achieved": false,
   "method": "Visual self-assessment against the sole uploaded image, supplemented by independent agent review. Scores are subjective and are not a certification of AAA production quality.",
   "scope": "Recorded assessments whose numeric results remain available. No missing historical scores have been invented.",
-  "current_accepted_iteration": 23,
-  "current_accepted_score": 67,
+  "current_accepted_iteration": 29,
+  "current_accepted_score": 68,
   "assessments": [
-    {"iteration":20,"score":63,"reviewer":"reference_art_review","decision":"baseline at that time","notes":"Reference skin and revised face optics helped; hair coverage, roots, long clumps, and tailoring still limited realism."},
-    {"iteration":22,"score":67,"reviewer":"root and reference_art_review","decision":"accepted","notes":"Fuller card groom, finer fringe, cheek strap removed, brighter cotton and shoulder counterpose. Crown seams and regular long hair bundles remain visible."},
-    {"iteration":23,"score":67,"reviewer":"reference_art_review","decision":"accepted","notes":"Neck colors from the same uploaded reference improve continuity with the face. Keep facial proportions stable while correcting hair. Upper neck rim was subsequently tucked inside jaw geometry."},
-    {"iteration":24,"score":55,"reviewer":"root","decision":"rejected experimental fiber-only groom","notes":"Twelve thousand subpixel tubes produce sparse, noisy coverage, bald crown gaps and two uniform long bundles. Three million triangles did not improve visual quality. Default remains the accepted card groom."}
+    {
+      "iteration": 20,
+      "score": 63,
+      "reviewer": "reference_art_review",
+      "decision": "baseline at that time",
+      "notes": "Reference skin and revised face optics helped; hair coverage, roots, long clumps, and tailoring still limited realism."
+    },
+    {
+      "iteration": 22,
+      "score": 67,
+      "reviewer": "root and reference_art_review",
+      "decision": "accepted",
+      "notes": "Fuller card groom, finer fringe, cheek strap removed, brighter cotton and shoulder counterpose. Crown seams and regular long hair bundles remain visible."
+    },
+    {
+      "iteration": 23,
+      "score": 67,
+      "reviewer": "reference_art_review",
+      "decision": "accepted",
+      "notes": "Neck colors from the same uploaded reference improve continuity with the face. Keep facial proportions stable while correcting hair. Upper neck rim was subsequently tucked inside jaw geometry."
+    },
+    {
+      "iteration": 24,
+      "score": 55,
+      "reviewer": "root",
+      "decision": "rejected experimental fiber-only groom",
+      "notes": "Twelve thousand subpixel tubes produce sparse, noisy coverage, bald crown gaps and two uniform long bundles. Three million triangles did not improve visual quality. Default remains the accepted card groom."
+    },
+    {
+      "iteration": 25,
+      "score": 61,
+      "reviewer": "root",
+      "decision": "rejected experimental groom",
+      "notes": "Continuous coverage solves sparse tubes, but exposes a scalp patch, narrow paired long bundles and abrupt crown/back boundaries."
+    },
+    {
+      "iteration": 26,
+      "score": 68,
+      "reviewer": "reference_art_review",
+      "decision": "accepted",
+      "notes": "Cleaner collar/placket, rounder closed ear shell, corrected neck rim, balanced lights and restrained corneal reflection. Hair still limits overall realism."
+    },
+    {
+      "iteration": 27,
+      "score": 68,
+      "reviewer": "root",
+      "decision": "accepted",
+      "notes": "Removed photographic hair contamination from temple colors, preserving the source eye and mouth anchors. Ear tessellation reduced while preserving silhouette; anatomy budget passes."
+    },
+    {
+      "iteration": 28,
+      "score": 62,
+      "reviewer": "root",
+      "decision": "not adopted; further corrections pending",
+      "notes": "New crown flow and layered locks still have a nape transition kink and early shoulder flare. Found shared palette mutation turning fine fringe black; correction requested."
+    },
+    {
+      "iteration": 29,
+      "score": 68,
+      "independent_score": 67,
+      "reviewer": "root and fiber_hair",
+      "decision": "accepted working baseline",
+      "notes": "Denser hair body and depth ordering remove white shirt gaps. Shortened nape core removes central back hem. Broad opaque locks and shoulder cutout still limit realism; independent review keeps 67."
+    },
+    {
+      "iteration": 30,
+      "score": 64,
+      "reviewer": "root",
+      "decision": "not adopted; crown frame correction pending",
+      "notes": "Corrected palette mutation and continuous nape improve experimental groom. Crown comb ridges, raised roots, broad flat temple flaps and uniformly fanned tips remain. Skin illumination compensation at 0.35 adopted after independent comparison, without a score increase."
+    }
   ]
 }

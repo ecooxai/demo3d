@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
+import { createEar } from './ear.js';
 
 const PI=Math.PI, clamp=THREE.MathUtils.clamp;
 const gauss=(x,m,s)=>Math.exp(-(((x-m)/s)**2));
@@ -182,7 +183,7 @@ function makeEye(s,skin,texture){
  g.add(mesh(buffer(pos,idx,uv),iris,'brown-iris-and-pupil'));
  // The cornea is one moist dielectric surface; an additional clearcoat would
  // duplicate its reflections and make the photographed eye color look glazed.
- const corneaMaterial=new THREE.MeshPhysicalMaterial({name:'corneal-tear-film',color:'#ffffff',roughness:.075,metalness:0,transmission:1,thickness:.009,ior:1.376,specularIntensity:.75,clearcoat:0,attenuationColor:'#fff8f0',attenuationDistance:2,envMapIntensity:.45,depthWrite:false});
+ const corneaMaterial=new THREE.MeshPhysicalMaterial({name:'corneal-tear-film',color:'#ffffff',roughness:.075,metalness:0,transmission:1,thickness:.009,ior:1.376,specularIntensity:.25,clearcoat:0,attenuationColor:'#fff8f0',attenuationDistance:2,envMapIntensity:.20,depthWrite:false});
  const cornea=mesh(buffer(corneaPos,idx,uv),corneaMaterial,'transparent-corneal-dome');
  cornea.castShadow=false;cornea.receiveShadow=false;cornea.renderOrder=2;g.add(cornea);
  // Small curved highlights describe the studio softboxes reflected by the tear film.
@@ -279,21 +280,6 @@ function makeNostrils(){
  }
  return g;
 }
-function makeEar(s,skin){
- const g=new THREE.Group();g.name=s<0?'left-ear':'right-ear';
- const p=[],idx=[],col=[],uv=[],N=80,R=24;
- for(let j=0;j<=R;j++)for(let i=0;i<=N;i++){
-  const a=i/N*2*PI,r=j/R,x=s*(.792+.128*r*Math.cos(a)),y=.055+.285*r*Math.sin(a);
-  const z=.015+.019*r+.066*gauss(r,.83,.16)-.025*(1-r*r)+.025*Math.sin(a);
-  p.push(x,y,z);const c=skinColor(x,y).lerp(new THREE.Color('#cb9388'),.22*(1-r));col.push(c.r,c.g,c.b);uv.push(i/N,j/R);
- }
- for(let j=0;j<R;j++)for(let i=0;i<N;i++){const a=j*(N+1)+i,b=a+N+1;if(s>0)idx.push(a,a+1,b,b,a+1,b+1);else idx.push(a,b,a+1,b,b+1,a+1);}
- const mat=skin.clone();mat.side=THREE.DoubleSide;mat.bumpMap=null;g.add(mesh(buffer(p,idx,uv,col),mat,'ear-cartilage'));
- const ridge=[];for(let i=0;i<=38;i++){const a=-PI*.6+i/38*PI*1.55;ridge.push([s*(.80+.063*Math.cos(a)),.04+.17*Math.sin(a),.055]);}
- g.add(mesh(tube(ridge,.012,38,7),new THREE.MeshStandardMaterial({color:'#e1af9f',roughness:.51}),'antihelix'));
- const tragus=mesh(new THREE.SphereGeometry(.031,18,12),new THREE.MeshStandardMaterial({color:'#ddb09f',roughness:.55}),'tragus');tragus.position.set(s*.744,-.012,.061);tragus.scale.set(.5,1,.7);g.add(tragus);
- return g;
-}
 function makeBrows(){
  const geo=[],g=new THREE.Group();g.name='individual-eyebrow-fibers';
  const browColor=new THREE.Color('#5d443b');
@@ -370,10 +356,10 @@ export function createHead({textures=true}={}){
  }
  const head=mesh(faceGeometry,skin,'continuous-face');root.add(head);
  const iris=textures?irisMap():null;
- root.add(makeEye(-1,skin,iris),makeEye(1,skin,iris),makeMouth(),makeNostrils(),makeEar(-1,skin),makeEar(1,skin),makeBrows());
+ root.add(makeEye(-1,skin,iris),makeEye(1,skin,iris),makeMouth(),makeNostrils(),makeBrows());
  refineProportions(root);
+ root.add(createEar(-1,skin),createEar(1,skin));
  root.getObjectByName('individual-eyebrow-fibers').position.y=-.10;
- const leftEar=root.getObjectByName('left-ear');leftEar.position.set(-.045,.13,.16);
  root.userData={source:'Original procedural anatomical surface. Skin and eye color can be baked separately from the sole user-supplied reference; no external geometry.',featureUnits:'head local; chin -1.18, crown 1.54'};
  return root;
 }
