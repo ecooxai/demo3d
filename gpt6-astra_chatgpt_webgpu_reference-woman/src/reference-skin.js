@@ -70,6 +70,22 @@ function photoWeight(x,y){
   return smooth((widthAt(y)-Math.abs(x))/.11);
 }
 
+// Hand-observed, skin-only bounds of the lower face in image 1. The TPS remains
+// unchanged: these bounds only reject samples that cross from jaw skin to hair.
+// In particular, the old (595,721) outer-jaw correspondence is outside the skin.
+const jawSkinRows=[
+  [625,356,654],[650,370,639],[675,387,623],[700,414,593],
+  [720,449,568],[738,479,541],[750,502,515],[756,508,508]
+];
+function jawSampleConfidence(u,v){
+  if(v<jawSkinRows[0][0])return 1;
+  if(v>jawSkinRows.at(-1)[0])return 0;
+  let i=0;while(i<jawSkinRows.length-2&&v>jawSkinRows[i+1][0])i++;
+  const a=jawSkinRows[i],b=jawSkinRows[i+1],t=(v-a[0])/(b[0]-a[0]);
+  const left=a[1]*(1-t)+b[1]*t,right=a[2]*(1-t)+b[2]*t;
+  return smooth((Math.min(u-left,right-u)+2)/12);
+}
+
 function makeSkinAtlas(source) {
   const c=document.createElement('canvas');c.width=source.naturalWidth;c.height=source.naturalHeight;
   const cx=c.getContext('2d',{willReadFrequently:true});cx.drawImage(source,0,0);
@@ -77,29 +93,59 @@ function makeSkinAtlas(source) {
   const canvas=document.createElement('canvas');canvas.width=1024;canvas.height=1536;
   const context=canvas.getContext('2d'),out=context.createImageData(canvas.width,canvas.height),mapping=makeMapping();
   const base=[232,191,174];
-  const sample=(x,y)=>{
-    const [u,v]=mapping(x,y),ix=Math.max(0,Math.min(c.width-2,Math.floor(u))),iy=Math.max(0,Math.min(c.height-2,Math.floor(v))),fx=Math.max(0,Math.min(1,u-ix)),fy=Math.max(0,Math.min(1,v-iy)),p=(iy*c.width+ix)*4;
+  const sampleSource=(u,v)=>{
+    const ix=Math.max(0,Math.min(c.width-2,Math.floor(u))),iy=Math.max(0,Math.min(c.height-2,Math.floor(v))),fx=Math.max(0,Math.min(1,u-ix)),fy=Math.max(0,Math.min(1,v-iy)),p=(iy*c.width+ix)*4;
     return [0,1,2].map(ch=>(pixels[p+ch]*(1-fx)+pixels[p+4+ch]*fx)*(1-fy)+(pixels[p+c.width*4+ch]*(1-fx)+pixels[p+c.width*4+4+ch]*fx)*fy);
   };
   const foreheadColor=[0,0,0];
   for(let yy=343;yy<367;yy++)for(let xx=612;xx<634;xx++)for(let ch=0;ch<3;ch++)foreheadColor[ch]+=pixels[(yy*c.width+xx)*4+ch]/528;
-  // The temple tint comes from clean upper-cheek skin in the same reference.
-  // Sampling the photographed fringe at eye height would smear that hair
-  // across the lateral face, even when the independently modeled hair is hidden.
+  // Average small, manually chosen two-dimensional skin patches. Repeating a
+  // single source sample along each output row produced horizontal cheek bands.
+  // Smooth interpolation between these clean patch colors preserves broad tone
+  // without extending photographic pores or stray hairs into long scan lines.
+  const patch=(u,v,rx=9,ry=9)=>{
+    const color=[0,0,0];let weight=0;
+    for(let yy=-ry;yy<=ry;yy++)for(let xx=-rx;xx<=rx;xx++){
+      const q=(xx/rx)**2+(yy/ry)**2;if(q>1)continue;
+      const a=Math.exp(-2.5*q),rgb=sampleSource(u+xx,v+yy);weight+=a;
+      for(let ch=0;ch<3;ch++)color[ch]+=rgb[ch]*a;
+    }
+    return color.map(v=>v/weight);
+  };
+  const lowerChin=patch(507,736,7,5);
+  const toneRows=[
+    [-1.25,lowerChin,lowerChin],
+    [-1.07,patch(480,719,9,6),patch(537,724,9,6)],
+    [-.92,patch(448,688,9,8),patch(573,688,9,8)],
+    [-.69,patch(401,632),patch(609,631,8,9)],
+    [-.44,patch(380,571,9,10),patch(633,568,9,10)],
+    [-.23,patch(377,510,8,9),patch(642,526,8,9)],
+    [.30,foreheadColor,foreheadColor],
+    [1.60,foreheadColor,foreheadColor]
+  ];
+  const toneAt=(y,side)=>{
+    let i=0;while(i<toneRows.length-2&&y>toneRows[i+1][0])i++;
+    const a=toneRows[i],b=toneRows[i+1],t=smooth((y-a[0])/(b[0]-a[0]));
+    return a[side+1].map((v,ch)=>v*(1-t)+b[side+1][ch]*t);
+  };
   const edgeTints=Array.from({length:canvas.height},(_,j)=>{
-    const y=1.6-j/(canvas.height-1)*2.85,w=widthAt(y);
-    return [-1,1].map(side=>{
-      if(y>=.30||y<=-1.18)return y>=.30?foreheadColor:base;
-      const safeY=Math.min(y,-.23),safeX=Math.max(.012,Math.min(.53,widthAt(safeY)-.15));
-      const color=sample(side*safeX,safeY),blend=smooth((y+.23)/.53);
-      return color.map((v,ch)=>v*(1-blend)+foreheadColor[ch]*blend);
-    });
+    const y=1.6-j/(canvas.height-1)*2.85;return [toneAt(y,0),toneAt(y,1)];
   });
+  const cleanLateral=(x,y,tints)=>{
+    const side=smooth((x+.12)/.24),edge=tints[0].map((v,ch)=>v*(1-side)+tints[1][ch]*side);
+    const amount=.72*smooth((.92-Math.abs(x))/.20)*smooth((y+1.21)/.12)*(1-smooth((y-.12)/.16));
+    const upper=smooth((y-.02)/.28);
+    return base.map((v,ch)=>(v*(1-amount)+edge[ch]*amount)*(1-upper)+(foreheadColor[ch]+(ch===0?-6:-9)*x)*upper);
+  };
   for(let j=0;j<canvas.height;j++)for(let i=0;i<canvas.width;i++) {
     const x=i/(canvas.width-1)*2-1,y=1.6-j/(canvas.height-1)*2.85,a=photoWeight(x,y),k=(j*canvas.width+i)*4;
-    const edgeAmount=.72*smooth((.92-Math.abs(x))/.20)*smooth((y+1.21)/.12)*(1-smooth((y-.12)/.16));
-    const lateral=base.map((v,ch)=>v*(1-edgeAmount)+edgeTints[j][x<0?0:1][ch]*edgeAmount);
-    const rgb=a>0?sample(x,y):lateral;
+    const lateral=cleanLateral(x,y,edgeTints[j]);
+    const sourceUV=a>0?mapping(x,y):null;
+    const rgb=sourceUV?sampleSource(...sourceUV):lateral;
+    // The centerline and lip region retain their original correspondences.
+    // Only outer lower-jaw samples can be replaced by clean, source-derived tone.
+    const jawRegion=smooth((-y-.74)/.09)*smooth((Math.abs(x)-.085)/.075);
+    const safePhoto=a*(1-jawRegion*(1-(sourceUV?jawSampleConfidence(...sourceUV):1)));
     const templeBand=smooth((y+.53)/.12)*(1-smooth((y-.20)/.15));
     const templeClean=templeBand*(x<0?smooth((-x-.575)/.095):smooth((x-.65)/.08));
     const skinRGB=rgb.map((v,ch)=>v*(1-templeClean)+edgeTints[j][x<0?0:1][ch]*templeClean);
@@ -119,7 +165,11 @@ function makeSkinAtlas(source) {
       const shade=.38*Math.exp(-(((y-browY)/Math.max(.001,width))**2))*Math.sin(browT*Math.PI)**.25;
       for(let ch=0;ch<3;ch++)litSkin[ch]=litSkin[ch]*(1-shade)+[86,61,52][ch]*shade;
     }
-    for(let ch=0;ch<3;ch++)out.data[k+ch]=(lateral[ch]*(1-a)+skinRGB[ch]*a)*(1-clean)+litSkin[ch]*clean;
+    const edgeMatch=(1-a)*smooth((Math.abs(x)-.59)/.15);
+    for(let ch=0;ch<3;ch++){
+      const faceColor=(lateral[ch]*(1-safePhoto)+skinRGB[ch]*safePhoto)*(1-clean)+litSkin[ch]*clean;
+      out.data[k+ch]=faceColor*(1-edgeMatch)+lateral[ch]*edgeMatch;
+    }
     out.data[k+3]=255;
   }
   context.putImageData(out,0,0);
@@ -133,7 +183,19 @@ function makeSkinAtlas(source) {
   }
   const texture=new THREE.CanvasTexture(canvas);texture.colorSpace=THREE.SRGBColorSpace;texture.anisotropy=8;
   texture.name='Skin color from uploaded image 1, hand-landmarked onto original 3D sculpt';
-  return texture;
+  // A small clean atlas supplies only rear/lateral albedo. The rear material's
+  // roughness, sheen, specular, bump and illumination settings remain unchanged.
+  // Its boundary colors use exactly the same field as the frontal atlas edges.
+  const rearCanvas=document.createElement('canvas');rearCanvas.width=256;rearCanvas.height=384;
+  const rearContext=rearCanvas.getContext('2d'),rearPixels=rearContext.createImageData(256,384);
+  for(let j=0;j<384;j++)for(let i=0;i<256;i++){
+    const x=i/255*2-1,y=1.6-j/383*2.85,rgb=cleanLateral(x,y,[toneAt(y,0),toneAt(y,1)]),k=(j*256+i)*4;
+    for(let ch=0;ch<3;ch++)rearPixels.data[k+ch]=rgb[ch];rearPixels.data[k+3]=255;
+  }
+  rearContext.putImageData(rearPixels,0,0);
+  const rearTexture=new THREE.CanvasTexture(rearCanvas);rearTexture.colorSpace=THREE.SRGBColorSpace;rearTexture.anisotropy=8;
+  rearTexture.name='Clean hidden-skin colors from image 1, continuous with the face perimeter';
+  return {atlas:texture,rearAtlas:rearTexture};
 }
 
 function assignUV(geometry){
@@ -145,7 +207,7 @@ function assignUV(geometry){
 export async function applyReferenceSkin(head) {
   const source=new Image();source.src=referenceURL;await source.decode();
   const bakeStart=performance.now();
-  const atlas=makeSkinAtlas(source);
+  const {atlas,rearAtlas}=makeSkinAtlas(source);
   atlas.userData.bakeMs=performance.now()-bakeStart;
   head.traverse(o=>{
     if(!o.isMesh)return;
@@ -167,7 +229,8 @@ export async function applyReferenceSkin(head) {
     if(o.name==='brown-iris-and-pupil'){mat.roughness=.48;mat.specularIntensity=.10;mat.clearcoat=0;}
     mat.needsUpdate=true;
     if(o.name==='continuous-face') {
-      o.material=[mat,original];o.geometry.clearGroups();
+      const rear=original.clone();rear.map=rearAtlas;rear.color.set('#ffffff');rear.vertexColors=false;rear.needsUpdate=true;
+      o.material=[mat,rear];o.geometry.clearGroups();
       const index=o.geometry.index,p=o.geometry.attributes.position,front=[],back=[];
       for(let i=0;i<index.count;i+=3){
         const z=(p.getZ(index.getX(i))+p.getZ(index.getX(i+1))+p.getZ(index.getX(i+2)))/3,target=z>0?front:back;

@@ -4,8 +4,8 @@
   "goal_achieved": false,
   "method": "Visual self-assessment against the sole uploaded image, supplemented by independent agent review. Scores are subjective and are not a certification of AAA production quality.",
   "scope": "Recorded assessments whose numeric results remain available. No missing historical scores have been invented.",
-  "current_accepted_iteration": 33,
-  "current_accepted_score": 70,
+  "current_accepted_iteration": 36,
+  "current_accepted_score": 71,
   "assessments": [
     {
       "iteration": 20,
@@ -105,6 +105,27 @@
       "reviewer": "root",
       "decision": "retained accepted corneal material after diagnostic comparison",
       "notes": "Compared baseline, no environment reflection, hidden cornea and reduced refraction in front and oblique views. Material-only changes offer little convincing improvement; physical corneal baseline retained. No score increase."
+    },
+    {
+      "iteration": 35,
+      "score": 71,
+      "reviewer": "root and fiber_hair",
+      "decision": "accepted fuller groom",
+      "notes": "104 inner curved locks substantially close large lower gaps; darker fringe better matches the source. Regular pointed back ends, hard crown patches and bright temple chips remain. Native WebGPU, finite geometry and idle demand rendering verified."
+    },
+    {
+      "iteration": 36,
+      "score": 71,
+      "reviewer": "root",
+      "decision": "accepted targeted skin atlas cleanup; further jaw correction pending",
+      "notes": "Feathered source jaw guard removes the black jaw chip. Averaged clean source patches reduce lateral bands, and a rear atlas improves albedo continuity. A diagonal brown lower-jaw mark remains and is being corrected. No feature coordinates changed."
+    },
+    {
+      "iteration": 37,
+      "score": 71,
+      "reviewer": "root",
+      "decision": "retained baseline ear material after comparison",
+      "notes": "Stronger procedural concha and canal color variations produce little visible depth improvement. They were not adopted. Geometry occlusion and ear surface relief require investigation."
     }
   ]
 }

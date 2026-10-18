@@ -27,7 +27,7 @@ function tuckEar(p){
 function crownField(forehead){
  return(side,u,v,lift=0)=>{
   const phi=side*Math.PI*(1-u),theta=sampleTable(side<0?leftEdge:rightEdge,Math.abs(phi));
-  const partX=.188+.018*Math.sin(u*Math.PI),rootZ=mix(-.665,.625,u),rx=(partX-.012)/.94,rz=(rootZ+.077)/.857;
+  const partX=.185+.028*Math.sin(u*Math.PI)+.009*Math.sin(u*Math.PI*8),rootZ=mix(-.665,.625,u),rx=(partX-.012)/.94,rz=(rootZ+.077)/.857;
   const r=V(rx,Math.sqrt(Math.max(.025,1-rx*rx-rz*rz)),rz).normalize();
   const edge=V(Math.sin(theta)*Math.sin(phi),Math.cos(theta),Math.sin(theta)*Math.cos(phi));
   // Spherical interpolation avoids crown ridges where independent root curves
@@ -75,14 +75,14 @@ function frame(c,t,front=false){
  n.lerp(scalp,smooth(.06,.68,p.y)).normalize();
  const side=d.clone().cross(n);if(side.lengthSq()<.001)side.set(1,0,0);else side.normalize();n=side.clone().cross(d).normalize();return{p,d,n,s:side};
 }
-function lockShape(t){return(.025+.975*smooth(0,.060,t))*(1-.988*smooth(.62,1,t));}
+function lockShape(t){return(.025+.975*smooth(0,.060,t))*(1-.988*smooth(.735,1,t));}
 function longLock(b,g){
  const steps=60,around=8,first=b.p.length/3;
  for(let j=0;j<=steps;j++){
   const t=j/steps,f=frame(g.c,t,g.front),shape=lockShape(t),undulate=1+.045*Math.sin(t*9+g.phase);
   for(let k=0;k<=around;k++){
    const a=k/around*TAU,cs=Math.cos(a),sn=Math.sin(a),p=f.p.clone().addScaledVector(f.s,g.w*shape*cs*undulate).addScaledVector(f.n,g.d*shape*sn),shade=.974+.018*Math.sin(g.phase+k*.8+t*3);
-   vertex(b,p,g.color.clone().multiplyScalar(shade),k/around+g.phase*.173,t);
+   tuckEar(p);vertex(b,p,g.color.clone().multiplyScalar(shade),k/around+g.phase*.173,t);
   }
  }
  for(let j=0;j<steps;j++)for(let k=0;k<around;k++){const a=first+j*(around+1)+k,c=a+around+1;b.i.push(a,c,a+1,a+1,c,c+1);}
@@ -108,12 +108,13 @@ function shoulderClearance(p,route=1){
 
 export function createGroomHair({headTilt=-.17}={}){
  const start=performance.now(),root=new THREE.Group();root.name='Original reference-directed chestnut layered groom';
- const random=rng(),forehead=foreheadField(),crown=crownField(forehead),maps=makeMaps(),crownBatch=batch(true),mass=batch(),detail=batch(),fringe=batch(),guides=[];
+ const random=rng(),forehead=foreheadField(),crown=crownField(forehead),maps=makeMaps(),crownBatch=batch(true),mass=batch(),detail=batch(),fringe=batch(),wisps=batch(),guides=[];
  const palette=['#4c403c','#554642','#433937','#5c4d49','#463b38','#51433f'].map(c=>new THREE.Color(c)),pick=()=>palette[Math.floor(random()*palette.length)].clone();
  const material=new THREE.MeshPhysicalMaterial({vertexColors:true,map:maps.map,normalMap:maps.normalMap,normalScale:new THREE.Vector2(.31,.09),roughness:.52,metalness:0,anisotropy:.65,anisotropyRotation:Math.PI*.5,specularIntensity:.38,specularColor:'#ffffff',envMapIntensity:.42,alphaTest:.10,alphaToCoverage:true,side:THREE.DoubleSide});
- const crownMaterial=material.clone();crownMaterial.roughness=.54;crownMaterial.specularIntensity=.35;
+ const crownMaterial=material.clone();crownMaterial.roughness=.57;crownMaterial.specularIntensity=.26;
  const fineMaterial=new THREE.MeshPhysicalMaterial({vertexColors:true,roughness:.49,metalness:0,anisotropy:.62,specularIntensity:.45,specularColor:'#ffffff',envMapIntensity:.36,side:THREE.DoubleSide});
- const fringeMaterial=fineMaterial.clone();fringeMaterial.transparent=true;fringeMaterial.opacity=.65;fringeMaterial.depthWrite=false;fringeMaterial.forceSinglePass=true;
+ const fringeMaterial=fineMaterial.clone();fringeMaterial.transparent=true;fringeMaterial.opacity=.94;fringeMaterial.roughness=.64;fringeMaterial.specularIntensity=.12;fringeMaterial.depthWrite=false;fringeMaterial.forceSinglePass=true;
+ const wispMaterial=fringeMaterial.clone();wispMaterial.opacity=.70;
  // The mathematical scalp foundation is fully closed around the back of the
  // part. It sits inside the directional crown sheets and closes their rear root
  // gap without introducing an untextured or exposed forehead cap.
@@ -162,7 +163,7 @@ export function createGroomHair({headTilt=-.17}={}){
   const q=(k+.15+random()*.35)/29,u=.015+q*.565,phi=side*(Math.PI-u*Math.PI),phase=Math.floor(k/3)*2.399+(side<0?.35:1.4),ps=fallingRoot(side,u);
   const end=-3.48-.25*Math.sin(q*Math.PI*.89)+.24*Math.sin(Math.floor(k/3)*2.07+side)+.065*(k%3-1);
   for(let j=0;j<8;j++){
-   const t=j/7,y=mix(-.68,end,t),f=smooth(0,.65,t),a=side*mix(Math.abs(phi),Math.max(1.89,Math.abs(phi)),smooth(.04,.49,t))+side*.028*Math.sin(t*4.3+phase),rx=.96+.27*Math.sin(t*Math.PI*.92)-.07*smooth(.80,1,t),rz=.88+.095*Math.sin(t*Math.PI),wave=(.062+.060*Math.abs(Math.sin(phase)))*Math.sin(t*6.9+phase)*f;
+   const t=j/7,y=mix(-.68,end,t),f=smooth(0,.65,t),a=side*mix(Math.abs(phi),Math.max(1.89,Math.abs(phi)),smooth(.04,.49,t))+side*.028*Math.sin(t*4.3+phase),rx=.96+.27*Math.sin(t*Math.PI*.92)-.07*smooth(.80,1,t),rz=.88+.095*Math.sin(t*Math.PI),wave=(.043+.032*Math.abs(Math.sin(phase)))*Math.sin(t*6.9+phase)*f;
    const p=V(Math.sin(a)*rx+wave,y,-.09+Math.cos(a)*rz+.09*Math.sin(t*6.5+phase*.7)*f);shoulderClearance(p,-1);ps.push(p);
   }
   guide(ps,.077+random()*.016,.017+random()*.008,k%4?'#433631':'#4b3d36',false,phase,'back');
@@ -174,7 +175,7 @@ export function createGroomHair({headTilt=-.17}={}){
   for(let k=0;k<count;k++){
    const q=k/(count-1),family=Math.floor(k/3),lane=k%3-1,phase=family*2.399+(left?.55:1.72),u=(left?.49:.44)+q*(left?.215:.22),ps=rootPath(side,u);
    const end=(left?-3.90:-3.83)+.235*Math.sin(family*1.93+side)+.055*lane;
-   const depth=.074*Math.sin(family*1.71)+.018*lane,amp=.075+.070*(.5+.5*Math.sin(family*1.41));
+   const depth=.065*Math.sin(family*1.71)+.017*lane,amp=.048+.046*(.5+.5*Math.sin(family*1.41));
    const wave=t=>amp*Math.sin(t*6.2+phase),zWave=t=>depth+.065*Math.cos(t*5.4+phase);
    if(left)ps.push(
     [-.91-.018*q,-.28,.035-.02*q],[-.945-.022*q,-.78,.054+.012*q],
@@ -193,7 +194,7 @@ export function createGroomHair({headTilt=-.17}={}){
     [.64+.46*q+wave(.89),end+.11,.89+zWave(.89)],
     [.46+.43*q+wave(1),end+.08*Math.sin(family*1.6),.72+zWave(1)]);
    for(let j=6;j<ps.length;j++){const p=ps[j].isVector3?ps[j]:V(...ps[j]);if(left)tuckEar(p);if(p.y<-1.38)shoulderClearance(p);ps[j]=p;}
-   guide(ps,.050+random()*.011,.022+random()*.015,k%5?'#493a33':'#514139',true,phase,'front');
+   guide(ps,.059+random()*.012,.022+random()*.015,k%5?'#493a33':'#514139',true,phase,'front');
   }
  }
  // A few visible shorter curl layers lie over the primary drape. Their arc
@@ -221,17 +222,35 @@ export function createGroomHair({headTilt=-.17}={}){
   }
   guide(ps,.062+random()*.010,.016+random()*.006,k%4?'#40332e':'#4b3c34',false,phase,'side');
  }
+ // Continuous quantity beneath the more separated surface curls. Neighboring
+ // inner locks share the main S-flow and overlap heavily; their staggered curved
+ // ends stay inside the outer wisps and never form a straight lower hem.
+ for(const side of[-1,1])for(let k=0;k<28;k++){
+  const q=k/27,left=side<0,phase=q*4.7+(left?.4:1.6),end=(left?-3.84:-3.78)+.10*Math.sin(q*9.1)+.055*Math.sin(k*1.8),ps=[];
+  if(left)ps.push([-.93,-.27,.025],[-.96,-.79,.035],[-.82-.22*q,-1.29,.31],[-.68-.53*q,-1.90,.75],[-.71-.64*q,-2.47,.87],[-.84-.66*q,-3.03,.94],[-.81-.58*q,end+.38,.92],[-.72-.49*q,end+.10,.82],[-.61-.42*q,end,.71]);
+  else ps.push([.93,-.27,.195],[.98,-.79,.22],[.81+.31*q,-1.29,.40],[.70+.62*q,-1.90,.81],[.71+.77*q,-2.46,.93],[.84+.70*q,-3.01,1.00],[.79+.60*q,end+.39,.94],[.65+.51*q,end+.10,.82],[.49+.45*q,end,.70]);
+  for(let j=0;j<ps.length;j++){const p=V(...ps[j]),w=smooth(-.8,-2.2,p.y);p.x+=.032*Math.sin(phase+j*.43)*w;p.z-=.035;tuckEar(p);if(p.y<-1.38)shoulderClearance(p);ps[j]=p;}
+  guide(ps,.083+random()*.010,.020,'#4a3c38',true,phase,'inner');
+ }
+ for(let k=0;k<48;k++){
+  const q=k/47,phi=1.65+q*(TAU-3.30),phase=q*5.1,ps=[],end=-3.61+.14*Math.sin(phi*2.2)+.07*Math.sin(k*1.7);
+  for(let j=0;j<10;j++){
+   const t=j/9,y=mix(-.20,end,t),rx=.93+.25*Math.sin(t*Math.PI*.88)-.05*smooth(.78,1,t),rz=.82+.048*Math.sin(t*Math.PI),w=smooth(.10,.7,t);
+   const p=V(Math.sin(phi)*rx+.028*Math.sin(t*5.5+phase)*w,y,-.06+Math.cos(phi)*rz+.025*Math.cos(t*5.2+phase)*w);shoulderClearance(p,-1);ps.push(p);
+  }
+  guide(ps,.102+random()*.014,.021,'#493b37',false,phase,'inner');
+ }
  // Surface strands use an outward lift and individualized trailing trajectories.
  // They are deliberately a minority of the mass: coverage remains robust at 900px.
  let fiberCount=0;
  for(const g of guides){
-  const count=g.kind==='front'?43:g.kind==='curl'?54:g.kind==='back'?34:28;
+  const count=g.kind==='front'?43:g.kind==='curl'?54:g.kind==='back'?34:g.kind==='inner'?16:28;
   for(let k=0;k<count;k++){
    const lane=(k+.1+random()*.8)/count*2-1,side=k%7===0?-1:1,phase=random()*TAU,end=.935+random()*.065,ps=[];
    for(let j=0;j<=18;j++){
     const t=j/18,f=frame(g.c,t*end,g.front),shape=lockShape(t*end),spread=lane*g.w*shape,depth=side*(g.d*Math.sqrt(Math.max(.01,1-lane*lane))+.0028)*shape;
     const tip=smooth(.70,1,t),p=f.p.clone().addScaledVector(f.s,spread+.0019*Math.sin(t*29+phase)).addScaledVector(f.n,depth);
-    p.x+=.024*Math.sin(phase)*tip;p.y+=(random()-.5)*.018*tip;p.z+=.016*Math.cos(phase)*tip;ps.push(p);
+    p.x+=.024*Math.sin(phase)*tip;p.y+=(random()-.5)*.018*tip;p.z+=.016*Math.cos(phase)*tip;tuckEar(p);ps.push(p);
    }
    ribbon(detail,curve(ps),.00063+random()*.00039,pick().lerp(new THREE.Color('#69564b'),k%13===0?.40:0),28,g.front,phase,.85+random()*.10);fiberCount++;
   }
@@ -246,39 +265,41 @@ export function createGroomHair({headTilt=-.17}={}){
  // strands. They remain separate real geometry and do not obscure the eye sockets.
  const bangGuides=[
   {n:195,w:.042,end:[-.65,-.18],points:[[.16,1.40],[-.12,1.15],[-.36,.81],[-.53,.37],[-.65,-.18]]},
-  {n:185,w:.043,end:[-.40,.065],points:[[.19,1.36],[.05,1.09],[-.17,.74],[-.31,.39],[-.40,.065]]},
-  {n:90,w:.025,end:[-.22,.23],points:[[.22,1.34],[.16,1.11],[.03,.78],[-.12,.46],[-.22,.23]]},
-  {n:230,w:.048,end:[.042,.13],points:[[.27,1.30],[.29,1.04],[.23,.76],[.135,.43],[.042,.13]]},
-  {n:90,w:.022,end:[.24,.29],points:[[.30,1.29],[.38,1.04],[.38,.79],[.32,.53],[.24,.29]]},
+  {n:185,w:.043,end:[-.40,.065],points:[[.19,1.36],[.10,1.09],[-.045,.74],[-.235,.39],[-.40,.065]]},
+  {n:90,w:.025,end:[-.22,.23],points:[[.22,1.34],[.20,1.11],[.125,.78],[-.015,.46],[-.22,.23]]},
+  {n:230,w:.048,end:[.042,.13],points:[[.27,1.30],[.345,1.04],[.335,.76],[.195,.43],[.042,.13]]},
+  {n:90,w:.022,end:[.24,.29],points:[[.30,1.29],[.415,1.04],[.447,.79],[.397,.53],[.24,.29]]},
   {n:70,w:.019,end:[.43,.33],points:[[.32,1.31],[.49,1.06],[.52,.78],[.48,.55],[.43,.33]]},
   {n:140,w:.035,end:[.65,.065],points:[[.33,1.36],[.57,1.11],[.69,.78],[.70,.39],[.65,.065]]}
  ];
  for(let group=0;group<bangGuides.length;group++){
   const g=bangGuides[group];
   for(let k=0;k<g.n;k++){
-   const lane=(k+.12+random()*.76)/g.n*2-1,offset=lane*g.w,phase=random()*TAU,ps=[];
+   const raw=(k+.12+random()*.76)/g.n*2-1,lane=Math.sign(raw)*Math.pow(Math.abs(raw),1.38),offset=lane*g.w,phase=random()*TAU,ps=[];
    for(let j=0;j<g.points.length;j++){
     const t=j/(g.points.length-1),x=g.points[j][0]+offset*(.18+1.10*t)+.022*Math.sin(phase+t*3.1)*Math.sin(t*Math.PI),y=g.points[j][1]+(random()-.5)*.045*t;
     const z=forehead(x,Math.max(.22,y))+.017+(k%4)*.0010+(y<.22?(.22-y)*.045:0);ps.push(V(x,y,z));
    }
    const c=curve(ps),end=.865+random()*.135,trim=[];for(let j=0;j<=20;j++)trim.push(c.getPoint(j/20*end));
-   ribbon(fringe,curve(trim),.00045+random()*.00030,pick().multiplyScalar(.91),34,true,phase,.82+random()*.10);fiberCount++;
+   ribbon(fringe,curve(trim),.00040+random()*.00027,pick().multiplyScalar(.87),34,true,phase,.82+random()*.10);fiberCount++;
   }
  }
- // Short growth at the forehead edge softens the transition into bare skin.
- for(const side of[-1,1])for(let k=0;k<95;k++){
-  const u=.66+(k+random())/95*.33,v0=.83+random()*.09,ps=[],a=crown(side,u,.985,.006),b=crown(side,u,1,.006),d=b.clone().sub(a).normalize(),extension=.045+random()*.12;
+ // Many short hairs continue the actual crown tangent across the edge. The
+ // two lengths of transition blend the dense root into sparse outer wisps.
+ for(const side of[-1,1])for(let k=0;k<310;k++){
+  const u=.51+(k+random())/310*.48,v0=.79+random()*.12,ps=[],a=crown(side,u,.982,.006),b=crown(side,u,1,.006),d=b.clone().sub(a).normalize(),extension=.07+random()*.18;
   for(let j=0;j<9;j++)ps.push(crown(side,u,mix(v0,1,j/8),.007));
-  for(let j=1;j<=3;j++){
-   const p=b.clone().addScaledVector(d,extension*j/3);p.z=forehead(p.x,Math.max(.22,p.y))+.019;ps.push(p);
+  for(let j=1;j<=4;j++){
+   const t=j/4,p=b.clone().addScaledVector(d,extension*t);p.y-=.025*t*t;
+   if(p.z>.15&&p.y>.20)p.z=forehead(p.x,Math.max(.22,p.y))+.017;tuckEar(p);ps.push(p);
   }
-  ribbon(fringe,curve(ps),.00044+random()*.00022,pick(),24,true,k,.77);fiberCount++;
+  ribbon(wisps,curve(ps),.00039+random()*.00023,pick().multiplyScalar(.93),24,true,k,.79);fiberCount++;
  }
  // Only a few fine temple strands cross in front of the exposed left ear.
  for(let k=0;k<22;k++){
   const q=k/21,ps=[[.09,1.32,.62],[-.29,1.02,.68],[-.52,.61,.58],[-.66,.15,.48],[-.75,-.34,.34],[-.81,-.72,.20],[-.84,-1.12,.23]];
   for(let j=0;j<ps.length;j++)ps[j][0]+=(q-.5)*.019;
-  ribbon(fringe,curve(ps),.00050+random()*.00024,pick(),42,true,k*.2,.91);fiberCount++;
+  ribbon(wisps,curve(ps),.00043+random()*.00022,pick(),42,true,k*.2,.91);fiberCount++;
  }
  // Restrained isolated flyaways break the silhouette without a uniformly fuzzy rim.
  for(let k=0;k<86;k++){
@@ -286,8 +307,8 @@ export function createGroomHair({headTilt=-.17}={}){
   for(let j=0;j<=12;j++){const t=j/12,at=mix(startT,Math.min(1,startT+.24+random()*.03),t),f=frame(g.c,at,g.front),p=f.p.clone().addScaledVector(f.s,(k%2?1:-1)*g.w*(.83+.22*Math.sin(t*Math.PI))).addScaledVector(f.n,.011+.018*Math.sin(t*Math.PI));ps.push(p);}
   ribbon(detail,curve(ps),.00045+random()*.00022,pick(),24,g.front,phase,.80);fiberCount++;
  }
- root.add(makeMesh(crownBatch,crownMaterial,'Continuous parted crown with longitudinal fiber flow',headTilt),makeMesh(mass,material,'Overlapping layered S-wave hair around front back and shoulders',headTilt),makeMesh(detail,fineMaterial,'Independent fine crown lengths and silhouette strands',headTilt,false),makeMesh(fringe,fringeMaterial,'Bowed transparent-space fringe and fine left temple strands',headTilt,false));
- root.children[root.children.length-1].renderOrder=3;
+ root.add(makeMesh(crownBatch,crownMaterial,'Continuous parted crown with longitudinal fiber flow',headTilt),makeMesh(mass,material,'Overlapping layered S-wave hair around front back and shoulders',headTilt),makeMesh(detail,fineMaterial,'Independent fine crown lengths and silhouette strands',headTilt,false),makeMesh(fringe,fringeMaterial,'Dense fine bowed brown fringe strands',headTilt,false),makeMesh(wisps,wispMaterial,'Sparse short temple edge and hairline wisps',headTilt,false));
+ root.children[root.children.length-2].renderOrder=3;root.children[root.children.length-1].renderOrder=4;
  let triangles=0,bytes=0;root.traverse(o=>{if(!o.isMesh)return;triangles+=o.geometry.index.count/3;bytes+=o.geometry.index.array.byteLength;for(const a of Object.values(o.geometry.attributes))bytes+=a.array.byteLength;});
  root.userData={procedural:true,continuousCrownSheets:2,closedInsetScalp:true,originalLayeredLocks:guides.length,individualStrands:fiberCount,triangles,geometryMiB:Number((bytes/1048576).toFixed(2)),constructionMs:Number((performance.now()-start).toFixed(1)),source:'Only the supplied image guided this original 3D groom. All geometry and longitudinal hair maps were authored mathematically; no hair photos or external assets.',headTiltCompensation:headTilt,lowerHairYawCompensation:.16};
  return root;
