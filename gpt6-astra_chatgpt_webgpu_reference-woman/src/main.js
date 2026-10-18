@@ -1,14 +1,16 @@
 import * as THREE from 'three';
 import { WebGPURenderer } from 'three/webgpu';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { GLTFExporter } from 'three/addons/exporters/GLTFExporter.js';
+import { exportPortraitGLB } from './export-portrait.js';
 import { createHead } from './face.js';
 import { applyReferenceSkin } from './reference-skin.js';
 import { applyReferenceNeck } from './reference-neck.js';
 import { compensateReferenceSkin } from './skin-illumination.js';
+import { applyPortraitProportions } from './portrait-proportions.js';
 import { createHair } from './hair.js';
 import { createFiberHair } from './hair-fibers.js';
 import { createGroomHair } from './hair-groom.js';
+import { createPortraitOutput } from './render-quality.js';
 import { createBlouse, createNeck } from './blouse.js';
 
 const $ = (id) => document.getElementById(id);
@@ -16,7 +18,8 @@ const hairChoice=new URLSearchParams(location.search).get('hair')||'groom';
 const fiberCandidate=hairChoice==='fibers';
 const groomCandidate=hairChoice==='groom';
 const coverageCandidate=hairChoice==='coverage';
-const state = { backend: new URLSearchParams(location.search).get('backend') === 'webgl' ? 'webgl' : 'webgpu', width: 900, height: 1200, iteration: groomCandidate?45:coverageCandidate?32:fiberCandidate?25:27, score: groomCandidate?72:fiberCandidate?61:68, renderedFrames: 0, renderMs: 0, rotating: false, view: 'front', ready: false, lighting: 'soft' };
+const state = { backend: new URLSearchParams(location.search).get('backend') === 'webgl' ? 'webgl' : 'webgpu', width: 900, height: 1200, iteration: groomCandidate?50:coverageCandidate?32:fiberCandidate?25:27, score: groomCandidate?74:fiberCandidate?61:68, renderedFrames: 0, renderMs: 0, rotating: false, view: 'front', ready: false, lighting: 'soft', antialiasing: 2, internalRender: null };
+let portraitOutput=createPortraitOutput();
 const scene = new THREE.Scene();
 scene.background = new THREE.Color('#cbe3f3');
 const model = new THREE.Group();
@@ -90,15 +93,22 @@ function renderFrame(timestamp = performance.now()) {
   }
   const moved = controls.update();
   const begin = performance.now();
-  renderer.render(scene,camera);
+  renderPortrait();
   state.renderMs = performance.now() - begin;
   state.renderedFrames++;
   if (state.renderedFrames % 60 === 0 || state.renderedFrames < 3) updateStats();
   if (state.rotating || moved) requestRender();
 }
+function renderPortrait(){
+  state.internalRender=portraitOutput.render(renderer,scene,camera,state.width,state.height,state.antialiasing);
+}
+function setAntialiasing(value){
+  if(![1,2].includes(Number(value)))throw new Error('Unknown antialiasing quality');
+  state.antialiasing=Number(value);$('antialiasing-select').value=String(state.antialiasing);requestRender();
+}
 function updateStats() {
   $('performance-label').textContent = `${Math.round(triangles/1000)}k triangles · ${state.rotating ? 'turntable' : 'demand driven'}`;
-  $('settings-stat').textContent = `${meshes.toLocaleString()} meshes · ${Math.round(triangles).toLocaleString()} triangles · ${state.renderMs.toFixed(1)} ms CPU submission${performance.memory ? ` · ${Math.round(performance.memory.usedJSHeapSize/1048576)} MB JS heap` : ''}`;
+  $('settings-stat').textContent = `${meshes.toLocaleString()} meshes · ${Math.round(triangles).toLocaleString()} triangles · ${state.renderMs.toFixed(1)} ms CPU submission${state.internalRender ? ` · ${state.internalRender.width} × ${state.internalRender.height} internal samples` : ''}${performance.memory ? ` · ${Math.round(performance.memory.usedJSHeapSize/1048576)} MB JS heap` : ''}`;
 }
 function updateProjection() {
   const verticalSpan = state.view === 'detail' ? 3.0 : 6.4;
@@ -155,7 +165,7 @@ function download(blob,name) {
 }
 async function capture({download: shouldDownload=true, showcase=false}={}) {
   if (!state.ready) throw new Error('The renderer is not ready');
-  renderer.render(scene,camera);
+  renderPortrait();
   let canvas=renderer.domElement;
   if (showcase) {
     const source=canvas;canvas=document.createElement('canvas');canvas.width=state.width;canvas.height=state.height+Math.round(state.height*.1);
@@ -168,8 +178,7 @@ async function capture({download: shouldDownload=true, showcase=false}={}) {
   return blob;
 }
 async function exportGLB({download:shouldDownload=true}={}) {
-  const exporter=new GLTFExporter();
-  const data=await exporter.parseAsync(model,{binary:true,onlyVisible:true,maxTextureSize:2048});
+  const data=await exportPortraitGLB(model);
   const blob=new Blob([data],{type:'model/gltf-binary'});
   if(shouldDownload)download(blob,'gpt6-astra_chatgpt_webgpu_reference-woman.glb');
   return blob;
@@ -193,13 +202,14 @@ async function initialize(backend=state.backend) {
   $('backend-label').textContent=`INITIALIZING ${backend.toUpperCase()}`;
   try {
     await referenceReady;
+    state.proportions=applyPortraitProportions(anatomicalHead,anatomicalNeck);
     if(!skinIlluminationApplied){state.skinIllumination=compensateReferenceSkin(anatomicalHead,scene,{strength:.35});skinIlluminationApplied=true;}
     if(backend==='webgpu') {
       if(!navigator.gpu)throw new Error('WebGPU is not available in this browser or context. Use a supported browser on HTTPS or localhost, or choose WebGL below.');
       const adapter=await navigator.gpu.requestAdapter({powerPreference:'high-performance'});
       if(!adapter)throw new Error('This device did not provide a WebGPU adapter. You can explicitly choose WebGL below.');
     }
-    controls?.dispose();renderer?.dispose();renderer=undefined;
+    controls?.dispose();portraitOutput.dispose();renderer?.dispose();renderer=undefined;portraitOutput=createPortraitOutput();
     let next;
     if(backend==='webgpu') {
       next=new WebGPURenderer({antialias:true,alpha:false,powerPreference:'high-performance'});
@@ -242,12 +252,12 @@ $('choose-webgl').addEventListener('click',()=>initialize('webgl'));$('retry-web
 $('apply-settings').addEventListener('click',async()=>{
   const sizes={'900':[900,1200],'1080':[1080,1440],'1280':[1280,1707],'2k':[2048,2731],'4k':[3072,4096]};
   let [width,height]=sizes[$('resolution-select').value];if($('orientation-select').value==='landscape')[width,height]=[height,width];
-  applyResolution(width,height);setLighting($('lighting-select').value);
+  setAntialiasing($('antialiasing-select').value);applyResolution(width,height);setLighting($('lighting-select').value);
   const backend=$('backend-select').value;setSettingsOpen(false);
   if(backend!==state.backend||!state.ready)await initialize(backend);else requestRender();
 });
 document.addEventListener('visibilitychange',()=>{if(document.hidden){cancelAnimationFrame(raf);raf=0;}else{lastTimestamp=performance.now();requestRender();}});
-window.addEventListener('pagehide',()=>{cancelAnimationFrame(raf);controls?.dispose();renderer?.dispose();});
-window.portrait={scene,model,headPivot,camera,get renderer(){return renderer;},get controls(){return controls;},state,get ready(){return state.ready;},setView,render:requestRender,renderNow:()=>{cancelAnimationFrame(raf);raf=0;if(state.ready)renderFrame(performance.now());},exportGLB,capture,setScore,startTurntable,setLighting,setResolution:applyResolution,initialize,applySkinCompensation:strength=>{const metrics=compensateReferenceSkin(anatomicalHead,scene,{strength});requestRender();return metrics;}};
+window.addEventListener('pagehide',()=>{cancelAnimationFrame(raf);controls?.dispose();portraitOutput.dispose();renderer?.dispose();});
+window.portrait={scene,model,headPivot,camera,get renderer(){return renderer;},get controls(){return controls;},state,get ready(){return state.ready;},setView,render:requestRender,renderNow:()=>{cancelAnimationFrame(raf);raf=0;if(state.ready)renderFrame(performance.now());},exportGLB,capture,setScore,startTurntable,setLighting,setAntialiasing,setResolution:applyResolution,initialize,applySkinCompensation:strength=>{const metrics=compensateReferenceSkin(anatomicalHead,scene,{strength});requestRender();return metrics;}};
 setScore(state.iteration,state.score);
 initialize();

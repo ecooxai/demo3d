@@ -4,8 +4,8 @@
   "goal_achieved": false,
   "method": "Visual self-assessment against the sole uploaded image, supplemented by independent agent review. Scores are subjective and are not a certification of AAA production quality.",
   "scope": "Recorded assessments whose numeric results remain available. No missing historical scores have been invented.",
-  "current_accepted_iteration": 45,
-  "current_accepted_score": 72,
+  "current_accepted_iteration": 50,
+  "current_accepted_score": 74,
   "assessments": [
     {
       "iteration": 20,
@@ -170,6 +170,13 @@
       "notes": "Integrated source candidates41 and43. Closed ear shell retains outline and triangle budget; right head seat clears buried cartilage. Geometry tests pass and five-view inspection shows no regression. Confirmed cheek/chin source-shadow patches are locally neutralized while protected features and fine source detail remain."
     },
     {
+      "iteration": 46,
+      "score": 73,
+      "reviewer": "root and quality_review_42",
+      "decision": "accepted guide-curve repair with antialiasing48",
+      "notes": "Monotonic crown-to-ear joins remove both bright temple chips. Five-view review confirms improved transitions. Remaining far-ear exposure and side-lock bulges are assigned to the next groom, along with graphic fringe, transverse crown patches and regular back ends."
+    },
+    {
       "iteration": 47,
       "score": 72,
       "provisional_score_after_join_repair": 73,
@@ -179,10 +186,24 @@
     },
     {
       "iteration": 48,
-      "score": 72,
-      "reviewer": "root",
-      "decision": "antialiasing experiment shows benefit; integration pending",
-      "notes": "Twice internal resolution improves thin-strand edge quality at the same displayed size. A12-sample diagnostic measured queue medians9.5ms at900x1200 and17.7ms at1800x2400; these are small-sample measurements, not an FPS guarantee. Requested output dimensions must remain unchanged if adopted."
+      "score": 73,
+      "reviewer": "root and quality_review_42",
+      "decision": "accepted selectable linear-light supersampling after complete viewer verification",
+      "notes": "Twofold internal sampling preserves exact900x1200canvas andPNG dimensions. Fixed the WebGPU render-target UV orientation; WebGPU and explicit WebGL render upright. Native sampling releases the larger target. Browser checks pass for five views, idle0frames, turntable, mobile overflow, PNG download, and explicit fallback gate. GLB normal-map compatibility repaired with export-only texture copies; valid67,392,932byteGLB produced."
+    },
+    {
+      "iteration": 49,
+      "score": 73,
+      "reviewer": "root and quality_review_42",
+      "decision": "accepted bounded outer-socket and nasal-wall tone correction",
+      "notes": "At most14sRGB/channel on stretched outer-right socket and7 on nose sidewall. Protected eyelid/aperture masks remain untouched. Full portrait, detail and unlit atlas retain source features; visual effect is subtle and does not alone warrant a higher score."
+    },
+    {
+      "iteration": 50,
+      "score": 74,
+      "reviewer": "root and quality_review_42",
+      "decision": "accepted lower-face compaction with fitted upper neck",
+      "notes": "Six percent compaction holds in full portrait and both profiles. Upper neck follows the same posed head-space warp, closing the previously exposed junction. Native head minimumJacobian0.89875, neck0.94; neckmaximumWorldDisplacement0.066204,2592lowerverticesunchanged. FacialUVs preserved. Next likeness comparison is head placement over the blouseV; hair remains the principal quality limit."
     }
   ]
 }

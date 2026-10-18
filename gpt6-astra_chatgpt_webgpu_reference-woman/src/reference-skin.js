@@ -102,6 +102,36 @@ function localAlbedoWeights(x,y){
   return [cheek,chin];
 }
 
+// Canonical atlas-space eye contour. These are the two Hermite segments used
+// by the accepted portrait warp around the eye, before any posed deformation.
+function canonicalEyeY(y){
+  const lower=y<=.25,h=lower?.51:.42,t=lower?(y+.26)/h:(y-.25)/h;
+  const a=lower?-.475:.050,b=lower?.050:.505;
+  const m0=lower?.84/.889:.98/.93,m1=lower?.98/.93:1.01/.87;
+  return (2*t*t*t-3*t*t+1)*a+(t*t*t-2*t*t+t)*h*m0
+    +(-2*t*t*t+3*t*t)*b+(t*t*t-t*t)*h*m1;
+}
+function sourceShadowWeights(x,y){
+  // The photographed far-side socket is stretched beyond its canthus by the
+  // TPS. Soften that diagonal wedge without moving any correspondence.
+  const dx=x-.575,dy=y+.035;
+  const q=Math.hypot((.55*dx+.835*dy)/.220,(.835*dx-.55*dy)/.140);
+  let socket=1-smooth((q-.30)/.70);
+  if(socket>0){
+    // Enclose the complete authored eyelid ring (1.42 aperture radii), plus
+    // waterline/lash margins. Inside it the source pixels remain exact.
+    const w=.185*1.42,t=Math.max(-1,Math.min(1,(x-.342)/w)),h=1-t*t;
+    const low=canonicalEyeY(.25+1.42*(-.058*h+.013*t));
+    const high=canonicalEyeY(.25+1.42*(.080*h+.013*t));
+    const distance=Math.max(Math.abs(x-.342)-w-.008,low-y-.012,y-high-.028);
+    socket*=smooth(distance/.030);
+  }
+  const noseQ=Math.hypot((x-.115)/.088,(y+.315)/.225);
+  const tipGuard=smooth((Math.hypot(x/.20,(y+.545)/.080)-1)/.45);
+  const nose=(1-smooth((noseQ-.25)/.75))*smooth((x-.038)/.035)*tipGuard;
+  return [socket,nose];
+}
+
 function makeSkinAtlas(source) {
   const c=document.createElement('canvas');c.width=source.naturalWidth;c.height=source.naturalHeight;
   const cx=c.getContext('2d',{willReadFrequently:true});cx.drawImage(source,0,0);
@@ -157,21 +187,29 @@ function makeSkinAtlas(source) {
   // jaw/chin shadow. It is sampled only inside the two local supports above.
   // No new imagery is introduced: detail and replacement tones all come from
   // manually selected skin in image 1. The hidden-side color field is unchanged.
-  const lowX=448,lowY=616,lowStep=8,lowW=29,lowH=19;
-  const lowFrequency=new Float32Array(lowW*lowH*3);
-  for(let j=0;j<lowH;j++)for(let i=0;i<lowW;i++){
-    const rgb=patch(lowX+i*lowStep,lowY+j*lowStep,12,12),k=(j*lowW+i)*3;
-    for(let ch=0;ch<3;ch++)lowFrequency[k+ch]=rgb[ch];
-  }
-  const lowSource=(u,v)=>{
-    const sx=Math.max(0,Math.min(lowW-1,(u-lowX)/lowStep));
-    const sy=Math.max(0,Math.min(lowH-1,(v-lowY)/lowStep));
-    const i=Math.min(lowW-2,Math.floor(sx)),j=Math.min(lowH-2,Math.floor(sy));
-    const fx=sx-i,fy=sy-j,k=(j*lowW+i)*3;
-    return [0,1,2].map(ch=>(lowFrequency[k+ch]*(1-fx)+lowFrequency[k+3+ch]*fx)*(1-fy)
-      +(lowFrequency[k+lowW*3+ch]*(1-fx)+lowFrequency[k+lowW*3+3+ch]*fx)*fy);
+  const sourceToneField=(x0,y0,w,h)=>{
+    const step=8,values=new Float32Array(w*h*3);
+    for(let j=0;j<h;j++)for(let i=0;i<w;i++){
+      const rgb=patch(x0+i*step,y0+j*step,12,12),k=(j*w+i)*3;
+      for(let ch=0;ch<3;ch++)values[k+ch]=rgb[ch];
+    }
+    return (u,v)=>{
+      const sx=Math.max(0,Math.min(w-1,(u-x0)/step)),sy=Math.max(0,Math.min(h-1,(v-y0)/step));
+      const i=Math.min(w-2,Math.floor(sx)),j=Math.min(h-2,Math.floor(sy));
+      const fx=sx-i,fy=sy-j,k=(j*w+i)*3;
+      return [0,1,2].map(ch=>(values[k+ch]*(1-fx)+values[k+3+ch]*fx)*(1-fy)
+        +(values[k+w*3+ch]*(1-fx)+values[k+w*3+3+ch]*fx)*fy);
+    };
   };
+  const lowSource=sourceToneField(448,616,29,19);
   const chinTone=patch(499,719,11,9);
+  // Candidate 49 uses brightness-only offsets, bounded well below full
+  // de-lighting. Same-side clean skin guides the lift; the original broad
+  // shadow, chromatic differences, and fine photograph details still remain.
+  const orbitalSource=sourceToneField(552,424,22,23);
+  const luminance=rgb=>.2126*rgb[0]+.7152*rgb[1]+.0722*rgb[2];
+  const socketTone=luminance(patch(647,535,10,10));
+  const noseTone=luminance(patch(599,550,12,13));
   for(let j=0;j<canvas.height;j++)for(let i=0;i<canvas.width;i++) {
     const x=i/(canvas.width-1)*2-1,y=1.6-j/(canvas.height-1)*2.85,a=photoWeight(x,y),k=(j*canvas.width+i)*4;
     const lateral=cleanLateral(x,y,edgeTints[j]);
@@ -193,6 +231,20 @@ function makeSkinAtlas(source) {
         const detail=Math.max(-5,Math.min(5,rgb[ch]-broad[ch]));
         skinRGB[ch]=skinRGB[ch]*(1-cheekFix)+(lateral[ch]+detail)*cheekFix;
         skinRGB[ch]=skinRGB[ch]*(1-chinFix)+(chinTone[ch]+detail)*chinFix;
+      }
+    }
+    if(sourceUV&&safePhoto>0&&x>.027&&x<.744&&y>-.540&&y<.165){
+      const [socket,nose]=sourceShadowWeights(x,y);
+      if(socket>0||nose>0){
+        const broad=luminance(orbitalSource(...sourceUV));
+        // Protect thin dark lash strokes relative to their local broad tone.
+        // An absolute darkness threshold would also reject the shadow being
+        // corrected. The exact eye guard above remains the primary protection.
+        const pigmentGuard=smooth((luminance(rgb)-broad+22)/15);
+        const socketLift=Math.min(14,Math.max(0,(socketTone-broad)*.50))*socket;
+        const noseLift=Math.min(7,Math.max(0,(noseTone-broad)*.50))*nose;
+        const lift=Math.max(socketLift,noseLift)*pigmentGuard;
+        for(let ch=0;ch<3;ch++)skinRGB[ch]+=lift;
       }
     }
     // Replace photographic fringe in the forehead color with clean skin; the

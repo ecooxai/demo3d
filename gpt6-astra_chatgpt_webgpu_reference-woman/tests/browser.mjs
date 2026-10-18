@@ -19,7 +19,10 @@ try {
   assert.equal(await page.evaluate(() => window.portrait.renderer.backend?.isWebGPUBackend), true, 'Default rendering must really use WebGPU');
   assert.deepEqual(await page.evaluate(() => [window.portrait.renderer.domElement.width,window.portrait.renderer.domElement.height]), [900,1200]);
   const initial = await page.evaluate(() => ({ frames: window.portrait.state.renderedFrames, meshes: window.portrait.model.children.length }));
-  assert.ok(initial.meshes >= 3, 'Head, neck and blouse must all be assembled');
+  assert.equal(await page.evaluate(()=>Boolean(window.portrait.model.getObjectByName('anatomical-head')&&window.portrait.model.getObjectByName('original-neck-and-clavicle-transition')&&window.portrait.model.getObjectByName('original-tailored-white-cotton-blouse'))),true,'Head, neck and blouse must all be assembled');
+  assert.deepEqual(await page.evaluate(()=>[window.portrait.state.internalRender.width,window.portrait.state.internalRender.height]),[1800,2400],'Smooth sampling should preserve a900x1200 output with higher internal detail');
+  const pngSize=await page.evaluate(async()=>{const b=await window.portrait.capture({download:false});const i=await createImageBitmap(b);const size=[i.width,i.height];i.close();return size;});
+  assert.deepEqual(pngSize,[900,1200],'PNG dimensions must follow the requested output resolution');
   await page.waitForTimeout(1600);
   const idleA = await page.evaluate(() => window.portrait.state.renderedFrames);
   await page.waitForTimeout(1000);
@@ -54,7 +57,9 @@ try {
   await page.selectOption('#resolution-select','1080');await page.selectOption('#orientation-select','landscape');
   await page.click('#apply-settings');
   assert.deepEqual(await page.evaluate(()=>[window.portrait.renderer.domElement.width,window.portrait.renderer.domElement.height]),[1440,1080]);
-  await page.evaluate(()=>window.portrait.setResolution(900,1200));
+  await page.evaluate(()=>{window.portrait.setResolution(900,1200);window.portrait.setAntialiasing(1);window.portrait.renderNow();});
+  assert.deepEqual(await page.evaluate(()=>[window.portrait.state.internalRender.width,window.portrait.state.internalRender.height]),[900,1200],'Native sampling must release the larger target');
+  await page.evaluate(()=>{window.portrait.setAntialiasing(2);window.portrait.renderNow();});
   await page.setViewportSize({width:390,height:844});await page.waitForTimeout(250);
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>window.innerWidth),false,'Mobile layout must not scroll horizontally');
   await page.screenshot({path:resolve(evidence,'gpt6-astra_chatgpt_webgpu-mobile.png'),fullPage:true});
@@ -70,6 +75,7 @@ try {
   await gated.click('#choose-webgl');
   await gated.waitForFunction(()=>window.portrait.ready,null,{timeout:120000});
   assert.equal(await gated.evaluate(()=>window.portrait.renderer.isWebGLRenderer),true,'Explicit user selection should enable WebGL');
+  await gated.screenshot({path:resolve(evidence,'gpt6-astra_chatgpt_webgl-explicit.png'),fullPage:true});
   await gatedContext.close();
   console.log(JSON.stringify({ result:'passed', backend:'native WebGPU', views:5, idleFrames:idleB-idleA, glbBytes:glb.bytes, evidence:'output/qa/' },null,2));
 } finally { await browser.close(); }
