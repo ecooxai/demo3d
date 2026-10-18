@@ -4,7 +4,7 @@
   "goal_achieved": false,
   "method": "Visual self-assessment against the sole uploaded image, supplemented by independent agent review. Scores are subjective and are not a certification of AAA production quality.",
   "scope": "Recorded assessments whose numeric results remain available. No missing historical scores have been invented.",
-  "current_accepted_iteration": 79,
+  "current_accepted_iteration": 82,
   "current_accepted_score": 76,
   "assessments": [
     {
@@ -357,7 +357,21 @@
       "score": 76,
       "reviewer": "root and reference_art_review",
       "decision": "accepted outer-canthus cap40 and integrated with crown75",
-      "notes": "Compared24/40 against14 in matched native detail andquarterviews. Forty softens the excessive diagonalband while retaining naturalshade, finecolorvariation and protectedeye. No pale crescent or boundary visible. Visibleheadray confirmscore/upper/tailarecontinuous-face andcontrol581565issclera. RenderedcoreRGB0->40 is87,46,39 ->137,94,86; protectedcontrol79,38,38unchanged at0/14/24/40. Residualphotographicshade remains; close this narrowpass. Overall76."
+      "notes": "Compared24/40 against14 in matched native detail andquarterviews. Forty softens the excessive diagonalband while retaining naturalshade, finecolorvariation and protectedeye. No pale crescent or boundary visible. Visibleheadray confirmscore/upper/tailarecontinuous-face andcontrol581565issclera. RenderedcoreRGB0->40 is87,46,39 ->137,94,86; protectedcontrol79,38,38unchanged at0/14/24/40. Residualphotographicshade remains; close this narrowpass. Overall76. Combined79nativeinspection passed; currentGLBroundtrip70,606,664bytes,1,478,755visibletriangles,58sourcemeshes/59loadedprimitives,8embeddedimages. Opaquealbedoerror0,normalerror.000862745,livearrays/sourcesunchanged; export330ms/load41ms,peakJS317MiB. Newcrownalpha texturefidelity verified."
+    },
+    {
+      "iteration": 80,
+      "score": 76,
+      "reviewer": "root",
+      "decision": "retained original hair-normal strength after comparison",
+      "notes": "ComparednormalScaleX.31/1/2 withY.09 onCROWN+MASS only, in native detail/front/right/back. Stronger normalrelief offers little useful realism and accentuates fine rear ridging. Original.31retained; no geometry, texture or defaultmaterial changes."
+    },
+    {
+      "iteration": 82,
+      "score": 76,
+      "reviewer": "root and quality_review_42",
+      "decision": "accepted clearer fine-fiber highlights",
+      "notes": "Native baseline/soft/bright comparison changesDETAILmaterialonly. Selectedroughness.38,anisotropy.80,specularIntensity.75,envMapIntensity.65 withsame\u03c0/2direction. Individualcrown andlengthfibers catchlightmoreclearly, closer tosource sheen; no returnofwhitefringe streaks or widespreadmetalliclook. Crown/MASS andmattefringe/wisps unchanged; no newbuffers/maps/geometry. Stopfurtherintensityincreases. Capandshoulderairgapsremain; overall76."
     }
   ]
 }

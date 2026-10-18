@@ -168,7 +168,7 @@ export function createGroomHair({headTilt=-.17}={}){
  const palette=['#4c403c','#554642','#433937','#5c4d49','#463b38','#51433f'].map(c=>new THREE.Color(c)),pick=()=>palette[Math.floor(random()*palette.length)].clone();
  const material=new THREE.MeshPhysicalMaterial({vertexColors:true,map:maps.map,normalMap:maps.normalMap,normalScale:new THREE.Vector2(.31,.09),roughness:.52,metalness:0,anisotropy:.65,anisotropyRotation:Math.PI*.5,specularIntensity:.38,specularColor:'#ffffff',envMapIntensity:.42,alphaTest:.10,alphaToCoverage:true,side:THREE.DoubleSide});
  const crownMaterial=material.clone();crownMaterial.map=maps.crownMap;
- const fineMaterial=new THREE.MeshPhysicalMaterial({vertexColors:true,roughness:.52,metalness:0,anisotropy:.65,anisotropyRotation:Math.PI*.5,specularIntensity:.38,specularColor:'#ffffff',envMapIntensity:.42,alphaTest:.05,alphaToCoverage:true,side:THREE.DoubleSide});
+ const fineMaterial=new THREE.MeshPhysicalMaterial({vertexColors:true,roughness:.38,metalness:0,anisotropy:.80,anisotropyRotation:Math.PI*.5,specularIntensity:.75,specularColor:'#ffffff',envMapIntensity:.65,alphaTest:.05,alphaToCoverage:true,side:THREE.DoubleSide});
  const fringeMaterial=fineMaterial.clone();fringeMaterial.alphaTest=0;fringeMaterial.alphaToCoverage=false;fringeMaterial.roughness=.90;fringeMaterial.specularIntensity=0;fringeMaterial.anisotropy=0;fringeMaterial.envMapIntensity=0;
  const wispMaterial=fringeMaterial.clone();wispMaterial.transparent=true;wispMaterial.depthWrite=false;wispMaterial.opacity=.65;wispMaterial.forceSinglePass=true;
  // Closed inset foundation fills the rear part beneath the directional sheets.
