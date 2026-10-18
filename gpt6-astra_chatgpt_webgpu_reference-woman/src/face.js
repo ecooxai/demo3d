@@ -22,11 +22,12 @@ function profile(y){
 }
 function sculpt(x,y){
  let d=.058*gauss(Math.abs(x),.46,.24)*gauss(y,-.15,.28);
+ d+=.080*gauss(Math.abs(x),.34,.24)*gauss(y,.04,.21);
  d+=.052*gauss(Math.abs(x),.34,.22)*gauss(y,.52,.15);
  d-=.016*gauss(Math.abs(x),.35,.24)*gauss(y,.25,.15);
  d+=.143*gauss(x,0,.112)*gauss(y,.20,.36);
- d+=.143*gauss(x,0,.11)*gauss(y,-.095,.21);
- d+=.252*gauss(x,0,.125)*gauss(y,-.235,.115);
+ d+=.100*gauss(x,0,.11)*gauss(y,-.095,.21);
+ d+=.175*gauss(x,0,.125)*gauss(y,-.235,.115);
  d+=.096*gauss(Math.abs(x),.135,.068)*gauss(y,-.285,.073);
  d+=.044*gauss(x,0,.042)*gauss(y,-.352,.059);
  d-=.022*gauss(Math.abs(x),.108,.035)*gauss(y,-.32,.023);
@@ -39,12 +40,13 @@ function sculpt(x,y){
 }
 export function faceZ(x,y){
  const [w,front]=profile(y);
- return front*Math.sqrt(Math.max(.001,1-(x/w)**2))+sculpt(x,y);
+ const co=Math.sqrt(Math.max(.001,1-(x/w)**2));
+ return front*Math.pow(co,.62)+sculpt(x,y)*Math.pow(co,.8);
 }
 const base=new THREE.Color('#e8bfae'),blush=new THREE.Color('#d9918e'),warm=new THREE.Color('#c39280');
-function skinColor(x,y){
+export function skinColor(x,y){
  const c=base.clone();
- c.lerp(blush,.20*gauss(Math.abs(x),.47,.22)*gauss(y,-.18,.22));
+ c.lerp(blush,.28*gauss(Math.abs(x),.47,.22)*gauss(y,-.18,.22));
  c.lerp(warm,.12*gauss(Math.abs(x),.34,.25)*gauss(y,.35,.15));
  c.lerp(blush,.095*gauss(x,0,.15)*gauss(y,-.26,.15));
  const n=.004*Math.sin(x*123+y*213)*Math.sin(x*363-y*114);
@@ -91,19 +93,31 @@ function irisMap(){
 }
 function aperture(cx,s,a){
  const ca=Math.cos(a),sa=Math.sin(a),x=cx+.218*ca,y=.25+(sa>=0?.089:.067)*sa+.013*s*ca;
- const z=.477+Math.sqrt(Math.max(.003,.235**2-(x-cx)**2-(y-.25)**2));
+ const z=.230+Math.sqrt(Math.max(.003,.375**2-(x-cx)**2-(y-.25)**2));
  return [x,y,z+.004];
 }
 function makeEye(s,skin,texture){
  const cx=s*.342,cy=.25,g=new THREE.Group();g.name=s<0?'left-eye':'right-eye';
  const sclera=new THREE.MeshPhysicalMaterial({color:'#e9e3df',roughness:.27,metalness:0,clearcoat:.4,clearcoatRoughness:.09,specularIntensity:.55});
- const globe=mesh(new THREE.SphereGeometry(.235,56,40),sclera,'scleral-globe');globe.position.set(cx,cy,.477);g.add(globe);
+ const sp=[],si=[],su=[],SN=96,SR=24;
+ for(let j=0;j<=SR;j++)for(let i=0;i<=SN;i++){
+  const r=j/SR,a=i/SN*2*PI,[ex,ey]=aperture(cx,s,a),x=THREE.MathUtils.lerp(cx,ex,r),y=THREE.MathUtils.lerp(cy,ey,r);
+  sp.push(x,y,.230+Math.sqrt(Math.max(.001,.375**2-(x-cx)**2-(y-cy)**2))+.0003);su.push(.5+(x-cx)/.48,.5+(y-cy)/.48);
+ }
+ for(let j=0;j<SR;j++)for(let i=0;i<SN;i++){const a=j*(SN+1)+i,b=a+SN+1;si.push(a,b,a+1,b,b+1,a+1);}
+ const globe=mesh(buffer(sp,si,su),sclera,'scleral-globe');g.add(globe);
  const pos=[],uv=[],idx=[],N=96,R=24,rad=.112;
  for(let j=0;j<=R;j++)for(let i=0;i<=N;i++){
   const r=j/R*rad,a=i/N*2*PI,xx=Math.cos(a)*r,yy=Math.sin(a)*r;
-  pos.push(cx+xx,cy+yy,.477+Math.sqrt(.235**2-r*r)+.0025);uv.push(.5+xx/rad*.5,.5+yy/rad*.5);
+  pos.push(cx+xx,cy+yy,.230+Math.sqrt(.375**2-r*r)+.0025);uv.push(.5+xx/rad*.5,.5+yy/rad*.5);
  }
- for(let j=0;j<R;j++)for(let i=0;i<N;i++){const a=j*(N+1)+i,b=a+N+1;idx.push(a,b,a+1,b,b+1,a+1);}
+ for(let j=0;j<R;j++)for(let i=0;i<N;i++){
+  const a=j*(N+1)+i,b=a+N+1;
+  for(const tri of [[a,b,a+1],[b,b+1,a+1]]){
+   const mx=tri.reduce((v,k)=>v+pos[k*3],0)/3,my=tri.reduce((v,k)=>v+pos[k*3+1],0)/3,t=(mx-cx)/.218,h=Math.sqrt(Math.max(0,1-t*t));
+   if(my<cy+.089*h+.013*s*t-.001&&my>cy-.067*h+.013*s*t+.001)idx.push(...tri);
+  }
+ }
  const iris=new THREE.MeshPhysicalMaterial({color:texture?'#ffffff':'#4f2d1e',map:texture,roughness:.24,clearcoat:.8,clearcoatRoughness:.04,specularIntensity:.7});
  g.add(mesh(buffer(pos,idx,uv),iris,'brown-iris-and-pupil'));
  const pp=[],ii=[],cc=[],uu=[],NS=128,NR=12;
@@ -111,7 +125,7 @@ function makeEye(s,skin,texture){
  for(let r=0;r<=NR;r++)for(let k=0;k<=NS;k++){
   const v=r/NR,a=k/NS*2*PI,[ix,iy,iz]=aperture(cx,s,a),ca=Math.cos(a),sa=Math.sin(a);
   const ox=cx+.311*ca,oy=cy+(sa>=0?.221:.181)*sa+.013*s*ca;
-  const x=THREE.MathUtils.lerp(ix,ox,v),y=THREE.MathUtils.lerp(iy,oy,v),z=THREE.MathUtils.lerp(iz,faceZ(ox,oy)+.006,smooth(v))+.012*Math.sin(PI*v);
+  const x=THREE.MathUtils.lerp(ix,ox,v),y=THREE.MathUtils.lerp(iy,oy,v),z=faceZ(x,y)+.002+(iz-faceZ(ix,iy))*(1-smooth(v))+.006*Math.sin(PI*v);
   pp.push(x,y,z);uu.push((Math.asin(clamp(x/profile(y)[0],-.999,.999))+PI)/(2*PI),(y+1.18)/2.72);
   const col=skinColor(x,y).lerp(edgeWarm,(1-v)**4*(sa>0?.20:.13));cc.push(col.r,col.g,col.b);
  }
@@ -123,15 +137,15 @@ function makeEye(s,skin,texture){
   const a=i/64*PI,p=aperture(cx,s,a);upper.push([p[0],p[1],p[2]+.004]);
   const q=aperture(cx,s,PI+a);lower.push([q[0],q[1],q[2]+.004]);
   const ca=Math.cos(a),sa=Math.sin(a),v=.50,ox=cx+.311*ca,oy=cy+.221*sa+.013*s*ca;
-  crease.push([THREE.MathUtils.lerp(p[0],ox,v),THREE.MathUtils.lerp(p[1],oy,v),THREE.MathUtils.lerp(p[2],faceZ(ox,oy)+.006,smooth(v))+.012*Math.sin(PI*v)+.001]);
+  crease.push([THREE.MathUtils.lerp(p[0],ox,v),THREE.MathUtils.lerp(p[1],oy,v),faceZ(THREE.MathUtils.lerp(p[0],ox,v),THREE.MathUtils.lerp(p[1],oy,v))+.003+(p[2]-faceZ(p[0],p[1]))*(1-smooth(v))+.006*Math.sin(PI*v)]);
  }
  g.add(mesh(tube(upper,.0048,64,5),rimMat,'upper-lash-margin'));
  g.add(mesh(tube(lower,.0032,64,5),new THREE.MeshStandardMaterial({color:'#c28c81',roughness:.42}),'lower-waterline'));
  g.add(mesh(tube(crease,.0028,64,4),new THREE.MeshStandardMaterial({color:'#b68473',roughness:.6}),'upper-lid-fold'));
  const lashes=[];
  for(let i=0;i<43;i++){
-  const a=.11+(i/42)*(PI-.22),p=aperture(cx,s,a),outer=(1+s*Math.cos(a))/2,len=.021+.033*outer;
-  lashes.push(tube([p,[p[0]+.009*s,p[1]+len*.45,p[2]+len*.65],[p[0]+.018*s,p[1]+len,p[2]+len*.8]],.0018,5,3));
+  const a=.11+(i/42)*(PI-.22),p=aperture(cx,s,a),outer=(1+s*Math.cos(a))/2,len=(.013+.026*outer)*(.75+.25*Math.sin(i*2.399)**2);
+  lashes.push(tube([p,[p[0]+Math.cos(a)*len*.25,p[1]+len*.45,p[2]+len*.65],[p[0]+Math.cos(a)*len*.5,p[1]+len,p[2]+len*.8]],.0018,5,3));
  }
  for(let i=0;i<21;i++){
   const a=PI+.20+i/20*(PI-.4),p=aperture(cx,s,a),len=.014;
@@ -200,8 +214,8 @@ function makeBrows(){
  const geo=[],g=new THREE.Group();g.name='individual-eyebrow-fibers';
  for(const s of [-1,1]){
   for(let i=0;i<220;i++){
-   const t=i/219,r=(Math.sin(i*37.178)+1)/2,x=s*(.13+t*.49),y=.515+.061*Math.sin(t*PI*.88)-.045*t+.043*(r-.5)*(1-t*.65);
-   const z=faceZ(x,y)+.009,len=.027+.020*(1-t);
+   const t=i/219,r=(Math.sin(i*137.178)+1)/2,x=s*(.13+t*.49),y=.515+.061*Math.sin(t*PI*.88)-.045*t+.043*(r-.5)*(1-t*.65);
+   const z=faceZ(x,y)+.009,len=(.020+.021*(1-t))*(.58+.42*r);
    geo.push(tube([[x,y,z],[x+s*.013,y+len*.65,faceZ(x+s*.013,y+len*.65)+.012],[x+s*(.024+.010*t),y+len,faceZ(x+s*(.024+.010*t),y+len)+.009]],.00135*(1-.55*t),4,3));
   }
  }
@@ -214,14 +228,14 @@ export function createHead({textures=true}={}){
  const pos=[],idx=[],uv=[],col=[],ny=260,nt=320;
  for(let j=0;j<=ny;j++)for(let i=0;i<=nt;i++){
   const y=-1.18+j/ny*2.72,a=-PI+i/nt*2*PI,[w,f,b]=profile(y),co=Math.cos(a),x=w*Math.sin(a);
-  let z=(co>=0?f:b)*co;if(co>0)z+=sculpt(x,y)*Math.pow(co,.8);
-  pos.push(x,y,z);uv.push(i/nt,j/ny);const c=skinColor(x,y);col.push(c.r,col.g,col.b);
+  let z=co>=0?f*Math.pow(co,.62):b*co;if(co>0)z+=sculpt(x,y)*Math.pow(co,.8);
+  pos.push(x,y,z);uv.push(i/nt,j/ny);const c=skinColor(x,y);col.push(c.r,c.g,c.b);
  }
  for(let j=0;j<ny;j++)for(let i=0;i<nt;i++){
   const a=j*(nt+1)+i,b=a+nt+1;
   const midX=(pos[a*3]+pos[(a+1)*3]+pos[b*3]+pos[(b+1)*3])/4;
   const midY=(pos[a*3+1]+pos[b*3+1])/2,midZ=pos[a*3+2];
-  const cutEye=midZ>0&&[-.342,.342].some(cx=>((midX-cx)/.293)**2+((midY-.25)/.19)**2<1);
+  const cutEye=midZ>0&&[-.342,.342].some(cx=>((midX-cx)/.293)**2+((midY-.25)/.175)**2<1);
   if(!cutEye)idx.push(a,a+1,b,b,a+1,b+1);
  }
  const head=mesh(buffer(pos,idx,uv,col),skin,'continuous-face');root.add(head);

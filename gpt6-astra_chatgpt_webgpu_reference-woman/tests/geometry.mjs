@@ -9,7 +9,7 @@ test('portrait anatomy is finite and fully dimensional', () => {
     meshes++;
     const p=o.geometry.getAttribute('position');
     assert.ok(p && p.count>2, o.name);
-    for(const v of p.array) assert.ok(Number.isFinite(v),o.name+' finite vertices');
+    for(const [attr,a] of Object.entries(o.geometry.attributes))for(const v of a.array)assert.ok(Number.isFinite(v),o.name+' finite '+attr);
     o.geometry.computeBoundingBox();
     triangles+=(o.geometry.index?.count || p.count)/3;
   });
@@ -28,5 +28,5 @@ test('visible facial and iris normals point outward', () => {
  assert.ok(found>1,'sampled forehead');
  const iris=head.getObjectByName('brown-iris-and-pupil').geometry;
  const norms=iris.getAttribute('normal');
- for(let i=100;i<norms.count-100;i+=43) assert.ok(norms.getZ(i)>.4,'iris faces the camera');
+ for(const i of new Set(iris.index.array)) if(norms.getZ(i)!==0)assert.ok(norms.getZ(i)>.4,'visible iris faces the camera');
 });
