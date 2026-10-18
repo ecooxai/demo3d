@@ -4,8 +4,8 @@
   "goal_achieved": false,
   "method": "Visual self-assessment against the sole uploaded image, supplemented by independent agent review. Scores are subjective and are not a certification of AAA production quality.",
   "scope": "Recorded assessments whose numeric results remain available. No missing historical scores have been invented.",
-  "current_accepted_iteration": 36,
-  "current_accepted_score": 71,
+  "current_accepted_iteration": 42,
+  "current_accepted_score": 72,
   "assessments": [
     {
       "iteration": 20,
@@ -126,6 +126,41 @@
       "reviewer": "root",
       "decision": "retained baseline ear material after comparison",
       "notes": "Stronger procedural concha and canal color variations produce little visible depth improvement. They were not adopted. Geometry occlusion and ear surface relief require investigation."
+    },
+    {
+      "iteration": 38,
+      "score": 69,
+      "reviewer": "root",
+      "decision": "rejected shared crown alpha cutoff",
+      "notes": "Staggered rear ends improve but the common root alpha cutoff exposes a horizontal band around the crown. Ear wisps extend too far. Restored the accepted35 groom for the isolated cloth comparison."
+    },
+    {
+      "iteration": 39,
+      "score": 71,
+      "reviewer": "root",
+      "decision": "accepted bounded cloth relief and beveled buttons",
+      "notes": "Button pulls and lower placket crease read in close view, without changing collar or neck coordinates or adding draw calls. Five-view render shows no new hair/cloth intersections."
+    },
+    {
+      "iteration": 40,
+      "score": 71,
+      "reviewer": "root",
+      "decision": "accepted narrower jaw guard; local tone corrections pending",
+      "notes": "The long brown jaw edge is reduced while protected feature samples remain stable. A smaller cheek triangle and central chin patch persist in unlit atlas diagnosis and are being traced to exact source samples."
+    },
+    {
+      "iteration": 42,
+      "score": 72,
+      "reviewer": "root and quality_review_42",
+      "decision": "accepted improved crown-to-length transition",
+      "notes": "The horizontal ring is removed and crown ridges reduced. Independent overall72. Large lock roots still produce localized crown patches and folded temple chips; individual raycast triangles identify the affected front guides. Graphic fringe and pointed back ends remain."
+    },
+    {
+      "iteration": 44,
+      "score": 72,
+      "reviewer": "root",
+      "decision": "retained softer portrait lighting after cloth comparison",
+      "notes": "Compared baseline cotton, removal of previous cloth color boost, and stronger lateral key light. Stronger light shows cloth relief but changes neck/face tone; no global lighting or cloth color change adopted."
     }
   ]
 }

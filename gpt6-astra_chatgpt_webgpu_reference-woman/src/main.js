@@ -16,7 +16,7 @@ const hairChoice=new URLSearchParams(location.search).get('hair')||'groom';
 const fiberCandidate=hairChoice==='fibers';
 const groomCandidate=hairChoice==='groom';
 const coverageCandidate=hairChoice==='coverage';
-const state = { backend: new URLSearchParams(location.search).get('backend') === 'webgl' ? 'webgl' : 'webgpu', width: 900, height: 1200, iteration: groomCandidate?36:coverageCandidate?32:fiberCandidate?25:27, score: groomCandidate?71:fiberCandidate?61:68, renderedFrames: 0, renderMs: 0, rotating: false, view: 'front', ready: false, lighting: 'soft' };
+const state = { backend: new URLSearchParams(location.search).get('backend') === 'webgl' ? 'webgl' : 'webgpu', width: 900, height: 1200, iteration: groomCandidate?42:coverageCandidate?32:fiberCandidate?25:27, score: groomCandidate?72:fiberCandidate?61:68, renderedFrames: 0, renderMs: 0, rotating: false, view: 'front', ready: false, lighting: 'soft' };
 const scene = new THREE.Scene();
 scene.background = new THREE.Color('#cbe3f3');
 const model = new THREE.Group();

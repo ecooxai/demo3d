@@ -83,7 +83,13 @@ function jawSampleConfidence(u,v){
   let i=0;while(i<jawSkinRows.length-2&&v>jawSkinRows[i+1][0])i++;
   const a=jawSkinRows[i],b=jawSkinRows[i+1],t=(v-a[0])/(b[0]-a[0]);
   const left=a[1]*(1-t)+b[1]*t,right=a[2]*(1-t)+b[2]*t;
-  return smooth((Math.min(u-left,right-u)+2)/12);
+  // Candidate 40: the photographed right-jaw edge also contains a soft brown
+  // hair/contact-shadow fringe inside its darkest pixels. Reject that narrow
+  // inner fringe with a wider blend, instead of mapping it as a crease across
+  // the sculpted jaw. The left edge and upper-face sampling remain identical.
+  const lowerRight=smooth((v-672)/28);
+  const rightInset=14*lowerRight,rightFeather=12+10*lowerRight;
+  return Math.min(smooth((u-left+2)/12),smooth((right-u+2-rightInset)/rightFeather));
 }
 
 function makeSkinAtlas(source) {

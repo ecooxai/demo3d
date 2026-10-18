@@ -122,6 +122,48 @@ function profile(t) {
   return out;
 }
 
+const secondaryClothGate=y=>smooth(-1.45,-1.27,y)*(1-smooth(.49,.565,y));
+
+function secondaryClothRelief(x,y,front=true){
+  const gate=secondaryClothGate(y);
+  if(gate===0)return 0;
+  const ax=Math.abs(x),cx=placketX(y);
+  let folds=0;
+  if(front){
+    // A few longer tension folds follow the button pulls in the reference.
+    // They grow from the same paths as the primary folds, without parallel ribs.
+    const side=x>=cx?1:-1;
+    for(let k=0;k<3;k++){
+      const dx=(x-placketX(BUTTON_Y[k]))*side;
+      const centre=BUTTON_Y[k]+FOLD_OFFSETS[k]+FOLD_SLOPES[k]*dx+.045*dx*dx;
+      const w=.038+.035*Math.max(0,dx),preferredSide=k===1?-1:1;
+      const amplitude=(side===preferredSide?1:.28)*(.021-k*.002);
+      folds+=amplitude*gauss(dx-.22,FOLD_LENGTHS[k]+.075)*(gauss(y-centre,w)-.34*gauss(y-centre,w*2.25))*smooth(.055,.15,dx);
+    }
+    // The narrow fold beside the placket turns into a broad hanging billow.
+    const closeLine=cx+.157+.022*Math.sin(y*2.35+.5);
+    folds+=.026*gauss(y+.26,.78)*(gauss(x-closeLine-.055,.105)-.62*gauss(x-closeLine,.047));
+    const hangingLine=cx-.32-.052*smooth(-1.08,.31,y)+.024*Math.sin(y*2.10+.4);
+    folds+=.033*gauss(y+.37,.79)*(gauss(x-hangingLine,.108)-.42*gauss(x-hangingLine+.092,.176));
+    // One low diagonal gather carries the unequal drape into the cropped waist.
+    const lowerPull=y+.99+.39*(x+.10);
+    folds+=.034*gauss(x+.35,.43)*(gauss(lowerPull,.094)-.34*gauss(lowerPull+.092,.173));
+    const sleeveLine=(x<0?1.31:1.38)+(x<0?.095:.14)*(y+.33);
+    folds+=.021*gauss(y+(x<0?.50:.28),.67)*(gauss(ax-sleeveLine,.10)-.40*gauss(ax-sleeveLine+.085,.17));
+  }else{
+    // Unequal loose folds on the back stay broad under the hanging hair.
+    const a=x-.44-.038*y,b=x+.58+.025*y;
+    folds+=.022*gauss(y+.39,.79)*(gauss(a,.12)-.38*gauss(a+.10,.20));
+    folds+=.017*gauss(y+.62,.69)*(gauss(b,.145)-.34*gauss(b-.12,.23));
+    const sleeveLine=1.27+.07*(y+.4);
+    folds+=.014*gauss(y+.39,.71)*(gauss(ax-sleeveLine,.13)-.36*gauss(ax-sleeveLine+.09,.20));
+  }
+  // Limit additional lift to .032 world units.
+  // This protects the established hair clearance and leaves the upper garment fixed.
+  const bound=folds>=0?.032:.042;
+  return gate*bound*Math.tanh(folds/bound);
+}
+
 function fabricRelief(x,y) {
   const ax=Math.abs(x),side=x>=placketX(y)?1:-1;
   let folds=0;
@@ -148,7 +190,7 @@ function fabricRelief(x,y) {
   // One shallow compression leaves room for unbroken cloth below the collar.
   const collarD=y-.57+.49*(x+.40);
   folds+=.014*gauss(x+.44,.22)*(gauss(collarD,.054)-.31*gauss(collarD-.065,.103));
-  return folds;
+  return folds+secondaryClothRelief(x,y,true);
 }
 
 function roundedShoulderWeight(c){
@@ -194,7 +236,7 @@ function torsoPoint(u,t) {
     z-=.063*gauss(ax-armSeam,.102)*smooth(.39,.61,t)*(1-smooth(.96,1,t))*c;
   } else {
     const backFold=.021*gauss(x-.46-.025*y,.098)-.014*gauss(x+.57+.04*y,.118);
-    z-=gate*(backFold+.014*gauss(x,.062)*gauss(y-.23,.66));
+    z-=gate*(backFold+.014*gauss(x,.062)*gauss(y-.23,.66)+secondaryClothRelief(x,y,false)*Math.abs(c));
     z+=.060*Math.abs(c)*smooth(1.13,1.48,Math.abs(x))*gauss(y-.20,.91);
   }
   y+=.007*Math.sin(a*3.0+.4)*smooth(.50,.85,t)*(1-smooth(.93,1,t));
@@ -352,10 +394,13 @@ function batchButtons(group) {
 
 function addButtons(group,buttonMat,holeMat,threadMat) {
   const allButtons=new THREE.Group();allButtons.name='original-batched-four-hole-pearl-buttons';
-  const buttonGeometry=new THREE.CylinderGeometry(.0555,.055,.0145,48,1,false);
-  const edgeGeometry=new THREE.TorusGeometry(.0465,.0032,6,40);
-  const wellGeometry=new THREE.CircleGeometry(.0063,12);
-  const threadGeometry=new THREE.CylinderGeometry(.0018,.0018,.018,5);
+  // A shallow dish and a rounded annular lip catch light as one continuous shell.
+  const pearlProfile=[[0,-.0065],[.044,-.0065],[.055,-.0056],[.0595,-.0036],[.0615,-.0004],[.062,.0030],[.0606,.0065],[.0577,.0088],[.054,.0095],[.0505,.0087],[.0475,.0067],[.044,.0043],[.040,.0035],[0,.0035]];
+  const buttonGeometry=new THREE.LatheGeometry(pearlProfile.map(p=>new THREE.Vector2(...p)),64);
+  const collarButtonGeometry=new THREE.CylinderGeometry(.0555,.055,.0145,48,1,false);
+  const collarEdgeGeometry=new THREE.TorusGeometry(.0465,.0032,6,40);
+  const wellGeometry=new THREE.CircleGeometry(.0066,14);
+  const threadGeometry=new THREE.CylinderGeometry(.00165,.00165,.022,6);
   for(let i=0;i<5;i++) {
     const y=i<4?BUTTON_Y[i]:1.104,x=i<4?placketX(y):.180;
     const p=i<4?bodyAtXY(x,y):facingPoint(1,.68,.735);
@@ -363,13 +408,14 @@ function addButtons(group,buttonMat,holeMat,threadMat) {
     button.position.set(i<4?x:p[0],i<4?y:p[1],p[2]+.027);
     if(i<4)button.quaternion.setFromUnitVectors(new THREE.Vector3(0,0,1),bodyNormal(x,y));
     else{button.quaternion.setFromUnitVectors(new THREE.Vector3(0,0,1),facingNormal(1,.68,.735));button.scale.setScalar(.91);}
-    const disc=mesh(button,'button-pearl-disc',buttonGeometry,buttonMat);disc.rotation.x=Math.PI/2;
-    const rim=mesh(button,'button-rounded-rim',edgeGeometry,buttonMat);rim.position.z=.0095;
+    if(i<4)button.rotateZ([.13,-.07,.09,-.12][i]);
+    const disc=mesh(button,'button-pearl-disc',i<4?buttonGeometry:collarButtonGeometry,buttonMat);disc.rotation.x=Math.PI/2;
+    if(i===4){const rim=mesh(button,'button-rounded-rim',collarEdgeGeometry,buttonMat);rim.position.z=.0095;}
     for(const sx of[-1,1])for(const sy of[-1,1]) {
-      const hole=mesh(button,'recessed-button-hole',wellGeometry,holeMat);hole.position.set(sx*.0125,sy*.0125,.0084);
+      const hole=mesh(button,'recessed-button-hole',wellGeometry,holeMat);hole.position.set(sx*.0132,sy*.0132,i<4?.0041:.0084);
     }
     for(const sx of[-1,1]){
-      const thread=mesh(button,'ivory-button-thread',threadGeometry,threadMat);thread.position.set(sx*.0125,0,.0102);thread.rotation.z=.15;
+      const thread=mesh(button,'ivory-button-thread',threadGeometry,threadMat);thread.position.set(sx*.0132,0,i<4?.0061:.0102);thread.rotation.z=.15;
     }
     allButtons.add(button);
   }
@@ -377,7 +423,7 @@ function addButtons(group,buttonMat,holeMat,threadMat) {
 }
 
 function clothGeometry() {
-  const nu=144,nv=76,g=surface(nu,nv,torsoPoint),p=g.attributes.position,n=g.attributes.normal,colors=[];
+  const nu=192,nv=112,g=surface(nu,nv,torsoPoint),p=g.attributes.position,n=g.attributes.normal,colors=[];
   // Surface tangents prevent triangle-sized normal changes on the shoulder
   // and keep the wrapped centre seam continuous at both copies of the UV boundary.
   const e=.00013;
@@ -401,6 +447,7 @@ function clothGeometry() {
     }else{
       shade=.035*gauss(x,.083)*gauss(y-.25,.67)+.055*gauss(x+.57+.04*y,.080)*gauss(y+.15,.80);
       shade+=.032*gauss(y-(.77+.095*x*x),.035);
+      shade+=Math.max(0,-secondaryClothRelief(x,y,false))*2.2;
     }
     colors.push(clamp(1-shade,.67,1.045),clamp(1-shade*.985,.68,1.042),clamp(1-shade*.77,.73,1.025));
   }
@@ -462,7 +509,7 @@ export function createBlouse() {
   }
   const hem=[];for(let i=0;i<=128;i++){const p=torsoPoint(i/128,.993);hem.push(p);}
   curveMesh(group,'blouse-bust-crop-hem',hem,.0034,seamMat,128);
-  const buttonMat=new THREE.MeshPhysicalMaterial({name:'blouse-ivory-buttons',color:'#e6e0d1',roughness:.34,metalness:0,clearcoat:.18,clearcoatRoughness:.38});
+  const buttonMat=new THREE.MeshPhysicalMaterial({name:'blouse-ivory-buttons',color:'#eee8dc',roughness:.31,metalness:0,clearcoat:.24,clearcoatRoughness:.30});
   const holeMat=new THREE.MeshStandardMaterial({name:'button-recesses',color:'#a49b8a',roughness:.8,side:THREE.DoubleSide});
   const threadMat=new THREE.MeshStandardMaterial({name:'button-threads',color:'#e9e5d9',roughness:.9});
   addButtons(group,buttonMat,holeMat,threadMat);
