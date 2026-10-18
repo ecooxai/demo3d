@@ -4,7 +4,7 @@
   "goal_achieved": false,
   "method": "Visual self-assessment against the sole uploaded image, supplemented by independent agent review. Scores are subjective and are not a certification of AAA production quality.",
   "scope": "Recorded assessments whose numeric results remain available. No missing historical scores have been invented.",
-  "current_accepted_iteration": 73,
+  "current_accepted_iteration": 79,
   "current_accepted_score": 76,
   "assessments": [
     {
@@ -337,6 +337,27 @@
       "reviewer": "root",
       "decision": "retained original shadows after softer contact comparison",
       "notes": "Tested2048radius8 with fringe casting and normalBias.012/.005, originalbias-.0002, using fresh nativeWebGPU pages. Softening avoids72hard edges but gives no useful visible gain over accepted1024radius4/no-fringe-casting. No production shadow change or score increase."
+    },
+    {
+      "iteration": 75,
+      "score": 76,
+      "reviewer": "root and quality_review_42",
+      "decision": "accepted modest shared crown flow variation",
+      "notes": "Five native views reviewed. Shared unequal shallow flow families deform crown, major roots and existingfinefibers together. Staggered fringe starts reduce one common rootrow. Allmaps/materials unchanged, hairtriangles1104568,buffers51.62MiB,strands12676. Part/edgepositions fixed, samplednormaldot>=.898,90joinsmonotonic,minfringeclearance.01255. No visible seam or silhouette regression. The crown remains broad and cap-like; no score gain."
+    },
+    {
+      "iteration": 77,
+      "score": 76,
+      "reviewer": "root and reference_art_review",
+      "decision": "accepted new guarded outer-canthus support as a partial correction; strongercap79subsequentlyselected",
+      "notes": "Exactnative rays locate photographed darkness on visiblecontinuous-face at canonicalcore(.569074,.027315) andupper(.603336,.100583). Independent compactmask preserves10752aperture,9225creaseband,and18000lash-envelope samples. Newlift combines bymax withold49; lowercheek65 andallgeometry/UV/materials unchanged. Native0/10/14 comparison prefers14modestly; diagonal shade remains. ActualsourcecoreRGBabout94/55/45 explains weak effect."
+    },
+    {
+      "iteration": 79,
+      "score": 76,
+      "reviewer": "root and reference_art_review",
+      "decision": "accepted outer-canthus cap40 and integrated with crown75",
+      "notes": "Compared24/40 against14 in matched native detail andquarterviews. Forty softens the excessive diagonalband while retaining naturalshade, finecolorvariation and protectedeye. No pale crescent or boundary visible. Visibleheadray confirmscore/upper/tailarecontinuous-face andcontrol581565issclera. RenderedcoreRGB0->40 is87,46,39 ->137,94,86; protectedcontrol79,38,38unchanged at0/14/24/40. Residualphotographicshade remains; close this narrowpass. Overall76."
     }
   ]
 }

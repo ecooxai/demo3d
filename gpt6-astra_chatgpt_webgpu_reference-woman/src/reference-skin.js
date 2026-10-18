@@ -136,6 +136,41 @@ function sourceShadowWeights(x,y){
   return [socket,nose];
 }
 
+// Candidate 77: replace this single literal with 0, 10, or 14 in an isolated
+// render bundle. Zero reproduces the accepted atlas without this correction.
+// Accepted79: the40cap softened the stretched corner shade without changing the protected eye.
+const OUTER_CANTHUS_LIFT_CAP = 40;
+
+function outerCanthusWeight(x,y){
+  // Native ray samples locate the remaining source-albedo band outside the
+  // aperture but inside part of candidate 49's broad 1.42-radius lid guard.
+  // This independent support never reaches the lower-cheek/chin corrections.
+  const q=Math.hypot((x-.590)/.120,(y-.032)/.120);
+  if(q>=1||x<=.50)return 0;
+  let weight=(1-smooth((q-.30)/.70))*smooth((x-.50)/.040);
+
+  // Protect the actual aperture plus the complete authored lash envelope.
+  // Canonical atlas coordinates precede every later pose/proportion change.
+  const t=Math.max(-1,Math.min(1,(x-.342)/.185)),h=1-t*t;
+  const low=canonicalEyeY(.25-.058*h+.013*t);
+  const high=canonicalEyeY(.25+.080*h+.013*t);
+  const apertureDistance=Math.max(Math.abs(x-.342)-.185-.020,
+    low-y-.024,y-high-.050);
+  weight*=smooth(apertureDistance/.018);
+  if(weight===0)return 0;
+
+  // The upper fold follows the 0.63 interpolation through the authored lid
+  // annulus, restricted to angles 7..57 of its original 64 intervals. A soft
+  // capsule about that curve protects the crease independently of plain skin.
+  const scale=1+.42*.63,w=.185*scale,end=Math.cos(7*Math.PI/64);
+  const ct=Math.max(-end,Math.min(end,(x-.342)/w));
+  const creaseX=.342+w*ct;
+  const creaseY=canonicalEyeY(.25+scale*(.080*(1-ct*ct)+.013*ct));
+  const creaseDistance=Math.hypot(x-creaseX,y-creaseY);
+  weight*=smooth((creaseDistance-.014)/.016);
+  return weight;
+}
+
 function makeSkinAtlas(source) {
   const c=document.createElement('canvas');c.width=source.naturalWidth;c.height=source.naturalHeight;
   const cx=c.getContext('2d',{willReadFrequently:true});cx.drawImage(source,0,0);
@@ -239,7 +274,8 @@ function makeSkinAtlas(source) {
     }
     if(sourceUV&&safePhoto>0&&x>.027&&x<.744&&y>-.540&&y<.165){
       const [socket,nose]=sourceShadowWeights(x,y);
-      if(socket>0||nose>0){
+      const outerCanthus=OUTER_CANTHUS_LIFT_CAP>0?outerCanthusWeight(x,y):0;
+      if(socket>0||nose>0||outerCanthus>0){
         const broad=luminance(orbitalSource(...sourceUV));
         // Protect thin dark lash strokes relative to their local broad tone.
         // An absolute darkness threshold would also reject the shadow being
@@ -247,7 +283,11 @@ function makeSkinAtlas(source) {
         const pigmentGuard=smooth((luminance(rgb)-broad+22)/15);
         const socketLift=Math.min(14,Math.max(0,(socketTone-broad)*.50))*socket;
         const noseLift=Math.min(7,Math.max(0,(noseTone-broad)*.50))*nose;
-        const lift=Math.max(socketLift,noseLift)*pigmentGuard;
+        // Brightness only, preserving source chroma and texture. Taking the
+        // maximum prevents the overlapping old/new socket lifts from adding.
+        const outerLift=Math.min(OUTER_CANTHUS_LIFT_CAP,
+          Math.max(0,(socketTone-broad)*.50))*outerCanthus;
+        const lift=Math.max(socketLift,noseLift,outerLift)*pigmentGuard;
         for(let ch=0;ch<3;ch++)skinRGB[ch]+=lift;
       }
     }

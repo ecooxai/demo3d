@@ -1,9 +1,8 @@
 import * as THREE from 'three';
 import { faceZ } from './face.js';
 
-// Original reference-directed groom. The crown is a continuous pair of flow
-// surfaces. Overlapping, shallow three-dimensional locks continue the flow over
-// the shoulders; the individual strands supply detail, not silhouette coverage.
+// Original reference-directed groom: continuous crown, overlapping 3D locks,
+// individual fibers and real coverage around both shoulders.
 const TAU=Math.PI*2,clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
 const mix=(a,b,t)=>a+(b-a)*t,smooth=(a,b,x)=>{const t=clamp((x-a)/(b-a));return t*t*(3-2*t);};
 const V=(x,y,z)=>new THREE.Vector3(x,y,z);
@@ -19,27 +18,35 @@ function foreheadField(){
 function sampleTable(table,t){let i=0;while(i<table.length-2&&t>table[i+1][0])i++;const a=table[i],b=table[i+1];return mix(a[1],b[1],smooth(a[0],b[0],t));}
 const leftEdge=[[0,.84],[.35,1.01],[.70,1.27],[1.05,1.61],[1.30,1.77],[1.57,1.93],[1.95,2.19],[Math.PI,2.31]];
 const rightEdge=[[0,.84],[.35,1.10],[.70,1.43],[1.05,1.77],[1.40,2.08],[1.85,2.23],[Math.PI,2.31]];
+// Root coordinate, width, relief, bend, phase: unequal locks in the broad left
+// sweep and finer right fall. Their field is shared by crown, roots and fibers.
+const crownLocks=[
+ [[.12,.064,.004,-.008,.4],[.28,.056,.005,.006,1.5],[.43,.050,.007,-.009,.9],[.56,.046,.010,.009,2.2],[.665,.039,.014,-.010,1.2],[.765,.042,.013,.008,2.9],[.858,.031,.011,-.006,1.9],[.928,.022,.008,.004,.5]],
+ [[.12,.062,.004,.005,.8],[.30,.055,.006,-.006,2.2],[.465,.050,.006,.007,1.3],[.585,.041,.011,-.008,2.9],[.695,.037,.012,.006,.5],[.798,.040,.012,-.007,2.2],[.883,.029,.010,.004,1.5],[.943,.019,.006,-.003,2.9]]
+];
+const crownEnvelope=(u,v)=>Math.pow(Math.sin(Math.PI*v),2)*smooth(.03,.10,u)*(1-smooth(.90,.96,u));
 function earDepth(x,y,z){
- // One smooth final deformation replaces the former repeated tuck and hard
- // z=.49 cutoff, which folded triangles into a bright chip above the ear.
+ // Smooth monotone compression keeps the left-ear surface unfolded.
  const w=Math.exp(-Math.pow((x+.857)/.167,4))*Math.exp(-Math.pow((y+.005)/.410,4));
  if(w<.000001)return z;
- // Compress depth monotonically at the entrance, then release it smoothly.
- // A rising displacement gate can invert the surface even when it is smooth.
+ // Release the compression gradually without reversing its depth derivative.
  const target=z>.070?.070+.026*Math.tanh((z-.070)/.026):z;
  return z-(z-target)*w*(1-smooth(.47,.70,z))*.995;
 }
 function crownField(forehead){
  return(side,u,v,lift=0)=>{
+  // The deformation and its first derivatives vanish at part and edge.
+  const envelope=crownEnvelope(u,v);let drift=0,relief=0;
+  for(const[c,w,h,b,ph]of crownLocks[side<0?0:1]){const weight=Math.exp(-Math.pow((u-c)/w,2));drift+=weight*(.36*(c-u)+b*Math.sin(v*Math.PI+ph));relief+=weight*h*(.76+.24*Math.sin(v*Math.PI+ph));}
+  u+=drift*envelope;
   const phi=side*Math.PI*(1-u),theta=sampleTable(side<0?leftEdge:rightEdge,Math.abs(phi));
   const partX=.185+.028*Math.sin(u*Math.PI)+.009*Math.sin(u*Math.PI*8),rootZ=mix(-.665,.625,u),rx=(partX-.012)/.94,rz=(rootZ+.077)/.857;
   const r=V(rx,Math.sqrt(Math.max(.025,1-rx*rx-rz*rz)),rz).normalize();
   const edge=V(Math.sin(theta)*Math.sin(phi),Math.cos(theta),Math.sin(theta)*Math.cos(phi));
-  // Spherical interpolation avoids crown ridges where independent root curves
-  // used to turn abruptly toward their separate long bundles.
+  // Spherical interpolation maintains one continuous root-to-edge direction.
   const angle=Math.acos(clamp(r.dot(edge),-1,1)),sin=Math.sin(angle),t=clamp(v);
   let n=sin<.00001?r.clone().lerp(edge,t).normalize():r.multiplyScalar(Math.sin((1-t)*angle)/sin).addScaledVector(edge,Math.sin(t*angle)/sin);
-  const puff=(side<0?.026:.012)*Math.sin(v*Math.PI)*smooth(.12,.60,u);
+  const puff=(side<0?.026:.012)*Math.sin(v*Math.PI)*smooth(.12,.60,u)+relief*envelope;
   const p=V(.012+(.94+lift+puff)*n.x,.327+(1.302+lift*.35+puff)*n.y,-.077+(.857+lift+puff)*n.z);
   if(p.z>0&&p.y>.14&&p.y<1.43){const z=forehead(p.x,p.y),weight=smooth(.08,.24,z)*smooth(.16,.38,p.y)*(1-smooth(1.24,1.46,p.y));p.z=Math.max(p.z,mix(p.z,z+.021+lift,weight));}
   return p;
@@ -47,8 +54,7 @@ function crownField(forehead){
 }
 function makeMaps(){
  const w=512,h=1024,p=new Uint8Array(w*h*4),n=new Uint8Array(w*h*4),f=new Uint8Array(w*h*4),r=rng(227819),lanes=192,shade=[],phase=[],tip=[];
- // Near-white grain keeps the mapped mass and unmapped real fibers at the same
- // mean albedo. The unchanged alpha and normal relief provide the fine texture.
+ // Near-white grain matches mass and real-fiber albedo; alpha and normals add detail.
  for(let i=0;i<lanes;i++){shade.push(.989+r()*.009);phase.push(r()*TAU);tip.push(.86+r()*.138);}
  for(let y=0;y<h;y++)for(let x=0;x<w;x++){
   const u=x/w,v=y/(h-1),lane=Math.min(lanes-1,Math.floor(u*lanes)),q=u*lanes-lane,ph=phase[lane],bend=.024*Math.sin(v*8+ph),ridge=Math.sin((q+bend)*TAU);
@@ -69,8 +75,7 @@ function batch(rgba=false){return{p:[],c:[],uv:[],i:[],rgba};}
 function vertex(b,p,c,u,v,alpha=1,deformEar=true){const at=b.p.length/3;b.p.push(p.x,p.y,p.z);b.c.push(c.r,c.g,c.b);if(b.rgba)b.c.push(alpha);b.uv.push(u,v);if(!deformEar)(b.untucked??=[]).push(at);return at;}
 function makeMesh(b,material,name,headTilt,castShadow=true,deformEar=true){
  const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.Float32BufferAttribute(b.p,3));g.setAttribute('color',new THREE.Float32BufferAttribute(b.c,b.rgba?4:3));g.setAttribute('uv',new THREE.Float32BufferAttribute(b.uv,2));g.setIndex(b.i);
- // THREE's head Euler transform is Ry * Rz. The long hair follows gravity
- // using its inverse Rz * Ry below the neck, while roots keep the head pose.
+ // Invert the Ry*Rz head pose below the neck so the lengths follow gravity.
  const p=g.attributes.position;let untucked=0;
  for(let i=0;i<p.count;i++){const skip=b.untucked?.[untucked]===i;if(skip)untucked++;let x=p.getX(i),y=p.getY(i),z=deformEar&&!skip?earDepth(x,y,p.getZ(i)):p.getZ(i),w=1-smooth(-1.64,.38,y),ay=-.16*w,az=-headTilt*w,cy=Math.cos(ay),sy=Math.sin(ay),cz=Math.cos(az),sz=Math.sin(az),xx=x*cy+z*sy;z=-x*sy+z*cy;p.setXYZ(i,xx*cz-y*sz,xx*sz+y*cz,z);}
  g.computeVertexNormals();
@@ -86,11 +91,9 @@ function frame(c,t,front=false){
  const p=c.getPoint(t),d=c.getTangent(t).normalize();
  let n=front?V(p.x*.085,.025,1):V(p.x,.025,p.z+.077);
  if(n.lengthSq()<.01)n=V(0,0,-1);n.normalize();
- // At the crown, the true ellipsoid normal has a large vertical component.
- // A horizontal radial normal incorrectly tips each lock on its edge there.
+ // Use a vertical ellipsoid normal at the crown.
  const scalp=V((p.x-.012)/(.94*.94),(p.y-.327)/(1.302*1.302),(p.z+.077)/(.857*.857)).normalize();
- // Keep the frame wrapped around the temple and ear before the lengths turn
- // over the chest. A front-facing frame here produces a planar sideburn flap.
+ // Wrap the frame around the temple before it turns over the chest.
  n.lerp(scalp,smooth(-1.08,.34,p.y)).normalize();
  const side=d.clone().cross(n);if(side.lengthSq()<.001)side.set(1,0,0);else side.normalize();n=side.clone().cross(d).normalize();return{p,d,n,s:side};
 }
@@ -104,9 +107,7 @@ function lockShape(t,g,p){
 }
 function lockSection(g,t){
  const f=frame(g.c,t,g.front),shape=lockShape(t,g,f.p),phase=g.phase;
- // An opaque lock grows out of the common crown surface. Its root begins
- // inside that surface, and its depth develops along its own flow. No common
- // height or alpha cutoff can create a horizontal ring around the head.
+ // Opaque roots grow from inside the crown along their own flow; no common-Y cutoff.
  const root=g.scalpRoot?(1-smooth(.035+.012*Math.sin(phase),.32+.045*Math.sin(phase*.71+.6),t))*smooth(-.20,.20,f.p.y):0;
  return{f,shape,root,depth:g.d*(1-.97*root),inset:-.021*root,undulate:1+.045*Math.sin(t*9+phase)};
 }
@@ -136,8 +137,7 @@ function roundFiber(b,c,r,color,steps=20){
  for(let j=0;j<steps;j++)for(let k=0;k<4;k++){const a=first+j*5+k,c=a+5;b.i.push(a,c,a+1,a+1,c,c+1);}
 }
 function shoulderClearance(p,route=1){
- // Clearance changes depth, never the silhouette width. Hair follows the
- // front or back of a shoulder instead of springing sideways into a wing.
+ // Route around the shoulder in depth, preserving silhouette width.
  const w=smooth(-1.43,-1.99,p.y);if(w<=0)return p;
  const rx=1.72-.10*smooth(-2.3,-3.9,p.y),rz=route>0?.81:.63;
  const boundary=rz*Math.sqrt(Math.max(0,1-Math.pow(p.x/rx,2)))+.018;
@@ -149,14 +149,11 @@ function hermiteFall(a,b,ma,mb){
  return{getPoint(t){const t2=t*t,t3=t2*t,A=2*t3-3*t2+1,B=t3-2*t2+t,C=-2*t3+3*t2,D=t3-t2;return V(A*a.x+B*h*ma.x+C*b.x+D*h*mb.x,mix(a.y,b.y,t),A*a.z+B*h*ma.z+C*b.z+D*h*mb.z);},getTangent(t){const A=6*t*t-6*t,B=3*t*t-4*t+1,C=-A,D=3*t*t-2*t;return V(A*a.x+B*h*ma.x+C*b.x+D*h*mb.x,-h,A*a.z+B*h*ma.z+C*b.z+D*h*mb.z).normalize();}};
 }
 function continuousFrontRoot(crown,side,u,points){
- // The original right guides descended below the ear, then reversed upward
- // to a fixed control point. Exact crown flow now joins two monotonic passages
- // with matching tangent directions, then the unchanged lower drape spline.
+ // Join exact crown flow to two monotonic passages and the lower drape, all C1.
  const left=side<0,q=clamp((u-(left?.49:.44))/(left?.215:.22)),exitY=left?.76+.10*q:.83+.075*q;
  let lo=.22,hi=1;for(let j=0;j<22;j++){const v=(lo+hi)/2;if(crown(side,u,v,.008).y>exitY)lo=v;else hi=v;}const exit=(lo+hi)/2;
  const scalp={getPoint:t=>crown(side,u,mix(.22,exit,t),.008),getTangent(t){const v=mix(.22,exit,t);return crown(side,u,v+.0001,.008).sub(crown(side,u,v-.0001,.008)).normalize();}};
- // Replace the six sampled crown knots and fixed upper-ear knot; retain the
- // lower-ear knot and every shoulder, wave, and tip control point after it.
+ // The lower-ear knot begins the authored shoulder, wave and tip spline.
  const tail=curve(points.slice(7)),a=scalp.getPoint(1),b=V(side*(left?.919+.008*q:.858+.042*q),left?.27:.17,left?.078:.355-.030*q),c=tail.getPoint(0),slope=d=>d.multiplyScalar(1/Math.max(.025,-d.y));
  const m0=slope(scalp.getTangent(1)),m1=V(side*.015,-1,left?0:.025),m2=slope(tail.getTangent(0)),segments=[scalp,hermiteFall(a,b,m0,m1),hermiteFall(b,c,m1,m2),tail],lengths=[];
  for(const s of segments){let sum=0,p=s.getPoint(0);for(let j=1;j<=24;j++){const n=s.getPoint(j/24);sum+=Math.hypot(n.x-p.x,n.y-p.y,n.z-p.z);p=n;}lengths.push(sum);}
@@ -174,9 +171,7 @@ export function createGroomHair({headTilt=-.17}={}){
  const fineMaterial=new THREE.MeshPhysicalMaterial({vertexColors:true,roughness:.52,metalness:0,anisotropy:.65,anisotropyRotation:Math.PI*.5,specularIntensity:.38,specularColor:'#ffffff',envMapIntensity:.42,alphaTest:.05,alphaToCoverage:true,side:THREE.DoubleSide});
  const fringeMaterial=fineMaterial.clone();fringeMaterial.alphaTest=0;fringeMaterial.alphaToCoverage=false;fringeMaterial.roughness=.90;fringeMaterial.specularIntensity=0;fringeMaterial.anisotropy=0;fringeMaterial.envMapIntensity=0;
  const wispMaterial=fringeMaterial.clone();wispMaterial.transparent=true;wispMaterial.depthWrite=false;wispMaterial.opacity=.65;wispMaterial.forceSinglePass=true;
- // The mathematical scalp foundation is fully closed around the back of the
- // part. It sits inside the directional crown sheets and closes their rear root
- // gap without introducing an untextured or exposed forehead cap.
+ // Closed inset foundation fills the rear part beneath the directional sheets.
  {
   const nu=144,nv=52,first=crownBatch.p.length/3,c=new THREE.Color('#493b37');
   for(let j=0;j<=nv;j++)for(let i=0;i<=nu;i++){
@@ -205,8 +200,7 @@ export function createGroomHair({headTilt=-.17}={}){
   const ps=[];for(const v of[.22,.38,.55,.72,.88,1])ps.push(crown(side,u,v,.008));return ps;
  }
  function fallingRoot(side,u){
-  // Rear hair leaves near the greatest scalp depth, then its matched exit
-  // tangent gradually turns downward through the nape.
+  // Match the scalp-depth exit tangent, then turn downward through the nape.
   let lo=0,hi=1;
   for(let j=0;j<24;j++){const v=(lo+hi)/2;if(crown(side,u,v,.008).y>.39)lo=v;else hi=v;}
   const exit=(lo+hi)/2,ps=[];
@@ -216,8 +210,7 @@ export function createGroomHair({headTilt=-.17}={}){
   for(const drop of[.16,.36,.61]){const ease=.40*(1-Math.exp(-drop/.40));ps.push(V(end.x+sx*ease,end.y-drop,end.z+sz*ease));}
   return ps;
  }
- // Long rear layers have staggered levels and unequal shallow S-curves. Their
- // outer paths turn around the shoulders rather than intersecting a white sleeve.
+ // Staggered rear S-curves turn around the shoulders.
  for(const side of[-1,1])for(let k=0;k<29;k++){
   const q=(k+.15+random()*.35)/29,u=.015+q*.565,phi=side*(Math.PI-u*Math.PI),phase=Math.floor(k/3)*2.399+(side<0?.35:1.4),ps=fallingRoot(side,u);
   const family=Math.floor(k/2),end=-3.84+.42*Math.pow(q,.9)+.17*Math.sin(family*2.13+side*.8)+.045*Math.sin(k*1.17),bend=.08*Math.sin(family*1.61+side*.8)+.035*Math.sin(k*.87);
@@ -227,8 +220,7 @@ export function createGroomHair({headTilt=-.17}={}){
   }
   guide(ps,.077+random()*.016,.017+random()*.008,k%4?'#433631':'#4b3d36',false,phase,'back',{side,u});
  }
- // Each front family contains neighboring fibers, while different families
- // overlap in depth and finish in different curls. This avoids one uniform fan.
+ // Front families overlap in depth and finish in unequal curls.
  for(const side of[-1,1]){
   const left=side<0,count=left?33:42;
   for(let k=0;k<count;k++){
@@ -268,8 +260,7 @@ export function createGroomHair({headTilt=-.17}={}){
   for(let j=6;j<ps.length;j++){const p=ps[j].isVector3?ps[j]:V(...ps[j]);if(p.y<-1.38)shoulderClearance(p);ps[j]=p;}
   guide(ps,.030+random()*.018,.017+random()*.010,'#55443b',true,phase,'curl',{side,u});
  }
- // Smaller side layers descend close to the head, then divide naturally
- // around the shoulder in depth. They do not expand into isolated outer wings.
+ // Side layers descend close to the head and divide around the shoulder in depth.
  for(const side of[-1,1])for(let k=0;k<12;k++){
   const q=k/11,phase=Math.floor(k/2)*1.76+side,u=.43+q*.10,ps=fallingRoot(side,u),end=-3.30-.29*Math.sin(q*Math.PI)+.13*Math.sin(k*1.8),route=q<.65?1:-1;
   const first=ps[ps.length-1];
@@ -309,14 +300,16 @@ export function createGroomHair({headTilt=-.17}={}){
    ribbon(detail,curve(ps),.00063+random()*.00039,pick().lerp(new THREE.Color('#69564b'),k%13===0?.40:0),28,g.front,phase,.85+random()*.10,g.deformEar);fiberCount++;
   }
  }
- // Fine crown lines follow the same exact flow field as the continuous sheets.
+ // Existing crown fibers gather into shared flowing families. Shallow upper
+ // layers cross neighboring lanes while roots and ends return to the common bed.
  for(const side of[-1,1])for(let k=0;k<1150;k++){
   const u=(k+.15+random()*.70)/1150,phase=random()*TAU,end=.985+random()*.015,ps=[];
-  for(let j=0;j<=20;j++){const v=j/20*end,p=crown(side,clamp(u+.0007*Math.sin(v*7+phase)),v,.006+random()*.0014);ps.push(p);}
+  const locks=crownLocks[side<0?0:1];let family=locks[0];for(const f of locks)if(Math.abs(u-f[0])/f[1]<Math.abs(u-family[0])/family[1])family=f;
+  const gathered=Math.exp(-Math.pow((u-family[0])/family[1],2)),upper=k%6===0;
+  for(let j=0;j<=20;j++){const v=j/20*end,e=crownEnvelope(u,v),wander=e*((upper?.005:.0025)*Math.sin(v*3.7+family[4])+.0012*Math.sin(v*7+phase)),height=.0056+random()*.0004+e*(.004+.0075*gathered+(upper?.004:0)),p=crown(side,clamp(u+wander),v,height);ps.push(p);}
   ribbon(detail,curve(ps),.00048+random()*.00028,pick(),26,false,phase,.96);fiberCount++;
  }
- // Round core fibers gather into small unequal families. Sparse companion
- // strands vary in depth, bend, and length rather than filling a flat swath.
+ // Round cores and sparse companions form unequal bowed fringe families.
  const bangGuides=[
   {n:270,w:.075,u:.810,v:.76,points:[[.17,1.44],[-.12,1.20],[-.37,.90],[-.52,.48],[-.67,-.20]]},
   {n:245,w:.069,u:.900,v:.72,points:[[.21,1.42],[.03,1.18],[-.18,.85],[-.32,.46],[-.44,.12]]},
@@ -334,17 +327,15 @@ export function createGroomHair({headTilt=-.17}={}){
     const t=j/(g.points.length-1),bow=Math.sin(t*Math.PI),x=g.points[j][0]+center*(.15+.85*bow)+spread*(.12+.88*t)+.024*Math.sin(phase+t*4.4)*bow,y=g.points[j][1]+.026*Math.sin(phase)*t+(random()-.5)*.018*t;
     const z=forehead(x,Math.max(.22,y))+.024+lift*Math.pow(bow,.8)+.004*Math.sin(k*2.7)*bow+(y<.22?(.22-y)*.045:0);ps.push(V(x,y,z));
    }
-   const side=group<3?-1:1,u=g.u+center*.15+spread*.08,root=[];
-   for(let j=0;j<4;j++)root.push(crown(side,u,mix(.025,g.v,j/3),.009+.002*Math.sin(phase)));
-   // Start on the real parted crown, not behind it at the forehead depth.
-   // The original bowed lower controls and family-specific ends remain intact.
+   const side=group<3?-1:1,u=g.u+center*.20+spread*.13,v0=.012+.064*(.5+.5*Math.sin(phase*1.37+group*.61))+(loose?.019:0),v1=g.v+.018*Math.sin(phase),root=[];
+   for(let j=0;j<4;j++){const v=mix(v0,v1,j/3);root.push(crown(side,u,v,.003+.006*smooth(v0,v1,v)+.001*Math.sin(k*1.19)));}
+   // Crown roots join bowed lower controls and unequal ends above the forehead.
    const c=curve([...root,...ps.slice(2)]),cut=clamp(.88+.10*(.5+.5*Math.sin(phase+1.2))+(loose?-.06+random()*.12:-.01+random()*.05)+(group===0?.025:0)),end=1-(1-cut)*4/6,trim=[];
    for(let j=0;j<=20;j++){const p=c.getPoint(j/20*end),delta=forehead(p.x,Math.max(.22,p.y))+.040-p.z;p.z+=.5*(delta+Math.hypot(delta,.006))*smooth(.14,.26,p.y)*(1-smooth(1.37,1.48,p.y));trim.push(p);}
    const col=pick().lerp(new THREE.Color('#655652'),.16),strand=curve(trim);if(loose)ribbon(fringe,strand,.00031+random()*.00016,col,20,true,phase,.82+random()*.10,false);else roundFiber(fringe,strand,.00042+random()*.00024,col);fiberCount++;
   }
  }
- // Many short hairs continue the actual crown tangent across the edge. The
- // two lengths of transition blend the dense root into sparse outer wisps.
+ // Short edge hairs continue the crown tangent into sparse outer wisps.
  for(const side of[-1,1])for(let k=0;k<310;k++){
   const u=.51+(k+random())/310*.48,v0=.79+random()*.12,ps=[],a=crown(side,u,.982,.006),b=crown(side,u,1,.006),d=b.clone().sub(a).normalize(),extension=.07+random()*.18;
   for(let j=0;j<9;j++)ps.push(crown(side,u,mix(v0,1,j/8),.007));
