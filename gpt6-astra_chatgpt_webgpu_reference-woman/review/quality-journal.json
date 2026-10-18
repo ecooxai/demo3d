@@ -4,7 +4,7 @@
   "goal_achieved": false,
   "method": "Visual self-assessment against the sole uploaded image, supplemented by independent agent review. Scores are subjective and are not a certification of AAA production quality.",
   "scope": "Recorded assessments whose numeric results remain available. No missing historical scores have been invented.",
-  "current_accepted_iteration": 84,
+  "current_accepted_iteration": 86,
   "current_accepted_score": 76,
   "assessments": [
     {
@@ -388,6 +388,20 @@
       "notes": "Blouse source81 adds unequal tapered middle and lower button pulls. Matched native WebGPU garment/front comparison and candidate left/right/back views show a modest cotton-drape improvement without button, placket, collar, opening or silhouette regression. Tight middle fold is acceptable; do not increase sharpness globally. Cloth geometry count unchanged. Integrated with accepted hair82, skin79 and ear70. Goal remains unmet."
     },
     {
+      "iteration": 85,
+      "score": 72,
+      "reviewer": "root",
+      "decision": "rejected",
+      "notes": "48 closed crown bundles and 2,090 redistributed existing fibers passed source topology/clearance checks, but native front/detail/profiles/back show exposed plate-like bundle end bands and conspicuous white glints near the part. Extra31,488triangles/1,043,712typedbytes did not improve realism. Keep accepted82hair. Use the new paths for denser fiber coverage without extra opaque plates."
+    },
+    {
+      "iteration": 86,
+      "score": 76,
+      "reviewer": "root and cloth_review84",
+      "decision": "accepted half-strength shared contact field; rejected full strength",
+      "notes": "Half strength moves upper front lengths modestly toward the blouse while preserving the frontal outline and back. Small bright flecks/diagonal bands remain below the shoulder; lower lengths still float in profile. Full strength becomes angular and visibly crossed. Native WebGPU0/.5/1: groom construction462.9/845.8/860.1ms; field preparation353.8ms at.5,41.9KiB retained, unchanged1,104,568hair triangles. Half has zero sampled separated-layer reversals; full15. Inherited guide149 buried tips unchanged. Goal not met."
+    },
+    {
       "iteration": 87,
       "score": 76,
       "reviewer": "root",
@@ -407,6 +421,27 @@
       "reviewer": "root",
       "decision": "not adopted",
       "notes": "An original procedural strand-pigment map retained exact alpha/UVs and mean linear albedo. Strength .45 made a small change; strength1 added conspicuous regular stripes and dark block-like bands on the broad crown. Neither resolved the smooth sheet appearance. Keep baseline while structural crown bundles are developed. Extra construction about87ms, two maps4MiB; no geometry change."
+    },
+    {
+      "iteration": 90,
+      "score": 75,
+      "reviewer": "root",
+      "decision": "not adopted",
+      "notes": "Existing 8,343 long and 2,300 crown ribbons widened2x/3x about fixed centers, with fringe/wisps/86flyaways unchanged. More individual lines become visible, but broad gray highlight patches appear at crown and left temple and the rear rim becomes hazier. Maxposition shift .0022205; same geometrycount. Retain width1 for the accepted scene; density/normal orientation needs a structural solution."
+    },
+    {
+      "iteration": 91,
+      "score": 76,
+      "reviewer": "root and quality_review_42",
+      "decision": "not adopted",
+      "notes": "10,500 added narrow crown ribbons preserve all82geometry and maps and add630,000triangles/34.53MiB. Native five-view review shows only marginal finer flow at detail size; broad cap and hard part remain, top/back sheen slightly hazier. Reject as default for negligible ordinary-preview benefit at substantial geometry cost."
+    },
+    {
+      "iteration": 92,
+      "score": 76,
+      "reviewer": "root",
+      "decision": "diagnostic only; baseline retained",
+      "notes": "Compared full3D eyebrow fibers, atlas-only, and lighter3D fibers. Repeating comb pattern persists in the painted atlas as well as the small geometry; hiding or lightening geometry alone does not resolve it. No accepted source change."
     }
   ]
 }

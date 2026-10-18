@@ -1,94 +1,69 @@
 import { sampleBlouseFrontAtXY } from './blouse.js';
 
-// Guide-level contact with the authored blouse. The final deformation is a
-// translation along model Z, preserving posed X/Y and each lock's cross-section.
+// One smooth spatial warp is shared by every lock and its surface fibers.
+// It compresses front depth gently without reversing the order of hair layers.
 const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
-const smooth=(a,b,x)=>{const t=clamp((x-a)/(b-a));return t*t*(3-2*t);};
-// The separate collar can stand .147 ahead of the body. Keep its measured
-// envelope plus a margin clear until a collar-surface query is available.
-const collarWeight=(x,y)=>1-(1-smooth(.84,.98,Math.abs(x)))*smooth(.44,.53,y);
-const now=()=>performance.now();
+const smooth=(a,b,x)=>{const t=clamp((x-a)/(b-a));return t*t*t*(t*(t*6-15)+10);};
+const roundPositive=(d,tau=.08)=>{if(d<=0)return 0;if(d>=tau)return d-tau*.5;const t=d/tau;return tau*(t*t*t-.5*t*t*t*t);};
+// Rounded linear cores reduce curvature across coarse lock triangles while
+// retaining C2 joins and a fully excluded collar interior.
+const ramp=(x,from,to,tau)=>(roundPositive(x-from,tau)-roundPositive(x-to,tau))/(to-from);
+const collarWeight=(x,y)=>1-(1-ramp(Math.abs(x),.84,1.14,.16))*ramp(y,-.20,.39,.14);
 
-function profile(nodes){
- const x=Float64Array.from(nodes,n=>n.y),v=Float64Array.from(nodes,n=>n.value),n=x.length,m=new Float64Array(n),d=new Float64Array(n-1);
- for(let i=0;i<n-1;i++)d[i]=(v[i+1]-v[i])/(x[i+1]-x[i]);
- m[0]=d[0];m[n-1]=d[n-2];
- for(let i=1;i<n-1;i++)if(d[i-1]*d[i]>0){const a=x[i]-x[i-1],b=x[i+1]-x[i],w1=2*b+a,w2=b+2*a;m[i]=(w1+w2)/(w1/d[i-1]+w2/d[i]);}
- return y=>{
-  if(y<=x[0]||y>=x[n-1])return 0;
-  let lo=0,hi=n-1;while(hi-lo>1){const mid=(lo+hi)>>1;if(x[mid]>y)hi=mid;else lo=mid;}
-  const h=x[hi]-x[lo],t=(y-x[lo])/h,t2=t*t,t3=t2*t;
-  return(2*t3-3*t2+1)*v[lo]+(t3-2*t2+t)*h*m[lo]+(-2*t3+3*t2)*v[hi]+(t3-t2)*h*m[hi];
- };
+function clothField(sampleSurface){
+ const started=performance.now(),step=.06,x0=-1.92,y0=-1.50,nx=65,ny=55,size=nx*ny,depth=new Float64Array(size),raw=new Float32Array(size),weight=new Float32Array(size),seen=new Uint8Array(size),queue=new Int32Array(size);
+ let tail=0,queries=0,queryMs=0;
+ for(let j=0;j<ny;j++)for(let i=0;i<nx;i++){
+  const index=j*nx+i,start=performance.now(),hit=sampleSurface(x0+i*step,y0+j*step);queries++;queryMs+=performance.now()-start;
+  if(!hit)continue;
+  depth[index]=hit.point.z+.045/hit.normal.z+.008;raw[index]=hit.edgeWeight;seen[index]=1;queue[tail++]=index;
+ }
+ const valid=tail;
+ // Finite nearest-sample extension only supplies height outside support. A
+ // separate eroded weight controls attraction, so missing samples add no pull.
+ for(let head=0;head<tail;head++){
+  const index=queue[head],x=index%nx,y=Math.floor(index/nx);
+  for(const [dx,dy]of[[-1,0],[1,0],[0,-1],[0,1]]){const xx=x+dx,yy=y+dy;if(xx<0||xx>=nx||yy<0||yy>=ny)continue;const at=yy*nx+xx;if(seen[at])continue;seen[at]=1;depth[at]=depth[index];queue[tail++]=at;}
+ }
+ // A wide distance fade removes the narrow support cliffs that would be
+ // poorly represented by the existing mesh's length segments.
+ const distance=new Float64Array(size),diagonal=step*Math.SQRT2;
+ for(let i=0;i<size;i++)distance[i]=raw[i]>.001?100:0;
+ for(let j=0;j<ny;j++)for(let i=0;i<nx;i++){
+  const k=j*nx+i;let d=distance[k];if(i)d=Math.min(d,distance[k-1]+step);if(j)d=Math.min(d,distance[k-nx]+step);if(i&&j)d=Math.min(d,distance[k-nx-1]+diagonal);if(j&&i<nx-1)d=Math.min(d,distance[k-nx+1]+diagonal);distance[k]=d;
+ }
+ for(let j=ny-1;j>=0;j--)for(let i=nx-1;i>=0;i--){
+  const k=j*nx+i;let d=distance[k];if(i<nx-1)d=Math.min(d,distance[k+1]+step);if(j<ny-1)d=Math.min(d,distance[k+nx]+step);if(i<nx-1&&j<ny-1)d=Math.min(d,distance[k+nx+1]+diagonal);if(j<ny-1&&i)d=Math.min(d,distance[k+nx-1]+diagonal);distance[k]=d;
+ }
+ for(let j=2;j<ny-2;j++)for(let i=2;i<nx-2;i++){
+  let w=1;for(let y=j-2;y<=j+2;y++)for(let x=i-2;x<=i+2;x++)w=Math.min(w,raw[y*nx+x]);weight[j*nx+i]=w*ramp(distance[j*nx+i],.10,.50,.16);
+ }
+ // Nonnegative tensor B-spline weights keep both fields C2 across cell joins.
+ function sample(x,y){
+  const u=(x-x0)/step,v=(y-y0)/step,i=Math.floor(u),j=Math.floor(v);
+  if(i<1||j<1||i>nx-3||j>ny-3)return{depth:0,weight:0};
+  const a=u-i,b=v-j,a2=a*a,a3=a2*a,b2=b*b,b3=b2*b;
+  const wx=[(1-a)**3/6,(3*a3-6*a2+4)/6,(-3*a3+3*a2+3*a+1)/6,a3/6],wy=[(1-b)**3/6,(3*b3-6*b2+4)/6,(-3*b3+3*b2+3*b+1)/6,b3/6];
+  let z=0,w=0;
+  for(let row=0;row<4;row++){const k=(j+row-1)*nx+i-1;for(let col=0;col<4;col++){const f=wx[col]*wy[row];z+=depth[k+col]*f;w+=weight[k+col]*f;}}
+  return{depth:z,weight:clamp(w)};
+ }
+ return{sample,metrics:{grid:[nx,ny],gridStep:step,clothQueries:queries,validClothQueries:valid,queryMs:Number(queryMs.toFixed(1)),preparationMs:Number((performance.now()-started).toFixed(1)),fieldKiB:Number(((depth.byteLength+weight.byteLength)/1024).toFixed(1))}};
 }
 
-function soften(nodes){
- // Smooth by moving away from the body, so no new contact violation is added.
- for(let pass=0;pass<2;pass++){
-  const next=nodes.map(n=>n.value);
-  for(let i=1;i<nodes.length-1;i++)next[i]=Math.max(next[i],(nodes[i-1].value+2*nodes[i].value+nodes[i+1].value)/4);
-  for(let i=0;i<nodes.length;i++)nodes[i].value=next[i];
+export function createHairContact({headTilt=-.17,headShiftX=.26,headY=2.95,strength=1,sampleSurface=sampleBlouseFrontAtXY}={}){
+ strength=clamp(Number(strength));
+ const field=clothField(sampleSurface),yaw=.16,cy=Math.cos(yaw),sy=Math.sin(yaw),cr=Math.cos(headTilt),sr=Math.sin(headTilt),bc=Math.cos(.045),bs=Math.sin(.045),axis=[-sy*cr,sy*sr,cy];
+ const metrics={version:'shared-cloth-depth-86',strength,minimumDepthDerivative:1-.40*strength,...field.metrics,movedVertices:0,maxDepthPull:0};
+ function atModel(x,y,z,amount=strength){
+  const vertical=smooth(-.95,-.20,y)*(1-smooth(1.22,1.92,y));if(vertical===0)return 0;
+  const bx=bc*x+bs*(y-1),by=-bs*x+bc*(y-1)+1,collar=collarWeight(bx,by);if(collar===0)return 0;
+  const support=field.sample(bx,by);if(support.weight===0)return 0;
+  return-.40*clamp(amount)*vertical*collar*support.weight*roundPositive(z-support.depth);
  }
- // Bound the depth change as the hair approaches and leaves the shoulder.
- for(let i=1;i<nodes.length;i++)nodes[i].value=Math.max(nodes[i].value,nodes[i-1].value-1.05*(nodes[i].y-nodes[i-1].y));
- for(let i=nodes.length-2;i>=0;i--)nodes[i].value=Math.max(nodes[i].value,nodes[i+1].value-1.05*(nodes[i+1].y-nodes[i].y));
-}
-
-export function createHairContact({headTilt=-.17,headShiftX=.26,headY=2.95,sampleSurface=sampleBlouseFrontAtXY}={}){
- const yaw=.16,cy=Math.cos(yaw),sy=Math.sin(yaw),cr=Math.cos(headTilt),sr=Math.sin(headTilt),bodyRoll=.045,bc=Math.cos(bodyRoll),bs=Math.sin(bodyRoll);
- const axis=[-sy*cr,sy*sr,cy],metrics={version:'guide-blouse-contact-78',eligibleGuides:0,fittedGuides:0,clothQueries:0,validClothQueries:0,maxDepthPull:0,minProbeClearance:Infinity,preparationMs:0,queryMs:0,guides:[]};
- function posed(p){
-  const w=1-smooth(-1.64,.38,p.y),a=-yaw*w,b=-headTilt*w,ca=Math.cos(a),sa=Math.sin(a),cb=Math.cos(b),sb=Math.sin(b);
-  const x=p.x*ca+p.z*sa,z=-p.x*sa+p.z*ca,xx=x*cb-p.y*sb,yy=x*sb+p.y*cb,rx=xx*cr-yy*sr;
-  return{x:headShiftX+rx*cy+z*sy,y:headY+xx*sr+yy*cr,z:-rx*sy+z*cy};
+ function shift(x,y,z){
+  const rx=x*cr-y*sr,px=headShiftX+rx*cy+z*sy,py=headY+x*sr+y*cr,pz=-rx*sy+z*cy,d=atModel(px,py,pz);
+  if(d<-.000001){metrics.movedVertices++;metrics.maxDepthPull=Math.max(metrics.maxDepthPull,-d);}return d;
  }
- const bodyXY=p=>({x:bc*p.x+bs*(p.y-1),y:-bs*p.x+bc*(p.y-1)+1});
- const mask=(x,y)=>{const b=bodyXY({x,y});return collarWeight(b.x,b.y);};
- function query(p){const b=bodyXY(p),start=now();metrics.clothQueries++;const hit=sampleSurface(b.x,b.y);metrics.queryMs+=now()-start;if(hit)metrics.validClothQueries++;return hit?{...hit,localX:b.x,localY:b.y}:null;}
- function prepare(g,section){
-  if(!(g.front||g.kind==='side'&&g.c.getPoint(.65).z>.15))return null;
-  const start=now();
-  metrics.eligibleGuides++;
-  const rows=[],constraints=[],gap=.032+.008*(.5+.5*Math.sin(g.phase))+(g.kind==='curl'?.003:0);
-  for(let j=0;j<=60;j++){
-   const t=j/60,{f,shape,depth,inset,undulate}=section(t),c=f.p.clone().addScaledVector(f.n,inset),p=posed(c),row={y:p.y,value:0};rows.push(row);
-   const vertical=(1-smooth(1.30,1.72,p.y))*smooth(-.75,-.15,p.y);
-   if(vertical<.00001||p.z<.12)continue;
-   const halfW=g.w*shape*undulate,halfD=depth*shape,edges=[posed(c.clone().addScaledVector(f.s,-halfW)),posed(c.clone().addScaledVector(f.s,halfW))];
-   let collar=1;
-   for(const q of[p,...edges]){const b=bodyXY(q);collar=Math.min(collar,collarWeight(b.x,b.y));}
-   if(collar<.00001)continue;
-   const center=query(p);if(!center||center.edgeWeight<.0001)continue;
-   // The tips stay free from attraction, but a pre-existing buried end still
-   // receives the outward clearance correction instead of being half lifted.
-   const weight=vertical*center.edgeWeight*collar*(1-smooth(.72,.96,t));
-   let backExtent=0;
-   for(let k=0;k<8;k++){const a=k*Math.PI/4,q=posed(c.clone().addScaledVector(f.s,halfW*Math.cos(a)).addScaledVector(f.n,halfD*Math.sin(a)));backExtent=Math.max(backExtent,p.z-q.z);}
-   const probes=[{p,hit:center}];
-   for(const q of edges){const hit=query(q);if(hit)probes.push({p:q,hit});}
-   let required=-Infinity;
-   for(const probe of probes){const nz=probe.hit.normal.z,limit=probe.hit.point.z+gap/nz+backExtent-p.z;required=Math.max(required,limit);constraints.push({y:probe.p.y,limit,nz,gap});}
-   row.value=required<0?required*weight:required;
-  }
-  rows.sort((a,b)=>a.y-b.y);
-  const nodes=[];
-  for(const row of rows){if(nodes.length&&row.y-nodes.at(-1).y<.000001)nodes.at(-1).value=Math.max(nodes.at(-1).value,row.value);else nodes.push(row);}
-  nodes.unshift({y:nodes[0].y-.05,value:0});nodes.push({y:nodes.at(-1).y+.05,value:0});
-  soften(nodes);let sample=profile(nodes);
-  // Width samples retain the same posed XY after fitting. Reuse their exact
-  // cloth depths to lift the smooth field if interpolation gets too close.
-  for(let pass=0;pass<2;pass++){
-   let changed=false;
-   for(const c of constraints){const correction=c.limit-sample(c.y);if(correction<=.0001)continue;let i=1;while(i<nodes.length-1&&nodes[i].y<c.y)i++;nodes[i-1].value+=correction+.001;nodes[i].value+=correction+.001;changed=true;}
-   if(!changed)break;soften(nodes);sample=profile(nodes);
-  }
-  const pull=-Math.min(...nodes.map(n=>n.value));
-  metrics.preparationMs=Number((metrics.preparationMs+now()-start).toFixed(1));
-  if(pull<.002)return null;
-  metrics.fittedGuides++;metrics.maxDepthPull=Math.max(metrics.maxDepthPull,pull);
-  for(const c of constraints)metrics.minProbeClearance=Math.min(metrics.minProbeClearance,c.gap+(sample(c.y)-c.limit)*c.nz);
-  if([58,74,90,91,114,132,137,199,227].includes(g.id))metrics.guides.push({id:g.id,kind:g.kind,maxPull:pull,samples:nodes.length});
-  return{sample,axis,headY,headShiftX,cr,sr,cy,sy,mask};
- }
- return{prepare,metrics};
+ return{shift,axis,atModel,fieldAtBlouse:field.sample,metrics};
 }

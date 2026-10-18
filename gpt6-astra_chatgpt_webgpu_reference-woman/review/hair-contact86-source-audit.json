@@ -1,0 +1,264 @@
+{
+  "sourceHarness": true,
+  "native": false,
+  "cloth": "frozen81",
+  "defaultByteMismatch": 0,
+  "finite": true,
+  "maxPosedXYChange": 4.699634397198338e-7,
+  "maxDepthChange": 0.1905140553499891,
+  "halfStrengthLinearityError": 0,
+  "changedMeshes": [
+    {
+      "name": "Continuous parted crown with longitudinal fiber flow",
+      "altered": 0
+    },
+    {
+      "name": "Overlapping layered S-wave hair around front back and shoulders",
+      "altered": 37295
+    },
+    {
+      "name": "Independent fine crown lengths and silhouette strands",
+      "altered": 121393
+    },
+    {
+      "name": "Dense fine bowed brown fringe strands",
+      "altered": 0
+    },
+    {
+      "name": "Sparse short temple edge and hairline wisps",
+      "altered": 0
+    }
+  ],
+  "rearAlteredRings": 0,
+  "geometry": {
+    "triangles": 1104568,
+    "MiB": 51.62,
+    "constructionMs": 2375.4
+  },
+  "buildCost": {
+    "wallMs": 2377.479867,
+    "cpuMs": 2779.635
+  },
+  "contact": {
+    "version": "shared-cloth-depth-86",
+    "strength": 1,
+    "minimumDepthDerivative": 0.6,
+    "grid": [
+      65,
+      55
+    ],
+    "gridStep": 0.06,
+    "clothQueries": 3575,
+    "validClothQueries": 2632,
+    "queryMs": 1026.3,
+    "preparationMs": 1034.4,
+    "fieldKiB": 41.9,
+    "movedVertices": 158701,
+    "maxDepthPull": 0.19051413110535356
+  },
+  "ringAudit": {
+    "probed": 27065,
+    "minGap": 0.0833719953172633,
+    "penetrations": 0,
+    "newPenetrations": 0,
+    "excludedChanges": 0,
+    "minAreaRatio": 0.600124499254576,
+    "maxAreaRatio": 1.1370508084709654,
+    "collapsedRings": 0,
+    "backGap": {
+      "rings": 1411,
+      "medianAfter": 0.2972792938003435,
+      "p95After": 0.45522263168642235,
+      "maxAfter": {
+        "after": 0.6432162169261095,
+        "before": 0.6529535747008923,
+        "guide": 145,
+        "ring": 43
+      },
+      "maxBefore": 0.6529535747008923
+    },
+    "failures": [],
+    "inheritedGuide149": [
+      {
+        "ring": 57,
+        "minBefore": -0.034127798453203184,
+        "minAfter": -0.034127798453203184,
+        "maxShift": 0
+      },
+      {
+        "ring": 58,
+        "minBefore": -0.04816427582744759,
+        "minAfter": -0.04816427582744759,
+        "maxShift": 0
+      },
+      {
+        "ring": 59,
+        "minBefore": -0.05903797791050603,
+        "minAfter": -0.05903797791050603,
+        "maxShift": 0
+      },
+      {
+        "ring": 60,
+        "minBefore": -0.0649236148320661,
+        "minAfter": -0.0649236148320661,
+        "maxShift": 0
+      }
+    ]
+  },
+  "orderingAudit": {
+    "rays": 1742,
+    "hits": 49883,
+    "eligiblePairs": 907916,
+    "minimumOriginalGap": 0.003,
+    "countedReversalTolerance": 0.001,
+    "inversions": 15,
+    "maxReversal": 0.0031510467367239503,
+    "halfInversions": 0,
+    "halfMaxReversal": 0,
+    "halfAnyInversions": 0,
+    "halfMinimumGap": 0.00023247361539219247,
+    "maximumOrderPreservingStrength": 0.5343538077503724,
+    "maxInterpolationError": 0.010368653197805555,
+    "worstInterpolation": {
+      "x": 1.3333333333333335,
+      "y": 1.3236842105263158,
+      "guide": 126,
+      "triangle": 121459,
+      "z": 0.7964093246627394,
+      "f": 0.7819405518212194,
+      "exact": 0.7923092050190249,
+      "error": 0.010368653197805555,
+      "vertices": [
+        {
+          "x": 1.3239823310080203,
+          "y": 1.3757858126849303,
+          "z": 0.7622236021460476,
+          "after": 0.7620437986970692
+        },
+        {
+          "x": 1.3323032681352025,
+          "y": 1.2222728576561168,
+          "z": 0.8559748447084798,
+          "after": 0.8110207735000021
+        },
+        {
+          "x": 1.3769993102545586,
+          "y": 1.2429720149905346,
+          "z": 0.8599495794823626,
+          "after": 0.82740123261335
+        }
+      ]
+    },
+    "worstReversal": {
+      "x": 1.3333333333333335,
+      "y": 1.3236842105263158,
+      "a": {
+        "guide": 123,
+        "triangle": 118587,
+        "z": 0.7088198205719801,
+        "f": 0.7052924916562995
+      },
+      "b": {
+        "guide": 130,
+        "triangle": 125309,
+        "z": 0.7124358145394883,
+        "f": 0.7021414449195755
+      }
+    },
+    "inversionExamples": [
+      {
+        "x": -1.1333333333333333,
+        "y": -0.318421052631579,
+        "a": 85,
+        "b": 87,
+        "before": 0.003819542590667746,
+        "after": -0.0012458316244793322
+      },
+      {
+        "x": -1.084,
+        "y": -0.27631578947368424,
+        "a": 85,
+        "b": 84,
+        "before": 0.003608687406388311,
+        "after": -0.0014342477685997945
+      },
+      {
+        "x": 1.2839999999999998,
+        "y": 0.3552631578947367,
+        "a": 107,
+        "b": 105,
+        "before": 0.0033243029865666074,
+        "after": -0.0013429425221903601
+      },
+      {
+        "x": 1.2346666666666666,
+        "y": 0.7763157894736841,
+        "a": 111,
+        "b": 109,
+        "before": 0.004548645958715181,
+        "after": -0.0013408591497287015
+      },
+      {
+        "x": 1.2346666666666666,
+        "y": 0.8184210526315789,
+        "a": 112,
+        "b": 110,
+        "before": 0.0033916136986907874,
+        "after": -0.0014995842119500669
+      },
+      {
+        "x": 1.2346666666666666,
+        "y": 0.9447368421052631,
+        "a": 143,
+        "b": 142,
+        "before": 0.0057361530116554205,
+        "after": -0.0012249791731659965
+      },
+      {
+        "x": 1.2839999999999998,
+        "y": 0.9447368421052631,
+        "a": 114,
+        "b": 167,
+        "before": 0.006052558271940844,
+        "after": -0.003087172036386532
+      },
+      {
+        "x": 1.2839999999999998,
+        "y": 0.9868421052631577,
+        "a": 215,
+        "b": 219,
+        "before": 0.0030824865812284497,
+        "after": -0.001710750420488516
+      },
+      {
+        "x": 1.3333333333333335,
+        "y": 0.9868421052631577,
+        "a": 217,
+        "b": 221,
+        "before": 0.003530863668665618,
+        "after": -0.0010228027425869257
+      },
+      {
+        "x": 1.2839999999999998,
+        "y": 1.0289473684210526,
+        "a": 115,
+        "b": 114,
+        "before": 0.003136453638876935,
+        "after": -0.0010502522254549618
+      }
+    ]
+  },
+  "fieldAudit": {
+    "minimumDepthDerivative": 0.6000000000000163,
+    "maxXYShear": 0.8006324317665318,
+    "maxDepthPull": 0.213385969846802,
+    "cellBoundarySampleDifference": 5.694891997976015e-7
+  },
+  "memoryMiB": {
+    "rss": 411.5,
+    "heapTotal": 243.4,
+    "heapUsed": 117.7,
+    "external": 122.1,
+    "arrayBuffers": 120.2
+  }
+}

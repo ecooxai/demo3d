@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import { faceZ } from './face.js';
+import { createHairContact } from './hair-contact.js';
 
 // Original reference-directed groom: continuous crown, overlapping 3D locks,
 // individual fibers and real coverage around both shoulders.
@@ -73,11 +74,11 @@ function makeMaps(){
 }
 function batch(rgba=false){return{p:[],c:[],uv:[],i:[],rgba};}
 function vertex(b,p,c,u,v,alpha=1,deformEar=true){const at=b.p.length/3;b.p.push(p.x,p.y,p.z);b.c.push(c.r,c.g,c.b);if(b.rgba)b.c.push(alpha);b.uv.push(u,v);if(!deformEar)(b.untucked??=[]).push(at);return at;}
-function makeMesh(b,material,name,headTilt,castShadow=true,deformEar=true){
+function makeMesh(b,material,name,headTilt,castShadow=true,deformEar=true,contact=null){
  const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.Float32BufferAttribute(b.p,3));g.setAttribute('color',new THREE.Float32BufferAttribute(b.c,b.rgba?4:3));g.setAttribute('uv',new THREE.Float32BufferAttribute(b.uv,2));g.setIndex(b.i);
  // Invert the Ry*Rz head pose below the neck so the lengths follow gravity.
  const p=g.attributes.position;let untucked=0;
- for(let i=0;i<p.count;i++){const skip=b.untucked?.[untucked]===i;if(skip)untucked++;let x=p.getX(i),y=p.getY(i),z=deformEar&&!skip?earDepth(x,y,p.getZ(i)):p.getZ(i),w=1-smooth(-1.64,.38,y),ay=-.16*w,az=-headTilt*w,cy=Math.cos(ay),sy=Math.sin(ay),cz=Math.cos(az),sz=Math.sin(az),xx=x*cy+z*sy;z=-x*sy+z*cy;p.setXYZ(i,xx*cz-y*sz,xx*sz+y*cz,z);}
+ for(let i=0;i<p.count;i++){const skip=b.untucked?.[untucked]===i;if(skip)untucked++;let x=p.getX(i),y=p.getY(i),z=deformEar&&!skip?earDepth(x,y,p.getZ(i)):p.getZ(i),w=1-smooth(-1.64,.38,y),ay=-.16*w,az=-headTilt*w,cy=Math.cos(ay),sy=Math.sin(ay),cz=Math.cos(az),sz=Math.sin(az),xx=x*cy+z*sy;z=-x*sy+z*cy;const yy=xx*sz+y*cz;xx=xx*cz-y*sz;if(contact){const d=contact.shift(xx,yy,z);p.setXYZ(i,xx+contact.axis[0]*d,yy+contact.axis[1]*d,z+contact.axis[2]*d);}else p.setXYZ(i,xx,yy,z);}
  g.computeVertexNormals();
  if(b.seam||b.normalSeams){
   const n=g.attributes.normal,weld=(a,c)=>{const x=n.getX(a)+n.getX(c),y=n.getY(a)+n.getY(c),z=n.getZ(a)+n.getZ(c),l=Math.hypot(x,y,z)||1;n.setXYZ(a,x/l,y/l,z/l);n.setXYZ(c,x/l,y/l,z/l);};
@@ -162,9 +163,9 @@ function continuousFrontRoot(crown,side,u,points){
  return{getPoint(t){const[i,v]=locate(t);return segments[i].getPoint(v);},getTangent(t){const[i,v]=locate(t);return segments[i].getTangent(v);},debug:{side,u,exitV:exit,crownExit:[a.x,a.y,a.z],upperEar:[b.x,b.y,b.z],lowerJoin:[c.x,c.y,c.z],cuts}};
 }
 
-export function createGroomHair({headTilt=-.17}={}){
+export function createGroomHair({headTilt=-.17,headShiftX=.26,shoulderContact=0}={}){
  const start=performance.now(),root=new THREE.Group();root.name='Original reference-directed chestnut layered groom';
- const random=rng(),forehead=foreheadField(),crown=crownField(forehead),maps=makeMaps(),crownBatch=batch(true),mass=batch(),detail=batch(),fringe=batch(),wisps=batch(),guides=[];
+ const random=rng(),forehead=foreheadField(),crown=crownField(forehead),maps=makeMaps(),crownBatch=batch(true),mass=batch(),detail=batch(),fringe=batch(),wisps=batch(),guides=[],contact=shoulderContact?createHairContact({headTilt,headShiftX,strength:shoulderContact}):null;
  const palette=['#4c403c','#554642','#433937','#5c4d49','#463b38','#51433f'].map(c=>new THREE.Color(c)),pick=()=>palette[Math.floor(random()*palette.length)].clone();
  const material=new THREE.MeshPhysicalMaterial({vertexColors:true,map:maps.map,normalMap:maps.normalMap,normalScale:new THREE.Vector2(.31,.09),roughness:.52,metalness:0,anisotropy:.65,anisotropyRotation:Math.PI*.5,specularIntensity:.38,specularColor:'#ffffff',envMapIntensity:.42,alphaTest:.10,alphaToCoverage:true,side:THREE.DoubleSide});
  const crownMaterial=material.clone();crownMaterial.map=maps.crownMap;
@@ -358,10 +359,11 @@ export function createGroomHair({headTilt=-.17}={}){
   for(let j=0;j<=12;j++){const t=j/12,at=mix(startT,Math.min(1,startT+.24+random()*.03),t),f=frame(g.c,at,g.front),p=f.p.clone().addScaledVector(f.s,(k%2?1:-1)*g.w*(.83+.22*Math.sin(t*Math.PI))).addScaledVector(f.n,.011+.018*Math.sin(t*Math.PI));ps.push(p);}
   ribbon(detail,curve(ps),.00045+random()*.00022,pick(),24,g.front,phase,.80,g.deformEar);fiberCount++;
  }
- root.add(makeMesh(crownBatch,crownMaterial,'Continuous parted crown with longitudinal fiber flow',headTilt),makeMesh(mass,material,'Overlapping layered S-wave hair around front back and shoulders',headTilt),makeMesh(detail,fineMaterial,'Independent fine crown lengths and silhouette strands',headTilt,false),makeMesh(fringe,fringeMaterial,'Dense fine bowed brown fringe strands',headTilt,false),makeMesh(wisps,wispMaterial,'Sparse short temple edge and hairline wisps',headTilt,false,false));
+ root.add(makeMesh(crownBatch,crownMaterial,'Continuous parted crown with longitudinal fiber flow',headTilt),makeMesh(mass,material,'Overlapping layered S-wave hair around front back and shoulders',headTilt,true,true,contact),makeMesh(detail,fineMaterial,'Independent fine crown lengths and silhouette strands',headTilt,false,true,contact),makeMesh(fringe,fringeMaterial,'Dense fine bowed brown fringe strands',headTilt,false),makeMesh(wisps,wispMaterial,'Sparse short temple edge and hairline wisps',headTilt,false,false));
  root.children[root.children.length-2].renderOrder=3;root.children[root.children.length-1].renderOrder=4;
  let triangles=0,bytes=0;root.traverse(o=>{if(!o.isMesh)return;triangles+=o.geometry.index.count/3;bytes+=o.geometry.index.array.byteLength;for(const a of Object.values(o.geometry.attributes))bytes+=a.array.byteLength;});
  root.userData={procedural:true,continuousCrownSheets:2,closedInsetScalp:true,smoothSingleEarTuck:true,opaqueBuriedRoots:true,roundedFringe:true,fringeStrands:bangGuides.reduce((n,g)=>n+g.n,0),fiberSeamNormals:true,matchedMassFiberAlbedo:true,lowVarianceFiberAlbedo:true,originalLayeredLocks:guides.length,individualStrands:fiberCount,triangles,geometryMiB:Number((bytes/1048576).toFixed(2)),constructionMs:Number((performance.now()-start).toFixed(1)),source:'Only the supplied image guided this original 3D groom. All geometry and longitudinal hair maps were authored mathematically; no hair photos or external assets.',headTiltCompensation:headTilt,lowerHairYawCompensation:.16};
  root.userData.frontRootJoins=[90,91,114].map(id=>({guide:id,...guides[id].c.debug}));
+ if(contact)root.userData.shoulderContact=contact.metrics;
  return root;
 }

@@ -7,14 +7,16 @@ import path from 'node:path';
 // whose isolated visual comparison was accepted as84.
 const iteration=83;
 const hair=await readFile('review/hair-groom-candidate83.js','utf8');
+const contact=await readFile('review/hair-contact-candidate83.js','utf8');
 const blouse=await readFile('review/blouse-candidate81.js','utf8');
 const main=await readFile('src/main.js','utf8');
-const marker='createGroomHair()';
+const marker='createGroomHair({headShiftX:.26,shoulderContact:.5})';
 if(main.split(marker).length!==2)throw new Error('Expected one default groom call');
 const entry=main.replace(marker,"createGroomHair({headShiftX:.26,shoulderContact:new URLSearchParams(location.search).get('contact')==='on'})");
 const loads={hair:0,blouse:0};
 await build({stdin:{contents:entry,resolveDir:path.resolve('src'),sourcefile:'main-contact-review.js',loader:'js'},bundle:true,format:'iife',target:['es2022'],minify:true,loader:{'.jpg':'dataurl'},outfile:`output/qa/app-hair-contact${iteration}.js`,logLevel:'silent',plugins:[{name:'hair-contact-review',setup(b){
  b.onLoad({filter:/[/\\]hair-groom\.js$/},()=>{loads.hair++;return{contents:hair,loader:'js',resolveDir:path.resolve('src')};});
+ b.onLoad({filter:/[/\\]hair-contact\.js$/},()=>({contents:contact,loader:'js',resolveDir:path.resolve('src')}));
  b.onLoad({filter:/[/\\]blouse\.js$/},()=>{loads.blouse++;return{contents:blouse,loader:'js',resolveDir:path.resolve('src')};});
 }}]});
 if(loads.hair!==1||loads.blouse!==1)throw new Error('Expected one consistent hair and cloth module');
