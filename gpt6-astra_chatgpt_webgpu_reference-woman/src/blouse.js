@@ -170,14 +170,32 @@ function shoulderClothRelief(x,y,front=true){
   const ax=Math.abs(x),outer=smooth(.98,1.14,ax)*(1-smooth(1.53,1.67,ax));
   if(outer===0)return 0;
   const crop=smooth(-1.40,-1.12,y),left=x<0;
-  // Compression descends from the sleeve attachment. One wide roll and one
-  // shorter fold have unequal slopes; the crest of the shoulder remains smooth.
-  const first=y-(left?1.04:.945)+(left?.31:.44)*(ax-1.25);
-  const second=y-(left?.64:.57)+(left?.82:1.02)*(ax-1.33);
-  let folds=.044*gauss(ax-1.34,.29)*(gauss(first,.125)-.62*gauss(first+.090,.074));
-  folds+=(left?.030:.023)*gauss(ax-1.43,.23)*(gauss(second,.105)-.52*gauss(second+.086,.066));
+  // Unequal diagonal compressions turn from the shoulder seam onto the sleeve.
+  // Their broad rolls carry the cloth's weight; the lower trough is shorter.
+  const first=y-(left?1.08:1.015)+(left?.92:1.05)*(ax-1.24);
+  const second=y-(left?.61:.53)+(left?.76:.94)*(ax-1.33);
+  let folds=.076*gauss(ax-1.34,.31)*(gauss(first,.142)-.68*gauss(first+.132,.093));
+  folds+=(left?.044:.035)*gauss(ax-1.43,.25)*(gauss(second,.134)-.57*gauss(second+.112,.079));
   if(!front)folds*=.60;
-  return outer*crop*.047*Math.tanh(folds/.047);
+  return outer*crop*.072*Math.tanh(folds/.072);
+}
+
+function sleeveWarpX(x,y){
+  // A depth-only fold vanishes at the sleeve's side. This small transverse
+  // component wraps the same compression around it, clear of collar supports.
+  return x+Math.sign(x)*.55*shoulderClothRelief(x,y,true);
+}
+
+function sleeveSourceX(x,y){
+  if(Math.abs(x)<=.98||Math.abs(x)>=1.72||y<=-1.40)return x;
+  // Invert the bounded monotone warp before looking up the authored body.
+  // Sleeve seams and their normals therefore use the deformed cloth itself.
+  let source=x;
+  for(let i=0;i<4;i++){
+    const e=.0001,d=(sleeveWarpX(source+e,y)-sleeveWarpX(source-e,y))/(2*e);
+    source-=(sleeveWarpX(source,y)-x)/d;
+  }
+  return source;
 }
 
 function fabricRelief(x,y) {
@@ -265,7 +283,7 @@ function torsoPoint(u,t) {
     z+=.060*Math.abs(c)*smooth(1.13,1.48,Math.abs(x))*gauss(y-.20,.91);
   }
   y+=.007*Math.sin(a*3.0+.4)*smooth(.50,.85,t)*(1-smooth(.93,1,t));
-  return [x,y,z];
+  return [sleeveWarpX(x,y),y,z];
 }
 
 function frontAtY(y) {
@@ -273,13 +291,14 @@ function frontAtY(y) {
 }
 
 function bodyAtXY(x,y,front=true) {
+  const sourceX=sleeveSourceX(x,y);
   let lo=0,hi=1;
   for(let n=0;n<22;n++){
-    const t=(lo+hi)/2,p=profile(t),a=Math.asin(clamp(x/p[0],-1,1));
+    const t=(lo+hi)/2,p=profile(t),a=Math.asin(clamp(sourceX/p[0],-1,1));
     const point=torsoPoint((front?a:Math.PI-a)/TAU,t);
     if(point[1]>y)lo=t;else hi=t;
   }
-  const t=(lo+hi)/2,a=Math.asin(clamp(x/profile(t)[0],-1,1));
+  const t=(lo+hi)/2,a=Math.asin(clamp(sourceX/profile(t)[0],-1,1));
   return torsoPoint((front?a:Math.PI-a)/TAU,t);
 }
 
@@ -327,6 +346,12 @@ function collarPoint(side,u,v) {
   p.z+=.055*Math.sin(u*Math.PI)*Math.sin(v*Math.PI*.92);
   p.z+=.010*Math.sin(u*Math.PI*1.65)*Math.sin(v*Math.PI);
   p.z+=(side<0?.014:-.009)*Math.sin(u*Math.PI)*gauss(v-.72,.22);
+  // The free leaf hangs from its upper roll with a broad, unequal bend. Its
+  // neckline edge and upper attachment stay fixed while the outer tip relaxes.
+  const freeLeaf=smooth(.20,.52,v)*smooth(.08,.27,u);
+  const bend=collarLeafBend(side,u,v);
+  p.y-=(side<0?.030:.022)*freeLeaf*(.28+.72*u)*smooth(.35,1,v);
+  p.z+=bend;
   p.x*=side;
   p.y+=(side<0?-.022:.018)*v;
   if(side<0)p.z-=.008*v;
@@ -336,6 +361,20 @@ function collarPoint(side,u,v) {
   const clearance=.015+.064*arch*(.35+.65*u)+.066*Math.pow(1-u,1.40)*smooth(.50,1,v)+.015*Math.sin(u*Math.PI)*smooth(.30,1,v);
   p.z=supportedDepth(p.x,p.y,p.z,clearance);
   return [p.x,p.y,p.z];
+}
+
+function collarLeafBend(side,u,v){
+  const free=smooth(.20,.52,v)*smooth(.08,.27,u);
+  const rollLine=.54+(side<0?.085:-.055)*(v-.56);
+  const across=u-rollLine;
+  // One soft roll rises beside a shallow trough; no embossed crease or edge tint.
+  return free*Math.sin(v*Math.PI)*((side<0?.055:.047)*gauss(across-.13,.22)-.029*gauss(across+.065,.14));
+}
+
+function collarLeafOcclusion(side,u,v){
+  const h=collarLeafBend(side,u,v),e=.07;
+  const l=collarLeafBend(side,Math.max(0,u-e),v),r=collarLeafBend(side,Math.min(1,u+e),v);
+  return clamp(Math.max(0,(l+r)*.5-h)*4.5,0,.085);
 }
 
 function facingPoint(side,u,v){
@@ -377,7 +416,7 @@ function addCollar(group,side,cloth,seamMat) {
   const solid=solidifyGrid(g,nu,nv,.0045),colors=[],uv=solid.getAttribute('uv'),half=solid.getAttribute('position').count/2;
   for(let i=0;i<uv.count;i++){
     const u=uv.getX(i),v=uv.getY(i);
-    const shade=.075*gauss(u-.075,.23)*(.38+.62*Math.sin(v*Math.PI))+.022*smooth(.73,1,v)+(i>=half?.125:0);
+    const shade=.075*gauss(u-.075,.23)*(.38+.62*Math.sin(v*Math.PI))+.022*smooth(.73,1,v)+collarLeafOcclusion(side,u,v)+(i>=half?.125:0);
     colors.push(1-shade,1-shade*.98,1-shade*.78);
   }
   solid.setAttribute('color',new THREE.Float32BufferAttribute(colors,3));
@@ -461,7 +500,7 @@ function clothGeometry() {
     const normal=new THREE.Vector3().crossVectors(dv,du).normalize();n.setXYZ(j*(nu+1)+i,normal.x,normal.y,normal.z);
   }
   for(let i=0;i<p.count;i++){
-    const x=p.getX(i),y=p.getY(i),z=p.getZ(i),a=Math.abs(x);
+    const y=p.getY(i),x=sleeveSourceX(p.getX(i),y),z=p.getZ(i),a=Math.abs(x);
     let shade=0;
     if(z>0){
       const fold=fabricRelief(x,y);
@@ -544,7 +583,7 @@ export function createBlouse() {
   // Geometry, normals, seams and buttons all receive the same continuous transform.
   broadenShoulders(group);
   group.userData.originalGeometry=true;
-  group.userData.design='Cotton blouse with sloping shoulders, a tapered waist and hanging sleeve planes; separately folded pointed collar leaves above an open V facing; broad asymmetrical button pulls, hanging cloth rolls and shoulder compression; sewn yoke/sleeves, a thin closed curved placket, three body buttons and an open facing button.';
+  group.userData.design='Cotton blouse with sloping shoulders, a tapered waist and hanging sleeve planes; soft unequal collar leaves above a fixed open V facing; broad asymmetrical button pulls and shoulder compressions that wrap around the sleeves; sewn yoke/sleeves, a thin closed curved placket, three body buttons and an open facing button.';
   return group;
 }
 

@@ -1,9 +1,4 @@
 node_modules/
-output/*.webm
-output/*.mp4
-output/*.png
-output/*.glb
-output/*.zip
-output/qa/
+output/
 *.log
 .DS_Store

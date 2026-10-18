@@ -4,7 +4,7 @@
   "goal_achieved": false,
   "method": "Visual self-assessment against the sole uploaded image, supplemented by independent agent review. Scores are subjective and are not a certification of AAA production quality.",
   "scope": "Recorded assessments whose numeric results remain available. No missing historical scores have been invented.",
-  "current_accepted_iteration": 70,
+  "current_accepted_iteration": 73,
   "current_accepted_score": 76,
   "assessments": [
     {
@@ -323,6 +323,13 @@
       "reviewer": "root",
       "decision": "rejected high-resolution hard fringe shadows",
       "notes": "Compared1024baseline with2048/4096 pre-initialization fringe casting, radius2, normalBias.002. Hard triangular chin/neck and outer-eye shadows outweigh additional fringe contact. Queue-complete medians12.7/12.6/14.7ms in the sampled front view; no performance issue, but visual regression. Original1024light configuration remains."
+    },
+    {
+      "iteration": 73,
+      "score": 76,
+      "reviewer": "root and quality_review_42",
+      "decision": "accepted wrapped sleeve folds and relaxed lower collar",
+      "notes": "Native front, both profiles, back and isolated garment reviewed. Shoulder compressions now wrap laterally onto sleeves instead of changing only depth. Lower collar gains a broad unequal bend. Maximum clothshift.033449, collar.031747, no extra geometry/drawcalls. Neck edges, upperattachments, body opening, facing, crop, placket and3+1buttons fixed. Sampled sleeveJacobian.710-1.488; collarbodyclearance.002524, neckclearance.007794. No visible hair collision. Keep shoulder amplitude restrained to avoid padded sleeves; front fold directions remain too even. Overall76."
     },
     {
       "iteration": 74,
