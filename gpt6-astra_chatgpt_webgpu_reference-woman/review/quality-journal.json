@@ -4,8 +4,8 @@
   "goal_achieved": false,
   "method": "Visual self-assessment against the sole uploaded image, supplemented by independent agent review. Scores are subjective and are not a certification of AAA production quality.",
   "scope": "Recorded assessments whose numeric results remain available. No missing historical scores have been invented.",
-  "current_accepted_iteration": 50,
-  "current_accepted_score": 74,
+  "current_accepted_iteration": 57,
+  "current_accepted_score": 75,
   "assessments": [
     {
       "iteration": 20,
@@ -204,6 +204,41 @@
       "reviewer": "root and quality_review_42",
       "decision": "accepted lower-face compaction with fitted upper neck",
       "notes": "Six percent compaction holds in full portrait and both profiles. Upper neck follows the same posed head-space warp, closing the previously exposed junction. Native head minimumJacobian0.89875, neck0.94; neckmaximumWorldDisplacement0.066204,2592lowerverticesunchanged. FacialUVs preserved. Next likeness comparison is head placement over the blouseV; hair remains the principal quality limit."
+    },
+    {
+      "iteration": 52,
+      "score": 74,
+      "reviewer": "root and quality_review_42",
+      "decision": "accepted head placement and fitted neck",
+      "notes": "Compared additional world-X shifts of 0, .20, .26, and .32. Selected .26 to align the head with the blouse V. Upper neck blends into that shift while the lower attachment stays fixed; minimum Jacobian .978077. Front, both profiles, and back reviewed. GLB exporter separately round-tripped the actual scene without changing live geometry, pixels, or texture-source versions."
+    },
+    {
+      "iteration": 54,
+      "score": 70,
+      "reviewer": "root",
+      "decision": "rejected fringe shading regression; accepted checkpoint remained 50",
+      "notes": "Round fringe cores produced bright white streaks. Crown and mass map brightness also caused broad patch bands. Five native views inspected; material isolation followed."
+    },
+    {
+      "iteration": 55,
+      "score": 70,
+      "reviewer": "root",
+      "decision": "selected matte fringe and near-white map controls for integration",
+      "notes": "Compared baseline, softer specular, matte, diffuse, hidden fine detail, and white map RGB with original alpha. Matte and diffuse eliminated white fringe streaks; whitening only map RGB removed broad map-related crown bands. These were diagnostic runtime controls."
+    },
+    {
+      "iteration": 56,
+      "score": 70,
+      "reviewer": "root",
+      "decision": "accepted blouse component; overall hair regression awaited repair",
+      "notes": "Matched three central body buttons and one facing button to the sole reference. Revised placket curve, button spacing, and supporting folds; inspected full front and isolated garment. Collar, neck, and seam clearances retained."
+    },
+    {
+      "iteration": 57,
+      "score": 75,
+      "reviewer": "root and quality_review_42",
+      "decision": "accepted combined pose, blouse, and hair material checkpoint",
+      "notes": "Native front, detail, both profiles, and back reviewed. Matte 1305-strand fringe removes white glints; near-white albedo flow map preserves original alpha and reduces broad crown patches. Ring seam normals welded. Reference resemblance estimated 76 and multiview finish 70; subjective overall 75. Remaining priorities: cap-like crown, regular rear sawtooth hem and gaps, separated neck-height locks, facial silhouette, and cloth realism."
     }
   ]
 }

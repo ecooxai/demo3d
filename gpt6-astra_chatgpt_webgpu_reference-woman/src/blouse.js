@@ -7,8 +7,10 @@ const clamp = THREE.MathUtils.clamp;
 const mix = THREE.MathUtils.lerp;
 const smooth = (a,b,t) => { const q=clamp((t-a)/(b-a),0,1);return q*q*(3-2*q); };
 const gauss=(v,s)=>Math.exp(-(v*v)/(s*s));
-const BUTTON_Y=[.480,-.115,-.710,-1.305];
-const placketX=y=>{const v=clamp((.780-y)/2.230,0,1);return -.022+.027*Math.sin(v*Math.PI)+.274*v*v;};
+const BUTTON_Y=[.480,-.185,-.850];
+// The reference has three widely spaced body buttons and a small rightward
+// turn below the V; retain the same centre at both the opening and crop.
+const placketX=y=>{const v=clamp((.780-y)/2.230,0,1);return -.022+.027*Math.sin(v*Math.PI)+.190*v*v+.084*smooth(0,.19,v);};
 const FOLD_SLOPES=[.17,-.14,-.235],FOLD_LENGTHS=[.26,.33,.24],FOLD_OFFSETS=[-.031,.024,-.019];
 const NECK_LEVELS=[
   [.69,.565,.565,.24,.006],[.87,.490,.474,.275,-.005],
@@ -394,6 +396,7 @@ function batchButtons(group) {
 
 function addButtons(group,buttonMat,holeMat,threadMat) {
   const allButtons=new THREE.Group();allButtons.name='original-batched-four-hole-pearl-buttons';
+  const bodyCount=BUTTON_Y.length;
   // A shallow dish and a rounded annular lip catch light as one continuous shell.
   const pearlProfile=[[0,-.0065],[.044,-.0065],[.055,-.0056],[.0595,-.0036],[.0615,-.0004],[.062,.0030],[.0606,.0065],[.0577,.0088],[.054,.0095],[.0505,.0087],[.0475,.0067],[.044,.0043],[.040,.0035],[0,.0035]];
   const buttonGeometry=new THREE.LatheGeometry(pearlProfile.map(p=>new THREE.Vector2(...p)),64);
@@ -401,21 +404,22 @@ function addButtons(group,buttonMat,holeMat,threadMat) {
   const collarEdgeGeometry=new THREE.TorusGeometry(.0465,.0032,6,40);
   const wellGeometry=new THREE.CircleGeometry(.0066,14);
   const threadGeometry=new THREE.CylinderGeometry(.00165,.00165,.022,6);
-  for(let i=0;i<5;i++) {
-    const y=i<4?BUTTON_Y[i]:1.104,x=i<4?placketX(y):.180;
-    const p=i<4?bodyAtXY(x,y):facingPoint(1,.68,.735);
+  for(let i=0;i<bodyCount+1;i++) {
+    const isBody=i<bodyCount;
+    const y=isBody?BUTTON_Y[i]:1.104,x=isBody?placketX(y):.180;
+    const p=isBody?bodyAtXY(x,y):facingPoint(1,.68,.735);
     const button=new THREE.Group();button.name=`blouse-ivory-four-hole-button-${i+1}`;
-    button.position.set(i<4?x:p[0],i<4?y:p[1],p[2]+.027);
-    if(i<4)button.quaternion.setFromUnitVectors(new THREE.Vector3(0,0,1),bodyNormal(x,y));
+    button.position.set(isBody?x:p[0],isBody?y:p[1],p[2]+.027);
+    if(isBody)button.quaternion.setFromUnitVectors(new THREE.Vector3(0,0,1),bodyNormal(x,y));
     else{button.quaternion.setFromUnitVectors(new THREE.Vector3(0,0,1),facingNormal(1,.68,.735));button.scale.setScalar(.91);}
-    if(i<4)button.rotateZ([.13,-.07,.09,-.12][i]);
-    const disc=mesh(button,'button-pearl-disc',i<4?buttonGeometry:collarButtonGeometry,buttonMat);disc.rotation.x=Math.PI/2;
-    if(i===4){const rim=mesh(button,'button-rounded-rim',collarEdgeGeometry,buttonMat);rim.position.z=.0095;}
+    if(isBody)button.rotateZ([.13,-.07,.09][i%3]);
+    const disc=mesh(button,'button-pearl-disc',isBody?buttonGeometry:collarButtonGeometry,buttonMat);disc.rotation.x=Math.PI/2;
+    if(!isBody){const rim=mesh(button,'button-rounded-rim',collarEdgeGeometry,buttonMat);rim.position.z=.0095;}
     for(const sx of[-1,1])for(const sy of[-1,1]) {
-      const hole=mesh(button,'recessed-button-hole',wellGeometry,holeMat);hole.position.set(sx*.0132,sy*.0132,i<4?.0041:.0084);
+      const hole=mesh(button,'recessed-button-hole',wellGeometry,holeMat);hole.position.set(sx*.0132,sy*.0132,isBody?.0041:.0084);
     }
     for(const sx of[-1,1]){
-      const thread=mesh(button,'ivory-button-thread',threadGeometry,threadMat);thread.position.set(sx*.0132,0,i<4?.0061:.0102);thread.rotation.z=.15;
+      const thread=mesh(button,'ivory-button-thread',threadGeometry,threadMat);thread.position.set(sx*.0132,0,isBody?.0061:.0102);thread.rotation.z=.15;
     }
     allButtons.add(button);
   }
@@ -517,7 +521,7 @@ export function createBlouse() {
   // Geometry, normals, seams and buttons all receive the same continuous transform.
   broadenShoulders(group);
   group.userData.originalGeometry=true;
-  group.userData.design='Cotton blouse with sloping shoulders, a tapered waist and hanging sleeve planes; separately folded pointed collar leaves above an open V facing; localized asymmetrical gathers, curved placket, sewn yoke/sleeves, four body buttons and an open facing button.';
+  group.userData.design='Cotton blouse with sloping shoulders, a tapered waist and hanging sleeve planes; separately folded pointed collar leaves above an open V facing; localized asymmetrical gathers, curved placket, sewn yoke/sleeves, three body buttons and an open facing button.';
   return group;
 }
 
