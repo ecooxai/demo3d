@@ -4,7 +4,7 @@
   "goal_achieved": false,
   "method": "Visual self-assessment against the sole uploaded image, supplemented by independent agent review. Scores are subjective and are not a certification of AAA production quality.",
   "scope": "Recorded assessments whose numeric results remain available. No missing historical scores have been invented.",
-  "current_accepted_iteration": 67,
+  "current_accepted_iteration": 70,
   "current_accepted_score": 76,
   "assessments": [
     {
@@ -288,6 +288,48 @@
       "reviewer": "root and reference_art_review",
       "decision": "accepted 6 percent lip thickness restoration",
       "notes": "Compared0,4,6,8 percent in native detail and quarter views with accepted cheek color65. Six percent modestly restores central lip volume;8 adds little benefit. Closed seam and corners stay fixed, with no visible shelf or border discontinuity. Native4366vertices changed across face and two lip meshes, maxshift .004584,minJacobian .806621. Existing UV, gloss, crease, and ear geometry preserved; same-strength calls are no-ops. No score increase for this small adjustment."
+    },
+    {
+      "iteration": 68,
+      "score": 76,
+      "reviewer": "root and quality_review_42",
+      "decision": "rejected source-derived broad hair color as an enabled layer",
+      "notes": "Compared0,.5,1 in native front/detail/right/back on original crown and mass vertex colors. Bounded source corridor sampling adds subtle variation but does not improve strand structure. Retained default0; 1,055,874bytes of optional state are not allocated in the accepted viewer."
+    },
+    {
+      "iteration": 69,
+      "score": 76,
+      "reviewer": "root and quality_review_42",
+      "decision": "accepted crown edge and fringe-root continuity cleanup",
+      "notes": "Five native views reviewed. Existing1305fringe fibers originate on the true crown flow and retain at least.012sampled forehead clearance. Fine unequal alpha releases replace the common front crown cut; existing fine strands extend through the edge. Guides130-132 gathered near shoulder. Hair geometry unchanged at1104568triangles/51.62MiB/12676strands; a separate2MiBcrown map preserves near-whiteRGB, unchanged massRGBA/normalmap, and opaque foundation region. The broad cap remains the principal limitation."
+    },
+    {
+      "iteration": 70,
+      "score": 76,
+      "reviewer": "root and quality_review_42",
+      "decision": "accepted restrained ear colors and integrated with hair69",
+      "notes": "Native0,.5,1 comparison selects fullstrength as a minor warmth/definition improvement. Eleven manually selected source-skin patches use205pixels; bounded gains.823-.98081multiply existing colors on two closed ear shells. 10564vertices,63384retainedbytes, no geometry/UV/normal/alpha/material changes or new textures/drawcalls; strength0exactlyrestores bits. Combined viewer rebuilt and checked with nativeWebGPU; heap257MiB. Overall remains76."
+    },
+    {
+      "iteration": 71,
+      "score": 75,
+      "reviewer": "root and quality_review_42",
+      "decision": "rejected stronger hair color diagnostic",
+      "notes": "Isolated stronger luminance compression with packed step256 renders broad mottling and a dark temple patch, without convincing strand detail. Actual gain.560834-1.794441, quantizationrelativeerror.00001526; nativeWebGPUproof passed but art quality regressed. Production hair source-color remains disabled."
+    },
+    {
+      "iteration": 72,
+      "score": 75,
+      "reviewer": "root",
+      "decision": "rejected high-resolution hard fringe shadows",
+      "notes": "Compared1024baseline with2048/4096 pre-initialization fringe casting, radius2, normalBias.002. Hard triangular chin/neck and outer-eye shadows outweigh additional fringe contact. Queue-complete medians12.7/12.6/14.7ms in the sampled front view; no performance issue, but visual regression. Original1024light configuration remains."
+    },
+    {
+      "iteration": 74,
+      "score": 76,
+      "reviewer": "root",
+      "decision": "retained original shadows after softer contact comparison",
+      "notes": "Tested2048radius8 with fringe casting and normalBias.012/.005, originalbias-.0002, using fresh nativeWebGPU pages. Softening avoids72hard edges but gives no useful visible gain over accepted1024radius4/no-fringe-casting. No production shadow change or score increase."
     }
   ]
 }

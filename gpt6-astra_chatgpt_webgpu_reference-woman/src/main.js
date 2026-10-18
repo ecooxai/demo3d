@@ -10,6 +10,7 @@ import { applyPortraitProportions } from './portrait-proportions.js';
 import { applyPortraitPose } from './portrait-pose.js';
 import { applyLowerCheekTaper } from './face-refinement.js';
 import { applyLipThicknessRefinement } from './lip-refinement.js';
+import { applyReferenceEarColor } from './reference-ear.js';
 import { createHair } from './hair.js';
 import { createFiberHair } from './hair-fibers.js';
 import { createGroomHair } from './hair-groom.js';
@@ -21,7 +22,7 @@ const hairChoice=new URLSearchParams(location.search).get('hair')||'groom';
 const fiberCandidate=hairChoice==='fibers';
 const groomCandidate=hairChoice==='groom';
 const coverageCandidate=hairChoice==='coverage';
-const state = { backend: new URLSearchParams(location.search).get('backend') === 'webgl' ? 'webgl' : 'webgpu', width: 900, height: 1200, iteration: groomCandidate?67:coverageCandidate?32:fiberCandidate?25:27, score: groomCandidate?76:fiberCandidate?61:68, renderedFrames: 0, renderMs: 0, rotating: false, view: 'front', ready: false, lighting: 'soft', antialiasing: 2, internalRender: null };
+const state = { backend: new URLSearchParams(location.search).get('backend') === 'webgl' ? 'webgl' : 'webgpu', width: 900, height: 1200, iteration: groomCandidate?70:coverageCandidate?32:fiberCandidate?25:27, score: groomCandidate?76:fiberCandidate?61:68, renderedFrames: 0, renderMs: 0, rotating: false, view: 'front', ready: false, lighting: 'soft', antialiasing: 2, internalRender: null };
 let portraitOutput=createPortraitOutput();
 const scene = new THREE.Scene();
 scene.background = new THREE.Color('#cbe3f3');
@@ -210,6 +211,7 @@ async function initialize(backend=state.backend) {
     state.lipRefinement=applyLipThicknessRefinement(anatomicalHead,{strength:.06});
     state.pose=applyPortraitPose(headPivot,anatomicalNeck,{shiftX:.26});
     detailTarget.x=.02+state.pose.shiftX;
+    state.referenceEar=await applyReferenceEarColor(anatomicalHead,{strength:1});
     if(!skinIlluminationApplied){state.skinIllumination=compensateReferenceSkin(anatomicalHead,scene,{strength:.35});skinIlluminationApplied=true;}
     if(backend==='webgpu') {
       if(!navigator.gpu)throw new Error('WebGPU is not available in this browser or context. Use a supported browser on HTTPS or localhost, or choose WebGL below.');
