@@ -1,0 +1,204 @@
+[
+  {
+    "iteration": 139,
+    "mode": 2,
+    "nativeWebGPU": true,
+    "resolution": [
+      900,
+      1200
+    ],
+    "antialiasing": 2,
+    "toneMapping": 7,
+    "exposure": 1.4,
+    "geometryStrength": 1,
+    "center": [
+      -0.006806852514538969,
+      2.220460162180035,
+      0.619929349052369
+    ],
+    "privateMaterialCount": 2,
+    "receivers": [
+      {
+        "mesh": "upper-lip",
+        "original": true,
+        "active": true
+      },
+      {
+        "mesh": "lower-lip",
+        "original": true,
+        "active": true
+      }
+    ],
+    "originalMaterials": [
+      {
+        "name": "upper-lip",
+        "roughness": 0.44,
+        "metalness": 0,
+        "clearcoat": 0.12,
+        "clearcoatRoughness": 0.3,
+        "specularIntensity": 0.23,
+        "envMapIntensity": 1,
+        "opacity": 1,
+        "transparent": false,
+        "side": 2,
+        "depthWrite": true,
+        "depthTest": true,
+        "toneMapped": true,
+        "vertexColors": false,
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "map": "Skin color from uploaded image 1, hand-landmarked onto original 3D sculpt"
+      },
+      {
+        "name": "lower-lip",
+        "roughness": 0.44,
+        "metalness": 0,
+        "clearcoat": 0.12,
+        "clearcoatRoughness": 0.3,
+        "specularIntensity": 0.23,
+        "envMapIntensity": 1,
+        "opacity": 1,
+        "transparent": false,
+        "side": 2,
+        "depthWrite": true,
+        "depthTest": true,
+        "toneMapped": true,
+        "vertexColors": false,
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "map": "Skin color from uploaded image 1, hand-landmarked onto original 3D sculpt"
+      }
+    ],
+    "boundMaps": [
+      {
+        "name": "Skin color from uploaded image 1, hand-landmarked onto original 3D sculpt",
+        "size": [
+          1024,
+          1536
+        ],
+        "hash": "2ebd7a5cbe32292186c9543291344e886bc836869f026eb121111cfc979184eb"
+      }
+    ],
+    "exactAttributes": 10,
+    "exactMaps": 1,
+    "sourceMaterialsRestored": true,
+    "disposedMaterials": 2,
+    "heapMiB": 344.9523696899414,
+    "captures": [
+      "output/qa/lip-shadow139-2-lip.png"
+    ],
+    "hashes": {
+      "lip": "d2ca7b09c9e0182f836806b313069476a0e823fe856aec08a8981eca7728a9b1"
+    },
+    "restoredHash": "cdeb251228e555ac173cdeb1022f2abc5c433301165ec03e435fe631ebd484cd",
+    "restoredMatchesBaseline": true,
+    "errors": []
+  },
+  {
+    "iteration": 139,
+    "mode": 4,
+    "nativeWebGPU": true,
+    "resolution": [
+      900,
+      1200
+    ],
+    "antialiasing": 2,
+    "toneMapping": 7,
+    "exposure": 1.4,
+    "geometryStrength": 1,
+    "center": [
+      -0.006806852514538969,
+      2.220460162180035,
+      0.619929349052369
+    ],
+    "privateMaterialCount": 2,
+    "receivers": [
+      {
+        "mesh": "upper-lip",
+        "original": true,
+        "active": false
+      },
+      {
+        "mesh": "lower-lip",
+        "original": true,
+        "active": true
+      }
+    ],
+    "originalMaterials": [
+      {
+        "name": "upper-lip",
+        "roughness": 0.44,
+        "metalness": 0,
+        "clearcoat": 0.12,
+        "clearcoatRoughness": 0.3,
+        "specularIntensity": 0.23,
+        "envMapIntensity": 1,
+        "opacity": 1,
+        "transparent": false,
+        "side": 2,
+        "depthWrite": true,
+        "depthTest": true,
+        "toneMapped": true,
+        "vertexColors": false,
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "map": "Skin color from uploaded image 1, hand-landmarked onto original 3D sculpt"
+      },
+      {
+        "name": "lower-lip",
+        "roughness": 0.44,
+        "metalness": 0,
+        "clearcoat": 0.12,
+        "clearcoatRoughness": 0.3,
+        "specularIntensity": 0.23,
+        "envMapIntensity": 1,
+        "opacity": 1,
+        "transparent": false,
+        "side": 2,
+        "depthWrite": true,
+        "depthTest": true,
+        "toneMapped": true,
+        "vertexColors": false,
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "map": "Skin color from uploaded image 1, hand-landmarked onto original 3D sculpt"
+      }
+    ],
+    "boundMaps": [
+      {
+        "name": "Skin color from uploaded image 1, hand-landmarked onto original 3D sculpt",
+        "size": [
+          1024,
+          1536
+        ],
+        "hash": "2ebd7a5cbe32292186c9543291344e886bc836869f026eb121111cfc979184eb"
+      }
+    ],
+    "exactAttributes": 10,
+    "exactMaps": 1,
+    "sourceMaterialsRestored": true,
+    "disposedMaterials": 2,
+    "heapMiB": 330.725661277771,
+    "captures": [
+      "output/qa/lip-shadow139-4-lip.png"
+    ],
+    "hashes": {
+      "lip": "d2ca7b09c9e0182f836806b313069476a0e823fe856aec08a8981eca7728a9b1"
+    },
+    "restoredHash": "cdeb251228e555ac173cdeb1022f2abc5c433301165ec03e435fe631ebd484cd",
+    "restoredMatchesBaseline": true,
+    "errors": []
+  }
+]

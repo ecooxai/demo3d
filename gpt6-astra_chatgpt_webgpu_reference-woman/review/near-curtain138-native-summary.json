@@ -1,0 +1,1978 @@
+{
+  "iteration": 138,
+  "summaryOf": "review/near-curtain138-native-result.json",
+  "fullReportSha256": "54003f9b16c414da74449f872061426be2186e72459c367441e185b8e8a546c4",
+  "cases": [
+    {
+      "enabled": false,
+      "nativeWebGPU": true,
+      "score": 77,
+      "exposure": 1.4,
+      "toneMapping": 7,
+      "guidePlacement": 0.5,
+      "shoulderContact": 0.35,
+      "nearCurtain": {
+        "version": "six-family-near-curtain-138-v1",
+        "enabled": false,
+        "changed": false
+      },
+      "constructionMs": 1673.6,
+      "geometryMiB": 52.49,
+      "hairTriangles": 1114888,
+      "vertices": 1160364,
+      "triangles": 1492787,
+      "nonfinite": 0,
+      "normalError": 4.9655871747766867e-08,
+      "zeroNormals": 5841,
+      "protectedParts": [
+        {
+          "name": "continuous-face",
+          "index": "9697a4bc",
+          "attributes": {
+            "position": "d564044a",
+            "uv": "84fd4586",
+            "color": "c3f1b192",
+            "normal": "a123f9c3"
+          }
+        },
+        {
+          "name": "scleral-globe",
+          "index": "1b8e55cd",
+          "attributes": {
+            "position": "6ac85e18",
+            "uv": "450094d8",
+            "normal": "61495dd0"
+          }
+        },
+        {
+          "name": "brown-iris-and-pupil",
+          "index": "f3d6fbbd",
+          "attributes": {
+            "position": "77ba56c7",
+            "uv": "fe863aec",
+            "normal": "eeff6484"
+          }
+        },
+        {
+          "name": "transparent-corneal-dome",
+          "index": "f3d6fbbd",
+          "attributes": {
+            "position": "a2ebbb3d",
+            "uv": "a5ef6435",
+            "normal": "a339d9da"
+          }
+        },
+        {
+          "name": "corneal-softbox-reflection",
+          "index": "d036f0d5",
+          "attributes": {
+            "position": "d2a69b12",
+            "normal": "1d65e85",
+            "uv": "2bc30f97"
+          }
+        },
+        {
+          "name": "corneal-softbox-reflection",
+          "index": "d036f0d5",
+          "attributes": {
+            "position": "7dbfe92c",
+            "normal": "73e5ea58",
+            "uv": "2bc30f97"
+          }
+        },
+        {
+          "name": "sculpted-eyelids",
+          "index": "de38a287",
+          "attributes": {
+            "position": "661fd3f",
+            "uv": "5430a5d7",
+            "color": "eba1d339",
+            "normal": "819b262b"
+          }
+        },
+        {
+          "name": "upper-lash-margin",
+          "index": "9d65ea85",
+          "attributes": {
+            "position": "95055671",
+            "normal": "6ff7b47f",
+            "uv": "5f651809"
+          }
+        },
+        {
+          "name": "lower-waterline",
+          "index": "9d65ea85",
+          "attributes": {
+            "position": "2717c91d",
+            "normal": "28fa8753",
+            "uv": "5f651809"
+          }
+        },
+        {
+          "name": "lower-tear-meniscus",
+          "index": "9d65ea85",
+          "attributes": {
+            "position": "497a9f64",
+            "normal": "2ea9eb7a",
+            "uv": "5f651809"
+          }
+        },
+        {
+          "name": "upper-lid-fold",
+          "index": "e94c4485",
+          "attributes": {
+            "position": "e01d1d05",
+            "normal": "8a48ad10",
+            "uv": "4ccd4b63"
+          }
+        },
+        {
+          "name": "individual-eyelashes",
+          "index": "165247ed",
+          "attributes": {
+            "position": "66c90370",
+            "normal": "9200cb7c",
+            "uv": "da4104a5"
+          }
+        },
+        {
+          "name": "lacrimal-caruncle",
+          "index": "fef62615",
+          "attributes": {
+            "position": "23635ed3",
+            "normal": "e8311783",
+            "uv": "247c0ebb"
+          }
+        },
+        {
+          "name": "scleral-globe",
+          "index": "5a622697",
+          "attributes": {
+            "position": "c045b136",
+            "uv": "30a8eef7",
+            "normal": "3ee79475"
+          }
+        },
+        {
+          "name": "brown-iris-and-pupil",
+          "index": "1d4b6362",
+          "attributes": {
+            "position": "413f7909",
+            "uv": "62bb2b6c",
+            "normal": "b43d3e8a"
+          }
+        },
+        {
+          "name": "transparent-corneal-dome",
+          "index": "1d4b6362",
+          "attributes": {
+            "position": "15381f",
+            "uv": "a5ef6435",
+            "normal": "6c5b2727"
+          }
+        },
+        {
+          "name": "corneal-softbox-reflection",
+          "index": "d036f0d5",
+          "attributes": {
+            "position": "44e6d44b",
+            "normal": "1d65e85",
+            "uv": "2bc30f97"
+          }
+        },
+        {
+          "name": "corneal-softbox-reflection",
+          "index": "d036f0d5",
+          "attributes": {
+            "position": "63d0e8a0",
+            "normal": "73e5ea58",
+            "uv": "2bc30f97"
+          }
+        },
+        {
+          "name": "sculpted-eyelids",
+          "index": "de38a287",
+          "attributes": {
+            "position": "6d938e62",
+            "uv": "583f22bb",
+            "color": "eb1bb84b",
+            "normal": "f0a9d54d"
+          }
+        },
+        {
+          "name": "upper-lash-margin",
+          "index": "9d65ea85",
+          "attributes": {
+            "position": "b4b7bc1e",
+            "normal": "50252c09",
+            "uv": "5f651809"
+          }
+        },
+        {
+          "name": "lower-waterline",
+          "index": "9d65ea85",
+          "attributes": {
+            "position": "a7bad3e1",
+            "normal": "6089675d",
+            "uv": "5f651809"
+          }
+        },
+        {
+          "name": "lower-tear-meniscus",
+          "index": "9d65ea85",
+          "attributes": {
+            "position": "8daa9d4c",
+            "normal": "3345d082",
+            "uv": "5f651809"
+          }
+        },
+        {
+          "name": "upper-lid-fold",
+          "index": "e94c4485",
+          "attributes": {
+            "position": "c32dcb19",
+            "normal": "63842228",
+            "uv": "4ccd4b63"
+          }
+        },
+        {
+          "name": "individual-eyelashes",
+          "index": "165247ed",
+          "attributes": {
+            "position": "8e6d0bfc",
+            "normal": "7a408302",
+            "uv": "da4104a5"
+          }
+        },
+        {
+          "name": "lacrimal-caruncle",
+          "index": "fef62615",
+          "attributes": {
+            "position": "1eb69e94",
+            "normal": "e8311783",
+            "uv": "247c0ebb"
+          }
+        },
+        {
+          "name": "upper-lip",
+          "index": "d6ebdc57",
+          "attributes": {
+            "position": "8ab68de5",
+            "uv": "c27ecc37",
+            "color": "a24a37ff",
+            "normal": "3baf3c4f"
+          }
+        },
+        {
+          "name": "lower-lip",
+          "index": "f5897af",
+          "attributes": {
+            "position": "91e74d33",
+            "uv": "678ac8bf",
+            "color": "91f47774",
+            "normal": "22ee85b1"
+          }
+        },
+        {
+          "name": "closed-mouth-crease",
+          "index": "babd6429",
+          "attributes": {
+            "position": "df55edc2",
+            "normal": "5d78483d",
+            "uv": "d6f5f3ed"
+          }
+        },
+        {
+          "name": "naris--1",
+          "index": "ecc39457",
+          "attributes": {
+            "position": "adab7d5",
+            "color": "1c219c51",
+            "normal": "54893103",
+            "uv": "d70afb6e"
+          }
+        },
+        {
+          "name": "naris-1",
+          "index": "ecc39457",
+          "attributes": {
+            "position": "5305aac9",
+            "color": "3ec7ca4c",
+            "normal": "bfd6123d",
+            "uv": "aec1d542"
+          }
+        },
+        {
+          "name": "soft-brow-underlayer",
+          "index": "dd1176eb",
+          "attributes": {
+            "position": "ea2380ea",
+            "color": "70ec506a",
+            "normal": "7be2cc05"
+          }
+        },
+        {
+          "name": "soft-brow-underlayer",
+          "index": "dd1176eb",
+          "attributes": {
+            "position": "3992de4d",
+            "color": "4b55216",
+            "normal": "5473b085"
+          }
+        },
+        {
+          "name": "tapered-brow-hairs",
+          "index": "17f2c64d",
+          "attributes": {
+            "position": "45db3a0d",
+            "normal": "56ff950c",
+            "uv": "f99ef415"
+          }
+        },
+        {
+          "name": "ear-continuous-anatomical-shell",
+          "index": "15688901",
+          "attributes": {
+            "position": "4647c1b2",
+            "color": "9816ed5",
+            "uv": "3073a1a8",
+            "normal": "52c4620f"
+          }
+        },
+        {
+          "name": "ear-continuous-anatomical-shell",
+          "index": "8bb6b6b9",
+          "attributes": {
+            "position": "8b21758b",
+            "color": "9ff24abf",
+            "uv": "3073a1a8",
+            "normal": "153f9dd4"
+          }
+        },
+        {
+          "name": "Continuous parted crown with longitudinal fiber flow",
+          "index": "76717c5e",
+          "attributes": {
+            "position": "cdb33367",
+            "color": "af92f49f",
+            "uv": "b4905ed2",
+            "normal": "6d70c703",
+            "uv1": "ea705695"
+          }
+        },
+        {
+          "name": "Dense fine bowed brown fringe strands",
+          "index": "42860b63",
+          "attributes": {
+            "position": "fb2361a4",
+            "color": "6c8e2c88",
+            "uv": "d3fe23dc",
+            "normal": "108f733e"
+          }
+        },
+        {
+          "name": "Sparse short temple edge and hairline wisps",
+          "index": "65dfd659",
+          "attributes": {
+            "position": "48303b6f",
+            "color": "28cda1fd",
+            "uv": "6135082d",
+            "normal": "6a64190e"
+          }
+        },
+        {
+          "name": "neck-smooth-anatomical-surface",
+          "index": "6706b407",
+          "attributes": {
+            "position": "b3ecafdd",
+            "uv": "993914fd",
+            "normal": "58c43dd3",
+            "color": "383fa55b"
+          }
+        },
+        {
+          "name": "blouse-continuous-torso-and-sleeves",
+          "index": "c8ee3ec6",
+          "attributes": {
+            "position": "b22c8316",
+            "uv": "26904013",
+            "normal": "de59cd0d",
+            "color": "c7d21343"
+          }
+        },
+        {
+          "name": "blouse-finished-bust-base",
+          "index": "e789a755",
+          "attributes": {
+            "position": "8cddba64",
+            "normal": "bf0bf138",
+            "uv": "b1250fbd",
+            "color": "490752c5"
+          }
+        },
+        {
+          "name": "blouse-left-neck-opening-facing",
+          "index": "8821df12",
+          "attributes": {
+            "position": "317b4046",
+            "uv": "a4446ddb",
+            "normal": "5dd19b94",
+            "color": "598a2175"
+          }
+        },
+        {
+          "name": "blouse-left-facing-stitch",
+          "index": "e94c4485",
+          "attributes": {
+            "position": "7b7c8ad2",
+            "normal": "9a52ced3",
+            "uv": "4ccd4b63"
+          }
+        },
+        {
+          "name": "blouse-right-neck-opening-facing",
+          "index": "500d863a",
+          "attributes": {
+            "position": "865a9819",
+            "uv": "a4446ddb",
+            "normal": "863a2118",
+            "color": "598a2175"
+          }
+        },
+        {
+          "name": "blouse-right-facing-stitch",
+          "index": "e94c4485",
+          "attributes": {
+            "position": "339798c2",
+            "normal": "ee417f6f",
+            "uv": "4ccd4b63"
+          }
+        },
+        {
+          "name": "blouse-left-spread-collar",
+          "index": "54a515fe",
+          "attributes": {
+            "position": "72dcfdf",
+            "normal": "808a8e62",
+            "uv": "e4e9c5ad",
+            "color": "b8225fc9"
+          }
+        },
+        {
+          "name": "blouse-left-collar-edge",
+          "index": "9dbf4fb2",
+          "attributes": {
+            "position": "60d5569d",
+            "normal": "2927dc02",
+            "uv": "d147f4cc"
+          }
+        },
+        {
+          "name": "blouse-left-collar-fold",
+          "index": "b2957bd2",
+          "attributes": {
+            "position": "64a16b33",
+            "normal": "55da1313",
+            "uv": "47bd1173",
+            "color": "aff22de8"
+          }
+        },
+        {
+          "name": "blouse-right-spread-collar",
+          "index": "cde68616",
+          "attributes": {
+            "position": "6659520f",
+            "normal": "d859927d",
+            "uv": "e4e9c5ad",
+            "color": "2a1322f5"
+          }
+        },
+        {
+          "name": "blouse-right-collar-edge",
+          "index": "9dbf4fb2",
+          "attributes": {
+            "position": "7a0521fc",
+            "normal": "9a195a3e",
+            "uv": "d147f4cc"
+          }
+        },
+        {
+          "name": "blouse-right-collar-fold",
+          "index": "b2957bd2",
+          "attributes": {
+            "position": "4c974738",
+            "normal": "ab93c53a",
+            "uv": "47bd1173",
+            "color": "aff22de8"
+          }
+        },
+        {
+          "name": "blouse-finished-neckline",
+          "index": "a3b65063",
+          "attributes": {
+            "position": "c234a86d",
+            "normal": "15c29aca",
+            "uv": "1fc4422f",
+            "color": "a29f2368"
+          }
+        },
+        {
+          "name": "blouse-back-yoke-seam",
+          "index": "19d731b2",
+          "attributes": {
+            "position": "7541893c",
+            "normal": "5686c5e4",
+            "uv": "7cd27a1a"
+          }
+        },
+        {
+          "name": "blouse-sleeve-attachment--1",
+          "index": "9a66be52",
+          "attributes": {
+            "position": "4ada18eb",
+            "normal": "807f4e56",
+            "uv": "8d855c51"
+          }
+        },
+        {
+          "name": "blouse-sleeve-attachment-1",
+          "index": "9a66be52",
+          "attributes": {
+            "position": "4c328db1",
+            "normal": "b6b3e73",
+            "uv": "8d855c51"
+          }
+        },
+        {
+          "name": "blouse-curved-centre-placket",
+          "index": "a2b1875b",
+          "attributes": {
+            "position": "aa95fb39",
+            "normal": "63a0d19b",
+            "uv": "455bca99",
+            "color": "47ef17b5"
+          }
+        },
+        {
+          "name": "blouse-placket-seam--1",
+          "index": "d96158d2",
+          "attributes": {
+            "position": "7bfa7309",
+            "normal": "c85550f2",
+            "uv": "6d20bbd0"
+          }
+        },
+        {
+          "name": "blouse-placket-seam-1",
+          "index": "d96158d2",
+          "attributes": {
+            "position": "46e54586",
+            "normal": "98bca4f1",
+            "uv": "6d20bbd0"
+          }
+        },
+        {
+          "name": "blouse-bust-crop-hem",
+          "index": "a3b65063",
+          "attributes": {
+            "position": "4c6177a7",
+            "normal": "92a1494a",
+            "uv": "1fc4422f"
+          }
+        },
+        {
+          "name": "buttons-batched-blouse-ivory-buttons",
+          "index": "e186ba1f",
+          "attributes": {
+            "position": "f668c45f",
+            "normal": "562a22e2",
+            "uv": "501e00ba"
+          }
+        },
+        {
+          "name": "buttons-batched-button-recesses",
+          "index": "2db914c5",
+          "attributes": {
+            "position": "c29bfc02",
+            "normal": "c3e42a7a",
+            "uv": "89ce01c5"
+          }
+        },
+        {
+          "name": "buttons-batched-button-threads",
+          "index": "a285e2ed",
+          "attributes": {
+            "position": "cd3fa631",
+            "normal": "5ce74634",
+            "uv": "8a368d45"
+          }
+        }
+      ],
+      "protectedHair": {
+        "Overlapping layered S-wave hair around front back and shoulders": {
+          "attributes": {
+            "position": "5e52f48a",
+            "color": "b1bf6ce5",
+            "uv": "f933b36c",
+            "normal": "76e85e28"
+          },
+          "fullImmutable": {
+            "index": "29d83b98",
+            "color": "3694ede0",
+            "uv": "e797b8f5"
+          }
+        },
+        "Independent fine crown lengths and silhouette strands": {
+          "attributes": {
+            "position": "5875c823",
+            "color": "791016ed",
+            "uv": "d568c715",
+            "normal": "938d29ca"
+          }
+        }
+      },
+      "materials": [
+        {
+          "name": "Continuous parted crown with longitudinal fiber flow",
+          "roughness": 0.52,
+          "specularIntensity": 0.38,
+          "envMapIntensity": 0.42,
+          "anisotropy": 0.65,
+          "metalness": 0,
+          "alphaTest": 0.1,
+          "alphaToCoverage": true,
+          "normalScale": [
+            0.31,
+            0.09
+          ],
+          "map": "Reference-only strand-space crown contrast / UV1",
+          "normalMap": "Original fine longitudinal hair relief"
+        },
+        {
+          "name": "Overlapping layered S-wave hair around front back and shoulders",
+          "roughness": 0.52,
+          "specularIntensity": 0.38,
+          "envMapIntensity": 0.42,
+          "anisotropy": 0.65,
+          "metalness": 0,
+          "alphaTest": 0.1,
+          "alphaToCoverage": true,
+          "normalScale": [
+            0.31,
+            0.09
+          ],
+          "map": "Original cool chestnut continuous longitudinal fibers",
+          "normalMap": "Original fine longitudinal hair relief"
+        },
+        {
+          "name": "Independent fine crown lengths and silhouette strands",
+          "roughness": 0.38,
+          "specularIntensity": 0.75,
+          "envMapIntensity": 0.65,
+          "anisotropy": 0.8,
+          "metalness": 0,
+          "alphaTest": 0.05,
+          "alphaToCoverage": true,
+          "normalScale": [
+            1,
+            1
+          ]
+        },
+        {
+          "name": "Dense fine bowed brown fringe strands",
+          "roughness": 0.9,
+          "specularIntensity": 0,
+          "envMapIntensity": 0,
+          "anisotropy": 0,
+          "metalness": 0,
+          "alphaTest": 0,
+          "alphaToCoverage": false,
+          "normalScale": [
+            1,
+            1
+          ]
+        },
+        {
+          "name": "Sparse short temple edge and hairline wisps",
+          "roughness": 0.9,
+          "specularIntensity": 0,
+          "envMapIntensity": 0,
+          "anisotropy": 0,
+          "metalness": 0,
+          "alphaTest": 0,
+          "alphaToCoverage": false,
+          "normalScale": [
+            1,
+            1
+          ]
+        }
+      ],
+      "heapMiB": 346.83007526397705,
+      "frontFrameCost": {
+        "cpuSubmission": {
+          "samples": 8,
+          "minMs": 0.7000000029802322,
+          "medianMs": 1.8000000044703484,
+          "maxMs": 2.399999998509884
+        },
+        "cpuThroughSubmittedGPUQueue": {
+          "samples": 8,
+          "minMs": 9,
+          "medianMs": 10.299999997019768,
+          "maxMs": 12.899999998509884
+        },
+        "resolution": [
+          900,
+          1200
+        ],
+        "antialiasing": 2,
+        "scope": "Eight warm front renders including GPU queue completion; this is a local diagnostic, not a mobile FPS benchmark."
+      },
+      "errors": []
+    },
+    {
+      "enabled": true,
+      "nativeWebGPU": true,
+      "score": 77,
+      "exposure": 1.4,
+      "toneMapping": 7,
+      "guidePlacement": 0.5,
+      "shoulderContact": 0.35,
+      "nearCurtain": {
+        "version": "six-family-near-curtain-138-v1",
+        "enabled": true,
+        "changed": true,
+        "selectedGuides": [
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          133,
+          134,
+          135,
+          136,
+          137,
+          138,
+          172,
+          173,
+          174,
+          175,
+          176,
+          177,
+          178,
+          179,
+          180,
+          181,
+          182,
+          183,
+          184,
+          185,
+          186,
+          187,
+          188,
+          189,
+          190,
+          191,
+          192,
+          193,
+          194,
+          195,
+          196,
+          197,
+          198,
+          199
+        ],
+        "baseFibers": 2191,
+        "attachedFibers": 2191,
+        "attachedFlyaways": 23,
+        "protectedSourceY": -1.05,
+        "deformationPinY": -1.34,
+        "fullJoinY": -1.97,
+        "retainedContact": 0.35,
+        "second118Fit": false,
+        "extraDrawCalls": 0,
+        "extraTextures": 0,
+        "extraVertices": 317594,
+        "extraTriangles": 317594,
+        "families": [
+          {
+            "name": "A inner fall",
+            "slots": [
+              4,
+              0,
+              3
+            ],
+            "width": 0.10010000000000001,
+            "end": -0.8,
+            "xy": [
+              [
+                1.61,
+                -0.66
+              ],
+              [
+                1.18,
+                -0.43
+              ],
+              [
+                0.72,
+                -0.46
+              ],
+              [
+                0.12,
+                -0.55
+              ],
+              [
+                -0.42,
+                -0.68
+              ],
+              [
+                -0.8,
+                -0.47
+              ]
+            ],
+            "zRows": [
+              [
+                1.61,
+                0.4011033528147785
+              ],
+              [
+                1.18,
+                0.6165371531888552
+              ],
+              [
+                0.72,
+                0.7486887123928093
+              ],
+              [
+                0.12,
+                0.9145511946157366
+              ],
+              [
+                -0.42,
+                0.9298134843686665
+              ],
+              [
+                -0.8,
+                0.8755951329015554
+              ]
+            ]
+          },
+          {
+            "name": "B inner return",
+            "slots": [
+              5,
+              1,
+              4
+            ],
+            "width": 0.1274,
+            "end": -0.97,
+            "xy": [
+              [
+                1.61,
+                -0.68
+              ],
+              [
+                1.18,
+                -0.54
+              ],
+              [
+                0.78,
+                -0.53
+              ],
+              [
+                0.2,
+                -0.64
+              ],
+              [
+                -0.42,
+                -0.88
+              ],
+              [
+                -0.97,
+                -0.6
+              ]
+            ],
+            "zRows": [
+              [
+                1.61,
+                0.4907839877863548
+              ],
+              [
+                1.18,
+                0.5846938555767185
+              ],
+              [
+                0.78,
+                0.7063178465374335
+              ],
+              [
+                0.2,
+                0.8843546333602937
+              ],
+              [
+                -0.42,
+                0.9777506686750581
+              ],
+              [
+                -0.97,
+                0.8470409863178003
+              ]
+            ]
+          },
+          {
+            "name": "C long inner S",
+            "slots": [
+              7,
+              0,
+              6
+            ],
+            "width": 0.2093,
+            "end": -1.1,
+            "xy": [
+              [
+                1.61,
+                -0.7
+              ],
+              [
+                1.18,
+                -0.67
+              ],
+              [
+                0.66,
+                -0.62
+              ],
+              [
+                0.1,
+                -0.78
+              ],
+              [
+                -0.46,
+                -1.13
+              ],
+              [
+                -1.1,
+                -0.78
+              ]
+            ],
+            "zRows": [
+              [
+                1.61,
+                0.4245259047476141
+              ],
+              [
+                1.18,
+                0.9704585406684014
+              ],
+              [
+                0.66,
+                0.8654246320084753
+              ],
+              [
+                0.1,
+                0.9997665737461008
+              ],
+              [
+                -0.46,
+                0.8482313766703232
+              ],
+              [
+                -1.1,
+                0.7424958475607613
+              ]
+            ]
+          },
+          {
+            "name": "D long outer S",
+            "slots": [
+              8,
+              2,
+              7
+            ],
+            "width": 0.2366,
+            "end": -1.17,
+            "xy": [
+              [
+                1.61,
+                -0.71
+              ],
+              [
+                1.18,
+                -0.84
+              ],
+              [
+                0.62,
+                -0.81
+              ],
+              [
+                0.02,
+                -1.08
+              ],
+              [
+                -0.55,
+                -1.49
+              ],
+              [
+                -1.17,
+                -0.98
+              ]
+            ],
+            "zRows": [
+              [
+                1.61,
+                0.49356062365740827
+              ],
+              [
+                1.18,
+                0.8120567806154299
+              ],
+              [
+                0.62,
+                1.0183326204596244
+              ],
+              [
+                0.02,
+                0.8756548748919707
+              ],
+              [
+                -0.55,
+                0.5845448377744321
+              ],
+              [
+                -1.17,
+                0.7038944855511466
+              ]
+            ]
+          },
+          {
+            "name": "E outer return",
+            "slots": [
+              6,
+              2,
+              5
+            ],
+            "width": 0.1547,
+            "end": -0.87,
+            "xy": [
+              [
+                1.61,
+                -0.73
+              ],
+              [
+                1.18,
+                -0.99
+              ],
+              [
+                0.8,
+                -0.96
+              ],
+              [
+                0.06,
+                -1.21
+              ],
+              [
+                -0.38,
+                -1.53
+              ],
+              [
+                -0.87,
+                -1.13
+              ]
+            ],
+            "zRows": [
+              [
+                1.61,
+                0.4959502256077866
+              ],
+              [
+                1.18,
+                0.4386182282854473
+              ],
+              [
+                0.8,
+                0.5965322862839465
+              ],
+              [
+                0.06,
+                0.7764789127432448
+              ],
+              [
+                -0.38,
+                0.6348654038036579
+              ],
+              [
+                -0.87,
+                0.7278756767697377
+              ]
+            ]
+          },
+          {
+            "name": "F short release",
+            "slots": [
+              3,
+              1,
+              3
+            ],
+            "width": 0.0819,
+            "end": -0.65,
+            "xy": [
+              [
+                1.61,
+                -0.74
+              ],
+              [
+                1.18,
+                -1.08
+              ],
+              [
+                0.59,
+                -1.15
+              ],
+              [
+                0.02,
+                -1.37
+              ],
+              [
+                -0.28,
+                -1.51
+              ],
+              [
+                -0.65,
+                -1.23
+              ]
+            ],
+            "zRows": [
+              [
+                1.61,
+                0.5077619919520302
+              ],
+              [
+                1.18,
+                0.4557146698853266
+              ],
+              [
+                0.59,
+                0.6501320348250275
+              ],
+              [
+                0.02,
+                0.686490986158958
+              ],
+              [
+                -0.28,
+                0.5943654363106639
+              ],
+              [
+                -0.65,
+                0.6917072715671405
+              ]
+            ]
+          }
+        ],
+        "heightMinimumSpeed": 2.5241478632269008,
+        "heightEndError": 8.881784197001252e-16,
+        "support": {
+          "clothQueries": 24468,
+          "cacheEntries": 24468,
+          "garment": {
+            "triangles": 9802,
+            "cells": 131
+          },
+          "fixedSides": {
+            "triangles": 4413,
+            "cells": 95
+          },
+          "bodyGap": {
+            "samples": 13895,
+            "min": 0.08260681784377501,
+            "median": 0.18853580003386305,
+            "p90": 0.3091455022169073,
+            "max": 0.5190277558559321
+          },
+          "leafGap": {
+            "samples": 739,
+            "min": 0.039534179627532806,
+            "median": 0.32656851135671383,
+            "p90": 0.44510515182898025,
+            "max": 0.47595720852949475
+          },
+          "sideGap": {
+            "samples": 1041,
+            "min": 0.02098442483840557,
+            "median": 0.1543636524747125,
+            "p90": 0.30425876926066464,
+            "max": 1.5511709612402211
+          },
+          "failures": []
+        },
+        "corrections": [
+          {
+            "pass": 0,
+            "maximumRawLift": 0.14661335664315692
+          },
+          {
+            "pass": 1,
+            "maximumRawLift": 0.003739622149619646
+          },
+          {
+            "pass": 2,
+            "maximumRawLift": 0
+          }
+        ],
+        "temporaryGridBytes": 1765584,
+        "preparationMs": 3166.2999999970198,
+        "fineRangesCount": 2214,
+        "extraGeometryBytes": 17785264
+      },
+      "constructionMs": 5299.4,
+      "geometryMiB": 69.45,
+      "hairTriangles": 1432482,
+      "vertices": 1477958,
+      "triangles": 1810381,
+      "nonfinite": 0,
+      "normalError": 4.9655871747766867e-08,
+      "zeroNormals": 5841,
+      "protectedParts": [
+        {
+          "name": "continuous-face",
+          "index": "9697a4bc",
+          "attributes": {
+            "position": "d564044a",
+            "uv": "84fd4586",
+            "color": "c3f1b192",
+            "normal": "a123f9c3"
+          }
+        },
+        {
+          "name": "scleral-globe",
+          "index": "1b8e55cd",
+          "attributes": {
+            "position": "6ac85e18",
+            "uv": "450094d8",
+            "normal": "61495dd0"
+          }
+        },
+        {
+          "name": "brown-iris-and-pupil",
+          "index": "f3d6fbbd",
+          "attributes": {
+            "position": "77ba56c7",
+            "uv": "fe863aec",
+            "normal": "eeff6484"
+          }
+        },
+        {
+          "name": "transparent-corneal-dome",
+          "index": "f3d6fbbd",
+          "attributes": {
+            "position": "a2ebbb3d",
+            "uv": "a5ef6435",
+            "normal": "a339d9da"
+          }
+        },
+        {
+          "name": "corneal-softbox-reflection",
+          "index": "d036f0d5",
+          "attributes": {
+            "position": "d2a69b12",
+            "normal": "1d65e85",
+            "uv": "2bc30f97"
+          }
+        },
+        {
+          "name": "corneal-softbox-reflection",
+          "index": "d036f0d5",
+          "attributes": {
+            "position": "7dbfe92c",
+            "normal": "73e5ea58",
+            "uv": "2bc30f97"
+          }
+        },
+        {
+          "name": "sculpted-eyelids",
+          "index": "de38a287",
+          "attributes": {
+            "position": "661fd3f",
+            "uv": "5430a5d7",
+            "color": "eba1d339",
+            "normal": "819b262b"
+          }
+        },
+        {
+          "name": "upper-lash-margin",
+          "index": "9d65ea85",
+          "attributes": {
+            "position": "95055671",
+            "normal": "6ff7b47f",
+            "uv": "5f651809"
+          }
+        },
+        {
+          "name": "lower-waterline",
+          "index": "9d65ea85",
+          "attributes": {
+            "position": "2717c91d",
+            "normal": "28fa8753",
+            "uv": "5f651809"
+          }
+        },
+        {
+          "name": "lower-tear-meniscus",
+          "index": "9d65ea85",
+          "attributes": {
+            "position": "497a9f64",
+            "normal": "2ea9eb7a",
+            "uv": "5f651809"
+          }
+        },
+        {
+          "name": "upper-lid-fold",
+          "index": "e94c4485",
+          "attributes": {
+            "position": "e01d1d05",
+            "normal": "8a48ad10",
+            "uv": "4ccd4b63"
+          }
+        },
+        {
+          "name": "individual-eyelashes",
+          "index": "165247ed",
+          "attributes": {
+            "position": "66c90370",
+            "normal": "9200cb7c",
+            "uv": "da4104a5"
+          }
+        },
+        {
+          "name": "lacrimal-caruncle",
+          "index": "fef62615",
+          "attributes": {
+            "position": "23635ed3",
+            "normal": "e8311783",
+            "uv": "247c0ebb"
+          }
+        },
+        {
+          "name": "scleral-globe",
+          "index": "5a622697",
+          "attributes": {
+            "position": "c045b136",
+            "uv": "30a8eef7",
+            "normal": "3ee79475"
+          }
+        },
+        {
+          "name": "brown-iris-and-pupil",
+          "index": "1d4b6362",
+          "attributes": {
+            "position": "413f7909",
+            "uv": "62bb2b6c",
+            "normal": "b43d3e8a"
+          }
+        },
+        {
+          "name": "transparent-corneal-dome",
+          "index": "1d4b6362",
+          "attributes": {
+            "position": "15381f",
+            "uv": "a5ef6435",
+            "normal": "6c5b2727"
+          }
+        },
+        {
+          "name": "corneal-softbox-reflection",
+          "index": "d036f0d5",
+          "attributes": {
+            "position": "44e6d44b",
+            "normal": "1d65e85",
+            "uv": "2bc30f97"
+          }
+        },
+        {
+          "name": "corneal-softbox-reflection",
+          "index": "d036f0d5",
+          "attributes": {
+            "position": "63d0e8a0",
+            "normal": "73e5ea58",
+            "uv": "2bc30f97"
+          }
+        },
+        {
+          "name": "sculpted-eyelids",
+          "index": "de38a287",
+          "attributes": {
+            "position": "6d938e62",
+            "uv": "583f22bb",
+            "color": "eb1bb84b",
+            "normal": "f0a9d54d"
+          }
+        },
+        {
+          "name": "upper-lash-margin",
+          "index": "9d65ea85",
+          "attributes": {
+            "position": "b4b7bc1e",
+            "normal": "50252c09",
+            "uv": "5f651809"
+          }
+        },
+        {
+          "name": "lower-waterline",
+          "index": "9d65ea85",
+          "attributes": {
+            "position": "a7bad3e1",
+            "normal": "6089675d",
+            "uv": "5f651809"
+          }
+        },
+        {
+          "name": "lower-tear-meniscus",
+          "index": "9d65ea85",
+          "attributes": {
+            "position": "8daa9d4c",
+            "normal": "3345d082",
+            "uv": "5f651809"
+          }
+        },
+        {
+          "name": "upper-lid-fold",
+          "index": "e94c4485",
+          "attributes": {
+            "position": "c32dcb19",
+            "normal": "63842228",
+            "uv": "4ccd4b63"
+          }
+        },
+        {
+          "name": "individual-eyelashes",
+          "index": "165247ed",
+          "attributes": {
+            "position": "8e6d0bfc",
+            "normal": "7a408302",
+            "uv": "da4104a5"
+          }
+        },
+        {
+          "name": "lacrimal-caruncle",
+          "index": "fef62615",
+          "attributes": {
+            "position": "1eb69e94",
+            "normal": "e8311783",
+            "uv": "247c0ebb"
+          }
+        },
+        {
+          "name": "upper-lip",
+          "index": "d6ebdc57",
+          "attributes": {
+            "position": "8ab68de5",
+            "uv": "c27ecc37",
+            "color": "a24a37ff",
+            "normal": "3baf3c4f"
+          }
+        },
+        {
+          "name": "lower-lip",
+          "index": "f5897af",
+          "attributes": {
+            "position": "91e74d33",
+            "uv": "678ac8bf",
+            "color": "91f47774",
+            "normal": "22ee85b1"
+          }
+        },
+        {
+          "name": "closed-mouth-crease",
+          "index": "babd6429",
+          "attributes": {
+            "position": "df55edc2",
+            "normal": "5d78483d",
+            "uv": "d6f5f3ed"
+          }
+        },
+        {
+          "name": "naris--1",
+          "index": "ecc39457",
+          "attributes": {
+            "position": "adab7d5",
+            "color": "1c219c51",
+            "normal": "54893103",
+            "uv": "d70afb6e"
+          }
+        },
+        {
+          "name": "naris-1",
+          "index": "ecc39457",
+          "attributes": {
+            "position": "5305aac9",
+            "color": "3ec7ca4c",
+            "normal": "bfd6123d",
+            "uv": "aec1d542"
+          }
+        },
+        {
+          "name": "soft-brow-underlayer",
+          "index": "dd1176eb",
+          "attributes": {
+            "position": "ea2380ea",
+            "color": "70ec506a",
+            "normal": "7be2cc05"
+          }
+        },
+        {
+          "name": "soft-brow-underlayer",
+          "index": "dd1176eb",
+          "attributes": {
+            "position": "3992de4d",
+            "color": "4b55216",
+            "normal": "5473b085"
+          }
+        },
+        {
+          "name": "tapered-brow-hairs",
+          "index": "17f2c64d",
+          "attributes": {
+            "position": "45db3a0d",
+            "normal": "56ff950c",
+            "uv": "f99ef415"
+          }
+        },
+        {
+          "name": "ear-continuous-anatomical-shell",
+          "index": "15688901",
+          "attributes": {
+            "position": "4647c1b2",
+            "color": "9816ed5",
+            "uv": "3073a1a8",
+            "normal": "52c4620f"
+          }
+        },
+        {
+          "name": "ear-continuous-anatomical-shell",
+          "index": "8bb6b6b9",
+          "attributes": {
+            "position": "8b21758b",
+            "color": "9ff24abf",
+            "uv": "3073a1a8",
+            "normal": "153f9dd4"
+          }
+        },
+        {
+          "name": "Continuous parted crown with longitudinal fiber flow",
+          "index": "76717c5e",
+          "attributes": {
+            "position": "cdb33367",
+            "color": "af92f49f",
+            "uv": "b4905ed2",
+            "normal": "6d70c703",
+            "uv1": "ea705695"
+          }
+        },
+        {
+          "name": "Dense fine bowed brown fringe strands",
+          "index": "42860b63",
+          "attributes": {
+            "position": "fb2361a4",
+            "color": "6c8e2c88",
+            "uv": "d3fe23dc",
+            "normal": "108f733e"
+          }
+        },
+        {
+          "name": "Sparse short temple edge and hairline wisps",
+          "index": "65dfd659",
+          "attributes": {
+            "position": "48303b6f",
+            "color": "28cda1fd",
+            "uv": "6135082d",
+            "normal": "6a64190e"
+          }
+        },
+        {
+          "name": "neck-smooth-anatomical-surface",
+          "index": "6706b407",
+          "attributes": {
+            "position": "b3ecafdd",
+            "uv": "993914fd",
+            "normal": "58c43dd3",
+            "color": "383fa55b"
+          }
+        },
+        {
+          "name": "blouse-continuous-torso-and-sleeves",
+          "index": "c8ee3ec6",
+          "attributes": {
+            "position": "b22c8316",
+            "uv": "26904013",
+            "normal": "de59cd0d",
+            "color": "c7d21343"
+          }
+        },
+        {
+          "name": "blouse-finished-bust-base",
+          "index": "e789a755",
+          "attributes": {
+            "position": "8cddba64",
+            "normal": "bf0bf138",
+            "uv": "b1250fbd",
+            "color": "490752c5"
+          }
+        },
+        {
+          "name": "blouse-left-neck-opening-facing",
+          "index": "8821df12",
+          "attributes": {
+            "position": "317b4046",
+            "uv": "a4446ddb",
+            "normal": "5dd19b94",
+            "color": "598a2175"
+          }
+        },
+        {
+          "name": "blouse-left-facing-stitch",
+          "index": "e94c4485",
+          "attributes": {
+            "position": "7b7c8ad2",
+            "normal": "9a52ced3",
+            "uv": "4ccd4b63"
+          }
+        },
+        {
+          "name": "blouse-right-neck-opening-facing",
+          "index": "500d863a",
+          "attributes": {
+            "position": "865a9819",
+            "uv": "a4446ddb",
+            "normal": "863a2118",
+            "color": "598a2175"
+          }
+        },
+        {
+          "name": "blouse-right-facing-stitch",
+          "index": "e94c4485",
+          "attributes": {
+            "position": "339798c2",
+            "normal": "ee417f6f",
+            "uv": "4ccd4b63"
+          }
+        },
+        {
+          "name": "blouse-left-spread-collar",
+          "index": "54a515fe",
+          "attributes": {
+            "position": "72dcfdf",
+            "normal": "808a8e62",
+            "uv": "e4e9c5ad",
+            "color": "b8225fc9"
+          }
+        },
+        {
+          "name": "blouse-left-collar-edge",
+          "index": "9dbf4fb2",
+          "attributes": {
+            "position": "60d5569d",
+            "normal": "2927dc02",
+            "uv": "d147f4cc"
+          }
+        },
+        {
+          "name": "blouse-left-collar-fold",
+          "index": "b2957bd2",
+          "attributes": {
+            "position": "64a16b33",
+            "normal": "55da1313",
+            "uv": "47bd1173",
+            "color": "aff22de8"
+          }
+        },
+        {
+          "name": "blouse-right-spread-collar",
+          "index": "cde68616",
+          "attributes": {
+            "position": "6659520f",
+            "normal": "d859927d",
+            "uv": "e4e9c5ad",
+            "color": "2a1322f5"
+          }
+        },
+        {
+          "name": "blouse-right-collar-edge",
+          "index": "9dbf4fb2",
+          "attributes": {
+            "position": "7a0521fc",
+            "normal": "9a195a3e",
+            "uv": "d147f4cc"
+          }
+        },
+        {
+          "name": "blouse-right-collar-fold",
+          "index": "b2957bd2",
+          "attributes": {
+            "position": "4c974738",
+            "normal": "ab93c53a",
+            "uv": "47bd1173",
+            "color": "aff22de8"
+          }
+        },
+        {
+          "name": "blouse-finished-neckline",
+          "index": "a3b65063",
+          "attributes": {
+            "position": "c234a86d",
+            "normal": "15c29aca",
+            "uv": "1fc4422f",
+            "color": "a29f2368"
+          }
+        },
+        {
+          "name": "blouse-back-yoke-seam",
+          "index": "19d731b2",
+          "attributes": {
+            "position": "7541893c",
+            "normal": "5686c5e4",
+            "uv": "7cd27a1a"
+          }
+        },
+        {
+          "name": "blouse-sleeve-attachment--1",
+          "index": "9a66be52",
+          "attributes": {
+            "position": "4ada18eb",
+            "normal": "807f4e56",
+            "uv": "8d855c51"
+          }
+        },
+        {
+          "name": "blouse-sleeve-attachment-1",
+          "index": "9a66be52",
+          "attributes": {
+            "position": "4c328db1",
+            "normal": "b6b3e73",
+            "uv": "8d855c51"
+          }
+        },
+        {
+          "name": "blouse-curved-centre-placket",
+          "index": "a2b1875b",
+          "attributes": {
+            "position": "aa95fb39",
+            "normal": "63a0d19b",
+            "uv": "455bca99",
+            "color": "47ef17b5"
+          }
+        },
+        {
+          "name": "blouse-placket-seam--1",
+          "index": "d96158d2",
+          "attributes": {
+            "position": "7bfa7309",
+            "normal": "c85550f2",
+            "uv": "6d20bbd0"
+          }
+        },
+        {
+          "name": "blouse-placket-seam-1",
+          "index": "d96158d2",
+          "attributes": {
+            "position": "46e54586",
+            "normal": "98bca4f1",
+            "uv": "6d20bbd0"
+          }
+        },
+        {
+          "name": "blouse-bust-crop-hem",
+          "index": "a3b65063",
+          "attributes": {
+            "position": "4c6177a7",
+            "normal": "92a1494a",
+            "uv": "1fc4422f"
+          }
+        },
+        {
+          "name": "buttons-batched-blouse-ivory-buttons",
+          "index": "e186ba1f",
+          "attributes": {
+            "position": "f668c45f",
+            "normal": "562a22e2",
+            "uv": "501e00ba"
+          }
+        },
+        {
+          "name": "buttons-batched-button-recesses",
+          "index": "2db914c5",
+          "attributes": {
+            "position": "c29bfc02",
+            "normal": "c3e42a7a",
+            "uv": "89ce01c5"
+          }
+        },
+        {
+          "name": "buttons-batched-button-threads",
+          "index": "a285e2ed",
+          "attributes": {
+            "position": "cd3fa631",
+            "normal": "5ce74634",
+            "uv": "8a368d45"
+          }
+        }
+      ],
+      "protectedHair": {
+        "Overlapping layered S-wave hair around front back and shoulders": {
+          "attributes": {
+            "position": "5e52f48a",
+            "color": "b1bf6ce5",
+            "uv": "f933b36c",
+            "normal": "76e85e28"
+          },
+          "fullImmutable": {
+            "index": "29d83b98",
+            "color": "3694ede0",
+            "uv": "e797b8f5"
+          }
+        },
+        "Independent fine crown lengths and silhouette strands": {
+          "attributes": {
+            "position": "5875c823",
+            "color": "791016ed",
+            "uv": "d568c715",
+            "normal": "938d29ca"
+          }
+        }
+      },
+      "materials": [
+        {
+          "name": "Continuous parted crown with longitudinal fiber flow",
+          "roughness": 0.52,
+          "specularIntensity": 0.38,
+          "envMapIntensity": 0.42,
+          "anisotropy": 0.65,
+          "metalness": 0,
+          "alphaTest": 0.1,
+          "alphaToCoverage": true,
+          "normalScale": [
+            0.31,
+            0.09
+          ],
+          "map": "Reference-only strand-space crown contrast / UV1",
+          "normalMap": "Original fine longitudinal hair relief"
+        },
+        {
+          "name": "Overlapping layered S-wave hair around front back and shoulders",
+          "roughness": 0.52,
+          "specularIntensity": 0.38,
+          "envMapIntensity": 0.42,
+          "anisotropy": 0.65,
+          "metalness": 0,
+          "alphaTest": 0.1,
+          "alphaToCoverage": true,
+          "normalScale": [
+            0.31,
+            0.09
+          ],
+          "map": "Original cool chestnut continuous longitudinal fibers",
+          "normalMap": "Original fine longitudinal hair relief"
+        },
+        {
+          "name": "Independent fine crown lengths and silhouette strands",
+          "roughness": 0.38,
+          "specularIntensity": 0.75,
+          "envMapIntensity": 0.65,
+          "anisotropy": 0.8,
+          "metalness": 0,
+          "alphaTest": 0.05,
+          "alphaToCoverage": true,
+          "normalScale": [
+            1,
+            1
+          ]
+        },
+        {
+          "name": "Dense fine bowed brown fringe strands",
+          "roughness": 0.9,
+          "specularIntensity": 0,
+          "envMapIntensity": 0,
+          "anisotropy": 0,
+          "metalness": 0,
+          "alphaTest": 0,
+          "alphaToCoverage": false,
+          "normalScale": [
+            1,
+            1
+          ]
+        },
+        {
+          "name": "Sparse short temple edge and hairline wisps",
+          "roughness": 0.9,
+          "specularIntensity": 0,
+          "envMapIntensity": 0,
+          "anisotropy": 0,
+          "metalness": 0,
+          "alphaTest": 0,
+          "alphaToCoverage": false,
+          "normalScale": [
+            1,
+            1
+          ]
+        }
+      ],
+      "heapMiB": 184.95240116119385,
+      "frontFrameCost": {
+        "cpuSubmission": {
+          "samples": 8,
+          "minMs": 0.5,
+          "medianMs": 1.7999999970197678,
+          "maxMs": 2.3000000044703484
+        },
+        "cpuThroughSubmittedGPUQueue": {
+          "samples": 8,
+          "minMs": 10.5,
+          "medianMs": 11.300000004470348,
+          "maxMs": 12.600000001490116
+        },
+        "resolution": [
+          900,
+          1200
+        ],
+        "antialiasing": 2,
+        "scope": "Eight warm front renders including GPU queue completion; this is a local diagnostic, not a mobile FPS benchmark."
+      },
+      "errors": []
+    }
+  ],
+  "omittedFromThisSummary": [
+    {
+      "path": "[1].nearCurtain.fineRanges",
+      "count": 2214,
+      "serializedChars": 242096
+    }
+  ],
+  "note": "Only fineRanges arrays are omitted; full native report remains preserved at summaryOf."
+}

@@ -1,0 +1,374 @@
+[
+  {
+    "iteration": 139,
+    "mode": 0,
+    "nativeWebGPU": true,
+    "resolution": [
+      900,
+      1200
+    ],
+    "antialiasing": 2,
+    "toneMapping": 7,
+    "exposure": 1.4,
+    "geometryStrength": 1,
+    "center": [
+      -0.006806852514538969,
+      2.220460162180035,
+      0.619929349052369
+    ],
+    "privateMaterialCount": 0,
+    "originalMaterials": [
+      {
+        "name": "upper-lip",
+        "roughness": 0.44,
+        "metalness": 0,
+        "clearcoat": 0.12,
+        "clearcoatRoughness": 0.3,
+        "specularIntensity": 0.23,
+        "envMapIntensity": 1,
+        "opacity": 1,
+        "transparent": false,
+        "side": 2,
+        "depthWrite": true,
+        "depthTest": true,
+        "toneMapped": true,
+        "vertexColors": false,
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "map": "Skin color from uploaded image 1, hand-landmarked onto original 3D sculpt"
+      },
+      {
+        "name": "lower-lip",
+        "roughness": 0.44,
+        "metalness": 0,
+        "clearcoat": 0.12,
+        "clearcoatRoughness": 0.3,
+        "specularIntensity": 0.23,
+        "envMapIntensity": 1,
+        "opacity": 1,
+        "transparent": false,
+        "side": 2,
+        "depthWrite": true,
+        "depthTest": true,
+        "toneMapped": true,
+        "vertexColors": false,
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "map": "Skin color from uploaded image 1, hand-landmarked onto original 3D sculpt"
+      }
+    ],
+    "boundMaps": [
+      {
+        "name": "Skin color from uploaded image 1, hand-landmarked onto original 3D sculpt",
+        "size": [
+          1024,
+          1536
+        ],
+        "hash": "2ebd7a5cbe32292186c9543291344e886bc836869f026eb121111cfc979184eb"
+      }
+    ],
+    "exactAttributes": 10,
+    "exactMaps": 1,
+    "sourceMaterialsRestored": true,
+    "disposedMaterials": 0,
+    "heapMiB": 345.33199882507324,
+    "captures": [
+      "output/qa/lip-band139-0-detail.png",
+      "output/qa/lip-band139-0-lip.png",
+      "output/qa/lip-band139-0-lip-quarter.png"
+    ],
+    "hashes": {
+      "detail": "cdeb251228e555ac173cdeb1022f2abc5c433301165ec03e435fe631ebd484cd",
+      "lip": "9bd20f5b9332aa27e6c4fa69dd315d4ffe304bba459d373e48cdfb0381ed8c8f",
+      "lip-quarter": "b7789093da434a10d088ddf32dcfa0fea72a8bfe07d8162a5b85ba36f879b659"
+    },
+    "restoredHash": "cdeb251228e555ac173cdeb1022f2abc5c433301165ec03e435fe631ebd484cd",
+    "restoredMatchesBaseline": true,
+    "errors": []
+  },
+  {
+    "iteration": 139,
+    "mode": 1,
+    "nativeWebGPU": true,
+    "resolution": [
+      900,
+      1200
+    ],
+    "antialiasing": 2,
+    "toneMapping": 7,
+    "exposure": 1.4,
+    "geometryStrength": 1,
+    "center": [
+      -0.006806852514538969,
+      2.220460162180035,
+      0.619929349052369
+    ],
+    "privateMaterialCount": 2,
+    "originalMaterials": [
+      {
+        "name": "upper-lip",
+        "roughness": 0.44,
+        "metalness": 0,
+        "clearcoat": 0.12,
+        "clearcoatRoughness": 0.3,
+        "specularIntensity": 0.23,
+        "envMapIntensity": 1,
+        "opacity": 1,
+        "transparent": false,
+        "side": 2,
+        "depthWrite": true,
+        "depthTest": true,
+        "toneMapped": true,
+        "vertexColors": false,
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "map": "Skin color from uploaded image 1, hand-landmarked onto original 3D sculpt"
+      },
+      {
+        "name": "lower-lip",
+        "roughness": 0.44,
+        "metalness": 0,
+        "clearcoat": 0.12,
+        "clearcoatRoughness": 0.3,
+        "specularIntensity": 0.23,
+        "envMapIntensity": 1,
+        "opacity": 1,
+        "transparent": false,
+        "side": 2,
+        "depthWrite": true,
+        "depthTest": true,
+        "toneMapped": true,
+        "vertexColors": false,
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "map": "Skin color from uploaded image 1, hand-landmarked onto original 3D sculpt"
+      }
+    ],
+    "boundMaps": [
+      {
+        "name": "Skin color from uploaded image 1, hand-landmarked onto original 3D sculpt",
+        "size": [
+          1024,
+          1536
+        ],
+        "hash": "2ebd7a5cbe32292186c9543291344e886bc836869f026eb121111cfc979184eb"
+      }
+    ],
+    "exactAttributes": 10,
+    "exactMaps": 1,
+    "sourceMaterialsRestored": true,
+    "disposedMaterials": 2,
+    "heapMiB": 347.8728828430176,
+    "captures": [
+      "output/qa/lip-band139-1-detail.png",
+      "output/qa/lip-band139-1-lip.png",
+      "output/qa/lip-band139-1-lip-quarter.png"
+    ],
+    "hashes": {
+      "detail": "35c94774fe54294edb143feb7836f0d64e0c78d97b7ae0a5a6f549c84045534f",
+      "lip": "2ba227d887596456d31228192977e04111276e03970aadbe2e5cf5907e24e286",
+      "lip-quarter": "d88ce8fbea6a5381921a8f51b31daae9e09e8fe16937833801910bf506a3a8ca"
+    },
+    "restoredHash": "cdeb251228e555ac173cdeb1022f2abc5c433301165ec03e435fe631ebd484cd",
+    "restoredMatchesBaseline": true,
+    "errors": []
+  },
+  {
+    "iteration": 139,
+    "mode": 2,
+    "nativeWebGPU": true,
+    "resolution": [
+      900,
+      1200
+    ],
+    "antialiasing": 2,
+    "toneMapping": 7,
+    "exposure": 1.4,
+    "geometryStrength": 1,
+    "center": [
+      -0.006806852514538969,
+      2.220460162180035,
+      0.619929349052369
+    ],
+    "privateMaterialCount": 2,
+    "originalMaterials": [
+      {
+        "name": "upper-lip",
+        "roughness": 0.44,
+        "metalness": 0,
+        "clearcoat": 0.12,
+        "clearcoatRoughness": 0.3,
+        "specularIntensity": 0.23,
+        "envMapIntensity": 1,
+        "opacity": 1,
+        "transparent": false,
+        "side": 2,
+        "depthWrite": true,
+        "depthTest": true,
+        "toneMapped": true,
+        "vertexColors": false,
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "map": "Skin color from uploaded image 1, hand-landmarked onto original 3D sculpt"
+      },
+      {
+        "name": "lower-lip",
+        "roughness": 0.44,
+        "metalness": 0,
+        "clearcoat": 0.12,
+        "clearcoatRoughness": 0.3,
+        "specularIntensity": 0.23,
+        "envMapIntensity": 1,
+        "opacity": 1,
+        "transparent": false,
+        "side": 2,
+        "depthWrite": true,
+        "depthTest": true,
+        "toneMapped": true,
+        "vertexColors": false,
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "map": "Skin color from uploaded image 1, hand-landmarked onto original 3D sculpt"
+      }
+    ],
+    "boundMaps": [
+      {
+        "name": "Skin color from uploaded image 1, hand-landmarked onto original 3D sculpt",
+        "size": [
+          1024,
+          1536
+        ],
+        "hash": "2ebd7a5cbe32292186c9543291344e886bc836869f026eb121111cfc979184eb"
+      }
+    ],
+    "exactAttributes": 10,
+    "exactMaps": 1,
+    "sourceMaterialsRestored": true,
+    "disposedMaterials": 2,
+    "heapMiB": 339.0633316040039,
+    "captures": [
+      "output/qa/lip-band139-2-detail.png",
+      "output/qa/lip-band139-2-lip.png",
+      "output/qa/lip-band139-2-lip-quarter.png"
+    ],
+    "hashes": {
+      "detail": "bffe4a654f0d7027c86af5b5a9d304d49be883c65c99f60f618abcb2b8e3cd07",
+      "lip": "d2ca7b09c9e0182f836806b313069476a0e823fe856aec08a8981eca7728a9b1",
+      "lip-quarter": "885f1b3abebf10f778cdf474d0c8efdb5e32da8029bf8061672eb910944c82f9"
+    },
+    "restoredHash": "cdeb251228e555ac173cdeb1022f2abc5c433301165ec03e435fe631ebd484cd",
+    "restoredMatchesBaseline": true,
+    "errors": []
+  },
+  {
+    "iteration": 139,
+    "mode": 3,
+    "nativeWebGPU": true,
+    "resolution": [
+      900,
+      1200
+    ],
+    "antialiasing": 2,
+    "toneMapping": 7,
+    "exposure": 1.4,
+    "geometryStrength": 1,
+    "center": [
+      -0.006806852514538969,
+      2.220460162180035,
+      0.619929349052369
+    ],
+    "privateMaterialCount": 2,
+    "originalMaterials": [
+      {
+        "name": "upper-lip",
+        "roughness": 0.44,
+        "metalness": 0,
+        "clearcoat": 0.12,
+        "clearcoatRoughness": 0.3,
+        "specularIntensity": 0.23,
+        "envMapIntensity": 1,
+        "opacity": 1,
+        "transparent": false,
+        "side": 2,
+        "depthWrite": true,
+        "depthTest": true,
+        "toneMapped": true,
+        "vertexColors": false,
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "map": "Skin color from uploaded image 1, hand-landmarked onto original 3D sculpt"
+      },
+      {
+        "name": "lower-lip",
+        "roughness": 0.44,
+        "metalness": 0,
+        "clearcoat": 0.12,
+        "clearcoatRoughness": 0.3,
+        "specularIntensity": 0.23,
+        "envMapIntensity": 1,
+        "opacity": 1,
+        "transparent": false,
+        "side": 2,
+        "depthWrite": true,
+        "depthTest": true,
+        "toneMapped": true,
+        "vertexColors": false,
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "map": "Skin color from uploaded image 1, hand-landmarked onto original 3D sculpt"
+      }
+    ],
+    "boundMaps": [
+      {
+        "name": "Skin color from uploaded image 1, hand-landmarked onto original 3D sculpt",
+        "size": [
+          1024,
+          1536
+        ],
+        "hash": "2ebd7a5cbe32292186c9543291344e886bc836869f026eb121111cfc979184eb"
+      }
+    ],
+    "exactAttributes": 10,
+    "exactMaps": 1,
+    "sourceMaterialsRestored": true,
+    "disposedMaterials": 2,
+    "heapMiB": 340.5153579711914,
+    "captures": [
+      "output/qa/lip-band139-3-detail.png",
+      "output/qa/lip-band139-3-lip.png",
+      "output/qa/lip-band139-3-lip-quarter.png"
+    ],
+    "hashes": {
+      "detail": "3856cdfdace998491d9402ff7e7a56a19374144119943c91b89234605964b7b8",
+      "lip": "62e23698f0378d2cfee03119024b7d8f613d11e38418ddd6ff21ac595c00360a",
+      "lip-quarter": "c308cdc9c5bdb10491becc76a12eafd4b3a632cd50ca733ee3ce927259aada5f"
+    },
+    "restoredHash": "cdeb251228e555ac173cdeb1022f2abc5c433301165ec03e435fe631ebd484cd",
+    "restoredMatchesBaseline": true,
+    "errors": []
+  }
+]

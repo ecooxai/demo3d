@@ -1,0 +1,23 @@
+{
+  "files": [
+    "output/qa/crown-sides141-five-0-detail.png",
+    "output/qa/crown-sides141-five-2-restored-detail.png"
+  ],
+  "width": 796,
+  "height": 1061,
+  "changedPixels": 3,
+  "changedChannels": 4,
+  "maxChannelDelta": 1,
+  "sumAbsoluteChannelDelta": 4,
+  "meanAbsoluteRGBDelta": 0.0000015787388087152698,
+  "changedBounds": [
+    452,
+    179,
+    453,
+    180
+  ],
+  "channelDeltaHistogram": {
+    "1": 4
+  },
+  "note": "Decoded comparison of the existing full-turn restoration captures. Strict PNG equality failed; source attributes and references were independently unchanged. Cause not established."
+}

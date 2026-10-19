@@ -4,7 +4,7 @@
   "goal_achieved": false,
   "method": "Visual self-assessment against the sole uploaded image, supplemented by independent agent review. Scores are subjective and are not a certification of AAA production quality.",
   "scope": "Recorded assessments whose numeric results remain available. No missing historical scores have been invented.",
-  "current_accepted_iteration": 133,
+  "current_accepted_iteration": 141,
   "current_accepted_score": 77,
   "assessments": [
     {
@@ -770,6 +770,77 @@
         "1": 77
       },
       "notes": "All14 matched front/detail/profiles/back/nose/nose-quarter captures reviewed by both reviewers against image1. Edge roughness/clearcoat blend slightly softens response in the quarter closeup, but thin curved upper-lip band remains; ordinary likeness and boundary gain are unconvincing. Expression, central wet highlights and profiles stable. Native WebGPU true, browser errors empty, helper1.4ms, idle0; original position/normal/UV0/color/index arrays and maps exact. Test owns two216968B private geometries, two materials and one65536B RGBA8 map with texel-centered UV1. Source refs restored and private resources fully disposed, zero originals disposed. Successful bounded technical comparison is not an artistic gain; no integration, new material sweep or export audit."
+    },
+    {
+      "iteration": 137,
+      "score": 77,
+      "reviewer": "root and glb_export_repair",
+      "decision": "retain physical eye mode0; principal catchlight pattern is source-derived; no demonstrated mapping defect",
+      "variants": {
+        "0": 77,
+        "1": 77,
+        "2": 77,
+        "3": 77
+      },
+      "notes": "Both reviewers inspected all8 native ordinary-detail and eye-detail images, both exact bound-atlas crops and image1; independent review also inspected two manually selected unscaled original-photo eye crops. Prominent multi-lobed white catchlights persist after iris specular suppression, sclera specular/clearcoat suppression, and mapped Basic diagnostic. Corresponding patterns already exist in final atlas and original photo. This establishes source-derived pattern ownership, not total physical energy ownership or harmful mapping expansion; corneas remain unchanged and tone mapping is nonlinear. No eye UV, atlas or production material change. Corrected native all4 modes WebGPU true,24 source attribute/index records and1 shared atlas exact, source material refs restored,8 private materials disposed/max4 simultaneous,0 originals disposed,0 additional idle frames and browser errors empty. Restored detail PNG matches mode0 SHA92484119ead263ae07d970f5fae02801c6665238df9a3c31cf3cecb4d5299c8b. Initial mode2 integrity audit needed installed Three r186 backing field _clearcoat allowed alongside its public setter; only that allowlist changed. Corrected native run completed during a transient connector error and was recovered from its existing report without rerender. Overall77 unchanged."
+    },
+    {
+      "iteration": 139,
+      "score": 77,
+      "reviewer": "root and glb_export_repair",
+      "decision": "retain physical lip mode0; investigate actual upper-lip relief geometry",
+      "variants": {
+        "0": 77,
+        "1": 77,
+        "2": 77,
+        "3": 77
+      },
+      "notes": "Both reviewers inspected all12 matched native ordinary-detail, lip and quarter closeups for current physical, clearcoat0, clearcoat0/specularIntensity0 and mapped Basic states. Narrow curved upper-lip band persists in first3; Basic removes it while flattening and brightening lip body, so Basic is diagnostic only. Installed r186 physical model confirms nonmetallic specularIntensity0 zeros both F0 and F90, eliminating unresolved grazing base specular as an explanation in this test. Source analysis finds unchanged old inner upper-lip relief in rows7-9; actual triangle normals agree authored normals within .00035deg in rows7-11, while130 outer reprofile can accentuate the retained inner lobe. A further paired native receiver test leaves physical spec/clearcoat0 fixed and changes only upper-lip receiveShadow before clone compile: both lip PNGs are byte-identical SHA d2ca7b09c9e0182f836806b313069476a0e823fe856aec08a8981eca7728a9b1. This receiver test closes that shadow qualifier for the matched view, without claiming general additive shading decomposition. All native states WebGPU true,10 original lip attribute/index records and1 bound map exact, source material refs/settings restored, private resources disposed and errors empty. Every restored original detail matches SHA cdeb251228e555ac173cdeb1022f2abc5c433301165ec03e435fe631ebd484cd. No production maps/materials/geometry changed. One bounded upper-lip profile repair140 is pending; current accepted133 remains77."
+    },
+    {
+      "iteration": 136,
+      "score": 75,
+      "reviewer": "root and hair_groom_director",
+      "decision": "reject redirected crown departure; retain accepted133 at77",
+      "variants": {
+        "0": 77,
+        "1": 75
+      },
+      "notes": "Both reviewers inspected all12 native off/on front/detail/profiles/back/junction views against image1. Triangular return is reduced but replaced by tight waves, hooks, tiny pale openings and a frayed crossing band. The broad cap release remains obvious; ordinary portrait regresses. Protected principal133 fringe, long hair and rear remain stable. Native WebGPU true; construction1727.6 to1746.7ms, hair1114888 triangles and52.49MiB unchanged, heap339.09 to349.17MiB, nonfinite0 and browser errors empty.324 existing crown fibers redirected,198 rerooted,14534 positions and1522 CROWN alpha values changed; no added strands or triangles. Passing sampled descent/support/occupancy checks did not certify natural neighboring flow or exclude lateral reversals. No integration, intermediate strength, material rescue or export audit. A bounded shared front chart and endpoint geometry proposal142 follows."
+    },
+    {
+      "iteration": 138,
+      "score": 73,
+      "reviewer": "root and quality_review_42",
+      "decision": "reject discrete near-curtain family rebuild; retain accepted133 at77",
+      "variants": {
+        "0": 77,
+        "100": 73
+      },
+      "notes": "Both reviewers inspected image1 and all12 native off/on front/detail/profiles/back/curtain views. Near curtain becomes long similarly flat tendrils with wide shirt-colored slots; shoulder bridge introduces angular bends, squared folds and crossed faces, with unsupported profile loops. Detail and rear remain stable. Native WebGPU true, protected original geometry/material fingerprints pass, nonfinite0 and browser errors empty. Construction1673.6 to5299.4ms with3166.3ms preparation, geometry52.49 to69.45MiB, hair1114888 to1432482 triangles; warm front CPU median1.8ms both, GPU queue-completion median10.3 to11.3ms. Heap346.83 to184.95MiB is an instantaneous GC-sensitive observation, not a retained-memory improvement. Only67 near guides and their2191 base fines plus23 flyaways change. Added317594 vertices/triangles repair sampled fine centerline host support, not all ribbon corners. Actual side-interval audit still records1631 inside pairs,803 new and1030 worsened over.003, concentrated at fixed-side shoulder transition; categories overlap. Art and cost do not justify integration or another strength sweep. Full native report preserved with SHA54003f9b16c414da74449f872061426be2186e72459c367441e185b8e8a546c4; compact summary omits only fineRanges arrays with explicit counts. Coupled continuum-layout proposal143 follows."
+    },
+    {
+      "iteration": 140,
+      "score": 77,
+      "reviewer": "root and glb_export_repair",
+      "decision": "accept fixed inward upper-lip relief and transported130 normals; retain77",
+      "variants": {
+        "0": 77,
+        "1": 77
+      },
+      "notes": "Both reviewers inspected all14 native front/detail/profiles/back/lip/lip-quarter views and image1. The long thin bright upper-lip band is substantially softer in both closeups and less artificial in ordinary detail; original volume, source texture, seam, corners and expression remain intact. Front gain is small, profiles stable, back native hashes exact. Native WebGPU true,15 original attribute/index records,3 source images and4 source materials including both face slots preserved through16 successful integrity checkpoints. Helper35.7ms,1259 changed positions/1261 normals,456 fixed vertices,one fully private113948B geometry after index widening,zero additional materials/textures/draw groups/idle frames/original disposals/browser errors. Minimum actual triangulated clearance.00099282807,9673 intersection polygons/34942 vertices,minimum area ratio.73771,zero projected flips. Initial native setup1590 failed an incorrect single-material face guard before candidate; corrected to preserve the exact two-slot array. Completed native1597 retains overall Failed status solely for full-compositor restoration equality: decoded3048 pixels/8907channels/max2byte within preview button x21-120,y1006-1036; every pixel outside this UI rectangle is exact. Cause untested, no rerender. Production helper copied with relative import paths; runs once immediately after130 and survives renderer switches. Construction-time owned-byte metric94748 precedes native Uint32 index widening to113948."
+    },
+    {
+      "iteration": 141,
+      "score": 77,
+      "reviewer": "root, hair_groom_director and glb_export_repair",
+      "decision": "accept outward-only CROWN facing with original two-sided shadows; integrate with140, retain77",
+      "variants": {
+        "0": 77,
+        "1": 77,
+        "2": 77
+      },
+      "notes": "Root and hair director reviewed all9 focal three-mode detail/ear/oblique images; root and glb reviewer also inspected all10 off/full five-view captures againstimage1. Only-foundation mode1 removes pale silver but retains a dark triangle; full-CROWN FrontSide0 mode2 leaves cleaner existing dark hair below near lobe without a new coverage gap or silhouette change. Rear and all focal oblique native hashes exact, left profile visually unchanged, right has small local crown highlight changes. Source6 attribute/index buffers,source texture refs and material/mesh flags restored; private diagnostic resources disposed and errors empty. Warmed focal restore all3 PNG exact; full-turn mode2 strict restore hash differs by3 pixels/4channels,max1byte, bbox452,179-453,180, cause unknown. Do not describe it as a full strict equality pass. Production sets side0/shadowSide2 on the existing unique CROWN material after100 in cached main preparation, with MASS side2 and original groom source a7b04c preserved. Integrated main SHA2e1e13d2fe6bbc87a29809ce6d0aa12dc8ee70853dac2c4a82322c58d703593a. Native1608 WebGPU to explicitly selected WebGL to WebGPU passed11 original attribute buffers,4 cached preparation object identities,geometry/material/map bindings,crown isolation and idle0/errors0. Root inspected all5 integration views plus fullpage; title above model and score141/77 visible. Build1607 passes. No broader quality score gain is claimed."
     }
   ]
 }

@@ -1,0 +1,1598 @@
+{
+  "candidate": 140,
+  "status": "Failed",
+  "acceptedBase": 133,
+  "acceptedMouthContinuity130": 1,
+  "scoreUnchanged": 77,
+  "modes": [
+    0,
+    1
+  ],
+  "views": [
+    "front",
+    "detail",
+    "left",
+    "right",
+    "back",
+    "lip",
+    "lip-quarter"
+  ],
+  "display": {
+    "mapping": 7,
+    "exposure": 1.4,
+    "resolution": [
+      900,
+      1200
+    ],
+    "antialiasing": 2,
+    "lighting": "soft"
+  },
+  "files": {
+    "src/main.js": {
+      "bytes": 20381,
+      "sha256": "73d1b1589a6cb942353bd5d7301af47680e7e5510fe6f140b4aaa5c233004136"
+    },
+    "src/face.js": {
+      "bytes": 22966,
+      "sha256": "0c70ec7cff943e14445daed5cf40dd5aee251756897152c72a3f0b8ea3119321"
+    },
+    "src/lip-continuity.js": {
+      "bytes": 26860,
+      "sha256": "fb2f288b264d9f2abade0aa4347d55e059c0179a0260dcf2e918d08745417c28"
+    },
+    "src/render-quality.js": {
+      "bytes": 2386,
+      "sha256": "ad0348430dca7623bd00a4edbb398ab0e2d51f9f9d3137c1400ed5c7d874cede"
+    },
+    "review/upper-lip-relief-candidate140.js": {
+      "bytes": 23211,
+      "sha256": "867c5afca8b31aa80758186f523ff370eb403d3d6fdd326d429e05608e6c2f50"
+    },
+    "review/upper-lip-relief140-audit.mjs": {
+      "bytes": 13903,
+      "sha256": "5edf5ae84fa04cfa780f44080e0611850be71ddae41c0dbf38924c6b846088f6"
+    },
+    "review/upper-lip-relief140-source-audit.json": {
+      "bytes": 9590,
+      "sha256": "43c424e2f102cdf337a2ee36c8437459f3f412c4ed93243e9b98c61a6a21fbed"
+    },
+    "review/upper-lip-relief140-native.mjs": {
+      "bytes": 31641,
+      "sha256": "4b4c1ca0c097c8c29925873a79225f435487e1ce3d7c5a2914e35bd9e370840f"
+    }
+  },
+  "results": [
+    {
+      "strength": 0,
+      "captures": {
+        "front": {
+          "file": "output/qa/lip140-0-front.png",
+          "bytes": 508600,
+          "sha256": "4b72f04f00a10c9e3da19578760499ffeabc21c7c4188f62bf306c430794df81"
+        },
+        "detail": {
+          "file": "output/qa/lip140-0-detail.png",
+          "bytes": 773718,
+          "sha256": "30ede81b7915282f770a2d529e6a34a7807b09f193ef6ddef4435f9694269d74"
+        },
+        "left": {
+          "file": "output/qa/lip140-0-left.png",
+          "bytes": 309509,
+          "sha256": "6a974c48cf7ae649e88b2c1567d1d3c7ccb6593812fd15250eeecd4f616f5683"
+        },
+        "right": {
+          "file": "output/qa/lip140-0-right.png",
+          "bytes": 312842,
+          "sha256": "654394d8cf536af9b982b94314e13e5c8be177b43363012d78c4f983edf16df6"
+        },
+        "back": {
+          "file": "output/qa/lip140-0-back.png",
+          "bytes": 428634,
+          "sha256": "4fc9841472a598f778c76c6285a00771d8551a5824e4cd34275265fecfae4df9"
+        },
+        "lip": {
+          "file": "output/qa/lip140-0-lip.png",
+          "bytes": 510213,
+          "sha256": "2b8087701c2457ae13aaeb6b4ea5226e9f1b3e0398695bd1d020da06da07708d"
+        },
+        "lip-quarter": {
+          "file": "output/qa/lip140-0-lip-quarter.png",
+          "bytes": 498059,
+          "sha256": "46396b24fcedd317a0ffb7d19e1110013a94f482dcd54ed1a87f985f1aff0639"
+        }
+      },
+      "selection": {
+        "strength": 0,
+        "metrics": {
+          "version": "upper-lip-relief-140",
+          "strength": 0,
+          "applied": false,
+          "privateGeometryCount": 0,
+          "privateAttributeBytes": 0,
+          "changedPositions": 0,
+          "changedNormals": 0,
+          "elapsedMs": 0
+        },
+        "copiedSourceBytes": 0,
+        "protectedVertices": 0,
+        "exactLocalXYValues": 0,
+        "localXYValues": 3434,
+        "extraDrawGroups": 0,
+        "privateMaterials": 0,
+        "privateTextures": 0
+      },
+      "idleFrames": 0,
+      "cleanup": {
+        "stage": "mode0-complete",
+        "released": false,
+        "privateGeometriesDisposed": 0,
+        "privateAttributeBytesReleased": 0,
+        "originalGeometryRestored": true,
+        "privateGeometryDisposalsThisCall": 0,
+        "originalResourcesDisposed": 0,
+        "fullyPrivateDisposedBindings": true
+      },
+      "status": "Passed"
+    },
+    {
+      "strength": 1,
+      "captures": {
+        "front": {
+          "file": "output/qa/lip140-1-front.png",
+          "bytes": 508550,
+          "sha256": "beb2b329e2de1566391d28bd4da70d9642c40a2b1e17bc8888cc1efbd13638e6"
+        },
+        "detail": {
+          "file": "output/qa/lip140-1-detail.png",
+          "bytes": 773569,
+          "sha256": "76d6a73cdf56208b08f8e99cdf08907737b3c768166bc2d96d9be5613fb85b93"
+        },
+        "left": {
+          "file": "output/qa/lip140-1-left.png",
+          "bytes": 309513,
+          "sha256": "8976bcc2bc4943c12c3f7608cd66227989e43f40d4b5cda248a416649e53a0c9"
+        },
+        "right": {
+          "file": "output/qa/lip140-1-right.png",
+          "bytes": 312831,
+          "sha256": "8d307a2f952e95b775156c89e4c1750a59533077c5d2c6994171ff021ca34ecd"
+        },
+        "back": {
+          "file": "output/qa/lip140-1-back.png",
+          "bytes": 428634,
+          "sha256": "4fc9841472a598f778c76c6285a00771d8551a5824e4cd34275265fecfae4df9"
+        },
+        "lip": {
+          "file": "output/qa/lip140-1-lip.png",
+          "bytes": 509643,
+          "sha256": "b96ca3fb6c0b6f190e36e0c6025ff1e078c00e1122a069af2f85edb980d7be2b"
+        },
+        "lip-quarter": {
+          "file": "output/qa/lip140-1-lip-quarter.png",
+          "bytes": 497440,
+          "sha256": "d6cd5d39f5b5f9e03487643c1e9c553e14c99f61d6b3503e66500ba45601888a"
+        }
+      },
+      "selection": {
+        "strength": 1,
+        "metrics": {
+          "version": "upper-lip-relief-140",
+          "strength": 1,
+          "applied": true,
+          "blend": 0.5,
+          "frame": {
+            "samples": 1717,
+            "commonOffset": [
+              -0.23351908266304588,
+              -0.04008513691786831,
+              -0.03823637957573096
+            ],
+            "maximumUVResidual": 6.845613331751821e-8,
+            "maximumXYResidual": 9.547105361135122e-8,
+            "maximumZResidual": 5.692150666786189e-8,
+            "tolerance": 0.0000012,
+            "fittedSlopes": false,
+            "baselineProfile": "Accepted full130, including its corner gate"
+          },
+          "privateGeometryCount": 1,
+          "privateAttributeBytes": 113948,
+          "changedPositions": 1259,
+          "changedNormals": 1261,
+          "maximumDepthReduction": 0.00689344621890751,
+          "maximumOutwardDisplacement": 0,
+          "maximumAnatomicalXYRoundoff": 1.9133183876719062e-19,
+          "maximumNormalLengthError": 4.274486775646125e-8,
+          "maximumTransportedNormalDegrees": 18.080336549959185,
+          "minimumJacobian": 1,
+          "maximumJacobian": 1,
+          "faceTrianglesIndexed": 1091,
+          "faceIndexCells": 512,
+          "minimumBaselineClearance": 0.000992828070697449,
+          "minimumRepairedClearance": 0.000992828070697449,
+          "clearanceIntersectionVertices": 34942,
+          "clearanceIntersectionPolygons": 9673,
+          "minimumFaceProjectionCoverage": 0.9999999999345901,
+          "clearanceMethod": "Full triangle/triangle XY intersection polygons; affine depth minima at their vertices",
+          "projectedOrientationFlips": 0,
+          "minimumTriangleAreaRatio": 0.7377114837493607,
+          "maximumGeometricNormalTurnDegrees": 18.527929512599123,
+          "normalOperation": "One analytic inverse-transpose transport from accepted130 normals",
+          "extraAuthoredNormalEdit": false,
+          "materialChanged": false,
+          "textureChanged": false,
+          "meshToHead": [
+            1,
+            1.214306433183765e-17,
+            0,
+            0,
+            1.214306433183765e-17,
+            1,
+            0,
+            0,
+            2.7755575615628914e-17,
+            0,
+            1,
+            0,
+            1.6653345369377348e-16,
+            0,
+            0,
+            1
+          ],
+          "headToMesh": [
+            1,
+            -1.214306433183765e-17,
+            0,
+            0,
+            -1.214306433183765e-17,
+            1,
+            0,
+            0,
+            -2.7755575615628914e-17,
+            3.3703774026776627e-34,
+            1,
+            0,
+            -1.6653345369377348e-16,
+            2.0222264416065976e-33,
+            0,
+            1
+          ],
+          "elapsedMs": 35.70000000298023
+        },
+        "copiedSourceBytes": 72740,
+        "protectedVertices": 456,
+        "exactLocalXYValues": 3434,
+        "localXYValues": 3434,
+        "extraDrawGroups": 0,
+        "privateMaterials": 0,
+        "privateTextures": 0,
+        "privateAttributeHashes": [
+          {
+            "key": "position",
+            "type": "Float32Array",
+            "bytes": 20604,
+            "version": 1,
+            "sha256": "34106fbfe61d106682cb18870f5a823889696a2391c6a30dcb329762b5986434"
+          },
+          {
+            "key": "uv",
+            "type": "Float32Array",
+            "bytes": 13736,
+            "version": 0,
+            "sha256": "cc33a01c9c453a1f65831290017b181626ee333bffef34bee85b8eff8ce1c688"
+          },
+          {
+            "key": "color",
+            "type": "Float32Array",
+            "bytes": 20604,
+            "version": 0,
+            "sha256": "f137cc101427c3e5f701ef896c6b4d445274f7c4336f41c4eaeca020b7022ad1"
+          },
+          {
+            "key": "normal",
+            "type": "Float32Array",
+            "bytes": 20604,
+            "version": 1,
+            "sha256": "a95481b881ad6a9a424a1e7c992ec3fe392647e5995e6f8df586785a0051ec7b"
+          },
+          {
+            "key": "index",
+            "type": "Uint32Array",
+            "bytes": 38400,
+            "version": 0,
+            "sha256": "688301054579892799d8b9954ec237c8d0302a4e5754e9c60e34e9e00c65c7d9"
+          }
+        ]
+      },
+      "idleFrames": 0,
+      "cleanup": {
+        "stage": "mode1-complete",
+        "released": true,
+        "privateGeometriesDisposed": 1,
+        "privateAttributeBytesReleased": 113948,
+        "originalGeometryRestored": true,
+        "privateGeometryDisposalsThisCall": 1,
+        "originalResourcesDisposed": 0,
+        "fullyPrivateDisposedBindings": true
+      },
+      "status": "Passed"
+    }
+  ],
+  "interpretation": "Only the fixed inward upper-lip relief and its analytically transported accepted130 normals change. The authored-normal transport audit and finite-triangle geometry audit are separate. Art gain is pending these native images.",
+  "setup": {
+    "nativeWebGPU": true,
+    "acceptedIteration": 133,
+    "displayedIteration": 140,
+    "sourceUpperIndexType": "Uint32Array",
+    "sourceAttributeCount": 15,
+    "sourceImageCount": 3,
+    "closeupCenter": [
+      -0.006806852514538969,
+      2.220460162180035,
+      0.619929349052369
+    ],
+    "display": {
+      "mapping": 7,
+      "exposure": 1.4,
+      "lighting": "soft"
+    },
+    "heapMiB": 347.65630054473877
+  },
+  "restored": {
+    "file": "output/qa/lip140-restored-front.png",
+    "sha256": "6df38f31e05994cda6f52027d56da11ccde20c7af54384097f1a34d476562393",
+    "matchesBaselineFrontPNG": false
+  },
+  "failure": "140 restored frontal compositor capture differs from its original matched baseline.",
+  "finalCleanup": {
+    "stage": "finally",
+    "released": false,
+    "privateGeometriesDisposed": 0,
+    "privateAttributeBytesReleased": 0,
+    "originalGeometryRestored": true,
+    "privateGeometryDisposalsThisCall": 0,
+    "originalResourcesDisposed": 0,
+    "fullyPrivateDisposedBindings": true
+  },
+  "audit": {
+    "spec": {
+      "version": "upper-lip-relief-140",
+      "target": "upper-lip",
+      "grid": [
+        100,
+        16
+      ],
+      "halfWidth": 0.241,
+      "endFraction": 0.875,
+      "blend": 0.5,
+      "cornerGate": [
+        0.18,
+        0.235
+      ],
+      "quintic": [
+        0.4090891310602009,
+        -0.6191483613815579,
+        0.24144701583338896
+      ],
+      "frameTolerance": 0.0000012,
+      "retainedBorderOffset": 0.001,
+      "minimumClearance": 0.00005,
+      "strengths": [
+        0,
+        1
+      ],
+      "normalOperation": "One analytic inverse-transpose transport from accepted130 normals",
+      "materialChanged": false,
+      "textureChanged": false,
+      "extraAuthoredNormalEdit": false
+    },
+    "sourceIteration": 133,
+    "closeupCenter": [
+      -0.006806852514538969,
+      2.220460162180035,
+      0.619929349052369
+    ],
+    "sourceAttributeCount": 15,
+    "sourceImageCount": 3,
+    "sourceGeometryCount": 64,
+    "sourceMaterialBindings": [
+      {
+        "surface": "continuous-face",
+        "array": true,
+        "slots": [
+          {
+            "index": 0,
+            "uuid": "64c30325-e72c-4e41-b13c-9467d635a4e1",
+            "name": "skin-face",
+            "type": "MeshPhysicalMaterial",
+            "maps": [
+              "map",
+              "emissiveMap",
+              "bumpMap"
+            ]
+          },
+          {
+            "index": 1,
+            "uuid": "f0f63461-3233-4858-8442-3d8fed978d7a",
+            "name": "skin-face",
+            "type": "MeshPhysicalMaterial",
+            "maps": [
+              "map",
+              "bumpMap"
+            ]
+          }
+        ]
+      },
+      {
+        "surface": "upper-lip",
+        "array": false,
+        "slots": [
+          {
+            "index": 0,
+            "uuid": "237f0677-258a-42f2-b007-261d0b28bf57",
+            "name": "",
+            "type": "MeshPhysicalMaterial",
+            "maps": [
+              "map",
+              "emissiveMap"
+            ]
+          }
+        ]
+      },
+      {
+        "surface": "lower-lip",
+        "array": false,
+        "slots": [
+          {
+            "index": 0,
+            "uuid": "3b1f03ef-890c-4491-8d7c-5920881302c8",
+            "name": "",
+            "type": "MeshPhysicalMaterial",
+            "maps": [
+              "map",
+              "emissiveMap"
+            ]
+          }
+        ]
+      }
+    ],
+    "sourceMaterials": [
+      {
+        "label": "anatomical-head/continuous-face.material[0]",
+        "type": "MeshPhysicalMaterial",
+        "values": {
+          "isMaterial": true,
+          "type": "MeshPhysicalMaterial",
+          "blending": 1,
+          "side": 0,
+          "vertexColors": false,
+          "opacity": 1,
+          "transparent": false,
+          "alphaHash": false,
+          "blendSrc": 204,
+          "blendDst": 205,
+          "blendEquation": 100,
+          "blendSrcAlpha": null,
+          "blendDstAlpha": null,
+          "blendEquationAlpha": null,
+          "blendColor": [
+            0,
+            0,
+            0
+          ],
+          "blendAlpha": 0,
+          "depthFunc": 3,
+          "depthTest": true,
+          "depthWrite": true,
+          "stencilWriteMask": 255,
+          "stencilFunc": 519,
+          "stencilRef": 0,
+          "stencilFuncMask": 255,
+          "stencilFail": 7680,
+          "stencilZFail": 7680,
+          "stencilZPass": 7680,
+          "stencilWrite": false,
+          "clippingPlanes": null,
+          "clipIntersection": false,
+          "clipShadows": false,
+          "shadowSide": null,
+          "colorWrite": true,
+          "precision": null,
+          "polygonOffset": false,
+          "polygonOffsetFactor": 0,
+          "polygonOffsetUnits": 0,
+          "dithering": false,
+          "alphaToCoverage": false,
+          "premultipliedAlpha": false,
+          "forceSinglePass": false,
+          "allowOverride": true,
+          "visible": true,
+          "toneMapped": true,
+          "version": 2,
+          "_alphaTest": 0,
+          "isMeshStandardMaterial": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "roughness": 0.53,
+          "metalness": 0,
+          "lightMap": null,
+          "lightMapIntensity": 1,
+          "aoMap": null,
+          "aoMapIntensity": 1,
+          "emissive": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0.04,
+          "bumpScale": 0.0015,
+          "normalMap": null,
+          "normalMapType": 0,
+          "normalScale": [
+            1,
+            1
+          ],
+          "displacementMap": null,
+          "displacementScale": 1,
+          "displacementBias": 0,
+          "roughnessMap": null,
+          "metalnessMap": null,
+          "alphaMap": null,
+          "envMap": null,
+          "envMapIntensity": 1,
+          "wireframe": false,
+          "wireframeLinewidth": 1,
+          "wireframeLinecap": "round",
+          "wireframeLinejoin": "round",
+          "flatShading": false,
+          "fog": true,
+          "isMeshPhysicalMaterial": true,
+          "anisotropyRotation": 0,
+          "anisotropyMap": null,
+          "clearcoatMap": null,
+          "clearcoatRoughness": 0,
+          "clearcoatRoughnessMap": null,
+          "clearcoatNormalScale": [
+            1,
+            1
+          ],
+          "clearcoatNormalMap": null,
+          "ior": 1.5,
+          "iridescenceMap": null,
+          "iridescenceIOR": 1.3,
+          "iridescenceThicknessMap": null,
+          "sheenColor": [
+            0.8387990117372213,
+            0.5583403896257968,
+            0.4969329950515914
+          ],
+          "sheenColorMap": null,
+          "sheenRoughness": 0.8,
+          "sheenRoughnessMap": null,
+          "transmissionMap": null,
+          "thickness": 0,
+          "thicknessMap": null,
+          "attenuationDistance": null,
+          "attenuationColor": [
+            1,
+            1,
+            1
+          ],
+          "specularIntensity": 0.23,
+          "specularIntensityMap": null,
+          "specularColor": [
+            1,
+            1,
+            1
+          ],
+          "specularColorMap": null,
+          "_anisotropy": 0,
+          "_clearcoat": 0,
+          "_dispersion": 0,
+          "_iridescence": 0,
+          "_retroreflectivity": 0,
+          "_sheen": 0.08,
+          "_transmission": 0
+        },
+        "maps": [
+          "map",
+          "emissiveMap",
+          "bumpMap"
+        ]
+      },
+      {
+        "label": "anatomical-head/continuous-face.material[1]",
+        "type": "MeshPhysicalMaterial",
+        "values": {
+          "isMaterial": true,
+          "type": "MeshPhysicalMaterial",
+          "blending": 1,
+          "side": 0,
+          "vertexColors": false,
+          "opacity": 1,
+          "transparent": false,
+          "alphaHash": false,
+          "blendSrc": 204,
+          "blendDst": 205,
+          "blendEquation": 100,
+          "blendSrcAlpha": null,
+          "blendDstAlpha": null,
+          "blendEquationAlpha": null,
+          "blendColor": [
+            0,
+            0,
+            0
+          ],
+          "blendAlpha": 0,
+          "depthFunc": 3,
+          "depthTest": true,
+          "depthWrite": true,
+          "stencilWriteMask": 255,
+          "stencilFunc": 519,
+          "stencilRef": 0,
+          "stencilFuncMask": 255,
+          "stencilFail": 7680,
+          "stencilZFail": 7680,
+          "stencilZPass": 7680,
+          "stencilWrite": false,
+          "clippingPlanes": null,
+          "clipIntersection": false,
+          "clipShadows": false,
+          "shadowSide": null,
+          "colorWrite": true,
+          "precision": null,
+          "polygonOffset": false,
+          "polygonOffsetFactor": 0,
+          "polygonOffsetUnits": 0,
+          "dithering": false,
+          "alphaToCoverage": false,
+          "premultipliedAlpha": false,
+          "forceSinglePass": false,
+          "allowOverride": true,
+          "visible": true,
+          "toneMapped": true,
+          "version": 2,
+          "_alphaTest": 0,
+          "isMeshStandardMaterial": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "roughness": 0.49,
+          "metalness": 0,
+          "lightMap": null,
+          "lightMapIntensity": 1,
+          "aoMap": null,
+          "aoMapIntensity": 1,
+          "emissive": [
+            0,
+            0,
+            0
+          ],
+          "emissiveIntensity": 1,
+          "emissiveMap": null,
+          "bumpScale": 0.0022,
+          "normalMap": null,
+          "normalMapType": 0,
+          "normalScale": [
+            1,
+            1
+          ],
+          "displacementMap": null,
+          "displacementScale": 1,
+          "displacementBias": 0,
+          "roughnessMap": null,
+          "metalnessMap": null,
+          "alphaMap": null,
+          "envMap": null,
+          "envMapIntensity": 1,
+          "wireframe": false,
+          "wireframeLinewidth": 1,
+          "wireframeLinecap": "round",
+          "wireframeLinejoin": "round",
+          "flatShading": false,
+          "fog": true,
+          "isMeshPhysicalMaterial": true,
+          "anisotropyRotation": 0,
+          "anisotropyMap": null,
+          "clearcoatMap": null,
+          "clearcoatRoughness": 0,
+          "clearcoatRoughnessMap": null,
+          "clearcoatNormalScale": [
+            1,
+            1
+          ],
+          "clearcoatNormalMap": null,
+          "ior": 1.5,
+          "iridescenceMap": null,
+          "iridescenceIOR": 1.3,
+          "iridescenceThicknessMap": null,
+          "sheenColor": [
+            0.8387990117372213,
+            0.5583403896257968,
+            0.4969329950515914
+          ],
+          "sheenColorMap": null,
+          "sheenRoughness": 0.8,
+          "sheenRoughnessMap": null,
+          "transmissionMap": null,
+          "thickness": 0,
+          "thicknessMap": null,
+          "attenuationDistance": null,
+          "attenuationColor": [
+            1,
+            1,
+            1
+          ],
+          "specularIntensity": 0.36,
+          "specularIntensityMap": null,
+          "specularColor": [
+            1,
+            1,
+            1
+          ],
+          "specularColorMap": null,
+          "_anisotropy": 0,
+          "_clearcoat": 0,
+          "_dispersion": 0,
+          "_iridescence": 0,
+          "_retroreflectivity": 0,
+          "_sheen": 0.08,
+          "_transmission": 0
+        },
+        "maps": [
+          "map",
+          "bumpMap"
+        ]
+      },
+      {
+        "label": "closed-sculpted-lips/upper-lip",
+        "type": "MeshPhysicalMaterial",
+        "values": {
+          "isMaterial": true,
+          "type": "MeshPhysicalMaterial",
+          "blending": 1,
+          "side": 2,
+          "vertexColors": false,
+          "opacity": 1,
+          "transparent": false,
+          "alphaHash": false,
+          "blendSrc": 204,
+          "blendDst": 205,
+          "blendEquation": 100,
+          "blendSrcAlpha": null,
+          "blendDstAlpha": null,
+          "blendEquationAlpha": null,
+          "blendColor": [
+            0,
+            0,
+            0
+          ],
+          "blendAlpha": 0,
+          "depthFunc": 3,
+          "depthTest": true,
+          "depthWrite": true,
+          "stencilWriteMask": 255,
+          "stencilFunc": 519,
+          "stencilRef": 0,
+          "stencilFuncMask": 255,
+          "stencilFail": 7680,
+          "stencilZFail": 7680,
+          "stencilZPass": 7680,
+          "stencilWrite": false,
+          "clippingPlanes": null,
+          "clipIntersection": false,
+          "clipShadows": false,
+          "shadowSide": null,
+          "colorWrite": true,
+          "precision": null,
+          "polygonOffset": false,
+          "polygonOffsetFactor": 0,
+          "polygonOffsetUnits": 0,
+          "dithering": false,
+          "alphaToCoverage": false,
+          "premultipliedAlpha": false,
+          "forceSinglePass": false,
+          "allowOverride": true,
+          "visible": true,
+          "toneMapped": true,
+          "version": 2,
+          "_alphaTest": 0,
+          "isMeshStandardMaterial": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "roughness": 0.44,
+          "metalness": 0,
+          "lightMap": null,
+          "lightMapIntensity": 1,
+          "aoMap": null,
+          "aoMapIntensity": 1,
+          "emissive": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0.04,
+          "bumpMap": null,
+          "bumpScale": 0.0015,
+          "normalMap": null,
+          "normalMapType": 0,
+          "normalScale": [
+            1,
+            1
+          ],
+          "displacementMap": null,
+          "displacementScale": 1,
+          "displacementBias": 0,
+          "roughnessMap": null,
+          "metalnessMap": null,
+          "alphaMap": null,
+          "envMap": null,
+          "envMapIntensity": 1,
+          "wireframe": false,
+          "wireframeLinewidth": 1,
+          "wireframeLinecap": "round",
+          "wireframeLinejoin": "round",
+          "flatShading": false,
+          "fog": true,
+          "isMeshPhysicalMaterial": true,
+          "anisotropyRotation": 0,
+          "anisotropyMap": null,
+          "clearcoatMap": null,
+          "clearcoatRoughness": 0.3,
+          "clearcoatRoughnessMap": null,
+          "clearcoatNormalScale": [
+            1,
+            1
+          ],
+          "clearcoatNormalMap": null,
+          "ior": 1.5,
+          "iridescenceMap": null,
+          "iridescenceIOR": 1.3,
+          "iridescenceThicknessMap": null,
+          "sheenColor": [
+            0,
+            0,
+            0
+          ],
+          "sheenColorMap": null,
+          "sheenRoughness": 1,
+          "sheenRoughnessMap": null,
+          "transmissionMap": null,
+          "thickness": 0,
+          "thicknessMap": null,
+          "attenuationDistance": null,
+          "attenuationColor": [
+            1,
+            1,
+            1
+          ],
+          "specularIntensity": 0.23,
+          "specularIntensityMap": null,
+          "specularColor": [
+            1,
+            1,
+            1
+          ],
+          "specularColorMap": null,
+          "_anisotropy": 0,
+          "_clearcoat": 0.12,
+          "_dispersion": 0,
+          "_iridescence": 0,
+          "_retroreflectivity": 0,
+          "_sheen": 0,
+          "_transmission": 0
+        },
+        "maps": [
+          "map",
+          "emissiveMap"
+        ]
+      },
+      {
+        "label": "closed-sculpted-lips/lower-lip",
+        "type": "MeshPhysicalMaterial",
+        "values": {
+          "isMaterial": true,
+          "type": "MeshPhysicalMaterial",
+          "blending": 1,
+          "side": 2,
+          "vertexColors": false,
+          "opacity": 1,
+          "transparent": false,
+          "alphaHash": false,
+          "blendSrc": 204,
+          "blendDst": 205,
+          "blendEquation": 100,
+          "blendSrcAlpha": null,
+          "blendDstAlpha": null,
+          "blendEquationAlpha": null,
+          "blendColor": [
+            0,
+            0,
+            0
+          ],
+          "blendAlpha": 0,
+          "depthFunc": 3,
+          "depthTest": true,
+          "depthWrite": true,
+          "stencilWriteMask": 255,
+          "stencilFunc": 519,
+          "stencilRef": 0,
+          "stencilFuncMask": 255,
+          "stencilFail": 7680,
+          "stencilZFail": 7680,
+          "stencilZPass": 7680,
+          "stencilWrite": false,
+          "clippingPlanes": null,
+          "clipIntersection": false,
+          "clipShadows": false,
+          "shadowSide": null,
+          "colorWrite": true,
+          "precision": null,
+          "polygonOffset": false,
+          "polygonOffsetFactor": 0,
+          "polygonOffsetUnits": 0,
+          "dithering": false,
+          "alphaToCoverage": false,
+          "premultipliedAlpha": false,
+          "forceSinglePass": false,
+          "allowOverride": true,
+          "visible": true,
+          "toneMapped": true,
+          "version": 2,
+          "_alphaTest": 0,
+          "isMeshStandardMaterial": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "roughness": 0.44,
+          "metalness": 0,
+          "lightMap": null,
+          "lightMapIntensity": 1,
+          "aoMap": null,
+          "aoMapIntensity": 1,
+          "emissive": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0.04,
+          "bumpMap": null,
+          "bumpScale": 0.0015,
+          "normalMap": null,
+          "normalMapType": 0,
+          "normalScale": [
+            1,
+            1
+          ],
+          "displacementMap": null,
+          "displacementScale": 1,
+          "displacementBias": 0,
+          "roughnessMap": null,
+          "metalnessMap": null,
+          "alphaMap": null,
+          "envMap": null,
+          "envMapIntensity": 1,
+          "wireframe": false,
+          "wireframeLinewidth": 1,
+          "wireframeLinecap": "round",
+          "wireframeLinejoin": "round",
+          "flatShading": false,
+          "fog": true,
+          "isMeshPhysicalMaterial": true,
+          "anisotropyRotation": 0,
+          "anisotropyMap": null,
+          "clearcoatMap": null,
+          "clearcoatRoughness": 0.3,
+          "clearcoatRoughnessMap": null,
+          "clearcoatNormalScale": [
+            1,
+            1
+          ],
+          "clearcoatNormalMap": null,
+          "ior": 1.5,
+          "iridescenceMap": null,
+          "iridescenceIOR": 1.3,
+          "iridescenceThicknessMap": null,
+          "sheenColor": [
+            0,
+            0,
+            0
+          ],
+          "sheenColorMap": null,
+          "sheenRoughness": 1,
+          "sheenRoughnessMap": null,
+          "transmissionMap": null,
+          "thickness": 0,
+          "thicknessMap": null,
+          "attenuationDistance": null,
+          "attenuationColor": [
+            1,
+            1,
+            1
+          ],
+          "specularIntensity": 0.23,
+          "specularIntensityMap": null,
+          "specularColor": [
+            1,
+            1,
+            1
+          ],
+          "specularColorMap": null,
+          "_anisotropy": 0,
+          "_clearcoat": 0.12,
+          "_dispersion": 0,
+          "_iridescence": 0,
+          "_retroreflectivity": 0,
+          "_sheen": 0,
+          "_transmission": 0
+        },
+        "maps": [
+          "map",
+          "emissiveMap"
+        ]
+      }
+    ],
+    "sourceAttributes": [
+      {
+        "surface": "continuous-face",
+        "key": "position",
+        "type": "Float32Array",
+        "length": 332613,
+        "bytes": 1330452,
+        "version": 5,
+        "sha256": "44fea450e8a482e32856ac5cb7e24011428e108d861a08d5725105d12f639141"
+      },
+      {
+        "surface": "continuous-face",
+        "key": "uv",
+        "type": "Float32Array",
+        "length": 221742,
+        "bytes": 886968,
+        "version": 0,
+        "sha256": "fe1e458cefed766845eed1577cc6722ce95147b19598faf575aa398b90a01e63"
+      },
+      {
+        "surface": "continuous-face",
+        "key": "color",
+        "type": "Float32Array",
+        "length": 332613,
+        "bytes": 1330452,
+        "version": 0,
+        "sha256": "2c767f21667561a2e64913277a0ab48a01abca0b69c9483fef6d76d3c2bf90d7"
+      },
+      {
+        "surface": "continuous-face",
+        "key": "normal",
+        "type": "Float32Array",
+        "length": 332613,
+        "bytes": 1330452,
+        "version": 6,
+        "sha256": "d492a834078b263e92c0ed0839230de69b2ab8771b7aed990f6b6f93200ad4e5"
+      },
+      {
+        "surface": "continuous-face",
+        "key": "index",
+        "type": "Uint32Array",
+        "length": 655824,
+        "bytes": 2623296,
+        "version": 0,
+        "sha256": "f557228c97f184969a74a79925ada9eba7eca179edf3dd723b08848eeee3ea9b"
+      },
+      {
+        "surface": "upper-lip",
+        "key": "position",
+        "type": "Float32Array",
+        "length": 5151,
+        "bytes": 20604,
+        "version": 1,
+        "sha256": "1976f80753b66a623ad9317e9eb526ba64aa1f8aac0010e87d16a5ff7fdd32ba"
+      },
+      {
+        "surface": "upper-lip",
+        "key": "uv",
+        "type": "Float32Array",
+        "length": 3434,
+        "bytes": 13736,
+        "version": 0,
+        "sha256": "cc33a01c9c453a1f65831290017b181626ee333bffef34bee85b8eff8ce1c688"
+      },
+      {
+        "surface": "upper-lip",
+        "key": "color",
+        "type": "Float32Array",
+        "length": 5151,
+        "bytes": 20604,
+        "version": 0,
+        "sha256": "f137cc101427c3e5f701ef896c6b4d445274f7c4336f41c4eaeca020b7022ad1"
+      },
+      {
+        "surface": "upper-lip",
+        "key": "normal",
+        "type": "Float32Array",
+        "length": 5151,
+        "bytes": 20604,
+        "version": 1,
+        "sha256": "e670add99041e81aa345ed4fe8dd1b555a11a783e570eb0e01c87fbad59c5b2c"
+      },
+      {
+        "surface": "upper-lip",
+        "key": "index",
+        "type": "Uint32Array",
+        "length": 9600,
+        "bytes": 38400,
+        "version": 0,
+        "sha256": "688301054579892799d8b9954ec237c8d0302a4e5754e9c60e34e9e00c65c7d9"
+      },
+      {
+        "surface": "lower-lip",
+        "key": "position",
+        "type": "Float32Array",
+        "length": 5151,
+        "bytes": 20604,
+        "version": 1,
+        "sha256": "bb5092bf3c4ccb70b709c40a124f2dd979393a0a9727737a81d1ae54b78828d6"
+      },
+      {
+        "surface": "lower-lip",
+        "key": "uv",
+        "type": "Float32Array",
+        "length": 3434,
+        "bytes": 13736,
+        "version": 0,
+        "sha256": "ff1729215ebf72f200b82020ed2eb44762c8035abb8b507213dcfa648f81258e"
+      },
+      {
+        "surface": "lower-lip",
+        "key": "color",
+        "type": "Float32Array",
+        "length": 5151,
+        "bytes": 20604,
+        "version": 0,
+        "sha256": "94ff0052d61d7a6e0c6446a23288cec578a40031058d92f03ebba3fa9434203f"
+      },
+      {
+        "surface": "lower-lip",
+        "key": "normal",
+        "type": "Float32Array",
+        "length": 5151,
+        "bytes": 20604,
+        "version": 1,
+        "sha256": "4ace1d81a850820b192d1c7fd046a6c9a0544475ab98ff7ae1a46c468cb61b10"
+      },
+      {
+        "surface": "lower-lip",
+        "key": "index",
+        "type": "Uint32Array",
+        "length": 9600,
+        "bytes": 38400,
+        "version": 0,
+        "sha256": "96bb4b59aea4cbc57a19e6ef680f1a630be29a977fead82649308b5631e4d41d"
+      }
+    ],
+    "sourceImages": [
+      {
+        "label": "anatomical-head/continuous-face.material[0].map",
+        "size": [
+          1024,
+          1536
+        ],
+        "version": 2,
+        "sourceVersion": 2,
+        "properties": {
+          "channel": 0,
+          "format": 1023,
+          "type": 1009,
+          "colorSpace": "srgb",
+          "wrapS": 1001,
+          "wrapT": 1001,
+          "minFilter": 1008,
+          "magFilter": 1006,
+          "anisotropy": 8,
+          "flipY": true,
+          "generateMipmaps": true,
+          "premultiplyAlpha": false,
+          "unpackAlignment": 4,
+          "rotation": 0,
+          "offset": [
+            0,
+            0
+          ],
+          "repeat": [
+            1,
+            1
+          ],
+          "center": [
+            0,
+            0
+          ],
+          "matrixAutoUpdate": true,
+          "manualMatrix": null
+        },
+        "sha256": "2ebd7a5cbe32292186c9543291344e886bc836869f026eb121111cfc979184eb"
+      },
+      {
+        "label": "anatomical-head/continuous-face.material[0].bumpMap",
+        "size": [
+          1024,
+          1024
+        ],
+        "version": 1,
+        "sourceVersion": 1,
+        "properties": {
+          "channel": 0,
+          "format": 1023,
+          "type": 1009,
+          "colorSpace": "",
+          "wrapS": 1000,
+          "wrapT": 1000,
+          "minFilter": 1008,
+          "magFilter": 1006,
+          "anisotropy": 4,
+          "flipY": true,
+          "generateMipmaps": true,
+          "premultiplyAlpha": false,
+          "unpackAlignment": 4,
+          "rotation": 0,
+          "offset": [
+            0,
+            0
+          ],
+          "repeat": [
+            1,
+            1
+          ],
+          "center": [
+            0,
+            0
+          ],
+          "matrixAutoUpdate": true,
+          "manualMatrix": null
+        },
+        "sha256": "8de6e4ae3c3ce50b4c0a2dd357db6329e552a33dd640e1769e5606d7c156dba3"
+      },
+      {
+        "label": "anatomical-head/continuous-face.material[1].map",
+        "size": [
+          256,
+          384
+        ],
+        "version": 1,
+        "sourceVersion": 1,
+        "properties": {
+          "channel": 0,
+          "format": 1023,
+          "type": 1009,
+          "colorSpace": "srgb",
+          "wrapS": 1001,
+          "wrapT": 1001,
+          "minFilter": 1008,
+          "magFilter": 1006,
+          "anisotropy": 8,
+          "flipY": true,
+          "generateMipmaps": true,
+          "premultiplyAlpha": false,
+          "unpackAlignment": 4,
+          "rotation": 0,
+          "offset": [
+            0,
+            0
+          ],
+          "repeat": [
+            1,
+            1
+          ],
+          "center": [
+            0,
+            0
+          ],
+          "matrixAutoUpdate": true,
+          "manualMatrix": null
+        },
+        "sha256": "c31b67577017f0a57f0cc784404a519717cdb6f17b5314fd2707679b2f689330"
+      }
+    ],
+    "checkpoints": [
+      {
+        "stage": "native-baseline",
+        "exactOriginalAttributes": 15,
+        "exactPrivateAttributes": 0,
+        "exactSourceImages": 3,
+        "originalResourcesDisposed": 0,
+        "ok": true
+      },
+      {
+        "stage": "before-mode0-before-release",
+        "exactOriginalAttributes": 15,
+        "exactPrivateAttributes": 0,
+        "exactSourceImages": 3,
+        "originalResourcesDisposed": 0,
+        "ok": true
+      },
+      {
+        "stage": "before-mode0-after-release",
+        "exactOriginalAttributes": 15,
+        "exactPrivateAttributes": 0,
+        "exactSourceImages": 3,
+        "originalResourcesDisposed": 0,
+        "ok": true
+      },
+      {
+        "stage": "mode0-selected-before-native-upload",
+        "exactOriginalAttributes": 15,
+        "exactPrivateAttributes": 0,
+        "exactSourceImages": 3,
+        "originalResourcesDisposed": 0,
+        "ok": true
+      },
+      {
+        "stage": "mode0-after-native-views",
+        "exactOriginalAttributes": 15,
+        "exactPrivateAttributes": 0,
+        "exactSourceImages": 3,
+        "originalResourcesDisposed": 0,
+        "ok": true
+      },
+      {
+        "stage": "mode0-complete-before-release",
+        "exactOriginalAttributes": 15,
+        "exactPrivateAttributes": 0,
+        "exactSourceImages": 3,
+        "originalResourcesDisposed": 0,
+        "ok": true
+      },
+      {
+        "stage": "mode0-complete-after-release",
+        "exactOriginalAttributes": 15,
+        "exactPrivateAttributes": 0,
+        "exactSourceImages": 3,
+        "originalResourcesDisposed": 0,
+        "ok": true
+      },
+      {
+        "stage": "before-mode1-before-release",
+        "exactOriginalAttributes": 15,
+        "exactPrivateAttributes": 0,
+        "exactSourceImages": 3,
+        "originalResourcesDisposed": 0,
+        "ok": true
+      },
+      {
+        "stage": "before-mode1-after-release",
+        "exactOriginalAttributes": 15,
+        "exactPrivateAttributes": 0,
+        "exactSourceImages": 3,
+        "originalResourcesDisposed": 0,
+        "ok": true
+      },
+      {
+        "stage": "mode1-selected-before-native-upload",
+        "exactOriginalAttributes": 15,
+        "exactPrivateAttributes": 5,
+        "exactSourceImages": 3,
+        "originalResourcesDisposed": 0,
+        "ok": true
+      },
+      {
+        "stage": "mode1-after-native-views",
+        "exactOriginalAttributes": 15,
+        "exactPrivateAttributes": 5,
+        "exactSourceImages": 3,
+        "originalResourcesDisposed": 0,
+        "ok": true
+      },
+      {
+        "stage": "mode1-complete-before-release",
+        "exactOriginalAttributes": 15,
+        "exactPrivateAttributes": 5,
+        "exactSourceImages": 3,
+        "originalResourcesDisposed": 0,
+        "ok": true
+      },
+      {
+        "stage": "mode1-complete-after-release",
+        "exactOriginalAttributes": 15,
+        "exactPrivateAttributes": 0,
+        "exactSourceImages": 3,
+        "originalResourcesDisposed": 0,
+        "ok": true
+      },
+      {
+        "stage": "restored-source-native-frame",
+        "exactOriginalAttributes": 15,
+        "exactPrivateAttributes": 0,
+        "exactSourceImages": 3,
+        "originalResourcesDisposed": 0,
+        "ok": true
+      },
+      {
+        "stage": "finally-before-release",
+        "exactOriginalAttributes": 15,
+        "exactPrivateAttributes": 0,
+        "exactSourceImages": 3,
+        "originalResourcesDisposed": 0,
+        "ok": true
+      },
+      {
+        "stage": "finally-after-release",
+        "exactOriginalAttributes": 15,
+        "exactPrivateAttributes": 0,
+        "exactSourceImages": 3,
+        "originalResourcesDisposed": 0,
+        "ok": true
+      }
+    ],
+    "applications": [
+      {
+        "strength": 0,
+        "metrics": {
+          "version": "upper-lip-relief-140",
+          "strength": 0,
+          "applied": false,
+          "privateGeometryCount": 0,
+          "privateAttributeBytes": 0,
+          "changedPositions": 0,
+          "changedNormals": 0,
+          "elapsedMs": 0
+        },
+        "copiedSourceBytes": 0,
+        "protectedVertices": 0,
+        "exactLocalXYValues": 0,
+        "localXYValues": 3434,
+        "extraDrawGroups": 0,
+        "privateMaterials": 0,
+        "privateTextures": 0
+      },
+      {
+        "strength": 1,
+        "metrics": {
+          "version": "upper-lip-relief-140",
+          "strength": 1,
+          "applied": true,
+          "blend": 0.5,
+          "frame": {
+            "samples": 1717,
+            "commonOffset": [
+              -0.23351908266304588,
+              -0.04008513691786831,
+              -0.03823637957573096
+            ],
+            "maximumUVResidual": 6.845613331751821e-8,
+            "maximumXYResidual": 9.547105361135122e-8,
+            "maximumZResidual": 5.692150666786189e-8,
+            "tolerance": 0.0000012,
+            "fittedSlopes": false,
+            "baselineProfile": "Accepted full130, including its corner gate"
+          },
+          "privateGeometryCount": 1,
+          "privateAttributeBytes": 113948,
+          "changedPositions": 1259,
+          "changedNormals": 1261,
+          "maximumDepthReduction": 0.00689344621890751,
+          "maximumOutwardDisplacement": 0,
+          "maximumAnatomicalXYRoundoff": 1.9133183876719062e-19,
+          "maximumNormalLengthError": 4.274486775646125e-8,
+          "maximumTransportedNormalDegrees": 18.080336549959185,
+          "minimumJacobian": 1,
+          "maximumJacobian": 1,
+          "faceTrianglesIndexed": 1091,
+          "faceIndexCells": 512,
+          "minimumBaselineClearance": 0.000992828070697449,
+          "minimumRepairedClearance": 0.000992828070697449,
+          "clearanceIntersectionVertices": 34942,
+          "clearanceIntersectionPolygons": 9673,
+          "minimumFaceProjectionCoverage": 0.9999999999345901,
+          "clearanceMethod": "Full triangle/triangle XY intersection polygons; affine depth minima at their vertices",
+          "projectedOrientationFlips": 0,
+          "minimumTriangleAreaRatio": 0.7377114837493607,
+          "maximumGeometricNormalTurnDegrees": 18.527929512599123,
+          "normalOperation": "One analytic inverse-transpose transport from accepted130 normals",
+          "extraAuthoredNormalEdit": false,
+          "materialChanged": false,
+          "textureChanged": false,
+          "meshToHead": [
+            1,
+            1.214306433183765e-17,
+            0,
+            0,
+            1.214306433183765e-17,
+            1,
+            0,
+            0,
+            2.7755575615628914e-17,
+            0,
+            1,
+            0,
+            1.6653345369377348e-16,
+            0,
+            0,
+            1
+          ],
+          "headToMesh": [
+            1,
+            -1.214306433183765e-17,
+            0,
+            0,
+            -1.214306433183765e-17,
+            1,
+            0,
+            0,
+            -2.7755575615628914e-17,
+            3.3703774026776627e-34,
+            1,
+            0,
+            -1.6653345369377348e-16,
+            2.0222264416065976e-33,
+            0,
+            1
+          ],
+          "elapsedMs": 35.70000000298023
+        },
+        "copiedSourceBytes": 72740,
+        "protectedVertices": 456,
+        "exactLocalXYValues": 3434,
+        "localXYValues": 3434,
+        "extraDrawGroups": 0,
+        "privateMaterials": 0,
+        "privateTextures": 0,
+        "privateAttributeHashes": [
+          {
+            "key": "position",
+            "type": "Float32Array",
+            "bytes": 20604,
+            "version": 1,
+            "sha256": "34106fbfe61d106682cb18870f5a823889696a2391c6a30dcb329762b5986434"
+          },
+          {
+            "key": "uv",
+            "type": "Float32Array",
+            "bytes": 13736,
+            "version": 0,
+            "sha256": "cc33a01c9c453a1f65831290017b181626ee333bffef34bee85b8eff8ce1c688"
+          },
+          {
+            "key": "color",
+            "type": "Float32Array",
+            "bytes": 20604,
+            "version": 0,
+            "sha256": "f137cc101427c3e5f701ef896c6b4d445274f7c4336f41c4eaeca020b7022ad1"
+          },
+          {
+            "key": "normal",
+            "type": "Float32Array",
+            "bytes": 20604,
+            "version": 1,
+            "sha256": "a95481b881ad6a9a424a1e7c992ec3fe392647e5995e6f8df586785a0051ec7b"
+          },
+          {
+            "key": "index",
+            "type": "Uint32Array",
+            "bytes": 38400,
+            "version": 0,
+            "sha256": "688301054579892799d8b9954ec237c8d0302a4e5754e9c60e34e9e00c65c7d9"
+          }
+        ]
+      }
+    ],
+    "originalDispose": [],
+    "privateDispose": [
+      {
+        "surface": "upper-lip",
+        "sharedSourceAttributes": 0,
+        "sharedSourceBuffers": 0,
+        "boundBytes": 113948
+      }
+    ],
+    "snapshotStage": "After the ordinary first native frame and GPU queue completion; index uploads have already settled.",
+    "normalInterpretation": "Transported authored shading normals are retained as authored normals. Actual triangle orientation, areas and face clearance are measured independently by the helper; baseline authored/triangle disagreement is not a transport failure."
+  },
+  "browserErrors": []
+}

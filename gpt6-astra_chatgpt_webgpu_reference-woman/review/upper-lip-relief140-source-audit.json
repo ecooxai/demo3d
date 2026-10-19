@@ -1,0 +1,275 @@
+{
+  "candidate": 140,
+  "status": "Source geometry/ownership checks passed; native art pending",
+  "scoreUnchanged": 77,
+  "files": {
+    "review/upper-lip-relief-candidate140.js": "867c5afca8b31aa80758186f523ff370eb403d3d6fdd326d429e05608e6c2f50",
+    "review/upper-lip-relief140-audit.mjs": "5edf5ae84fa04cfa780f44080e0611850be71ddae41c0dbf38924c6b846088f6",
+    "src/face.js": "0c70ec7cff943e14445daed5cf40dd5aee251756897152c72a3f0b8ea3119321",
+    "src/lip-continuity.js": "fb2f288b264d9f2abade0aa4347d55e059c0179a0260dcf2e918d08745417c28",
+    "src/lip-refinement.js": "87c8d81aa6b7290e60a4592fec92d1b51882ee26e2058c9aa9154b9414778534",
+    "src/portrait-proportions.js": "8b461a46da1bb92f62c450ff9c4e98f9765682e3e49c126e7bb52f04de3c8873",
+    "review/mouth-continuity130-audit.mjs": "227b0fb7cd093b6ab21009a22d94ecda584186995a043389836890c8f4387a18",
+    "review/torso-depth110-harness.mjs": "c345007fbcb30301f56f825c169d5c1af04681185d06a5f4c38e0f13b1789176"
+  },
+  "spec": {
+    "version": "upper-lip-relief-140",
+    "target": "upper-lip",
+    "grid": [
+      100,
+      16
+    ],
+    "halfWidth": 0.241,
+    "endFraction": 0.875,
+    "blend": 0.5,
+    "cornerGate": [
+      0.18,
+      0.235
+    ],
+    "quintic": [
+      0.4090891310602009,
+      -0.6191483613815579,
+      0.24144701583338896
+    ],
+    "frameTolerance": 0.0000012,
+    "retainedBorderOffset": 0.001,
+    "minimumClearance": 0.00005,
+    "strengths": [
+      0,
+      1
+    ],
+    "normalOperation": "One analytic inverse-transpose transport from accepted130 normals",
+    "materialChanged": false,
+    "textureChanged": false,
+    "extraAuthoredNormalEdit": false
+  },
+  "analyticField": {
+    "maximumDerivativeError": 2.5655406618585452e-11,
+    "maximumSupportJetError": 2.8362249437918763e-8,
+    "maximumInward": 0.006902229241592291,
+    "maximumOutward": 0,
+    "zeroSkipsTraversal": true,
+    "unprepared130Rejected": true
+  },
+  "planarOverlapFixture": {
+    "minimum": 0.10099999999999998,
+    "vertices": 7,
+    "pieces": 2,
+    "coverage": 1
+  },
+  "cases": [
+    {
+      "frame": "accepted-frame",
+      "metrics": {
+        "version": "upper-lip-relief-140",
+        "strength": 1,
+        "applied": true,
+        "blend": 0.5,
+        "frame": {
+          "samples": 1717,
+          "commonOffset": [
+            -0.23351908266304597,
+            -0.04008513691786785,
+            -0.03823637957573096
+          ],
+          "maximumUVResidual": 6.845613331751821e-8,
+          "maximumXYResidual": 9.547105362522901e-8,
+          "maximumZResidual": 5.692150666786189e-8,
+          "tolerance": 0.0000012,
+          "fittedSlopes": false,
+          "baselineProfile": "Accepted full130, including its corner gate"
+        },
+        "privateGeometryCount": 1,
+        "privateAttributeBytes": 94748,
+        "changedPositions": 1259,
+        "changedNormals": 1261,
+        "maximumDepthReduction": 0.00689344621890751,
+        "maximumOutwardDisplacement": 0,
+        "maximumAnatomicalXYRoundoff": 1.9133183876719062e-19,
+        "maximumNormalLengthError": 4.274486775646125e-8,
+        "maximumTransportedNormalDegrees": 18.080336549959185,
+        "minimumJacobian": 1,
+        "maximumJacobian": 1,
+        "faceTrianglesIndexed": 1091,
+        "faceIndexCells": 512,
+        "minimumBaselineClearance": 0.000992828070697449,
+        "minimumRepairedClearance": 0.000992828070697449,
+        "clearanceIntersectionVertices": 34942,
+        "clearanceIntersectionPolygons": 9673,
+        "minimumFaceProjectionCoverage": 0.999999999901852,
+        "clearanceMethod": "Full triangle/triangle XY intersection polygons; affine depth minima at their vertices",
+        "projectedOrientationFlips": 0,
+        "minimumTriangleAreaRatio": 0.7377114837493607,
+        "maximumGeometricNormalTurnDegrees": 18.527929512599123,
+        "normalOperation": "One analytic inverse-transpose transport from accepted130 normals",
+        "extraAuthoredNormalEdit": false,
+        "materialChanged": false,
+        "textureChanged": false,
+        "meshToHead": [
+          1,
+          -1.5612511283791264e-17,
+          0,
+          0,
+          -1.6479873021779667e-17,
+          1,
+          3.469446951953614e-18,
+          0,
+          2.7755575615628914e-17,
+          0,
+          1,
+          0,
+          -5.551115123125783e-17,
+          4.440892098500626e-16,
+          0,
+          1
+        ],
+        "headToMesh": [
+          1,
+          1.5612511283791264e-17,
+          -5.416677968589101e-35,
+          0,
+          1.6479873021779667e-17,
+          1,
+          -3.469446951953614e-18,
+          0,
+          -2.7755575615628914e-17,
+          -4.333342374871281e-34,
+          1,
+          0,
+          5.551115123125782e-17,
+          -4.440892098500626e-16,
+          1.5407439555097887e-33,
+          1
+        ],
+        "elapsedMs": 89.814933
+      },
+      "protectedVertices": 456,
+      "maximumXYError": 0,
+      "maximumDisplacementAgreement": 2.971766549443762e-8,
+      "maximumFDNormalError": 3.1960744717451917e-8,
+      "maximumFDJacobianError": 5.424560800548761e-11,
+      "normalComparison": {
+        "beforeAuthoredVsGeometricMax": 17.926364123819788,
+        "afterAuthoredVsGeometricMax": 16.002574457534077,
+        "interpretation": "Descriptive finite-mesh comparison, separate from exact transported-normal agreement"
+      },
+      "sourceBuffersExact": 15,
+      "privateBuffersOwned": true,
+      "cleanup": {
+        "released": true,
+        "privateGeometriesDisposed": 1,
+        "privateAttributeBytesReleased": 94748
+      }
+    },
+    {
+      "frame": "oblique-nonuniform-frame",
+      "metrics": {
+        "version": "upper-lip-relief-140",
+        "strength": 1,
+        "applied": true,
+        "blend": 0.5,
+        "frame": {
+          "samples": 1717,
+          "commonOffset": [
+            -0.23351908288399054,
+            -0.040085137502071544,
+            -0.03823637944633393
+          ],
+          "maximumUVResidual": 6.845613331751821e-8,
+          "maximumXYResidual": 1.113301127952937e-7,
+          "maximumZResidual": 5.635778368984212e-8,
+          "tolerance": 0.0000012,
+          "fittedSlopes": false,
+          "baselineProfile": "Accepted full130, including its corner gate"
+        },
+        "privateGeometryCount": 1,
+        "privateAttributeBytes": 94748,
+        "changedPositions": 1260,
+        "changedNormals": 1261,
+        "maximumDepthReduction": 0.00689344621890751,
+        "maximumOutwardDisplacement": 0,
+        "maximumAnatomicalXYRoundoff": 2.592802047734588e-8,
+        "maximumNormalLengthError": 3.970585638057855e-8,
+        "maximumTransportedNormalDegrees": 15.10700278964957,
+        "minimumJacobian": 0.9999999999999998,
+        "maximumJacobian": 1.0000000000000002,
+        "faceTrianglesIndexed": 1091,
+        "faceIndexCells": 512,
+        "minimumBaselineClearance": 0.0009928423022576016,
+        "minimumRepairedClearance": 0.0009928423022576016,
+        "clearanceIntersectionVertices": 35125,
+        "clearanceIntersectionPolygons": 9722,
+        "minimumFaceProjectionCoverage": 0.9999999999380506,
+        "clearanceMethod": "Full triangle/triangle XY intersection polygons; affine depth minima at their vertices",
+        "projectedOrientationFlips": 0,
+        "minimumTriangleAreaRatio": 0.7377083747321526,
+        "maximumGeometricNormalTurnDegrees": 18.528358611385112,
+        "normalOperation": "One analytic inverse-transpose transport from accepted130 normals",
+        "extraAuthoredNormalEdit": false,
+        "materialChanged": false,
+        "textureChanged": false,
+        "meshToHead": [
+          1.23,
+          0.06999999999999997,
+          0.020000000000000018,
+          0,
+          0.12999999999999998,
+          0.84,
+          0.05,
+          0,
+          0.08000000000000002,
+          -0.040000000000000015,
+          1.12,
+          0,
+          0.07999999999999996,
+          -0.03999999999999959,
+          0.11000000000000003,
+          1
+        ],
+        "headToMesh": [
+          0.8210512381954289,
+          -0.0689724841589711,
+          -0.011582500496392891,
+          0,
+          -0.12331444137513019,
+          1.1983098257922258,
+          -0.05129393076973989,
+          0,
+          -0.06305060420592815,
+          0.04772338550393458,
+          0.8918525382222515,
+          0,
+          -0.06368111024798735,
+          0.04820061935897342,
+          -0.09922893639552584,
+          1
+        ],
+        "elapsedMs": 73.59945800000003
+      },
+      "protectedVertices": 456,
+      "maximumXYError": 2.5928020508381167e-8,
+      "maximumDisplacementAgreement": 1.7917418052276063e-8,
+      "maximumFDNormalError": 3.1110706455450554e-8,
+      "maximumFDJacobianError": 1.4184647900705727e-9,
+      "normalComparison": {
+        "beforeAuthoredVsGeometricMax": 13.693648508593265,
+        "afterAuthoredVsGeometricMax": 12.171246156919949,
+        "interpretation": "Descriptive finite-mesh comparison, separate from exact transported-normal agreement"
+      },
+      "sourceBuffersExact": 15,
+      "privateBuffersOwned": true,
+      "cleanup": {
+        "released": true,
+        "privateGeometriesDisposed": 1,
+        "privateAttributeBytesReleased": 94748
+      }
+    }
+  ],
+  "elapsedMs": 450.18279700000005,
+  "cpuMs": 892.449,
+  "memory": {
+    "heapMiB": 47.040748596191406,
+    "rssMiB": 147.3515625
+  },
+  "limitations": "The source harness models geometry, matrices and attributes. It does not run native Three, bake textures, evaluate materials or render images. The parent owns the single native on/off comparison."
+}

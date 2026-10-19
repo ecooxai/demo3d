@@ -1,0 +1,2495 @@
+{
+  "scope": "Source-only inspection, not native render verification. Reuses the accepted130 source geometry harness through fixture construction only; no earlier audit loop is rerun. Actual makeMouth code and current full130 helper execute. Finite triangle-averaged normals are computed independently from final positions only for comparison and never replace production normals.",
+  "sources": {
+    "src/face.js": "0c70ec7cff943e14445daed5cf40dd5aee251756897152c72a3f0b8ea3119321",
+    "src/lip-continuity.js": "fb2f288b264d9f2abade0aa4347d55e059c0179a0260dcf2e918d08745417c28",
+    "src/lip-refinement.js": "87c8d81aa6b7290e60a4592fec92d1b51882ee26e2058c9aa9154b9414778534",
+    "src/portrait-proportions.js": "8b461a46da1bb92f62c450ff9c4e98f9765682e3e49c126e7bb52f04de3c8873",
+    "review/mouth-continuity130-audit.mjs": "227b0fb7cd093b6ab21009a22d94ecda584186995a043389836890c8f4387a18",
+    "review/torso-depth110-harness.mjs": "c345007fbcb30301f56f825c169d5c1af04681185d06a5f4c38e0f13b1789176"
+  },
+  "minimumRepairedClearance": 0.000993310062489039,
+  "maximumAuthoredResidualDegrees": 13.077796190051016,
+  "columns": [
+    {
+      "col": 20,
+      "x": -0.1446,
+      "rows": [
+        {
+          "row": 0,
+          "v": 0,
+          "position": [
+            -0.3781190812587738,
+            -0.7355770468711853,
+            0.564896821975708
+          ],
+          "authoredHeadNormal": [
+            -0.23812235891819,
+            -0.12733183801174164,
+            0.9628521800041199
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            -0.29063716530799866,
+            0.03255347162485123,
+            0.9562793970108032
+          ],
+          "authoredVsFiniteDegrees": 9.661029861394852,
+          "sourceAuthoredChangeDegrees": 48.597350772568284,
+          "normalIdenticalToPre130": false,
+          "keyDot": 0.8220859459875212,
+          "finiteKeyDot": 0.9027651233443691,
+          "fillDot": 0.7713755949021741,
+          "deltaRelief": 0,
+          "residualNormalWeight": 1
+        },
+        {
+          "row": 1,
+          "v": 0.0625,
+          "position": [
+            -0.3781190812587738,
+            -0.7383071184158325,
+            0.5649949312210083
+          ],
+          "authoredHeadNormal": [
+            -0.3385084271430969,
+            0.2450675666332245,
+            0.9084899425506592
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            -0.3570956587791443,
+            0.3259560167789459,
+            0.875348687171936
+          ],
+          "authoredVsFiniteDegrees": 5.122156399008715,
+          "sourceAuthoredChangeDegrees": 27.148255642153465,
+          "normalIdenticalToPre130": false,
+          "keyDot": 0.9684662902559031,
+          "finiteKeyDot": 0.9820634608406011,
+          "fillDot": 0.8341224343836079,
+          "deltaRelief": -0.002452982188448736,
+          "residualNormalWeight": 0.9572205544936634
+        },
+        {
+          "row": 2,
+          "v": 0.125,
+          "position": [
+            -0.3781190812587738,
+            -0.7410390973091125,
+            0.5669540166854858
+          ],
+          "authoredHeadNormal": [
+            -0.38665807247161865,
+            0.6657929420471191,
+            0.638134241104126
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            -0.38910478353500366,
+            0.6608322858810425,
+            0.641792893409729
+          ],
+          "authoredVsFiniteDegrees": 0.3799725599149963,
+          "sourceAuthoredChangeDegrees": 1.3128467826580859,
+          "normalIdenticalToPre130": false,
+          "keyDot": 0.9383113551311248,
+          "finiteKeyDot": 0.9405773416283278,
+          "fillDot": 0.7307043008036058,
+          "deltaRelief": -0.003234307460326507,
+          "residualNormalWeight": 0.7536368774915214
+        },
+        {
+          "row": 3,
+          "v": 0.1875,
+          "position": [
+            -0.3781190812587738,
+            -0.7437729239463806,
+            0.5706452131271362
+          ],
+          "authoredHeadNormal": [
+            -0.3796779215335846,
+            0.7687566876411438,
+            0.5146433711051941
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            -0.3831928074359894,
+            0.7569182515144348,
+            0.5293751358985901
+          ],
+          "authoredVsFiniteDegrees": 1.1014199331121086,
+          "sourceAuthoredChangeDegrees": 10.413868490910295,
+          "normalIdenticalToPre130": false,
+          "keyDot": 0.8768439560365215,
+          "finiteKeyDot": 0.8857151017839302,
+          "fillDot": 0.6577631870381409,
+          "deltaRelief": -0.002326495103039643,
+          "residualNormalWeight": 0.43326313533795446
+        },
+        {
+          "row": 4,
+          "v": 0.25,
+          "position": [
+            -0.3781190812587738,
+            -0.7465088963508606,
+            0.5747817158699036
+          ],
+          "authoredHeadNormal": [
+            -0.3869820237159729,
+            0.7501533627510071,
+            0.5362040996551514
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            -0.38947102427482605,
+            0.7412216663360596,
+            0.5467199683189392
+          ],
+          "authoredVsFiniteDegrees": 0.8032799684537483,
+          "sourceAuthoredChangeDegrees": 10.33145121924271,
+          "normalIdenticalToPre130": false,
+          "keyDot": 0.8904642583096278,
+          "finiteKeyDot": 0.8966093204947765,
+          "fillDot": 0.6688989967657153,
+          "deltaRelief": -0.0008779432278397524,
+          "residualNormalWeight": 0.1447016124233952
+        },
+        {
+          "row": 5,
+          "v": 0.3125,
+          "position": [
+            -0.3781190812587738,
+            -0.749247133731842,
+            0.5780572891235352
+          ],
+          "authoredHeadNormal": [
+            -0.41066405177116394,
+            0.6296507120132446,
+            0.6594656705856323
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            -0.4085470139980316,
+            0.6459333896636963,
+            0.6448716521263123
+          ],
+          "authoredVsFiniteDegrees": 1.258698720507558,
+          "sourceAuthoredChangeDegrees": 3.3435036257850292,
+          "normalIdenticalToPre130": false,
+          "keyDot": 0.9538576611202174,
+          "finiteKeyDot": 0.9474459099118874,
+          "fillDot": 0.731526689461969,
+          "deltaRelief": -0.00006809382285123177,
+          "residualNormalWeight": 0.010407563626762428
+        },
+        {
+          "row": 6,
+          "v": 0.375,
+          "position": [
+            -0.3781190812587738,
+            -0.751987874507904,
+            0.5802569389343262
+          ],
+          "authoredHeadNormal": [
+            -0.4235866963863373,
+            0.5195233225822449,
+            0.7420713305473328
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            -0.4231642186641693,
+            0.5258438587188721,
+            0.7378484010696411
+          ],
+          "authoredVsFiniteDegrees": 0.43620521881386626,
+          "sourceAuthoredChangeDegrees": 0,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.9840178870300123,
+          "finiteKeyDot": 0.9828523968089473,
+          "fillDot": 0.7635488454950793,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 7,
+          "v": 0.4375,
+          "position": [
+            -0.3781190812587738,
+            -0.7547311186790466,
+            0.5819597840309143
+          ],
+          "authoredHeadNormal": [
+            -0.4309684932231903,
+            0.4224216639995575,
+            0.7973870635032654
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            -0.43101128935813904,
+            0.42241841554641724,
+            0.7973656058311462
+          ],
+          "authoredVsFiniteDegrees": 0.0027492974984945607,
+          "sourceAuthoredChangeDegrees": 0.0000012074182697257333,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.9949639511862552,
+          "finiteKeyDot": 0.9949680826782137,
+          "fillDot": 0.7768385165181395,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 8,
+          "v": 0.5,
+          "position": [
+            -0.3781190812587738,
+            -0.7574770450592041,
+            0.5831587314605713
+          ],
+          "authoredHeadNormal": [
+            -0.4343516528606415,
+            0.2872295081615448,
+            0.8537200093269348
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            -0.43437397480010986,
+            0.287227600812912,
+            0.8537092804908752
+          ],
+          "authoredVsFiniteDegrees": 0.001423214803934333,
+          "sourceAuthoredChangeDegrees": 8.537736462515939e-7,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.9906267576829159,
+          "finiteKeyDot": 0.9906291854389303,
+          "fillDot": 0.7781855944374692,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 9,
+          "v": 0.5625,
+          "position": [
+            -0.3781190812587738,
+            -0.7602260112762451,
+            0.5838015079498291
+          ],
+          "authoredHeadNormal": [
+            -0.42827606201171875,
+            0.11452624946832657,
+            0.8963611721992493
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            -0.4282791018486023,
+            0.1145261600613594,
+            0.8963597416877747
+          ],
+          "authoredVsFiniteDegrees": 0.0001925557707416872,
+          "sourceAuthoredChangeDegrees": 0.0000012074182697257333,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.957010779171803,
+          "finiteKeyDot": 0.9570111856687484,
+          "fillDot": 0.755723722223762,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 10,
+          "v": 0.625,
+          "position": [
+            -0.3781190812587738,
+            -0.7629778981208801,
+            0.5838542580604553
+          ],
+          "authoredHeadNormal": [
+            -0.40841832756996155,
+            -0.08099561929702759,
+            0.9091942310333252
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            -0.4084029495716095,
+            -0.08099661767482758,
+            0.9092010855674744
+          ],
+          "authoredVsFiniteDegrees": 0.0009663529710893504,
+          "sourceAuthoredChangeDegrees": 8.537736462515939e-7,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.8848071381846672,
+          "finiteKeyDot": 0.8848041770442967,
+          "fillDot": 0.7011570393826931,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 11,
+          "v": 0.6875,
+          "position": [
+            -0.3781190812587738,
+            -0.7657328844070435,
+            0.5833032131195068
+          ],
+          "authoredHeadNormal": [
+            -0.3758109211921692,
+            -0.27200114727020264,
+            0.8858789801597595
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            -0.3762519955635071,
+            -0.26855647563934326,
+            0.8867422938346863
+          ],
+          "authoredVsFiniteDegrees": 0.20503271199331288,
+          "sourceAuthoredChangeDegrees": 0,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.7796899343645827,
+          "finiteKeyDot": 0.7818538445820595,
+          "fillDot": 0.6183946681598564,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 12,
+          "v": 0.75,
+          "position": [
+            -0.3781190812587738,
+            -0.7685600519180298,
+            0.5821535587310791
+          ],
+          "authoredHeadNormal": [
+            -0.34079432487487793,
+            -0.41432926058769226,
+            0.8439137935638428
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            -0.3397950530052185,
+            -0.419161856174469,
+            0.8419279456138611
+          ],
+          "authoredVsFiniteDegrees": 0.30478006761726784,
+          "sourceAuthoredChangeDegrees": 0,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.6767909936709233,
+          "finiteKeyDot": 0.6729592346337222,
+          "fillDot": 0.5368937291614424,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 13,
+          "v": 0.8125,
+          "position": [
+            -0.3781190812587738,
+            -0.7715027332305908,
+            0.5804279446601868
+          ],
+          "authoredHeadNormal": [
+            -0.30485597252845764,
+            -0.5378089547157288,
+            0.7860180139541626
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            -0.30354389548301697,
+            -0.5429340600967407,
+            0.782996654510498
+          ],
+          "authoredVsFiniteDegrees": 0.34906711982770633,
+          "sourceAuthoredChangeDegrees": 0,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.5680007455284829,
+          "finiteKeyDot": 0.5630976695937637,
+          "fillDot": 0.4479993962640653,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 14,
+          "v": 0.875,
+          "position": [
+            -0.3781190812587738,
+            -0.7743085026741028,
+            0.5781636238098145
+          ],
+          "authoredHeadNormal": [
+            -0.26538440585136414,
+            -0.6562840938568115,
+            0.7063018679618835
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            -0.26656800508499146,
+            -0.6524145603179932,
+            0.7094341516494751
+          ],
+          "authoredVsFiniteDegrees": 0.2931923845170165,
+          "sourceAuthoredChangeDegrees": 0,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.44231523188920563,
+          "finiteKeyDot": 0.4467762310668943,
+          "fillDot": 0.3419693652660767,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 15,
+          "v": 0.9375,
+          "position": [
+            -0.3781190812587738,
+            -0.7769452333450317,
+            0.5754095911979675
+          ],
+          "authoredHeadNormal": [
+            -0.23630349338054657,
+            -0.7290508151054382,
+            0.6423749327659607
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            -0.2369026392698288,
+            -0.7273420691490173,
+            0.6440890431404114
+          ],
+          "authoredVsFiniteDegrees": 0.14286040607837597,
+          "sourceAuthoredChangeDegrees": 0,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.35103100255414516,
+          "finiteKeyDot": 0.35329683847573223,
+          "fillDot": 0.2643979502101256,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 16,
+          "v": 1,
+          "position": [
+            -0.3781190812587738,
+            -0.7795616984367371,
+            0.5722225904464722
+          ],
+          "authoredHeadNormal": [
+            -0.2243042141199112,
+            -0.7531262040138245,
+            0.6184566020965576
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            -0.22421279549598694,
+            -0.7533647418022156,
+            0.6181991696357727
+          ],
+          "authoredVsFiniteDegrees": 0.020779427366516327,
+          "sourceAuthoredChangeDegrees": 0,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.317463327909311,
+          "finiteKeyDot": 0.31712895715111744,
+          "fillDot": 0.23676533425441348,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        }
+      ]
+    },
+    {
+      "col": 35,
+      "x": -0.07229999999999998,
+      "rows": [
+        {
+          "row": 0,
+          "v": 0,
+          "position": [
+            -0.3058190941810608,
+            -0.716077983379364,
+            0.5819156765937805
+          ],
+          "authoredHeadNormal": [
+            -0.16014491021633148,
+            -0.10044398903846741,
+            0.9819697737693787
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            -0.18121814727783203,
+            0.065305694937706,
+            0.9812722206115723
+          ],
+          "authoredVsFiniteDegrees": 9.584458286395117,
+          "sourceAuthoredChangeDegrees": 49.03101637234867,
+          "normalIdenticalToPre130": false,
+          "keyDot": 0.806846562461101,
+          "finiteKeyDot": 0.8781266021658387,
+          "fillDot": 0.8159795842850851,
+          "deltaRelief": 0,
+          "residualNormalWeight": 1
+        },
+        {
+          "row": 1,
+          "v": 0.0625,
+          "position": [
+            -0.3058190941810608,
+            -0.7199490070343018,
+            0.5821706056594849
+          ],
+          "authoredHeadNormal": [
+            -0.1823568195104599,
+            0.2822500169277191,
+            0.9418497085571289
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            -0.19726642966270447,
+            0.36895617842674255,
+            0.9082716107368469
+          ],
+          "authoredVsFiniteDegrees": 5.397464509941787,
+          "sourceAuthoredChangeDegrees": 27.85331309348149,
+          "normalIdenticalToPre130": false,
+          "keyDot": 0.9279960637248047,
+          "finiteKeyDot": 0.9415110527884767,
+          "fillDot": 0.9129675934466707,
+          "deltaRelief": -0.003487834049200547,
+          "residualNormalWeight": 0.9572205544936634
+        },
+        {
+          "row": 2,
+          "v": 0.125,
+          "position": [
+            -0.3058190941810608,
+            -0.7238216400146484,
+            0.5850719213485718
+          ],
+          "authoredHeadNormal": [
+            -0.18319037556648254,
+            0.7199962735176086,
+            0.6693628430366516
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            -0.1902530938386917,
+            0.7158654928207397,
+            0.6718186736106873
+          ],
+          "authoredVsFiniteDegrees": 0.4894578560676942,
+          "sourceAuthoredChangeDegrees": 1.1953191513898829,
+          "normalIdenticalToPre130": false,
+          "keyDot": 0.878201780208555,
+          "finiteKeyDot": 0.8822061635203673,
+          "fillDot": 0.82444657204565,
+          "deltaRelief": -0.004598780920151753,
+          "residualNormalWeight": 0.7536368774915214
+        },
+        {
+          "row": 3,
+          "v": 0.1875,
+          "position": [
+            -0.3058190941810608,
+            -0.7276962399482727,
+            0.5904338955879211
+          ],
+          "authoredHeadNormal": [
+            -0.17519083619117737,
+            0.8236649632453918,
+            0.5393368005752563
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            -0.18000569939613342,
+            0.8123820424079895,
+            0.5546470284461975
+          ],
+          "authoredVsFiniteDegrees": 1.1240822226632223,
+          "sourceAuthoredChangeDegrees": 10.768869461767023,
+          "normalIdenticalToPre130": false,
+          "keyDot": 0.8114018623061781,
+          "finiteKeyDot": 0.8215925872298748,
+          "fillDot": 0.7460776641694293,
+          "deltaRelief": -0.0033079852246344927,
+          "residualNormalWeight": 0.43326313533795446
+        },
+        {
+          "row": 4,
+          "v": 0.25,
+          "position": [
+            -0.3058190941810608,
+            -0.7315732836723328,
+            0.5964246988296509
+          ],
+          "authoredHeadNormal": [
+            -0.18411436676979065,
+            0.805693507194519,
+            0.5629918575286865
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            -0.18617771565914154,
+            0.7970045804977417,
+            0.5745620131492615
+          ],
+          "authoredVsFiniteDegrees": 0.8374345519493048,
+          "sourceAuthoredChangeDegrees": 10.720145943955488,
+          "normalIdenticalToPre130": false,
+          "keyDot": 0.8277094845350016,
+          "finiteKeyDot": 0.8345435794908689,
+          "fillDot": 0.7589712734264829,
+          "deltaRelief": -0.0012483255270846483,
+          "residualNormalWeight": 0.1447016124233952
+        },
+        {
+          "row": 5,
+          "v": 0.3125,
+          "position": [
+            -0.3058190941810608,
+            -0.7354532480239868,
+            0.6011850833892822
+          ],
+          "authoredHeadNormal": [
+            -0.20785507559776306,
+            0.6858970522880554,
+            0.697381854057312
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            -0.20517505705356598,
+            0.7020553946495056,
+            0.6819248199462891
+          ],
+          "authoredVsFiniteDegrees": 1.290384239247839,
+          "sourceAuthoredChangeDegrees": 3.498915976321346,
+          "normalIdenticalToPre130": false,
+          "keyDot": 0.90002555901838,
+          "finiteKeyDot": 0.8926100155470801,
+          "fillDot": 0.8319090067366157,
+          "deltaRelief": -0.00009682090436659519,
+          "residualNormalWeight": 0.010407563626762428
+        },
+        {
+          "row": 6,
+          "v": 0.375,
+          "position": [
+            -0.3058190941810608,
+            -0.7393364906311035,
+            0.6044076681137085
+          ],
+          "authoredHeadNormal": [
+            -0.2228478342294693,
+            0.572472095489502,
+            0.7890592813491821
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            -0.2222166210412979,
+            0.5789623260498047,
+            0.7844886183738708
+          ],
+          "authoredVsFiniteDegrees": 0.4562587000160431,
+          "sourceAuthoredChangeDegrees": 0,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.9370700878221982,
+          "finiteKeyDot": 0.9355903160245729,
+          "fillDot": 0.8704798890250801,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 7,
+          "v": 0.4375,
+          "position": [
+            -0.3058190941810608,
+            -0.7432235479354858,
+            0.6069145202636719
+          ],
+          "authoredHeadNormal": [
+            -0.23284175992012024,
+            0.4698008894920349,
+            0.8515114784240723
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            -0.23284415900707245,
+            0.46979203820228577,
+            0.8515157103538513
+          ],
+          "authoredVsFiniteDegrees": 0.0005786872483891589,
+          "sourceAuthoredChangeDegrees": 0,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.9528405961483928,
+          "finiteKeyDot": 0.9528418464192451,
+          "fillDot": 0.8876240859512879,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 8,
+          "v": 0.5,
+          "position": [
+            -0.3058190941810608,
+            -0.7471148371696472,
+            0.608694314956665
+          ],
+          "authoredHeadNormal": [
+            -0.24073132872581482,
+            0.3240835666656494,
+            0.914887011051178
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            -0.2407316416501999,
+            0.3240775167942047,
+            0.9148890972137451
+          ],
+          "authoredVsFiniteDegrees": 0.00036709685521996095,
+          "sourceAuthoredChangeDegrees": 0,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.9524015220907447,
+          "finiteKeyDot": 0.9524010513660173,
+          "fillDot": 0.8905225360349789,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 9,
+          "v": 0.5625,
+          "position": [
+            -0.3058190941810608,
+            -0.7510107159614563,
+            0.6096683144569397
+          ],
+          "authoredHeadNormal": [
+            -0.24214939773082733,
+            0.1352531760931015,
+            0.9607654213905334
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            -0.2421492040157318,
+            0.13525083661079407,
+            0.9607658386230469
+          ],
+          "authoredVsFiniteDegrees": 0.00013659044253562348,
+          "sourceAuthoredChangeDegrees": 0.0000012074182697257333,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.9192005962484132,
+          "finiteKeyDot": 0.9191999248463641,
+          "fillDot": 0.8634709817523486,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 10,
+          "v": 0.625,
+          "position": [
+            -0.3058190941810608,
+            -0.7549116611480713,
+            0.6097875237464905
+          ],
+          "authoredHeadNormal": [
+            -0.23326165974140167,
+            -0.07827282696962357,
+            0.9692586660385132
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            -0.2332608848810196,
+            -0.07827164977788925,
+            0.9692589640617371
+          ],
+          "authoredVsFiniteDegrees": 0.00008252065692573218,
+          "sourceAuthoredChangeDegrees": 0,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.8426250467938398,
+          "finiteKeyDot": 0.8426253007329175,
+          "fillDot": 0.7959969238160479,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 11,
+          "v": 0.6875,
+          "position": [
+            -0.3058190941810608,
+            -0.7588181495666504,
+            0.6090338230133057
+          ],
+          "authoredHeadNormal": [
+            -0.21448130905628204,
+            -0.2826279103755951,
+            0.934943437576294
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            -0.21448224782943726,
+            -0.2826201021671295,
+            0.9349455833435059
+          ],
+          "authoredVsFiniteDegrees": 0.0004670711512972133,
+          "sourceAuthoredChangeDegrees": 0,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.7311474977460136,
+          "finiteKeyDot": 0.7311525174658073,
+          "fillDot": 0.695339174088263,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 12,
+          "v": 0.75,
+          "position": [
+            -0.3058190941810608,
+            -0.7627307772636414,
+            0.6074205040931702
+          ],
+          "authoredHeadNormal": [
+            -0.19057200849056244,
+            -0.4510209560394287,
+            0.8719303011894226
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            -0.19074249267578125,
+            -0.44947171211242676,
+            0.8726926445960999
+          ],
+          "authoredVsFiniteDegrees": 0.09941089864860206,
+          "sourceAuthoredChangeDegrees": 0.0000012074182697257333,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.6080185305092716,
+          "finiteKeyDot": 0.6092676525351484,
+          "fillDot": 0.5828707691068794,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 13,
+          "v": 0.8125,
+          "position": [
+            -0.3058190941810608,
+            -0.766681969165802,
+            0.6049802899360657
+          ],
+          "authoredHeadNormal": [
+            -0.16921837627887726,
+            -0.5609652996063232,
+            0.8103598356246948
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            -0.16881613433361053,
+            -0.563411295413971,
+            0.8087452054023743
+          ],
+          "authoredVsFiniteDegrees": 0.16949996814223448,
+          "sourceAuthoredChangeDegrees": 0,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.5088362257048683,
+          "finiteKeyDot": 0.506477061475709,
+          "fillDot": 0.49225298211921875,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 14,
+          "v": 0.875,
+          "position": [
+            -0.3058190941810608,
+            -0.7708456516265869,
+            0.6017661690711975
+          ],
+          "authoredHeadNormal": [
+            -0.14872895181179047,
+            -0.6492606401443481,
+            0.7458822131156921
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            -0.14737464487552643,
+            -0.6559609770774841,
+            0.7402674555778503
+          ],
+          "authoredVsFiniteDegrees": 0.5068480538679154,
+          "sourceAuthoredChangeDegrees": 0.0000012074182697257333,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.41581167470721914,
+          "finiteKeyDot": 0.408295289590103,
+          "fillDot": 0.4066334867452893,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 15,
+          "v": 0.9375,
+          "position": [
+            -0.3058190941810608,
+            -0.7747308611869812,
+            0.5978478789329529
+          ],
+          "authoredHeadNormal": [
+            -0.12380971014499664,
+            -0.7446165084838867,
+            0.6559095978736877
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            -0.12546667456626892,
+            -0.7377824783325195,
+            0.6632760167121887
+          ],
+          "authoredVsFiniteDegrees": 0.5835021016811118,
+          "sourceAuthoredChangeDegrees": 0,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.29814010810723546,
+          "finiteKeyDot": 0.3072196515525166,
+          "fillDot": 0.29639604841367184,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 16,
+          "v": 1,
+          "position": [
+            -0.3058190941810608,
+            -0.7784493565559387,
+            0.5933063626289368
+          ],
+          "authoredHeadNormal": [
+            -0.11398471146821976,
+            -0.7690985798835754,
+            0.6288838386535645
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            -0.1139255240559578,
+            -0.7693602442741394,
+            0.6285744309425354
+          ],
+          "authoredVsFiniteDegrees": 0.02346362093715034,
+          "sourceAuthoredChangeDegrees": 0.0000012074182697257333,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.26312664705749794,
+          "finiteKeyDot": 0.262759963212743,
+          "fillDot": 0.265314613770977,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        }
+      ]
+    },
+    {
+      "col": 50,
+      "x": 0,
+      "rows": [
+        {
+          "row": 0,
+          "v": 0,
+          "position": [
+            -0.2335190773010254,
+            -0.7210709452629089,
+            0.5856006741523743
+          ],
+          "authoredHeadNormal": [
+            0.000982925877906382,
+            -0.07661015540361404,
+            0.9970606565475464
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            0.004301256965845823,
+            0.12707382440567017,
+            0.9918839335441589
+          ],
+          "authoredVsFiniteDegrees": 11.695845072544227,
+          "sourceAuthoredChangeDegrees": 55.125015339975754,
+          "normalIdenticalToPre130": false,
+          "keyDot": 0.744739785376528,
+          "finiteKeyDot": 0.8140084254896768,
+          "fillDot": 0.8745952673465054,
+          "deltaRelief": 0,
+          "residualNormalWeight": 1
+        },
+        {
+          "row": 1,
+          "v": 0.0625,
+          "position": [
+            -0.2335190773010254,
+            -0.7245680689811707,
+            0.5860509276390076
+          ],
+          "authoredHeadNormal": [
+            -0.0033217421732842922,
+            0.37980028986930847,
+            0.9250625371932983
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            0.005698859225958586,
+            0.4769696295261383,
+            0.8789013028144836
+          ],
+          "authoredVsFiniteDegrees": 6.188328060373909,
+          "sourceAuthoredChangeDegrees": 29.348104068967533,
+          "normalIdenticalToPre130": false,
+          "keyDot": 0.8591204014490328,
+          "finiteKeyDot": 0.8544606586324087,
+          "fillDot": 0.9734217294671941,
+          "deltaRelief": -0.0038327846694511504,
+          "residualNormalWeight": 0.9572205544936634
+        },
+        {
+          "row": 2,
+          "v": 0.125,
+          "position": [
+            -0.2335190773010254,
+            -0.7280669808387756,
+            0.589402973651886
+          ],
+          "authoredHeadNormal": [
+            0.0019583709072321653,
+            0.8040923476219177,
+            0.5945011377334595
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            0.006267343182116747,
+            0.8018614649772644,
+            0.5974770784378052
+          ],
+          "authoredVsFiniteDegrees": 0.3261352662791998,
+          "sourceAuthoredChangeDegrees": 0.8186518240007431,
+          "normalIdenticalToPre130": false,
+          "keyDot": 0.7561894285955797,
+          "finiteKeyDot": 0.7554680555069084,
+          "fillDot": 0.8288768659059812,
+          "deltaRelief": -0.005053605406760168,
+          "residualNormalWeight": 0.7536368774915214
+        },
+        {
+          "row": 3,
+          "v": 0.1875,
+          "position": [
+            -0.2335190773010254,
+            -0.7315677404403687,
+            0.5954539179801941
+          ],
+          "authoredHeadNormal": [
+            0.0030953469686210155,
+            0.8849483132362366,
+            0.46567896008491516
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            0.004697103053331375,
+            0.8769059777259827,
+            0.4806390404701233
+          ],
+          "authoredVsFiniteDegrees": 0.9774865560931513,
+          "sourceAuthoredChangeDegrees": 9.833033224809475,
+          "normalIdenticalToPre130": false,
+          "keyDot": 0.6854424543791426,
+          "finiteKeyDot": 0.6932656423764179,
+          "fillDot": 0.741804981098251,
+          "deltaRelief": -0.0036351485984994422,
+          "residualNormalWeight": 0.43326313533795446
+        },
+        {
+          "row": 4,
+          "v": 0.25,
+          "position": [
+            -0.2335190773010254,
+            -0.7350709438323975,
+            0.602192223072052
+          ],
+          "authoredHeadNormal": [
+            0.002815036568790674,
+            0.8721339106559753,
+            0.48925909399986267
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            0.002940395148470998,
+            0.8655179142951965,
+            0.5008693933486938
+          ],
+          "authoredVsFiniteDegrees": 0.765684367182537,
+          "sourceAuthoredChangeDegrees": 9.935439272829026,
+          "normalIdenticalToPre130": false,
+          "keyDot": 0.6991603468293932,
+          "finiteKeyDot": 0.7056668365155606,
+          "fillDot": 0.7584443199453166,
+          "deltaRelief": -0.0013717862934996133,
+          "residualNormalWeight": 0.1447016124233952
+        },
+        {
+          "row": 5,
+          "v": 0.3125,
+          "position": [
+            -0.2335190773010254,
+            -0.7385768890380859,
+            0.6075761318206787
+          ],
+          "authoredHeadNormal": [
+            0.0017802704824134707,
+            0.777863621711731,
+            0.6284306049346924
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            0.0014697520527988672,
+            0.7909883856773376,
+            0.611829400062561
+          ],
+          "authoredVsFiniteDegrees": 1.21268595007272,
+          "sourceAuthoredChangeDegrees": 3.4066718913745353,
+          "normalIdenticalToPre130": false,
+          "keyDot": 0.772944738096466,
+          "finiteKeyDot": 0.7650577041400929,
+          "fillDot": 0.8500548355981699,
+          "deltaRelief": -0.00010639659820504965,
+          "residualNormalWeight": 0.010407563626762428
+        },
+        {
+          "row": 6,
+          "v": 0.375,
+          "position": [
+            -0.2335190773010254,
+            -0.7420856952667236,
+            0.6112691164016724
+          ],
+          "authoredHeadNormal": [
+            0.000544119393453002,
+            0.6786179542541504,
+            0.734491229057312
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            0.0005180115113034844,
+            0.6845487952232361,
+            0.7289668321609497
+          ],
+          "authoredVsFiniteDegrees": 0.4643959132348361,
+          "sourceAuthoredChangeDegrees": 0.0000012074182697257333,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.8193157012239709,
+          "finiteKeyDot": 0.817227075749808,
+          "fillDot": 0.9098659631570083,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 7,
+          "v": 0.4375,
+          "position": [
+            -0.2335190773010254,
+            -0.7455978393554688,
+            0.6141757369041443
+          ],
+          "authoredHeadNormal": [
+            -0.00048388171126134694,
+            0.5804873704910278,
+            0.8142691254615784
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            -0.00048209266969934106,
+            0.5804826617240906,
+            0.8142724633216858
+          ],
+          "authoredVsFiniteDegrees": 0.0003462196884534867,
+          "sourceAuthoredChangeDegrees": 0,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.8456022317495051,
+          "finiteKeyDot": 0.8456021843144826,
+          "fillDot": 0.9463485320397813,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 8,
+          "v": 0.5,
+          "position": [
+            -0.2335190773010254,
+            -0.7491136789321899,
+            0.6162845492362976
+          ],
+          "authoredHeadNormal": [
+            -0.0012401563581079245,
+            0.4278225898742676,
+            0.9038618803024292
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            -0.0012401611311361194,
+            0.42781904339790344,
+            0.9038635492324829
+          ],
+          "authoredVsFiniteDegrees": 0.00022457492949430068,
+          "sourceAuthoredChangeDegrees": 0,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.8592866893508133,
+          "finiteKeyDot": 0.859286688348511,
+          "fillDot": 0.972064788451543,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 9,
+          "v": 0.5625,
+          "position": [
+            -0.2335190773010254,
+            -0.7526334524154663,
+            0.6175099015235901
+          ],
+          "authoredHeadNormal": [
+            -0.0014719137689098716,
+            0.20981529355049133,
+            0.9777399301528931
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            -0.0014719603350386024,
+            0.2098134309053421,
+            0.9777403473854065
+          ],
+          "authoredVsFiniteDegrees": 0.00010938969636662102,
+          "sourceAuthoredChangeDegrees": 0,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.8364564631191913,
+          "finiteKeyDot": 0.8364561105324521,
+          "fillDot": 0.9600688101470187,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 10,
+          "v": 0.625,
+          "position": [
+            -0.2335190773010254,
+            -0.7561574578285217,
+            0.617798924446106
+          ],
+          "authoredHeadNormal": [
+            -0.0009628643747419119,
+            -0.05355669558048248,
+            0.9985643625259399
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            -0.0009632007568143308,
+            -0.05355584993958473,
+            0.9985643625259399
+          ],
+          "authoredVsFiniteDegrees": 0.00005208019242134902,
+          "sourceAuthoredChangeDegrees": 8.537736462515939e-7,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.7553905942042356,
+          "finiteKeyDot": 0.7553911119045612,
+          "fillDot": 0.8838476909064625,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 11,
+          "v": 0.6875,
+          "position": [
+            -0.2335190773010254,
+            -0.7596862316131592,
+            0.6171332001686096
+          ],
+          "authoredHeadNormal": [
+            0.0002361839433433488,
+            -0.3064732551574707,
+            0.9518792629241943
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            0.00023559568217024207,
+            -0.30646878480911255,
+            0.951880693435669
+          ],
+          "authoredVsFiniteDegrees": 0.00027102842352765184,
+          "sourceAuthoredChangeDegrees": 0,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.6254511942123087,
+          "finiteKeyDot": 0.6254542564666037,
+          "fillDot": 0.7504835051141293,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 12,
+          "v": 0.75,
+          "position": [
+            -0.2335190773010254,
+            -0.7632198929786682,
+            0.6155254244804382
+          ],
+          "authoredHeadNormal": [
+            0.0017925268039107323,
+            -0.5034251809120178,
+            0.8640369772911072
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            0.0016936371102929115,
+            -0.49848365783691406,
+            0.866897463798523
+          ],
+          "authoredVsFiniteDegrees": 0.327193016513363,
+          "sourceAuthoredChangeDegrees": 0.0000012074182697257333,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.48400500001558766,
+          "finiteKeyDot": 0.4880938367725427,
+          "fillDot": 0.6001885393323907,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 13,
+          "v": 0.8125,
+          "position": [
+            -0.2335190773010254,
+            -0.7668532729148865,
+            0.6130115389823914
+          ],
+          "authoredHeadNormal": [
+            0.003070445731282234,
+            -0.6143224239349365,
+            0.7890491485595703
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            0.003155648475512862,
+            -0.6227733492851257,
+            0.7823959589004517
+          ],
+          "authoredVsFiniteDegrees": 0.6162731566452145,
+          "sourceAuthoredChangeDegrees": 0.0000014787793334710982,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.3843536421908967,
+          "finiteKeyDot": 0.37603774342087287,
+          "fillDot": 0.4925584622063923,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 14,
+          "v": 0.875,
+          "position": [
+            -0.2335190773010254,
+            -0.7705978155136108,
+            0.609650194644928
+          ],
+          "authoredHeadNormal": [
+            0.004882086534053087,
+            -0.7189810872077942,
+            0.6950125098228455
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            0.004973862785845995,
+            -0.7208170890808105,
+            0.6931074857711792
+          ],
+          "authoredVsFiniteDegrees": 0.15168181268268122,
+          "sourceAuthoredChangeDegrees": 0,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.2719487387138121,
+          "finiteKeyDot": 0.26974800767366575,
+          "fillDot": 0.3700694627793824,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 15,
+          "v": 0.9375,
+          "position": [
+            -0.2335190773010254,
+            -0.774055004119873,
+            0.6055184602737427
+          ],
+          "authoredHeadNormal": [
+            0.006718647666275501,
+            -0.7997949719429016,
+            0.6002357006072998
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            0.006670105736702681,
+            -0.7953822612762451,
+            0.606071412563324
+          ],
+          "authoredVsFiniteDegrees": 0.4192005445118938,
+          "sourceAuthoredChangeDegrees": 8.537736462515939e-7,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.1677352213850657,
+          "finiteKeyDot": 0.1739115435246522,
+          "fillDot": 0.25553335711933467,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 16,
+          "v": 1,
+          "position": [
+            -0.2335190773010254,
+            -0.7774103879928589,
+            0.600705623626709
+          ],
+          "authoredHeadNormal": [
+            0.008561674505472183,
+            -0.820040762424469,
+            0.5722410678863525
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            0.00855762604624033,
+            -0.8202831745147705,
+            0.5718936324119568
+          ],
+          "authoredVsFiniteDegrees": 0.02427417496709151,
+          "sourceAuthoredChangeDegrees": 0.0000012074182697257333,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.13762098069591244,
+          "finiteKeyDot": 0.13726429424899955,
+          "fillDot": 0.22330556492420733,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        }
+      ]
+    },
+    {
+      "col": 65,
+      "x": 0.07229999999999998,
+      "rows": [
+        {
+          "row": 0,
+          "v": 0,
+          "position": [
+            -0.16121907532215118,
+            -0.71641606092453,
+            0.5818908214569092
+          ],
+          "authoredHeadNormal": [
+            0.15927638113498688,
+            -0.10133862495422363,
+            0.9820191264152527
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            0.1672413945198059,
+            0.06926180422306061,
+            0.9834800958633423
+          ],
+          "authoredVsFiniteDegrees": 9.797622992862387,
+          "sourceAuthoredChangeDegrees": 50.31702800053439,
+          "normalIdenticalToPre130": false,
+          "keyDot": 0.64283330146667,
+          "finiteKeyDot": 0.7026897546345943,
+          "fillDot": 0.8877609693586177,
+          "deltaRelief": 0,
+          "residualNormalWeight": 1
+        },
+        {
+          "row": 1,
+          "v": 0.0625,
+          "position": [
+            -0.16121907532215118,
+            -0.7201685905456543,
+            0.5821570754051208
+          ],
+          "authoredHeadNormal": [
+            0.17614153027534485,
+            0.29056650400161743,
+            0.9405026435852051
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            0.17102555930614471,
+            0.3857646584510803,
+            0.9066067934036255
+          ],
+          "authoredVsFiniteDegrees": 5.799775578880485,
+          "sourceAuthoredChangeDegrees": 28.479423120058566,
+          "normalIdenticalToPre130": false,
+          "keyDot": 0.7462613028000423,
+          "finiteKeyDot": 0.7576362884446756,
+          "fillDot": 0.9956299152885306,
+          "deltaRelief": -0.003487834049200547,
+          "residualNormalWeight": 0.9572205544936634
+        },
+        {
+          "row": 2,
+          "v": 0.125,
+          "position": [
+            -0.16121907532215118,
+            -0.7239224910736084,
+            0.585071325302124
+          ],
+          "authoredHeadNormal": [
+            0.15105928480625153,
+            0.7345743179321289,
+            0.661499559879303
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            0.14914581179618835,
+            0.7334277033805847,
+            0.6632038354873657
+          ],
+          "authoredVsFiniteDegrees": 0.1608436979655002,
+          "sourceAuthoredChangeDegrees": 0.8955458386465269,
+          "normalIdenticalToPre130": false,
+          "keyDot": 0.7061462348259424,
+          "finiteKeyDot": 0.7080269378027166,
+          "fillDot": 0.8980059109761539,
+          "deltaRelief": -0.004598780920151753,
+          "residualNormalWeight": 0.7536368774915214
+        },
+        {
+          "row": 3,
+          "v": 0.1875,
+          "position": [
+            -0.16121907532215118,
+            -0.7276782989501953,
+            0.5904480218887329
+          ],
+          "authoredHeadNormal": [
+            0.13597244024276733,
+            0.8368073105812073,
+            0.5303443074226379
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            0.13759994506835938,
+            0.8268086910247803,
+            0.5453930497169495
+          ],
+          "authoredVsFiniteDegrees": 1.0394010842683679,
+          "sourceAuthoredChangeDegrees": 10.708417665495569,
+          "normalIdenticalToPre130": false,
+          "keyDot": 0.6497749327388409,
+          "finiteKeyDot": 0.6569335646948639,
+          "fillDot": 0.8128883591250431,
+          "deltaRelief": -0.0033079852246344927,
+          "residualNormalWeight": 0.43326313533795446
+        },
+        {
+          "row": 4,
+          "v": 0.25,
+          "position": [
+            -0.16121907532215118,
+            -0.7314363718032837,
+            0.5964555740356445
+          ],
+          "authoredHeadNormal": [
+            0.14483903348445892,
+            0.819894552230835,
+            0.5538904070854187
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            0.14684991538524628,
+            0.8114306330680847,
+            0.5656991004943848
+          ],
+          "authoredVsFiniteDegrees": 0.8403762930737282,
+          "sourceAuthoredChangeDegrees": 10.709168573384902,
+          "normalIdenticalToPre130": false,
+          "keyDot": 0.6572693119630677,
+          "finiteKeyDot": 0.6622829836921256,
+          "fillDot": 0.830079368018001,
+          "deltaRelief": -0.0012483255270846483,
+          "residualNormalWeight": 0.1447016124233952
+        },
+        {
+          "row": 5,
+          "v": 0.3125,
+          "position": [
+            -0.16121907532215118,
+            -0.7351971864700317,
+            0.6012348532676697
+          ],
+          "authoredHeadNormal": [
+            0.17376410961151123,
+            0.703030526638031,
+            0.6896043419837952
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            0.17109917104244232,
+            0.7184799909591675,
+            0.6741747260093689
+          ],
+          "authoredVsFiniteDegrees": 1.2603514004860223,
+          "sourceAuthoredChangeDegrees": 3.522865109177592,
+          "normalIdenticalToPre130": false,
+          "keyDot": 0.7046976334435695,
+          "finiteKeyDot": 0.6997820530019997,
+          "fillDot": 0.9171557508892777,
+          "deltaRelief": -0.00009682090436659519,
+          "residualNormalWeight": 0.010407563626762428
+        },
+        {
+          "row": 6,
+          "v": 0.375,
+          "position": [
+            -0.16121907532215118,
+            -0.7389609813690186,
+            0.6044785976409912
+          ],
+          "authoredHeadNormal": [
+            0.19445957243442535,
+            0.5904321670532227,
+            0.7833104729652405
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            0.19362282752990723,
+            0.5968635082244873,
+            0.7786296606063843
+          ],
+          "authoredVsFiniteDegrees": 0.45826824236232083,
+          "sourceAuthoredChangeDegrees": 0,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.7253279306377791,
+          "finiteKeyDot": 0.7244934314409803,
+          "fillDot": 0.9659119129216334,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 7,
+          "v": 0.4375,
+          "position": [
+            -0.16121907532215118,
+            -0.7427283525466919,
+            0.6070088148117065
+          ],
+          "authoredHeadNormal": [
+            0.20947229862213135,
+            0.4873853325843811,
+            0.847689151763916
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            0.20947197079658508,
+            0.4873749017715454,
+            0.8476952314376831
+          ],
+          "authoredVsFiniteDegrees": 0.000692003422766217,
+          "sourceAuthoredChangeDegrees": 0,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.7296371625447617,
+          "finiteKeyDot": 0.7296382057820983,
+          "fillDot": 0.9903046408806476,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 8,
+          "v": 0.5,
+          "position": [
+            -0.16121907532215118,
+            -0.7464995980262756,
+            0.6088142395019531
+          ],
+          "authoredHeadNormal": [
+            0.22367796301841736,
+            0.3395753800868988,
+            0.9135954976081848
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            0.22367489337921143,
+            0.33956703543663025,
+            0.9135993719100952
+          ],
+          "authoredVsFiniteDegrees": 0.0005556971243204709,
+          "sourceAuthoredChangeDegrees": 0,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.7190658209370769,
+          "finiteKeyDot": 0.7190673137610767,
+          "fillDot": 0.9997211329118534,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 9,
+          "v": 0.5625,
+          "position": [
+            -0.16121907532215118,
+            -0.7502751350402832,
+            0.6098159551620483
+          ],
+          "authoredHeadNormal": [
+            0.23234985768795013,
+            0.1461026966571808,
+            0.9615963697433472
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            0.2323475182056427,
+            0.14609882235527039,
+            0.9615975022315979
+          ],
+          "authoredVsFiniteDegrees": 0.0002673020623632672,
+          "sourceAuthoredChangeDegrees": 0,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.6806305899382411,
+          "finiteKeyDot": 0.6806312552910485,
+          "fillDot": 0.9751884231837641,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 10,
+          "v": 0.625,
+          "position": [
+            -0.16121907532215118,
+            -0.754055380821228,
+            0.6099650263786316
+          ],
+          "authoredHeadNormal": [
+            0.2305869162082672,
+            -0.07400927692651749,
+            0.970233142375946
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            0.23058466613292694,
+            -0.07400812953710556,
+            0.9702337384223938
+          ],
+          "authoredVsFiniteDegrees": 0.00014868168379995127,
+          "sourceAuthoredChangeDegrees": 8.537736462515939e-7,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.6072009075026826,
+          "finiteKeyDot": 0.6072029610255287,
+          "fillDot": 0.9030614785429278,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 11,
+          "v": 0.6875,
+          "position": [
+            -0.16121907532215118,
+            -0.757840633392334,
+            0.6092422604560852
+          ],
+          "authoredHeadNormal": [
+            0.2176046520471573,
+            -0.2844824194908142,
+            0.9336583614349365
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            0.2176043689250946,
+            -0.28447726368904114,
+            0.9336600303649902
+          ],
+          "authoredVsFiniteDegrees": 0.0003109143073053022,
+          "sourceAuthoredChangeDegrees": 0,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.5079984605119165,
+          "finiteKeyDot": 0.5080017831649023,
+          "fillDot": 0.7909830832450923,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 12,
+          "v": 0.75,
+          "position": [
+            -0.16121907532215118,
+            -0.7616314888000488,
+            0.6076604127883911
+          ],
+          "authoredHeadNormal": [
+            0.19774077832698822,
+            -0.4565296769142151,
+            0.8674556016921997
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            0.19797490537166595,
+            -0.4542238116264343,
+            0.8686119318008423
+          ],
+          "authoredVsFiniteDegrees": 0.14840528524391325,
+          "sourceAuthoredChangeDegrees": 8.537736462515939e-7,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.40348626941546667,
+          "finiteKeyDot": 0.40511214658421146,
+          "fillDot": 0.6644333959925284,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 13,
+          "v": 0.8125,
+          "position": [
+            -0.16121907532215118,
+            -0.7654773592948914,
+            0.6052531599998474
+          ],
+          "authoredHeadNormal": [
+            0.17906226217746735,
+            -0.5644828081130981,
+            0.8057889938354492
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            0.1782800704240799,
+            -0.5693424344062805,
+            0.8025368452072144
+          ],
+          "authoredVsFiniteDegrees": 0.3380177272155004,
+          "sourceAuthoredChangeDegrees": 0.0000012074182697257333,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.32548124205411255,
+          "finiteKeyDot": 0.32157034403466356,
+          "fillDot": 0.5654170935867449,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 14,
+          "v": 0.875,
+          "position": [
+            -0.16121907532215118,
+            -0.7695111632347107,
+            0.6020734310150146
+          ],
+          "authoredHeadNormal": [
+            0.15896612405776978,
+            -0.6589285731315613,
+            0.7352162599563599
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            0.15815719962120056,
+            -0.6639276742935181,
+            0.7308804988861084
+          ],
+          "authoredVsFiniteDegrees": 0.38197149964029364,
+          "sourceAuthoredChangeDegrees": 0,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.24626678019744486,
+          "finiteKeyDot": 0.2414776500811125,
+          "fillDot": 0.4629046986533546,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 15,
+          "v": 0.9375,
+          "position": [
+            -0.16121907532215118,
+            -0.7732566595077515,
+            0.5981908440589905
+          ],
+          "authoredHeadNormal": [
+            0.13570989668369293,
+            -0.7514433264732361,
+            0.6456901431083679
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            0.1370980143547058,
+            -0.7453413009643555,
+            0.6524342894554138
+          ],
+          "authoredVsFiniteDegrees": 0.5271388944014646,
+          "sourceAuthoredChangeDegrees": 0,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.1546802874207372,
+          "finiteKeyDot": 0.1614468420752619,
+          "fillDot": 0.34322976513917347,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 16,
+          "v": 1,
+          "position": [
+            -0.16121907532215118,
+            -0.7768577933311462,
+            0.5936863422393799
+          ],
+          "authoredHeadNormal": [
+            0.12884493172168732,
+            -0.7735850214958191,
+            0.6204556226730347
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            0.1287773847579956,
+            -0.7738543152809143,
+            0.6201337575912476
+          ],
+          "authoredVsFiniteDegrees": 0.02435433726623687,
+          "sourceAuthoredChangeDegrees": 0,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.13047253032243245,
+          "finiteKeyDot": 0.13015833269320176,
+          "fillDot": 0.3108494771313669,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        }
+      ]
+    },
+    {
+      "col": 80,
+      "x": 0.1446,
+      "rows": [
+        {
+          "row": 0,
+          "v": 0,
+          "position": [
+            -0.08891908079385757,
+            -0.7326228618621826,
+            0.5652964115142822
+          ],
+          "authoredHeadNormal": [
+            0.23797957599163055,
+            -0.11862865835428238,
+            0.9639984369277954
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            0.2849005460739136,
+            0.04496672376990318,
+            0.9575017690658569
+          ],
+          "authoredVsFiniteDegrees": 9.770169346101165,
+          "sourceAuthoredChangeDegrees": 48.61835529138033,
+          "normalIdenticalToPre130": false,
+          "keyDot": 0.58214891984835,
+          "finiteKeyDot": 0.6132863229356262,
+          "fillDot": 0.882964242844551,
+          "deltaRelief": 0,
+          "residualNormalWeight": 1
+        },
+        {
+          "row": 1,
+          "v": 0.0625,
+          "position": [
+            -0.08891908079385757,
+            -0.7353401184082031,
+            0.5654191374778748
+          ],
+          "authoredHeadNormal": [
+            0.3305419385433197,
+            0.2514405846595764,
+            0.9096810817718506
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            0.34697356820106506,
+            0.3420494794845581,
+            0.8732762932777405
+          ],
+          "authoredVsFiniteDegrees": 5.675840730392996,
+          "sourceAuthoredChangeDegrees": 27.282933160334835,
+          "normalIdenticalToPre130": false,
+          "keyDot": 0.6288088678076017,
+          "finiteKeyDot": 0.6255036988790283,
+          "fillDot": 0.9884379788771197,
+          "deltaRelief": -0.002452982188448736,
+          "residualNormalWeight": 0.9572205544936634
+        },
+        {
+          "row": 2,
+          "v": 0.125,
+          "position": [
+            -0.08891908079385757,
+            -0.7380589842796326,
+            0.5674030184745789
+          ],
+          "authoredHeadNormal": [
+            0.36959120631217957,
+            0.6741002798080444,
+            0.6395241022109985
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            0.37092462182044983,
+            0.6729705333709717,
+            0.6399418711662292
+          ],
+          "authoredVsFiniteDegrees": 0.10295488487610982,
+          "sourceAuthoredChangeDegrees": 1.217640739591689,
+          "normalIdenticalToPre130": false,
+          "keyDot": 0.5548256400563665,
+          "finiteKeyDot": 0.55405032641099,
+          "fillDot": 0.9055703692640636,
+          "deltaRelief": -0.003234307460326507,
+          "residualNormalWeight": 0.7536368774915214
+        },
+        {
+          "row": 3,
+          "v": 0.1875,
+          "position": [
+            -0.08891908079385757,
+            -0.74077969789505,
+            0.5711190104484558
+          ],
+          "authoredHeadNormal": [
+            0.36023062467575073,
+            0.777394711971283,
+            0.5156465768814087
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            0.36327120661735535,
+            0.7666088342666626,
+            0.5294760465621948
+          ],
+          "authoredVsFiniteDegrees": 1.0198695347513098,
+          "sourceAuthoredChangeDegrees": 10.387711909335794,
+          "normalIdenticalToPre130": false,
+          "keyDot": 0.5015555772211279,
+          "finiteKeyDot": 0.506754252887091,
+          "fillDot": 0.8287124812735545,
+          "deltaRelief": -0.002326495103039643,
+          "residualNormalWeight": 0.43326313533795446
+        },
+        {
+          "row": 4,
+          "v": 0.25,
+          "position": [
+            -0.08891908079385757,
+            -0.7435021996498108,
+            0.5752802491188049
+          ],
+          "authoredHeadNormal": [
+            0.36758601665496826,
+            0.7591555118560791,
+            0.53718101978302
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            0.3701268136501312,
+            0.7498751878738403,
+            0.5483551621437073
+          ],
+          "authoredVsFiniteDegrees": 0.8448853868707894,
+          "sourceAuthoredChangeDegrees": 10.336957963883863,
+          "normalIdenticalToPre130": false,
+          "keyDot": 0.5077757007302038,
+          "finiteKeyDot": 0.5117249729461579,
+          "fillDot": 0.8432632266490547,
+          "deltaRelief": -0.0008779432278397524,
+          "residualNormalWeight": 0.1447016124233952
+        },
+        {
+          "row": 5,
+          "v": 0.3125,
+          "position": [
+            -0.08891908079385757,
+            -0.7462269067764282,
+            0.5785804986953735
+          ],
+          "authoredHeadNormal": [
+            0.3934857249259949,
+            0.6390402913093567,
+            0.6609058380126953
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            0.3911919593811035,
+            0.6541943550109863,
+            0.6473009586334229
+          ],
+          "authoredVsFiniteDegrees": 1.174234272349972,
+          "sourceAuthoredChangeDegrees": 3.3521639151233864,
+          "normalIdenticalToPre130": false,
+          "keyDot": 0.5462575104110845,
+          "finiteKeyDot": 0.5424584398195387,
+          "fillDot": 0.9176354351887576,
+          "deltaRelief": -0.00006809382285123177,
+          "residualNormalWeight": 0.010407563626762428
+        },
+        {
+          "row": 6,
+          "v": 0.375,
+          "position": [
+            -0.08891908079385757,
+            -0.7489537000656128,
+            0.5808045864105225
+          ],
+          "authoredHeadNormal": [
+            0.40868109464645386,
+            0.5286175012588501,
+            0.7440049052238464
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            0.40816158056259155,
+            0.5347908735275269,
+            0.7398667931556702
+          ],
+          "authoredVsFiniteDegrees": 0.42686181552304275,
+          "sourceAuthoredChangeDegrees": 0,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.5622796489699953,
+          "finiteKeyDot": 0.5616085707697707,
+          "fillDot": 0.9563405824933782,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 7,
+          "v": 0.4375,
+          "position": [
+            -0.08891908079385757,
+            -0.7516829967498779,
+            0.5825315713882446
+          ],
+          "authoredHeadNormal": [
+            0.4181360602378845,
+            0.4308602213859558,
+            0.7997010350227356
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            0.4181939661502838,
+            0.43084391951560974,
+            0.7996795177459717
+          ],
+          "authoredVsFiniteDegrees": 0.0036605853491913504,
+          "sourceAuthoredChangeDegrees": 0,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.5646495927881277,
+          "finiteKeyDot": 0.5645972290038336,
+          "fillDot": 0.9735357602954917,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 8,
+          "v": 0.5,
+          "position": [
+            -0.08891908079385757,
+            -0.7544147372245789,
+            0.5837540626525879
+          ],
+          "authoredHeadNormal": [
+            0.4244043827056885,
+            0.294187068939209,
+            0.856349766254425
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            0.4244394898414612,
+            0.29418179392814636,
+            0.8563341498374939
+          ],
+          "authoredVsFiniteDegrees": 0.0022221669742967043,
+          "sourceAuthoredChangeDegrees": 0,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.5550651767162308,
+          "finiteKeyDot": 0.5550331398399065,
+          "fillDot": 0.9768106626937911,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 9,
+          "v": 0.5625,
+          "position": [
+            -0.08891908079385757,
+            -0.7571491599082947,
+            0.5844171643257141
+          ],
+          "authoredHeadNormal": [
+            0.4218844175338745,
+            0.11939554661512375,
+            0.8987537026405334
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            0.42189836502075195,
+            0.11939410120248795,
+            0.8987473845481873
+          ],
+          "authoredVsFiniteDegrees": 0.0008811986365805468,
+          "sourceAuthoredChangeDegrees": 0,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.5249021326190049,
+          "finiteKeyDot": 0.5248895329631369,
+          "fillDot": 0.9514404262314625,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 10,
+          "v": 0.625,
+          "position": [
+            -0.08891908079385757,
+            -0.7598865032196045,
+            0.5844890475273132
+          ],
+          "authoredHeadNormal": [
+            0.4059244394302368,
+            -0.07783450186252594,
+            0.9105861783027649
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            0.40591853857040405,
+            -0.07783365994691849,
+            0.9105888605117798
+          ],
+          "authoredVsFiniteDegrees": 0.0003745021435267141,
+          "sourceAuthoredChangeDegrees": 0,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.46965210737451474,
+          "finiteKeyDot": 0.4696575311771321,
+          "fillDot": 0.8872708420921808,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 11,
+          "v": 0.6875,
+          "position": [
+            -0.08891908079385757,
+            -0.7626267075538635,
+            0.5839568376541138
+          ],
+          "authoredHeadNormal": [
+            0.37718841433525085,
+            -0.2699276804924011,
+            0.8859277367591858
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            0.3774499297142029,
+            -0.2669769525527954,
+            0.8867101073265076
+          ],
+          "authoredVsFiniteDegrees": 0.1755467966408332,
+          "sourceAuthoredChangeDegrees": 0,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.39453469329708113,
+          "finiteKeyDot": 0.39609386254703377,
+          "fillDot": 0.789061443637175,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 12,
+          "v": 0.75,
+          "position": [
+            -0.08891908079385757,
+            -0.765442430973053,
+            0.582825779914856
+          ],
+          "authoredHeadNormal": [
+            0.34522563219070435,
+            -0.41249629855155945,
+            0.8430101275444031
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            0.34450826048851013,
+            -0.41628894209861755,
+            0.841437816619873
+          ],
+          "authoredVsFiniteDegrees": 0.23880007797454078,
+          "sourceAuthoredChangeDegrees": 0,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.32513924367014846,
+          "finiteKeyDot": 0.32289100986420527,
+          "fillDot": 0.6915016509794216,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 13,
+          "v": 0.8125,
+          "position": [
+            -0.08891908079385757,
+            -0.768368661403656,
+            0.5811185240745544
+          ],
+          "authoredHeadNormal": [
+            0.3118942677974701,
+            -0.5368435382843018,
+            0.7839138507843018
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            0.3109162449836731,
+            -0.5411967635154724,
+            0.7813047766685486
+          ],
+          "authoredVsFiniteDegrees": 0.2961389687822042,
+          "sourceAuthoredChangeDegrees": 0,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.25060315110398235,
+          "finiteKeyDot": 0.247477890761779,
+          "fillDot": 0.585580761439665,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 14,
+          "v": 0.875,
+          "position": [
+            -0.08891908079385757,
+            -0.7711557149887085,
+            0.5788723230361938
+          ],
+          "authoredHeadNormal": [
+            0.2752583622932434,
+            -0.6550372242927551,
+            0.703675389289856
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            0.2761496305465698,
+            -0.6520229578018188,
+            0.7061213850975037
+          ],
+          "authoredVsFiniteDegrees": 0.2282003825334769,
+          "sourceAuthoredChangeDegrees": 8.537736462515939e-7,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.1636256433521187,
+          "finiteKeyDot": 0.16617592983091722,
+          "fillDot": 0.4620103813996528,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 15,
+          "v": 0.9375,
+          "position": [
+            -0.08891908079385757,
+            -0.7737767696380615,
+            0.57613605260849
+          ],
+          "authoredHeadNormal": [
+            0.24811717867851257,
+            -0.7273688316345215,
+            0.639822244644165
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            0.24858619272708893,
+            -0.7259647250175476,
+            0.6412333250045776
+          ],
+          "authoredVsFiniteDegrees": 0.11717846427462733,
+          "sourceAuthoredChangeDegrees": 0,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.10137595697447777,
+          "finiteKeyDot": 0.10274708792194398,
+          "fillDot": 0.37197948678593384,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        },
+        {
+          "row": 16,
+          "v": 1,
+          "position": [
+            -0.08891908079385757,
+            -0.7763780951499939,
+            0.5729665160179138
+          ],
+          "authoredHeadNormal": [
+            0.23954139649868011,
+            -0.7500045299530029,
+            0.6165331602096558
+          ],
+          "finiteTriangleAveragedHeadNormal": [
+            0.23945730924606323,
+            -0.7502332925796509,
+            0.6162874102592468
+          ],
+          "authoredVsFiniteDegrees": 0.01983096617027756,
+          "sourceAuthoredChangeDegrees": 0.0000014787793334710982,
+          "normalIdenticalToPre130": true,
+          "keyDot": 0.07937235782379493,
+          "finiteKeyDot": 0.07914060653822497,
+          "fillDot": 0.340794799567968,
+          "deltaRelief": 0,
+          "residualNormalWeight": 0
+        }
+      ]
+    }
+  ],
+  "profile": [
+    {
+      "row": 0,
+      "v": 0,
+      "sourceRelief": 0,
+      "full130Relief": 0,
+      "sourceSlope": 0.06911503837897544,
+      "full130Slope": 0,
+      "normalResidualWeight": 1
+    },
+    {
+      "row": 1,
+      "v": 0.0625,
+      "sourceRelief": 0.004561518334354821,
+      "full130Relief": 0.0007287336649036708,
+      "sourceSlope": 0.07622451229660346,
+      "full130Slope": 0.03187566459272146,
+      "normalResidualWeight": 0.9572205544936634
+    },
+    {
+      "row": 2,
+      "v": 0.125,
+      "sourceRelief": 0.009450285512031975,
+      "full130Relief": 0.004396680105271807,
+      "sourceSlope": 0.07960396934706747,
+      "full130Slope": 0.08448667826111936,
+      "normalResidualWeight": 0.7536368774915214
+    },
+    {
+      "row": 3,
+      "v": 0.1875,
+      "sourceRelief": 0.014437388876431248,
+      "full130Relief": 0.010802240277931805,
+      "sourceSlope": 0.07940455416524224,
+      "full130Slope": 0.11465463136711003,
+      "normalResidualWeight": 0.43326313533795446
+    },
+    {
+      "row": 4,
+      "v": 0.25,
+      "sourceRelief": 0.019306349186104042,
+      "full130Relief": 0.01793456289260443,
+      "sourceSlope": 0.07587171231974202,
+      "full130Slope": 0.10766186164136458,
+      "normalResidualWeight": 0.1447016124233952
+    },
+    {
+      "row": 5,
+      "v": 0.3125,
+      "sourceRelief": 0.023858737720655995,
+      "full130Relief": 0.023752341122450945,
+      "sourceSlope": 0.06933575797736613,
+      "full130Slope": 0.07725145418330859,
+      "normalResidualWeight": 0.010407563626762428
+    },
+    {
+      "row": 6,
+      "v": 0.375,
+      "sourceRelief": 0.027919099715248308,
+      "full130Relief": 0.027919099715248308,
+      "sourceSlope": 0.06019918011491123,
+      "full130Slope": 0.06019918011491123,
+      "normalResidualWeight": 0
+    },
+    {
+      "row": 7,
+      "v": 0.4375,
+      "sourceRelief": 0.03133899491887107,
+      "full130Relief": 0.03133899491887107,
+      "sourceSlope": 0.04892117509351138,
+      "full130Slope": 0.04892117509351138,
+      "normalResidualWeight": 0
+    },
+    {
+      "row": 8,
+      "v": 0.5,
+      "sourceRelief": 0.034,
+      "full130Relief": 0.034,
+      "sourceSlope": 0.036000000000000004,
+      "full130Slope": 0.036000000000000004,
+      "normalResidualWeight": 0
+    },
+    {
+      "row": 9,
+      "v": 0.5625,
+      "sourceRelief": 0.03581555741887107,
+      "full130Relief": 0.03581555741887107,
+      "sourceSlope": 0.02195382490648862,
+      "full130Slope": 0.02195382490648862,
+      "normalResidualWeight": 0
+    },
+    {
+      "row": 10,
+      "v": 0.625,
+      "sourceRelief": 0.03673159971524831,
+      "full130Relief": 0.03673159971524831,
+      "sourceSlope": 0.007300819885088773,
+      "full130Slope": 0.007300819885088773,
+      "normalResidualWeight": 0
+    },
+    {
+      "row": 11,
+      "v": 0.6875,
+      "sourceRelief": 0.03672592522065599,
+      "full130Relief": 0.03672592522065599,
+      "sourceSlope": -0.0074607579773661205,
+      "full130Slope": -0.0074607579773661205,
+      "normalResidualWeight": 0
+    },
+    {
+      "row": 12,
+      "v": 0.75,
+      "sourceRelief": 0.03580634918610405,
+      "full130Relief": 0.03580634918610405,
+      "sourceSlope": -0.02187171231974202,
+      "full130Slope": -0.02187171231974202,
+      "normalResidualWeight": 0
+    },
+    {
+      "row": 13,
+      "v": 0.8125,
+      "sourceRelief": 0.03400770137643125,
+      "full130Relief": 0.03400770137643125,
+      "sourceSlope": -0.03552955416524225,
+      "full130Slope": -0.03552955416524225,
+      "normalResidualWeight": 0
+    },
+    {
+      "row": 14,
+      "v": 0.875,
+      "sourceRelief": 0.03138778551203198,
+      "full130Relief": 0.03138778551203198,
+      "sourceSlope": -0.04810396934706747,
+      "full130Slope": -0.04810396934706747,
+      "normalResidualWeight": 0
+    },
+    {
+      "row": 15,
+      "v": 0.9375,
+      "sourceRelief": 0.028022455834354826,
+      "full130Relief": 0.028022455834354826,
+      "sourceSlope": -0.05934951229660346,
+      "full130Slope": -0.05934951229660346,
+      "normalResidualWeight": 0
+    },
+    {
+      "row": 16,
+      "v": 1,
+      "sourceRelief": 0.024000000000000004,
+      "full130Relief": 0.024000000000000004,
+      "sourceSlope": -0.06911503837897544,
+      "full130Slope": -0.06911503837897544,
+      "normalResidualWeight": 0
+    }
+  ]
+}
