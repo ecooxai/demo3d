@@ -1,0 +1,169 @@
+{
+  "candidate": 162,
+  "acceptedBase": 164,
+  "scoreUnchanged": 78,
+  "status": "Frozen local geometry and native harness; no native162 render or art claim.",
+  "main": {
+    "file": "src/main.js",
+    "bytes": 22081,
+    "sha256": "88280af03c4be630968aca0763d3d430ec6699ae9533ba057015c53801d4ae55"
+  },
+  "runtimeRegistry": {
+    "file": "review/chin162-baseline164.json",
+    "bytes": 7411,
+    "sha256": "5d8e9c50d2fe44f65a873dacc7eae40ab7258f9b21a663c4c674e995580ac8b5",
+    "guardedFiles": 48
+  },
+  "transferFiles": {
+    "review/chin-junction-candidate162.js": {
+      "bytes": 9020,
+      "sha256": "600be55acf54e589d5d26a55cfd79d143ae6c481241c727c5a699b1ba844fb4e"
+    },
+    "review/chin162-loft.js": {
+      "bytes": 13306,
+      "sha256": "cc0353f0b5af24ffde066788bde274ba0ce2cf3e8bf873c1d32a8b938036fda6"
+    },
+    "review/chin162-geometry-check.js": {
+      "bytes": 9323,
+      "sha256": "75bfc972ce6b267f79ad45916139c9370d7631bee88cb1df3b13999ce9bb07eb"
+    },
+    "review/chin162-native-qa.js": {
+      "bytes": 21708,
+      "sha256": "59d8a2b548e966f6195d98011c8b90a9010fc734f5dc46e3510c4e5280f2231b"
+    },
+    "review/chin162-native.mjs": {
+      "bytes": 14260,
+      "sha256": "e76de2b40eae91ab08b6fa4910ce46ae760c8c4e2ea807e8838db78b2e3887c8"
+    },
+    "review/chin162-baseline164.json": {
+      "bytes": 7411,
+      "sha256": "5d8e9c50d2fe44f65a873dacc7eae40ab7258f9b21a663c4c674e995580ac8b5"
+    }
+  },
+  "alreadyPresentOnMac": [
+    "index.html",
+    "package.json",
+    "reference/image1-color.jpg",
+    "review/integrated164-native.json",
+    "src/blouse-drape.js",
+    "src/blouse.js",
+    "src/brow-guides.js",
+    "src/collar-roll.js",
+    "src/ear.js",
+    "src/export-portrait.js",
+    "src/eye-contour-config.json",
+    "src/eye-contour-field.js",
+    "src/eye-contour.js",
+    "src/eyelash-refinement.js",
+    "src/eyelash-sweep.js",
+    "src/face-refinement.js",
+    "src/face.js",
+    "src/hair-color.js",
+    "src/hair-contact.js",
+    "src/hair-fibers.js",
+    "src/hair-groom.js",
+    "src/hair.js",
+    "src/jaw-ear.js",
+    "src/jaw-silhouette.js",
+    "src/jaw-silhouette155-config.json",
+    "src/jaw-silhouette155-field.js",
+    "src/lip-continuity.js",
+    "src/lip-refinement.js",
+    "src/lower-guide-placement.js",
+    "src/main.js",
+    "src/near-ear.js",
+    "src/portrait-balance.js",
+    "src/portrait-pose.js",
+    "src/portrait-proportions.js",
+    "src/reference-cloth.js",
+    "src/reference-crown.js",
+    "src/reference-ear.js",
+    "src/reference-neck.js",
+    "src/reference-skin.js",
+    "src/render-quality.js",
+    "src/skin-illumination.js",
+    "src/style.css",
+    "src/upper-lip-relief.js"
+  ],
+  "localEvidence": {
+    "review/chin162-local-check.mjs": {
+      "bytes": 8067,
+      "sha256": "f189a48e575e3baabd9eab7cea739cc5efa9ef19c1a14e9a9431494f185e299c"
+    },
+    "review/chin162-source.mjs": {
+      "bytes": 3188,
+      "sha256": "1a5e86cdd947a0fea5b46ac528eff9b091f8be6449fff22eea0cba3f2c341923"
+    },
+    "review/chin162-local-check.json": {
+      "bytes": 8969,
+      "sha256": "acee540feca24fbb0c1ebb6cff4fd5e1c4f7e1eb865e335a7515184fd092d162"
+    },
+    "review/chin162-section-plot.py": {
+      "bytes": 2763,
+      "sha256": "f15b0ca831850a3e192aa80bb79bd720e42ceab60c7521bf4d97eaf2c3e596ad"
+    },
+    "review/chin162-coarse-sections.json": {
+      "bytes": 1088966,
+      "sha256": "87bcb3fced98b88df35f74e0e8f53510d437b76c9352331b21cc093c2c185e5e"
+    },
+    "review/chin162-coarse-sections.png": {
+      "bytes": 269948,
+      "sha256": "22121fddf2ee17635497da0fbb395875b3d704c76009a755b5b048b03378b546"
+    },
+    "review/chin162-coarse-junction.obj": {
+      "bytes": 392731,
+      "sha256": "170f517b174b71ba3df92a32d1e4ea05809313b6746229d348781078f1738d97"
+    },
+    "review/chin162-freeze.mjs": {
+      "bytes": 4850,
+      "sha256": "dbb00c62164f4c527fce81290d9cd50d05058ba1ebe5c6fb4c6be5dab561d9ed"
+    }
+  },
+  "syntaxParsed": [
+    "src/main.js",
+    "src/export-portrait.js",
+    "src/face.js",
+    "src/ear.js",
+    "src/brow-guides.js",
+    "src/reference-skin.js",
+    "src/reference-neck.js",
+    "src/skin-illumination.js",
+    "src/portrait-proportions.js",
+    "src/portrait-pose.js",
+    "src/portrait-balance.js",
+    "src/face-refinement.js",
+    "src/lip-refinement.js",
+    "src/lip-continuity.js",
+    "src/upper-lip-relief.js",
+    "src/eye-contour.js",
+    "src/eye-contour-field.js",
+    "src/eyelash-refinement.js",
+    "src/eyelash-sweep.js",
+    "src/blouse-drape.js",
+    "src/collar-roll.js",
+    "src/jaw-ear.js",
+    "src/jaw-silhouette.js",
+    "src/jaw-silhouette155-field.js",
+    "src/hair-color.js",
+    "src/reference-ear.js",
+    "src/near-ear.js",
+    "src/reference-cloth.js",
+    "src/hair.js",
+    "src/hair-fibers.js",
+    "src/hair-groom.js",
+    "src/hair-contact.js",
+    "src/blouse.js",
+    "src/lower-guide-placement.js",
+    "src/reference-crown.js",
+    "src/render-quality.js",
+    "review/chin162-native.mjs",
+    "review/chin162-native-qa.js",
+    "review/chin-junction-candidate162.js",
+    "review/chin162-loft.js",
+    "review/chin162-geometry-check.js"
+  ],
+  "nativeCommand": "node review/chin162-native.mjs",
+  "nativeOutput": "output/qa/chin162-native.json",
+  "sourceCommand": "node --experimental-vm-modules review/chin162-local-check.mjs",
+  "scope": "The first native pair is the art gate. No whole-scene contact, export or 155 field-grid audit is included."
+}

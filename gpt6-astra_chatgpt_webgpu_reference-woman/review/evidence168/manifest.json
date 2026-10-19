@@ -1,0 +1,548 @@
+{
+  "acceptedIteration": 164,
+  "acceptedScore": 78,
+  "goalAchieved": false,
+  "scope": "Completed studies 162,163,165,167 and diagnostic168; not final showcases. Original native PNGs stay in output/qa.",
+  "files": [
+    {
+      "source": "output/qa/chin162-0-front.png",
+      "sourceBytes": 506875,
+      "sourceSHA256": "ee8c83bbf18ba5d22104374434e468a43c27143cf3f516e86c4edffd72bd2165",
+      "path": "review/evidence168/chin162-0-front.jpg",
+      "bytes": 141984,
+      "sha256": "0761a95a0ed98387d5085c950243008f7ce95077c19f97ff11a255bd6e3f8b4b",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/chin162-0-detail.png",
+      "sourceBytes": 769555,
+      "sourceSHA256": "a20e51ed3dcabc8810fba690d130fc4779444a6031e9cc1129d4428f184d0caf",
+      "path": "review/evidence168/chin162-0-detail.jpg",
+      "bytes": 197175,
+      "sha256": "b0fb948c18c12392d24b8b5d94cfd062b12d7cd3d7f55acdfa436ee1f3274036",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/chin162-0-left.png",
+      "sourceBytes": 306563,
+      "sourceSHA256": "c779ea26a449b6c7b230a0130cc458787fc47ca3e73a2145f4c112eeb6e43f17",
+      "path": "review/evidence168/chin162-0-left.jpg",
+      "bytes": 95403,
+      "sha256": "e0413b1f33560495fe4b4251d0cdbfb8b531872987ad62a66ce8d48451a9db1b",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/chin162-0-right.png",
+      "sourceBytes": 307737,
+      "sourceSHA256": "ce3dd837f47874413eb6e8f6983273c4b4bf0d2ceb294be7ec5d46492c3725f3",
+      "path": "review/evidence168/chin162-0-right.jpg",
+      "bytes": 93868,
+      "sha256": "07a65ec9a706cd4efb879f321e4ceedbcaca1310164fb2bdb0855076f1bdc858",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/chin162-0-back.png",
+      "sourceBytes": 419800,
+      "sourceSHA256": "209dc44a33aec1c0a43e0c1651be3acb9a1596a651b2a8bab3287cf5d7ab8eaa",
+      "path": "review/evidence168/chin162-0-back.jpg",
+      "bytes": 117840,
+      "sha256": "0d4c90c15e76cf1d7519b5e8375106c9820bd5030c26f76721a402129d19ac18",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/chin162-0-jaw.png",
+      "sourceBytes": 507640,
+      "sourceSHA256": "50c7498783d1a0b3c03e19e948dd1859421b5636a1f7c5b7e8c15f799e224b41",
+      "path": "review/evidence168/chin162-0-jaw.jpg",
+      "bytes": 108086,
+      "sha256": "306c51931fe2b391063a2f5ea264d63599aa08c61bf49989f1eb7e5afd5e8089",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/chin162-0-jaw-oblique.png",
+      "sourceBytes": 512946,
+      "sourceSHA256": "93ffd222ada5b790af7244875e5a86a1e5b33f3c7e642c8be9ccc714b3f3b180",
+      "path": "review/evidence168/chin162-0-jaw-oblique.jpg",
+      "bytes": 110498,
+      "sha256": "51719bd1560eba733657e017102f03be20e717f7f1c1ed708c01c8e1a23c18a2",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/chin162-1-front.png",
+      "sourceBytes": 506470,
+      "sourceSHA256": "1a5e5a8bcd13b473df9dbfefc40bd50482a94edf35def3b2cd4ddb075d06bd71",
+      "path": "review/evidence168/chin162-1-front.jpg",
+      "bytes": 141953,
+      "sha256": "d3f72f31b8d6a6aa2a69bb57824f3f7a64b7cc2bd6033717ee2bcaf772aaef3d",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/chin162-1-detail.png",
+      "sourceBytes": 768820,
+      "sourceSHA256": "a67f04608a9bc0830e300040e08f65e0248c9e9ec2e3de53cd686a85b0d19fa9",
+      "path": "review/evidence168/chin162-1-detail.jpg",
+      "bytes": 197033,
+      "sha256": "64c8e1254a8e668862c5f946e0833f1cf240898246e599a5ed6fc0b032cbc481",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/chin162-1-left.png",
+      "sourceBytes": 306718,
+      "sourceSHA256": "0d48eb69653a2fc53103a0113202ca9f4d044104ea990c201c5ff03c4e2f8b21",
+      "path": "review/evidence168/chin162-1-left.jpg",
+      "bytes": 95452,
+      "sha256": "f91c8606434b405493f8aea609254515aef1257e3045502c4e6fdfd218d2ed7a",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/chin162-1-right.png",
+      "sourceBytes": 307742,
+      "sourceSHA256": "6ddc60c3ca85187e09faac633f9c75f57b3b13c05de0808dbaae2cdcf7bfa020",
+      "path": "review/evidence168/chin162-1-right.jpg",
+      "bytes": 93904,
+      "sha256": "f22d24663b5723e178ebee7948a44b8386095b11ddb1ad9d246596f5d1129e2d",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/chin162-1-back.png",
+      "sourceBytes": 419800,
+      "sourceSHA256": "209dc44a33aec1c0a43e0c1651be3acb9a1596a651b2a8bab3287cf5d7ab8eaa",
+      "path": "review/evidence168/chin162-1-back.jpg",
+      "bytes": 117840,
+      "sha256": "0d4c90c15e76cf1d7519b5e8375106c9820bd5030c26f76721a402129d19ac18",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/chin162-1-jaw.png",
+      "sourceBytes": 502844,
+      "sourceSHA256": "7b42feb49d5a72abbae6a8b4ef56ba6d64e47c608ff39e9c406ff15fe445e0ab",
+      "path": "review/evidence168/chin162-1-jaw.jpg",
+      "bytes": 107794,
+      "sha256": "9c0f22a0604f22273f78050486a70cf6aec5bd9225ae73abf74eb480dc7ef5b2",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/chin162-1-jaw-oblique.png",
+      "sourceBytes": 508667,
+      "sourceSHA256": "570f71111b3747acf05a91828fa085bce8680d60cc9874d993152da48baf9860",
+      "path": "review/evidence168/chin162-1-jaw-oblique.jpg",
+      "bytes": 110101,
+      "sha256": "8285d118b4b2f8cb57c93a5e8b092aa10f9ea61b248ac78a28e805bebfee1878",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/crown163-coarse-0-front.png",
+      "sourceBytes": 485366,
+      "sourceSHA256": "63412736e56cf73919805f12134d1a60e5a746bcdac089081adde55b82923020",
+      "path": "review/evidence168/crown163-coarse-0-front.jpg",
+      "bytes": 134754,
+      "sha256": "386f35ff5634852703a3e09de921f49113fcddb36e8b350de241b9c23b2bfb24",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/crown163-coarse-0-detail.png",
+      "sourceBytes": 675410,
+      "sourceSHA256": "068a65abba1d28f4bbc708f3cd482da3b79bb7a464fa40f21e62107732ecbf4f",
+      "path": "review/evidence168/crown163-coarse-0-detail.jpg",
+      "bytes": 162913,
+      "sha256": "38e840d6b2d9186db314bb21f50e698df9c765cb072e2a409529fcc646da1e8d",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/crown163-coarse-0-left.png",
+      "sourceBytes": 303684,
+      "sourceSHA256": "530ab0418a37abd5b7342f6897e28d250bc07c9f659c23f2c8ba1d48988d940d",
+      "path": "review/evidence168/crown163-coarse-0-left.jpg",
+      "bytes": 94919,
+      "sha256": "c13d30bfe753ad35dede46febc5eed29438eabca9b84f4175cb650b858749c13",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/crown163-coarse-0-right.png",
+      "sourceBytes": 301116,
+      "sourceSHA256": "b83d7e750883a6193699123a8e17b219c831c8c7217d13fda5b1fb533b8aeb9f",
+      "path": "review/evidence168/crown163-coarse-0-right.jpg",
+      "bytes": 92760,
+      "sha256": "96d2b710b7e88697873184d5cc84ae167487ebed622e8ce10ecc349a4a8bdad2",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/crown163-coarse-0-back.png",
+      "sourceBytes": 420446,
+      "sourceSHA256": "d884dc01acc2dea1427c94f0e02d41daabcf22faca8282646e487032993eee02",
+      "path": "review/evidence168/crown163-coarse-0-back.jpg",
+      "bytes": 118247,
+      "sha256": "22d0633a32010a42399c551f20b903f54e6e23049badf528a5f7d9965e4fc1bf",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/crown163-coarse-0-junction.png",
+      "sourceBytes": 578181,
+      "sourceSHA256": "a4f2786963e93efe75f57b4f1447179e39fa0298f6b50c32d052a7cf7ae6c33a",
+      "path": "review/evidence168/crown163-coarse-0-junction.jpg",
+      "bytes": 124881,
+      "sha256": "849d822d15c21a77cdee0365fcea4794f1a018743759c9730a589e95f69079e0",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/crown163-coarse-1-front.png",
+      "sourceBytes": 498100,
+      "sourceSHA256": "19e0d1e24a267d10a48e1ad234695993b43a75f73ff59acfaf6e7f06abf530d7",
+      "path": "review/evidence168/crown163-coarse-1-front.jpg",
+      "bytes": 142731,
+      "sha256": "d1665b337d035acbf723ba78fd73140cc9e5916726d5a2c1a018a1c8aaedae25",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/crown163-coarse-1-detail.png",
+      "sourceBytes": 683310,
+      "sourceSHA256": "7d5280dc39036024ee05d067a5185fa8faa95ce8049451f8382df9bc0da505b1",
+      "path": "review/evidence168/crown163-coarse-1-detail.jpg",
+      "bytes": 184122,
+      "sha256": "6ca7646afd7b023498dd078ec360aea5221954c1eb5cf2d2ae173bb8e5f5d19f",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/crown163-coarse-1-left.png",
+      "sourceBytes": 307111,
+      "sourceSHA256": "7d64e53f8e7dd4e967de667eaac441201cedaf7e479b33a8be3501f9d3f60700",
+      "path": "review/evidence168/crown163-coarse-1-left.jpg",
+      "bytes": 96792,
+      "sha256": "316b5c57975213659a49a2e5eea6c971fe3535d2bf4aa94c054bfcb5de5ce38a",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/crown163-coarse-1-right.png",
+      "sourceBytes": 304167,
+      "sourceSHA256": "62f32e06614285a41bc2d8ee7dcaae24779cbfa080b437d3713ece6b2d2e66ae",
+      "path": "review/evidence168/crown163-coarse-1-right.jpg",
+      "bytes": 94464,
+      "sha256": "5f6c7e162bad87bdfced4437e32401c7b826e730059c01137a2bd7be15dda804",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/crown163-coarse-1-back.png",
+      "sourceBytes": 420444,
+      "sourceSHA256": "fe70cde13b115ec37bd66180f64c0a6b96c1b58b2c6a3280f15f9470a2f83bc6",
+      "path": "review/evidence168/crown163-coarse-1-back.jpg",
+      "bytes": 118253,
+      "sha256": "abcc72bed170740ca3840801f25da5cb507c2de40539313898e74d89d97ccc7c",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/crown163-coarse-1-junction.png",
+      "sourceBytes": 545356,
+      "sourceSHA256": "11d2dd380b75aafa0e0c2b7b27be92ad54a969a323f8b5396726cb18a12a38e4",
+      "path": "review/evidence168/crown163-coarse-1-junction.jpg",
+      "bytes": 152840,
+      "sha256": "bec2ce138c0c23bbe5507596d62d9707f722109c17057a2f9ae86d66ce28ccf1",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/crown167-coarse-0-front.png",
+      "sourceBytes": 485333,
+      "sourceSHA256": "ca1c080bd8b0defed728e8876f6a12fe47e99f6d9fe1b572188f3dfbd17cc2ad",
+      "path": "review/evidence168/crown167-coarse-0-front.jpg",
+      "bytes": 134745,
+      "sha256": "831580901797a0f0550aefaa9abe2f73876dddacf1d5f46c6a93d628def4e033",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/crown167-coarse-0-detail.png",
+      "sourceBytes": 675385,
+      "sourceSHA256": "9bfd4db051ca696353ce662f82ed3b136a5d2d0bd645c9223ca92418cb6b1718",
+      "path": "review/evidence168/crown167-coarse-0-detail.jpg",
+      "bytes": 162912,
+      "sha256": "ef5d8286e83be9d68ecdd4a84ebaff7aed520d3159b362c2eee54a7e978e2891",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/crown167-coarse-0-left.png",
+      "sourceBytes": 303641,
+      "sourceSHA256": "6c7783f69afc5d065e2f42d11d417d5497f8a485e7d115b9dc950b9d9716b630",
+      "path": "review/evidence168/crown167-coarse-0-left.jpg",
+      "bytes": 94907,
+      "sha256": "1537a30997107bd9784e839b155a8b4a556e698631cdc3457385cd992c80cdbd",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/crown167-coarse-0-right.png",
+      "sourceBytes": 301061,
+      "sourceSHA256": "240a26c3ad8bcc6d3a74c557445ff78c3763fd37518303eeb66cadd4f8625a3a",
+      "path": "review/evidence168/crown167-coarse-0-right.jpg",
+      "bytes": 92754,
+      "sha256": "d95e781ba06d9c16ffc586d1b4ea3f2d33bf99de55a633b3be65f2ce4a33f099",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/crown167-coarse-0-back.png",
+      "sourceBytes": 420405,
+      "sourceSHA256": "8428cd768014831d54e835a3cae59f30d1f53fc5beeaf413ad0b2222d1523195",
+      "path": "review/evidence168/crown167-coarse-0-back.jpg",
+      "bytes": 118243,
+      "sha256": "1909c996a10a8fb3e1d05a621687daf1d52cf1af8542b7cd1ec29b3409471722",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/crown167-coarse-0-junction.png",
+      "sourceBytes": 578167,
+      "sourceSHA256": "87721eb3ba12cd4773309bc2e7d7fa805e35728b3fc50f14eddc8e89c8b0a64e",
+      "path": "review/evidence168/crown167-coarse-0-junction.jpg",
+      "bytes": 124879,
+      "sha256": "932b029fc0a6c1806321823be1cd42a6654a2b31fe6567d71828b6433451411d",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/crown167-coarse-1-front.png",
+      "sourceBytes": 478588,
+      "sourceSHA256": "791ea86f5057e9065d6e72df5896baf173c2d512ad4b1f496b4babe3b69ee902",
+      "path": "review/evidence168/crown167-coarse-1-front.jpg",
+      "bytes": 136841,
+      "sha256": "c308f0a5a572eedf47d8702d490db89792f5e814bbfb0e9cdef62e7867982216",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/crown167-coarse-1-detail.png",
+      "sourceBytes": 631773,
+      "sourceSHA256": "5c5004e794455ec8560c6cfb4f7d9c5714648c492dc57132234b659a236163b0",
+      "path": "review/evidence168/crown167-coarse-1-detail.jpg",
+      "bytes": 162816,
+      "sha256": "6917ed159dabc3b25af8c7a2edac1a8d7c25f75a1a6f555dfec60732385bd6fe",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/crown167-coarse-1-left.png",
+      "sourceBytes": 304853,
+      "sourceSHA256": "b79e4eec012d0b9daf007d1c18e1096af73459ae799fccf3209e3924aa7ab1fa",
+      "path": "review/evidence168/crown167-coarse-1-left.jpg",
+      "bytes": 96427,
+      "sha256": "67fb3c2c4393a74551b87dc399bcf9a89d911577a00a3ab02ee30e606398485d",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/crown167-coarse-1-right.png",
+      "sourceBytes": 301111,
+      "sourceSHA256": "2faf15527a865c9853e83fa29aad537a5c0ad18851ada3c747227ab8ed54dfa9",
+      "path": "review/evidence168/crown167-coarse-1-right.jpg",
+      "bytes": 94098,
+      "sha256": "4517792c53018c3d8c8a48f1bf01055676b7309d7f48603e62e016e136bcd7ea",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/crown167-coarse-1-back.png",
+      "sourceBytes": 421552,
+      "sourceSHA256": "c81ad58288b687cfc80b3b28b70c270cb460455a9af38469459da352bcca6c1f",
+      "path": "review/evidence168/crown167-coarse-1-back.jpg",
+      "bytes": 118836,
+      "sha256": "7afcb9751390b6fcdf1596c0cb897c1a961ff1369986248a697675c5eb1e622d",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/crown167-coarse-1-junction.png",
+      "sourceBytes": 479066,
+      "sourceSHA256": "4839c4fcbed3c4939ff4d9a2276b9527ee45b03395ddd1e761f111ae1427ab67",
+      "path": "review/evidence168/crown167-coarse-1-junction.jpg",
+      "bytes": 117531,
+      "sha256": "de1f25a2015c70243cc46ab18606b4eb11c998a6703a170891b9efe1bc4613f6",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/sleeve165-0-front.png",
+      "sourceBytes": 506899,
+      "sourceSHA256": "bdfafe483bc1b1a684c1ffca5900506a05d344c0f72e9f82480fd84feda9efd7",
+      "path": "review/evidence168/sleeve165-0-front.jpg",
+      "bytes": 141987,
+      "sha256": "b5eaa8d21376f8a3407c53a5a4b1d6c39768f0a237e8b82ed07114d13724f0f5",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/sleeve165-0-garment.png",
+      "sourceBytes": 178539,
+      "sourceSHA256": "2b25dcdccd4715b66cc7cb29d86a7a7ff22080cf597f48baf369fcb479480175",
+      "path": "review/evidence168/sleeve165-0-garment.jpg",
+      "bytes": 56436,
+      "sha256": "6eecedffb6daa67362df452040e16d5afc3aa4ac030c39298dfbf9ca4abd6f52",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/sleeve165-0-left.png",
+      "sourceBytes": 306587,
+      "sourceSHA256": "83885e70b531690ead01b3ff31c1037239286521da7ce76b1c1497e7de99b34a",
+      "path": "review/evidence168/sleeve165-0-left.jpg",
+      "bytes": 95418,
+      "sha256": "3a33c05ed17c527fca0f1fbd853e13762499768a209f379d1783950fb26c7cf1",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/sleeve165-0-right.png",
+      "sourceBytes": 307766,
+      "sourceSHA256": "208ad32fed421bcc4b765eac1aabb6c5a113f0a8c774a697516d4f8bf8037595",
+      "path": "review/evidence168/sleeve165-0-right.jpg",
+      "bytes": 93877,
+      "sha256": "cc56e966d5c3d148c42b9e7073e5c4ec6aef8eed4b8d4de6321fdf6f462e4c04",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/sleeve165-0-back.png",
+      "sourceBytes": 419817,
+      "sourceSHA256": "dadbae9e47fbe55731d92b8c2e4b268c5a4ecc80c72620e2f09e27d90bc06ee4",
+      "path": "review/evidence168/sleeve165-0-back.jpg",
+      "bytes": 117852,
+      "sha256": "1874b1371dd3360bbfadd209c8a42a97e8e235cc98a34c7c3dfd124b68cba085",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/sleeve165-0-sleeve.png",
+      "sourceBytes": 86929,
+      "sourceSHA256": "c04c92bba7a418599ea240bf2a5eb7998c786d4892d959053e76276ad9c54d7f",
+      "path": "review/evidence168/sleeve165-0-sleeve.jpg",
+      "bytes": 38706,
+      "sha256": "66c83f819fbe81f36d2abba2d9e65244d81854143daaee18b89d94b75fc78fa5",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/sleeve165-100-front.png",
+      "sourceBytes": 506994,
+      "sourceSHA256": "dc2f405e34971db725e37761e9b459954dcd3cd3114f9c84b6fcc4d62596ef36",
+      "path": "review/evidence168/sleeve165-100-front.jpg",
+      "bytes": 141988,
+      "sha256": "0b9c3e8adb333f7c14f89844842d40e22d57052fbf8e94b197d0d713fe265444",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/sleeve165-100-garment.png",
+      "sourceBytes": 178547,
+      "sourceSHA256": "300bfaf5cc7758fb912579c15313b380a6b593898c9eaca4ae99473046d57ece",
+      "path": "review/evidence168/sleeve165-100-garment.jpg",
+      "bytes": 56464,
+      "sha256": "0e5e5a35f963919ddc9622a48a58a4c18235b3952a96cdd01d97c7480efe8b6e",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/sleeve165-100-left.png",
+      "sourceBytes": 306847,
+      "sourceSHA256": "ec68afe0e76568e23bd4a57c7cc220960b65e94a43302e4d504025dbb3d1288b",
+      "path": "review/evidence168/sleeve165-100-left.jpg",
+      "bytes": 95461,
+      "sha256": "aaf9ee3e2d3e9d18582d56164971481c39dc6d512b32ccec85cec699bcccbcc8",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/sleeve165-100-right.png",
+      "sourceBytes": 307766,
+      "sourceSHA256": "208ad32fed421bcc4b765eac1aabb6c5a113f0a8c774a697516d4f8bf8037595",
+      "path": "review/evidence168/sleeve165-100-right.jpg",
+      "bytes": 93877,
+      "sha256": "cc56e966d5c3d148c42b9e7073e5c4ec6aef8eed4b8d4de6321fdf6f462e4c04",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/sleeve165-100-back.png",
+      "sourceBytes": 419704,
+      "sourceSHA256": "8d5256dc8937e507fea810d827b75b6513dfe6b699034f8eb65e2b7711d9eea5",
+      "path": "review/evidence168/sleeve165-100-back.jpg",
+      "bytes": 117848,
+      "sha256": "d506caf68f0da2306f5c86fd038393c3cc861837935f2eb6f6c57a82188a302a",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/sleeve165-100-sleeve.png",
+      "sourceBytes": 88055,
+      "sourceSHA256": "df2f056ac955e85ad500701977202bf27ccde230936e3ea28d96b0f02dc99d2a",
+      "path": "review/evidence168/sleeve165-100-sleeve.jpg",
+      "bytes": 38687,
+      "sha256": "f409dc37dddb600a7cbaf5f18a602791f48dde2848fc1b46c00b633d913bd578",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/chin168-0-clay-jaw.png",
+      "sourceBytes": 331228,
+      "sourceSHA256": "1784081d286b81856ef60f687420ee4fdfe3625f014c9def898a02f011b7e7ac",
+      "path": "review/evidence168/chin168-0-clay-jaw.jpg",
+      "bytes": 85135,
+      "sha256": "724a6a0e23840eb286ef795768c0519b2122d75403493cdc4878a7a37b8e66c2",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/chin168-0-clay-jaw-oblique.png",
+      "sourceBytes": 356693,
+      "sourceSHA256": "0f9571a54536f29f4fef278bd14c5f84ee3fe181d50ef03d9984acea3c19ae92",
+      "path": "review/evidence168/chin168-0-clay-jaw-oblique.jpg",
+      "bytes": 90419,
+      "sha256": "79906c6092e14b731e0049617dc5b29f832f10f4ca0cd9602ff0236833953641",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/chin168-0-unlit-jaw.png",
+      "sourceBytes": 479839,
+      "sourceSHA256": "0f11d2010501824142c73ba3564193b4915907f7625562a7a424334bfca8e2a8",
+      "path": "review/evidence168/chin168-0-unlit-jaw.jpg",
+      "bytes": 106302,
+      "sha256": "cbfac306b81c494083e89bc1108e143c0ca6a48bf727504b654bc4b614169411",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/chin168-0-unlit-jaw-oblique.png",
+      "sourceBytes": 476514,
+      "sourceSHA256": "757f3f5d4a6cda08e9c5e48b2f5903e56ff1e86733a3d8da0f2a792fcde53f9a",
+      "path": "review/evidence168/chin168-0-unlit-jaw-oblique.jpg",
+      "bytes": 106899,
+      "sha256": "615c245426e851bc8b88488a05e5e6f52a81f1ac7bfcb5fd484a56fc07cf0585",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/chin168-1-clay-jaw.png",
+      "sourceBytes": 327885,
+      "sourceSHA256": "48bc5d0119cdea3b303ef8d1802ec2be415431b15f9ad52dffc336d115876d23",
+      "path": "review/evidence168/chin168-1-clay-jaw.jpg",
+      "bytes": 84358,
+      "sha256": "46a38fb78729650c1f017e728afc06bb411b60b64d318d37553ffd4c4bee713f",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/chin168-1-clay-jaw-oblique.png",
+      "sourceBytes": 352925,
+      "sourceSHA256": "4ae0199d3459b96c81cf0b75d2c9c23842f3b8d5f242a62b0560553cfb9c9fe8",
+      "path": "review/evidence168/chin168-1-clay-jaw-oblique.jpg",
+      "bytes": 89611,
+      "sha256": "c510f73894df7c0233dad5d5f16c3bf3e819b50f4cdfa1bee27c6b842d8e9d1c",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/chin168-1-unlit-jaw.png",
+      "sourceBytes": 475485,
+      "sourceSHA256": "b456a99cd2f5a3e25e85d389c353f3d6f8daa6a19de88f427ab0a300a7618c6d",
+      "path": "review/evidence168/chin168-1-unlit-jaw.jpg",
+      "bytes": 105877,
+      "sha256": "9e888fa446c8f60b9f51329ac383e9f75f51ccb25191c0ef42d2bb398f6dd254",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/chin168-1-unlit-jaw-oblique.png",
+      "sourceBytes": 472362,
+      "sourceSHA256": "cd1c711a533f437bec1f704ebf35b38df112d41018f3882ee9200a0f8d2e1ea5",
+      "path": "review/evidence168/chin168-1-unlit-jaw-oblique.jpg",
+      "bytes": 106130,
+      "sha256": "1fd3bb0811f572790a9d42a0d76808a59169761414cfe21ee8d2083f0a483ec2",
+      "encoding": "JPEG quality 90 evidence copy"
+    },
+    {
+      "source": "output/qa/chin168-0-original-front.png",
+      "sourceBytes": 506906,
+      "sourceSHA256": "8f11e3c1f8db81d50232c1134ec46ceff4485feb5615df0e87dcdd5c97d378bc",
+      "path": "review/evidence168/chin168-0-original-front.png",
+      "bytes": 506906,
+      "sha256": "8f11e3c1f8db81d50232c1134ec46ceff4485feb5615df0e87dcdd5c97d378bc",
+      "encoding": "Exact native PNG; nonexact restoration evidence"
+    },
+    {
+      "source": "output/qa/chin168-0-restored-original-front.png",
+      "sourceBytes": 506877,
+      "sourceSHA256": "068e2ceb8f01cb74937f2d11efd0d52057efa673ff57d8c9e1b78d07acd2b528",
+      "path": "review/evidence168/chin168-0-restored-original-front.png",
+      "bytes": 506877,
+      "sha256": "068e2ceb8f01cb74937f2d11efd0d52057efa673ff57d8c9e1b78d07acd2b528",
+      "encoding": "Exact native PNG; nonexact restoration evidence"
+    }
+  ]
+}

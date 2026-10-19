@@ -1,0 +1,34 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import vm from 'node:vm';
+import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
+const root=path.resolve(import.meta.dirname,'..'),read=f=>fs.readFileSync(path.join(root,f)),sha=b=>createHash('sha256').update(b).digest('hex'),info=f=>({bytes:read(f).length,sha256:sha(read(f))});
+assert.equal(sha(read('src/main.js')),'88280af03c4be630968aca0763d3d430ec6699ae9533ba057015c53801d4ae55','165 requires accepted164 main.');
+assert.equal(sha(read('src/hair-groom.js')),'a7b04c16fd8e13277e9418954c996c2370895f84ef446ed295ccb942a73a002d');
+assert.equal(sha(read('review/integrated164-native.json')),'650743e8db6d3ac77d353c629cfff8a9e849f52a3c2655da3cbb744f4989cbed');
+const native=['review/sleeve-fold-candidate165.js','review/sleeve165-geometry-audit.js','review/sleeve165-native-qa.js','review/sleeve165-native.mjs','review/blouse-drape154-geometry-audit.js'];
+const local=['review/sleeve165-source.mjs','review/sleeve165-coarse-audit.mjs','review/sleeve165-contact-audit.mjs','review/sleeve165-freeze.mjs'];
+assert.equal(typeof vm.SourceTextModule,'function','Use node --experimental-vm-modules. No child process syntax launcher is used.');
+for(const f of[...native,...local])new vm.SourceTextModule(read(f).toString(),{identifier:f});
+const main=read('src/main.js').toString(),collar='state.collarRoll158=applyCollarRoll158(anatomicalBlouse,{strength:1,retainSourceForQA:false});',balance='state.balance=applyPortraitBalance(model,{shiftX:-.24});';
+assert.equal(main.split(collar).length,2);assert.equal(main.split(balance).length,2);assert(main.indexOf(collar)<main.indexOf(balance));
+const entry="import {prepareSleeveQA165} from '../review/sleeve165-native-qa.js';\n"+main.replace(collar,collar+"\nwindow.sleeve165QA=await prepareSleeveQA165({blouse:anatomicalBlouse,model,state,strength:Number(new URLSearchParams(location.search).get('sleeve165')||0)});\nstate.sleeveFold165=window.sleeve165QA.metrics;").replace(balance,balance+'\nawait window.sleeve165QA.afterBalance(state.balance);');
+new vm.SourceTextModule(entry,{identifier:'sleeve165-injected-main-entry.js'});
+const dependencies=new Set(['src/main.js',...native]),queue=[...dependencies];
+while(queue.length){const file=queue.shift();if(!/\.(?:js|mjs)$/.test(file))continue;for(const m of read(file).toString().matchAll(/^\s*import[^\n]*?from\s+['"]([^'"]+)['"]/gm)){if(!m[1].startsWith('.'))continue;const target=path.posix.normalize(path.posix.join(path.posix.dirname(file),m[1]));read(target);if(!dependencies.has(target)){dependencies.add(target);queue.push(target);}}}
+for(const f of['package.json','index.html','src/style.css'])dependencies.add(f);
+const coarse=JSON.parse(read('review/sleeve165-coarse-audit.json')),contact=JSON.parse(read('review/sleeve165-contact-audit.json'));
+assert.equal(coarse.protection.protectedChanges+coarse.protection.protectedYChanges+coarse.protection.immutableChanges+coarse.protection.geometryOrAttributeIdentityChanges,0);
+assert(coarse.protection.wrongFrameAtomic&&coarse.protection.lateNonfiniteInputAtomic&&coarse.normal.maxGradientError<1e-7&&coarse.normal.maxSeamGradientError<1e-7);
+assert(coarse.emitted.newDegenerate+coarse.emitted.reversed===0&&coarse.emitted.maxChordError<.007);
+assert(contact.risk.contacts.newPairs===0&&contact.risk.nonfinite+contact.risk.newDegenerate+contact.risk.reversed===0);
+assert(contact.risk.seamSupport.newMissing+contact.risk.seamSupport.newInside===0&&contact.risk.seamSupport.maxAdditionalSeparation<.002&&contact.risk.seamSupport.maxAdditionalInset>-.001);
+assert.equal(coarse.metrics.ownedVertices,1125);assert.equal(contact.metrics.ownedVertices,1125);
+const runtimeFiles=Object.fromEntries([...dependencies].sort().map(f=>[f,info(f)]));
+const support=['review/sleeve165-plan.md',...local,'review/sleeve165-coarse-audit.json','review/sleeve165-contact-audit.json','review/sleeve165-coarse-view.png'];
+const manifest={candidate:165,acceptedBase:164,scoreUnchanged:78,status:'Source-ready native OFF/ON prototype; no art acceptance claim',runtimeFiles,supportFiles:Object.fromEntries(support.map(f=>[f,info(f)])),nativeEvidence:{local:'review/integrated164-native.json',mac:'output/qa/integrated164-native.json',...info('review/integrated164-native.json')},entry:{sourceSHA256:info('src/main.js').sha256,after:'117/154/158',before:'ordinary99',backupProxy:'one unchanged99 pass on two unrendered private backups only in ON QA',injectedBytes:Buffer.byteLength(entry),injectedSHA256:sha(Buffer.from(entry))},geometry:{owners:SLEEVE_NAMES(),ownedVertices:1125,changedVertices:coarse.metrics.changedVertices,extraVertices:0,extraTriangles:0,extraDraws:0,extraMaps:0,productionGeometryOrAttributeReplacements:0,productionPNStagingBytes:coarse.metrics.stagedAttributeBytes,productionTemporarySeamTypedBytes:coarse.metrics.seamTemporaryTypedBytes,retainedProductionSourceGeometries:0},sourceChecks:{syntaxModules:native.length+local.length+1,wrongFrameAtomic:true,lateNonfiniteInputAtomic:true,coarse:coarse.emitted,normal:coarse.normal,actualSourceContacts:contact.risk.contacts,seam:contact.risk.seamSupport},scope:'Two existing sleeve owners only. Body C2 field and exact affine emitted-triangle seam transport. All reference117 UV/color/texture data and selected154/158/159 preparations remain. Actual Mac full-scene guards and all six views decide acceptance.'};
+function SLEEVE_NAMES(){return['blouse-continuous-torso-and-sleeves','blouse-sleeve-attachment--1'];}
+fs.writeFileSync(path.join(root,'review/sleeve165-manifest.json'),JSON.stringify(manifest,null,2)+'\n');
+const result={candidate:165,status:'Passed source/syntax freeze',runtimeGuardFiles:dependencies.size,syntaxModules:manifest.sourceChecks.syntaxModules,mainSHA256:info('src/main.js').sha256,helper:info(native[0]),native:info(native[3]),productionGeometryReplacements:0,productionSourceRetention:0,localNativeExecution:false,sourceFieldRerunsInThisFreeze:0,resourceMiB:process.memoryUsage().rss/1048576};
+fs.writeFileSync(path.join(root,'review/sleeve165-freeze-result.json'),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));

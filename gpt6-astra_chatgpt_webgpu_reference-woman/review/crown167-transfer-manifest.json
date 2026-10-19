@@ -1,0 +1,56 @@
+{
+  "iteration": 167,
+  "acceptedIteration": 164,
+  "acceptedScore": 78,
+  "status": "Frozen local candidate for native coarse art gate; not accepted",
+  "files": {
+    "review/front-locks-candidate167.js": {
+      "bytes": 25990,
+      "sha256": "9e0d5606781fc88923572bf56a2b1cf9ae75aed6f68c09f277be24487d076a35"
+    },
+    "review/hair-groom-candidate167.js": {
+      "bytes": 45075,
+      "sha256": "fab77671277a69189ca7158830de8f9d4b84814c8fb2c38782b7fadf338536f2"
+    },
+    "review/hair-color-candidate167.js": {
+      "bytes": 2110,
+      "sha256": "b90c430baf411d28c1ad3073118bc4612a442eda8471930191eefe15897c58fb"
+    },
+    "review/crown167-coarse-native.mjs": {
+      "bytes": 26462,
+      "sha256": "e1eb659d7eaa435de034a99e3311c6b39c1c2eabbdd1ef151645e55e83e0a673"
+    },
+    "review/crown167-baseline164-sources.json": {
+      "bytes": 538750,
+      "sha256": "e7dd2a195de5cc01db506e581eed147ff6caf6a01ab5c9fe562be253836b69f9"
+    },
+    "review/crown167-source.mjs": {
+      "bytes": 3553,
+      "sha256": "45917e912e249ae28250f3c9a6a0efa47502f6515cb4dc11dd6cd9845467cecf"
+    },
+    "review/crown167-source-check.mjs": {
+      "bytes": 4483,
+      "sha256": "43e854df98ff6c5f7bfd0d6a71bb67983f08ead463484643a3c40065fcd55d6f"
+    },
+    "review/crown167-source-check.json": {
+      "bytes": 45469,
+      "sha256": "0399c7cbdc3b1d0d54e992b1ede9baa94cfe2f86c89b188bd8adc47dca253e22"
+    },
+    "review/crown167-wrapper-check.mjs": {
+      "bytes": 2607,
+      "sha256": "368bece6eccfdcd2ec197a496545c690df9b95aff1186b0f1134a97a369aa57f"
+    },
+    "review/crown167-wrapper-check.json": {
+      "bytes": 1422,
+      "sha256": "46f530920ba4d8ac990561b770fa0ff2b244bf63c1a3e0c91d53c12d7cc25d1e"
+    },
+    "review/crown167-coarse-handoff.md": {
+      "bytes": 8214,
+      "sha256": "5a9e1ed4eacec09fbb38903f5adaec00bf99ad0aeb61d135d440722df86185c0"
+    }
+  },
+  "registryMacCopySource": "review/crown163-baseline164-sources.json",
+  "nativeCommand": "node review/crown167-coarse-native.mjs",
+  "reviewOnly": true,
+  "liveSourceModified": false
+}

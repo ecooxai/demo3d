@@ -1,0 +1,30 @@
+{
+  "wrapperSHA256": "10936d103bdd811f8f94bbc53dbe05c56f856cb720b7afacf965d75284a73547",
+  "registeredRuntimeFiles": 42,
+  "frozenGuardsPass": true,
+  "acceptedAndGeneratedEntryParse": true,
+  "onceTint": true,
+  "order": [
+    {
+      "marker": "state.eyeContour147=",
+      "offset": 15898
+    },
+    {
+      "marker": "state.eyelash151=",
+      "offset": 15973
+    },
+    {
+      "marker": "state.jawEar159=",
+      "offset": 16042
+    },
+    {
+      "marker": "state.frontRibbons163=",
+      "offset": 16281
+    },
+    {
+      "marker": "state.hairColor149=applyHairColor149(",
+      "offset": 16444
+    }
+  ],
+  "rendererRun": false
+}

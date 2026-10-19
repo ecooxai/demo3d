@@ -1,0 +1,669 @@
+{
+  "parent": "4d5f93f067757776f77a75dd43a8e72b3cd19790",
+  "acceptedIteration": 164,
+  "acceptedScore": 78,
+  "goalAchieved": false,
+  "scope": "Checkpoint completed 162/163/165/167 studies and168 diagnostic.165 selected for future integration;162/163/167 rejected. No production change, no active169/170/171 draft, no deployment.",
+  "files": [
+    {
+      "path": "review/chin-junction-candidate162.js",
+      "bytes": 9020,
+      "sha256": "600be55acf54e589d5d26a55cfd79d143ae6c481241c727c5a699b1ba844fb4e"
+    },
+    {
+      "path": "review/chin162-baseline164.json",
+      "bytes": 7411,
+      "sha256": "5d8e9c50d2fe44f65a873dacc7eae40ab7258f9b21a663c4c674e995580ac8b5"
+    },
+    {
+      "path": "review/chin162-freeze.mjs",
+      "bytes": 4850,
+      "sha256": "dbb00c62164f4c527fce81290d9cd50d05058ba1ebe5c6fb4c6be5dab561d9ed"
+    },
+    {
+      "path": "review/chin162-geometry-check.js",
+      "bytes": 9323,
+      "sha256": "75bfc972ce6b267f79ad45916139c9370d7631bee88cb1df3b13999ce9bb07eb"
+    },
+    {
+      "path": "review/chin162-handoff.md",
+      "bytes": 10901,
+      "sha256": "047cb1cd6d143ac6d31779e0d1bc5dc2b6341cba00071932b5464eec597f954a"
+    },
+    {
+      "path": "review/chin162-local-check.json",
+      "bytes": 8969,
+      "sha256": "acee540feca24fbb0c1ebb6cff4fd5e1c4f7e1eb865e335a7515184fd092d162"
+    },
+    {
+      "path": "review/chin162-local-check.mjs",
+      "bytes": 8067,
+      "sha256": "f189a48e575e3baabd9eab7cea739cc5efa9ef19c1a14e9a9431494f185e299c"
+    },
+    {
+      "path": "review/chin162-loft.js",
+      "bytes": 13306,
+      "sha256": "cc0353f0b5af24ffde066788bde274ba0ce2cf3e8bf873c1d32a8b938036fda6"
+    },
+    {
+      "path": "review/chin162-manifest.json",
+      "bytes": 5421,
+      "sha256": "5e46e9c77c24dba2eae85a86370f1660a2ff7b9262a37bd0b12a85980c9f58b9"
+    },
+    {
+      "path": "review/chin162-native-qa.js",
+      "bytes": 21708,
+      "sha256": "59d8a2b548e966f6195d98011c8b90a9010fc734f5dc46e3510c4e5280f2231b"
+    },
+    {
+      "path": "review/chin162-native-report.json",
+      "bytes": 332957,
+      "sha256": "40cf7a6e528c6151cd12981e014fca0751272fcc2ff507cd900caaef682ab42b"
+    },
+    {
+      "path": "review/chin162-native.mjs",
+      "bytes": 14260,
+      "sha256": "e76de2b40eae91ab08b6fa4910ce46ae760c8c4e2ea807e8838db78b2e3887c8"
+    },
+    {
+      "path": "review/chin162-root-decision.md",
+      "bytes": 3714,
+      "sha256": "6f2f3edb46976f3e2f12fa8ca3ae1f18814834b0bcc143e332f3d962e94b6676"
+    },
+    {
+      "path": "review/chin162-section-plot.py",
+      "bytes": 2763,
+      "sha256": "f15b0ca831850a3e192aa80bb79bd720e42ceab60c7521bf4d97eaf2c3e596ad"
+    },
+    {
+      "path": "review/chin162-source.mjs",
+      "bytes": 3188,
+      "sha256": "1a5e86cdd947a0fea5b46ac528eff9b091f8be6449fff22eea0cba3f2c341923"
+    },
+    {
+      "path": "review/chin162-transfer-files.txt",
+      "bytes": 179,
+      "sha256": "e77ea165e837f8ca173d43e0ff23f54f7a8c59526f10fa868bf7ca6e3a65aed8"
+    },
+    {
+      "path": "review/chin168-diagnostic-native-report.json",
+      "bytes": 322472,
+      "sha256": "12c30abc9442fa7c7d2196d203acd327ffa58e3092a20a620a1211ca3eadb216"
+    },
+    {
+      "path": "review/chin168-diagnostic-native.mjs",
+      "bytes": 8533,
+      "sha256": "6ebed2e7ef5d45f68425f81e129c5c4643983ac849d86d2f04a83b678d9cb0d0"
+    },
+    {
+      "path": "review/chin168-diagnostic-qa.js",
+      "bytes": 6645,
+      "sha256": "c73214db75596a89d5133d25a66e2042439047b03ef25fcc9d221657acab9f43"
+    },
+    {
+      "path": "review/chin168-handoff.md",
+      "bytes": 2183,
+      "sha256": "bc4f94d79a5c1756c1f8e536d0d21cec23e89c2d385133775d556b6b6e87e0a4"
+    },
+    {
+      "path": "review/chin168-manifest.json",
+      "bytes": 945,
+      "sha256": "3dc95ff9fac242436210ef4bbb0af4f9be307b493655b39d3ec400db0837d4c0"
+    },
+    {
+      "path": "review/crown163-baseline164-sources.json",
+      "bytes": 538750,
+      "sha256": "e7dd2a195de5cc01db506e581eed147ff6caf6a01ab5c9fe562be253836b69f9"
+    },
+    {
+      "path": "review/crown163-coarse-handoff.md",
+      "bytes": 10374,
+      "sha256": "b4a9417ca8d9f24a64b2e2d1748847b4f3648c5bf97f216f200c1a9b337a6d69"
+    },
+    {
+      "path": "review/crown163-coarse-native-report.json",
+      "bytes": 1575459,
+      "sha256": "fdb6fb0b4bf5cb2dfac10e564ba12b3891c32d553fd1535a2af4294bab4facb1"
+    },
+    {
+      "path": "review/crown163-coarse-native.mjs",
+      "bytes": 26441,
+      "sha256": "10936d103bdd811f8f94bbc53dbe05c56f856cb720b7afacf965d75284a73547"
+    },
+    {
+      "path": "review/crown163-draft-diagnostic.json",
+      "bytes": 10325,
+      "sha256": "3dade55d68a675fb1252d09127b7f9170e9ccb4846d0aa3d0525cc9b87507226"
+    },
+    {
+      "path": "review/crown163-draft-diagnostic.mjs",
+      "bytes": 2035,
+      "sha256": "8825cafdd350a9d64cc131d293e0d5ef996c01d32003ea327169dd6792206082"
+    },
+    {
+      "path": "review/crown163-first-source.json",
+      "bytes": 13476,
+      "sha256": "dd01e3c966e4d3beb2adccfd1e58f5db8d6e718ba45c030fca758f95af226810"
+    },
+    {
+      "path": "review/crown163-focused-audit.json",
+      "bytes": 25440,
+      "sha256": "30266f73f884342f9740477ba7ca1aea1a6876380498444ce464ba812d0ce1b4"
+    },
+    {
+      "path": "review/crown163-focused-audit.mjs",
+      "bytes": 12771,
+      "sha256": "3da56f17bb3ca5ae7a883131532533fb9b4fa03bed3a7701a81ed67f6fdf56ca"
+    },
+    {
+      "path": "review/crown163-source.mjs",
+      "bytes": 3541,
+      "sha256": "d762298043b3bb0cfc6a293fbde1443d4031df20538dc22b2bfefa8a57a9ca9e"
+    },
+    {
+      "path": "review/crown163-transfer-manifest.json",
+      "bytes": 1799,
+      "sha256": "c548981ca7da07cce8df92eeff2e826e80fa105a033a679f60ac4b7b86f743bc"
+    },
+    {
+      "path": "review/crown163-visual-decision.md",
+      "bytes": 4621,
+      "sha256": "26dc11db2a195c9868f142d5252567a2477f08b2fd574381c8e38c8b3e6c1e19"
+    },
+    {
+      "path": "review/crown163-wrapper-check.json",
+      "bytes": 640,
+      "sha256": "8940982b0ba0eda8fe8ec973781a3dff78dd6d6aaee5b9e29f989e43ac97c098"
+    },
+    {
+      "path": "review/crown167-baseline164-sources.json",
+      "bytes": 538750,
+      "sha256": "e7dd2a195de5cc01db506e581eed147ff6caf6a01ab5c9fe562be253836b69f9"
+    },
+    {
+      "path": "review/crown167-coarse-handoff.md",
+      "bytes": 8214,
+      "sha256": "5a9e1ed4eacec09fbb38903f5adaec00bf99ad0aeb61d135d440722df86185c0"
+    },
+    {
+      "path": "review/crown167-coarse-native-report.json",
+      "bytes": 1574793,
+      "sha256": "87642cc0023779afeae28bb74d5a830f67d90afa7280a440557d65eeb24331ad"
+    },
+    {
+      "path": "review/crown167-coarse-native.mjs",
+      "bytes": 26462,
+      "sha256": "e1eb659d7eaa435de034a99e3311c6b39c1c2eabbdd1ef151645e55e83e0a673"
+    },
+    {
+      "path": "review/crown167-source-check.json",
+      "bytes": 45469,
+      "sha256": "0399c7cbdc3b1d0d54e992b1ede9baa94cfe2f86c89b188bd8adc47dca253e22"
+    },
+    {
+      "path": "review/crown167-source-check.mjs",
+      "bytes": 4483,
+      "sha256": "43e854df98ff6c5f7bfd0d6a71bb67983f08ead463484643a3c40065fcd55d6f"
+    },
+    {
+      "path": "review/crown167-source.mjs",
+      "bytes": 3553,
+      "sha256": "45917e912e249ae28250f3c9a6a0efa47502f6515cb4dc11dd6cd9845467cecf"
+    },
+    {
+      "path": "review/crown167-transfer-files.txt",
+      "bytes": 414,
+      "sha256": "c87ebc57874dc3087b6dd9e2c347e08951c53c51b0b85e4a01b79cfaca1ff2ec"
+    },
+    {
+      "path": "review/crown167-transfer-manifest.json",
+      "bytes": 2056,
+      "sha256": "f3df1aeccae79e36c45bfda3f4a9fe5dc76db29cc7f51802c571b8e6fcbdef93"
+    },
+    {
+      "path": "review/crown167-wrapper-check.json",
+      "bytes": 1422,
+      "sha256": "46f530920ba4d8ac990561b770fa0ff2b244bf63c1a3e0c91d53c12d7cc25d1e"
+    },
+    {
+      "path": "review/crown167-wrapper-check.mjs",
+      "bytes": 2607,
+      "sha256": "368bece6eccfdcd2ec197a496545c690df9b95aff1186b0f1134a97a369aa57f"
+    },
+    {
+      "path": "review/evidence168/chin162-0-back.jpg",
+      "bytes": 117840,
+      "sha256": "0d4c90c15e76cf1d7519b5e8375106c9820bd5030c26f76721a402129d19ac18"
+    },
+    {
+      "path": "review/evidence168/chin162-0-detail.jpg",
+      "bytes": 197175,
+      "sha256": "b0fb948c18c12392d24b8b5d94cfd062b12d7cd3d7f55acdfa436ee1f3274036"
+    },
+    {
+      "path": "review/evidence168/chin162-0-front.jpg",
+      "bytes": 141984,
+      "sha256": "0761a95a0ed98387d5085c950243008f7ce95077c19f97ff11a255bd6e3f8b4b"
+    },
+    {
+      "path": "review/evidence168/chin162-0-jaw-oblique.jpg",
+      "bytes": 110498,
+      "sha256": "51719bd1560eba733657e017102f03be20e717f7f1c1ed708c01c8e1a23c18a2"
+    },
+    {
+      "path": "review/evidence168/chin162-0-jaw.jpg",
+      "bytes": 108086,
+      "sha256": "306c51931fe2b391063a2f5ea264d63599aa08c61bf49989f1eb7e5afd5e8089"
+    },
+    {
+      "path": "review/evidence168/chin162-0-left.jpg",
+      "bytes": 95403,
+      "sha256": "e0413b1f33560495fe4b4251d0cdbfb8b531872987ad62a66ce8d48451a9db1b"
+    },
+    {
+      "path": "review/evidence168/chin162-0-right.jpg",
+      "bytes": 93868,
+      "sha256": "07a65ec9a706cd4efb879f321e4ceedbcaca1310164fb2bdb0855076f1bdc858"
+    },
+    {
+      "path": "review/evidence168/chin162-1-back.jpg",
+      "bytes": 117840,
+      "sha256": "0d4c90c15e76cf1d7519b5e8375106c9820bd5030c26f76721a402129d19ac18"
+    },
+    {
+      "path": "review/evidence168/chin162-1-detail.jpg",
+      "bytes": 197033,
+      "sha256": "64c8e1254a8e668862c5f946e0833f1cf240898246e599a5ed6fc0b032cbc481"
+    },
+    {
+      "path": "review/evidence168/chin162-1-front.jpg",
+      "bytes": 141953,
+      "sha256": "d3f72f31b8d6a6aa2a69bb57824f3f7a64b7cc2bd6033717ee2bcaf772aaef3d"
+    },
+    {
+      "path": "review/evidence168/chin162-1-jaw-oblique.jpg",
+      "bytes": 110101,
+      "sha256": "8285d118b4b2f8cb57c93a5e8b092aa10f9ea61b248ac78a28e805bebfee1878"
+    },
+    {
+      "path": "review/evidence168/chin162-1-jaw.jpg",
+      "bytes": 107794,
+      "sha256": "9c0f22a0604f22273f78050486a70cf6aec5bd9225ae73abf74eb480dc7ef5b2"
+    },
+    {
+      "path": "review/evidence168/chin162-1-left.jpg",
+      "bytes": 95452,
+      "sha256": "f91c8606434b405493f8aea609254515aef1257e3045502c4e6fdfd218d2ed7a"
+    },
+    {
+      "path": "review/evidence168/chin162-1-right.jpg",
+      "bytes": 93904,
+      "sha256": "f22d24663b5723e178ebee7948a44b8386095b11ddb1ad9d246596f5d1129e2d"
+    },
+    {
+      "path": "review/evidence168/chin168-0-clay-jaw-oblique.jpg",
+      "bytes": 90419,
+      "sha256": "79906c6092e14b731e0049617dc5b29f832f10f4ca0cd9602ff0236833953641"
+    },
+    {
+      "path": "review/evidence168/chin168-0-clay-jaw.jpg",
+      "bytes": 85135,
+      "sha256": "724a6a0e23840eb286ef795768c0519b2122d75403493cdc4878a7a37b8e66c2"
+    },
+    {
+      "path": "review/evidence168/chin168-0-original-front.png",
+      "bytes": 506906,
+      "sha256": "8f11e3c1f8db81d50232c1134ec46ceff4485feb5615df0e87dcdd5c97d378bc"
+    },
+    {
+      "path": "review/evidence168/chin168-0-restored-original-front.png",
+      "bytes": 506877,
+      "sha256": "068e2ceb8f01cb74937f2d11efd0d52057efa673ff57d8c9e1b78d07acd2b528"
+    },
+    {
+      "path": "review/evidence168/chin168-0-unlit-jaw-oblique.jpg",
+      "bytes": 106899,
+      "sha256": "615c245426e851bc8b88488a05e5e6f52a81f1ac7bfcb5fd484a56fc07cf0585"
+    },
+    {
+      "path": "review/evidence168/chin168-0-unlit-jaw.jpg",
+      "bytes": 106302,
+      "sha256": "cbfac306b81c494083e89bc1108e143c0ca6a48bf727504b654bc4b614169411"
+    },
+    {
+      "path": "review/evidence168/chin168-1-clay-jaw-oblique.jpg",
+      "bytes": 89611,
+      "sha256": "c510f73894df7c0233dad5d5f16c3bf3e819b50f4cdfa1bee27c6b842d8e9d1c"
+    },
+    {
+      "path": "review/evidence168/chin168-1-clay-jaw.jpg",
+      "bytes": 84358,
+      "sha256": "46a38fb78729650c1f017e728afc06bb411b60b64d318d37553ffd4c4bee713f"
+    },
+    {
+      "path": "review/evidence168/chin168-1-unlit-jaw-oblique.jpg",
+      "bytes": 106130,
+      "sha256": "1fd3bb0811f572790a9d42a0d76808a59169761414cfe21ee8d2083f0a483ec2"
+    },
+    {
+      "path": "review/evidence168/chin168-1-unlit-jaw.jpg",
+      "bytes": 105877,
+      "sha256": "9e888fa446c8f60b9f51329ac383e9f75f51ccb25191c0ef42d2bb398f6dd254"
+    },
+    {
+      "path": "review/evidence168/crown163-coarse-0-back.jpg",
+      "bytes": 118247,
+      "sha256": "22d0633a32010a42399c551f20b903f54e6e23049badf528a5f7d9965e4fc1bf"
+    },
+    {
+      "path": "review/evidence168/crown163-coarse-0-detail.jpg",
+      "bytes": 162913,
+      "sha256": "38e840d6b2d9186db314bb21f50e698df9c765cb072e2a409529fcc646da1e8d"
+    },
+    {
+      "path": "review/evidence168/crown163-coarse-0-front.jpg",
+      "bytes": 134754,
+      "sha256": "386f35ff5634852703a3e09de921f49113fcddb36e8b350de241b9c23b2bfb24"
+    },
+    {
+      "path": "review/evidence168/crown163-coarse-0-junction.jpg",
+      "bytes": 124881,
+      "sha256": "849d822d15c21a77cdee0365fcea4794f1a018743759c9730a589e95f69079e0"
+    },
+    {
+      "path": "review/evidence168/crown163-coarse-0-left.jpg",
+      "bytes": 94919,
+      "sha256": "c13d30bfe753ad35dede46febc5eed29438eabca9b84f4175cb650b858749c13"
+    },
+    {
+      "path": "review/evidence168/crown163-coarse-0-right.jpg",
+      "bytes": 92760,
+      "sha256": "96d2b710b7e88697873184d5cc84ae167487ebed622e8ce10ecc349a4a8bdad2"
+    },
+    {
+      "path": "review/evidence168/crown163-coarse-1-back.jpg",
+      "bytes": 118253,
+      "sha256": "abcc72bed170740ca3840801f25da5cb507c2de40539313898e74d89d97ccc7c"
+    },
+    {
+      "path": "review/evidence168/crown163-coarse-1-detail.jpg",
+      "bytes": 184122,
+      "sha256": "6ca7646afd7b023498dd078ec360aea5221954c1eb5cf2d2ae173bb8e5f5d19f"
+    },
+    {
+      "path": "review/evidence168/crown163-coarse-1-front.jpg",
+      "bytes": 142731,
+      "sha256": "d1665b337d035acbf723ba78fd73140cc9e5916726d5a2c1a018a1c8aaedae25"
+    },
+    {
+      "path": "review/evidence168/crown163-coarse-1-junction.jpg",
+      "bytes": 152840,
+      "sha256": "bec2ce138c0c23bbe5507596d62d9707f722109c17057a2f9ae86d66ce28ccf1"
+    },
+    {
+      "path": "review/evidence168/crown163-coarse-1-left.jpg",
+      "bytes": 96792,
+      "sha256": "316b5c57975213659a49a2e5eea6c971fe3535d2bf4aa94c054bfcb5de5ce38a"
+    },
+    {
+      "path": "review/evidence168/crown163-coarse-1-right.jpg",
+      "bytes": 94464,
+      "sha256": "5f6c7e162bad87bdfced4437e32401c7b826e730059c01137a2bd7be15dda804"
+    },
+    {
+      "path": "review/evidence168/crown167-coarse-0-back.jpg",
+      "bytes": 118243,
+      "sha256": "1909c996a10a8fb3e1d05a621687daf1d52cf1af8542b7cd1ec29b3409471722"
+    },
+    {
+      "path": "review/evidence168/crown167-coarse-0-detail.jpg",
+      "bytes": 162912,
+      "sha256": "ef5d8286e83be9d68ecdd4a84ebaff7aed520d3159b362c2eee54a7e978e2891"
+    },
+    {
+      "path": "review/evidence168/crown167-coarse-0-front.jpg",
+      "bytes": 134745,
+      "sha256": "831580901797a0f0550aefaa9abe2f73876dddacf1d5f46c6a93d628def4e033"
+    },
+    {
+      "path": "review/evidence168/crown167-coarse-0-junction.jpg",
+      "bytes": 124879,
+      "sha256": "932b029fc0a6c1806321823be1cd42a6654a2b31fe6567d71828b6433451411d"
+    },
+    {
+      "path": "review/evidence168/crown167-coarse-0-left.jpg",
+      "bytes": 94907,
+      "sha256": "1537a30997107bd9784e839b155a8b4a556e698631cdc3457385cd992c80cdbd"
+    },
+    {
+      "path": "review/evidence168/crown167-coarse-0-right.jpg",
+      "bytes": 92754,
+      "sha256": "d95e781ba06d9c16ffc586d1b4ea3f2d33bf99de55a633b3be65f2ce4a33f099"
+    },
+    {
+      "path": "review/evidence168/crown167-coarse-1-back.jpg",
+      "bytes": 118836,
+      "sha256": "7afcb9751390b6fcdf1596c0cb897c1a961ff1369986248a697675c5eb1e622d"
+    },
+    {
+      "path": "review/evidence168/crown167-coarse-1-detail.jpg",
+      "bytes": 162816,
+      "sha256": "6917ed159dabc3b25af8c7a2edac1a8d7c25f75a1a6f555dfec60732385bd6fe"
+    },
+    {
+      "path": "review/evidence168/crown167-coarse-1-front.jpg",
+      "bytes": 136841,
+      "sha256": "c308f0a5a572eedf47d8702d490db89792f5e814bbfb0e9cdef62e7867982216"
+    },
+    {
+      "path": "review/evidence168/crown167-coarse-1-junction.jpg",
+      "bytes": 117531,
+      "sha256": "de1f25a2015c70243cc46ab18606b4eb11c998a6703a170891b9efe1bc4613f6"
+    },
+    {
+      "path": "review/evidence168/crown167-coarse-1-left.jpg",
+      "bytes": 96427,
+      "sha256": "67fb3c2c4393a74551b87dc399bcf9a89d911577a00a3ab02ee30e606398485d"
+    },
+    {
+      "path": "review/evidence168/crown167-coarse-1-right.jpg",
+      "bytes": 94098,
+      "sha256": "4517792c53018c3d8c8a48f1bf01055676b7309d7f48603e62e016e136bcd7ea"
+    },
+    {
+      "path": "review/evidence168/manifest.json",
+      "bytes": 24536,
+      "sha256": "8073012d51fe6b416213fb65ccb41f60954984678949db2030e604d943ce5889"
+    },
+    {
+      "path": "review/evidence168/sleeve165-0-back.jpg",
+      "bytes": 117852,
+      "sha256": "1874b1371dd3360bbfadd209c8a42a97e8e235cc98a34c7c3dfd124b68cba085"
+    },
+    {
+      "path": "review/evidence168/sleeve165-0-front.jpg",
+      "bytes": 141987,
+      "sha256": "b5eaa8d21376f8a3407c53a5a4b1d6c39768f0a237e8b82ed07114d13724f0f5"
+    },
+    {
+      "path": "review/evidence168/sleeve165-0-garment.jpg",
+      "bytes": 56436,
+      "sha256": "6eecedffb6daa67362df452040e16d5afc3aa4ac030c39298dfbf9ca4abd6f52"
+    },
+    {
+      "path": "review/evidence168/sleeve165-0-left.jpg",
+      "bytes": 95418,
+      "sha256": "3a33c05ed17c527fca0f1fbd853e13762499768a209f379d1783950fb26c7cf1"
+    },
+    {
+      "path": "review/evidence168/sleeve165-0-right.jpg",
+      "bytes": 93877,
+      "sha256": "cc56e966d5c3d148c42b9e7073e5c4ec6aef8eed4b8d4de6321fdf6f462e4c04"
+    },
+    {
+      "path": "review/evidence168/sleeve165-0-sleeve.jpg",
+      "bytes": 38706,
+      "sha256": "66c83f819fbe81f36d2abba2d9e65244d81854143daaee18b89d94b75fc78fa5"
+    },
+    {
+      "path": "review/evidence168/sleeve165-100-back.jpg",
+      "bytes": 117848,
+      "sha256": "d506caf68f0da2306f5c86fd038393c3cc861837935f2eb6f6c57a82188a302a"
+    },
+    {
+      "path": "review/evidence168/sleeve165-100-front.jpg",
+      "bytes": 141988,
+      "sha256": "0b9c3e8adb333f7c14f89844842d40e22d57052fbf8e94b197d0d713fe265444"
+    },
+    {
+      "path": "review/evidence168/sleeve165-100-garment.jpg",
+      "bytes": 56464,
+      "sha256": "0e5e5a35f963919ddc9622a48a58a4c18235b3952a96cdd01d97c7480efe8b6e"
+    },
+    {
+      "path": "review/evidence168/sleeve165-100-left.jpg",
+      "bytes": 95461,
+      "sha256": "aaf9ee3e2d3e9d18582d56164971481c39dc6d512b32ccec85cec699bcccbcc8"
+    },
+    {
+      "path": "review/evidence168/sleeve165-100-right.jpg",
+      "bytes": 93877,
+      "sha256": "cc56e966d5c3d148c42b9e7073e5c4ec6aef8eed4b8d4de6321fdf6f462e4c04"
+    },
+    {
+      "path": "review/evidence168/sleeve165-100-sleeve.jpg",
+      "bytes": 38687,
+      "sha256": "f409dc37dddb600a7cbaf5f18a602791f48dde2848fc1b46c00b633d913bd578"
+    },
+    {
+      "path": "review/front-locks-candidate167.js",
+      "bytes": 25990,
+      "sha256": "9e0d5606781fc88923572bf56a2b1cf9ae75aed6f68c09f277be24487d076a35"
+    },
+    {
+      "path": "review/front-ribbons-candidate163.js",
+      "bytes": 25725,
+      "sha256": "c0fbbbf6dcdb9c3a5d013fd2dbace4978c5acc234d1197f753d63215678993ff"
+    },
+    {
+      "path": "review/front-ribbons163-before-ordered-descent.js",
+      "bytes": 24927,
+      "sha256": "46abb5883308a283b24610871951b898b16cde196c5f1ac2416b28a93a4b9225"
+    },
+    {
+      "path": "review/hair-color-candidate163.js",
+      "bytes": 2102,
+      "sha256": "faa547cc3741642be9f91468661a73d3ca6d1745381470cddbe7468d7817f205"
+    },
+    {
+      "path": "review/hair-color-candidate167.js",
+      "bytes": 2110,
+      "sha256": "b90c430baf411d28c1ad3073118bc4612a442eda8471930191eefe15897c58fb"
+    },
+    {
+      "path": "review/hair-groom-candidate163.js",
+      "bytes": 45077,
+      "sha256": "f3841645717a52d02f892fac4eb2c5d47562329f1bd593697df048422dac5f23"
+    },
+    {
+      "path": "review/hair-groom-candidate167.js",
+      "bytes": 45075,
+      "sha256": "fab77671277a69189ca7158830de8f9d4b84814c8fb2c38782b7fadf338536f2"
+    },
+    {
+      "path": "review/quality-journal.json",
+      "bytes": 118113,
+      "sha256": "0ba470ab3c7dfd74a36b32445532c5210caae49ee6692ae442658db922d28795"
+    },
+    {
+      "path": "review/sleeve-fold-candidate165.js",
+      "bytes": 13203,
+      "sha256": "965cbc0351f601f36e78d55e0cb98ca4b319a026c1c5ea0ba81a479c6a3f3934"
+    },
+    {
+      "path": "review/sleeve165-coarse-audit.json",
+      "bytes": 3225,
+      "sha256": "f749b3ed8b0cfd93a5d8fb6f6d9550084aac7b036d3aaed07ddc861ecf0265b5"
+    },
+    {
+      "path": "review/sleeve165-coarse-audit.mjs",
+      "bytes": 7968,
+      "sha256": "d9bb3613e1b48ac1cbab8d429c808b509d836180d2000174ccdb48db5fa30bd5"
+    },
+    {
+      "path": "review/sleeve165-coarse-view.py",
+      "bytes": 2461,
+      "sha256": "c598cb41423617a7ab752fd7e22b87939d9d2d2ce5e83cc61a2f21423445db67"
+    },
+    {
+      "path": "review/sleeve165-contact-audit.json",
+      "bytes": 5504,
+      "sha256": "eaa74290cbbe65ef1761573fdabf9f3254daa3bc3f955469ce8af64ee36615bc"
+    },
+    {
+      "path": "review/sleeve165-contact-audit.mjs",
+      "bytes": 3243,
+      "sha256": "c2a8418eb7b34fb5c0bd1f27eb6c638337bc0bd8055a815b86575a23c5f01bb5"
+    },
+    {
+      "path": "review/sleeve165-freeze-result.json",
+      "bytes": 613,
+      "sha256": "fc16605badb0b5975631dae627f172c5c73598bdda92489c0ce961fd854770ca"
+    },
+    {
+      "path": "review/sleeve165-freeze.mjs",
+      "bytes": 6143,
+      "sha256": "29f92608f9f4e26949a4870e0c52bc8905be1aa00e50d9f8f2d207d2430b3cf4"
+    },
+    {
+      "path": "review/sleeve165-geometry-audit.js",
+      "bytes": 10711,
+      "sha256": "976353900144b4863643df9fe8ffb0db210af3612eb779d79ccd8dbb212e2dc8"
+    },
+    {
+      "path": "review/sleeve165-handoff.md",
+      "bytes": 8096,
+      "sha256": "459de52ad537edbe3095a2979f10c773272f4bff11d6b723f0e44aaa2d64d8d6"
+    },
+    {
+      "path": "review/sleeve165-manifest.json",
+      "bytes": 12113,
+      "sha256": "864c9f4597aa8dc9effdac97a9605c21b075ef427d91965f6d8bdde04797a90a"
+    },
+    {
+      "path": "review/sleeve165-native-qa.js",
+      "bytes": 22079,
+      "sha256": "1c0b723b4a7615dd014a442b896d229843fb6f2e15bd8a56df297a1730b74a92"
+    },
+    {
+      "path": "review/sleeve165-native-report.json",
+      "bytes": 842117,
+      "sha256": "cd95a3e8be303755ef3142f0db3b6e97af297326f4b67728b043d81150c5ef73"
+    },
+    {
+      "path": "review/sleeve165-native.mjs",
+      "bytes": 16603,
+      "sha256": "1d7ddedadc0ca99beb195abe992ef2801099f2e4b01c3d1ebc795906c9283a7b"
+    },
+    {
+      "path": "review/sleeve165-plan.md",
+      "bytes": 5638,
+      "sha256": "3d85a30466bb5310c5f2de157e5e2595a83cfdcfd1287163536541465c948980"
+    },
+    {
+      "path": "review/sleeve165-root-decision.md",
+      "bytes": 3452,
+      "sha256": "26c71a98360560de0a89b893146cb208380e5f480254680eaca52fe132393ebb"
+    },
+    {
+      "path": "review/sleeve165-source.mjs",
+      "bytes": 1452,
+      "sha256": "6a575e895ce21c8083ae8382639b192064e30fe35e456a70f82713f4e65b63e9"
+    },
+    {
+      "path": "review/sleeve165-transfer-info.json",
+      "bytes": 2991,
+      "sha256": "326635629e47a952a68de2d40c74ee43352e54af7176e1d3620cc0a03dd2892a"
+    }
+  ]
+}

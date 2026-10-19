@@ -1,0 +1,229 @@
+{
+  "candidate": 162,
+  "scoreUnchanged": 78,
+  "status": "Local source geometry/controller checks passed; native art pending",
+  "sourcePositionAndTopologyParity": [
+    {
+      "label": "anatomical-head/continuous-face.private159",
+      "key": "position",
+      "sha256": "3bd7d02a21559c99a9b5de7ef6af352cb8d7b97cef5467f869abe75b43caecf0"
+    },
+    {
+      "label": "anatomical-head/continuous-face.private159",
+      "key": "uv",
+      "sha256": "fe1e458cefed766845eed1577cc6722ce95147b19598faf575aa398b90a01e63"
+    },
+    {
+      "label": "anatomical-head/continuous-face.private159",
+      "key": "index",
+      "sha256": "f557228c97f184969a74a79925ada9eba7eca179edf3dd723b08848eeee3ea9b"
+    },
+    {
+      "label": "original-neck-and-clavicle-transition/neck-smooth-anatomical-surface.private159",
+      "key": "position",
+      "sha256": "9c19fd14b60a74fea0313bbc669c371b3a3acf5610d617c3a88f2453ba432319"
+    },
+    {
+      "label": "original-neck-and-clavicle-transition/neck-smooth-anatomical-surface.private159",
+      "key": "normal",
+      "sha256": "4ea94275e0f35b0211b1f990ae577c0fcdd8303cfcc7bbeefdfcc0a434001e64"
+    },
+    {
+      "label": "original-neck-and-clavicle-transition/neck-smooth-anatomical-surface.private159",
+      "key": "uv",
+      "sha256": "0b25feae71dde0d0b256ac0c910814bba314a9f66e208c04596defa65114d69f"
+    },
+    {
+      "label": "original-neck-and-clavicle-transition/neck-smooth-anatomical-surface.private159",
+      "key": "index",
+      "sha256": "59b92d7d503c934970e665fe60f1bb3bde2e704e8eb2d6d87bf2e6ad9ed38c4b"
+    }
+  ],
+  "geometry": {
+    "candidate": 162,
+    "scope": "Only emitted band topology, exact cut ownership, section shape and Float32 boundary agreement. No full-scene contact or render claim.",
+    "vertices": 4296,
+    "triangles": 7940,
+    "degenerateTriangles": 0,
+    "opposedAuthoredTriangleNormals": 0,
+    "minimumTriangleDoubleArea": 0.000009215017218912642,
+    "minimumTriangleAuthoredNormalCosine": 0.9629115934832746,
+    "maximumNormalLengthError": 4.297343547676746e-8,
+    "maximumLoftDerivativeError": 0.00001982560371716069,
+    "maximumUpwardSectionDerivative": -0.010070783639976266,
+    "minimumSectionTangentLength": 0.016881107078969525,
+    "minimumSampledRadialNormalCosine": 0.07827995883065528,
+    "maximumFrontDownwardDeparture": 0.015349716282785808,
+    "maximumCentralDownwardDeparture": 0.015349716282785808,
+    "maximumForwardDepartureAtExistingHeadY": 0.037118761098773434,
+    "frontEnvelopeSamples": 5903,
+    "sectionSamples": 16080,
+    "minimumRingWidth": 0.6125402667192875,
+    "boundarySourceAttributesExact": true,
+    "originalFaceCutRow": 24,
+    "originalNeckCutRow": 32,
+    "materialJoinNeckRow": 36,
+    "closure": {
+      "edges": 12140,
+      "boundaryEdges": 460,
+      "nonmanifold": 0,
+      "inconsistentInteriorEdgeDirections": 0,
+      "pairedFaceEdges": 380,
+      "pairedNeckEdges": 80,
+      "unpairedAfterSourceBoundary": 0,
+      "inconsistentEdgeDirectionsAfterPairing": 0,
+      "definition": "Exact opposite-direction pairing to edges of the actual retained source triangles by cyclic source vertex IDs; material and original UV seams are coincident duplicate vertices. Multiframe Float32 world-space gap is recorded separately."
+    },
+    "materialGroups": [
+      {
+        "start": 0,
+        "count": 10950,
+        "materialIndex": 0,
+        "triangles": 3650
+      },
+      {
+        "start": 10950,
+        "count": 10950,
+        "materialIndex": 1,
+        "triangles": 3650
+      },
+      {
+        "start": 21900,
+        "count": 1920,
+        "materialIndex": 2,
+        "triangles": 640
+      }
+    ],
+    "boundary": {
+      "version": "connected-chin-neck-coarse-162",
+      "vertices": 4296,
+      "triangles": 7940,
+      "retiredFaceTriangles": 18240,
+      "retiredNeckTriangles": 1920,
+      "maximumBoundaryWorldRounding": 6.099391500210928e-8,
+      "minimumBoundaryAuthoredNormalCosine": 0.9993521581552162,
+      "materialJoin": {
+        "upperLoftV": 1,
+        "faceRow": 0,
+        "neckRow": 36,
+        "faceSlots": [
+          0,
+          1
+        ],
+        "neckSlot": 2
+      },
+      "normalQualification": "Interior analytic loft derivatives. Top normals copied bit-exact; neck authored normals expressed in the shared face frame. Retained original boundary buffers never change. Geometric disagreement and Float32 world rounding are measured separately."
+    }
+  },
+  "controller": {
+    "metrics": {
+      "version": "connected-chin-neck-coarse-162",
+      "strength": 1,
+      "applied": true,
+      "privateGeometryCount": 3,
+      "privateAttributeBytes": 7788864,
+      "retainedSourceGeometryReferences": 2,
+      "retainSourceForQA": true,
+      "addedMeshes": 1,
+      "addedMaterialObjects": 0,
+      "addedTextureObjects": 0,
+      "addedTextureBytes": 0,
+      "selectedSourceDrawGroups": 3,
+      "bandDrawGroups": 3,
+      "perFrameWork": 0,
+      "band": {
+        "version": "connected-chin-neck-coarse-162",
+        "vertices": 4296,
+        "triangles": 7940,
+        "retiredFaceTriangles": 18240,
+        "retiredNeckTriangles": 1920,
+        "maximumBoundaryWorldRounding": 6.099391500210928e-8,
+        "minimumBoundaryAuthoredNormalCosine": 0.9993521581552162,
+        "materialJoin": {
+          "upperLoftV": 1,
+          "faceRow": 0,
+          "neckRow": 36,
+          "faceSlots": [
+            0,
+            1
+          ],
+          "neckSlot": 2
+        },
+        "normalQualification": "Interior analytic loft derivatives. Top normals copied bit-exact; neck authored normals expressed in the shared face frame. Retained original boundary buffers never change. Geometric disagreement and Float32 world rounding are measured separately."
+      },
+      "netTriangleChange": -12220,
+      "temporaryOriginalCPUBytes": 7704240,
+      "elapsedMs": 309.51765000000023
+    },
+    "zeroNoTraversal": true,
+    "cachedIdentity": true,
+    "originalBuffersUnchanged": true,
+    "originalBindingsRestored": true,
+    "fullyPrivateDisposal": true,
+    "release": {
+      "released": true,
+      "privateGeometriesDisposed": 3,
+      "privateAttributeBytesReleased": 7788864,
+      "sourceBindingsRestored": 2,
+      "temporaryConstructionReleased": true
+    }
+  },
+  "envelopeInterpretation": "At matched original head-section depth, all sampled forward sections fit within .02 extra downward displacement. The separate same-Y forward projection is reported, not hidden; it describes the steep curved profile at a different correspondence and is not a measured forward translation.",
+  "limitations": [
+    "Full face authored-normal hash differs in the older local fixture; the native helper copies actual retained boundary normals and the native QA checks original data exactly.",
+    "No native renderer, actual material appearance, whole-scene contact, global watertightness, or score gain was tested locally.",
+    "Quintic section joins are C2 in the loft direction; periodic Catmull interpolation of the sampled source rings is C1 around the ring.",
+    "Mathematical cut positions are source positions. A shared render frame gives a separately measured Float32 world gap below1e-7; this is not bit-identical multiframe world evaluation."
+  ],
+  "cost": {
+    "wallMs": 1376.0557450000001,
+    "cpuMs": 2366.086,
+    "peakRSSMiB": 267.0078125
+  },
+  "files": {
+    "review/chin162-loft.js": {
+      "bytes": 13306,
+      "sha256": "cc0353f0b5af24ffde066788bde274ba0ce2cf3e8bf873c1d32a8b938036fda6"
+    },
+    "review/chin162-geometry-check.js": {
+      "bytes": 9323,
+      "sha256": "75bfc972ce6b267f79ad45916139c9370d7631bee88cb1df3b13999ce9bb07eb"
+    },
+    "review/chin-junction-candidate162.js": {
+      "bytes": 9020,
+      "sha256": "600be55acf54e589d5d26a55cfd79d143ae6c481241c727c5a699b1ba844fb4e"
+    },
+    "review/chin162-native-qa.js": {
+      "bytes": 21708,
+      "sha256": "59d8a2b548e966f6195d98011c8b90a9010fc734f5dc46e3510c4e5280f2231b"
+    },
+    "review/chin162-native.mjs": {
+      "bytes": 14260,
+      "sha256": "e76de2b40eae91ab08b6fa4910ce46ae760c8c4e2ea807e8838db78b2e3887c8"
+    },
+    "review/chin162-source.mjs": {
+      "bytes": 3188,
+      "sha256": "1a5e86cdd947a0fea5b46ac528eff9b091f8be6449fff22eea0cba3f2c341923"
+    },
+    "review/chin162-local-check.mjs": {
+      "bytes": 8067,
+      "sha256": "f189a48e575e3baabd9eab7cea739cc5efa9ef19c1a14e9a9431494f185e299c"
+    },
+    "src/main.js": {
+      "bytes": 22081,
+      "sha256": "88280af03c4be630968aca0763d3d430ec6699ae9533ba057015c53801d4ae55"
+    },
+    "src/face.js": {
+      "bytes": 22966,
+      "sha256": "0c70ec7cff943e14445daed5cf40dd5aee251756897152c72a3f0b8ea3119321"
+    },
+    "src/blouse.js": {
+      "bytes": 40392,
+      "sha256": "02b15fe9bbdfa428be27fd0f9ed44f7171b3178056b32c9586b8cf63a1da63a6"
+    },
+    "review/jaw-ear159-native.json": {
+      "bytes": 375938,
+      "sha256": "3c3a08201ad8397462b7e7f7d68d1421aa66352cb2a6e54f81cf612f984155f9"
+    }
+  }
+}
