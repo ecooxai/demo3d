@@ -1,0 +1,581 @@
+{
+  "candidate": 117,
+  "exportSelection": "candidate120",
+  "exportModule": "../review/export-portrait-candidate120.js",
+  "exportModuleHash": "3fad3e674634e52c944b711bace49d0d4951418a14bd022ffeee0615914fab2e",
+  "originalFrozen117Test": {
+    "bytes": 29492,
+    "sha256": "65890d8e1e597ccf18cd4b2fa1d819c10759670ab25e0ab418b934698eed5501",
+    "nativeFinding": "Production r186 export omitted the scalar .105 from effective cotton sheen; source and texture integrity passed before that material guard."
+  },
+  "scoreUnchanged": 76,
+  "status": "Technical checks passed; paired source/loaded torso images require root visual acceptance",
+  "browserErrors": [],
+  "strength": 0.5,
+  "scope": "Selected torso only, serialized through the explicitly selected exporter at its exact source world transform",
+  "bake": {
+    "iteration": 117,
+    "strength": 0.5,
+    "applied": true,
+    "source": "Only user-supplied image1; two manual cotton interiors, photographic shading not measured albedo",
+    "sourceSamples": 66684,
+    "minimumSourceRGB": 167.01286158255056,
+    "normalizationRGB": [
+      0.8165571510717219,
+      0.8191059454415504,
+      0.9329927336516431
+    ],
+    "changedAtlasTexels": 60443,
+    "minGain": 0.8902379775272609,
+    "maxGain": 1.0636895726098337,
+    "meanSampleGain": 1.000748690829671,
+    "baseColorBaked": [
+      0.860727240897297,
+      0.8881558544456829,
+      0.9832334684705036
+    ],
+    "clippedChannels": 25861,
+    "maxUnclippedColor": 1.0162444718569572,
+    "neutralLinearQuantizationMax": 0.0024299725568053265,
+    "atlas": [
+      1024,
+      1024
+    ],
+    "additionalCPUTextureMiB": 4,
+    "estimatedGPUMipMiB": 5.333333333333333,
+    "temporaryFieldMiB": 16,
+    "geometryChanged": false,
+    "uvChanged": false,
+    "elapsedMs": 156.5
+  },
+  "sourceChecks": [
+    {
+      "stage": "before-focused-export",
+      "ok": true,
+      "originalObjects": 79,
+      "originalAttributes": 282,
+      "fullTorsoAttributeHashes": 5,
+      "fullTextureHashes": 2
+    },
+    {
+      "stage": "after-export-preparation",
+      "ok": true,
+      "originalObjects": 79,
+      "originalAttributes": 282,
+      "fullTorsoAttributeHashes": 5,
+      "fullTextureHashes": 2
+    },
+    {
+      "stage": "after-preparation-disposal",
+      "ok": true,
+      "originalObjects": 79,
+      "originalAttributes": 282,
+      "fullTorsoAttributeHashes": 5,
+      "fullTextureHashes": 2
+    },
+    {
+      "stage": "after-glb-serialization",
+      "ok": true,
+      "originalObjects": 79,
+      "originalAttributes": 282,
+      "fullTorsoAttributeHashes": 5,
+      "fullTextureHashes": 2
+    },
+    {
+      "stage": "after-load-and-hidden-attachment",
+      "ok": true,
+      "originalObjects": 79,
+      "originalAttributes": 282,
+      "fullTorsoAttributeHashes": 5,
+      "fullTextureHashes": 2
+    },
+    {
+      "stage": "after-loaded-torso-cleanup",
+      "ok": true,
+      "originalObjects": 79,
+      "originalAttributes": 282,
+      "fullTorsoAttributeHashes": 5,
+      "fullTextureHashes": 2
+    }
+  ],
+  "visual": [
+    {
+      "stage": "source",
+      "view": "front",
+      "width": 796,
+      "height": 1061,
+      "rect": [
+        0,
+        0,
+        796,
+        1061
+      ],
+      "pixels": 844556,
+      "rgbMAE": 0,
+      "maxByteDifference": 0,
+      "changedPixelFractionOverTwo": 0,
+      "sourceMeanLuma": 176.5081468652162,
+      "currentMeanLuma": 176.5081468652162,
+      "sourceDarkFraction": 0.0004511246145903883,
+      "currentDarkFraction": 0.0004511246145903883,
+      "eyes": [
+        {
+          "rect": [
+            344,
+            262,
+            381,
+            299
+          ],
+          "pixels": 1369,
+          "rgbMAE": 0,
+          "maxByteDifference": 0,
+          "changedPixelFractionOverTwo": 0,
+          "sourceMeanLuma": 107.82126924762616,
+          "currentMeanLuma": 107.82126924762616,
+          "sourceDarkFraction": 0.08400292184075968,
+          "currentDarkFraction": 0.08400292184075968,
+          "severeBlackening": false
+        },
+        {
+          "rect": [
+            455,
+            281,
+            490,
+            318
+          ],
+          "pixels": 1295,
+          "rgbMAE": 0,
+          "maxByteDifference": 0,
+          "changedPixelFractionOverTwo": 0,
+          "sourceMeanLuma": 100.53730023166021,
+          "currentMeanLuma": 100.53730023166021,
+          "sourceDarkFraction": 0.15289575289575288,
+          "currentDarkFraction": 0.15289575289575288,
+          "severeBlackening": false
+        }
+      ]
+    },
+    {
+      "stage": "source",
+      "view": "garment",
+      "width": 796,
+      "height": 1061,
+      "rect": [
+        0,
+        0,
+        796,
+        1061
+      ],
+      "pixels": 844556,
+      "rgbMAE": 0,
+      "maxByteDifference": 0,
+      "changedPixelFractionOverTwo": 0,
+      "sourceMeanLuma": 218.35407913445803,
+      "currentMeanLuma": 218.35407913445803,
+      "sourceDarkFraction": 0,
+      "currentDarkFraction": 0,
+      "eyes": []
+    },
+    {
+      "stage": "loaded",
+      "view": "front",
+      "width": 796,
+      "height": 1061,
+      "rect": [
+        0,
+        0,
+        796,
+        1061
+      ],
+      "pixels": 844556,
+      "rgbMAE": 0,
+      "maxByteDifference": 0,
+      "changedPixelFractionOverTwo": 0,
+      "sourceMeanLuma": 176.5081468652162,
+      "currentMeanLuma": 176.5081468652162,
+      "sourceDarkFraction": 0.0004511246145903883,
+      "currentDarkFraction": 0.0004511246145903883,
+      "eyes": [
+        {
+          "rect": [
+            344,
+            262,
+            381,
+            299
+          ],
+          "pixels": 1369,
+          "rgbMAE": 0,
+          "maxByteDifference": 0,
+          "changedPixelFractionOverTwo": 0,
+          "sourceMeanLuma": 107.82126924762616,
+          "currentMeanLuma": 107.82126924762616,
+          "sourceDarkFraction": 0.08400292184075968,
+          "currentDarkFraction": 0.08400292184075968,
+          "severeBlackening": false
+        },
+        {
+          "rect": [
+            455,
+            281,
+            490,
+            318
+          ],
+          "pixels": 1295,
+          "rgbMAE": 0,
+          "maxByteDifference": 0,
+          "changedPixelFractionOverTwo": 0,
+          "sourceMeanLuma": 100.53730023166021,
+          "currentMeanLuma": 100.53730023166021,
+          "sourceDarkFraction": 0.15289575289575288,
+          "currentDarkFraction": 0.15289575289575288,
+          "severeBlackening": false
+        }
+      ]
+    },
+    {
+      "stage": "loaded",
+      "view": "garment",
+      "width": 796,
+      "height": 1061,
+      "rect": [
+        0,
+        0,
+        796,
+        1061
+      ],
+      "pixels": 844556,
+      "rgbMAE": 0.0013261405993208266,
+      "maxByteDifference": 1,
+      "changedPixelFractionOverTwo": 0,
+      "sourceMeanLuma": 218.35407913445803,
+      "currentMeanLuma": 218.3532333220116,
+      "sourceDarkFraction": 0,
+      "currentDarkFraction": 0,
+      "eyes": []
+    },
+    {
+      "stage": "restored",
+      "view": "front",
+      "width": 796,
+      "height": 1061,
+      "rect": [
+        0,
+        0,
+        796,
+        1061
+      ],
+      "pixels": 844556,
+      "rgbMAE": 0,
+      "maxByteDifference": 0,
+      "changedPixelFractionOverTwo": 0,
+      "sourceMeanLuma": 176.5081468652162,
+      "currentMeanLuma": 176.5081468652162,
+      "sourceDarkFraction": 0.0004511246145903883,
+      "currentDarkFraction": 0.0004511246145903883,
+      "eyes": [
+        {
+          "rect": [
+            344,
+            262,
+            381,
+            299
+          ],
+          "pixels": 1369,
+          "rgbMAE": 0,
+          "maxByteDifference": 0,
+          "changedPixelFractionOverTwo": 0,
+          "sourceMeanLuma": 107.82126924762616,
+          "currentMeanLuma": 107.82126924762616,
+          "sourceDarkFraction": 0.08400292184075968,
+          "currentDarkFraction": 0.08400292184075968,
+          "severeBlackening": false
+        },
+        {
+          "rect": [
+            455,
+            281,
+            490,
+            318
+          ],
+          "pixels": 1295,
+          "rgbMAE": 0,
+          "maxByteDifference": 0,
+          "changedPixelFractionOverTwo": 0,
+          "sourceMeanLuma": 100.53730023166021,
+          "currentMeanLuma": 100.53730023166021,
+          "sourceDarkFraction": 0.15289575289575288,
+          "currentDarkFraction": 0.15289575289575288,
+          "severeBlackening": false
+        }
+      ]
+    }
+  ],
+  "temporaryPreparation": {
+    "materials": 1,
+    "textures": 2,
+    "normalCanvases": 0,
+    "sharedGeometries": 1,
+    "normalScaleBakes": [],
+    "alphaMerges": [],
+    "sheenFactorBakes": [
+      {
+        "version": "gltf-sheen-scalar-export-120-v1",
+        "material": "blouse-cotton",
+        "originalScalar": 0.105,
+        "originalColor": [
+          0.8631572134510892,
+          0.8713671191959567,
+          0.9301108583738498
+        ],
+        "exportedScalar": 1,
+        "exportedColor": [
+          0.09063150741236436,
+          0.09149354751557545,
+          0.09766164012925423
+        ],
+        "colorMap": null,
+        "colorMapPresent": false,
+        "roughness": 0.87,
+        "roughnessMapPresent": false,
+        "texturePixelsChanged": false,
+        "liveMaterialChanged": false,
+        "allocatedPixelBytes": 0,
+        "perFrameWork": 0
+      }
+    ],
+    "sourceEffectiveSheen": [
+      0.09063150741236436,
+      0.09149354751557545,
+      0.09766164012925423
+    ],
+    "preparedEffectiveSheen": [
+      0.09063150741236436,
+      0.09149354751557545,
+      0.09766164012925423
+    ],
+    "disposedMaterials": 1,
+    "disposedTextures": 2,
+    "milliseconds": 3.100000001490116
+  },
+  "roundtrip": {
+    "glbBytes": 1627640,
+    "meshCount": 1,
+    "baseColorFactor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "extensionsUsed": [
+      "KHR_materials_sheen",
+      "KHR_texture_transform",
+      "EXT_materials_bump"
+    ],
+    "bumpExtension": {
+      "bumpTexture": {
+        "index": 1,
+        "texCoord": 0,
+        "extensions": {
+          "KHR_texture_transform": {
+            "scale": [
+              14,
+              14
+            ]
+          }
+        }
+      },
+      "bumpFactor": 0.0021
+    },
+    "sheenExtension": {
+      "sheenRoughnessFactor": 0.87,
+      "sheenColorFactor": [
+        0.09063150741236436,
+        0.09149354751557545,
+        0.09766164012925423
+      ]
+    },
+    "geometryChecks": {
+      "position": {
+        "count": 21809,
+        "values": 65427,
+        "maxError": 0,
+        "differingValues": 0
+      },
+      "uv": {
+        "count": 21809,
+        "values": 43618,
+        "maxError": 0,
+        "differingValues": 0
+      },
+      "normal": {
+        "count": 21809,
+        "values": 65427,
+        "maxError": 0,
+        "differingValues": 0
+      },
+      "color": {
+        "count": 21809,
+        "values": 65427,
+        "maxError": 0,
+        "differingValues": 0
+      },
+      "index": {
+        "count": 129024,
+        "values": 129024,
+        "maxError": 0,
+        "differingValues": 0
+      }
+    },
+    "textureChecks": {
+      "map": {
+        "width": 1024,
+        "height": 1024,
+        "mismatches": 0,
+        "maxByteError": 0,
+        "flippedMismatches": 197750,
+        "sourceHash": "326d527680cd470830538e9521bc2ad946bda9ff7c806af2c9967d76a2407376",
+        "loadedHash": "326d527680cd470830538e9521bc2ad946bda9ff7c806af2c9967d76a2407376",
+        "sourceAnisotropy": 8,
+        "importedAnisotropy": 1
+      },
+      "bumpMap": {
+        "width": 256,
+        "height": 256,
+        "mismatches": 0,
+        "maxByteError": 0,
+        "flippedMismatches": 186420,
+        "sourceHash": "c9d5730e8f3771fcc51924e2797b9164e3e931deff4979f4e26d20cb8bb27d23",
+        "loadedHash": "c9d5730e8f3771fcc51924e2797b9164e3e931deff4979f4e26d20cb8bb27d23",
+        "sourceAnisotropy": 4,
+        "importedAnisotropy": 1
+      }
+    },
+    "sourceSheen": [
+      0.09063150741236436,
+      0.09149354751557545,
+      0.09766164012925423
+    ],
+    "loadedSheen": [
+      0.09063150741236436,
+      0.09149354751557545,
+      0.09766164012925423
+    ],
+    "boundError": 0,
+    "matchedRendererSettings": [
+      "alphaToCoverage",
+      "envMapIntensity",
+      "forceSinglePass",
+      "depthWrite"
+    ],
+    "matchedTextureAnisotropy": true,
+    "sourceBumpPreservedThroughExtension": true,
+    "exportMs": 17.299999997019768,
+    "loadMs": 4.700000002980232
+  },
+  "cleanup": {
+    "loadedGeometriesDisposed": 1,
+    "loadedMaterialsDisposed": 1,
+    "loadedTexturesDisposed": 2,
+    "loadedImageBitmapsClosed": 2,
+    "sourceDisposals": 0,
+    "originalMaterialAndAtlasRestored": true,
+    "sourceVisibilityRestored": true
+  },
+  "sheenFixtures": {
+    "status": "Passed",
+    "cases": [
+      {
+        "name": "sheen120-constant",
+        "originalScalar": 0.105,
+        "loadedScalar": 1,
+        "effectiveColor": [
+          0.0924,
+          0.04305,
+          0.021
+        ],
+        "extensionPresent": true,
+        "colorAndRoughnessMapsPreserved": false,
+        "zeroExtensionOmitted": false
+      },
+      {
+        "name": "sheen120-mapped",
+        "originalScalar": 0.37,
+        "loadedScalar": 1,
+        "effectiveColor": [
+          0.26639999999999997,
+          0.1998,
+          0.1184
+        ],
+        "extensionPresent": true,
+        "colorAndRoughnessMapsPreserved": true,
+        "zeroExtensionOmitted": false
+      },
+      {
+        "name": "sheen120-zero-mapped",
+        "originalScalar": 0,
+        "loadedScalar": 0,
+        "effectiveColor": [
+          0,
+          0,
+          0
+        ],
+        "extensionPresent": false,
+        "colorAndRoughnessMapsPreserved": false,
+        "zeroExtensionOmitted": true
+      }
+    ],
+    "sourceResourcesDisposedBeforeCleanup": 0,
+    "preparation": {
+      "disposedMaterials": 3,
+      "disposedTextures": 2,
+      "geometryShared": true,
+      "sourcePixelsShared": true
+    },
+    "glbBytes": 2740,
+    "cleanup": {
+      "loadedResourcesDisposed": 6,
+      "loadedBitmapsClosed": 2,
+      "ownedFixtureResourcesDisposed": 6,
+      "portraitSceneAttachment": false
+    }
+  },
+  "sheenCheck": {
+    "source": {
+      "scalar": 0.105,
+      "color": [
+        0.8631572134510892,
+        0.8713671191959567,
+        0.9301108583738498
+      ],
+      "roughness": 0.87
+    },
+    "loaded": {
+      "scalar": 1,
+      "color": [
+        0.09063150741236436,
+        0.09149354751557545,
+        0.09766164012925423
+      ],
+      "roughness": 0.87
+    },
+    "sourceEffective": [
+      0.09063150741236436,
+      0.09149354751557545,
+      0.09766164012925423
+    ],
+    "loadedEffective": [
+      0.09063150741236436,
+      0.09149354751557545,
+      0.09766164012925423
+    ],
+    "extension": {
+      "sheenRoughnessFactor": 0.87,
+      "sheenColorFactor": [
+        0.09063150741236436,
+        0.09149354751557545,
+        0.09766164012925423
+      ]
+    }
+  },
+  "idleFrames": 0
+}

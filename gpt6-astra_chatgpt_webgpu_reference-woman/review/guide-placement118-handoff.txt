@@ -1,0 +1,127 @@
+Candidate118 — frozen for native art review; overall score remains76/100.
+
+Native files to transfer together
+--------------------------------
+review/hair-groom-candidate118.js — 38,970 bytes
+SHA256 8a2752ab54416d7bd437b799a60f06e35124128a1a664336553635b60de7ec24
+review/guide-placement-candidate118.js — 14,728 bytes
+SHA256 f006e2e31ce96c6b7fc9c4cb32189aa7e4a3fc1102ffa2f743e0550d3f24ce49
+review/guide-placement118-native.mjs — 6,664 bytes
+SHA256 4734ccb9a34dddf3ecf2260ca6d783646181ce26edd18d1cec84e95b1306b465
+
+Run from project root:
+node review/guide-placement118-native.mjs
+
+The script builds from the live main.js, including accepted122 scene preparation.
+It replaces only the groom source through esbuild. Its resolveDir remains src,
+which resolves the groom's original face/contact imports and the new review
+helper correctly. Native WebGPU is required; there is no WebGL fallback.
+Fresh pages capture0/.5/1 front/detail/left/right/back as:
+output/qa/guide-placement-118-{0,50,100}-{view}.png
+It also writes output/qa/guide-placement118-native-audit.json.
+No Mac rendering has been performed by this child agent.
+
+Scope and construction
+----------------------
+The original146 front/curl/inner guides are rebuilt before their MASS sections
+and dependent fine paths. The root-approved four clear side guides154/155/166/167
+follow the same field; the other20 side guides, all106 rear guides, and14 far
+temple guides are unchanged. All authored guide center X/Y are exactly retained.
+The source geometry above authoredY-1.64 is exactly retained; the guide field
+starts below-1.74 and the independent fine-curve interpolation has an upper guard.
+
+Each side uses one C2 bicubic B-spline depth-translation field fitted against the
+accepted blouse and accepted86 shoulderContact .35. Coefficient caps are .22/.32.
+The original section axes are transported by the field Jacobian before sweeping.
+This retains MASS section X/Y and depth offsets, with depth derivative and
+Jacobian determinant1. Normals are rebuilt from the swept geometry. It does not
+apply a final-mesh warp, compress lock depth, add surfaces, or change the RNG.
+LongLock is deferred in the original order; the zero case is byte-identical to
+the original source geometry, colors, UVs, normals and indices.
+
+The fixed side locks are temporary triangle obstacles in the fit. Whole source
+depth intervals are compared, so already interleaved pairs are not falsely
+treated as separate layers. Source gaps below.005 are not claimed as separated.
+The fitted field has broad support and does not switch to individual hit normals.
+There is no explicit source-tip-depth constraint; inherited tight cloth contact
+still limits permissible movement near several ends.
+
+Measured movement and clearance (source-only)
+---------------------------------------------
+Full-strength guide center pull at modelY.6:
+left median.04435 / max.10604; right median.06016 / max.19046.
+At modelY.3: left median.07128 / right median.04496.
+Maximum actual MASS point inward displacement: mild.13447 / full.26895.
+
+Median normal hair-to-blouse gap at modelY.6:
+left baseline.24393 -> mild.22296 -> full.20045
+right baseline.35094 -> mild.30847 -> full.28320
+At modelY.3:
+left baseline.20626 -> mild.17010 -> full.13342
+right baseline.38998 -> mild.34991 -> full.32675
+This is a modest reduction; the crescent is not expected to disappear.
+
+Both strengths: zero new or worsened cloth penetrations in24,492 rear section
+samples. The inherited minimum stays-.0266949, including invisible taper ends.
+Minimum full-strength clearance of the four moved side guides:
+154 .06177;155 .10058;166 .13666;167 .18401.
+
+Across134,292 sampled originally separated guide pairs:
+mild:0 new overlaps,0 reversals.
+full:1 new overlap, depth.00446364,0 reversals; inner218/224 at modelXY
+(1.52443,.68520), with original gap.00522296. It is a small swept-section /
+triangle interpolation residual, not the earlier .09-.21 side-layer reversal.
+No changed-to-fixed-side crossing survives the current sampled check.
+
+Remaining art risk
+------------------
+Using .035 depth hysteresis, one mild guide (curl136) and30 full-strength guides
+gain additional depth extrema. Center X/Y do not gain turns, but the native
+profiles must decide whether the new depth curves look like natural drape or
+an undesirable secondary bend. Do not label this a complete no-hook proof.
+The front should retain its source silhouette, crown/part/fringe/ear coverage,
+colors and regularity. Both profiles should show some reduced unsupported gap
+without a ladder, hook, flattened thickness, or cloth intersection. Back stays
+the accepted groom apart from possible visibility of the moved front lengths.
+
+Preservation and cost
+--------------------
+All source technical preservation assertions passed, including protected MASS
+and fine ranges, upper raw vertices, all UV/color/index hashes, crown/fringe/wisps,
+zero true no-op, finite positions/normals, and unchanged topology. Source normals
+have maximum unit-length error4.97e-8; three existing degenerate zero normals are
+unchanged. MASS raw section X/Y error0; posed round-trip float error<4.7e-7.
+Fine X/Y changes are at most.0000422/.0001517 at full strength.
+
+No additional triangles, meshes, draw calls, textures or GPU buffer sizes.
+The source harness reports the same1,114,888 hair triangles and52.49MiB geometry
+at both strengths. Standard UV0/RGBA maps and exported mesh attributes are retained;
+there is no new export material/channel requirement.
+
+One-time field coefficients4,224 bytes. The fit's temporary source triangle payload
+is6,969,248 bytes plus transient cell/reference bookkeeping. These are not retained
+in returned render geometry. Source paths-only fit1.76s; full source audit fit
+2.86-3.23s, complete groom construction7.54-7.65s. Native measurements are authoritative.
+The entire source audit (baseline+zero+two strengths, snapshots and ray checks)
+took75.9s wall/70.4s CPU, peakRSS560.4MiB; this is audit overhead, not runtime GPU RAM.
+
+Audit artifacts
+---------------
+review/guide-placement118-source-audit.json — complete current results and hashes
+review/guide-placement118-audit.mjs — reproducible source audit
+review/guide-placement118-source.mjs — source-only evaluator using established math
+review/guide-placement118-study.json — guide movement bands and field costs
+review/guide-placement118-study.mjs — lightweight source fit study
+review/guide-placement118-before-side-bounds.json — rejected large-crossing study
+review/guide-placement118-fixed-side-study.json — nearly immobile all-fixed-side fit
+review/guide-placement118-dependency.json — read-only four-guide clearance rationale
+
+Source-only tests use the project's existing uniform Catmull-Rom/math harness.
+Finite ring/ray checks do not certify exhaustive mesh intersection freedom.
+Hair alpha is intentionally ignored by the geometric ray audit. Separate collars,
+fine-to-MASS intersections and after-balance triangle interpolation remain native
+visual checks. No production or other agent files were changed.
+
+Post-acceptance wrapper update: native script accepts either the original groom
+constructor or the exact integrated guidePlacement:.5 call, replacing the
+selected strength with one URL-driven value. It never applies118 twice.

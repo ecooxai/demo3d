@@ -1,0 +1,905 @@
+{
+  "sourceOnly": true,
+  "geometryUnmodified": true,
+  "note": "Hypothetical exact common field at protected side points. This does not apply a candidate sweep to those guides.",
+  "sides": [
+    {
+      "guide": 148,
+      "side": "left",
+      "samples": 85,
+      "baselineInside": 34,
+      "minBaseline": -0.07089338617756365,
+      "newInsideIfCarried": 28,
+      "worsenedInheritedIfCarried": 24,
+      "minAfterIfCarried": -0.13302696498978658
+    },
+    {
+      "guide": 149,
+      "side": "left",
+      "samples": 85,
+      "baselineInside": 30,
+      "minBaseline": -0.06492360633951984,
+      "newInsideIfCarried": 26,
+      "worsenedInheritedIfCarried": 25,
+      "minAfterIfCarried": -0.09997691440196664
+    },
+    {
+      "guide": 150,
+      "side": "left",
+      "samples": 90,
+      "baselineInside": 43,
+      "minBaseline": -0.07630134296443877,
+      "newInsideIfCarried": 23,
+      "worsenedInheritedIfCarried": 28,
+      "minAfterIfCarried": -0.14103212143074975
+    },
+    {
+      "guide": 151,
+      "side": "left",
+      "samples": 90,
+      "baselineInside": 43,
+      "minBaseline": -0.05544788497863672,
+      "newInsideIfCarried": 21,
+      "worsenedInheritedIfCarried": 28,
+      "minAfterIfCarried": -0.11146968800692358
+    },
+    {
+      "guide": 152,
+      "side": "left",
+      "samples": 90,
+      "baselineInside": 0,
+      "minBaseline": 0.015103790490648025,
+      "newInsideIfCarried": 38,
+      "worsenedInheritedIfCarried": 0,
+      "minAfterIfCarried": -0.07227407444592199
+    },
+    {
+      "guide": 153,
+      "side": "left",
+      "samples": 90,
+      "baselineInside": 0,
+      "minBaseline": 0.04308091990842939,
+      "newInsideIfCarried": 27,
+      "worsenedInheritedIfCarried": 0,
+      "minAfterIfCarried": -0.05613795410518599
+    },
+    {
+      "guide": 154,
+      "side": "left",
+      "samples": 95,
+      "baselineInside": 0,
+      "minBaseline": 0.1403344109769555,
+      "newInsideIfCarried": 0,
+      "worsenedInheritedIfCarried": 0,
+      "minAfterIfCarried": 0.037477295305236996
+    },
+    {
+      "guide": 155,
+      "side": "left",
+      "samples": 90,
+      "baselineInside": 0,
+      "minBaseline": 0.17378351566550684,
+      "newInsideIfCarried": 0,
+      "worsenedInheritedIfCarried": 0,
+      "minAfterIfCarried": 0.07920876640450128
+    },
+    {
+      "guide": 160,
+      "side": "right",
+      "samples": 85,
+      "baselineInside": 0,
+      "minBaseline": 0.06683708806308408,
+      "newInsideIfCarried": 55,
+      "worsenedInheritedIfCarried": 0,
+      "minAfterIfCarried": -0.19456388229310248
+    },
+    {
+      "guide": 161,
+      "side": "right",
+      "samples": 85,
+      "baselineInside": 0,
+      "minBaseline": 0.07124395541725613,
+      "newInsideIfCarried": 53,
+      "worsenedInheritedIfCarried": 0,
+      "minAfterIfCarried": -0.19188861080836253
+    },
+    {
+      "guide": 162,
+      "side": "right",
+      "samples": 90,
+      "baselineInside": 0,
+      "minBaseline": 0.08775856463512528,
+      "newInsideIfCarried": 45,
+      "worsenedInheritedIfCarried": 0,
+      "minAfterIfCarried": -0.17991654364580145
+    },
+    {
+      "guide": 163,
+      "side": "right",
+      "samples": 90,
+      "baselineInside": 0,
+      "minBaseline": 0.10651220747756464,
+      "newInsideIfCarried": 40,
+      "worsenedInheritedIfCarried": 0,
+      "minAfterIfCarried": -0.15822787570252028
+    },
+    {
+      "guide": 164,
+      "side": "right",
+      "samples": 90,
+      "baselineInside": 0,
+      "minBaseline": 0.20706446943125412,
+      "newInsideIfCarried": 22,
+      "worsenedInheritedIfCarried": 0,
+      "minAfterIfCarried": -0.04405842241482416
+    },
+    {
+      "guide": 165,
+      "side": "right",
+      "samples": 90,
+      "baselineInside": 0,
+      "minBaseline": 0.2303689247967909,
+      "newInsideIfCarried": 10,
+      "worsenedInheritedIfCarried": 0,
+      "minAfterIfCarried": -0.0136215281132702
+    },
+    {
+      "guide": 166,
+      "side": "right",
+      "samples": 95,
+      "baselineInside": 0,
+      "minBaseline": 0.2181841354726263,
+      "newInsideIfCarried": 0,
+      "worsenedInheritedIfCarried": 0,
+      "minAfterIfCarried": 0.003940303849062008
+    },
+    {
+      "guide": 167,
+      "side": "right",
+      "samples": 90,
+      "baselineInside": 0,
+      "minBaseline": 0.23728645621760988,
+      "newInsideIfCarried": 0,
+      "worsenedInheritedIfCarried": 0,
+      "minAfterIfCarried": 0.03204055729948789
+    }
+  ],
+  "rows": [
+    {
+      "guide": 148,
+      "side": "left",
+      "y": 0.9,
+      "medianBefore": 0.18991037516614168,
+      "medianAfterIfCarried": 0.07111206140585581,
+      "medianProposedPull": 0.11968792118964654
+    },
+    {
+      "guide": 148,
+      "side": "left",
+      "y": 0.6,
+      "medianBefore": 0.10532931101381886,
+      "medianAfterIfCarried": -0.04990735545793767,
+      "medianProposedPull": 0.17637128692782167
+    },
+    {
+      "guide": 148,
+      "side": "left",
+      "y": 0.3,
+      "medianBefore": 0.01947249227608837,
+      "medianAfterIfCarried": -0.10063643739003877,
+      "medianProposedPull": 0.12533617663964086
+    },
+    {
+      "guide": 148,
+      "side": "left",
+      "y": 0,
+      "medianBefore": -0.05381797805463298,
+      "medianAfterIfCarried": -0.10302401212209458,
+      "medianProposedPull": 0.05319261900153437
+    },
+    {
+      "guide": 148,
+      "side": "left",
+      "y": -0.3,
+      "medianBefore": -0.07000172860337983,
+      "medianAfterIfCarried": -0.07146100191666231,
+      "medianProposedPull": 0.0008310612510849123
+    },
+    {
+      "guide": 149,
+      "side": "left",
+      "y": 0.9,
+      "medianBefore": 0.2262794654449612,
+      "medianAfterIfCarried": 0.11657108980377634,
+      "medianProposedPull": 0.10643627397251741
+    },
+    {
+      "guide": 149,
+      "side": "left",
+      "y": 0.6,
+      "medianBefore": 0.14611051270064948,
+      "medianAfterIfCarried": -0.014811279905863804,
+      "medianProposedPull": 0.17723110865233568
+    },
+    {
+      "guide": 149,
+      "side": "left",
+      "y": 0.3,
+      "medianBefore": 0.05922226407798161,
+      "medianAfterIfCarried": -0.06769988833011668,
+      "medianProposedPull": 0.1336969731479986
+    },
+    {
+      "guide": 149,
+      "side": "left",
+      "y": 0,
+      "medianBefore": -0.030006922843854276,
+      "medianAfterIfCarried": -0.07487919137626477,
+      "medianProposedPull": 0.06413048273212674
+    },
+    {
+      "guide": 149,
+      "side": "left",
+      "y": -0.3,
+      "medianBefore": -0.05903778518283095,
+      "medianAfterIfCarried": -0.06132876111287579,
+      "medianProposedPull": 0.002308646474949234
+    },
+    {
+      "guide": 150,
+      "side": "left",
+      "y": 0.9,
+      "medianBefore": 0.22901293217247626,
+      "medianAfterIfCarried": 0.1682732736179787,
+      "medianProposedPull": 0.06121646927105151
+    },
+    {
+      "guide": 150,
+      "side": "left",
+      "y": 0.6,
+      "medianBefore": 0.12901750189244024,
+      "medianAfterIfCarried": -0.030045987761111163,
+      "medianProposedPull": 0.16767428010145755
+    },
+    {
+      "guide": 150,
+      "side": "left",
+      "y": 0.3,
+      "medianBefore": 0.0045665170614058075,
+      "medianAfterIfCarried": -0.09899230151685579,
+      "medianProposedPull": 0.11548580502291975
+    },
+    {
+      "guide": 150,
+      "side": "left",
+      "y": 0,
+      "medianBefore": -0.055842359765254646,
+      "medianAfterIfCarried": -0.10033740527701004,
+      "medianProposedPull": 0.0593907886819691
+    },
+    {
+      "guide": 150,
+      "side": "left",
+      "y": -0.3,
+      "medianBefore": -0.07120189785521847,
+      "medianAfterIfCarried": -0.07259727394158735,
+      "medianProposedPull": 0.0020085930585292087
+    },
+    {
+      "guide": 150,
+      "side": "left",
+      "y": -0.6,
+      "medianBefore": -0.04259453336624164,
+      "medianAfterIfCarried": -0.042607075705403556,
+      "medianProposedPull": 0.00017380129144701017
+    },
+    {
+      "guide": 151,
+      "side": "left",
+      "y": 0.9,
+      "medianBefore": 0.24738098766820282,
+      "medianAfterIfCarried": 0.16732312114426717,
+      "medianProposedPull": 0.08738725936420455
+    },
+    {
+      "guide": 151,
+      "side": "left",
+      "y": 0.6,
+      "medianBefore": 0.1467806129821591,
+      "medianAfterIfCarried": -0.005268160254165398,
+      "medianProposedPull": 0.1701302771658704
+    },
+    {
+      "guide": 151,
+      "side": "left",
+      "y": 0.3,
+      "medianBefore": 0.03320600131046719,
+      "medianAfterIfCarried": -0.0742587952184422,
+      "medianProposedPull": 0.11131516548631426
+    },
+    {
+      "guide": 151,
+      "side": "left",
+      "y": 0,
+      "medianBefore": -0.026158096009462086,
+      "medianAfterIfCarried": -0.08248293193683974,
+      "medianProposedPull": 0.0712733333632007
+    },
+    {
+      "guide": 151,
+      "side": "left",
+      "y": -0.3,
+      "medianBefore": -0.05091864231739795,
+      "medianAfterIfCarried": -0.05383211866435923,
+      "medianProposedPull": 0.0026936791568945417
+    },
+    {
+      "guide": 151,
+      "side": "left",
+      "y": -0.6,
+      "medianBefore": -0.020837378210525576,
+      "medianAfterIfCarried": -0.0208497244476985,
+      "medianProposedPull": 0.00001331604428461134
+    },
+    {
+      "guide": 152,
+      "side": "left",
+      "y": 0.9,
+      "medianBefore": 0.20976596579784307,
+      "medianAfterIfCarried": 0.10802037615599655,
+      "medianProposedPull": 0.10733566900752618
+    },
+    {
+      "guide": 152,
+      "side": "left",
+      "y": 0.6,
+      "medianBefore": 0.13022337630408762,
+      "medianAfterIfCarried": -0.02641632405697879,
+      "medianProposedPull": 0.17276958844386603
+    },
+    {
+      "guide": 152,
+      "side": "left",
+      "y": 0.3,
+      "medianBefore": 0.05781353702242042,
+      "medianAfterIfCarried": -0.06097890273312136,
+      "medianProposedPull": 0.12287397301672882
+    },
+    {
+      "guide": 152,
+      "side": "left",
+      "y": 0,
+      "medianBefore": 0.025199247644305534,
+      "medianAfterIfCarried": -0.025280762758668727,
+      "medianProposedPull": 0.053647853701162054
+    },
+    {
+      "guide": 152,
+      "side": "left",
+      "y": -0.3,
+      "medianBefore": 0.038144187936211736,
+      "medianAfterIfCarried": 0.03500925275644933,
+      "medianProposedPull": 0.003295781636644867
+    },
+    {
+      "guide": 152,
+      "side": "left",
+      "y": -0.6,
+      "medianBefore": 0.06937322842961005,
+      "medianAfterIfCarried": 0.06915604916495666,
+      "medianProposedPull": 0.00024165803519173165
+    },
+    {
+      "guide": 153,
+      "side": "left",
+      "y": 0.9,
+      "medianBefore": 0.24718441286131443,
+      "medianAfterIfCarried": 0.18934133498400213,
+      "medianProposedPull": 0.06577485909371697
+    },
+    {
+      "guide": 153,
+      "side": "left",
+      "y": 0.6,
+      "medianBefore": 0.17849146423751236,
+      "medianAfterIfCarried": 0.02399748210093532,
+      "medianProposedPull": 0.17016108333266805
+    },
+    {
+      "guide": 153,
+      "side": "left",
+      "y": 0.3,
+      "medianBefore": 0.09630287119381153,
+      "medianAfterIfCarried": -0.028807909985117338,
+      "medianProposedPull": 0.12900844411268558
+    },
+    {
+      "guide": 153,
+      "side": "left",
+      "y": 0,
+      "medianBefore": 0.057260959342861135,
+      "medianAfterIfCarried": -0.012581771320878527,
+      "medianProposedPull": 0.07238501874640556
+    },
+    {
+      "guide": 153,
+      "side": "left",
+      "y": -0.3,
+      "medianBefore": 0.0644850047285893,
+      "medianAfterIfCarried": 0.05938727291707326,
+      "medianProposedPull": 0.005285332023395038
+    },
+    {
+      "guide": 153,
+      "side": "left",
+      "y": -0.6,
+      "medianBefore": 0.11520540916886803,
+      "medianAfterIfCarried": 0.11518564697889243,
+      "medianProposedPull": 0.0004901365678542462
+    },
+    {
+      "guide": 154,
+      "side": "left",
+      "y": 0.9,
+      "medianBefore": 0.30306526566153014,
+      "medianAfterIfCarried": 0.23310547127867112,
+      "medianProposedPull": 0.11120327974062906
+    },
+    {
+      "guide": 154,
+      "side": "left",
+      "y": 0.6,
+      "medianBefore": 0.2659346228385366,
+      "medianAfterIfCarried": 0.11379151825703081,
+      "medianProposedPull": 0.1699251700595311
+    },
+    {
+      "guide": 154,
+      "side": "left",
+      "y": 0.3,
+      "medianBefore": 0.19616216587499696,
+      "medianAfterIfCarried": 0.0733612824896962,
+      "medianProposedPull": 0.13046317930187956
+    },
+    {
+      "guide": 154,
+      "side": "left",
+      "y": 0,
+      "medianBefore": 0.15118924860413044,
+      "medianAfterIfCarried": 0.09306769145201005,
+      "medianProposedPull": 0.07546806163343364
+    },
+    {
+      "guide": 154,
+      "side": "left",
+      "y": -0.3,
+      "medianBefore": 0.1521691670043484,
+      "medianAfterIfCarried": 0.1493880661374041,
+      "medianProposedPull": 0.0052825037462138295
+    },
+    {
+      "guide": 154,
+      "side": "left",
+      "y": -0.6,
+      "medianBefore": 0.1917570634306963,
+      "medianAfterIfCarried": 0.1917570634306963,
+      "medianProposedPull": 0.0001326221390150427
+    },
+    {
+      "guide": 155,
+      "side": "left",
+      "y": 0.9,
+      "medianBefore": 0.3530537901621471,
+      "medianAfterIfCarried": 0.28662059895662934,
+      "medianProposedPull": 0.07225990940640883
+    },
+    {
+      "guide": 155,
+      "side": "left",
+      "y": 0.6,
+      "medianBefore": 0.30733567162926656,
+      "medianAfterIfCarried": 0.14608382973930018,
+      "medianProposedPull": 0.17615421474945472
+    },
+    {
+      "guide": 155,
+      "side": "left",
+      "y": 0.3,
+      "medianBefore": 0.23471430031466803,
+      "medianAfterIfCarried": 0.10895120270488555,
+      "medianProposedPull": 0.13454244670676987
+    },
+    {
+      "guide": 155,
+      "side": "left",
+      "y": 0,
+      "medianBefore": 0.18856082878647812,
+      "medianAfterIfCarried": 0.12615741091695,
+      "medianProposedPull": 0.07613988068906452
+    },
+    {
+      "guide": 155,
+      "side": "left",
+      "y": -0.3,
+      "medianBefore": 0.177477338871926,
+      "medianAfterIfCarried": 0.17358718850524157,
+      "medianProposedPull": 0.006044698376330294
+    },
+    {
+      "guide": 155,
+      "side": "left",
+      "y": -0.6,
+      "medianBefore": 0.20431503468671375,
+      "medianAfterIfCarried": 0.2043121058279011,
+      "medianProposedPull": 0.000291030011874699
+    },
+    {
+      "guide": 160,
+      "side": "right",
+      "y": 0.9,
+      "medianBefore": 0.19357498069748041,
+      "medianAfterIfCarried": 0.044179300499536445,
+      "medianProposedPull": 0.17372035971471037
+    },
+    {
+      "guide": 160,
+      "side": "right",
+      "y": 0.6,
+      "medianBefore": 0.11595210040932669,
+      "medianAfterIfCarried": -0.13399376799370602,
+      "medianProposedPull": 0.2668107846828876
+    },
+    {
+      "guide": 160,
+      "side": "right",
+      "y": 0.3,
+      "medianBefore": 0.07866484584647608,
+      "medianAfterIfCarried": -0.17582944905819858,
+      "medianProposedPull": 0.26699293417366043
+    },
+    {
+      "guide": 160,
+      "side": "right",
+      "y": 0,
+      "medianBefore": 0.07180422840372182,
+      "medianAfterIfCarried": -0.058385720817658256,
+      "medianProposedPull": 0.13896062525219596
+    },
+    {
+      "guide": 160,
+      "side": "right",
+      "y": -0.3,
+      "medianBefore": 0.08366991797879254,
+      "medianAfterIfCarried": 0.006956083157008446,
+      "medianProposedPull": 0.08711683787629054
+    },
+    {
+      "guide": 161,
+      "side": "right",
+      "y": 0.9,
+      "medianBefore": 0.20237006690685566,
+      "medianAfterIfCarried": 0.07766522416231673,
+      "medianProposedPull": 0.153810991643067
+    },
+    {
+      "guide": 161,
+      "side": "right",
+      "y": 0.6,
+      "medianBefore": 0.1231159499050495,
+      "medianAfterIfCarried": -0.12170802370209093,
+      "medianProposedPull": 0.2693386149194969
+    },
+    {
+      "guide": 161,
+      "side": "right",
+      "y": 0.3,
+      "medianBefore": 0.08532035609566752,
+      "medianAfterIfCarried": -0.1731017136994011,
+      "medianProposedPull": 0.26893866046585924
+    },
+    {
+      "guide": 161,
+      "side": "right",
+      "y": 0,
+      "medianBefore": 0.0766894114234356,
+      "medianAfterIfCarried": -0.04033606274224872,
+      "medianProposedPull": 0.16700880850926456
+    },
+    {
+      "guide": 161,
+      "side": "right",
+      "y": -0.3,
+      "medianBefore": 0.08935813485239426,
+      "medianAfterIfCarried": 0.01323133097073628,
+      "medianProposedPull": 0.092326574571233
+    },
+    {
+      "guide": 162,
+      "side": "right",
+      "y": 0.9,
+      "medianBefore": 0.23086613097649314,
+      "medianAfterIfCarried": 0.16367608943424877,
+      "medianProposedPull": 0.0902129584318677
+    },
+    {
+      "guide": 162,
+      "side": "right",
+      "y": 0.6,
+      "medianBefore": 0.1336845592336314,
+      "medianAfterIfCarried": -0.11960955100364164,
+      "medianProposedPull": 0.2678290113947006
+    },
+    {
+      "guide": 162,
+      "side": "right",
+      "y": 0.3,
+      "medianBefore": 0.0973659340219936,
+      "medianAfterIfCarried": -0.15491149253342834,
+      "medianProposedPull": 0.2712776445635435
+    },
+    {
+      "guide": 162,
+      "side": "right",
+      "y": 0,
+      "medianBefore": 0.11140823880936004,
+      "medianAfterIfCarried": -0.02046855192540014,
+      "medianProposedPull": 0.18469798655915867
+    },
+    {
+      "guide": 162,
+      "side": "right",
+      "y": -0.3,
+      "medianBefore": 0.1308221559794186,
+      "medianAfterIfCarried": 0.02578430798405751,
+      "medianProposedPull": 0.12867040410644962
+    },
+    {
+      "guide": 162,
+      "side": "right",
+      "y": -0.6,
+      "medianBefore": 0.18252961494665282,
+      "medianAfterIfCarried": 0.0738500780912949,
+      "medianProposedPull": 0.13440153231036955
+    },
+    {
+      "guide": 163,
+      "side": "right",
+      "y": 0.9,
+      "medianBefore": 0.2298339922932884,
+      "medianAfterIfCarried": 0.12753946126796548,
+      "medianProposedPull": 0.12750318397861102
+    },
+    {
+      "guide": 163,
+      "side": "right",
+      "y": 0.6,
+      "medianBefore": 0.14056859063964167,
+      "medianAfterIfCarried": -0.10721951963813982,
+      "medianProposedPull": 0.2664095500304059
+    },
+    {
+      "guide": 163,
+      "side": "right",
+      "y": 0.3,
+      "medianBefore": 0.11680777812008214,
+      "medianAfterIfCarried": -0.12909981084355798,
+      "medianProposedPull": 0.27129866475080044
+    },
+    {
+      "guide": 163,
+      "side": "right",
+      "y": 0,
+      "medianBefore": 0.13342948527613346,
+      "medianAfterIfCarried": -0.011341982114049687,
+      "medianProposedPull": 0.20786533790534112
+    },
+    {
+      "guide": 163,
+      "side": "right",
+      "y": -0.3,
+      "medianBefore": 0.15474906283807535,
+      "medianAfterIfCarried": 0.04611508682483426,
+      "medianProposedPull": 0.13776349910501456
+    },
+    {
+      "guide": 163,
+      "side": "right",
+      "y": -0.6,
+      "medianBefore": 0.21066052717072659,
+      "medianAfterIfCarried": 0.09478019403575434,
+      "medianProposedPull": 0.1446817669611524
+    },
+    {
+      "guide": 164,
+      "side": "right",
+      "y": 0.9,
+      "medianBefore": 0.2761177150696359,
+      "medianAfterIfCarried": 0.15033234632820633,
+      "medianProposedPull": 0.15797406786182325
+    },
+    {
+      "guide": 164,
+      "side": "right",
+      "y": 0.6,
+      "medianBefore": 0.23057667305784055,
+      "medianAfterIfCarried": -0.014858621849390536,
+      "medianProposedPull": 0.27431957815464936
+    },
+    {
+      "guide": 164,
+      "side": "right",
+      "y": 0.3,
+      "medianBefore": 0.22098475853572425,
+      "medianAfterIfCarried": -0.02547269590682677,
+      "medianProposedPull": 0.279602420558919
+    },
+    {
+      "guide": 164,
+      "side": "right",
+      "y": 0,
+      "medianBefore": 0.21739689897412995,
+      "medianAfterIfCarried": 0.08521334086826181,
+      "medianProposedPull": 0.16462960312266833
+    },
+    {
+      "guide": 164,
+      "side": "right",
+      "y": -0.3,
+      "medianBefore": 0.2184058417455352,
+      "medianAfterIfCarried": 0.12609255136724626,
+      "medianProposedPull": 0.12265472366406453
+    },
+    {
+      "guide": 164,
+      "side": "right",
+      "y": -0.6,
+      "medianBefore": 0.2334159816164133,
+      "medianAfterIfCarried": 0.1413842769349039,
+      "medianProposedPull": 0.11668519898952566
+    },
+    {
+      "guide": 165,
+      "side": "right",
+      "y": 0.9,
+      "medianBefore": 0.3158078043715151,
+      "medianAfterIfCarried": 0.23717393584804647,
+      "medianProposedPull": 0.09650105401206005
+    },
+    {
+      "guide": 165,
+      "side": "right",
+      "y": 0.6,
+      "medianBefore": 0.2585313728970204,
+      "medianAfterIfCarried": 0.03770647515855209,
+      "medianProposedPull": 0.2728040166443773
+    },
+    {
+      "guide": 165,
+      "side": "right",
+      "y": 0.3,
+      "medianBefore": 0.2459282342251139,
+      "medianAfterIfCarried": 0.0013508384060658797,
+      "medianProposedPull": 0.2800306280203925
+    },
+    {
+      "guide": 165,
+      "side": "right",
+      "y": 0,
+      "medianBefore": 0.24838666841774482,
+      "medianAfterIfCarried": 0.09010966117481242,
+      "medianProposedPull": 0.1955973030215961
+    },
+    {
+      "guide": 165,
+      "side": "right",
+      "y": -0.3,
+      "medianBefore": 0.25051522017802463,
+      "medianAfterIfCarried": 0.14452101938865816,
+      "medianProposedPull": 0.13758762971437155
+    },
+    {
+      "guide": 165,
+      "side": "right",
+      "y": -0.6,
+      "medianBefore": 0.27585378381290965,
+      "medianAfterIfCarried": 0.16776155512185728,
+      "medianProposedPull": 0.1368465425740434
+    },
+    {
+      "guide": 166,
+      "side": "right",
+      "y": 0.9,
+      "medianBefore": 0.35729567319217287,
+      "medianAfterIfCarried": 0.23735755046255247,
+      "medianProposedPull": 0.16315495245034237
+    },
+    {
+      "guide": 166,
+      "side": "right",
+      "y": 0.6,
+      "medianBefore": 0.30117448188766044,
+      "medianAfterIfCarried": 0.0690142834329596,
+      "medianProposedPull": 0.2702721130418741
+    },
+    {
+      "guide": 166,
+      "side": "right",
+      "y": 0.3,
+      "medianBefore": 0.25806159853425353,
+      "medianAfterIfCarried": 0.0182682947495877,
+      "medianProposedPull": 0.2725036184368944
+    },
+    {
+      "guide": 166,
+      "side": "right",
+      "y": 0,
+      "medianBefore": 0.23498324584092725,
+      "medianAfterIfCarried": 0.09160720346269029,
+      "medianProposedPull": 0.1780380947587753
+    },
+    {
+      "guide": 166,
+      "side": "right",
+      "y": -0.3,
+      "medianBefore": 0.22509166025995603,
+      "medianAfterIfCarried": 0.1288374911323334,
+      "medianProposedPull": 0.12586975254567628
+    },
+    {
+      "guide": 166,
+      "side": "right",
+      "y": -0.6,
+      "medianBefore": 0.25164760326129015,
+      "medianAfterIfCarried": 0.13518640749025201,
+      "medianProposedPull": 0.14860401274922166
+    },
+    {
+      "guide": 167,
+      "side": "right",
+      "y": 0.9,
+      "medianBefore": 0.4061783823074739,
+      "medianAfterIfCarried": 0.321621120658632,
+      "medianProposedPull": 0.10510370341798
+    },
+    {
+      "guide": 167,
+      "side": "right",
+      "y": 0.6,
+      "medianBefore": 0.3207707456721735,
+      "medianAfterIfCarried": 0.10269881538808849,
+      "medianProposedPull": 0.27316799150182963
+    },
+    {
+      "guide": 167,
+      "side": "right",
+      "y": 0.3,
+      "medianBefore": 0.2842912419003788,
+      "medianAfterIfCarried": 0.045483537411114286,
+      "medianProposedPull": 0.2774025215995231
+    },
+    {
+      "guide": 167,
+      "side": "right",
+      "y": 0,
+      "medianBefore": 0.25577106208562955,
+      "medianAfterIfCarried": 0.11357108678632057,
+      "medianProposedPull": 0.1772485779843759
+    },
+    {
+      "guide": 167,
+      "side": "right",
+      "y": -0.3,
+      "medianBefore": 0.2423210370575881,
+      "medianAfterIfCarried": 0.14592699233957465,
+      "medianProposedPull": 0.126107055435446
+    },
+    {
+      "guide": 167,
+      "side": "right",
+      "y": -0.6,
+      "medianBefore": 0.26678072151737814,
+      "medianAfterIfCarried": 0.15959052991074402,
+      "medianProposedPull": 0.1394238941501248
+    }
+  ]
+}

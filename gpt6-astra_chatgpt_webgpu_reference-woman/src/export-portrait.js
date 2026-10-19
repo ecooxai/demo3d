@@ -8,7 +8,7 @@ import { GLTFExporter } from 'three/addons/exporters/GLTFExporter.js';
 export function createPortraitExport(model) {
   const materials = new Map(), textures = new Map(), normalTextures = new Map();
   const ownedTextures = new Set(), ownedCanvases = new Set();
-  const report = { materials: 0, textures: 0, normalCanvases: 0, sharedGeometries: 0, normalScaleBakes: [], alphaMerges: [] };
+  const report = { materials: 0, textures: 0, normalCanvases: 0, sharedGeometries: 0, normalScaleBakes: [], alphaMerges: [], sheenFactorBakes: [] };
   let exportModel = null, disposed = false;
 
   function dispose() {
@@ -195,6 +195,34 @@ export function createPortraitExport(model) {
     return { texture, metrics };
   }
 
+  // Candidate 120: Three r186 exports KHR_materials_sheen.sheenColorFactor
+  // directly from sheenColor, while GLTFLoader restores the scalar sheen as 1.
+  // Fold the scalar into the clone's linear color so the rendered product is
+  // unchanged, including when sheenColorMap modulates it. No texture bake or
+  // geometry copy is needed. A zero scalar stays zero, keeping the extension off.
+  function normalizeSheen120(source, material) {
+    if (!source.isMeshPhysicalMaterial) return;
+    const scalar = source.sheen;
+    if (!Number.isFinite(scalar) || scalar < 0) {
+      throw new Error(`Material "${source.name || 'unnamed'}" has an invalid sheen scalar for GLB export.`);
+    }
+    if (scalar === 0) return;
+    const color = source.sheenColor.toArray();
+    const factor = color.map(component => component * scalar);
+    if (!factor.every(component => Number.isFinite(component) && component >= 0 && component <= 1)) {
+      throw new Error(`Material "${source.name || 'unnamed'}" has an effective sheen color outside glTF's [0, 1] range; no clipping was applied.`);
+    }
+    material.sheenColor.copy(source.sheenColor).multiplyScalar(scalar);
+    material.sheen = 1;
+    report.sheenFactorBakes.push({
+      version: 'gltf-sheen-scalar-export-120-v1', material: source.name,
+      originalScalar: scalar, originalColor: color, exportedScalar: 1, exportedColor: factor,
+      colorMap: source.sheenColorMap?.name || null, colorMapPresent: Boolean(source.sheenColorMap),
+      roughness: source.sheenRoughness, roughnessMapPresent: Boolean(source.sheenRoughnessMap),
+      texturePixelsChanged: false, liveMaterialChanged: false, allocatedPixelBytes: 0, perFrameWork: 0,
+    });
+  }
+
   function cloneMaterial(source, geometry) {
     const mergeCrown = needsCrownMerge104(source);
     if (mergeCrown) validateCrownMerge104(source, geometry);
@@ -221,6 +249,7 @@ export function createPortraitExport(model) {
       material.normalMap = prepared.texture;
       material.normalScale.set(prepared.scaleX, prepared.scaleY);
     }
+    normalizeSheen120(source, material);
     return material;
   }
 

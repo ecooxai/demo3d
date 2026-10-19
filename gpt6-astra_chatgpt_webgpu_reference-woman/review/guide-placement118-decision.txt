@@ -1,0 +1,32 @@
+118 independent native art decision
+===================================
+Selection: accept strength.5. Overall/reference quality remains76/100.
+Reject strength1 at75/100. Strength0 remains the acceptable76 baseline.
+
+Reviewed the sole uploaded reference/image1.png and all15 local native images:
+review/guide118-{0,50,100}-{front,detail,left,right,back}.jpg.
+
+At.5, both profiles show a small but useful reduction in the unsupported space
+between the front lengths and the shirt. The hair hangs somewhat closer to the
+upper torso. The major source-facing shapes, face/ear/crown/fringe, and rear hair
+remain visually stable. The front is nearly unchanged; no new front contour or
+cloth collision is apparent at ordinary preview size.
+
+Full strength is too much. The right profile has a clear additional S/zig bend
+through the hanging section, followed by bright separated curling tips. The left
+profile also looks more articulated into separate bent strips. In front, the
+right lower lengths expose stronger bright, repeated slits between locks. These
+effects make the geometry more conspicuous and outweigh the extra contact gain.
+Mild shows a trace of the tip separation, but it stays restrained in these views.
+
+This is a modest placement improvement. It does not resolve the broad flat locks,
+parallel clump structure, smooth cap, or overly graphic fringe. It warrants no
+overall score increase and no claim of production/AAA quality.
+
+Native technical evidence supplied by root: all0/.5/1 pages used WebGPU, reported
+no errors, retained topology and matched protected parts/ranges. Fit cost was
+756ms; complete groom construction1.83-1.85s versus1.03s baseline. Heap303/322/316MiB
+for0/.5/1. The accepted mild variant therefore adds roughly.8s one-time startup
+cost and leaves rendering geometry/draw count unchanged.
+
+No production files were edited during this independent review.

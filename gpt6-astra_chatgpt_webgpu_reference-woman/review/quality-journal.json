@@ -4,7 +4,7 @@
   "goal_achieved": false,
   "method": "Visual self-assessment against the sole uploaded image, supplemented by independent agent review. Scores are subjective and are not a certification of AAA production quality.",
   "scope": "Recorded assessments whose numeric results remain available. No missing historical scores have been invented.",
-  "current_accepted_iteration": 115,
+  "current_accepted_iteration": 122,
   "current_accepted_score": 76,
   "assessments": [
     {
@@ -371,7 +371,7 @@
       "score": 76,
       "reviewer": "root and quality_review_42",
       "decision": "accepted clearer fine-fiber highlights",
-      "notes": "Native baseline/soft/bright comparison changesDETAILmaterialonly. Selectedroughness.38,anisotropy.80,specularIntensity.75,envMapIntensity.65 withsame\u03c0/2direction. Individualcrown andlengthfibers catchlightmoreclearly, closer tosource sheen; no returnofwhitefringe streaks or widespreadmetalliclook. Crown/MASS andmattefringe/wisps unchanged; no newbuffers/maps/geometry. Stopfurtherintensityincreases. Capandshoulderairgapsremain; overall76."
+      "notes": "Native baseline/soft/bright comparison changesDETAILmaterialonly. Selectedroughness.38,anisotropy.80,specularIntensity.75,envMapIntensity.65 withsameπ/2direction. Individualcrown andlengthfibers catchlightmoreclearly, closer tosource sheen; no returnofwhitefringe streaks or widespreadmetalliclook. Crown/MASS andmattefringe/wisps unchanged; no newbuffers/maps/geometry. Stopfurtherintensityincreases. Capandshoulderairgapsremain; overall76."
     },
     {
       "iteration": 83,
@@ -448,7 +448,7 @@
       "score": 75,
       "reviewer": "root and quality_review_42",
       "decision": "not adopted; full strength75 and half strength76",
-      "notes": "Reference-only per-fragment crown texture with unchanged geometry/UV0/coverage adds actual visible variation, but fullstrength produces broad wavy woodgrain islands and localized patterned patches in profiles. Halfstrength is less distracting but not enough convincing fine-strand gain. Net16.19MiB typed/21.52MiB estimated GPU with mipmaps; native bake185\u2013190ms. Export alpha merge deferred because art not accepted."
+      "notes": "Reference-only per-fragment crown texture with unchanged geometry/UV0/coverage adds actual visible variation, but fullstrength produces broad wavy woodgrain islands and localized patterned patches in profiles. Halfstrength is less distracting but not enough convincing fine-strand gain. Net16.19MiB typed/21.52MiB estimated GPU with mipmaps; native bake185–190ms. Export alpha merge deferred because art not accepted."
     },
     {
       "iteration": 94,
@@ -567,7 +567,7 @@
       "score": 76,
       "reviewer": "root",
       "decision": "accepted viewer repair",
-      "notes": "Explicit backend-switch validation exposed two existing scene-lifetime defects after99balance: ear color guards rejected repeat preparation on changed geometry, and return fromWebGL reused an incompatible cached shadow target. Scene geometry and reference maps now prepare once through a cached promise; switching renderers disposes public light GPU resources and clears shadow target references for recreation. NativeWebGPU\u2192explicitWebGL\u2192WebGPU and missing-WebGPU\u2192explicitWebGL pass with identicalCROWN position/color/UV0/UV1/map/coverage hashes and the same bake object. MissingWebGPU still creates no renderer until explicit user choice. Detail images onbothbackends viewed;no uncaught errors. Artistic score unchanged76; source geometry remains108/crown100/blouse106/export104."
+      "notes": "Explicit backend-switch validation exposed two existing scene-lifetime defects after99balance: ear color guards rejected repeat preparation on changed geometry, and return fromWebGL reused an incompatible cached shadow target. Scene geometry and reference maps now prepare once through a cached promise; switching renderers disposes public light GPU resources and clears shadow target references for recreation. NativeWebGPU→explicitWebGL→WebGPU and missing-WebGPU→explicitWebGL pass with identicalCROWN position/color/UV0/UV1/map/coverage hashes and the same bake object. MissingWebGPU still creates no renderer until explicit user choice. Detail images onbothbackends viewed;no uncaught errors. Artistic score unchanged76; source geometry remains108/crown100/blouse106/export104."
     },
     {
       "iteration": 114,
@@ -610,6 +610,48 @@
       "reviewer": "root and hair_groom_director",
       "decision": "not adopted; full75, mild76, production115 retained",
       "notes": "Registered source hair color through37 manual crown correspondences reuses100 UV1 atlas and shares a medium-scale field with upper MASS/DETAIL roots. Native0/.65/1 all five views plus moved-key detail show full-strength cloudy dark patches above near ear and across the sweep/right temple; mild is quieter but does not resolve broad cap, sharp part or organized fringe groups. Patches remain fixed under changed light. Profiles/back preserved without compensating realism gain. Exact geometry/UV0/UV1/alpha/coverage/fringe/wisps/physical settings; unchanged1114888hairtri/52.49MiB. Native bake438.8/429.3ms at.65/1, heaps304.8/302.2MiB, WebGPUtrue noerrors. No retained texture/geometry increase. Medium filtered field reduced coarse root-triangle interpolation error but actual DETAIL95th-percentile error10.16% remains. Do not equate image registration with structural realism;119 must change coupled root geometry."
+    },
+    {
+      "iteration": 117,
+      "score": 76,
+      "reviewer": "root and glb_export_repair",
+      "decision": "accepted legal half-strength source cloth atlas with120 export repair",
+      "notes": "Two manually selected cloth interiors from image1 add restrained diffuse tonal variation to the existing torso UV0 atlas. Half.5 improves flat central cotton slightly; full1 makes a competing dark trough near the lower-left placket and was not selected. Initialheadroomfactor>1 version rejected for export legality; revised1024-square atlas includes originalbaseRGB and uses whitematerialfactor, clips25861 channelvalues withmaxunbounded1.01624447 and neutralquantizationmax.00242997. Nativelegal0/.5:60443 changedtexels of66684source-mask samples, mingain.890238 max1.063690 mean1.000749, geometry/UV/color/indexexact,WebGPUtrue noerrors,4MiBCPU/5.333MiBGPUMIP and16MiBtemporaryfield. Actuallegalhalf with120: bake152.2ms; exact atlas and weave GLB roundtrip, root+agent source/loaded front/garment visuallyaccept. Sourcecolorcontainsphotographicshading, not measuredalbedo. Appliedbefore99 once through112cachedpreparation."
+    },
+    {
+      "iteration": 120,
+      "score": 76,
+      "reviewer": "root and glb_export_repair",
+      "decision": "accepted export-only sheen scalar preservation",
+      "notes": "Focused117 exposed installedr186GLTFExporter serializing sheenColor without multiplying Three scalar sheen, while loader sets scalar1; original.105cotton effective sheen wasincorrectlyraised. Exportclone nowfolds source.sheen into linear sheenColor andsets scalar1;zero staysdisabled, maps/roughness unchanged,invalid/nonfinite/out-of-range product failswithoutclipping. Nativeconstant/mapped/zerofixtures pass, nofixturesattachedtorender. ActualtorsoGLB1627640B:21809vertex position/normal/UV/color and129024indexvaluesexact;1024atlas and256weave bytes/orientationexact;EXT_materials_bump.0021 with14xrepeat;KHR_materials_sheen effectiveRGBexact;worldbounderror0. Source/loadedfrontcompositorpixels exact; garmentMAE.0013261406/max1byte, restoredfront exact,sourceimmutablecleanupidle0. Export17.3ms/load4.7ms. No extra retained texture/geometry. Doesnotcertifyfullportraitvisualroundtrip. Separateout-of-rangecollar/placketresolvedby122sourcepalette."
+    },
+    {
+      "iteration": 121,
+      "score": 75,
+      "reviewer": "root and glb_export_repair",
+      "decision": "not adopted; mild76 and stronger75, retain original MASS response",
+      "notes": "With exact111fixed-U83ridge normals and sourceRGB/geometry/crown/fine/fringe/wisps unchanged, compared MASS roughness.4/specular.58/anisotropy.85/normalScale(.62,.09) and .3/.72/.85/(.85,.09) against accepted.52/.38/.65/(.31,.09). Nativeall5views+changed-keyfront: mild gives little portrait gain and more mechanical edgeglints; stronger exposes repeated dotted/ladder-like bands on profiles/back. NativeWebGPUtrue,normalbake33.2/31ms,heaps290/289MiB,sourcegeometry/materialreferences/versionsrestored anderrors[].2MiBtemporaryreviewnormalmap retainedwhileactive;noneintegrated. Preserve productionresponse."
+    },
+    {
+      "iteration": 122,
+      "score": 76,
+      "reviewer": "root and glb_export_repair",
+      "decision": "accepted bounded collar/placket source albedo",
+      "notes": "Native0/1 all5views+garment supports slight neutralization of the existing white collar/placket; no distractinggraystrip or newbody/collarmismatch. Bound only over-one linearcomponents afterexisting1.28cottonlift. Placketbefore[1.002928373,1.012861364,1.083997736] becomes[1,1,1];collarbefore[.973471366,.993052439,1.063385442] becomes[.973471366,.993052439,1].Maxrelativebluechange7.7489%/5.9607%.Actualall49portraitmaterialbasefactorsnowwithin[0,1].Source106restoredexactlybyreversingonlymaterialblock;nogeometry/query/UV/colorattribute/map/physicalparameterchange,nonewretainedbuffers/perframework. Nativeheap275MiBWebGPUtrueerrors[].Overallscoreunchanged76."
+    },
+    {
+      "iteration": 119,
+      "score": 75,
+      "reviewer": "root and hair_groom_director",
+      "decision": "not adopted; mild76 and full75",
+      "notes": "Narrow irregular part banks and unequal root arches on existing crown sheets preserve supported foundation coverage, lower geometry and all topology/maps. Native0/.5/1 all5views plus part-detail show half too subtle for likeness gain; full adds a glossy rounded seam ridge and a dark rectangular silhouette notch while the hard scalloped crown/fringe lid remains. Source1235 actual-foundation support samples per active strength pass but do not make the visible cut natural. All32768 sheet triangles oriented; max full displacement.03464, arch.03167, partwidth.018997; protected originalY<=1.05positions unchanged. Nativeconstruction987.5/1155.3/1293.9ms, heaps308.45/313.636/316.77MiB, WebGPUtrue errors[]. Retain accepted108 upper crown with100;124 will address root-to-fringe construction."
+    },
+    {
+      "iteration": 118,
+      "score": 76,
+      "reviewer": "root and quality_review_42",
+      "decision": "accepted half-strength guide placement; full75 rejected; integrated into122 composition",
+      "notes": "Shared C2 depth field rebuilds146 front/curl/inner guides and4 verified-clear side guides154/155/166/167 before original swept sections/dependent fine paths. Original section axes pass through the field Jacobian, preserving MASS XY and interlayer depth offsets; guides/back/upper crown/fringe/materials/UV/color/topology protected. Native0/.5/1 all5views favorshalf: modestly narrower hair-to-blouse sidegap with front/detail/back effectivelystable. Full adds rightprofile secondaryS/zig bends and bright detachedcurledtips plus repeatedfrontlower slits. Mild has traceeffects but staysrestrained. Sourcehalf0new separatedguideoverlaps/0reversals, both0newworsenedclothpenetrations in24492ringsamples;full1overlap.004464 notadopted. Nativefit756.4/756.6ms, construction1828.2/1852.8ms versus1028.3baseline;heap303/322/316MiB, WebGPUtrue/errors[]. All64meshes1160364verts1492787tri unchanged, hair1114888tri52.49MiB, nativeprotectedhashesexact. Overall76 remains; largeunsupportedcrescent and broadlockstructure remain."
     }
   ]
 }

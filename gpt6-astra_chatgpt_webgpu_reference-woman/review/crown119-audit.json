@@ -1,0 +1,344 @@
+{
+  "candidate": 119,
+  "native": false,
+  "scoreUnchanged": 76,
+  "sourceSHA256": "d1d353c3590bdf4177ec692016debd4335957f7ba409b7e6be588847df9b9d07",
+  "baseSHA256": "a66000a89de8c0cd42cffc91bb2522cfcf0f4cf786dd98b68e7b13c62d25ba6b",
+  "preservation": {
+    "zero": "All geometry attributes are byte-identical to108",
+    "allStrengths": "Same index, UV0, RGBA/color, strand count and procedural map/normal-map bytes; physical material settings unchanged",
+    "protectedPositions": "All mesh positions with original localY≤1.05 are exact",
+    "normalBoundary": "Recomputed normals on triangles straddling the upper cutoff can change slightly; see measured maxima",
+    "crown100": "Its existing normal-facing color mask is reevaluated on the new geometry; UV1 layout/alpha contract is unchanged"
+  },
+  "runs": [
+    {
+      "strength": 0,
+      "metadata": {
+        "strength": 0,
+        "maximumDisplacement": 0,
+        "maximumArchRelief": 0,
+        "maximumPartWidth": 0,
+        "modifiedSamples": 0
+      },
+      "triangles": 1114888,
+      "geometryMiB": 52.49,
+      "constructionMs": 2537.3,
+      "meshes": [
+        {
+          "mesh": "Continuous parted crown with longitudinal fiber flow",
+          "vertices": 24455,
+          "changed": 0,
+          "maximum": 0,
+          "minChangedY": null,
+          "protectedY": 1.05,
+          "protectedChanged": 0,
+          "protectedMaximum": 0,
+          "protectedWorst": [],
+          "protectedNormalsChanged": 0,
+          "protectedNormalMaximum": 0,
+          "finite": true
+        },
+        {
+          "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+          "vertices": 159210,
+          "changed": 0,
+          "maximum": 0,
+          "minChangedY": null,
+          "protectedY": 1.05,
+          "protectedChanged": 0,
+          "protectedMaximum": 0,
+          "protectedWorst": [],
+          "protectedNormalsChanged": 0,
+          "protectedNormalMaximum": 0,
+          "finite": true
+        },
+        {
+          "mesh": "Independent fine crown lengths and silhouette strands",
+          "vertices": 646260,
+          "changed": 0,
+          "maximum": 0,
+          "minChangedY": null,
+          "protectedY": 1.05,
+          "protectedChanged": 0,
+          "protectedMaximum": 0,
+          "protectedWorst": [],
+          "protectedNormalsChanged": 0,
+          "protectedNormalMaximum": 0,
+          "finite": true
+        },
+        {
+          "mesh": "Dense fine bowed brown fringe strands",
+          "vertices": 92568,
+          "changed": 0,
+          "maximum": 0,
+          "minChangedY": null,
+          "protectedY": 1.05,
+          "protectedChanged": 0,
+          "protectedMaximum": 0,
+          "protectedWorst": [],
+          "protectedNormalsChanged": 0,
+          "protectedNormalMaximum": 0,
+          "finite": true
+        },
+        {
+          "mesh": "Sparse short temple edge and hairline wisps",
+          "vertices": 32892,
+          "changed": 0,
+          "maximum": 0,
+          "minChangedY": null,
+          "protectedY": 1.05,
+          "protectedChanged": 0,
+          "protectedMaximum": 0,
+          "protectedWorst": [],
+          "protectedNormalsChanged": 0,
+          "protectedNormalMaximum": 0,
+          "finite": true
+        }
+      ],
+      "area": {
+        "tested": 32768,
+        "nonfinite": 0,
+        "flips": 0,
+        "minNormalCosine": 0.9999999999999993,
+        "minAreaRatio": 1,
+        "maxAreaRatio": 1,
+        "worst": {
+          "triangle": 19444,
+          "ids": [
+            9936,
+            10065,
+            9937
+          ],
+          "cosine": 0.9999999999999993,
+          "ratio": 1
+        }
+      },
+      "support": null
+    },
+    {
+      "strength": 0.5,
+      "metadata": {
+        "strength": 0.5,
+        "maximumDisplacement": 0.01721263423404482,
+        "maximumArchRelief": 0.015837072230143887,
+        "maximumPartWidth": 0.009499999997825167,
+        "modifiedSamples": 55315
+      },
+      "triangles": 1114888,
+      "geometryMiB": 52.49,
+      "constructionMs": 2945,
+      "meshes": [
+        {
+          "mesh": "Continuous parted crown with longitudinal fiber flow",
+          "vertices": 24455,
+          "changed": 4268,
+          "maximum": 0.017212639444838664,
+          "minChangedY": 1.0747931003570557,
+          "protectedY": 1.05,
+          "protectedChanged": 0,
+          "protectedMaximum": 0,
+          "protectedWorst": [],
+          "protectedNormalsChanged": 2,
+          "protectedNormalMaximum": 9.870824314164634e-7,
+          "finite": true
+        },
+        {
+          "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+          "vertices": 159210,
+          "changed": 9238,
+          "maximum": 0.013569473430121522,
+          "minChangedY": 1.0574724674224854,
+          "protectedY": 1.05,
+          "protectedChanged": 0,
+          "protectedMaximum": 0,
+          "protectedWorst": [],
+          "protectedNormalsChanged": 700,
+          "protectedNormalMaximum": 0.0009223244079691748,
+          "finite": true
+        },
+        {
+          "mesh": "Independent fine crown lengths and silhouette strands",
+          "vertices": 646260,
+          "changed": 77245,
+          "maximum": 0.02841453839245243,
+          "minChangedY": 1.0567127466201782,
+          "protectedY": 1.05,
+          "protectedChanged": 0,
+          "protectedMaximum": 0,
+          "protectedWorst": [],
+          "protectedNormalsChanged": 10246,
+          "protectedNormalMaximum": 0.009224068446855463,
+          "finite": true
+        },
+        {
+          "mesh": "Dense fine bowed brown fringe strands",
+          "vertices": 92568,
+          "changed": 44271,
+          "maximum": 0.01611457529845353,
+          "minChangedY": 1.0661357641220093,
+          "protectedY": 1.05,
+          "protectedChanged": 0,
+          "protectedMaximum": 0,
+          "protectedWorst": [],
+          "protectedNormalsChanged": 1791,
+          "protectedNormalMaximum": 0.0005139264117523549,
+          "finite": true
+        },
+        {
+          "mesh": "Sparse short temple edge and hairline wisps",
+          "vertices": 32892,
+          "changed": 0,
+          "maximum": 0,
+          "minChangedY": null,
+          "protectedY": 1.05,
+          "protectedChanged": 0,
+          "protectedMaximum": 0,
+          "protectedWorst": [],
+          "protectedNormalsChanged": 0,
+          "protectedNormalMaximum": 0,
+          "finite": true
+        }
+      ],
+      "area": {
+        "tested": 32768,
+        "nonfinite": 0,
+        "flips": 0,
+        "minNormalCosine": 0.7250043086483995,
+        "minAreaRatio": 0.797438186413097,
+        "maxAreaRatio": 2.9142312554413463,
+        "worst": {
+          "triangle": 32105,
+          "ids": [
+            16445,
+            16574,
+            16573
+          ],
+          "cosine": 0.7250043086483995,
+          "ratio": 2.0234602810718765
+        }
+      },
+      "support": {
+        "count": 1235,
+        "unsupported": 0,
+        "minDepth": 0.019897865757524037,
+        "maxDepth": 0.020797634862253573,
+        "maxWidth": 0.009498492767389462,
+        "failures": []
+      }
+    },
+    {
+      "strength": 1,
+      "metadata": {
+        "strength": 1,
+        "maximumDisplacement": 0.034640061219502055,
+        "maximumArchRelief": 0.03166722636550556,
+        "maximumPartWidth": 0.018999999995650333,
+        "modifiedSamples": 55315
+      },
+      "triangles": 1114888,
+      "geometryMiB": 52.49,
+      "constructionMs": 2867.9,
+      "meshes": [
+        {
+          "mesh": "Continuous parted crown with longitudinal fiber flow",
+          "vertices": 24455,
+          "changed": 4307,
+          "maximum": 0.03442522266841872,
+          "minChangedY": 1.074576735496521,
+          "protectedY": 1.05,
+          "protectedChanged": 0,
+          "protectedMaximum": 0,
+          "protectedWorst": [],
+          "protectedNormalsChanged": 2,
+          "protectedNormalMaximum": 0.0000018140289537350181,
+          "finite": true
+        },
+        {
+          "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+          "vertices": 159210,
+          "changed": 9275,
+          "maximum": 0.027147838530052787,
+          "minChangedY": 1.05660879611969,
+          "protectedY": 1.05,
+          "protectedChanged": 0,
+          "protectedMaximum": 0,
+          "protectedWorst": [],
+          "protectedNormalsChanged": 713,
+          "protectedNormalMaximum": 0.0018442068619437047,
+          "finite": true
+        },
+        {
+          "mesh": "Independent fine crown lengths and silhouette strands",
+          "vertices": 646260,
+          "changed": 77665,
+          "maximum": 0.05675629104469898,
+          "minChangedY": 1.0567127466201782,
+          "protectedY": 1.05,
+          "protectedChanged": 0,
+          "protectedMaximum": 0,
+          "protectedWorst": [],
+          "protectedNormalsChanged": 10502,
+          "protectedNormalMaximum": 0.01842857855071242,
+          "finite": true
+        },
+        {
+          "mesh": "Dense fine bowed brown fringe strands",
+          "vertices": 92568,
+          "changed": 44506,
+          "maximum": 0.0322294111604423,
+          "minChangedY": 1.0661357641220093,
+          "protectedY": 1.05,
+          "protectedChanged": 0,
+          "protectedMaximum": 0,
+          "protectedWorst": [],
+          "protectedNormalsChanged": 1980,
+          "protectedNormalMaximum": 0.0010257264988060106,
+          "finite": true
+        },
+        {
+          "mesh": "Sparse short temple edge and hairline wisps",
+          "vertices": 32892,
+          "changed": 0,
+          "maximum": 0,
+          "minChangedY": null,
+          "protectedY": 1.05,
+          "protectedChanged": 0,
+          "protectedMaximum": 0,
+          "protectedWorst": [],
+          "protectedNormalsChanged": 0,
+          "protectedNormalMaximum": 0,
+          "finite": true
+        }
+      ],
+      "area": {
+        "tested": 32768,
+        "nonfinite": 0,
+        "flips": 0,
+        "minNormalCosine": 0.5703216085756849,
+        "minAreaRatio": 0.6299469779252185,
+        "maxAreaRatio": 4.950077499411096,
+        "worst": {
+          "triangle": 32105,
+          "ids": [
+            16445,
+            16574,
+            16573
+          ],
+          "cosine": 0.5703216085756849,
+          "ratio": 3.38998692990259
+        }
+      },
+      "support": {
+        "count": 1235,
+        "unsupported": 0,
+        "minDepth": 0.01990742629070939,
+        "maxDepth": 0.020836348159042187,
+        "maxWidth": 0.01899697111041321,
+        "failures": []
+      }
+    }
+  ],
+  "elapsedMs": 18589.544259,
+  "peakRSSMiB": 621.6875
+}

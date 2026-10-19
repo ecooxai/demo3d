@@ -1,0 +1,211 @@
+{
+  "candidate": 120,
+  "artisticScoreUnchanged": 76,
+  "scope": "Export-only scalar-sheen normalization; dependency-free source/math checks",
+  "sourceHashes": {
+    "production104": "245e4b1dbd2a465fd992ca1eb364ea784bc850dad22ce9733b3ed08f2762a53c",
+    "candidate120": "3fad3e674634e52c944b711bace49d0d4951418a14bd022ffeee0615914fab2e",
+    "native117WithOverride": "164707a13e830d9bdc8c22ef538607bc9e961f38a30fea7c36087b737a82bd1b",
+    "main115": "67d3cd618b031f8a1fc40c34f6d631ad7ed5003a9d4e2fd3d41529771f74c33d",
+    "blouse": "553d31df6a497055d6d669f6c31d1dae476a9ef7d4c31529684b34c47feca233"
+  },
+  "originalFrozen117Test": {
+    "bytes": 29492,
+    "sha256": "65890d8e1e597ccf18cd4b2fa1d819c10759670ab25e0ab418b934698eed5501",
+    "nativeFailure": "Loaded effective cotton sheen changed"
+  },
+  "complete104CodePreserved": true,
+  "normalizationCases": [
+    {
+      "name": "cotton-positive-scalar",
+      "rejectedWithoutMutation": false,
+      "sourceUnchanged": true,
+      "passed": true
+    },
+    {
+      "name": "positive-with-color-and-roughness-map",
+      "rejectedWithoutMutation": false,
+      "sourceUnchanged": true,
+      "passed": true
+    },
+    {
+      "name": "zero-with-color-and-roughness-map",
+      "rejectedWithoutMutation": false,
+      "sourceUnchanged": true,
+      "passed": true
+    },
+    {
+      "name": "positive-black-sheen",
+      "rejectedWithoutMutation": false,
+      "sourceUnchanged": true,
+      "passed": true
+    },
+    {
+      "name": "unit-scalar",
+      "rejectedWithoutMutation": false,
+      "sourceUnchanged": true,
+      "passed": true
+    },
+    {
+      "name": "scalar-above-one-with-bounded-effective-color",
+      "rejectedWithoutMutation": false,
+      "sourceUnchanged": true,
+      "passed": true
+    },
+    {
+      "name": "nonphysical-material-no-op",
+      "rejectedWithoutMutation": false,
+      "sourceUnchanged": true,
+      "passed": true
+    },
+    {
+      "name": "reject-negative-scalar",
+      "rejectedWithoutMutation": true,
+      "sourceUnchanged": true,
+      "passed": true
+    },
+    {
+      "name": "reject-NaN-scalar",
+      "rejectedWithoutMutation": true,
+      "sourceUnchanged": true,
+      "passed": true
+    },
+    {
+      "name": "reject-infinite-scalar",
+      "rejectedWithoutMutation": true,
+      "sourceUnchanged": true,
+      "passed": true
+    },
+    {
+      "name": "reject-out-of-range-effective-color",
+      "rejectedWithoutMutation": true,
+      "sourceUnchanged": true,
+      "passed": true
+    },
+    {
+      "name": "reject-negative-effective-color",
+      "rejectedWithoutMutation": true,
+      "sourceUnchanged": true,
+      "passed": true
+    },
+    {
+      "name": "reject-nonfinite-effective-color",
+      "rejectedWithoutMutation": true,
+      "sourceUnchanged": true,
+      "passed": true
+    }
+  ],
+  "injectionCases": [
+    {
+      "name": "current115-production",
+      "passed": true
+    },
+    {
+      "name": "current115-candidate120",
+      "passed": true
+    },
+    {
+      "name": "already-integrated-reused-once",
+      "passed": true
+    },
+    {
+      "name": "import-without-application",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "duplicate-application",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "application-before-ear",
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "name": "application-after-balance",
+      "rejected": true,
+      "passed": true
+    }
+  ],
+  "syntaxChecked": [
+    "candidate120",
+    "native117",
+    "generated-production-entry",
+    "generated-candidate120-entry"
+  ],
+  "noStandaloneCompile": true,
+  "boundedAbsorption": {
+    "method": "For each channel, Cprime=min(C,1), Vprime=C*V/Cprime (unchanged zero channel). Feasible only if every product C*V is within [0,1]. Preserve the alpha component and share all geometry buffers except one export-only Float32 RGB attribute.",
+    "interpolation": "Multiplication by a constant commutes with barycentric interpolation. Only Float32 re-encoding error is introduced where the bound holds.",
+    "factors": {
+      "cotton": [
+        0.8607272409058401,
+        0.8881558544537471,
+        0.9832334684768089
+      ],
+      "collar": [
+        0.9734713659843743,
+        0.9930524394463022,
+        1.0633854422715578
+      ],
+      "placket": [
+        1.0029283731535277,
+        1.0128613636257666,
+        1.0839977363326183
+      ]
+    },
+    "knownWhiteVertexCounterexamples": [
+      {
+        "meshes": [
+          "blouse-left-collar-fold",
+          "blouse-right-collar-fold"
+        ],
+        "material": "collar",
+        "vertexRGB": [
+          1,
+          1,
+          1
+        ],
+        "product": [
+          0.9734713659843743,
+          0.9930524394463022,
+          1.0633854422715578
+        ]
+      },
+      {
+        "meshes": [
+          "blouse-curved-centre-placket"
+        ],
+        "material": "placket",
+        "vertexRGB": [
+          1,
+          1,
+          1
+        ],
+        "product": [
+          1.0029283731535277,
+          1.0128613636257666,
+          1.0839977363326183
+        ]
+      }
+    ],
+    "maximumPermittedVertexRGBToAbsorb": {
+      "collar": [
+        1,
+        1,
+        0.9403927872699135
+      ],
+      "placket": [
+        0.9970801771772395,
+        0.9873019506048425,
+        0.922511151529892
+      ]
+    },
+    "allMeshesExactBoundedConversionFeasible": false,
+    "reason": "The demonstrated effective albedos exceed one. Products of legal baseColorFactor, normalized vertex COLOR_0 and ordinary base-color texture values cannot reproduce them exactly. No clipping or unrelated material workaround is included in120.",
+    "evidenceType": "Current authored source constants and explicit white vertex initialization; not a native vertex traversal."
+  },
+  "nativeVerification": "Pending root Mac execution: CLOTH117_EXPORT_MODULE=candidate120 node review/reference-cloth117-export-native.mjs"
+}

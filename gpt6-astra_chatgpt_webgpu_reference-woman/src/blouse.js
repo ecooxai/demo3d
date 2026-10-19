@@ -672,9 +672,12 @@ export function createBlouse() {
   const collarMat=cloth.clone();collarMat.name='blouse-collar-poplin';collarMat.color.set('#e2e4eb');collarMat.roughness=.73;
   const placketMat=cloth.clone();placketMat.name='blouse-cotton-placket';placketMat.color.set('#e5e6ed');placketMat.roughness=.75;
   const seamMat=new THREE.MeshStandardMaterial({name:'blouse-ivory-stitching',color:'#cdd1dd',roughness:.87});
-  // Calibrated in the assembled soft-light portrait: lift linear cotton albedo
-  // while retaining the modeled relief and per-vertex ambient variation.
-  for(const fabric of[cloth,collarMat,placketMat,seamMat])fabric.color.multiplyScalar(1.28);
+  // Calibrated in the assembled soft-light portrait, with bounded linear
+  // reflectance so the same collar/placket palette survives standard GLB export.
+  for(const fabric of[cloth,collarMat,placketMat,seamMat]){
+    fabric.color.multiplyScalar(1.28);
+    fabric.color.setRGB(Math.min(1,fabric.color.r),Math.min(1,fabric.color.g),Math.min(1,fabric.color.b));
+  }
   mesh(group,'blouse-continuous-torso-and-sleeves',clothGeometry(),cloth);
   // Closed crop, inset half a millimetre to avoid coplanar shimmer on turntable views.
   const cap=[];for(let i=0;i<96;i++){const p=torsoPoint(i/96,1);cap.push(new THREE.Vector2(p[0],p[2]));}
