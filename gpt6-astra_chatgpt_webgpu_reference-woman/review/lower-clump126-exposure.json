@@ -1,0 +1,228 @@
+{
+  "candidate": 126,
+  "sourceOnly": true,
+  "strength": 1,
+  "samples": 1020,
+  "originallyExposed": 190,
+  "stillExposed": 104,
+  "filledByNeighbor": 86,
+  "insignificantOwnRelief": 0,
+  "hiddenOriginal": 830,
+  "frontUsefulRelief": {
+    "count": 190,
+    "min": -0.00005003324246510843,
+    "p25": 0.004590373336680109,
+    "median": 0.008316871657632063,
+    "p75": 0.010717522227638776,
+    "max": 0.01925298065280301,
+    "mean": 0.008072985760585133
+  },
+  "potentialOwnRelief": {
+    "count": 190,
+    "min": 0.004446336653747052,
+    "p25": 0.008225838705539057,
+    "median": 0.010489354466089895,
+    "p75": 0.013166342961199007,
+    "max": 0.019440313525665553,
+    "mean": 0.011033604176793959
+  },
+  "retainedFraction": {
+    "count": 190,
+    "min": -0.0054057044680255436,
+    "p25": 0.4630820566510715,
+    "median": 1,
+    "p75": 1,
+    "max": 1,
+    "mean": 0.7426264263617686
+  },
+  "blockers": {
+    "59:front": 2,
+    "60:front": 2,
+    "62:front": 7,
+    "63:front": 4,
+    "61:front": 1,
+    "68:front": 4,
+    "69:front": 2,
+    "67:front": 2,
+    "71:front": 2,
+    "73:front": 2,
+    "135:curl": 1,
+    "84:front": 1,
+    "82:front": 1,
+    "86:front": 2,
+    "85:front": 1,
+    "92:front": 1,
+    "91:front": 1,
+    "95:front": 4,
+    "97:front": 3,
+    "96:front": 4,
+    "94:front": 2,
+    "98:front": 4,
+    "99:front": 1,
+    "102:front": 1,
+    "139:curl": 1,
+    "107:front": 4,
+    "105:front": 3,
+    "112:front": 1,
+    "113:front": 1,
+    "116:front": 3,
+    "144:curl": 1,
+    "120:front": 1,
+    "119:front": 1,
+    "118:front": 1,
+    "128:front": 7,
+    "129:front": 2,
+    "127:front": 2,
+    "147:curl": 2,
+    "131:front": 1
+  },
+  "examples": [
+    {
+      "guide": 58,
+      "blocker": 59,
+      "kind": "front",
+      "x": -0.33013138024364497,
+      "y": 0.8072362202951213,
+      "potential": 0.0071276435104358216,
+      "actual": 0.000012475163103431441
+    },
+    {
+      "guide": 59,
+      "blocker": 60,
+      "kind": "front",
+      "x": -0.40072351991439903,
+      "y": 0.5666342264729152,
+      "potential": 0.0068702898335690765,
+      "actual": 0.003074377480290269
+    },
+    {
+      "guide": 59,
+      "blocker": 60,
+      "kind": "front",
+      "x": -0.4550262072777871,
+      "y": 0.36484017022226434,
+      "potential": 0.006804057973307409,
+      "actual": 0.000933016810760634
+    },
+    {
+      "guide": 60,
+      "blocker": 59,
+      "kind": "front",
+      "x": -0.4267183711230744,
+      "y": 0.575921488032276,
+      "potential": 0.007773010494044774,
+      "actual": 0.0018670087579397698
+    },
+    {
+      "guide": 61,
+      "blocker": 62,
+      "kind": "front",
+      "x": -0.4743943312465737,
+      "y": 0.527824970613791,
+      "potential": 0.007282130605720694,
+      "actual": 0.0008565090327243841
+    },
+    {
+      "guide": 61,
+      "blocker": 62,
+      "kind": "front",
+      "x": -0.5952090518454985,
+      "y": -0.526088113564219,
+      "potential": 0.008731223313793945,
+      "actual": 0.0000690510889516105
+    },
+    {
+      "guide": 62,
+      "blocker": 63,
+      "kind": "front",
+      "x": -0.5609157512018417,
+      "y": 0.3256132635054554,
+      "potential": 0.008225838705539057,
+      "actual": -0.00004446645304378993
+    },
+    {
+      "guide": 62,
+      "blocker": 63,
+      "kind": "front",
+      "x": -0.6890640383752121,
+      "y": -0.3649808284228455,
+      "potential": 0.011921981760875777,
+      "actual": 0.008305901966949802
+    },
+    {
+      "guide": 62,
+      "blocker": 63,
+      "kind": "front",
+      "x": -0.5929972628345191,
+      "y": -0.4601134279472867,
+      "potential": 0.0057410995846087776,
+      "actual": 0.0025330824080664893
+    },
+    {
+      "guide": 62,
+      "blocker": 63,
+      "kind": "front",
+      "x": -0.6055962386426815,
+      "y": -0.4651292686167672,
+      "potential": 0.012370251161516688,
+      "actual": 0.004120753196772853
+    },
+    {
+      "guide": 62,
+      "blocker": 61,
+      "kind": "front",
+      "x": -0.6331581680616785,
+      "y": -0.47823768689510127,
+      "potential": 0.009861906561259737,
+      "actual": 0.0016220704948588516
+    },
+    {
+      "guide": 63,
+      "blocker": 62,
+      "kind": "front",
+      "x": -0.7082652210402701,
+      "y": -0.11925939359499926,
+      "potential": 0.01785019251414055,
+      "actual": 0.01699160596744531
+    }
+  ],
+  "visibleGuideCount": 45,
+  "exposedFraction": 0.18627450980392157,
+  "remainingExposedFraction": 0.5473684210526316,
+  "geometry": {
+    "enabled": true,
+    "strength": 1,
+    "selectedGuides": 75,
+    "lobes": {
+      "2": 42,
+      "3": 6,
+      "4": 27
+    },
+    "refinedRings": 1982,
+    "extraVertices": 31712,
+    "extraTriangles": 62224,
+    "maxRecess": 0.022735730233969603,
+    "maxSectionXY": [
+      0.007359795380706524,
+      0.010713877696209462
+    ],
+    "maxRearChange": 0,
+    "maxProtectedChange": 0,
+    "analyticFrontHalfDepthFloor": 0.24,
+    "temporarySectionBytes": 2769080,
+    "constructionMs": 56.24,
+    "baselineTriangles": 264960,
+    "actualTriangles": 327184,
+    "baselineVertices": 151524,
+    "actualVertices": 183236
+  },
+  "resources": {
+    "elapsedMs": 6505.218687,
+    "peakRssMiB": 370.44140625
+  },
+  "limitations": [
+    "Actual MASS triangle rays in source math harness; native Three and images remain authoritative.",
+    "The original non-target fine ribbons and material alpha are excluded from this early coverage check.",
+    "Only lower front-facing valley samples are evaluated; profiles and silhouette need the focused native views."
+  ]
+}

@@ -1,0 +1,1576 @@
+{
+  "candidate": 130,
+  "status": "Native geometry/source/cleanup checks passed; visual border review pending",
+  "scoreUnchanged": 77,
+  "sourceTubeHidden": true,
+  "strengths": [
+    0,
+    0.5,
+    1
+  ],
+  "views": [
+    "front",
+    "detail",
+    "left",
+    "right",
+    "back",
+    "nose",
+    "nose-quarter"
+  ],
+  "resolution": [
+    900,
+    1200
+  ],
+  "antialiasing": 2,
+  "files": {
+    "src/main.js": {
+      "bytes": 20213,
+      "sha256": "f552f9417b5c4fda7f6f12a825ad4bed6d517e8555a1a893ce25a8f3821d9ddc"
+    },
+    "review/mouth-continuity-candidate130.js": {
+      "bytes": 26860,
+      "sha256": "fb2f288b264d9f2abade0aa4347d55e059c0179a0260dcf2e918d08745417c28"
+    },
+    "review/mouth-continuity130-native.mjs": {
+      "bytes": 22983,
+      "sha256": "1429dd097a6e8a0f6f4018c67b29c221f33a1e6bd4812094e3a44857831cfe88"
+    },
+    "review/hair-strand-normal111-integrity.js": {
+      "bytes": 4175,
+      "sha256": "e9025789ce1e5f05ba2961aca223990c729997b2e0f110fc6f3685b6e0f2b8fa"
+    }
+  },
+  "results": [
+    {
+      "strength": 0,
+      "browserErrors": [],
+      "setup": {
+        "nativeWebGPU": true,
+        "mapping": 7,
+        "exposure": 1.4,
+        "heapMiB": 352.32180404663086
+      },
+      "idleFrames": 0,
+      "cleanup": {
+        "released": false,
+        "privateGeometriesDisposed": 0,
+        "privateAttributeBytesReleased": 0,
+        "sourceReferencesRestored": true,
+        "disposed": []
+      },
+      "audit": {
+        "strength": 0,
+        "scoreUnchanged": 77,
+        "sourceSignature": {
+          "arrays": [
+            {
+              "labels": [
+                {
+                  "mesh": "continuous-face",
+                  "attribute": "position",
+                  "scope": "source"
+                }
+              ],
+              "hash": "44fea450e8a482e32856ac5cb7e24011428e108d861a08d5725105d12f639141",
+              "length": 332613
+            },
+            {
+              "labels": [
+                {
+                  "mesh": "continuous-face",
+                  "attribute": "uv",
+                  "scope": "source"
+                }
+              ],
+              "hash": "fe1e458cefed766845eed1577cc6722ce95147b19598faf575aa398b90a01e63",
+              "length": 221742
+            },
+            {
+              "labels": [
+                {
+                  "mesh": "continuous-face",
+                  "attribute": "color",
+                  "scope": "source"
+                }
+              ],
+              "hash": "2c767f21667561a2e64913277a0ab48a01abca0b69c9483fef6d76d3c2bf90d7",
+              "length": 332613
+            },
+            {
+              "labels": [
+                {
+                  "mesh": "continuous-face",
+                  "attribute": "normal",
+                  "scope": "source"
+                }
+              ],
+              "hash": "d492a834078b263e92c0ed0839230de69b2ab8771b7aed990f6b6f93200ad4e5",
+              "length": 332613
+            },
+            {
+              "labels": [
+                {
+                  "mesh": "continuous-face",
+                  "attribute": "index",
+                  "scope": "source"
+                }
+              ],
+              "hash": "f557228c97f184969a74a79925ada9eba7eca179edf3dd723b08848eeee3ea9b",
+              "length": 655824
+            },
+            {
+              "labels": [
+                {
+                  "mesh": "upper-lip",
+                  "attribute": "position",
+                  "scope": "source"
+                }
+              ],
+              "hash": "bd62a5d323115c6c178fe119a1f44b8068a4991a110c805a7175eaea0d1c1d24",
+              "length": 5151
+            },
+            {
+              "labels": [
+                {
+                  "mesh": "upper-lip",
+                  "attribute": "uv",
+                  "scope": "source"
+                }
+              ],
+              "hash": "cc33a01c9c453a1f65831290017b181626ee333bffef34bee85b8eff8ce1c688",
+              "length": 3434
+            },
+            {
+              "labels": [
+                {
+                  "mesh": "upper-lip",
+                  "attribute": "color",
+                  "scope": "source"
+                }
+              ],
+              "hash": "f137cc101427c3e5f701ef896c6b4d445274f7c4336f41c4eaeca020b7022ad1",
+              "length": 5151
+            },
+            {
+              "labels": [
+                {
+                  "mesh": "upper-lip",
+                  "attribute": "normal",
+                  "scope": "source"
+                }
+              ],
+              "hash": "ceb7c575f532229712d0ee30c3621f3fdf213d4b32799a5f2e6297bb6a668d16",
+              "length": 5151
+            },
+            {
+              "labels": [
+                {
+                  "mesh": "upper-lip",
+                  "attribute": "index",
+                  "scope": "source"
+                }
+              ],
+              "hash": "666a56cce4f9706260d93d65ecf75bc3a4c50f3d7c33df731947c91b35564cb6",
+              "length": 9600
+            },
+            {
+              "labels": [
+                {
+                  "mesh": "lower-lip",
+                  "attribute": "position",
+                  "scope": "source"
+                }
+              ],
+              "hash": "7f4d8b591a1a908549aa6891193c48d5befe3b4f1eacec89bc35ce326d2b9cca",
+              "length": 5151
+            },
+            {
+              "labels": [
+                {
+                  "mesh": "lower-lip",
+                  "attribute": "uv",
+                  "scope": "source"
+                }
+              ],
+              "hash": "ff1729215ebf72f200b82020ed2eb44762c8035abb8b507213dcfa648f81258e",
+              "length": 3434
+            },
+            {
+              "labels": [
+                {
+                  "mesh": "lower-lip",
+                  "attribute": "color",
+                  "scope": "source"
+                }
+              ],
+              "hash": "94ff0052d61d7a6e0c6446a23288cec578a40031058d92f03ebba3fa9434203f",
+              "length": 5151
+            },
+            {
+              "labels": [
+                {
+                  "mesh": "lower-lip",
+                  "attribute": "normal",
+                  "scope": "source"
+                }
+              ],
+              "hash": "f856e9643e094bc211c1c51e94fcbaa3b9dcf0fe4bfc1ee9dca4238e14418e25",
+              "length": 5151
+            },
+            {
+              "labels": [
+                {
+                  "mesh": "lower-lip",
+                  "attribute": "index",
+                  "scope": "source"
+                }
+              ],
+              "hash": "5d5d910e151829d28edf35181bb550e765ea5855843b82d70527506612b7af61",
+              "length": 9600
+            }
+          ],
+          "textures": [
+            {
+              "label": "continuous-face.map",
+              "hash": "2ebd7a5cbe32292186c9543291344e886bc836869f026eb121111cfc979184eb",
+              "settings": "{\"channel\":0,\"format\":1023,\"type\":1009,\"colorSpace\":\"srgb\",\"wrapS\":1001,\"wrapT\":1001,\"minFilter\":1008,\"magFilter\":1006,\"anisotropy\":8,\"flipY\":true,\"generateMipmaps\":true,\"premultiplyAlpha\":false,\"unpackAlignment\":4,\"rotation\":0,\"offset\":[0,0],\"repeat\":[1,1],\"center\":[0,0],\"matrixAutoUpdate\":true,\"manualMatrix\":null}"
+            },
+            {
+              "label": "continuous-face.bumpMap",
+              "hash": "8de6e4ae3c3ce50b4c0a2dd357db6329e552a33dd640e1769e5606d7c156dba3",
+              "settings": "{\"channel\":0,\"format\":1023,\"type\":1009,\"colorSpace\":\"\",\"wrapS\":1000,\"wrapT\":1000,\"minFilter\":1008,\"magFilter\":1006,\"anisotropy\":4,\"flipY\":true,\"generateMipmaps\":true,\"premultiplyAlpha\":false,\"unpackAlignment\":4,\"rotation\":0,\"offset\":[0,0],\"repeat\":[1,1],\"center\":[0,0],\"matrixAutoUpdate\":true,\"manualMatrix\":null}"
+            },
+            {
+              "label": "continuous-face.map",
+              "hash": "c31b67577017f0a57f0cc784404a519717cdb6f17b5314fd2707679b2f689330",
+              "settings": "{\"channel\":0,\"format\":1023,\"type\":1009,\"colorSpace\":\"srgb\",\"wrapS\":1001,\"wrapT\":1001,\"minFilter\":1008,\"magFilter\":1006,\"anisotropy\":8,\"flipY\":true,\"generateMipmaps\":true,\"premultiplyAlpha\":false,\"unpackAlignment\":4,\"rotation\":0,\"offset\":[0,0],\"repeat\":[1,1],\"center\":[0,0],\"matrixAutoUpdate\":true,\"manualMatrix\":null}"
+            }
+          ]
+        },
+        "noseWorld": [
+          0.07793628710839154,
+          2.5121690241006096,
+          0.8307459397368926
+        ],
+        "checkpoints": [
+          {
+            "stage": "prepared-before-renderer",
+            "exactBuffers": 15,
+            "exactSourceImages": 3,
+            "exactMaterials": 4,
+            "ok": true
+          },
+          {
+            "stage": "first-native-frame",
+            "exactBuffers": 15,
+            "exactSourceImages": 3,
+            "exactMaterials": 4,
+            "ok": true
+          },
+          {
+            "stage": "after-native-views",
+            "exactBuffers": 15,
+            "exactSourceImages": 3,
+            "exactMaterials": 4,
+            "ok": true
+          },
+          {
+            "stage": "before-release",
+            "exactBuffers": 15,
+            "exactSourceImages": 3,
+            "exactMaterials": 4,
+            "ok": true
+          },
+          {
+            "stage": "after-release",
+            "exactBuffers": 15,
+            "exactSourceImages": 3,
+            "exactMaterials": 4,
+            "ok": true
+          },
+          {
+            "stage": "restored-source-native-frame",
+            "exactBuffers": 15,
+            "exactSourceImages": 3,
+            "exactMaterials": 4,
+            "ok": true
+          }
+        ],
+        "nativeIndexWidenings": [
+          {
+            "stage": "first-native-frame",
+            "labels": [
+              {
+                "mesh": "upper-lip",
+                "attribute": "index",
+                "scope": "source"
+              }
+            ],
+            "before": {
+              "type": "Uint16Array",
+              "length": 9600,
+              "bytes": 19200,
+              "hash": "666a56cce4f9706260d93d65ecf75bc3a4c50f3d7c33df731947c91b35564cb6",
+              "version": 0,
+              "itemSize": 1,
+              "count": 9600,
+              "normalized": false
+            },
+            "after": {
+              "type": "Uint32Array",
+              "length": 9600,
+              "bytes": 38400,
+              "hash": "688301054579892799d8b9954ec237c8d0302a4e5754e9c60e34e9e00c65c7d9",
+              "version": 0,
+              "itemSize": 1,
+              "count": 9600,
+              "normalized": false
+            },
+            "originalArrayHashNow": "666a56cce4f9706260d93d65ecf75bc3a4c50f3d7c33df731947c91b35564cb6",
+            "originalArrayBytesUnchanged": true,
+            "sameOriginalArrayReference": false,
+            "versionChanged": false,
+            "indexValuesCompared": 9600,
+            "indexValueMismatches": 0,
+            "indexValuesExact": true,
+            "firstIndexMismatches": [],
+            "classification": "verified-native-index-widening"
+          },
+          {
+            "stage": "first-native-frame",
+            "labels": [
+              {
+                "mesh": "lower-lip",
+                "attribute": "index",
+                "scope": "source"
+              }
+            ],
+            "before": {
+              "type": "Uint16Array",
+              "length": 9600,
+              "bytes": 19200,
+              "hash": "5d5d910e151829d28edf35181bb550e765ea5855843b82d70527506612b7af61",
+              "version": 0,
+              "itemSize": 1,
+              "count": 9600,
+              "normalized": false
+            },
+            "after": {
+              "type": "Uint32Array",
+              "length": 9600,
+              "bytes": 38400,
+              "hash": "96bb4b59aea4cbc57a19e6ef680f1a630be29a977fead82649308b5631e4d41d",
+              "version": 0,
+              "itemSize": 1,
+              "count": 9600,
+              "normalized": false
+            },
+            "originalArrayHashNow": "5d5d910e151829d28edf35181bb550e765ea5855843b82d70527506612b7af61",
+            "originalArrayBytesUnchanged": true,
+            "sameOriginalArrayReference": false,
+            "versionChanged": false,
+            "indexValuesCompared": 9600,
+            "indexValueMismatches": 0,
+            "indexValuesExact": true,
+            "firstIndexMismatches": [],
+            "classification": "verified-native-index-widening"
+          }
+        ],
+        "geometry": {
+          "positionChanges": 0,
+          "normalChanges": 0,
+          "localXYChanges": 0,
+          "exactCoreNormals": 2270,
+          "exactProtectedValues": 36370,
+          "minimumTriangleNormalDot": 0.9999999999999993,
+          "projectedOrientationFlips": 0
+        },
+        "scope": "Exact original face/lip buffers, materials and shared atlas bytes; every other scene mesh retains its geometry/attribute/material references and visibility. Private index widening is allowed only after exact value comparison.",
+        "metrics": {
+          "version": "outer-lip-continuity-130",
+          "strength": 0,
+          "applied": false,
+          "privateGeometryCount": 0,
+          "privateAttributeBytes": 0,
+          "changedPositions": 0,
+          "changedNormals": 0,
+          "elapsedMs": 0
+        },
+        "cleanup": {
+          "released": false,
+          "privateGeometriesDisposed": 0,
+          "privateAttributeBytesReleased": 0,
+          "sourceReferencesRestored": true,
+          "disposed": []
+        }
+      },
+      "status": "Passed"
+    },
+    {
+      "strength": 0.5,
+      "browserErrors": [],
+      "setup": {
+        "nativeWebGPU": true,
+        "mapping": 7,
+        "exposure": 1.4,
+        "heapMiB": 351.0938606262207
+      },
+      "idleFrames": 0,
+      "cleanup": {
+        "released": true,
+        "privateGeometriesDisposed": 2,
+        "privateAttributeBytesReleased": 189496,
+        "sourceReferencesRestored": true,
+        "disposed": [
+          {
+            "mesh": "upper-lip",
+            "attributes": 5,
+            "originalBufferBindings": 0
+          },
+          {
+            "mesh": "lower-lip",
+            "attributes": 5,
+            "originalBufferBindings": 0
+          }
+        ]
+      },
+      "audit": {
+        "strength": 0.5,
+        "scoreUnchanged": 77,
+        "sourceSignature": {
+          "arrays": [
+            {
+              "labels": [
+                {
+                  "mesh": "continuous-face",
+                  "attribute": "position",
+                  "scope": "source"
+                }
+              ],
+              "hash": "44fea450e8a482e32856ac5cb7e24011428e108d861a08d5725105d12f639141",
+              "length": 332613
+            },
+            {
+              "labels": [
+                {
+                  "mesh": "continuous-face",
+                  "attribute": "uv",
+                  "scope": "source"
+                }
+              ],
+              "hash": "fe1e458cefed766845eed1577cc6722ce95147b19598faf575aa398b90a01e63",
+              "length": 221742
+            },
+            {
+              "labels": [
+                {
+                  "mesh": "continuous-face",
+                  "attribute": "color",
+                  "scope": "source"
+                }
+              ],
+              "hash": "2c767f21667561a2e64913277a0ab48a01abca0b69c9483fef6d76d3c2bf90d7",
+              "length": 332613
+            },
+            {
+              "labels": [
+                {
+                  "mesh": "continuous-face",
+                  "attribute": "normal",
+                  "scope": "source"
+                }
+              ],
+              "hash": "d492a834078b263e92c0ed0839230de69b2ab8771b7aed990f6b6f93200ad4e5",
+              "length": 332613
+            },
+            {
+              "labels": [
+                {
+                  "mesh": "continuous-face",
+                  "attribute": "index",
+                  "scope": "source"
+                }
+              ],
+              "hash": "f557228c97f184969a74a79925ada9eba7eca179edf3dd723b08848eeee3ea9b",
+              "length": 655824
+            },
+            {
+              "labels": [
+                {
+                  "mesh": "upper-lip",
+                  "attribute": "position",
+                  "scope": "source"
+                }
+              ],
+              "hash": "bd62a5d323115c6c178fe119a1f44b8068a4991a110c805a7175eaea0d1c1d24",
+              "length": 5151
+            },
+            {
+              "labels": [
+                {
+                  "mesh": "upper-lip",
+                  "attribute": "uv",
+                  "scope": "source"
+                }
+              ],
+              "hash": "cc33a01c9c453a1f65831290017b181626ee333bffef34bee85b8eff8ce1c688",
+              "length": 3434
+            },
+            {
+              "labels": [
+                {
+                  "mesh": "upper-lip",
+                  "attribute": "color",
+                  "scope": "source"
+                }
+              ],
+              "hash": "f137cc101427c3e5f701ef896c6b4d445274f7c4336f41c4eaeca020b7022ad1",
+              "length": 5151
+            },
+            {
+              "labels": [
+                {
+                  "mesh": "upper-lip",
+                  "attribute": "normal",
+                  "scope": "source"
+                }
+              ],
+              "hash": "ceb7c575f532229712d0ee30c3621f3fdf213d4b32799a5f2e6297bb6a668d16",
+              "length": 5151
+            },
+            {
+              "labels": [
+                {
+                  "mesh": "upper-lip",
+                  "attribute": "index",
+                  "scope": "source"
+                }
+              ],
+              "hash": "666a56cce4f9706260d93d65ecf75bc3a4c50f3d7c33df731947c91b35564cb6",
+              "length": 9600
+            },
+            {
+              "labels": [
+                {
+                  "mesh": "lower-lip",
+                  "attribute": "position",
+                  "scope": "source"
+                }
+              ],
+              "hash": "7f4d8b591a1a908549aa6891193c48d5befe3b4f1eacec89bc35ce326d2b9cca",
+              "length": 5151
+            },
+            {
+              "labels": [
+                {
+                  "mesh": "lower-lip",
+                  "attribute": "uv",
+                  "scope": "source"
+                }
+              ],
+              "hash": "ff1729215ebf72f200b82020ed2eb44762c8035abb8b507213dcfa648f81258e",
+              "length": 3434
+            },
+            {
+              "labels": [
+                {
+                  "mesh": "lower-lip",
+                  "attribute": "color",
+                  "scope": "source"
+                }
+              ],
+              "hash": "94ff0052d61d7a6e0c6446a23288cec578a40031058d92f03ebba3fa9434203f",
+              "length": 5151
+            },
+            {
+              "labels": [
+                {
+                  "mesh": "lower-lip",
+                  "attribute": "normal",
+                  "scope": "source"
+                }
+              ],
+              "hash": "f856e9643e094bc211c1c51e94fcbaa3b9dcf0fe4bfc1ee9dca4238e14418e25",
+              "length": 5151
+            },
+            {
+              "labels": [
+                {
+                  "mesh": "lower-lip",
+                  "attribute": "index",
+                  "scope": "source"
+                }
+              ],
+              "hash": "5d5d910e151829d28edf35181bb550e765ea5855843b82d70527506612b7af61",
+              "length": 9600
+            }
+          ],
+          "textures": [
+            {
+              "label": "continuous-face.map",
+              "hash": "2ebd7a5cbe32292186c9543291344e886bc836869f026eb121111cfc979184eb",
+              "settings": "{\"channel\":0,\"format\":1023,\"type\":1009,\"colorSpace\":\"srgb\",\"wrapS\":1001,\"wrapT\":1001,\"minFilter\":1008,\"magFilter\":1006,\"anisotropy\":8,\"flipY\":true,\"generateMipmaps\":true,\"premultiplyAlpha\":false,\"unpackAlignment\":4,\"rotation\":0,\"offset\":[0,0],\"repeat\":[1,1],\"center\":[0,0],\"matrixAutoUpdate\":true,\"manualMatrix\":null}"
+            },
+            {
+              "label": "continuous-face.bumpMap",
+              "hash": "8de6e4ae3c3ce50b4c0a2dd357db6329e552a33dd640e1769e5606d7c156dba3",
+              "settings": "{\"channel\":0,\"format\":1023,\"type\":1009,\"colorSpace\":\"\",\"wrapS\":1000,\"wrapT\":1000,\"minFilter\":1008,\"magFilter\":1006,\"anisotropy\":4,\"flipY\":true,\"generateMipmaps\":true,\"premultiplyAlpha\":false,\"unpackAlignment\":4,\"rotation\":0,\"offset\":[0,0],\"repeat\":[1,1],\"center\":[0,0],\"matrixAutoUpdate\":true,\"manualMatrix\":null}"
+            },
+            {
+              "label": "continuous-face.map",
+              "hash": "c31b67577017f0a57f0cc784404a519717cdb6f17b5314fd2707679b2f689330",
+              "settings": "{\"channel\":0,\"format\":1023,\"type\":1009,\"colorSpace\":\"srgb\",\"wrapS\":1001,\"wrapT\":1001,\"minFilter\":1008,\"magFilter\":1006,\"anisotropy\":8,\"flipY\":true,\"generateMipmaps\":true,\"premultiplyAlpha\":false,\"unpackAlignment\":4,\"rotation\":0,\"offset\":[0,0],\"repeat\":[1,1],\"center\":[0,0],\"matrixAutoUpdate\":true,\"manualMatrix\":null}"
+            }
+          ]
+        },
+        "noseWorld": [
+          0.07793628710839154,
+          2.5121690241006096,
+          0.8307459397368926
+        ],
+        "checkpoints": [
+          {
+            "stage": "prepared-before-renderer",
+            "exactBuffers": 25,
+            "exactSourceImages": 3,
+            "exactMaterials": 4,
+            "ok": true
+          },
+          {
+            "stage": "first-native-frame",
+            "exactBuffers": 25,
+            "exactSourceImages": 3,
+            "exactMaterials": 4,
+            "ok": true
+          },
+          {
+            "stage": "after-native-views",
+            "exactBuffers": 25,
+            "exactSourceImages": 3,
+            "exactMaterials": 4,
+            "ok": true
+          },
+          {
+            "stage": "before-release",
+            "exactBuffers": 25,
+            "exactSourceImages": 3,
+            "exactMaterials": 4,
+            "ok": true
+          },
+          {
+            "stage": "after-release",
+            "exactBuffers": 25,
+            "exactSourceImages": 3,
+            "exactMaterials": 4,
+            "ok": true
+          },
+          {
+            "stage": "restored-source-native-frame",
+            "exactBuffers": 25,
+            "exactSourceImages": 3,
+            "exactMaterials": 4,
+            "ok": true
+          }
+        ],
+        "nativeIndexWidenings": [
+          {
+            "stage": "first-native-frame",
+            "labels": [
+              {
+                "mesh": "upper-lip",
+                "attribute": "index",
+                "scope": "private"
+              }
+            ],
+            "before": {
+              "type": "Uint16Array",
+              "length": 9600,
+              "bytes": 19200,
+              "hash": "666a56cce4f9706260d93d65ecf75bc3a4c50f3d7c33df731947c91b35564cb6",
+              "version": 0,
+              "itemSize": 1,
+              "count": 9600,
+              "normalized": false
+            },
+            "after": {
+              "type": "Uint32Array",
+              "length": 9600,
+              "bytes": 38400,
+              "hash": "688301054579892799d8b9954ec237c8d0302a4e5754e9c60e34e9e00c65c7d9",
+              "version": 0,
+              "itemSize": 1,
+              "count": 9600,
+              "normalized": false
+            },
+            "originalArrayHashNow": "666a56cce4f9706260d93d65ecf75bc3a4c50f3d7c33df731947c91b35564cb6",
+            "originalArrayBytesUnchanged": true,
+            "sameOriginalArrayReference": false,
+            "versionChanged": false,
+            "indexValuesCompared": 9600,
+            "indexValueMismatches": 0,
+            "indexValuesExact": true,
+            "firstIndexMismatches": [],
+            "classification": "verified-native-index-widening"
+          },
+          {
+            "stage": "first-native-frame",
+            "labels": [
+              {
+                "mesh": "lower-lip",
+                "attribute": "index",
+                "scope": "private"
+              }
+            ],
+            "before": {
+              "type": "Uint16Array",
+              "length": 9600,
+              "bytes": 19200,
+              "hash": "5d5d910e151829d28edf35181bb550e765ea5855843b82d70527506612b7af61",
+              "version": 0,
+              "itemSize": 1,
+              "count": 9600,
+              "normalized": false
+            },
+            "after": {
+              "type": "Uint32Array",
+              "length": 9600,
+              "bytes": 38400,
+              "hash": "96bb4b59aea4cbc57a19e6ef680f1a630be29a977fead82649308b5631e4d41d",
+              "version": 0,
+              "itemSize": 1,
+              "count": 9600,
+              "normalized": false
+            },
+            "originalArrayHashNow": "5d5d910e151829d28edf35181bb550e765ea5855843b82d70527506612b7af61",
+            "originalArrayBytesUnchanged": true,
+            "sameOriginalArrayReference": false,
+            "versionChanged": false,
+            "indexValuesCompared": 9600,
+            "indexValueMismatches": 0,
+            "indexValuesExact": true,
+            "firstIndexMismatches": [],
+            "classification": "verified-native-index-widening"
+          },
+          {
+            "stage": "restored-source-native-frame",
+            "labels": [
+              {
+                "mesh": "upper-lip",
+                "attribute": "index",
+                "scope": "source"
+              }
+            ],
+            "before": {
+              "type": "Uint16Array",
+              "length": 9600,
+              "bytes": 19200,
+              "hash": "666a56cce4f9706260d93d65ecf75bc3a4c50f3d7c33df731947c91b35564cb6",
+              "version": 0,
+              "itemSize": 1,
+              "count": 9600,
+              "normalized": false
+            },
+            "after": {
+              "type": "Uint32Array",
+              "length": 9600,
+              "bytes": 38400,
+              "hash": "688301054579892799d8b9954ec237c8d0302a4e5754e9c60e34e9e00c65c7d9",
+              "version": 0,
+              "itemSize": 1,
+              "count": 9600,
+              "normalized": false
+            },
+            "originalArrayHashNow": "666a56cce4f9706260d93d65ecf75bc3a4c50f3d7c33df731947c91b35564cb6",
+            "originalArrayBytesUnchanged": true,
+            "sameOriginalArrayReference": false,
+            "versionChanged": false,
+            "indexValuesCompared": 9600,
+            "indexValueMismatches": 0,
+            "indexValuesExact": true,
+            "firstIndexMismatches": [],
+            "classification": "verified-native-index-widening"
+          },
+          {
+            "stage": "restored-source-native-frame",
+            "labels": [
+              {
+                "mesh": "lower-lip",
+                "attribute": "index",
+                "scope": "source"
+              }
+            ],
+            "before": {
+              "type": "Uint16Array",
+              "length": 9600,
+              "bytes": 19200,
+              "hash": "5d5d910e151829d28edf35181bb550e765ea5855843b82d70527506612b7af61",
+              "version": 0,
+              "itemSize": 1,
+              "count": 9600,
+              "normalized": false
+            },
+            "after": {
+              "type": "Uint32Array",
+              "length": 9600,
+              "bytes": 38400,
+              "hash": "96bb4b59aea4cbc57a19e6ef680f1a630be29a977fead82649308b5631e4d41d",
+              "version": 0,
+              "itemSize": 1,
+              "count": 9600,
+              "normalized": false
+            },
+            "originalArrayHashNow": "5d5d910e151829d28edf35181bb550e765ea5855843b82d70527506612b7af61",
+            "originalArrayBytesUnchanged": true,
+            "sameOriginalArrayReference": false,
+            "versionChanged": false,
+            "indexValuesCompared": 9600,
+            "indexValueMismatches": 0,
+            "indexValuesExact": true,
+            "firstIndexMismatches": [],
+            "classification": "verified-native-index-widening"
+          }
+        ],
+        "geometry": {
+          "positionChanges": 966,
+          "normalChanges": 1164,
+          "localXYChanges": 0,
+          "exactCoreNormals": 2270,
+          "exactProtectedValues": 36370,
+          "minimumTriangleNormalDot": 0.9554870740729986,
+          "projectedOrientationFlips": 0
+        },
+        "scope": "Exact original face/lip buffers, materials and shared atlas bytes; every other scene mesh retains its geometry/attribute/material references and visibility. Private index widening is allowed only after exact value comparison.",
+        "metrics": {
+          "version": "outer-lip-continuity-130",
+          "strength": 0.5,
+          "applied": true,
+          "frame": {
+            "samples": 3434,
+            "commonOffsetXY": [
+              -0.2335190826630459,
+              -0.04008513686246009
+            ],
+            "maximumUVResidual": 6.845613331751821e-8,
+            "maximumXYResidual": 9.669124909766902e-8,
+            "tolerance": 0.0000012,
+            "fittedSlopes": false
+          },
+          "faceTrianglesIndexed": 2288,
+          "faceIndexCells": 512,
+          "privateGeometryCount": 2,
+          "privateAttributeBytes": 189496,
+          "changedPositions": 966,
+          "changedNormals": 1164,
+          "minimumJacobian": 1,
+          "maximumDepthReduction": 0.002526802703380084,
+          "maximumAnatomicalXYRoundoff": 7.0133335415921e-20,
+          "maximumNormalLengthError": 4.106407924808764e-8,
+          "maximumAuthoredResidualDegrees": 16.438193063662748,
+          "interiorBoundaryNormalSamples": 0,
+          "maximumInteriorBoundaryNormalErrorDegrees": null,
+          "minimumBaselineClearance": 0.000993310062489039,
+          "minimumRepairedClearance": 0.000993310062489039,
+          "maximumClearanceReduction": 0.0025268197059631348,
+          "clearanceSamples": 10794,
+          "perMesh": [
+            {
+              "name": "upper-lip",
+              "vertices": 1717,
+              "triangles": 3200,
+              "changedPositions": 483,
+              "changedNormals": 582,
+              "meshToHead": [
+                1,
+                1.214306433183765e-17,
+                0,
+                0,
+                1.214306433183765e-17,
+                1,
+                0,
+                0,
+                2.7755575615628914e-17,
+                0,
+                1,
+                0,
+                1.6653345369377348e-16,
+                0,
+                0,
+                1
+              ],
+              "headToMesh": [
+                1,
+                -1.214306433183765e-17,
+                0,
+                0,
+                -1.214306433183765e-17,
+                1,
+                0,
+                0,
+                -2.7755575615628914e-17,
+                3.3703774026776627e-34,
+                1,
+                0,
+                -1.6653345369377348e-16,
+                2.0222264416065976e-33,
+                0,
+                1
+              ]
+            },
+            {
+              "name": "lower-lip",
+              "vertices": 1717,
+              "triangles": 3200,
+              "changedPositions": 483,
+              "changedNormals": 582,
+              "meshToHead": [
+                1,
+                1.214306433183765e-17,
+                0,
+                0,
+                1.214306433183765e-17,
+                1,
+                0,
+                0,
+                2.7755575615628914e-17,
+                0,
+                1,
+                0,
+                1.6653345369377348e-16,
+                0,
+                0,
+                1
+              ],
+              "headToMesh": [
+                1,
+                -1.214306433183765e-17,
+                0,
+                0,
+                -1.214306433183765e-17,
+                1,
+                0,
+                0,
+                -2.7755575615628914e-17,
+                3.3703774026776627e-34,
+                1,
+                0,
+                -1.6653345369377348e-16,
+                2.0222264416065976e-33,
+                0,
+                1
+              ]
+            }
+          ],
+          "elapsedMs": 24.899999998509884,
+          "materialChanged": false,
+          "creaseVisibilityChanged": false,
+          "normalOperations": [
+            "Analytic inverse-transpose transport",
+            "Separately bounded authored boundary-normal residual"
+          ]
+        },
+        "cleanup": {
+          "released": true,
+          "privateGeometriesDisposed": 2,
+          "privateAttributeBytesReleased": 189496,
+          "sourceReferencesRestored": true,
+          "disposed": [
+            {
+              "mesh": "upper-lip",
+              "attributes": 5,
+              "originalBufferBindings": 0
+            },
+            {
+              "mesh": "lower-lip",
+              "attributes": 5,
+              "originalBufferBindings": 0
+            }
+          ]
+        }
+      },
+      "status": "Passed"
+    },
+    {
+      "strength": 1,
+      "browserErrors": [],
+      "setup": {
+        "nativeWebGPU": true,
+        "mapping": 7,
+        "exposure": 1.4,
+        "heapMiB": 355.4368095397949
+      },
+      "idleFrames": 0,
+      "cleanup": {
+        "released": true,
+        "privateGeometriesDisposed": 2,
+        "privateAttributeBytesReleased": 189496,
+        "sourceReferencesRestored": true,
+        "disposed": [
+          {
+            "mesh": "upper-lip",
+            "attributes": 5,
+            "originalBufferBindings": 0
+          },
+          {
+            "mesh": "lower-lip",
+            "attributes": 5,
+            "originalBufferBindings": 0
+          }
+        ]
+      },
+      "audit": {
+        "strength": 1,
+        "scoreUnchanged": 77,
+        "sourceSignature": {
+          "arrays": [
+            {
+              "labels": [
+                {
+                  "mesh": "continuous-face",
+                  "attribute": "position",
+                  "scope": "source"
+                }
+              ],
+              "hash": "44fea450e8a482e32856ac5cb7e24011428e108d861a08d5725105d12f639141",
+              "length": 332613
+            },
+            {
+              "labels": [
+                {
+                  "mesh": "continuous-face",
+                  "attribute": "uv",
+                  "scope": "source"
+                }
+              ],
+              "hash": "fe1e458cefed766845eed1577cc6722ce95147b19598faf575aa398b90a01e63",
+              "length": 221742
+            },
+            {
+              "labels": [
+                {
+                  "mesh": "continuous-face",
+                  "attribute": "color",
+                  "scope": "source"
+                }
+              ],
+              "hash": "2c767f21667561a2e64913277a0ab48a01abca0b69c9483fef6d76d3c2bf90d7",
+              "length": 332613
+            },
+            {
+              "labels": [
+                {
+                  "mesh": "continuous-face",
+                  "attribute": "normal",
+                  "scope": "source"
+                }
+              ],
+              "hash": "d492a834078b263e92c0ed0839230de69b2ab8771b7aed990f6b6f93200ad4e5",
+              "length": 332613
+            },
+            {
+              "labels": [
+                {
+                  "mesh": "continuous-face",
+                  "attribute": "index",
+                  "scope": "source"
+                }
+              ],
+              "hash": "f557228c97f184969a74a79925ada9eba7eca179edf3dd723b08848eeee3ea9b",
+              "length": 655824
+            },
+            {
+              "labels": [
+                {
+                  "mesh": "upper-lip",
+                  "attribute": "position",
+                  "scope": "source"
+                }
+              ],
+              "hash": "bd62a5d323115c6c178fe119a1f44b8068a4991a110c805a7175eaea0d1c1d24",
+              "length": 5151
+            },
+            {
+              "labels": [
+                {
+                  "mesh": "upper-lip",
+                  "attribute": "uv",
+                  "scope": "source"
+                }
+              ],
+              "hash": "cc33a01c9c453a1f65831290017b181626ee333bffef34bee85b8eff8ce1c688",
+              "length": 3434
+            },
+            {
+              "labels": [
+                {
+                  "mesh": "upper-lip",
+                  "attribute": "color",
+                  "scope": "source"
+                }
+              ],
+              "hash": "f137cc101427c3e5f701ef896c6b4d445274f7c4336f41c4eaeca020b7022ad1",
+              "length": 5151
+            },
+            {
+              "labels": [
+                {
+                  "mesh": "upper-lip",
+                  "attribute": "normal",
+                  "scope": "source"
+                }
+              ],
+              "hash": "ceb7c575f532229712d0ee30c3621f3fdf213d4b32799a5f2e6297bb6a668d16",
+              "length": 5151
+            },
+            {
+              "labels": [
+                {
+                  "mesh": "upper-lip",
+                  "attribute": "index",
+                  "scope": "source"
+                }
+              ],
+              "hash": "666a56cce4f9706260d93d65ecf75bc3a4c50f3d7c33df731947c91b35564cb6",
+              "length": 9600
+            },
+            {
+              "labels": [
+                {
+                  "mesh": "lower-lip",
+                  "attribute": "position",
+                  "scope": "source"
+                }
+              ],
+              "hash": "7f4d8b591a1a908549aa6891193c48d5befe3b4f1eacec89bc35ce326d2b9cca",
+              "length": 5151
+            },
+            {
+              "labels": [
+                {
+                  "mesh": "lower-lip",
+                  "attribute": "uv",
+                  "scope": "source"
+                }
+              ],
+              "hash": "ff1729215ebf72f200b82020ed2eb44762c8035abb8b507213dcfa648f81258e",
+              "length": 3434
+            },
+            {
+              "labels": [
+                {
+                  "mesh": "lower-lip",
+                  "attribute": "color",
+                  "scope": "source"
+                }
+              ],
+              "hash": "94ff0052d61d7a6e0c6446a23288cec578a40031058d92f03ebba3fa9434203f",
+              "length": 5151
+            },
+            {
+              "labels": [
+                {
+                  "mesh": "lower-lip",
+                  "attribute": "normal",
+                  "scope": "source"
+                }
+              ],
+              "hash": "f856e9643e094bc211c1c51e94fcbaa3b9dcf0fe4bfc1ee9dca4238e14418e25",
+              "length": 5151
+            },
+            {
+              "labels": [
+                {
+                  "mesh": "lower-lip",
+                  "attribute": "index",
+                  "scope": "source"
+                }
+              ],
+              "hash": "5d5d910e151829d28edf35181bb550e765ea5855843b82d70527506612b7af61",
+              "length": 9600
+            }
+          ],
+          "textures": [
+            {
+              "label": "continuous-face.map",
+              "hash": "2ebd7a5cbe32292186c9543291344e886bc836869f026eb121111cfc979184eb",
+              "settings": "{\"channel\":0,\"format\":1023,\"type\":1009,\"colorSpace\":\"srgb\",\"wrapS\":1001,\"wrapT\":1001,\"minFilter\":1008,\"magFilter\":1006,\"anisotropy\":8,\"flipY\":true,\"generateMipmaps\":true,\"premultiplyAlpha\":false,\"unpackAlignment\":4,\"rotation\":0,\"offset\":[0,0],\"repeat\":[1,1],\"center\":[0,0],\"matrixAutoUpdate\":true,\"manualMatrix\":null}"
+            },
+            {
+              "label": "continuous-face.bumpMap",
+              "hash": "8de6e4ae3c3ce50b4c0a2dd357db6329e552a33dd640e1769e5606d7c156dba3",
+              "settings": "{\"channel\":0,\"format\":1023,\"type\":1009,\"colorSpace\":\"\",\"wrapS\":1000,\"wrapT\":1000,\"minFilter\":1008,\"magFilter\":1006,\"anisotropy\":4,\"flipY\":true,\"generateMipmaps\":true,\"premultiplyAlpha\":false,\"unpackAlignment\":4,\"rotation\":0,\"offset\":[0,0],\"repeat\":[1,1],\"center\":[0,0],\"matrixAutoUpdate\":true,\"manualMatrix\":null}"
+            },
+            {
+              "label": "continuous-face.map",
+              "hash": "c31b67577017f0a57f0cc784404a519717cdb6f17b5314fd2707679b2f689330",
+              "settings": "{\"channel\":0,\"format\":1023,\"type\":1009,\"colorSpace\":\"srgb\",\"wrapS\":1001,\"wrapT\":1001,\"minFilter\":1008,\"magFilter\":1006,\"anisotropy\":8,\"flipY\":true,\"generateMipmaps\":true,\"premultiplyAlpha\":false,\"unpackAlignment\":4,\"rotation\":0,\"offset\":[0,0],\"repeat\":[1,1],\"center\":[0,0],\"matrixAutoUpdate\":true,\"manualMatrix\":null}"
+            }
+          ]
+        },
+        "noseWorld": [
+          0.07793628710839154,
+          2.5121690241006096,
+          0.8307459397368926
+        ],
+        "checkpoints": [
+          {
+            "stage": "prepared-before-renderer",
+            "exactBuffers": 25,
+            "exactSourceImages": 3,
+            "exactMaterials": 4,
+            "ok": true
+          },
+          {
+            "stage": "first-native-frame",
+            "exactBuffers": 25,
+            "exactSourceImages": 3,
+            "exactMaterials": 4,
+            "ok": true
+          },
+          {
+            "stage": "after-native-views",
+            "exactBuffers": 25,
+            "exactSourceImages": 3,
+            "exactMaterials": 4,
+            "ok": true
+          },
+          {
+            "stage": "before-release",
+            "exactBuffers": 25,
+            "exactSourceImages": 3,
+            "exactMaterials": 4,
+            "ok": true
+          },
+          {
+            "stage": "after-release",
+            "exactBuffers": 25,
+            "exactSourceImages": 3,
+            "exactMaterials": 4,
+            "ok": true
+          },
+          {
+            "stage": "restored-source-native-frame",
+            "exactBuffers": 25,
+            "exactSourceImages": 3,
+            "exactMaterials": 4,
+            "ok": true
+          }
+        ],
+        "nativeIndexWidenings": [
+          {
+            "stage": "first-native-frame",
+            "labels": [
+              {
+                "mesh": "upper-lip",
+                "attribute": "index",
+                "scope": "private"
+              }
+            ],
+            "before": {
+              "type": "Uint16Array",
+              "length": 9600,
+              "bytes": 19200,
+              "hash": "666a56cce4f9706260d93d65ecf75bc3a4c50f3d7c33df731947c91b35564cb6",
+              "version": 0,
+              "itemSize": 1,
+              "count": 9600,
+              "normalized": false
+            },
+            "after": {
+              "type": "Uint32Array",
+              "length": 9600,
+              "bytes": 38400,
+              "hash": "688301054579892799d8b9954ec237c8d0302a4e5754e9c60e34e9e00c65c7d9",
+              "version": 0,
+              "itemSize": 1,
+              "count": 9600,
+              "normalized": false
+            },
+            "originalArrayHashNow": "666a56cce4f9706260d93d65ecf75bc3a4c50f3d7c33df731947c91b35564cb6",
+            "originalArrayBytesUnchanged": true,
+            "sameOriginalArrayReference": false,
+            "versionChanged": false,
+            "indexValuesCompared": 9600,
+            "indexValueMismatches": 0,
+            "indexValuesExact": true,
+            "firstIndexMismatches": [],
+            "classification": "verified-native-index-widening"
+          },
+          {
+            "stage": "first-native-frame",
+            "labels": [
+              {
+                "mesh": "lower-lip",
+                "attribute": "index",
+                "scope": "private"
+              }
+            ],
+            "before": {
+              "type": "Uint16Array",
+              "length": 9600,
+              "bytes": 19200,
+              "hash": "5d5d910e151829d28edf35181bb550e765ea5855843b82d70527506612b7af61",
+              "version": 0,
+              "itemSize": 1,
+              "count": 9600,
+              "normalized": false
+            },
+            "after": {
+              "type": "Uint32Array",
+              "length": 9600,
+              "bytes": 38400,
+              "hash": "96bb4b59aea4cbc57a19e6ef680f1a630be29a977fead82649308b5631e4d41d",
+              "version": 0,
+              "itemSize": 1,
+              "count": 9600,
+              "normalized": false
+            },
+            "originalArrayHashNow": "5d5d910e151829d28edf35181bb550e765ea5855843b82d70527506612b7af61",
+            "originalArrayBytesUnchanged": true,
+            "sameOriginalArrayReference": false,
+            "versionChanged": false,
+            "indexValuesCompared": 9600,
+            "indexValueMismatches": 0,
+            "indexValuesExact": true,
+            "firstIndexMismatches": [],
+            "classification": "verified-native-index-widening"
+          },
+          {
+            "stage": "restored-source-native-frame",
+            "labels": [
+              {
+                "mesh": "upper-lip",
+                "attribute": "index",
+                "scope": "source"
+              }
+            ],
+            "before": {
+              "type": "Uint16Array",
+              "length": 9600,
+              "bytes": 19200,
+              "hash": "666a56cce4f9706260d93d65ecf75bc3a4c50f3d7c33df731947c91b35564cb6",
+              "version": 0,
+              "itemSize": 1,
+              "count": 9600,
+              "normalized": false
+            },
+            "after": {
+              "type": "Uint32Array",
+              "length": 9600,
+              "bytes": 38400,
+              "hash": "688301054579892799d8b9954ec237c8d0302a4e5754e9c60e34e9e00c65c7d9",
+              "version": 0,
+              "itemSize": 1,
+              "count": 9600,
+              "normalized": false
+            },
+            "originalArrayHashNow": "666a56cce4f9706260d93d65ecf75bc3a4c50f3d7c33df731947c91b35564cb6",
+            "originalArrayBytesUnchanged": true,
+            "sameOriginalArrayReference": false,
+            "versionChanged": false,
+            "indexValuesCompared": 9600,
+            "indexValueMismatches": 0,
+            "indexValuesExact": true,
+            "firstIndexMismatches": [],
+            "classification": "verified-native-index-widening"
+          },
+          {
+            "stage": "restored-source-native-frame",
+            "labels": [
+              {
+                "mesh": "lower-lip",
+                "attribute": "index",
+                "scope": "source"
+              }
+            ],
+            "before": {
+              "type": "Uint16Array",
+              "length": 9600,
+              "bytes": 19200,
+              "hash": "5d5d910e151829d28edf35181bb550e765ea5855843b82d70527506612b7af61",
+              "version": 0,
+              "itemSize": 1,
+              "count": 9600,
+              "normalized": false
+            },
+            "after": {
+              "type": "Uint32Array",
+              "length": 9600,
+              "bytes": 38400,
+              "hash": "96bb4b59aea4cbc57a19e6ef680f1a630be29a977fead82649308b5631e4d41d",
+              "version": 0,
+              "itemSize": 1,
+              "count": 9600,
+              "normalized": false
+            },
+            "originalArrayHashNow": "5d5d910e151829d28edf35181bb550e765ea5855843b82d70527506612b7af61",
+            "originalArrayBytesUnchanged": true,
+            "sameOriginalArrayReference": false,
+            "versionChanged": false,
+            "indexValuesCompared": 9600,
+            "indexValueMismatches": 0,
+            "indexValuesExact": true,
+            "firstIndexMismatches": [],
+            "classification": "verified-native-index-widening"
+          }
+        ],
+        "geometry": {
+          "positionChanges": 966,
+          "normalChanges": 1164,
+          "localXYChanges": 0,
+          "exactCoreNormals": 2270,
+          "exactProtectedValues": 36370,
+          "minimumTriangleNormalDot": 0.7252015386782991,
+          "projectedOrientationFlips": 0
+        },
+        "scope": "Exact original face/lip buffers, materials and shared atlas bytes; every other scene mesh retains its geometry/attribute/material references and visibility. Private index widening is allowed only after exact value comparison.",
+        "metrics": {
+          "version": "outer-lip-continuity-130",
+          "strength": 1,
+          "applied": true,
+          "frame": {
+            "samples": 3434,
+            "commonOffsetXY": [
+              -0.2335190826630459,
+              -0.04008513686246009
+            ],
+            "maximumUVResidual": 6.845613331751821e-8,
+            "maximumXYResidual": 9.669124909766902e-8,
+            "tolerance": 0.0000012,
+            "fittedSlopes": false
+          },
+          "faceTrianglesIndexed": 2288,
+          "faceIndexCells": 512,
+          "privateGeometryCount": 2,
+          "privateAttributeBytes": 189496,
+          "changedPositions": 966,
+          "changedNormals": 1164,
+          "minimumJacobian": 1,
+          "maximumDepthReduction": 0.005053605406760168,
+          "maximumAnatomicalXYRoundoff": 1.402650164706169e-19,
+          "maximumNormalLengthError": 4.012127319263925e-8,
+          "maximumAuthoredResidualDegrees": 13.077796190051016,
+          "interiorBoundaryNormalSamples": 150,
+          "maximumInteriorBoundaryNormalErrorDegrees": 0.0000017075472925031877,
+          "minimumBaselineClearance": 0.000993310062489039,
+          "minimumRepairedClearance": 0.000993310062489039,
+          "maximumClearanceReduction": 0.005053579807281494,
+          "clearanceSamples": 10794,
+          "perMesh": [
+            {
+              "name": "upper-lip",
+              "vertices": 1717,
+              "triangles": 3200,
+              "changedPositions": 483,
+              "changedNormals": 582,
+              "meshToHead": [
+                1,
+                1.214306433183765e-17,
+                0,
+                0,
+                1.214306433183765e-17,
+                1,
+                0,
+                0,
+                2.7755575615628914e-17,
+                0,
+                1,
+                0,
+                1.6653345369377348e-16,
+                0,
+                0,
+                1
+              ],
+              "headToMesh": [
+                1,
+                -1.214306433183765e-17,
+                0,
+                0,
+                -1.214306433183765e-17,
+                1,
+                0,
+                0,
+                -2.7755575615628914e-17,
+                3.3703774026776627e-34,
+                1,
+                0,
+                -1.6653345369377348e-16,
+                2.0222264416065976e-33,
+                0,
+                1
+              ]
+            },
+            {
+              "name": "lower-lip",
+              "vertices": 1717,
+              "triangles": 3200,
+              "changedPositions": 483,
+              "changedNormals": 582,
+              "meshToHead": [
+                1,
+                1.214306433183765e-17,
+                0,
+                0,
+                1.214306433183765e-17,
+                1,
+                0,
+                0,
+                2.7755575615628914e-17,
+                0,
+                1,
+                0,
+                1.6653345369377348e-16,
+                0,
+                0,
+                1
+              ],
+              "headToMesh": [
+                1,
+                -1.214306433183765e-17,
+                0,
+                0,
+                -1.214306433183765e-17,
+                1,
+                0,
+                0,
+                -2.7755575615628914e-17,
+                3.3703774026776627e-34,
+                1,
+                0,
+                -1.6653345369377348e-16,
+                2.0222264416065976e-33,
+                0,
+                1
+              ]
+            }
+          ],
+          "elapsedMs": 24,
+          "materialChanged": false,
+          "creaseVisibilityChanged": false,
+          "normalOperations": [
+            "Analytic inverse-transpose transport",
+            "Separately bounded authored boundary-normal residual"
+          ]
+        },
+        "cleanup": {
+          "released": true,
+          "privateGeometriesDisposed": 2,
+          "privateAttributeBytesReleased": 189496,
+          "sourceReferencesRestored": true,
+          "disposed": [
+            {
+              "mesh": "upper-lip",
+              "attributes": 5,
+              "originalBufferBindings": 0
+            },
+            {
+              "mesh": "lower-lip",
+              "attributes": 5,
+              "originalBufferBindings": 0
+            }
+          ]
+        }
+      },
+      "status": "Passed"
+    }
+  ]
+}

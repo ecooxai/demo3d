@@ -11,6 +11,7 @@ import { applyPortraitPose } from './portrait-pose.js';
 import { applyPortraitBalance } from './portrait-balance.js';
 import { applyLowerCheekTaper } from './face-refinement.js';
 import { applyLipThicknessRefinement } from './lip-refinement.js';
+import { applyMouthContinuity130 } from './lip-continuity.js';
 import { applyReferenceEarColor } from './reference-ear.js';
 import { applyNearEarYaw115 } from './near-ear.js';
 import { applyReferenceCloth117 } from './reference-cloth.js';
@@ -26,7 +27,7 @@ const hairChoice=new URLSearchParams(location.search).get('hair')||'groom';
 const fiberCandidate=hairChoice==='fibers';
 const groomCandidate=hairChoice==='groom';
 const coverageCandidate=hairChoice==='coverage';
-const state = { backend: new URLSearchParams(location.search).get('backend') === 'webgl' ? 'webgl' : 'webgpu', width: 900, height: 1200, iteration: groomCandidate?122:coverageCandidate?32:fiberCandidate?25:27, score: groomCandidate?76:fiberCandidate?61:68, renderedFrames: 0, renderMs: 0, rotating: false, view: 'front', ready: false, lighting: 'soft', antialiasing: 2, internalRender: null };
+const state = { backend: new URLSearchParams(location.search).get('backend') === 'webgl' ? 'webgl' : 'webgpu', width: 900, height: 1200, iteration: groomCandidate?133:coverageCandidate?32:fiberCandidate?25:27, score: groomCandidate?77:fiberCandidate?61:68, renderedFrames: 0, renderMs: 0, rotating: false, view: 'front', ready: false, lighting: 'soft', antialiasing: 2, internalRender: null };
 let portraitOutput=createPortraitOutput();
 const scene = new THREE.Scene();
 scene.background = new THREE.Color('#cbe3f3');
@@ -38,7 +39,7 @@ headPivot.position.y = 2.95;
 headPivot.rotation.z = -0.17;
 headPivot.rotation.y = 0.16;
 const anatomicalHead=createHead();
-const anatomicalHair=groomCandidate?createGroomHair({headShiftX:.26,shoulderContact:.35,guidePlacement:.5}):fiberCandidate?createFiberHair():createHair({coverage:coverageCandidate});
+const anatomicalHair=groomCandidate?createGroomHair({headShiftX:.26,shoulderContact:.35,guidePlacement:.5,diagonalFringe133:1}):fiberCandidate?createFiberHair():createHair({coverage:coverageCandidate});
 const skinReady=applyReferenceSkin(anatomicalHead).then(atlas=>{state.textureBakeMs=atlas.userData.bakeMs;return atlas;});
 headPivot.add(anatomicalHead, anatomicalHair);
 const bodyPose=new THREE.Group();bodyPose.name='Relaxed shoulder counterpose';
@@ -217,6 +218,11 @@ async function initialize(backend=state.backend) {
       state.proportions=applyPortraitProportions(anatomicalHead,anatomicalNeck);
       state.cheek=applyLowerCheekTaper(anatomicalHead,{strength:.025});
       state.lipRefinement=applyLipThicknessRefinement(anatomicalHead,{strength:.06});
+      // The registered mouth already contains its irregular dark closure.
+      // This separate tube added an unrelated straight highlight across it.
+      const mouthCrease130=anatomicalHead.getObjectByName('closed-mouth-crease');
+      if(!mouthCrease130?.isMesh)throw new Error('Missing original mouth-crease geometry.');
+      mouthCrease130.visible=false;state.mouthCrease130={hidden:true};
       state.pose=applyPortraitPose(headPivot,anatomicalNeck,{shiftX:.26});
       if(groomCandidate)state.referenceCrown=await applyReferenceCrownMicrocontrast100(anatomicalHair,{strength:1});
       detailTarget.x=.02+state.pose.shiftX;
@@ -226,6 +232,7 @@ async function initialize(backend=state.backend) {
       state.balance=applyPortraitBalance(model,{shiftX:-.24});
       detailTarget.x=.02+state.pose.shiftX+state.balance.shiftX;
       if(!skinIlluminationApplied){state.skinIllumination=compensateReferenceSkin(anatomicalHead,scene,{strength:.35});skinIlluminationApplied=true;}
+      state.mouthContinuity130=applyMouthContinuity130(anatomicalHead,{strength:1});
     })();
     await scenePreparationPromise;
     if(backend==='webgpu') {
@@ -247,7 +254,7 @@ async function initialize(backend=state.backend) {
       if(!next.backend?.isWebGPUBackend){next.dispose();throw new Error('The renderer attempted a compatibility backend. WebGPU was requested, so rendering has stopped. Choose WebGL explicitly to continue.');}
     }else next=new THREE.WebGLRenderer({antialias:true,alpha:false,powerPreference:'high-performance',preserveDrawingBuffer:true});
     renderer=next;renderer.setPixelRatio(1);renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.VSMShadowMap;
-    renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.0;
+    renderer.toneMapping=THREE.NeutralToneMapping;renderer.toneMappingExposure=1.4;
     renderer.outputColorSpace=THREE.SRGBColorSpace;
     renderer.domElement.setAttribute('aria-label','Interactive three-dimensional portrait. Drag to orbit, scroll or pinch to zoom.');
     renderer.domElement.setAttribute('role','img');renderer.domElement.tabIndex=0;

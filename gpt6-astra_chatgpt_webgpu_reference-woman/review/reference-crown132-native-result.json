@@ -1,0 +1,1378 @@
+[
+  {
+    "iteration": 132,
+    "strength": 0,
+    "nativeWebGPU": true,
+    "result": {
+      "version": "registered-source-crown-replacement-132-v1",
+      "strength": 0,
+      "status": "baseline",
+      "changed": false
+    },
+    "display": {
+      "toneMapping": 7,
+      "exposure": 1.4
+    },
+    "mouthContinuity": 1,
+    "hairTriangles": 1114888,
+    "geometryMiB": 52.49,
+    "resolution": [
+      900,
+      1200
+    ],
+    "antialiasing": 2,
+    "internal": {
+      "scale": 2,
+      "width": 1800,
+      "height": 2400
+    },
+    "heapMiB": 342.58935832977295,
+    "protection": {
+      "meshes": [
+        {
+          "name": "Continuous parted crown with longitudinal fiber flow",
+          "attributes": {
+            "position": "c359e514f7683d2cd0b0829caa22aa971be9ad52dcd7e5265da501865b0c7e8e",
+            "color": "335a664131f9609758025fcf5eaf07efe9123875409edc623f10e58445a06a48",
+            "uv": "424855afac14ff99a208c8f75dfcc0eac8ef9c35e62b666e75e735bebbbb70ff",
+            "normal": "7e081dd6c15f03286558de3dac8f0ed303b5fbe2731d64b8db5078a52a9b1ca2",
+            "uv1": "b0cb5698910a677cb3a21f64f3efaad1d8f6092720ab14822ee72d811b578007"
+          },
+          "index": "85ff4f43d8bcded8caf36be79dc9e88178fa40faa856f1b4937bcae564a33ee2",
+          "physical": {
+            "roughness": 0.52,
+            "metalness": 0,
+            "anisotropy": 0.65,
+            "anisotropyRotation": 1.5707963267948966,
+            "specularIntensity": 0.38,
+            "envMapIntensity": 0.42,
+            "alphaTest": 0.1,
+            "alphaToCoverage": true,
+            "side": 2,
+            "transparent": false,
+            "opacity": 1,
+            "depthWrite": true
+          }
+        },
+        {
+          "name": "Overlapping layered S-wave hair around front back and shoulders",
+          "attributes": {
+            "position": "a10c10342f33ee50f02982045a3ee8ab9d4943bdc7631bea908dc050842302e8",
+            "color": "342e6b5371300fb92f543cfac50bc0b51711e2e07dc673540067c47bfa13e5f2",
+            "uv": "c3e9e6b006346a7e33a0e7b116f3dfef87715d744d654a66d839c363262ff04c",
+            "normal": "12b0fbb95771e4a0b2faae8657efe7bc7304047a2c5de39d5c913fa91f33328d"
+          },
+          "index": "bf51edda3be5a353c8a06526906c0bab72021ce54d0b7f0059a2c54a5fee3d8f",
+          "physical": {
+            "roughness": 0.52,
+            "metalness": 0,
+            "anisotropy": 0.65,
+            "anisotropyRotation": 1.5707963267948966,
+            "specularIntensity": 0.38,
+            "envMapIntensity": 0.42,
+            "alphaTest": 0.1,
+            "alphaToCoverage": true,
+            "side": 2,
+            "transparent": false,
+            "opacity": 1,
+            "depthWrite": true
+          }
+        },
+        {
+          "name": "Independent fine crown lengths and silhouette strands",
+          "attributes": {
+            "position": "8530928670a2e8058f917a42e95d576b88fe96779d11697375905616ae75fd72",
+            "color": "88ab6289fd76f0885dce724287c1a73a81ea94f2de5fcfbd2f6bb4c21935c9fd",
+            "uv": "a34908b057740764a1a5b7cb7812e0af5a48af2beae16968d04a0e6b8600ab07",
+            "normal": "7e9195c29ed60e56e8079624639d21b4920f74a50b8743af12d9fc1fc1137dc6"
+          },
+          "index": "a254d7ef6f9e1d548b32e558ad12c7843099f65b5826f864b7bf96f874da3c13",
+          "physical": {
+            "roughness": 0.38,
+            "metalness": 0,
+            "anisotropy": 0.8,
+            "anisotropyRotation": 1.5707963267948966,
+            "specularIntensity": 0.75,
+            "envMapIntensity": 0.65,
+            "alphaTest": 0.05,
+            "alphaToCoverage": true,
+            "side": 2,
+            "transparent": false,
+            "opacity": 1,
+            "depthWrite": true
+          }
+        },
+        {
+          "name": "Dense fine bowed brown fringe strands",
+          "attributes": {
+            "position": "a88f0ae62345758def085beb24c77109b8216f0ecf9496788bae0620dd72a9d3",
+            "color": "37f2fdc0f5e773b4eff4ca7432d6292823949345a438c5ea8fcb1eaeca96184d",
+            "uv": "7d7c4f22651bb5bc0afb052c2886ad06b9f7741e833c457e80200eebb195cb9f",
+            "normal": "11fed82ee8b4e4d6aa0ff90ba8e866c6645398b404687c0b5cd2a68a07ad23af"
+          },
+          "index": "ba1a6bd4f3e3397ee89ad5d414400596c4096983c8eed73e7335217d6350c63c",
+          "physical": {
+            "roughness": 0.9,
+            "metalness": 0,
+            "anisotropy": 0,
+            "anisotropyRotation": 1.5707963267948966,
+            "specularIntensity": 0,
+            "envMapIntensity": 0,
+            "alphaTest": 0,
+            "alphaToCoverage": false,
+            "side": 2,
+            "transparent": false,
+            "opacity": 1,
+            "depthWrite": true
+          }
+        },
+        {
+          "name": "Sparse short temple edge and hairline wisps",
+          "attributes": {
+            "position": "66c3510b4b9d5900ba59cdff4bd7cc1e4464904713855e9f2ea60b8a867f3dfe",
+            "color": "dc98e8c3db6562df4b1e743d5554618a1a5395a3ed9cdfdd5d585a3b261f28e6",
+            "uv": "17d82ae7bbb09b852291eddd8daac2c48e29ce106fa476446122f889e75adf29",
+            "normal": "5d2d689f7ea9b58ac1d56d036fb5471ffff0aaed2616b1da718765b91c270336"
+          },
+          "index": "7d5ba6d9045d67610302db2a62b54d61e7cd0575cec76b38c1bbc8a159713e93",
+          "physical": {
+            "roughness": 0.9,
+            "metalness": 0,
+            "anisotropy": 0,
+            "anisotropyRotation": 1.5707963267948966,
+            "specularIntensity": 0,
+            "envMapIntensity": 0,
+            "alphaTest": 0,
+            "alphaToCoverage": false,
+            "side": 2,
+            "transparent": true,
+            "opacity": 0.65,
+            "depthWrite": false
+          }
+        }
+      ],
+      "coverage": "9af3236a480e0252fa2fb85bdbc178cfd0c96a03e19b64e0c5624db817056471",
+      "normalMap": "da01003d6710455e35864f2d4d26923af0bfc89edfb1dc3651943f3ffb579aa6",
+      "foundation": "223c60eb37c0976951cfe751e12533c65840e65ec60ccb5c317495b9e90b4d5f",
+      "channels": [
+        1,
+        0,
+        0
+      ],
+      "atlasDimensions": [
+        2048,
+        2048
+      ],
+      "metadata100": "reference-crown-strand-space-100-v1",
+      "exportAlphaMerge": true
+    },
+    "relight": {
+      "key": [
+        5.5,
+        5,
+        3.4
+      ],
+      "fill": [
+        -4,
+        3,
+        6
+      ],
+      "fillIntensity": 0.55
+    },
+    "captures": [
+      "output/qa/registered-crown132-0-front.png",
+      "output/qa/registered-crown132-0-detail.png",
+      "output/qa/registered-crown132-0-left.png",
+      "output/qa/registered-crown132-0-right.png",
+      "output/qa/registered-crown132-0-back.png",
+      "output/qa/registered-crown132-0-relight-detail.png"
+    ],
+    "errors": []
+  },
+  {
+    "iteration": 132,
+    "strength": 1,
+    "nativeWebGPU": true,
+    "result": {
+      "version": "registered-source-crown-replacement-132-v1",
+      "strength": 1,
+      "status": "applied",
+      "changed": true,
+      "source": "Only reference/image1-color.jpg derived from uploaded image1",
+      "mapping": {
+        "testedSurfaceVertices": 4130,
+        "nonpositive": 0,
+        "normalizedJacobian": [
+          0.28023792523183144,
+          1.7652087038913125
+        ],
+        "rawJacobian": [
+          -158737.85790137225,
+          -25200.628036765465
+        ],
+        "affineDeterminant": -89925.8300457293,
+        "maxAnchorErrorPixels": 0.03856008176056399,
+        "anchors": [
+          {
+            "name": "part-back",
+            "side": -1,
+            "u": 0.4,
+            "v": 0,
+            "point": [
+              0.20676892399787902,
+              1.596827793121338,
+              -0.14916802942752835
+            ],
+            "planar": [
+              0.4441246514515952,
+              1.538827496002186
+            ],
+            "source": [
+              577,
+              40
+            ]
+          },
+          {
+            "name": "part-high",
+            "side": -1,
+            "u": 0.5,
+            "v": 0,
+            "point": [
+              0.21342766284942627,
+              1.5966167449951172,
+              -0.019866978749632835
+            ],
+            "planar": [
+              0.47116834081163284,
+              1.5374929491031692
+            ],
+            "source": [
+              583,
+              51
+            ]
+          },
+          {
+            "name": "part-mid",
+            "side": -1,
+            "u": 0.62,
+            "v": 0,
+            "point": [
+              0.2125815135240555,
+              1.5584111642837524,
+              0.13529428243637084
+            ],
+            "planar": [
+              0.4886839038678667,
+              1.4999812642736423
+            ],
+            "source": [
+              579,
+              79
+            ]
+          },
+          {
+            "name": "part-turn",
+            "side": -1,
+            "u": 0.72,
+            "v": 0,
+            "point": [
+              0.2008286625146866,
+              1.4933759593963623,
+              0.2645953238010406
+            ],
+            "planar": [
+              0.48698616187270194,
+              1.4378719319657878
+            ],
+            "source": [
+              575,
+              111
+            ]
+          },
+          {
+            "name": "part-front",
+            "side": -1,
+            "u": 0.82,
+            "v": 0,
+            "point": [
+              0.20925576627254486,
+              1.3818088817596437,
+              0.39389639496803275
+            ],
+            "planar": [
+              0.4971516233972821,
+              1.3264874025488358
+            ],
+            "source": [
+              573,
+              149
+            ]
+          },
+          {
+            "name": "part-low",
+            "side": -1,
+            "u": 0.9,
+            "v": 0,
+            "point": [
+              0.18875444531440735,
+              1.2643200874328613,
+              0.49733722209930425
+            ],
+            "planar": [
+              0.4740607771148763,
+              1.2141606982164628
+            ],
+            "source": [
+              565,
+              188
+            ]
+          },
+          {
+            "name": "part-tip",
+            "side": -1,
+            "u": 0.94,
+            "v": 0,
+            "point": [
+              0.1816618949174881,
+              1.187486186027527,
+              0.5490576410293578
+            ],
+            "planar": [
+              0.4625668489668031,
+              1.139634309746161
+            ],
+            "source": [
+              554,
+              211
+            ]
+          },
+          {
+            "name": "left-outer-high",
+            "side": -1,
+            "u": 0.5,
+            "v": 0.3,
+            "point": [
+              -0.3871498882770538,
+              1.5262645959854126,
+              -0.009409912303090096
+            ],
+            "planar": [
+              -0.12327563292635177,
+              1.569762063616335
+            ],
+            "source": [
+              425,
+              49
+            ]
+          },
+          {
+            "name": "left-outer-mid",
+            "side": -1,
+            "u": 0.5,
+            "v": 0.55,
+            "point": [
+              -0.7819931864738465,
+              1.0797820806503295,
+              -0.02512767612934113
+            ],
+            "planar": [
+              -0.5845329251128768,
+              1.1965162145129065
+            ],
+            "source": [
+              282,
+              173
+            ]
+          },
+          {
+            "name": "left-outer-low",
+            "side": -1,
+            "u": 0.5,
+            "v": 0.8,
+            "point": [
+              -0.9413147926330566,
+              0.4171202719211577,
+              -0.04940479025244714
+            ],
+            "planar": [
+              -0.8540987477753808,
+              0.5703612338038395
+            ],
+            "source": [
+              218,
+              341
+            ]
+          },
+          {
+            "name": "left-wide-high",
+            "side": -1,
+            "u": 0.62,
+            "v": 0.3,
+            "point": [
+              -0.26045851898193356,
+              1.4625481739044188,
+              0.3060167713165283
+            ],
+            "planar": [
+              0.03960578998677946,
+              1.4855301851474645
+            ],
+            "source": [
+              468,
+              82
+            ]
+          },
+          {
+            "name": "left-wide-mid",
+            "side": -1,
+            "u": 0.62,
+            "v": 0.55,
+            "point": [
+              -0.6082140254974366,
+              1.1111435737609863,
+              0.3636776022911072
+            ],
+            "planar": [
+              -0.34826466558074454,
+              1.198025257717428
+            ],
+            "source": [
+              352,
+              167
+            ]
+          },
+          {
+            "name": "left-wide-low",
+            "side": -1,
+            "u": 0.62,
+            "v": 0.8,
+            "point": [
+              -0.8147326173782349,
+              0.5970863142013548,
+              0.3251626543998718
+            ],
+            "planar": [
+              -0.6412011763857327,
+              0.7263175538765828
+            ],
+            "source": [
+              268,
+              306
+            ]
+          },
+          {
+            "name": "left-deep-high",
+            "side": -1,
+            "u": 0.72,
+            "v": 0.3,
+            "point": [
+              -0.1268644419908524,
+              1.38314181804657,
+              0.44188483309745785
+            ],
+            "planar": [
+              0.17797600826128068,
+              1.3846667306513807
+            ],
+            "source": [
+              511,
+              114
+            ]
+          },
+          {
+            "name": "left-deep-mid",
+            "side": -1,
+            "u": 0.72,
+            "v": 0.55,
+            "point": [
+              -0.3913493711948396,
+              1.141681490898132,
+              0.521098512172699
+            ],
+            "planar": [
+              -0.10707568344638622,
+              1.1914332920164301
+            ],
+            "source": [
+              420,
+              174
+            ]
+          },
+          {
+            "name": "left-deep-low",
+            "side": -1,
+            "u": 0.72,
+            "v": 0.8,
+            "point": [
+              -0.5978285384178162,
+              0.8009590959548948,
+              0.5206206293106078
+            ],
+            "planar": [
+              -0.36496320011798233,
+              0.8905551203596125
+            ],
+            "source": [
+              338,
+              265
+            ]
+          },
+          {
+            "name": "left-deep-end",
+            "side": -1,
+            "u": 0.72,
+            "v": 0.96,
+            "point": [
+              -0.690559809589386,
+              0.5516891673088073,
+              0.474813681602478
+            ],
+            "planar": [
+              -0.5041216729033635,
+              0.6605669701261703
+            ],
+            "source": [
+              281,
+              319
+            ]
+          },
+          {
+            "name": "left-inner-high",
+            "side": -1,
+            "u": 0.82,
+            "v": 0.3,
+            "point": [
+              -0.0001501757502556417,
+              1.3034839286804198,
+              0.5197725706100463
+            ],
+            "planar": [
+              0.3003728642438537,
+              1.2847193111050512
+            ],
+            "source": [
+              535,
+              145
+            ]
+          },
+          {
+            "name": "left-inner-mid",
+            "side": -1,
+            "u": 0.82,
+            "v": 0.55,
+            "point": [
+              -0.18000943505764025,
+              1.1703859815597533,
+              0.5867064533233642
+            ],
+            "planar": [
+              0.113804070026345,
+              1.1839690139070613
+            ],
+            "source": [
+              478,
+              186
+            ]
+          },
+          {
+            "name": "left-inner-low",
+            "side": -1,
+            "u": 0.82,
+            "v": 0.8,
+            "point": [
+              -0.3423963153362276,
+              0.9879862570762632,
+              0.6076569008827208
+            ],
+            "planar": [
+              -0.07132461810288518,
+              1.0316716178308252
+            ],
+            "source": [
+              420,
+              234
+            ]
+          },
+          {
+            "name": "left-front-high",
+            "side": -1,
+            "u": 0.9,
+            "v": 0.3,
+            "point": [
+              0.0630888828635216,
+              1.2316699647903442,
+              0.566082820892334
+            ],
+            "planar": [
+              0.35728782121206293,
+              1.2032416297545352
+            ],
+            "source": [
+              542,
+              181
+            ]
+          },
+          {
+            "name": "left-front-mid",
+            "side": -1,
+            "u": 0.9,
+            "v": 0.55,
+            "point": [
+              -0.045780718773603415,
+              1.177598876953125,
+              0.6034163641929627
+            ],
+            "planar": [
+              0.24827499828120447,
+              1.1683688041988998
+            ],
+            "source": [
+              506,
+              201
+            ]
+          },
+          {
+            "name": "left-front-low",
+            "side": -1,
+            "u": 0.9,
+            "v": 0.8,
+            "point": [
+              -0.15316557228565214,
+              1.0997228670120238,
+              0.6158316922187805
+            ],
+            "planar": [
+              0.1327609720713694,
+              1.1097830168646368
+            ],
+            "source": [
+              470,
+              226
+            ]
+          },
+          {
+            "name": "right-outer-high",
+            "side": 1,
+            "u": 0.5,
+            "v": 0.3,
+            "point": [
+              0.6885475516319275,
+              1.2484545230865478,
+              -0.023947269096970557
+            ],
+            "planar": [
+              0.8746575568082766,
+              1.1139676679040238
+            ],
+            "source": [
+              727,
+              182
+            ]
+          },
+          {
+            "name": "right-outer-mid",
+            "side": 1,
+            "u": 0.5,
+            "v": 0.55,
+            "point": [
+              0.9248840570449829,
+              0.7122506022453307,
+              -0.0509077399969101
+            ],
+            "planar": [
+              1.0107592319052252,
+              0.5455092864096748
+            ],
+            "source": [
+              805,
+              346
+            ]
+          },
+          {
+            "name": "right-wide-high",
+            "side": 1,
+            "u": 0.62,
+            "v": 0.3,
+            "point": [
+              0.5840277347564697,
+              1.2540134592056273,
+              0.2523675737380981
+            ],
+            "planar": [
+              0.8179106217792603,
+              1.1371293788062542
+            ],
+            "source": [
+              697,
+              176
+            ]
+          },
+          {
+            "name": "right-wide-mid",
+            "side": 1,
+            "u": 0.62,
+            "v": 0.55,
+            "point": [
+              0.7969932551383972,
+              0.8281842136383055,
+              0.29557784128189085
+            ],
+            "planar": [
+              0.9608868303067994,
+              0.6814085540620215
+            ],
+            "source": [
+              773,
+              313
+            ]
+          },
+          {
+            "name": "right-wide-low",
+            "side": 1,
+            "u": 0.62,
+            "v": 0.8,
+            "point": [
+              0.8786233296394349,
+              0.32467063665390006,
+              0.27803180813789363
+            ],
+            "planar": [
+              0.9534196196927986,
+              0.1713428748954476
+            ],
+            "source": [
+              816,
+              462
+            ]
+          },
+          {
+            "name": "right-deep-high",
+            "side": 1,
+            "u": 0.72,
+            "v": 0.3,
+            "point": [
+              0.4428067629337311,
+              1.2483290729522705,
+              0.40808284711837767
+            ],
+            "planar": [
+              0.7043620205652664,
+              1.1554190300562104
+            ],
+            "source": [
+              666,
+              166
+            ]
+          },
+          {
+            "name": "right-deep-mid",
+            "side": 1,
+            "u": 0.72,
+            "v": 0.55,
+            "point": [
+              0.6065484418869019,
+              0.941600477695465,
+              0.47897827148437494
+            ],
+            "planar": [
+              0.8237467303793475,
+              0.8254097971100636
+            ],
+            "source": [
+              730,
+              269
+            ]
+          },
+          {
+            "name": "right-deep-low",
+            "side": 1,
+            "u": 0.72,
+            "v": 0.8,
+            "point": [
+              0.7059702711105348,
+              0.5769748239517211,
+              0.4930772986412048
+            ],
+            "planar": [
+              0.8618297229278901,
+              0.44921988853919753
+            ],
+            "source": [
+              777,
+              394
+            ]
+          },
+          {
+            "name": "right-inner-high",
+            "side": 1,
+            "u": 0.82,
+            "v": 0.3,
+            "point": [
+              0.3246169919967652,
+              1.2125728216171265,
+              0.5027462601661682
+            ],
+            "planar": [
+              0.5984733708156995,
+              1.1401738365013092
+            ],
+            "source": [
+              627,
+              170
+            ]
+          },
+          {
+            "name": "right-inner-mid",
+            "side": 1,
+            "u": 0.82,
+            "v": 0.55,
+            "point": [
+              0.4039546241760255,
+              1.0292801647186278,
+              0.5725241546630859
+            ],
+            "planar": [
+              0.6561716704099048,
+              0.9461008589942675
+            ],
+            "source": [
+              671,
+              233
+            ]
+          },
+          {
+            "name": "right-inner-low",
+            "side": 1,
+            "u": 0.82,
+            "v": 0.8,
+            "point": [
+              0.4631253981590272,
+              0.8243826885223386,
+              0.6121806631088257
+            ],
+            "planar": [
+              0.6858403411393423,
+              0.7341463771384341
+            ],
+            "source": [
+              709,
+              312
+            ]
+          },
+          {
+            "name": "right-front-high",
+            "side": 1,
+            "u": 0.9,
+            "v": 0.3,
+            "point": [
+              0.2202663105726242,
+              1.1826646375656127,
+              0.5586145329475403
+            ],
+            "planar": [
+              0.5008460825786062,
+              1.1283510793042875
+            ],
+            "source": [
+              584,
+              189
+            ]
+          },
+          {
+            "name": "right-front-mid",
+            "side": 1,
+            "u": 0.9,
+            "v": 0.55,
+            "point": [
+              0.2477444207668304,
+              1.1003281354904175,
+              0.5993237400054932
+            ],
+            "planar": [
+              0.5203159360827907,
+              1.0425526658677802
+            ],
+            "source": [
+              611,
+              222
+            ]
+          },
+          {
+            "name": "right-front-low",
+            "side": 1,
+            "u": 0.9,
+            "v": 0.8,
+            "point": [
+              0.2630433148145675,
+              1.0040892457962036,
+              0.6295997810363769
+            ],
+            "planar": [
+              0.5239512689255319,
+              0.9451127793677501
+            ],
+            "source": [
+              632,
+              254
+            ]
+          }
+        ],
+        "method": "Thin-plate map on actual posed crown XY; Jacobian sampled at eligible crown vertices"
+      },
+      "sourceField": {
+        "nativeSourceGrid": [
+          1024,
+          544
+        ],
+        "validSourcePixels": 78206,
+        "weightedSourcePixels": 72084.92608792914,
+        "sourcePolygons": [
+          [
+            [
+              552,
+              35
+            ],
+            [
+              520,
+              19
+            ],
+            [
+              465,
+              23
+            ],
+            [
+              409,
+              46
+            ],
+            [
+              349,
+              85
+            ],
+            [
+              294,
+              138
+            ],
+            [
+              254,
+              201
+            ],
+            [
+              229,
+              263
+            ],
+            [
+              213,
+              325
+            ],
+            [
+              211,
+              362
+            ],
+            [
+              229,
+              371
+            ],
+            [
+              267,
+              342
+            ],
+            [
+              322,
+              297
+            ],
+            [
+              377,
+              252
+            ],
+            [
+              431,
+              211
+            ],
+            [
+              484,
+              189
+            ],
+            [
+              533,
+              177
+            ],
+            [
+              558,
+              153
+            ],
+            [
+              569,
+              122
+            ],
+            [
+              574,
+              87
+            ],
+            [
+              577,
+              62
+            ]
+          ],
+          [
+            [
+              590,
+              60
+            ],
+            [
+              646,
+              68
+            ],
+            [
+              691,
+              101
+            ],
+            [
+              727,
+              150
+            ],
+            [
+              759,
+              222
+            ],
+            [
+              785,
+              307
+            ],
+            [
+              799,
+              393
+            ],
+            [
+              807,
+              475
+            ],
+            [
+              805,
+              520
+            ],
+            [
+              795,
+              512
+            ],
+            [
+              773,
+              446
+            ],
+            [
+              747,
+              375
+            ],
+            [
+              714,
+              307
+            ],
+            [
+              676,
+              245
+            ],
+            [
+              637,
+              195
+            ],
+            [
+              601,
+              160
+            ],
+            [
+              586,
+              125
+            ],
+            [
+              583,
+              95
+            ]
+          ]
+        ],
+        "sourcePolygonFadePixels": [
+          6,
+          12
+        ],
+        "minimumPolygonInsetPixels": 6.001942510977516,
+        "numeratorFilter": "None: original source RGB at every photo pixel",
+        "illumination": "Hair-mask-normalized113x113 source-pixel RGB mean; only the denominator is broad",
+        "illuminationRadiusPixels": 56,
+        "rawRelativeRange": [
+          0,
+          14.383794848651474
+        ],
+        "maximumRelativeSample": {
+          "x": 234,
+          "y": 268,
+          "channel": 1,
+          "sourceLinear": 0.5520114302635193,
+          "illuminationLinear": 0.03837731531017158,
+          "relative": 14.383794848651474
+        },
+        "gainBounds": [
+          0.42,
+          1.6
+        ],
+        "actualGainMin": [
+          0.4557515694052269,
+          0.4557515694052269,
+          0.4557515694052269
+        ],
+        "actualGainMax": [
+          1.6,
+          1.6,
+          1.6
+        ],
+        "weightedLinearMean": [
+          0.9999999995943818,
+          0.9999999931991281,
+          0.9999999794212064
+        ],
+        "globalCalibration": [
+          1.1432160087515713,
+          1.2171762647917017,
+          1.2553978461950583
+        ],
+        "calibrationIterations": 4,
+        "logGainRms": 0.4491257408702229,
+        "nearBoundFraction": 0.10398605392595624,
+        "sourceSignalBytes": 8912896,
+        "temporaryIntegralBytes": 17876000,
+        "temporaryIndexCount": 78206,
+        "sourcePreparationMs": 52
+      },
+      "mappedAtlasTexels": 352519,
+      "replacedInteriorTexels": 210608,
+      "changedAtlasRGBBytes": 972237,
+      "changedGutterRGBBytes": 0,
+      "sourceGainRange": [
+        0.4557515680789947,
+        1.6000000238418586
+      ],
+      "maximumLinearAtlasRGB": 0.9514519700955633,
+      "charts": [
+        {
+          "side": -1,
+          "mappedAtlasTexels": 209170,
+          "weightedTexels": 168769.72827130446,
+          "logGainRms": 0.4414471834104255
+        },
+        {
+          "side": 1,
+          "mappedAtlasTexels": 143349,
+          "weightedTexels": 106342.47358231038,
+          "logGainRms": 0.33892786900872957
+        }
+      ],
+      "sourcePixelsPerAtlasTexel": {
+        "minimum": 0.2424847951182614,
+        "maximum": 1.8083443365619485,
+        "mean": 0.8136819429318516,
+        "footprintFilteredTexels": 29908
+      },
+      "textureReplacement": "Linear blend from accepted100 to original proceduralRGB*.60*registered relativeRGB; no multiplication by100 tiled contrast",
+      "proceduralBaseRecovery": "Exact original512x1024 RGB texels from the unchanged100 foundation chart; UV0 bilinear repeatU/clampV sampling",
+      "sampling": "Actual crown B-C triangles; direct full-resolution registered source RGB; bilinear sampling plus4 subtexel taps only where source footprint exceeds1.15px",
+      "atlasDimensions": [
+        2048,
+        2048
+      ],
+      "atlasObjectReused": true,
+      "stagingAtlasBytes": 16777216,
+      "retainedExtraTextureBytes": 0,
+      "retainedExtraAttributeBytes": 0,
+      "geometryChanged": false,
+      "rootRGBChanged": false,
+      "vertexRGBChanged": false,
+      "UV0Changed": false,
+      "UV1Changed": false,
+      "alphaChanged": false,
+      "normalMapsChanged": false,
+      "physicalSettingsChanged": false,
+      "additionalDrawCalls": 0,
+      "perFrameCPUWork": false,
+      "bakeMs": 444.8999999985099,
+      "elapsedMs": 507.8999999985099,
+      "rootCoverageLimitation": "Overlying root/fine meshes keep their original RGB and shading. This field is per fragment only on the actual crown, not a shared vertex-color approximation.",
+      "export": "Existing100 metadata, UV1 layout and104 alpha-merge path are unchanged;132 adds no channel or export representation."
+    },
+    "display": {
+      "toneMapping": 7,
+      "exposure": 1.4
+    },
+    "mouthContinuity": 1,
+    "hairTriangles": 1114888,
+    "geometryMiB": 52.49,
+    "resolution": [
+      900,
+      1200
+    ],
+    "antialiasing": 2,
+    "internal": {
+      "scale": 2,
+      "width": 1800,
+      "height": 2400
+    },
+    "heapMiB": 368.81438732147217,
+    "protection": {
+      "meshes": [
+        {
+          "name": "Continuous parted crown with longitudinal fiber flow",
+          "attributes": {
+            "position": "c359e514f7683d2cd0b0829caa22aa971be9ad52dcd7e5265da501865b0c7e8e",
+            "color": "335a664131f9609758025fcf5eaf07efe9123875409edc623f10e58445a06a48",
+            "uv": "424855afac14ff99a208c8f75dfcc0eac8ef9c35e62b666e75e735bebbbb70ff",
+            "normal": "7e081dd6c15f03286558de3dac8f0ed303b5fbe2731d64b8db5078a52a9b1ca2",
+            "uv1": "b0cb5698910a677cb3a21f64f3efaad1d8f6092720ab14822ee72d811b578007"
+          },
+          "index": "85ff4f43d8bcded8caf36be79dc9e88178fa40faa856f1b4937bcae564a33ee2",
+          "physical": {
+            "roughness": 0.52,
+            "metalness": 0,
+            "anisotropy": 0.65,
+            "anisotropyRotation": 1.5707963267948966,
+            "specularIntensity": 0.38,
+            "envMapIntensity": 0.42,
+            "alphaTest": 0.1,
+            "alphaToCoverage": true,
+            "side": 2,
+            "transparent": false,
+            "opacity": 1,
+            "depthWrite": true
+          }
+        },
+        {
+          "name": "Overlapping layered S-wave hair around front back and shoulders",
+          "attributes": {
+            "position": "a10c10342f33ee50f02982045a3ee8ab9d4943bdc7631bea908dc050842302e8",
+            "color": "342e6b5371300fb92f543cfac50bc0b51711e2e07dc673540067c47bfa13e5f2",
+            "uv": "c3e9e6b006346a7e33a0e7b116f3dfef87715d744d654a66d839c363262ff04c",
+            "normal": "12b0fbb95771e4a0b2faae8657efe7bc7304047a2c5de39d5c913fa91f33328d"
+          },
+          "index": "bf51edda3be5a353c8a06526906c0bab72021ce54d0b7f0059a2c54a5fee3d8f",
+          "physical": {
+            "roughness": 0.52,
+            "metalness": 0,
+            "anisotropy": 0.65,
+            "anisotropyRotation": 1.5707963267948966,
+            "specularIntensity": 0.38,
+            "envMapIntensity": 0.42,
+            "alphaTest": 0.1,
+            "alphaToCoverage": true,
+            "side": 2,
+            "transparent": false,
+            "opacity": 1,
+            "depthWrite": true
+          }
+        },
+        {
+          "name": "Independent fine crown lengths and silhouette strands",
+          "attributes": {
+            "position": "8530928670a2e8058f917a42e95d576b88fe96779d11697375905616ae75fd72",
+            "color": "88ab6289fd76f0885dce724287c1a73a81ea94f2de5fcfbd2f6bb4c21935c9fd",
+            "uv": "a34908b057740764a1a5b7cb7812e0af5a48af2beae16968d04a0e6b8600ab07",
+            "normal": "7e9195c29ed60e56e8079624639d21b4920f74a50b8743af12d9fc1fc1137dc6"
+          },
+          "index": "a254d7ef6f9e1d548b32e558ad12c7843099f65b5826f864b7bf96f874da3c13",
+          "physical": {
+            "roughness": 0.38,
+            "metalness": 0,
+            "anisotropy": 0.8,
+            "anisotropyRotation": 1.5707963267948966,
+            "specularIntensity": 0.75,
+            "envMapIntensity": 0.65,
+            "alphaTest": 0.05,
+            "alphaToCoverage": true,
+            "side": 2,
+            "transparent": false,
+            "opacity": 1,
+            "depthWrite": true
+          }
+        },
+        {
+          "name": "Dense fine bowed brown fringe strands",
+          "attributes": {
+            "position": "a88f0ae62345758def085beb24c77109b8216f0ecf9496788bae0620dd72a9d3",
+            "color": "37f2fdc0f5e773b4eff4ca7432d6292823949345a438c5ea8fcb1eaeca96184d",
+            "uv": "7d7c4f22651bb5bc0afb052c2886ad06b9f7741e833c457e80200eebb195cb9f",
+            "normal": "11fed82ee8b4e4d6aa0ff90ba8e866c6645398b404687c0b5cd2a68a07ad23af"
+          },
+          "index": "ba1a6bd4f3e3397ee89ad5d414400596c4096983c8eed73e7335217d6350c63c",
+          "physical": {
+            "roughness": 0.9,
+            "metalness": 0,
+            "anisotropy": 0,
+            "anisotropyRotation": 1.5707963267948966,
+            "specularIntensity": 0,
+            "envMapIntensity": 0,
+            "alphaTest": 0,
+            "alphaToCoverage": false,
+            "side": 2,
+            "transparent": false,
+            "opacity": 1,
+            "depthWrite": true
+          }
+        },
+        {
+          "name": "Sparse short temple edge and hairline wisps",
+          "attributes": {
+            "position": "66c3510b4b9d5900ba59cdff4bd7cc1e4464904713855e9f2ea60b8a867f3dfe",
+            "color": "dc98e8c3db6562df4b1e743d5554618a1a5395a3ed9cdfdd5d585a3b261f28e6",
+            "uv": "17d82ae7bbb09b852291eddd8daac2c48e29ce106fa476446122f889e75adf29",
+            "normal": "5d2d689f7ea9b58ac1d56d036fb5471ffff0aaed2616b1da718765b91c270336"
+          },
+          "index": "7d5ba6d9045d67610302db2a62b54d61e7cd0575cec76b38c1bbc8a159713e93",
+          "physical": {
+            "roughness": 0.9,
+            "metalness": 0,
+            "anisotropy": 0,
+            "anisotropyRotation": 1.5707963267948966,
+            "specularIntensity": 0,
+            "envMapIntensity": 0,
+            "alphaTest": 0,
+            "alphaToCoverage": false,
+            "side": 2,
+            "transparent": true,
+            "opacity": 0.65,
+            "depthWrite": false
+          }
+        }
+      ],
+      "coverage": "9af3236a480e0252fa2fb85bdbc178cfd0c96a03e19b64e0c5624db817056471",
+      "normalMap": "da01003d6710455e35864f2d4d26923af0bfc89edfb1dc3651943f3ffb579aa6",
+      "foundation": "223c60eb37c0976951cfe751e12533c65840e65ec60ccb5c317495b9e90b4d5f",
+      "channels": [
+        1,
+        0,
+        0
+      ],
+      "atlasDimensions": [
+        2048,
+        2048
+      ],
+      "metadata100": "reference-crown-strand-space-100-v1",
+      "exportAlphaMerge": true
+    },
+    "relight": {
+      "key": [
+        5.5,
+        5,
+        3.4
+      ],
+      "fill": [
+        -4,
+        3,
+        6
+      ],
+      "fillIntensity": 0.55
+    },
+    "captures": [
+      "output/qa/registered-crown132-100-front.png",
+      "output/qa/registered-crown132-100-detail.png",
+      "output/qa/registered-crown132-100-left.png",
+      "output/qa/registered-crown132-100-right.png",
+      "output/qa/registered-crown132-100-back.png",
+      "output/qa/registered-crown132-100-relight-detail.png"
+    ],
+    "errors": []
+  }
+]

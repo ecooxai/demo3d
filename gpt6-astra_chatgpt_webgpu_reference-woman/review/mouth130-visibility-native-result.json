@@ -1,0 +1,240 @@
+{
+  "candidate": 130,
+  "check": "mouth-crease-visibility-attribution",
+  "scoreUnchanged": 77,
+  "status": "Visibility and framing checks passed; visual attribution pending",
+  "resolution": [
+    900,
+    1200
+  ],
+  "antialiasing": 2,
+  "views": [
+    "front",
+    "detail",
+    "nose",
+    "nose-quarter"
+  ],
+  "captures": [
+    {
+      "file": "mouth130-tube-0-front.png",
+      "mode": 0,
+      "view": "front",
+      "creaseVisible": true,
+      "camera": [
+        0,
+        1.550000000000001,
+        13
+      ],
+      "target": [
+        0,
+        1.55,
+        0
+      ],
+      "zoom": 1,
+      "canvas": [
+        900,
+        1200
+      ],
+      "internalSize": [
+        1800,
+        2400
+      ]
+    },
+    {
+      "file": "mouth130-tube-0-detail.png",
+      "mode": 0,
+      "view": "detail",
+      "creaseVisible": true,
+      "camera": [
+        0.040000000000000036,
+        3.0300000000000007,
+        13.3
+      ],
+      "target": [
+        0.040000000000000036,
+        3.03,
+        0.3
+      ],
+      "zoom": 1,
+      "canvas": [
+        900,
+        1200
+      ],
+      "internalSize": [
+        1800,
+        2400
+      ]
+    },
+    {
+      "file": "mouth130-tube-0-nose.png",
+      "mode": 0,
+      "view": "nose",
+      "creaseVisible": true,
+      "camera": [
+        0.07793628710839154,
+        2.5121690241006105,
+        13.830745939736893
+      ],
+      "target": [
+        0.07793628710839154,
+        2.5121690241006096,
+        0.8307459397368926
+      ],
+      "zoom": 2.6,
+      "canvas": [
+        900,
+        1200
+      ],
+      "internalSize": [
+        1800,
+        2400
+      ]
+    },
+    {
+      "file": "mouth130-tube-0-nose-quarter.png",
+      "mode": 0,
+      "view": "nose-quarter",
+      "creaseVisible": true,
+      "camera": [
+        6.0779362871083915,
+        2.5121690241006105,
+        12.360745939736892
+      ],
+      "target": [
+        0.07793628710839154,
+        2.5121690241006096,
+        0.8307459397368926
+      ],
+      "zoom": 2.6,
+      "canvas": [
+        900,
+        1200
+      ],
+      "internalSize": [
+        1800,
+        2400
+      ]
+    },
+    {
+      "file": "mouth130-tube-1-front.png",
+      "mode": 1,
+      "view": "front",
+      "creaseVisible": false,
+      "camera": [
+        0,
+        1.550000000000001,
+        13
+      ],
+      "target": [
+        0,
+        1.55,
+        0
+      ],
+      "zoom": 1,
+      "canvas": [
+        900,
+        1200
+      ],
+      "internalSize": [
+        1800,
+        2400
+      ]
+    },
+    {
+      "file": "mouth130-tube-1-detail.png",
+      "mode": 1,
+      "view": "detail",
+      "creaseVisible": false,
+      "camera": [
+        0.040000000000000036,
+        3.0300000000000007,
+        13.3
+      ],
+      "target": [
+        0.040000000000000036,
+        3.03,
+        0.3
+      ],
+      "zoom": 1,
+      "canvas": [
+        900,
+        1200
+      ],
+      "internalSize": [
+        1800,
+        2400
+      ]
+    },
+    {
+      "file": "mouth130-tube-1-nose.png",
+      "mode": 1,
+      "view": "nose",
+      "creaseVisible": false,
+      "camera": [
+        0.07793628710839154,
+        2.5121690241006105,
+        13.830745939736893
+      ],
+      "target": [
+        0.07793628710839154,
+        2.5121690241006096,
+        0.8307459397368926
+      ],
+      "zoom": 2.6,
+      "canvas": [
+        900,
+        1200
+      ],
+      "internalSize": [
+        1800,
+        2400
+      ]
+    },
+    {
+      "file": "mouth130-tube-1-nose-quarter.png",
+      "mode": 1,
+      "view": "nose-quarter",
+      "creaseVisible": false,
+      "camera": [
+        6.0779362871083915,
+        2.5121690241006105,
+        12.360745939736892
+      ],
+      "target": [
+        0.07793628710839154,
+        2.5121690241006096,
+        0.8307459397368926
+      ],
+      "zoom": 2.6,
+      "canvas": [
+        900,
+        1200
+      ],
+      "internalSize": [
+        1800,
+        2400
+      ]
+    }
+  ],
+  "browserErrors": [],
+  "source": {
+    "namedCreaseCount": 1,
+    "namedFaceCount": 1,
+    "originalVisible": true,
+    "noseWorld": [
+      0.07793628710839154,
+      2.5121690241006096,
+      0.8307459397368926
+    ],
+    "backend": "webgpu",
+    "nativeWebGPU": true,
+    "mapping": 7,
+    "exposure": 1.4
+  },
+  "restoration": {
+    "initialized": true,
+    "namedCreaseCount": 1,
+    "visibilityRestored": true,
+    "visible": true
+  }
+}

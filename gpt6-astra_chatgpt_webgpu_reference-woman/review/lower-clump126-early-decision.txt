@@ -1,0 +1,73 @@
+Candidate126 — early exposed-surface gate
+
+Status: structural MASS study only. Not native-ready; dependent fine strands
+have not been changed. Original production and all materials remain untouched.
+Overall accepted score remains76/100. Candidate126 has no art score yet.
+
+Actual source-triangle rays, after accepted118.5 and86.35 contact:
+
+  Lower valley sample locations                         1,020
+  Already hidden by other locks in the accepted model     830 (81.4%)
+  Originally exposed                                     190, across45 guides
+  Still exposed after the individual-lock recess           104
+  Filled by another lock after recession                   86 (45.3% of190)
+  Median own-lock relief                              .01049
+  Median actual outer-surface relief                  .00832
+  Mean retained outer relief / own relief                .743
+
+The significant blockers are adjacent original primary front locks. Only six
+blocked samples are curls; none are the inner bed. Thus adding grooves to
+each isolated ellipse does not consistently form grooves in the visible union.
+Much of the extra shape is hidden, and a substantial part of the exposed
+shape is truncated by its neighboring front lock. The surviving median relief
+is approximately one ordinary-preview pixel at900px/6.4 model units. Its
+normal response could still be visible, but that is not a reliable basis for
+continuing expensive fine/path refinement without this structural decision.
+
+The study uses2–4 unequal front lobes, varied across25 front families, with
+smooth staggered onsets and one broad longitudinal channel drift. It retains
+the old8-sided upper ring geometry, refines only lower rings to24 edges
+(20 illuminated-front edges plus the original4 rear edges), and replaces the
+front rather than adding a second opaque surface. The center curves, rear
+ring points and raw geometry above−1.64 are unchanged. There are no new maps,
+materials, draw calls, outward crests, or added tubes.
+
+MASS-only measured cost: +31,712 vertices, +62,224 triangles. The source
+construction of section records took60.5ms, with2,769,080B numeric payload
+(JavaScript object overhead is additional). Maximum section recession.02274;
+the transported frame produces maximum raw X/Y changes.00736/.01071 within
+the old section. Those are section changes, not changes of the guide centers.
+The early study ran in6.97s with391.6MiB peak process RSS including both MASS
+meshes, cloth support, source harness, and the ray grids. Runtime/native cost
+must be measured separately. Complete cloth/normal/native checks are pending.
+
+Recommended next revision: one channel field in the coordinates of each
+overlapping FRONT FAMILY, evaluated by every front section that covers it.
+
+Use the accepted center curves to form25 smoothly varying family centers and
+widths. Define each family's1–3 unequal longitudinal valley paths in authored
+X/Y, so the same valley reaches all overlapping front faces instead of shifting
+sideways with each lock's local ellipse. Preserve existing upper geometry,
+rear support, contour extrema, center paths, tips, and original materials.
+
+The displacement should aim at the visible union, with an explicit capacity
+bound. At a sampled X/Y, let F be the maximum original front depth; each
+covering front section has depth h_i and inward capacity c_i before its pinned
+rear/contour or minimum thickness is reached. A shared recession D is safe
+from being filled when D <= min_i(F-h_i+c_i). Apply the same requested field
+to all covering fronts, capped by that safe capacity and each section's own
+capacity. A covering surface whose capacity is smaller than D is permitted
+only when it still ends below F-D. This preserves the original support while
+making the visible channel continuous across overlaps.
+
+Use a broad smooth field, not the raw triangulation's steps or garment folds.
+The only early follow-up measurement needed is useful remaining depth and
+exposure after the conservative cap. If that bound collapses most depths,
+the coherent next architecture is a single closed family envelope replacing
+the overlapping internal front faces. Do not compensate with gloss, pigment,
+or additional fine ribbons. A family envelope is a wider topology decision
+and should be agreed with root before implementation.
+
+Evidence: review/lower-clump126-exposure.json and its reproducible source
+script. This is a finite source-MASS ray study; alpha, fine ribbons, profiles,
+and native Three/WebGPU appearance are not certified by it.

@@ -1,0 +1,188 @@
+[
+  {
+    "mode": 0,
+    "nativeWebGPU": true,
+    "display": {
+      "mapping": 7,
+      "exposure": 1.4
+    },
+    "resolution": [
+      900,
+      1200
+    ],
+    "antialiasing": 2,
+    "initialCorneas": [
+      {
+        "specularIntensity": 0.25,
+        "envMapIntensity": 0.2,
+        "transmission": 1,
+        "roughness": 0.075,
+        "ior": 1.376,
+        "thickness": 0.009
+      },
+      {
+        "specularIntensity": 0.25,
+        "envMapIntensity": 0.2,
+        "transmission": 1,
+        "roughness": 0.075,
+        "ior": 1.376,
+        "thickness": 0.009
+      }
+    ],
+    "eyeCenter": [
+      0.1176634867475414,
+      2.999279239035839,
+      0.5520834231907702
+    ],
+    "geometryAndMapsChanged": false,
+    "originalEyeAttributesExact": 16,
+    "originalMapsAndProtectedPropertiesExact": true,
+    "originalCorneaPropertiesRestored": true,
+    "heapMiB": 121.11479568481445,
+    "captures": [
+      "output/qa/cornea134-0-front.png",
+      "output/qa/cornea134-0-detail.png",
+      "output/qa/cornea134-0-left.png",
+      "output/qa/cornea134-0-right.png",
+      "output/qa/cornea134-0-back.png",
+      "output/qa/cornea134-0-eye-detail.png",
+      "output/qa/cornea134-0-relit-detail.png"
+    ],
+    "hashes": {
+      "front": "9d61e0d2c56759b580310c04070287d83f2b2dcbe2fc679ac1ac84c9ae16d445",
+      "detail": "9ba7e1bda0af791757ea5f03e96e5d32975d57797957ce68f94d97150953f7dd",
+      "left": "68614dd5ddba65699590729e30e9edd9ab1feeec982d1b676bb770c05964221c",
+      "right": "efde6df052fe0d8231bd7ef5fca0fdeedd0a12ab7d823a38f3e4d9daed7e9f73",
+      "back": "c286840e9a4a1c6950be68fc1e5572120ea6470c088c993fae8721de3cd0cbfb",
+      "eye-detail": "a8c72363b5435c24c73f545421987cbaa7e768a3e9dd76442b1f0de41e9128d7",
+      "relit-detail": "1a826eb408c2c60268dce93db88ac1cba22764cab3d7ab2d507ed16e8adb99ea"
+    },
+    "restoredFrontHash": "9d61e0d2c56759b580310c04070287d83f2b2dcbe2fc679ac1ac84c9ae16d445",
+    "restoredFrontMatchesBaseline": true,
+    "errors": []
+  },
+  {
+    "mode": 1,
+    "nativeWebGPU": true,
+    "display": {
+      "mapping": 7,
+      "exposure": 1.4
+    },
+    "resolution": [
+      900,
+      1200
+    ],
+    "antialiasing": 2,
+    "initialCorneas": [
+      {
+        "specularIntensity": 0.25,
+        "envMapIntensity": 0.2,
+        "transmission": 1,
+        "roughness": 0.075,
+        "ior": 1.376,
+        "thickness": 0.009
+      },
+      {
+        "specularIntensity": 0.25,
+        "envMapIntensity": 0.2,
+        "transmission": 1,
+        "roughness": 0.075,
+        "ior": 1.376,
+        "thickness": 0.009
+      }
+    ],
+    "eyeCenter": [
+      0.1176634867475414,
+      2.999279239035839,
+      0.5520834231907702
+    ],
+    "geometryAndMapsChanged": false,
+    "originalEyeAttributesExact": 16,
+    "originalMapsAndProtectedPropertiesExact": true,
+    "originalCorneaPropertiesRestored": true,
+    "heapMiB": 119.98038864135742,
+    "captures": [
+      "output/qa/cornea134-1-front.png",
+      "output/qa/cornea134-1-detail.png",
+      "output/qa/cornea134-1-left.png",
+      "output/qa/cornea134-1-right.png",
+      "output/qa/cornea134-1-back.png",
+      "output/qa/cornea134-1-eye-detail.png",
+      "output/qa/cornea134-1-relit-detail.png"
+    ],
+    "hashes": {
+      "front": "ceb1d7971672c82d7a440cf8d2f6d5d2f044765c1fbade5b63dfbf4ffbb50e30",
+      "detail": "adccfc94d73f41a5d5d7644ac7ce394c7aa163a9652029d9e67d55633cfb2e8d",
+      "left": "c913ee715d505498d6eff3ff2227426803d000719579d21d93d216815f5bcb20",
+      "right": "c5570b2a721295287c1ed0bc1fb51fed2808783c9365af4bc21d1f75872178cd",
+      "back": "c286840e9a4a1c6950be68fc1e5572120ea6470c088c993fae8721de3cd0cbfb",
+      "eye-detail": "2c151ebbc96edef49f2e6861359f9e5325f8361895987ca446764b7cc54b7513",
+      "relit-detail": "5040b8c60bef4b2312b8068956c46e2b5f8e921de4038fce1d71adebf07dd384"
+    },
+    "restoredFrontHash": "9d61e0d2c56759b580310c04070287d83f2b2dcbe2fc679ac1ac84c9ae16d445",
+    "restoredFrontMatchesBaseline": true,
+    "errors": []
+  },
+  {
+    "mode": 2,
+    "nativeWebGPU": true,
+    "display": {
+      "mapping": 7,
+      "exposure": 1.4
+    },
+    "resolution": [
+      900,
+      1200
+    ],
+    "antialiasing": 2,
+    "initialCorneas": [
+      {
+        "specularIntensity": 0.25,
+        "envMapIntensity": 0.2,
+        "transmission": 1,
+        "roughness": 0.075,
+        "ior": 1.376,
+        "thickness": 0.009
+      },
+      {
+        "specularIntensity": 0.25,
+        "envMapIntensity": 0.2,
+        "transmission": 1,
+        "roughness": 0.075,
+        "ior": 1.376,
+        "thickness": 0.009
+      }
+    ],
+    "eyeCenter": [
+      0.1176634867475414,
+      2.999279239035839,
+      0.5520834231907702
+    ],
+    "geometryAndMapsChanged": false,
+    "originalEyeAttributesExact": 16,
+    "originalMapsAndProtectedPropertiesExact": true,
+    "originalCorneaPropertiesRestored": true,
+    "heapMiB": 121.45252990722656,
+    "captures": [
+      "output/qa/cornea134-2-front.png",
+      "output/qa/cornea134-2-detail.png",
+      "output/qa/cornea134-2-left.png",
+      "output/qa/cornea134-2-right.png",
+      "output/qa/cornea134-2-back.png",
+      "output/qa/cornea134-2-eye-detail.png",
+      "output/qa/cornea134-2-relit-detail.png"
+    ],
+    "hashes": {
+      "front": "dd22fc0ea2383c73adf2dc20c0a9d900d8dba5632d41ba2fd31e1d2c6fcad07f",
+      "detail": "a4f8ac97c752c23418ec3dbc53271f15e57eb29997402d8518acd6847e582105",
+      "left": "89136a6ebeb41fbf7527b1ce9d702df5e31923ac3ca8b0d035831b52ee1ac2ec",
+      "right": "a1975d4854f2816ed04f8b379b5d93ed6a2d9ac7f62137f50abbd22816b84466",
+      "back": "1e4b22ecc8bb4c278da6b822fac1e9cbf7998ff6c6f976a3bc61d9a0e03a7f33",
+      "eye-detail": "6f3cb58f1dda61ccbdcab2f337f150f0624c0ff22b42275b176b35c004a7dfd7",
+      "relit-detail": "16b94e235b346ae21c010518d9f16ba51cc2d761e6fbe3ac2d9c360a2b506c3c"
+    },
+    "restoredFrontHash": "9d61e0d2c56759b580310c04070287d83f2b2dcbe2fc679ac1ac84c9ae16d445",
+    "restoredFrontMatchesBaseline": true,
+    "errors": []
+  }
+]

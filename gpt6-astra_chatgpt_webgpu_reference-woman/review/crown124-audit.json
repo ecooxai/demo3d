@@ -1,0 +1,566 @@
+{
+  "candidate": 124,
+  "native": false,
+  "scoreUnchanged": 76,
+  "zeroExact": true,
+  "baseSHA256": "b75e9b72d44a5a51d88c3aa280842321b3e75ae8b6dc242ad9df7db79e024822",
+  "sourceSHA256": "e6ed556b74851ec6b383a27f639ca74e3e4d606070528db5010a91ef953fd811",
+  "options": {
+    "headShiftX": 0.26,
+    "shoulderContact": 0.35,
+    "guidePlacement": 0.5
+  },
+  "base": {
+    "triangles": 1114888,
+    "geometryMiB": 52.49
+  },
+  "on": {
+    "triangles": 1072144,
+    "geometryMiB": 51.75,
+    "constructionMs": 4632,
+    "triangleChange": -0.0383392771291825,
+    "patch": {
+      "version": "shared-root-to-fringe-124",
+      "families": 24,
+      "strands": 1565,
+      "upwardExposedSamples": 0,
+      "minExposedStepY": 0.0007121929252791315,
+      "maxAttachmentDistance": 0.0008300554034333614,
+      "minAttachmentRetention": 1,
+      "minInnerClearance": 0.03423750535856729,
+      "paths": [
+        {
+          "side": -1,
+          "u": 0.565,
+          "outer": true,
+          "rootT": 0.4444444444444444,
+          "exit": 0.6449074447154999,
+          "root": [
+            -0.8202413051809914,
+            0.9109196856712667,
+            0.18564366584383024
+          ],
+          "end": {
+            "x": -0.9349215463080491,
+            "y": -0.5600005504615222,
+            "z": -0.027481148068868838,
+            "isVector3": true
+          },
+          "count": 50
+        },
+        {
+          "side": -1,
+          "u": 0.605,
+          "outer": true,
+          "rootT": 0.4444444444444444,
+          "exit": 0.6458703577518463,
+          "root": [
+            -0.7543232977181963,
+            0.9109205602217878,
+            0.3166932273125485
+          ],
+          "end": {
+            "x": -0.926869759291058,
+            "y": -0.5599995487242231,
+            "z": -0.028415247763717913,
+            "isVector3": true
+          },
+          "count": 54
+        },
+        {
+          "side": -1,
+          "u": 0.645,
+          "outer": true,
+          "rootT": 0.4444444444444444,
+          "exit": 0.6729587018489838,
+          "root": [
+            -0.6758940225013234,
+            0.9109191357840531,
+            0.42712511867155173
+          ],
+          "end": {
+            "x": -0.9188142803630264,
+            "y": -0.5599997242814083,
+            "z": -0.029353524832849517,
+            "isVector3": true
+          },
+          "count": 50
+        },
+        {
+          "side": -1,
+          "u": 0.684,
+          "outer": true,
+          "rootT": 0.4444444444444444,
+          "exit": 0.6705146729946136,
+          "root": [
+            -0.6094151793433358,
+            0.9109189014107555,
+            0.49533992557207335
+          ],
+          "end": {
+            "x": -0.9107590374834665,
+            "y": -0.5599999490144683,
+            "z": -0.030289557159612943,
+            "isVector3": true
+          },
+          "count": 54
+        },
+        {
+          "side": -1,
+          "u": 0.723,
+          "outer": true,
+          "rootT": 0.4444444444444444,
+          "exit": 0.7334915101528168,
+          "root": [
+            -0.5462586661213381,
+            0.910923656947707,
+            0.5382705294893111
+          ],
+          "end": {
+            "x": -0.9067270529664674,
+            "y": -0.560000003097075,
+            "z": -0.03075974650521475,
+            "isVector3": true
+          },
+          "count": 60
+        },
+        {
+          "side": -1,
+          "u": 0.764,
+          "outer": false,
+          "rootT": 0.5,
+          "exit": 0.5604518497197977,
+          "root": [
+            -0.31246297497413844,
+            1.1779300467715514,
+            0.5518092550298629
+          ],
+          "end": {
+            "x": -0.68,
+            "y": -0.17999999999999994,
+            "z": 0.4161607825444711,
+            "isVector3": true
+          },
+          "count": 126
+        },
+        {
+          "side": -1,
+          "u": 0.798,
+          "outer": false,
+          "rootT": 0.5,
+          "exit": 0.5108513053617558,
+          "root": [
+            -0.21122615642733975,
+            1.1988979898303114,
+            0.5726697511437541
+          ],
+          "end": {
+            "x": -0.6,
+            "y": 0.08000000000000007,
+            "z": 0.4774477370774215,
+            "isVector3": true
+          },
+          "count": 112
+        },
+        {
+          "side": -1,
+          "u": 0.835,
+          "outer": false,
+          "rootT": 0.5,
+          "exit": 0.5300122736147393,
+          "root": [
+            -0.12930945255008833,
+            1.1995269588604405,
+            0.5920016198532759
+          ],
+          "end": {
+            "x": -0.48,
+            "y": 0.19999999999999996,
+            "z": 0.5433561117352429,
+            "isVector3": true
+          },
+          "count": 76
+        },
+        {
+          "side": -1,
+          "u": 0.867,
+          "outer": false,
+          "rootT": 0.5,
+          "exit": 0.5727341999935974,
+          "root": [
+            -0.10610686725015506,
+            1.1954569804332085,
+            0.5992372971726845
+          ],
+          "end": {
+            "x": -0.4,
+            "y": 0.36,
+            "z": 0.5754956224297965,
+            "isVector3": true
+          },
+          "count": 92
+        },
+        {
+          "side": -1,
+          "u": 0.895,
+          "outer": false,
+          "rootT": 0.5,
+          "exit": 0.5382364383690563,
+          "root": [
+            -0.049935824600189305,
+            1.188095855002313,
+            0.6061779681368246
+          ],
+          "end": {
+            "x": -0.3,
+            "y": 0.26,
+            "z": 0.5998653656260758,
+            "isVector3": true
+          },
+          "count": 44
+        },
+        {
+          "side": -1,
+          "u": 0.922,
+          "outer": false,
+          "rootT": 0.5,
+          "exit": 0.5078989030198748,
+          "root": [
+            0.004453954298993994,
+            1.1800813222055573,
+            0.6160932040181288
+          ],
+          "end": {
+            "x": -0.23,
+            "y": 0.37,
+            "z": 0.6119846434571227,
+            "isVector3": true
+          },
+          "count": 53
+        },
+        {
+          "side": -1,
+          "u": 0.944,
+          "outer": false,
+          "rootT": 0.5,
+          "exit": 0.5532875712698947,
+          "root": [
+            0.014686406774726653,
+            1.1709539840386043,
+            0.6159408219492271
+          ],
+          "end": {
+            "x": -0.1,
+            "y": 0.33000000000000007,
+            "z": 0.6506778552352742,
+            "isVector3": true
+          },
+          "count": 43
+        },
+        {
+          "side": 1,
+          "u": 0.558,
+          "outer": true,
+          "rootT": 0.4444444444444444,
+          "exit": 0.4736979305744171,
+          "root": [
+            0.8384187919076359,
+            0.9009118830248564,
+            0.17673989009147112
+          ],
+          "end": {
+            "x": 0.9315808487863254,
+            "y": -0.560000335331174,
+            "z": 0.30218881678821563,
+            "isVector3": true
+          },
+          "count": 50
+        },
+        {
+          "side": 1,
+          "u": 0.598,
+          "outer": true,
+          "rootT": 0.4444444444444444,
+          "exit": 0.495049387216568,
+          "root": [
+            0.8045047012549379,
+            0.9009105151925032,
+            0.25864493743275446
+          ],
+          "end": {
+            "x": 0.9302774197191559,
+            "y": -0.5600005619388816,
+            "z": 0.30394196619166763,
+            "isVector3": true
+          },
+          "count": 52
+        },
+        {
+          "side": 1,
+          "u": 0.641,
+          "outer": true,
+          "rootT": 0.4444444444444444,
+          "exit": 0.5339342653751373,
+          "root": [
+            0.7478445093308347,
+            0.9009127554637046,
+            0.3474748650217624
+          ],
+          "end": {
+            "x": 0.9287930953658975,
+            "y": -0.5600000800685608,
+            "z": 0.3059462953113746,
+            "isVector3": true
+          },
+          "count": 48
+        },
+        {
+          "side": 1,
+          "u": 0.681,
+          "outer": true,
+          "rootT": 0.4444444444444444,
+          "exit": 0.5449041426181793,
+          "root": [
+            0.6761638660703033,
+            0.9009075467964622,
+            0.4482644710545604
+          ],
+          "end": {
+            "x": 0.9280523725240722,
+            "y": -0.5600001678330101,
+            "z": 0.3069414825053006,
+            "isVector3": true
+          },
+          "count": 52
+        },
+        {
+          "side": 1,
+          "u": 0.725,
+          "outer": true,
+          "rootT": 0.4444444444444444,
+          "exit": 0.5881282985210419,
+          "root": [
+            0.6204817313737317,
+            0.9009107263803975,
+            0.495701526964668
+          ],
+          "end": {
+            "x": 0.9280523725240722,
+            "y": -0.5600001678330101,
+            "z": 0.3069414825053006,
+            "isVector3": true
+          },
+          "count": 52
+        },
+        {
+          "side": 1,
+          "u": 0.765,
+          "outer": false,
+          "rootT": 0.5,
+          "exit": 0.540136222318516,
+          "root": [
+            0.49154796534946804,
+            1.018205465080633,
+            0.5366876362874418
+          ],
+          "end": {
+            "x": 0.66,
+            "y": 0.050000000000000044,
+            "z": 0.42954314935316285,
+            "isVector3": true
+          },
+          "count": 77
+        },
+        {
+          "side": 1,
+          "u": 0.801,
+          "outer": false,
+          "rootT": 0.5,
+          "exit": 0.5075117855209975,
+          "root": [
+            0.42477634971204536,
+            1.0499719150135296,
+            0.5647655540424938
+          ],
+          "end": {
+            "x": 0.53,
+            "y": 0.24,
+            "z": 0.5237064215378827,
+            "isVector3": true
+          },
+          "count": 80
+        },
+        {
+          "side": 1,
+          "u": 0.836,
+          "outer": false,
+          "rootT": 0.5,
+          "exit": 0.5515267590755506,
+          "root": [
+            0.37221483944234107,
+            1.056820886885868,
+            0.5824042839848392
+          ],
+          "end": {
+            "x": 0.42,
+            "y": 0.3400000000000001,
+            "z": 0.5694223507142836,
+            "isVector3": true
+          },
+          "count": 94
+        },
+        {
+          "side": 1,
+          "u": 0.87,
+          "outer": false,
+          "rootT": 0.5,
+          "exit": 0.5683502100122159,
+          "root": [
+            0.29316921313111793,
+            1.1026151740186165,
+            0.5939688809390582
+          ],
+          "end": {
+            "x": 0.26,
+            "y": 0.22999999999999998,
+            "z": 0.6053263985733466,
+            "isVector3": true
+          },
+          "count": 82
+        },
+        {
+          "side": 1,
+          "u": 0.9,
+          "outer": false,
+          "rootT": 0.5,
+          "exit": 0.5182957665020229,
+          "root": [
+            0.24733326806739447,
+            1.1137392407903532,
+            0.6025698712557419
+          ],
+          "end": {
+            "x": 0.16,
+            "y": 0.36,
+            "z": 0.6270311111612804,
+            "isVector3": true
+          },
+          "count": 70
+        },
+        {
+          "side": 1,
+          "u": 0.927,
+          "outer": false,
+          "rootT": 0.5,
+          "exit": 0.5194414176755104,
+          "root": [
+            0.19233691965535765,
+            1.1179591608400044,
+            0.609706219573758
+          ],
+          "end": {
+            "x": 0.04000000000000001,
+            "y": 0.31000000000000005,
+            "z": 0.678472112797006,
+            "isVector3": true
+          },
+          "count": 49
+        },
+        {
+          "side": 1,
+          "u": 0.947,
+          "outer": false,
+          "rootT": 0.5,
+          "exit": 0.5690845825563681,
+          "root": [
+            0.16114808223008353,
+            1.1269278820726558,
+            0.609926078348062
+          ],
+          "end": {
+            "x": -0.07,
+            "y": 0.36,
+            "z": 0.6600914960383637,
+            "isVector3": true
+          },
+          "count": 45
+        }
+      ],
+      "enabled": true,
+      "strength": 1,
+      "legacyFringeReplaced": true,
+      "forwardCrownAlphaReplaced": true,
+      "crownUV0Unchanged": true
+    }
+  },
+  "meshes": [
+    {
+      "name": "Continuous parted crown with longitudinal fiber flow",
+      "vertices": 24455,
+      "triangles": 47744,
+      "nonfinite": 0,
+      "zeroNormals": 3,
+      "maxNormalError": 4.417922128130414e-8
+    },
+    {
+      "name": "Overlapping layered S-wave hair around front back and shoulders",
+      "vertices": 159210,
+      "triangles": 278400,
+      "nonfinite": 0,
+      "zeroNormals": 0,
+      "maxNormalError": 4.653956042766083e-8
+    },
+    {
+      "name": "Independent fine crown lengths and silhouette strands",
+      "vertices": 646260,
+      "triangles": 623976,
+      "nonfinite": 0,
+      "zeroNormals": 0,
+      "maxNormalError": 4.9709298677313996e-8
+    },
+    {
+      "name": "Dense fine bowed brown fringe strands",
+      "vertices": 103290,
+      "triangles": 100160,
+      "nonfinite": 0,
+      "zeroNormals": 0,
+      "maxNormalError": 4.783062723667797e-8
+    },
+    {
+      "name": "Sparse short temple edge and hairline wisps",
+      "vertices": 5142,
+      "triangles": 4968,
+      "nonfinite": 0,
+      "zeroNormals": 0,
+      "maxNormalError": 4.122963437325211e-8
+    },
+    {
+      "name": "Continuous root-to-fringe replacement families124",
+      "vertices": 9720,
+      "triangles": 16896,
+      "nonfinite": 0,
+      "zeroNormals": 0,
+      "maxNormalError": 4.107641649042648e-8
+    }
+  ],
+  "preservation": {
+    "mass": "All attributes and index exact; includes118 fitted lengths,86 contact and94 far temple",
+    "detail": "Exact lower prefix and protected suffix, all UV/color/index exact;2300 existing crown fibers keep their count and some front end positions change",
+    "crown": "Exact position/normal/index/UV0/RGB; forward vertex alpha deliberately withdrawn",
+    "changedAlpha": 4904,
+    "removedAlpha": 3100.8247633820524,
+    "legacyFringe": "Replaced, with legacy RNG draws consumed; new family strands and dense roots share paths",
+    "wisps": "Old front edge wisps withdrawn; accepted short temple wisps retained"
+  },
+  "limitations": [
+    "Source-only numerical geometry check; native Three/WebGPU images decide visible quality.",
+    "Dense-root overlap follows original crown coordinates; no exhaustive alpha-filtered view-ray coverage certification before the first native glimpse.",
+    "100/104 coverage characterization must be rerun if the new CROWN alpha is accepted.",
+    "The source harness does not measure GPU cost or actual native heap."
+  ],
+  "resources": {
+    "elapsedMs": 14418.411798000001,
+    "cpuMs": 16654.927,
+    "peakRssMiB": 556.34765625
+  }
+}

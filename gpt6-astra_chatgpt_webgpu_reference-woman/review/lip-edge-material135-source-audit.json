@@ -1,0 +1,66 @@
+{
+  "candidate": 135,
+  "status": "Focused packed-map numerical checks passed; native A/B and source cleanup pending",
+  "scoreUnchanged": 77,
+  "source": {
+    "path": "review/lip-edge-material-candidate135.js",
+    "bytes": 12009,
+    "sha256": "bab6c913d8a03cf8138af2c7fd620df30ad9875246f680e006876dd534114558"
+  },
+  "map": {
+    "width": 128,
+    "height": 128,
+    "byteLength": 65536,
+    "sha256": "3dbea8f0cd81612f372934aac6f9575fdc5b62b63b4883ee7eeb2d7bb77ee947",
+    "mipmaps": false,
+    "channel": 1,
+    "colorSpace": "NoColorSpace / linear data",
+    "filtering": "Bilinear, endpoints at texel centers",
+    "alpha": 255,
+    "unusedBlue": 0
+  },
+  "measured": {
+    "maximumMaskFormulaDifference": 2.1094237467877974e-15,
+    "maximumRoughnessTexelError": 0.0010386692279628629,
+    "maximumClearcoatTexelError": 0.00023514915328667896,
+    "samples": 1050625,
+    "maximumInterpolatedClearcoatError": 0.0005776052984182798,
+    "maximumInterpolatedRoughnessError": 0.0010651576238260851,
+    "clearcoatMaximumAtUV": [
+      0.1064453125,
+      0.029296875
+    ],
+    "roughnessMaximumAtUV": [
+      0.08203125,
+      0.0400390625
+    ],
+    "exactCentralTexels": 10624,
+    "centralClearcoat": 0.12,
+    "centralRoughness": 0.44062745098039213,
+    "centralRoughnessBias": 0.0006274509803921302,
+    "protectedCentralClearcoatError": 0,
+    "protectedCentralRoughnessError": 1.1102230246251565e-16,
+    "maximumFloat32UVError": 2.8610229518832853e-8,
+    "maximumGridClearcoatError": 0.000447898139449298,
+    "maximumGridRoughnessError": 0.0009278844367713868,
+    "exactRootInteriorSamples": 73
+  },
+  "analytic": {
+    "maskBilinearInterpolationBound": 0.0038017179873280943,
+    "effectiveContinuousErrorBounds": {
+      "clearcoat": 0.0006915002761264302,
+      "roughness": 0.0013813703051340383
+    },
+    "note": "Bounds include independent RG byte quantization and ideal double-precision UV bilinear interpolation. Float32 grid encoding is measured separately."
+  },
+  "resources": {
+    "textureBytes": 65536,
+    "textureGPUBytesWithoutMipmaps": 65536,
+    "expectedAddedUV1Bytes": 27472,
+    "expectedPrivateGeometryBytesBeforeNativeIndexWidening": 216968,
+    "expectedExtraGroups": 0,
+    "perFrameWork": 0
+  },
+  "elapsedMs": 341.51466300000004,
+  "peakRSSMiB": 41.83984375
+}

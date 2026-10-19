@@ -1,0 +1,115 @@
+Candidate126 frozen for focused native art review
+
+Accepted baseline score:77/100, including root's128 Neutral1.4 display choice.
+Candidate126 is unscored until native comparison. Production is untouched.
+Groom basis: accepted118.5,86 contact.35, original materials/crown/fringe.
+
+Transfer these four runtime/review files to matching Mac project paths:
+  review/hair-groom-candidate126.js
+  review/lower-clump-sections126.js
+  review/lower-clump-sections126-family.js
+  review/lower-clump126-native.mjs
+
+Run from the project directory with the existing8766 server:
+  node review/lower-clump126-native.mjs
+
+The wrapper guards the accepted groom SHA and exact.26/.35/.5 constructor,
+builds an isolated app, and opens fresh native WebGPU pages at strength0/1.
+It captures front/detail/left/right/back and a second-light front for each,
+with names output/qa/lower-clump126-{0,100}-{view}.png. It writes native
+metrics to output/qa/lower-clump126-native-result.json and closes pages/browser
+in finally blocks. No automatic WebGL fallback, production change, or export.
+Strength.5 is supported by the source for a later bounded visual comparison.
+
+Architecture
+------------
+Only75 original primary front locks receive new lower front surfaces. Their
+existing center curves, rear section points, contour endpoints, and upper
+geometry remain. Sections use the old8-sided polygon above the transition;
+lower rings have20 illuminated-front edges plus the original4 rear edges.
+The front surfaces replace the original front; no extra opaque tube or plane
+is overlaid. Cross sections remain closed. Tapered open end topology/alpha is
+inherited; this is not a claim that the full original groom is watertight.
+
+Twenty-five shared family fields make unequal2–4 lobes. Each valley follows
+the accepted family center paths in authored X/Y and reaches every covering
+front section. Inward Z capacity is bounded by actual original triangle rays,
+fixed neighboring hair, and a24% vertical half-depth floor. All MASS X/Y
+positions and original rear/contour ring points are unchanged. Onsets and
+releases vary smoothly; the same original maps and materials are reused.
+
+The2700 existing forward fine curves now sample the actual rebuilt raw front
+triangles through their shared evaluator, distributed by section arc length.
+Existing counts, random draws, widths, colors, UVs, and trailing phase choices
+are retained. A guarded transition keeps upper fine positions AND normals
+byte-identical. Rear fine curves and all other fine/crown/fringe/wisp/far/side
+components remain unchanged. Fine positions are intentionally redistributed
+and resampled; maximum source XYZ changes are.0260/.0419/.0335 and should be
+judged in the profiles for unwanted bends or separated highlights.
+
+Resource handling
+-----------------
+No maps, materials, or draw calls are added. Source geometry adds31,712
+vertices and62,224 triangles, approximately2.04MiB GPU geometry; full hair
+changes from1,114,888tri/52.49MiB to1,177,112tri/54.53MiB in source math.
+Native counts are checked against their actual adaptive-ring metadata.
+
+Source section/support preparation measured293–313ms. Temporary support
+numeric payload is6,802,556B with508,130 grid references plus JS overhead;
+section numeric payload is2,769,080B plus object overhead. Support closures
+and grid references are released before fine construction. Ring records are
+deleted after fine construction. The finished group retains only small numeric
+metrics/range metadata; no support grid, guide cache, or new texture survives.
+Native construction time and heap remain to be measured by root.
+
+Source validation
+-----------------
+  strength0: all geometry attributes/indices byte-identical to accepted source
+  nonfinite positions/normals:0
+  maximum unit-normal error:4.97e-8
+  zero normals:3, matching the accepted source
+  new degenerate MASS triangles:0
+  protected upper MASS/fine position and normal changes:0
+  other protected MASS/fine/component changes:0
+  rear ring changes:0; original MASS ring X/Y changes:0
+  changed section cloth samples:16,359
+  new/worsened cloth penetrations:0
+  minimum sampled cloth clearance:.03441
+  samples outside original rear envelope:0
+
+Measured small caveat:15 sampled refined points exceed the old post-contact
+front triangle by at most.000440 despite exclusively inward raw displacement.
+Refining the existing nonlinear86 contact map between old vertices causes
+this interpolation difference (about.062px at900px/6.4). It is reported rather
+than hidden; the audit allows less than.001 for this subpixel refinement while
+keeping rear, protected geometry and cloth gates strict. Complete triangle/
+fine intersections are not certified by finite source samples.
+
+One early shared-field exposure check justified the native study:868 valley
+samples initially exposed on the selected front family; only26 have allowed
+depth below.002. Median permitted depth.01562; actual outer recession.01278.
+755 samples exceed.006 actual recession and606 exceed.010. Median actual/
+target relief retention94.1%. This replaces the weak per-lock alignment in the
+first126 study; it does not establish visual quality.
+
+Evidence files
+--------------
+  review/lower-clump126-family-exposure.json
+  review/lower-clump126-source-audit.json
+  review/lower-clump126-audit.mjs
+  review/lower-clump126-source.mjs
+
+The full source audit used21.7s wall/24.3s CPU and587.5MiB peak process RSS,
+including multiple complete grooms, snapshots and diagnostic records. Those
+figures are not the runtime cost of the helper. The source harness retains
+diagnostic ring records deliberately; production removes them.
+
+Native acceptance priorities
+---------------------------
+Look for visibly unequal nested lower clumps at normal portrait size, with
+continuous dark channels rather than ladders, plastic ribs, or broad plates.
+Both profiles must preserve the accepted118.5 drape without new hooks,
+floating fine stripes, torso intersections or a widened gap. Upper head,
+crown, fringe and back should remain unchanged. The second-light front should
+still show useful structure. Reject or reduce strength if channels read as
+regular grooves; score stays77 unless the images show a substantive gain.

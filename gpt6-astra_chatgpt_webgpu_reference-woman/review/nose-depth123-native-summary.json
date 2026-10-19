@@ -1,0 +1,1911 @@
+{
+  "candidate": 123,
+  "scoreUnchanged": 76,
+  "status": "Native geometry/source/cleanup checks passed; matched art review pending",
+  "depths": [
+    0,
+    0.012,
+    0.024
+  ],
+  "views": [
+    "front",
+    "detail",
+    "left",
+    "right",
+    "back",
+    "nose",
+    "nose-quarter"
+  ],
+  "resolution": [
+    900,
+    1200
+  ],
+  "antialiasing": 2,
+  "files": {
+    "src/main.js": {
+      "bytes": 19815,
+      "sha256": "9526a25c598c98f29f64d5b66feb2585a05db67090a4ab9c91971c9703c095be"
+    },
+    "review/nose-depth-candidate123.js": {
+      "bytes": 14373,
+      "sha256": "6035e036724244434f82b746795c74536db2004c86f0a302034ce5392cf090a2"
+    },
+    "review/nose-depth123-geometry-audit.js": {
+      "bytes": 15891,
+      "sha256": "98661396eddcf4036acf20b069369ca403723fffd0ed65ed655da5abdce6f139"
+    },
+    "review/nose-depth123-native.mjs": {
+      "bytes": 22137,
+      "sha256": "f36f204a0ab27618c208b4014d5e5074d1476ae9199f158cfbc8cc72bbeb98b3"
+    },
+    "review/hair-strand-normal111-integrity.js": {
+      "bytes": 4175,
+      "sha256": "e9025789ce1e5f05ba2961aca223990c729997b2e0f110fc6f3685b6e0f2b8fa"
+    }
+  },
+  "limitations": [
+    "Native technical checks do not establish a likeness gain. Root must review the matched renders.",
+    "The single frontal reference cannot uniquely establish nose projection in profile.",
+    "The small naris gap change is measured against actual endpoint triangles; coverage registration and original image bytes remain fixed."
+  ],
+  "results": [
+    {
+      "depth": 0,
+      "browserErrors": [],
+      "nativeWebGPU": true,
+      "metrics": {
+        "version": "bounded-canonical-nose-depth-123",
+        "depth": 0,
+        "applied": false,
+        "changedVertices": 0,
+        "privateGeometryCount": 0,
+        "privateAttributeBytes": 0,
+        "minimumJacobian": 1,
+        "elapsedMs": 0
+      },
+      "heapMiB": 366.5452289581299,
+      "idleFrames": 0,
+      "cleanup": {
+        "released": false,
+        "privateGeometriesDisposed": 0,
+        "privateAttributeBytesReleased": 0,
+        "sourceGeometryReferencesRestored": true,
+        "sourceBytesUnchanged": true,
+        "disposalEvents": [],
+        "nativeIndexByteDeltaAtRelease": 1409586,
+        "resources": "Temporary geometry owns every attribute and index. The actual r186 cached RenderObject disposal therefore cannot delete an original source buffer."
+      },
+      "status": "Passed",
+      "audit": {
+        "depth": 0,
+        "checkpoints": [
+          {
+            "stage": "after123-before-renderer",
+            "ok": true,
+            "violations": []
+          },
+          {
+            "stage": "renderer-ready-before-first-frame",
+            "ok": true,
+            "violations": []
+          },
+          {
+            "stage": "first-native-webgpu-frame",
+            "ok": true,
+            "violations": []
+          },
+          {
+            "stage": "after-all-native-views",
+            "ok": true,
+            "violations": []
+          },
+          {
+            "stage": "before-release",
+            "ok": true,
+            "violations": []
+          },
+          {
+            "stage": "after-release-before-source-render",
+            "ok": true,
+            "violations": []
+          },
+          {
+            "stage": "restored-source-native-frame",
+            "ok": true,
+            "violations": []
+          }
+        ],
+        "nativeIndexWidenings": {
+          "array_count": 54,
+          "first": [
+            {
+              "stage": "first-native-webgpu-frame",
+              "labels": [
+                {
+                  "mesh": "scleral-globe",
+                  "attribute": "index",
+                  "scope": "source"
+                }
+              ],
+              "before": {
+                "type": "Uint16Array",
+                "length": 3180,
+                "bytes": 6360,
+                "hash": "5febe0289cffd3f173d2497b4f77bc8cb44062ace455f513a6d1558283899b74",
+                "version": 0,
+                "itemSize": 1,
+                "count": 3180,
+                "normalized": false
+              },
+              "after": {
+                "type": "Uint32Array",
+                "length": 3180,
+                "bytes": 12720,
+                "hash": "8398a94c7e39f3f1bf282f6bd9448dd3ed6dedcc3aabd84ab26276bde1d22450",
+                "version": 0,
+                "itemSize": 1,
+                "count": 3180,
+                "normalized": false
+              },
+              "originalArrayHashNow": "5febe0289cffd3f173d2497b4f77bc8cb44062ace455f513a6d1558283899b74",
+              "originalArrayBytesUnchanged": true,
+              "sameOriginalArrayReference": false,
+              "versionChanged": false,
+              "indexValuesCompared": 3180,
+              "indexValueMismatches": 0,
+              "indexValuesExact": true,
+              "firstIndexMismatches": [],
+              "classification": "verified-native-index-widening"
+            },
+            {
+              "stage": "first-native-webgpu-frame",
+              "labels": [
+                {
+                  "mesh": "brown-iris-and-pupil",
+                  "attribute": "index",
+                  "scope": "source"
+                }
+              ],
+              "before": {
+                "type": "Uint16Array",
+                "length": 15360,
+                "bytes": 30720,
+                "hash": "cc53314da9d6fd09683a411b1eb3e4db826f9cbb14b34cd901f021eee6c605a5",
+                "version": 0,
+                "itemSize": 1,
+                "count": 15360,
+                "normalized": false
+              },
+              "after": {
+                "type": "Uint32Array",
+                "length": 15360,
+                "bytes": 61440,
+                "hash": "1d1902bb72cb6ed9c001102ca268cfc35c919229e8e0dc623b72fb145d83451c",
+                "version": 0,
+                "itemSize": 1,
+                "count": 15360,
+                "normalized": false
+              },
+              "originalArrayHashNow": "cc53314da9d6fd09683a411b1eb3e4db826f9cbb14b34cd901f021eee6c605a5",
+              "originalArrayBytesUnchanged": true,
+              "sameOriginalArrayReference": false,
+              "versionChanged": false,
+              "indexValuesCompared": 15360,
+              "indexValueMismatches": 0,
+              "indexValuesExact": true,
+              "firstIndexMismatches": [],
+              "classification": "verified-native-index-widening"
+            },
+            {
+              "stage": "first-native-webgpu-frame",
+              "labels": [
+                {
+                  "mesh": "transparent-corneal-dome",
+                  "attribute": "index",
+                  "scope": "source"
+                }
+              ],
+              "before": {
+                "type": "Uint16Array",
+                "length": 15360,
+                "bytes": 30720,
+                "hash": "cc53314da9d6fd09683a411b1eb3e4db826f9cbb14b34cd901f021eee6c605a5",
+                "version": 0,
+                "itemSize": 1,
+                "count": 15360,
+                "normalized": false
+              },
+              "after": {
+                "type": "Uint32Array",
+                "length": 15360,
+                "bytes": 61440,
+                "hash": "1d1902bb72cb6ed9c001102ca268cfc35c919229e8e0dc623b72fb145d83451c",
+                "version": 0,
+                "itemSize": 1,
+                "count": 15360,
+                "normalized": false
+              },
+              "originalArrayHashNow": "cc53314da9d6fd09683a411b1eb3e4db826f9cbb14b34cd901f021eee6c605a5",
+              "originalArrayBytesUnchanged": true,
+              "sameOriginalArrayReference": false,
+              "versionChanged": false,
+              "indexValuesCompared": 15360,
+              "indexValueMismatches": 0,
+              "indexValuesExact": true,
+              "firstIndexMismatches": [],
+              "classification": "verified-native-index-widening"
+            }
+          ],
+          "last": {
+            "stage": "first-native-webgpu-frame",
+            "labels": [
+              {
+                "mesh": "buttons-batched-button-threads",
+                "attribute": "index",
+                "scope": "source"
+              }
+            ],
+            "before": {
+              "type": "Uint16Array",
+              "length": 576,
+              "bytes": 1152,
+              "hash": "cf210ed4546e7059c62301f04eba85d262b2931815195faa6bf783fa4fa66127",
+              "version": 0,
+              "itemSize": 1,
+              "count": 576,
+              "normalized": false
+            },
+            "after": {
+              "type": "Uint32Array",
+              "length": 576,
+              "bytes": 2304,
+              "hash": "63d9c801732eea105cfd95911078a92a941963fa0ef3704e700a3e58665f193f",
+              "version": 0,
+              "itemSize": 1,
+              "count": 576,
+              "normalized": false
+            },
+            "originalArrayHashNow": "cf210ed4546e7059c62301f04eba85d262b2931815195faa6bf783fa4fa66127",
+            "originalArrayBytesUnchanged": true,
+            "sameOriginalArrayReference": false,
+            "versionChanged": false,
+            "indexValuesCompared": 576,
+            "indexValueMismatches": 0,
+            "indexValuesExact": true,
+            "firstIndexMismatches": [],
+            "classification": "verified-native-index-widening"
+          }
+        },
+        "sourceMeshes": 64,
+        "metrics": {
+          "version": "bounded-canonical-nose-depth-123",
+          "depth": 0,
+          "applied": false,
+          "changedVertices": 0,
+          "privateGeometryCount": 0,
+          "privateAttributeBytes": 0,
+          "minimumJacobian": 1,
+          "elapsedMs": 0
+        },
+        "geometry": {
+          "depth": 0,
+          "targetMeshes": [
+            {
+              "name": "continuous-face",
+              "vertices": 110871,
+              "triangles": 218608,
+              "changedVertices": 0
+            },
+            {
+              "name": "naris--1",
+              "vertices": 539,
+              "triangles": 960,
+              "changedVertices": 0
+            },
+            {
+              "name": "naris-1",
+              "vertices": 539,
+              "triangles": 960,
+              "changedVertices": 0
+            }
+          ],
+          "changedVertices": 0,
+          "outsideSupportPositionOrNormalChanges": 0,
+          "localXYChangedValues": 0,
+          "maximumAnatomicalXYError": 0,
+          "maximumPositionMapError": 0,
+          "maximumUnitNormalError": 4.83325498512599e-08,
+          "minimumJacobian": 1,
+          "authoredShadingNormalTransport": {
+            "samples": 0,
+            "maximumComponentError": 0,
+            "maximumAngleDegrees": 0,
+            "comparison": "Stored shading normals vs independent cofactor inverse-transpose of those same authored normals. This does not assert agreement with flat geometric normals."
+          },
+          "geometricFiniteDifference": {
+            "triangles": 5408,
+            "maximumAngleDegrees": 1.7075472925031877e-06,
+            "maximumCanonicalTangentResidual": 1.1920928956465904e-07,
+            "comparison": "Central differences of the continuous displaced position on each actual source triangle, parameterized by its actual barycentric position and UV interpolation, vs transported original flat triangle normal. Float32 UV-position residuals are reported separately."
+          },
+          "updatedTriangleOrientation": {
+            "triangles": 5408,
+            "preexistingDegenerateTriangles": 96,
+            "newlyDegenerateTriangles": 0,
+            "invertedTriangles": 0,
+            "minimumDot": 0.9999999999999996,
+            "minimumAreaRatio": 1,
+            "comparison": "Actual deformed endpoint triangle cross product vs transported original flat triangle normal at its centroid. This checks endpoint mesh orientation separately from the continuous-field finite difference."
+          },
+          "bounds": [
+            {
+              "name": "continuous-face",
+              "min": [
+                -1.034024953842163,
+                -1.1462851762771606,
+                -0.7688086032867432
+              ],
+              "max": [
+                0.5669867992401123,
+                1.4999147653579712,
+                0.8058938980102539
+              ],
+              "sphereRadius": 1.3362185189373996,
+              "maximumSphereExcess": 2.220446049250313e-16
+            },
+            {
+              "name": "naris--1",
+              "min": [
+                -0.38251909613609314,
+                -0.5581135749816895,
+                0.6469261646270752
+              ],
+              "max": [
+                -0.3105190694332123,
+                -0.5336440801620483,
+                0.6873689293861389
+              ],
+              "sphereRadius": 0.04018118584886397,
+              "maximumSphereExcess": 0
+            },
+            {
+              "name": "naris-1",
+              "min": [
+                -0.1565190851688385,
+                -0.5581135749816895,
+                0.6469261646270752
+              ],
+              "max": [
+                -0.08451908081769943,
+                -0.5336440801620483,
+                0.6873689293861389
+              ],
+              "sphereRadius": 0.04018118915795214,
+              "maximumSphereExcess": 0
+            }
+          ],
+          "narisAttachment": {
+            "vertices": 1078,
+            "supportTriangles": 208,
+            "missedVertices": 0,
+            "minimumOriginalGapZ": 0.0015979158710981434,
+            "minimumDeformedGapZ": 0.0015979158710981434,
+            "maximumOriginalGapZ": 0.002156121591278426,
+            "maximumGapChangeZ": 0,
+            "maximumProjectedXYSeparationChange": 0,
+            "scope": "Same-UV head-Z overlay separation against actual original/deformed continuous-face triangles. The finite nonzero gap change is endpoint resampling, not a change of UV registration."
+          }
+        },
+        "cleanup": {
+          "released": false,
+          "privateGeometriesDisposed": 0,
+          "privateAttributeBytesReleased": 0,
+          "sourceGeometryReferencesRestored": true,
+          "sourceBytesUnchanged": true,
+          "disposalEvents": [],
+          "nativeIndexByteDeltaAtRelease": 1409586,
+          "resources": "Temporary geometry owns every attribute and index. The actual r186 cached RenderObject disposal therefore cannot delete an original source buffer."
+        }
+      }
+    },
+    {
+      "depth": 0.012,
+      "browserErrors": [],
+      "nativeWebGPU": true,
+      "metrics": {
+        "version": "bounded-canonical-nose-depth-123",
+        "depth": 0.012,
+        "applied": true,
+        "frame": {
+          "samples": 4359,
+          "perMesh": [
+            {
+              "name": "continuous-face",
+              "samples": 3281,
+              "frontSamples": 1615,
+              "rearSamples": 1666
+            },
+            {
+              "name": "naris--1",
+              "samples": 539,
+              "frontSamples": 539,
+              "rearSamples": 0
+            },
+            {
+              "name": "naris-1",
+              "samples": 539,
+              "frontSamples": 539,
+              "rearSamples": 0
+            }
+          ],
+          "commonOffsetXY": [
+            -0.23351908347203226,
+            -0.04008513799954797
+          ],
+          "maximumResidual": 8.010219195581092e-08,
+          "tolerance": 6e-07,
+          "canonicalXGradientHead": [
+            1,
+            0,
+            0
+          ],
+          "canonicalYGradientHead": [
+            0,
+            1.0638297872340425,
+            0
+          ],
+          "fittedSlopes": false
+        },
+        "changedVertices": 2622,
+        "privateGeometryCount": 3,
+        "privateAttributeBytes": 7560572,
+        "positionNormalBytes": 2686776,
+        "unchangedAttributeIndexBytes": 4873796,
+        "minimumJacobian": 1,
+        "maximumJacobian": 1,
+        "guaranteedMinimumJacobian": 0.8875,
+        "maximumHeadDisplacement": 0.012,
+        "maximumAnatomicalXYRoundoff": 3.330675823669268e-19,
+        "maximumNormalLengthError": 4.3228770785219695e-08,
+        "zeroNormalsPreserved": 2,
+        "perMesh": [
+          {
+            "name": "continuous-face",
+            "vertices": 110871,
+            "triangles": 218608,
+            "changedVertices": 1544,
+            "localXYChangedValues": 0,
+            "meshToHead": [
+              1,
+              1.214306433183765e-17,
+              0,
+              0,
+              1.214306433183765e-17,
+              1,
+              0,
+              0,
+              2.7755575615628914e-17,
+              0,
+              1,
+              0,
+              1.6653345369377348e-16,
+              0,
+              0,
+              1
+            ],
+            "headToMesh": [
+              1,
+              -1.214306433183765e-17,
+              0,
+              0,
+              -1.214306433183765e-17,
+              1,
+              0,
+              0,
+              -2.7755575615628914e-17,
+              3.3703774026776627e-34,
+              1,
+              0,
+              -1.6653345369377348e-16,
+              2.0222264416065976e-33,
+              0,
+              1
+            ]
+          },
+          {
+            "name": "naris--1",
+            "vertices": 539,
+            "triangles": 960,
+            "changedVertices": 539,
+            "localXYChangedValues": 0,
+            "meshToHead": [
+              1,
+              1.214306433183765e-17,
+              0,
+              0,
+              1.214306433183765e-17,
+              1,
+              0,
+              0,
+              2.7755575615628914e-17,
+              0,
+              1,
+              0,
+              1.6653345369377348e-16,
+              0,
+              0,
+              1
+            ],
+            "headToMesh": [
+              1,
+              -1.214306433183765e-17,
+              0,
+              0,
+              -1.214306433183765e-17,
+              1,
+              0,
+              0,
+              -2.7755575615628914e-17,
+              3.3703774026776627e-34,
+              1,
+              0,
+              -1.6653345369377348e-16,
+              2.0222264416065976e-33,
+              0,
+              1
+            ]
+          },
+          {
+            "name": "naris-1",
+            "vertices": 539,
+            "triangles": 960,
+            "changedVertices": 539,
+            "localXYChangedValues": 0,
+            "meshToHead": [
+              1,
+              1.214306433183765e-17,
+              0,
+              0,
+              1.214306433183765e-17,
+              1,
+              0,
+              0,
+              2.7755575615628914e-17,
+              0,
+              1,
+              0,
+              1.6653345369377348e-16,
+              0,
+              0,
+              1
+            ],
+            "headToMesh": [
+              1,
+              -1.214306433183765e-17,
+              0,
+              0,
+              -1.214306433183765e-17,
+              1,
+              0,
+              0,
+              -2.7755575615628914e-17,
+              3.3703774026776627e-34,
+              1,
+              0,
+              -1.6653345369377348e-16,
+              2.0222264416065976e-33,
+              0,
+              1
+            ]
+          }
+        ],
+        "elapsedMs": 20.19999999552965
+      },
+      "heapMiB": 373.1306743621826,
+      "idleFrames": 0,
+      "cleanup": {
+        "released": true,
+        "privateGeometriesDisposed": 3,
+        "privateAttributeBytesReleased": 7560572,
+        "sourceGeometryReferencesRestored": true,
+        "sourceBytesUnchanged": true,
+        "disposalEvents": [
+          {
+            "mesh": "continuous-face",
+            "attributes": 5,
+            "originalBindings": 0
+          },
+          {
+            "mesh": "naris--1",
+            "attributes": 5,
+            "originalBindings": 0
+          },
+          {
+            "mesh": "naris-1",
+            "attributes": 5,
+            "originalBindings": 0
+          }
+        ],
+        "nativeIndexByteDeltaAtRelease": 1409586,
+        "resources": "Temporary geometry owns every attribute and index. The actual r186 cached RenderObject disposal therefore cannot delete an original source buffer."
+      },
+      "status": "Passed",
+      "audit": {
+        "depth": 0.012,
+        "checkpoints": [
+          {
+            "stage": "after123-before-renderer",
+            "ok": true,
+            "violations": []
+          },
+          {
+            "stage": "renderer-ready-before-first-frame",
+            "ok": true,
+            "violations": []
+          },
+          {
+            "stage": "first-native-webgpu-frame",
+            "ok": true,
+            "violations": []
+          },
+          {
+            "stage": "after-all-native-views",
+            "ok": true,
+            "violations": []
+          },
+          {
+            "stage": "before-release",
+            "ok": true,
+            "violations": []
+          },
+          {
+            "stage": "after-release-before-source-render",
+            "ok": true,
+            "violations": []
+          },
+          {
+            "stage": "restored-source-native-frame",
+            "ok": true,
+            "violations": []
+          }
+        ],
+        "nativeIndexWidenings": {
+          "array_count": 56,
+          "first": [
+            {
+              "stage": "first-native-webgpu-frame",
+              "labels": [
+                {
+                  "mesh": "scleral-globe",
+                  "attribute": "index",
+                  "scope": "source"
+                }
+              ],
+              "before": {
+                "type": "Uint16Array",
+                "length": 3180,
+                "bytes": 6360,
+                "hash": "5febe0289cffd3f173d2497b4f77bc8cb44062ace455f513a6d1558283899b74",
+                "version": 0,
+                "itemSize": 1,
+                "count": 3180,
+                "normalized": false
+              },
+              "after": {
+                "type": "Uint32Array",
+                "length": 3180,
+                "bytes": 12720,
+                "hash": "8398a94c7e39f3f1bf282f6bd9448dd3ed6dedcc3aabd84ab26276bde1d22450",
+                "version": 0,
+                "itemSize": 1,
+                "count": 3180,
+                "normalized": false
+              },
+              "originalArrayHashNow": "5febe0289cffd3f173d2497b4f77bc8cb44062ace455f513a6d1558283899b74",
+              "originalArrayBytesUnchanged": true,
+              "sameOriginalArrayReference": false,
+              "versionChanged": false,
+              "indexValuesCompared": 3180,
+              "indexValueMismatches": 0,
+              "indexValuesExact": true,
+              "firstIndexMismatches": [],
+              "classification": "verified-native-index-widening"
+            },
+            {
+              "stage": "first-native-webgpu-frame",
+              "labels": [
+                {
+                  "mesh": "brown-iris-and-pupil",
+                  "attribute": "index",
+                  "scope": "source"
+                }
+              ],
+              "before": {
+                "type": "Uint16Array",
+                "length": 15360,
+                "bytes": 30720,
+                "hash": "cc53314da9d6fd09683a411b1eb3e4db826f9cbb14b34cd901f021eee6c605a5",
+                "version": 0,
+                "itemSize": 1,
+                "count": 15360,
+                "normalized": false
+              },
+              "after": {
+                "type": "Uint32Array",
+                "length": 15360,
+                "bytes": 61440,
+                "hash": "1d1902bb72cb6ed9c001102ca268cfc35c919229e8e0dc623b72fb145d83451c",
+                "version": 0,
+                "itemSize": 1,
+                "count": 15360,
+                "normalized": false
+              },
+              "originalArrayHashNow": "cc53314da9d6fd09683a411b1eb3e4db826f9cbb14b34cd901f021eee6c605a5",
+              "originalArrayBytesUnchanged": true,
+              "sameOriginalArrayReference": false,
+              "versionChanged": false,
+              "indexValuesCompared": 15360,
+              "indexValueMismatches": 0,
+              "indexValuesExact": true,
+              "firstIndexMismatches": [],
+              "classification": "verified-native-index-widening"
+            },
+            {
+              "stage": "first-native-webgpu-frame",
+              "labels": [
+                {
+                  "mesh": "transparent-corneal-dome",
+                  "attribute": "index",
+                  "scope": "source"
+                }
+              ],
+              "before": {
+                "type": "Uint16Array",
+                "length": 15360,
+                "bytes": 30720,
+                "hash": "cc53314da9d6fd09683a411b1eb3e4db826f9cbb14b34cd901f021eee6c605a5",
+                "version": 0,
+                "itemSize": 1,
+                "count": 15360,
+                "normalized": false
+              },
+              "after": {
+                "type": "Uint32Array",
+                "length": 15360,
+                "bytes": 61440,
+                "hash": "1d1902bb72cb6ed9c001102ca268cfc35c919229e8e0dc623b72fb145d83451c",
+                "version": 0,
+                "itemSize": 1,
+                "count": 15360,
+                "normalized": false
+              },
+              "originalArrayHashNow": "cc53314da9d6fd09683a411b1eb3e4db826f9cbb14b34cd901f021eee6c605a5",
+              "originalArrayBytesUnchanged": true,
+              "sameOriginalArrayReference": false,
+              "versionChanged": false,
+              "indexValuesCompared": 15360,
+              "indexValueMismatches": 0,
+              "indexValuesExact": true,
+              "firstIndexMismatches": [],
+              "classification": "verified-native-index-widening"
+            }
+          ],
+          "last": {
+            "stage": "restored-source-native-frame",
+            "labels": [
+              {
+                "mesh": "naris-1",
+                "attribute": "index",
+                "scope": "source"
+              }
+            ],
+            "before": {
+              "type": "Uint16Array",
+              "length": 2880,
+              "bytes": 5760,
+              "hash": "55f4e99ba248bc0fdab6f38ebc1f49ae9799e424fe4b0beca114b39c07fbd69c",
+              "version": 0,
+              "itemSize": 1,
+              "count": 2880,
+              "normalized": false
+            },
+            "after": {
+              "type": "Uint32Array",
+              "length": 2880,
+              "bytes": 11520,
+              "hash": "3d53e50ba3575b19df80bae2eaf9cc87940ce44fba477da959a7e7c97990b1bb",
+              "version": 0,
+              "itemSize": 1,
+              "count": 2880,
+              "normalized": false
+            },
+            "originalArrayHashNow": "55f4e99ba248bc0fdab6f38ebc1f49ae9799e424fe4b0beca114b39c07fbd69c",
+            "originalArrayBytesUnchanged": true,
+            "sameOriginalArrayReference": false,
+            "versionChanged": false,
+            "indexValuesCompared": 2880,
+            "indexValueMismatches": 0,
+            "indexValuesExact": true,
+            "firstIndexMismatches": [],
+            "classification": "verified-native-index-widening"
+          }
+        },
+        "sourceMeshes": 64,
+        "metrics": {
+          "version": "bounded-canonical-nose-depth-123",
+          "depth": 0.012,
+          "applied": true,
+          "frame": {
+            "samples": 4359,
+            "perMesh": [
+              {
+                "name": "continuous-face",
+                "samples": 3281,
+                "frontSamples": 1615,
+                "rearSamples": 1666
+              },
+              {
+                "name": "naris--1",
+                "samples": 539,
+                "frontSamples": 539,
+                "rearSamples": 0
+              },
+              {
+                "name": "naris-1",
+                "samples": 539,
+                "frontSamples": 539,
+                "rearSamples": 0
+              }
+            ],
+            "commonOffsetXY": [
+              -0.23351908347203226,
+              -0.04008513799954797
+            ],
+            "maximumResidual": 8.010219195581092e-08,
+            "tolerance": 6e-07,
+            "canonicalXGradientHead": [
+              1,
+              0,
+              0
+            ],
+            "canonicalYGradientHead": [
+              0,
+              1.0638297872340425,
+              0
+            ],
+            "fittedSlopes": false
+          },
+          "changedVertices": 2622,
+          "privateGeometryCount": 3,
+          "privateAttributeBytes": 7560572,
+          "positionNormalBytes": 2686776,
+          "unchangedAttributeIndexBytes": 4873796,
+          "minimumJacobian": 1,
+          "maximumJacobian": 1,
+          "guaranteedMinimumJacobian": 0.8875,
+          "maximumHeadDisplacement": 0.012,
+          "maximumAnatomicalXYRoundoff": 3.330675823669268e-19,
+          "maximumNormalLengthError": 4.3228770785219695e-08,
+          "zeroNormalsPreserved": 2,
+          "perMesh": [
+            {
+              "name": "continuous-face",
+              "vertices": 110871,
+              "triangles": 218608,
+              "changedVertices": 1544,
+              "localXYChangedValues": 0,
+              "meshToHead": [
+                1,
+                1.214306433183765e-17,
+                0,
+                0,
+                1.214306433183765e-17,
+                1,
+                0,
+                0,
+                2.7755575615628914e-17,
+                0,
+                1,
+                0,
+                1.6653345369377348e-16,
+                0,
+                0,
+                1
+              ],
+              "headToMesh": [
+                1,
+                -1.214306433183765e-17,
+                0,
+                0,
+                -1.214306433183765e-17,
+                1,
+                0,
+                0,
+                -2.7755575615628914e-17,
+                3.3703774026776627e-34,
+                1,
+                0,
+                -1.6653345369377348e-16,
+                2.0222264416065976e-33,
+                0,
+                1
+              ]
+            },
+            {
+              "name": "naris--1",
+              "vertices": 539,
+              "triangles": 960,
+              "changedVertices": 539,
+              "localXYChangedValues": 0,
+              "meshToHead": [
+                1,
+                1.214306433183765e-17,
+                0,
+                0,
+                1.214306433183765e-17,
+                1,
+                0,
+                0,
+                2.7755575615628914e-17,
+                0,
+                1,
+                0,
+                1.6653345369377348e-16,
+                0,
+                0,
+                1
+              ],
+              "headToMesh": [
+                1,
+                -1.214306433183765e-17,
+                0,
+                0,
+                -1.214306433183765e-17,
+                1,
+                0,
+                0,
+                -2.7755575615628914e-17,
+                3.3703774026776627e-34,
+                1,
+                0,
+                -1.6653345369377348e-16,
+                2.0222264416065976e-33,
+                0,
+                1
+              ]
+            },
+            {
+              "name": "naris-1",
+              "vertices": 539,
+              "triangles": 960,
+              "changedVertices": 539,
+              "localXYChangedValues": 0,
+              "meshToHead": [
+                1,
+                1.214306433183765e-17,
+                0,
+                0,
+                1.214306433183765e-17,
+                1,
+                0,
+                0,
+                2.7755575615628914e-17,
+                0,
+                1,
+                0,
+                1.6653345369377348e-16,
+                0,
+                0,
+                1
+              ],
+              "headToMesh": [
+                1,
+                -1.214306433183765e-17,
+                0,
+                0,
+                -1.214306433183765e-17,
+                1,
+                0,
+                0,
+                -2.7755575615628914e-17,
+                3.3703774026776627e-34,
+                1,
+                0,
+                -1.6653345369377348e-16,
+                2.0222264416065976e-33,
+                0,
+                1
+              ]
+            }
+          ],
+          "elapsedMs": 20.19999999552965
+        },
+        "geometry": {
+          "depth": 0.012,
+          "targetMeshes": [
+            {
+              "name": "continuous-face",
+              "vertices": 110871,
+              "triangles": 218608,
+              "changedVertices": 1544
+            },
+            {
+              "name": "naris--1",
+              "vertices": 539,
+              "triangles": 960,
+              "changedVertices": 539
+            },
+            {
+              "name": "naris-1",
+              "vertices": 539,
+              "triangles": 960,
+              "changedVertices": 539
+            }
+          ],
+          "changedVertices": 2622,
+          "outsideSupportPositionOrNormalChanges": 0,
+          "localXYChangedValues": 0,
+          "maximumAnatomicalXYError": 6.938893903907228e-18,
+          "maximumPositionMapError": 2.9792087975419324e-08,
+          "maximumUnitNormalError": 4.83325498512599e-08,
+          "minimumJacobian": 1,
+          "authoredShadingNormalTransport": {
+            "samples": 2620,
+            "maximumComponentError": 2.978285951193982e-08,
+            "maximumAngleDegrees": 2.561320938754782e-06,
+            "comparison": "Stored shading normals vs independent cofactor inverse-transpose of those same authored normals. This does not assert agreement with flat geometric normals."
+          },
+          "geometricFiniteDifference": {
+            "triangles": 5408,
+            "maximumAngleDegrees": 0.0018549619181914873,
+            "maximumCanonicalTangentResidual": 1.1920928956465904e-07,
+            "comparison": "Central differences of the continuous displaced position on each actual source triangle, parameterized by its actual barycentric position and UV interpolation, vs transported original flat triangle normal. Float32 UV-position residuals are reported separately."
+          },
+          "updatedTriangleOrientation": {
+            "triangles": 5408,
+            "preexistingDegenerateTriangles": 96,
+            "newlyDegenerateTriangles": 0,
+            "invertedTriangles": 0,
+            "minimumDot": 0.999975763514849,
+            "minimumAreaRatio": 0.9392364860411221,
+            "comparison": "Actual deformed endpoint triangle cross product vs transported original flat triangle normal at its centroid. This checks endpoint mesh orientation separately from the continuous-field finite difference."
+          },
+          "bounds": [
+            {
+              "name": "continuous-face",
+              "min": [
+                -1.034024953842163,
+                -1.1462851762771606,
+                -0.7688086032867432
+              ],
+              "max": [
+                0.5669867992401123,
+                1.4999147653579712,
+                0.7938938736915588
+              ],
+              "sphereRadius": 1.336872336849835,
+              "maximumSphereExcess": 0
+            },
+            {
+              "name": "naris--1",
+              "min": [
+                -0.38251909613609314,
+                -0.5581135749816895,
+                0.6455064415931702
+              ],
+              "max": [
+                -0.3105190694332123,
+                -0.5336440801620483,
+                0.6814664006233215
+              ],
+              "sphereRadius": 0.039191250070670515,
+              "maximumSphereExcess": 0
+            },
+            {
+              "name": "naris-1",
+              "min": [
+                -0.1565190851688385,
+                -0.5581135749816895,
+                0.6455064415931702
+              ],
+              "max": [
+                -0.08451908081769943,
+                -0.5336440801620483,
+                0.6814664006233215
+              ],
+              "sphereRadius": 0.03919125346334326,
+              "maximumSphereExcess": 0
+            }
+          ],
+          "narisAttachment": {
+            "vertices": 1078,
+            "supportTriangles": 208,
+            "missedVertices": 0,
+            "minimumOriginalGapZ": 0.0015979158710981434,
+            "minimumDeformedGapZ": 0.001601891630455765,
+            "maximumOriginalGapZ": 0.002156121591278426,
+            "maximumGapChangeZ": 4.262253648601444e-05,
+            "maximumProjectedXYSeparationChange": 0,
+            "scope": "Same-UV head-Z overlay separation against actual original/deformed continuous-face triangles. The finite nonzero gap change is endpoint resampling, not a change of UV registration."
+          }
+        },
+        "cleanup": {
+          "released": true,
+          "privateGeometriesDisposed": 3,
+          "privateAttributeBytesReleased": 7560572,
+          "sourceGeometryReferencesRestored": true,
+          "sourceBytesUnchanged": true,
+          "disposalEvents": [
+            {
+              "mesh": "continuous-face",
+              "attributes": 5,
+              "originalBindings": 0
+            },
+            {
+              "mesh": "naris--1",
+              "attributes": 5,
+              "originalBindings": 0
+            },
+            {
+              "mesh": "naris-1",
+              "attributes": 5,
+              "originalBindings": 0
+            }
+          ],
+          "nativeIndexByteDeltaAtRelease": 1409586,
+          "resources": "Temporary geometry owns every attribute and index. The actual r186 cached RenderObject disposal therefore cannot delete an original source buffer."
+        }
+      }
+    },
+    {
+      "depth": 0.024,
+      "browserErrors": [],
+      "nativeWebGPU": true,
+      "metrics": {
+        "version": "bounded-canonical-nose-depth-123",
+        "depth": 0.024,
+        "applied": true,
+        "frame": {
+          "samples": 4359,
+          "perMesh": [
+            {
+              "name": "continuous-face",
+              "samples": 3281,
+              "frontSamples": 1615,
+              "rearSamples": 1666
+            },
+            {
+              "name": "naris--1",
+              "samples": 539,
+              "frontSamples": 539,
+              "rearSamples": 0
+            },
+            {
+              "name": "naris-1",
+              "samples": 539,
+              "frontSamples": 539,
+              "rearSamples": 0
+            }
+          ],
+          "commonOffsetXY": [
+            -0.23351908347203226,
+            -0.04008513799954797
+          ],
+          "maximumResidual": 8.010219195581092e-08,
+          "tolerance": 6e-07,
+          "canonicalXGradientHead": [
+            1,
+            0,
+            0
+          ],
+          "canonicalYGradientHead": [
+            0,
+            1.0638297872340425,
+            0
+          ],
+          "fittedSlopes": false
+        },
+        "changedVertices": 2622,
+        "privateGeometryCount": 3,
+        "privateAttributeBytes": 7560572,
+        "positionNormalBytes": 2686776,
+        "unchangedAttributeIndexBytes": 4873796,
+        "minimumJacobian": 1,
+        "maximumJacobian": 1,
+        "guaranteedMinimumJacobian": 0.775,
+        "maximumHeadDisplacement": 0.024,
+        "maximumAnatomicalXYRoundoff": 6.661335103726285e-19,
+        "maximumNormalLengthError": 4.349310200879586e-08,
+        "zeroNormalsPreserved": 2,
+        "perMesh": [
+          {
+            "name": "continuous-face",
+            "vertices": 110871,
+            "triangles": 218608,
+            "changedVertices": 1544,
+            "localXYChangedValues": 0,
+            "meshToHead": [
+              1,
+              1.214306433183765e-17,
+              0,
+              0,
+              1.214306433183765e-17,
+              1,
+              0,
+              0,
+              2.7755575615628914e-17,
+              0,
+              1,
+              0,
+              1.6653345369377348e-16,
+              0,
+              0,
+              1
+            ],
+            "headToMesh": [
+              1,
+              -1.214306433183765e-17,
+              0,
+              0,
+              -1.214306433183765e-17,
+              1,
+              0,
+              0,
+              -2.7755575615628914e-17,
+              3.3703774026776627e-34,
+              1,
+              0,
+              -1.6653345369377348e-16,
+              2.0222264416065976e-33,
+              0,
+              1
+            ]
+          },
+          {
+            "name": "naris--1",
+            "vertices": 539,
+            "triangles": 960,
+            "changedVertices": 539,
+            "localXYChangedValues": 0,
+            "meshToHead": [
+              1,
+              1.214306433183765e-17,
+              0,
+              0,
+              1.214306433183765e-17,
+              1,
+              0,
+              0,
+              2.7755575615628914e-17,
+              0,
+              1,
+              0,
+              1.6653345369377348e-16,
+              0,
+              0,
+              1
+            ],
+            "headToMesh": [
+              1,
+              -1.214306433183765e-17,
+              0,
+              0,
+              -1.214306433183765e-17,
+              1,
+              0,
+              0,
+              -2.7755575615628914e-17,
+              3.3703774026776627e-34,
+              1,
+              0,
+              -1.6653345369377348e-16,
+              2.0222264416065976e-33,
+              0,
+              1
+            ]
+          },
+          {
+            "name": "naris-1",
+            "vertices": 539,
+            "triangles": 960,
+            "changedVertices": 539,
+            "localXYChangedValues": 0,
+            "meshToHead": [
+              1,
+              1.214306433183765e-17,
+              0,
+              0,
+              1.214306433183765e-17,
+              1,
+              0,
+              0,
+              2.7755575615628914e-17,
+              0,
+              1,
+              0,
+              1.6653345369377348e-16,
+              0,
+              0,
+              1
+            ],
+            "headToMesh": [
+              1,
+              -1.214306433183765e-17,
+              0,
+              0,
+              -1.214306433183765e-17,
+              1,
+              0,
+              0,
+              -2.7755575615628914e-17,
+              3.3703774026776627e-34,
+              1,
+              0,
+              -1.6653345369377348e-16,
+              2.0222264416065976e-33,
+              0,
+              1
+            ]
+          }
+        ],
+        "elapsedMs": 196.69999999552965
+      },
+      "heapMiB": 148.4641809463501,
+      "idleFrames": 0,
+      "cleanup": {
+        "released": true,
+        "privateGeometriesDisposed": 3,
+        "privateAttributeBytesReleased": 7560572,
+        "sourceGeometryReferencesRestored": true,
+        "sourceBytesUnchanged": true,
+        "disposalEvents": [
+          {
+            "mesh": "continuous-face",
+            "attributes": 5,
+            "originalBindings": 0
+          },
+          {
+            "mesh": "naris--1",
+            "attributes": 5,
+            "originalBindings": 0
+          },
+          {
+            "mesh": "naris-1",
+            "attributes": 5,
+            "originalBindings": 0
+          }
+        ],
+        "nativeIndexByteDeltaAtRelease": 1409586,
+        "resources": "Temporary geometry owns every attribute and index. The actual r186 cached RenderObject disposal therefore cannot delete an original source buffer."
+      },
+      "status": "Passed",
+      "audit": {
+        "depth": 0.024,
+        "checkpoints": [
+          {
+            "stage": "after123-before-renderer",
+            "ok": true,
+            "violations": []
+          },
+          {
+            "stage": "renderer-ready-before-first-frame",
+            "ok": true,
+            "violations": []
+          },
+          {
+            "stage": "first-native-webgpu-frame",
+            "ok": true,
+            "violations": []
+          },
+          {
+            "stage": "after-all-native-views",
+            "ok": true,
+            "violations": []
+          },
+          {
+            "stage": "before-release",
+            "ok": true,
+            "violations": []
+          },
+          {
+            "stage": "after-release-before-source-render",
+            "ok": true,
+            "violations": []
+          },
+          {
+            "stage": "restored-source-native-frame",
+            "ok": true,
+            "violations": []
+          }
+        ],
+        "nativeIndexWidenings": {
+          "array_count": 56,
+          "first": [
+            {
+              "stage": "first-native-webgpu-frame",
+              "labels": [
+                {
+                  "mesh": "scleral-globe",
+                  "attribute": "index",
+                  "scope": "source"
+                }
+              ],
+              "before": {
+                "type": "Uint16Array",
+                "length": 3180,
+                "bytes": 6360,
+                "hash": "5febe0289cffd3f173d2497b4f77bc8cb44062ace455f513a6d1558283899b74",
+                "version": 0,
+                "itemSize": 1,
+                "count": 3180,
+                "normalized": false
+              },
+              "after": {
+                "type": "Uint32Array",
+                "length": 3180,
+                "bytes": 12720,
+                "hash": "8398a94c7e39f3f1bf282f6bd9448dd3ed6dedcc3aabd84ab26276bde1d22450",
+                "version": 0,
+                "itemSize": 1,
+                "count": 3180,
+                "normalized": false
+              },
+              "originalArrayHashNow": "5febe0289cffd3f173d2497b4f77bc8cb44062ace455f513a6d1558283899b74",
+              "originalArrayBytesUnchanged": true,
+              "sameOriginalArrayReference": false,
+              "versionChanged": false,
+              "indexValuesCompared": 3180,
+              "indexValueMismatches": 0,
+              "indexValuesExact": true,
+              "firstIndexMismatches": [],
+              "classification": "verified-native-index-widening"
+            },
+            {
+              "stage": "first-native-webgpu-frame",
+              "labels": [
+                {
+                  "mesh": "brown-iris-and-pupil",
+                  "attribute": "index",
+                  "scope": "source"
+                }
+              ],
+              "before": {
+                "type": "Uint16Array",
+                "length": 15360,
+                "bytes": 30720,
+                "hash": "cc53314da9d6fd09683a411b1eb3e4db826f9cbb14b34cd901f021eee6c605a5",
+                "version": 0,
+                "itemSize": 1,
+                "count": 15360,
+                "normalized": false
+              },
+              "after": {
+                "type": "Uint32Array",
+                "length": 15360,
+                "bytes": 61440,
+                "hash": "1d1902bb72cb6ed9c001102ca268cfc35c919229e8e0dc623b72fb145d83451c",
+                "version": 0,
+                "itemSize": 1,
+                "count": 15360,
+                "normalized": false
+              },
+              "originalArrayHashNow": "cc53314da9d6fd09683a411b1eb3e4db826f9cbb14b34cd901f021eee6c605a5",
+              "originalArrayBytesUnchanged": true,
+              "sameOriginalArrayReference": false,
+              "versionChanged": false,
+              "indexValuesCompared": 15360,
+              "indexValueMismatches": 0,
+              "indexValuesExact": true,
+              "firstIndexMismatches": [],
+              "classification": "verified-native-index-widening"
+            },
+            {
+              "stage": "first-native-webgpu-frame",
+              "labels": [
+                {
+                  "mesh": "transparent-corneal-dome",
+                  "attribute": "index",
+                  "scope": "source"
+                }
+              ],
+              "before": {
+                "type": "Uint16Array",
+                "length": 15360,
+                "bytes": 30720,
+                "hash": "cc53314da9d6fd09683a411b1eb3e4db826f9cbb14b34cd901f021eee6c605a5",
+                "version": 0,
+                "itemSize": 1,
+                "count": 15360,
+                "normalized": false
+              },
+              "after": {
+                "type": "Uint32Array",
+                "length": 15360,
+                "bytes": 61440,
+                "hash": "1d1902bb72cb6ed9c001102ca268cfc35c919229e8e0dc623b72fb145d83451c",
+                "version": 0,
+                "itemSize": 1,
+                "count": 15360,
+                "normalized": false
+              },
+              "originalArrayHashNow": "cc53314da9d6fd09683a411b1eb3e4db826f9cbb14b34cd901f021eee6c605a5",
+              "originalArrayBytesUnchanged": true,
+              "sameOriginalArrayReference": false,
+              "versionChanged": false,
+              "indexValuesCompared": 15360,
+              "indexValueMismatches": 0,
+              "indexValuesExact": true,
+              "firstIndexMismatches": [],
+              "classification": "verified-native-index-widening"
+            }
+          ],
+          "last": {
+            "stage": "restored-source-native-frame",
+            "labels": [
+              {
+                "mesh": "naris-1",
+                "attribute": "index",
+                "scope": "source"
+              }
+            ],
+            "before": {
+              "type": "Uint16Array",
+              "length": 2880,
+              "bytes": 5760,
+              "hash": "55f4e99ba248bc0fdab6f38ebc1f49ae9799e424fe4b0beca114b39c07fbd69c",
+              "version": 0,
+              "itemSize": 1,
+              "count": 2880,
+              "normalized": false
+            },
+            "after": {
+              "type": "Uint32Array",
+              "length": 2880,
+              "bytes": 11520,
+              "hash": "3d53e50ba3575b19df80bae2eaf9cc87940ce44fba477da959a7e7c97990b1bb",
+              "version": 0,
+              "itemSize": 1,
+              "count": 2880,
+              "normalized": false
+            },
+            "originalArrayHashNow": "55f4e99ba248bc0fdab6f38ebc1f49ae9799e424fe4b0beca114b39c07fbd69c",
+            "originalArrayBytesUnchanged": true,
+            "sameOriginalArrayReference": false,
+            "versionChanged": false,
+            "indexValuesCompared": 2880,
+            "indexValueMismatches": 0,
+            "indexValuesExact": true,
+            "firstIndexMismatches": [],
+            "classification": "verified-native-index-widening"
+          }
+        },
+        "sourceMeshes": 64,
+        "metrics": {
+          "version": "bounded-canonical-nose-depth-123",
+          "depth": 0.024,
+          "applied": true,
+          "frame": {
+            "samples": 4359,
+            "perMesh": [
+              {
+                "name": "continuous-face",
+                "samples": 3281,
+                "frontSamples": 1615,
+                "rearSamples": 1666
+              },
+              {
+                "name": "naris--1",
+                "samples": 539,
+                "frontSamples": 539,
+                "rearSamples": 0
+              },
+              {
+                "name": "naris-1",
+                "samples": 539,
+                "frontSamples": 539,
+                "rearSamples": 0
+              }
+            ],
+            "commonOffsetXY": [
+              -0.23351908347203226,
+              -0.04008513799954797
+            ],
+            "maximumResidual": 8.010219195581092e-08,
+            "tolerance": 6e-07,
+            "canonicalXGradientHead": [
+              1,
+              0,
+              0
+            ],
+            "canonicalYGradientHead": [
+              0,
+              1.0638297872340425,
+              0
+            ],
+            "fittedSlopes": false
+          },
+          "changedVertices": 2622,
+          "privateGeometryCount": 3,
+          "privateAttributeBytes": 7560572,
+          "positionNormalBytes": 2686776,
+          "unchangedAttributeIndexBytes": 4873796,
+          "minimumJacobian": 1,
+          "maximumJacobian": 1,
+          "guaranteedMinimumJacobian": 0.775,
+          "maximumHeadDisplacement": 0.024,
+          "maximumAnatomicalXYRoundoff": 6.661335103726285e-19,
+          "maximumNormalLengthError": 4.349310200879586e-08,
+          "zeroNormalsPreserved": 2,
+          "perMesh": [
+            {
+              "name": "continuous-face",
+              "vertices": 110871,
+              "triangles": 218608,
+              "changedVertices": 1544,
+              "localXYChangedValues": 0,
+              "meshToHead": [
+                1,
+                1.214306433183765e-17,
+                0,
+                0,
+                1.214306433183765e-17,
+                1,
+                0,
+                0,
+                2.7755575615628914e-17,
+                0,
+                1,
+                0,
+                1.6653345369377348e-16,
+                0,
+                0,
+                1
+              ],
+              "headToMesh": [
+                1,
+                -1.214306433183765e-17,
+                0,
+                0,
+                -1.214306433183765e-17,
+                1,
+                0,
+                0,
+                -2.7755575615628914e-17,
+                3.3703774026776627e-34,
+                1,
+                0,
+                -1.6653345369377348e-16,
+                2.0222264416065976e-33,
+                0,
+                1
+              ]
+            },
+            {
+              "name": "naris--1",
+              "vertices": 539,
+              "triangles": 960,
+              "changedVertices": 539,
+              "localXYChangedValues": 0,
+              "meshToHead": [
+                1,
+                1.214306433183765e-17,
+                0,
+                0,
+                1.214306433183765e-17,
+                1,
+                0,
+                0,
+                2.7755575615628914e-17,
+                0,
+                1,
+                0,
+                1.6653345369377348e-16,
+                0,
+                0,
+                1
+              ],
+              "headToMesh": [
+                1,
+                -1.214306433183765e-17,
+                0,
+                0,
+                -1.214306433183765e-17,
+                1,
+                0,
+                0,
+                -2.7755575615628914e-17,
+                3.3703774026776627e-34,
+                1,
+                0,
+                -1.6653345369377348e-16,
+                2.0222264416065976e-33,
+                0,
+                1
+              ]
+            },
+            {
+              "name": "naris-1",
+              "vertices": 539,
+              "triangles": 960,
+              "changedVertices": 539,
+              "localXYChangedValues": 0,
+              "meshToHead": [
+                1,
+                1.214306433183765e-17,
+                0,
+                0,
+                1.214306433183765e-17,
+                1,
+                0,
+                0,
+                2.7755575615628914e-17,
+                0,
+                1,
+                0,
+                1.6653345369377348e-16,
+                0,
+                0,
+                1
+              ],
+              "headToMesh": [
+                1,
+                -1.214306433183765e-17,
+                0,
+                0,
+                -1.214306433183765e-17,
+                1,
+                0,
+                0,
+                -2.7755575615628914e-17,
+                3.3703774026776627e-34,
+                1,
+                0,
+                -1.6653345369377348e-16,
+                2.0222264416065976e-33,
+                0,
+                1
+              ]
+            }
+          ],
+          "elapsedMs": 196.69999999552965
+        },
+        "geometry": {
+          "depth": 0.024,
+          "targetMeshes": [
+            {
+              "name": "continuous-face",
+              "vertices": 110871,
+              "triangles": 218608,
+              "changedVertices": 1544
+            },
+            {
+              "name": "naris--1",
+              "vertices": 539,
+              "triangles": 960,
+              "changedVertices": 539
+            },
+            {
+              "name": "naris-1",
+              "vertices": 539,
+              "triangles": 960,
+              "changedVertices": 539
+            }
+          ],
+          "changedVertices": 2622,
+          "outsideSupportPositionOrNormalChanges": 0,
+          "localXYChangedValues": 0,
+          "maximumAnatomicalXYError": 6.938893903907228e-18,
+          "maximumPositionMapError": 2.9796762908589395e-08,
+          "maximumUnitNormalError": 4.83325498512599e-08,
+          "minimumJacobian": 1,
+          "authoredShadingNormalTransport": {
+            "samples": 2620,
+            "maximumComponentError": 2.979536839475827e-08,
+            "maximumAngleDegrees": 2.699869328381916e-06,
+            "comparison": "Stored shading normals vs independent cofactor inverse-transpose of those same authored normals. This does not assert agreement with flat geometric normals."
+          },
+          "geometricFiniteDifference": {
+            "triangles": 5408,
+            "maximumAngleDegrees": 0.004120284638645522,
+            "maximumCanonicalTangentResidual": 1.1920928956465904e-07,
+            "comparison": "Central differences of the continuous displaced position on each actual source triangle, parameterized by its actual barycentric position and UV interpolation, vs transported original flat triangle normal. Float32 UV-position residuals are reported separately."
+          },
+          "updatedTriangleOrientation": {
+            "triangles": 5408,
+            "preexistingDegenerateTriangles": 96,
+            "newlyDegenerateTriangles": 0,
+            "invertedTriangles": 0,
+            "minimumDot": 0.999899862073302,
+            "minimumAreaRatio": 0.8805126246761554,
+            "comparison": "Actual deformed endpoint triangle cross product vs transported original flat triangle normal at its centroid. This checks endpoint mesh orientation separately from the continuous-field finite difference."
+          },
+          "bounds": [
+            {
+              "name": "continuous-face",
+              "min": [
+                -1.034024953842163,
+                -1.1462851762771606,
+                -0.7688086032867432
+              ],
+              "max": [
+                0.5669867992401123,
+                1.4999147653579712,
+                0.7818939089775085
+              ],
+              "sphereRadius": 1.3384549501764476,
+              "maximumSphereExcess": 0
+            },
+            {
+              "name": "naris--1",
+              "min": [
+                -0.38251909613609314,
+                -0.5581135749816895,
+                0.6440867185592651
+              ],
+              "max": [
+                -0.3105190694332123,
+                -0.5336440801620483,
+                0.6755638718605042
+              ],
+              "sphereRadius": 0.03831301434495282,
+              "maximumSphereExcess": 0
+            },
+            {
+              "name": "naris-1",
+              "min": [
+                -0.1565190851688385,
+                -0.5581135749816895,
+                0.6440867185592651
+              ],
+              "max": [
+                -0.08451908081769943,
+                -0.5336440801620483,
+                0.6755638718605042
+              ],
+              "sphereRadius": 0.038313017815394604,
+              "maximumSphereExcess": 0
+            }
+          ],
+          "narisAttachment": {
+            "vertices": 1078,
+            "supportTriangles": 208,
+            "missedVertices": 0,
+            "minimumOriginalGapZ": 0.0015979158710981434,
+            "minimumDeformedGapZ": 0.0016058433755882229,
+            "maximumOriginalGapZ": 0.002156121591278426,
+            "maximumGapChangeZ": 8.524507297191786e-05,
+            "maximumProjectedXYSeparationChange": 0,
+            "scope": "Same-UV head-Z overlay separation against actual original/deformed continuous-face triangles. The finite nonzero gap change is endpoint resampling, not a change of UV registration."
+          }
+        },
+        "cleanup": {
+          "released": true,
+          "privateGeometriesDisposed": 3,
+          "privateAttributeBytesReleased": 7560572,
+          "sourceGeometryReferencesRestored": true,
+          "sourceBytesUnchanged": true,
+          "disposalEvents": [
+            {
+              "mesh": "continuous-face",
+              "attributes": 5,
+              "originalBindings": 0
+            },
+            {
+              "mesh": "naris--1",
+              "attributes": 5,
+              "originalBindings": 0
+            },
+            {
+              "mesh": "naris-1",
+              "attributes": 5,
+              "originalBindings": 0
+            }
+          ],
+          "nativeIndexByteDeltaAtRelease": 1409586,
+          "resources": "Temporary geometry owns every attribute and index. The actual r186 cached RenderObject disposal therefore cannot delete an original source buffer."
+        }
+      }
+    }
+  ],
+  "full_report": "review/nose-depth123-native-result.json"
+}

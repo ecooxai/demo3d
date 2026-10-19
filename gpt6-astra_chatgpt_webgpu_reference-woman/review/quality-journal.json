@@ -4,8 +4,8 @@
   "goal_achieved": false,
   "method": "Visual self-assessment against the sole uploaded image, supplemented by independent agent review. Scores are subjective and are not a certification of AAA production quality.",
   "scope": "Recorded assessments whose numeric results remain available. No missing historical scores have been invented.",
-  "current_accepted_iteration": 122,
-  "current_accepted_score": 76,
+  "current_accepted_iteration": 133,
+  "current_accepted_score": 77,
   "assessments": [
     {
       "iteration": 20,
@@ -652,6 +652,124 @@
       "reviewer": "root and quality_review_42",
       "decision": "accepted half-strength guide placement; full75 rejected; integrated into122 composition",
       "notes": "Shared C2 depth field rebuilds146 front/curl/inner guides and4 verified-clear side guides154/155/166/167 before original swept sections/dependent fine paths. Original section axes pass through the field Jacobian, preserving MASS XY and interlayer depth offsets; guides/back/upper crown/fringe/materials/UV/color/topology protected. Native0/.5/1 all5views favorshalf: modestly narrower hair-to-blouse sidegap with front/detail/back effectivelystable. Full adds rightprofile secondaryS/zig bends and bright detachedcurledtips plus repeatedfrontlower slits. Mild has traceeffects but staysrestrained. Sourcehalf0new separatedguideoverlaps/0reversals, both0newworsenedclothpenetrations in24492ringsamples;full1overlap.004464 notadopted. Nativefit756.4/756.6ms, construction1828.2/1852.8ms versus1028.3baseline;heap303/322/316MiB, WebGPUtrue/errors[]. All64meshes1160364verts1492787tri unchanged, hair1114888tri52.49MiB, nativeprotectedhashesexact. Overall76 remains; largeunsupportedcrescent and broadlockstructure remain."
+    },
+    {
+      "iteration": 125,
+      "score": 74,
+      "reviewer": "root and quality_review_42",
+      "decision": "not adopted; half75 and full74, retain standard material response",
+      "notes": "Original two shifted longitudinal reflection lobes blended with existing direct specular on CROWN and MASS, with UV0 derivative fiber direction. Source geometry/UV/color/index/maps/alpha/physicalproperties unchanged, zeroextra geometry/maps/drawcalls; inherited indirectillumination preserved. Native0/physicalNodecontrol/half/full all5views plus relitfront: half/full emphasize shiny broad frontpanels, dark profilelayersteps and large dark rearbands; stronger response doesnotresolve coating/clumpstructure. NativeWebGPUtrue/errors[]; materialconstruction.8/.9/.7ms,heaps325.45/324.02/330.32/334.99MiB. Controlnode conversion sourcecompositorhashesexactall5 at4320000RGBAbytes each; cleanuprestores2sourcematerialrefs withunchanged geometry. Initialsource-onlyPhysicalLightingModel import mixed twoTSLregistries andfailedWGSL; corrected bywrapping rendererbundledsuper.setupLightingModel().direct. No WebGL/exportextension work warranted afterartrejection. Production122plus118.5 remains76."
+    },
+    {
+      "iteration": 128,
+      "score": 77,
+      "reviewer": "root and glb_export_repair",
+      "decision": "accepted Neutral tone mapping at exposure1.4",
+      "notes": "Native comparison of ACES1, Neutral1.4, Neutral1.7 and AgX1.6 uses identical live122 plus118.5 geometry, source maps, materials and lights. All four modes rendered front/detail/bothprofiles/back at900x1200 withAA2 and nativeWebGPU; noerrors. Root and independent review select Neutral1.4 for warmer peach skin, clearer brown iris/pink lips, white cotton with cool shadows and stronger separation from dark hair. Existing forehead pinkness and far-eye socket shadow remain visible. Neutral1.7 adds excessive brightness/pinkness without detail gain, score76; AgX1.6 washes out separation, score74. Heaps326.821/320.139/331.649/325.169MiB. Tone-only source change, no added geometry/maps/perframework. Overall77 is a modest display gain; hair structure and facial realism remain far below the requested95/98 target. Focused explicitWebGL AA2front/detail andAA1front passed mapping7/exposure1.4,900x1200 output,1800x2400/900x1200 internal dimensions, restored target and noerrors. Root viewed all3. Actual ANGLE Metal Apple Paravirtual device. WarmAA2 CPU submission1.8/1.6ms; firstAA1 program transition227.7ms on corrected run (initial cold run3204.8ms), not GPU frame timing. Initial soleerror was observedfavicon.ico404; blank inline icon declaration resolves it. No automatic backend fallback."
+    },
+    {
+      "iteration": 124,
+      "score": 74,
+      "reviewer": "root and hair_groom_director",
+      "decision": "rejected; preserve accepted118 upper hair",
+      "notes": "Shared24 root-to-fringe families and1565thin strands replace old fringe and withdraw4904oldcrownalpha values. Nativeoff/on all5views+junction and2old-cap-isolations expose broad smooth matte brown plates, alternating glossy islands/teeth beside part, many similarly pointed brush groups and a straight near-side diagonal edge. Isolation barely changes these defects; newcoverage itself forms the cap. Bothprofiles show upperfront patch; no lower/back benefit. Nativeconstruction1826.5/1898.3ms,heaps341.506/335.802MiB,1072144hairtri51.75MiB,WebGPUtruefinitegeometryerrors[]. SourceMASS/protectedDETAILexact;rootattachments<=.000831 but safe source paths do not establish likeness.129 will bury coverage under strongly retained crown and use fewer dominant bowed families."
+    },
+    {
+      "iteration": 123,
+      "score": 77,
+      "reviewer": "root and glb_export_repair",
+      "decision": "not adopted; retain zero nasal depth",
+      "notes": "Bounded canonicalUV posterior shift0/.012/.024 of continuousface plusbothnaris changes2622vertices atnonzero depth. Nativeall3 fiveviews+matchednose/quartercloseups andrestoredfronts passsourceimmutability,frame,normal,attachmentandcleanupchecks,WebGPUtruebrowsererrors[]idle0. Root+independent art review find only faint tip/profile changes and no repeatable ordinaryfront/detail likeness gain; sourcehasnoprofileevidence tojustify furtherflattening. Actualnative orientationmin.9999758/.9998999,geometricfinitedifferenceanglemax.001855/.004120deg,narisgapchangemax.00004262/.00008525,allpositive. Eachactivecaseowns7560572B temporarygeometry,3privategeometriesdisposed/sourcebuffersrestored. Geometrysafe is not art gain. Fullnativehashreport retained separately; compactsummary explicitly truncates large evidence arrays."
+    },
+    {
+      "iteration": 130,
+      "score": 77,
+      "reviewer": "root and glb_export_repair",
+      "decision": "accepted hiding the independent closed-mouth-crease tube; outer lip repair pending",
+      "notes": "Nativevisibility-only0/1 front/detail/nose/nose-quarter with matched123camera isolates one exactnamedmesh. Hidingit removes the near-straight pale stroke entirely while retaining the irregular photographed dark closure andexpression; ordinarydetail improves slightly. Lowerlip outerborder remains a separate visiblepatch and isnotclaimedfixed. Sourcegeometry/maps/materials unchanged, originalvisibilityrestoredinreview, WebGPUtrueAA2Neutral1.4errors[]. Productionhidesitonceinsidecachedpreparation, preservingreferenceclosure andfaceanchors. Overall77 unchanged; geometry-onlyouterlipcontinuity remains inprogress."
+    },
+    {
+      "iteration": 126,
+      "score": 76,
+      "reviewer": "root and quality_review_42",
+      "decision": "rejected shared lower-clump channels; retain accepted130 at77",
+      "notes": "All12 native off/on front, detail, left, right, back and relit-front captures inspected against image1. Channels add thin corrugation and brighter separated cuts without replacing broad repeated lock arrangement or improving likeness. Profiles slightly regress; front approximately tied. Protected detail/back stable. Native WebGPU true, browser errors empty. On costs62,224 extra triangles and2.04 MiB, construction1904.1 to1974.3 ms. No integration or further tuning justified."
+    },
+    {
+      "iteration": 129,
+      "score": 75,
+      "reviewer": "root and hair_groom_director",
+      "decision": "rejected retained-root fringe replacement; retain accepted130 at77",
+      "notes": "All12 native off/on five-view and junction comparisons inspected. Burial restores upper crown fine texture and sheen relative to rejected124, but the release remains a blunt scalloped opaque band. Five dominant groups become broad, nearly straight brush swaths, with a rectangular near-side veil and similarly high ends. Accepted108 bows are more natural. Lower hair/back broadly stable. Native WebGPU true, no errors, construction1913 to1944.6 ms;1056592 hair triangles and50.93 MiB versus1114888 and52.49. No coverage-export audit after art rejection."
+    },
+    {
+      "iteration": 131,
+      "score": 76,
+      "reviewer": "root and quality_review_42",
+      "decision": "rejected hair-only contact compression; retain strength0 at77",
+      "variants": {
+        "0": 77,
+        "0.65": 76,
+        "0.90": 73
+      },
+      "notes": "All15 native three-strength five-view captures inspected. Strength.65 materially narrows the unsupported profile gap, but lower locks flatten into thin sheets, the shoulder bend sharpens, and the right profile gains a diagonal fold. Front loses relief and gains bright openings. Strength.90 accentuates long slits and broad highlight bands. Detail/back stable. Positive continuous Jacobian minima.35/.10 do not certify separate triangulated surfaces; no actual triangle/cloth audit executed because overall visual rejection was already established. Helper measured173.4 to177.9 ms, no retained extra geometry/maps or per-frame work, WebGPU true and no errors."
+    },
+    {
+      "iteration": 130,
+      "score": 77,
+      "reviewer": "root and glb_export_repair",
+      "decision": "accepted full outer-lip continuity geometry after accepted tube removal",
+      "variants": {
+        "0": 77,
+        "0.5": 77,
+        "1": 77
+      },
+      "notes": "Root and independent reviewer inspected all21 native front, detail, left, right, back, nose and quarter closeups for0/.5/1. Full1 most clearly softens the artificial lower-lip boundary, with a modest ordinary-detail improvement and unchanged expression, seam, fixed corners and profiles. Thin curved upper-lip highlight becomes stronger and remains unresolved; no whole-portrait score increase. Native allcasesWebGPU true, browsererrors empty, idle0. Full changes966 positions and1164 normals, maximum anatomical depth pull.0050536054, minimum sampled real face clearance.0009933101, projected flips0; source UV/color/index/maps/materials exact. Separate authored boundary-normal residual13.0778deg is explicitly distinguished from analytic inverse-transpose transport. Two private geometries189496B; source references and original bytes restored after isolatedQA. Helpers24.9ms half/24ms full. Production applies once after illumination within cachedpreparation, preserving resulting geometry across backend switches. One bounded material-edge study135 is pending."
+    },
+    {
+      "iteration": 133,
+      "score": 77,
+      "reviewer": "root and hair_groom_director",
+      "decision": "accepted principal diagonal fringe enabled; no integer score increase",
+      "variants": {
+        "0": 77,
+        "1": 77
+      },
+      "notes": "All14 native off/on front, detail, profiles, back and junction captures plus isolated group0 detail/profile inspected by both reviewers. The longer image-left principal lock crosses the outer brow toward the cheek with shorter companions, closer to source hierarchy. It stays close to forehead/temple/cheek without the114 strap or a new hook. Other fringe groups and crown/long lengths/back remain stable. Cap, part wedge, ordered fine strands and light upper-ear coverage remain limiting. Native WebGPU true, browser errors empty, nonfinite0; construction1886.3 to1952.2ms, geometry52.49MiB and1114888 hair triangles unchanged. Group0 replaces only223 emitted strands, roots exact and measured root tangent deviation max.0364deg; inherited upper root transition gap.2005 and two samples outside support domains explicitly remain. Production enables diagonalFringe133:1 on unchanged accepted guide.5/contact.35, full130 lips and Neutral1.4."
+    },
+    {
+      "iteration": 134,
+      "score": 77,
+      "reviewer": "root and hair_groom_director",
+      "decision": "retain current cornea mode0; no useful likeness gain from response removal or cornea hiding",
+      "variants": {
+        "0": 77,
+        "1": 77,
+        "2": 77
+      },
+      "notes": "Both reviewers inspected all21 matched five-view, eye closeup and sculpture-light detail captures. Mode1 changes only corneal specular/env response to0; mode2 hides only corneas diagnostically. Prominent white eye catchlights remain and ordinary likeness does not improve. This does not establish the origin of every catchlight. Exactly two corneas and irises verified, sixteen protected eye arrays/refs and original textures unchanged. Native WebGPU true, Neutral1.4 AA2, browser errors empty; all restored front PNGs match baseline hash9d61e0d2c56759b580310c04070287d83f2b2dcbe2fc679ac1ac84c9ae16d445. No production eye changes or further cornea sweep."
+    },
+    {
+      "iteration": 132,
+      "score": 76,
+      "reviewer": "root and quality_review_42",
+      "decision": "rejected registered full-detail crown RGB replacement; retain original100 crown and accepted133 at77",
+      "variants": {
+        "0": 77,
+        "1": 76
+      },
+      "notes": "All12 native off/on five-view and alternate-key/fill detail captures inspected by both reviewers. Full original-resolution registered source RGB survives as broken dark dashes and soft elongated islands beneath unchanged root layers, with too little coherent fine detail. Broad cap highlight and hard part remain dominant, and alternate light makes the disconnect more apparent. Profile changes restrained and back visually stable; no geometry regression. Native WebGPU true, accepted Neutral1.4, all protected mesh attributes/materials/coverage/normal/foundation fingerprints matched and browser errors empty. Helper507.9ms, bake444.9ms,352519 mapped texels, heap342.589 to368.814MiB, no extra retained textures or attributes. Source-mask correction limited to visually confirmed exterior vertices; remaining edge contribution below.00041linear documented. No half-strength or export audit after art rejection."
+    },
+    {
+      "iteration": 135,
+      "score": 77,
+      "reviewer": "root and glb_export_repair",
+      "decision": "retain full130 geometry with original lip material; edge response map gives no useful visual gain",
+      "variants": {
+        "0": 77,
+        "1": 77
+      },
+      "notes": "All14 matched front/detail/profiles/back/nose/nose-quarter captures reviewed by both reviewers against image1. Edge roughness/clearcoat blend slightly softens response in the quarter closeup, but thin curved upper-lip band remains; ordinary likeness and boundary gain are unconvincing. Expression, central wet highlights and profiles stable. Native WebGPU true, browser errors empty, helper1.4ms, idle0; original position/normal/UV0/color/index arrays and maps exact. Test owns two216968B private geometries, two materials and one65536B RGBA8 map with texel-centered UV1. Source refs restored and private resources fully disposed, zero originals disposed. Successful bounded technical comparison is not an artistic gain; no integration, new material sweep or export audit."
     }
   ]
 }

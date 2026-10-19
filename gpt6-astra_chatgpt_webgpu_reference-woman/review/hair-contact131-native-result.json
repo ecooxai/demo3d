@@ -1,0 +1,232 @@
+[
+  {
+    "iteration": 131,
+    "strength": 0,
+    "nativeWebGPU": true,
+    "display": {
+      "mapping": 7,
+      "exposure": 1.4
+    },
+    "compression": {
+      "version": "monotone-hair-contact-131",
+      "strength": 0,
+      "applied": false
+    },
+    "guidePlacement": 0.5,
+    "triangles": 1114888,
+    "geometryMiB": 52.49,
+    "resolution": [
+      900,
+      1200
+    ],
+    "antialiasing": 2,
+    "heapMiB": 327.3846769332886,
+    "idleFrames": 0,
+    "captures": [
+      "output/qa/compression131-0-front.png",
+      "output/qa/compression131-0-detail.png",
+      "output/qa/compression131-0-left.png",
+      "output/qa/compression131-0-right.png",
+      "output/qa/compression131-0-back.png"
+    ],
+    "errors": []
+  },
+  {
+    "iteration": 131,
+    "strength": 0.65,
+    "nativeWebGPU": true,
+    "display": {
+      "mapping": 7,
+      "exposure": 1.4
+    },
+    "compression": {
+      "version": "monotone-hair-contact-131",
+      "strength": 0.65,
+      "applied": true,
+      "pinModelY": 1.31,
+      "fullModelY": 0.55,
+      "hingeWidth": 0.035,
+      "conservativeMinimumJacobian": 0.35,
+      "minimumJacobian": 0.3499999999999993,
+      "maximumModelPull": 0.39344740174281106,
+      "meshes": 5,
+      "changedMeshes": 2,
+      "vertices": 955385,
+      "changedVertices": 184534,
+      "protectedUpperVertices": 672512,
+      "unchangedBelowSupport": 98339,
+      "stagingBytes": 19331280,
+      "zeroNormalsPreserved": 0,
+      "maximumNormalLengthError": 4.505087425332732e-8,
+      "support": {
+        "grid": [
+          39,
+          34
+        ],
+        "step": 0.12,
+        "sampledHits": 730,
+        "clearance": 0.032,
+        "envelopeMargin": 0.01,
+        "temporaryFieldBytes": 31824,
+        "samplingMs": 104.90000000596046
+      },
+      "retainedExtraGeometryBytes": 0,
+      "retainedExtraTextureBytes": 0,
+      "perFrameWork": false,
+      "meshChanges": [
+        {
+          "mesh": "Continuous parted crown with longitudinal fiber flow",
+          "vertices": 24455,
+          "changedVertices": 0,
+          "maximumModelPull": 0
+        },
+        {
+          "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+          "vertices": 159210,
+          "changedVertices": 42890,
+          "maximumModelPull": 0.39176062057709893
+        },
+        {
+          "mesh": "Independent fine crown lengths and silhouette strands",
+          "vertices": 646260,
+          "changedVertices": 141644,
+          "maximumModelPull": 0.39344740174281106
+        },
+        {
+          "mesh": "Dense fine bowed brown fringe strands",
+          "vertices": 92568,
+          "changedVertices": 0,
+          "maximumModelPull": 0
+        },
+        {
+          "mesh": "Sparse short temple edge and hairline wisps",
+          "vertices": 32892,
+          "changedVertices": 0,
+          "maximumModelPull": 0
+        }
+      ],
+      "elapsedMs": 177.89999999850988,
+      "gradientCheck": {
+        "samples": 96,
+        "maximumGradientError": 4.5763167810797256e-8
+      }
+    },
+    "guidePlacement": 0.5,
+    "triangles": 1114888,
+    "geometryMiB": 52.49,
+    "resolution": [
+      900,
+      1200
+    ],
+    "antialiasing": 2,
+    "heapMiB": 342.75211811065674,
+    "idleFrames": 0,
+    "captures": [
+      "output/qa/compression131-65-front.png",
+      "output/qa/compression131-65-detail.png",
+      "output/qa/compression131-65-left.png",
+      "output/qa/compression131-65-right.png",
+      "output/qa/compression131-65-back.png"
+    ],
+    "errors": []
+  },
+  {
+    "iteration": 131,
+    "strength": 0.9,
+    "nativeWebGPU": true,
+    "display": {
+      "mapping": 7,
+      "exposure": 1.4
+    },
+    "compression": {
+      "version": "monotone-hair-contact-131",
+      "strength": 0.9,
+      "applied": true,
+      "pinModelY": 1.31,
+      "fullModelY": 0.55,
+      "hingeWidth": 0.035,
+      "conservativeMinimumJacobian": 0.09999999999999998,
+      "minimumJacobian": 0.0999999999999992,
+      "maximumModelPull": 0.5447733254900461,
+      "meshes": 5,
+      "changedMeshes": 2,
+      "vertices": 955385,
+      "changedVertices": 184534,
+      "protectedUpperVertices": 672512,
+      "unchangedBelowSupport": 98339,
+      "stagingBytes": 19331280,
+      "zeroNormalsPreserved": 0,
+      "maximumNormalLengthError": 4.564284838970423e-8,
+      "support": {
+        "grid": [
+          39,
+          34
+        ],
+        "step": 0.12,
+        "sampledHits": 730,
+        "clearance": 0.032,
+        "envelopeMargin": 0.01,
+        "temporaryFieldBytes": 31824,
+        "samplingMs": 108.60000000149012
+      },
+      "retainedExtraGeometryBytes": 0,
+      "retainedExtraTextureBytes": 0,
+      "perFrameWork": false,
+      "meshChanges": [
+        {
+          "mesh": "Continuous parted crown with longitudinal fiber flow",
+          "vertices": 24455,
+          "changedVertices": 0,
+          "maximumModelPull": 0
+        },
+        {
+          "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+          "vertices": 159210,
+          "changedVertices": 42890,
+          "maximumModelPull": 0.5424377823375215
+        },
+        {
+          "mesh": "Independent fine crown lengths and silhouette strands",
+          "vertices": 646260,
+          "changedVertices": 141644,
+          "maximumModelPull": 0.5447733254900461
+        },
+        {
+          "mesh": "Dense fine bowed brown fringe strands",
+          "vertices": 92568,
+          "changedVertices": 0,
+          "maximumModelPull": 0
+        },
+        {
+          "mesh": "Sparse short temple edge and hairline wisps",
+          "vertices": 32892,
+          "changedVertices": 0,
+          "maximumModelPull": 0
+        }
+      ],
+      "elapsedMs": 173.40000000596046,
+      "gradientCheck": {
+        "samples": 96,
+        "maximumGradientError": 6.336438951315415e-8
+      }
+    },
+    "guidePlacement": 0.5,
+    "triangles": 1114888,
+    "geometryMiB": 52.49,
+    "resolution": [
+      900,
+      1200
+    ],
+    "antialiasing": 2,
+    "heapMiB": 344.36381435394287,
+    "idleFrames": 0,
+    "captures": [
+      "output/qa/compression131-90-front.png",
+      "output/qa/compression131-90-detail.png",
+      "output/qa/compression131-90-left.png",
+      "output/qa/compression131-90-right.png",
+      "output/qa/compression131-90-back.png"
+    ],
+    "errors": []
+  }
+]

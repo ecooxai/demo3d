@@ -1,0 +1,50 @@
+Candidate131 independent native art decision
+
+Decision: retain strength0, accepted baseline77/100. Reject strength.65 at
+76/100 and strength.90 at73/100. The reduction in profile hair/cloth distance
+is real, but the combined appearance regresses. Goal98/minimum95 is unmet.
+
+Viewed with own vision: the sole reference/image1.png and all fifteen native
+review/compression131-{0,65,90}-{front,detail,left,right,back}.jpg captures.
+The scene uses accepted118.5 guide placement, updated130 face presentation,
+and display128 Neutral1.4. No external images or assets were used.
+
+Strength.65 has one useful local result: the large unsupported crescent
+between the front lengths and shirt materially narrows in both profiles.
+That improvement is more visible than the preceding118 translation study.
+It should not be dismissed merely because the full candidate is rejected.
+
+However, the hanging lengths become conspicuously thin in profile and the
+shoulder-to-length bend becomes harder. The right profile develops a broad
+diagonal fold/overlap around its lower turn. The front view becomes flatter
+and smoother, losing some of the previous strand relief while adding small
+bright openings in the lower locks. The result trades a depth-placement
+problem for a pressed-sheet appearance, with no overall likeness gain.
+
+Strength.90 magnifies those defects. Long bright slits open through the
+right-hand frontal length, broad highlight bands become more conspicuous,
+and both profiles show severe thinning. The diagonal lower fold on the right
+profile is particularly obvious. This is a clear visual rejection.
+
+Detail and back show no gross protected-region change. The unchanged crown
+cap, broad rear curtain, repetitive lock structure, and limited cloth detail
+remain important limitations in both baseline and candidates.
+
+Technical scope: native WebGPU ran without reported page errors. The helper
+took approximately173-178ms with no retained extra geometry/maps or per-frame
+work. Reported continuous Jacobian minima are.35 and.10, with maximum modelZ
+pulls.393 and.545 at strengths.65 and.90 respectively. These are runtime
+metrics supplied by root, not reasons to raise the art score.
+
+The continuous monotonicity bound is distinct from actual triangulated
+intersection safety. It preserves continuous pointwise depth order; it does
+not prove that separate linear triangles preserve all interval ordering or
+that the interpolated garment support clears every actual cloth triangle.
+No131 actual-triangle interval or cloth penetration audit was executed.
+Root explicitly stopped that optional follow-up after agreement on visual
+rejection. The visible slits/folds are therefore not classified here as
+proven triangle crossings, cloth penetrations, or purely lighting artifacts.
+
+Keep131 frozen as a rejected placement study. No strength tuning, export
+work, new implementation, or additional source safety audit is warranted
+for adopting these rendered variants. No production files were changed.

@@ -1,0 +1,44 @@
+{
+  "metrics": {
+    "zeroGeometryByteIdentical": true,
+    "nonfinite": 0,
+    "maxNormalError": 4.9655871747766867e-8,
+    "zeroNormals": 3,
+    "baselineZeroNormals": 3,
+    "protectedComponents": 3,
+    "protectedMassAttributes": 0,
+    "protectedMassIndices": 0,
+    "protectedUpperMassPosition": 0,
+    "protectedUpperMassNormal": 0,
+    "protectedUpperFinePosition": 0,
+    "protectedUpperFineNormal": 0,
+    "rearMassPositions": 0,
+    "protectedFineAttributes": 0,
+    "maxOriginalRingXY": 0,
+    "maxOriginalRingRecession": 0.023043036460876465,
+    "negativeRecession": 0,
+    "maxFineRawDelta": [
+      0.02601909637451172,
+      0.04189586639404297,
+      0.03346288204193115
+    ],
+    "massTriangleZeros": 0,
+    "baselineMassTriangleZeros": 0
+  },
+  "clearance": {
+    "samples": 16359,
+    "newPenetrations": 0,
+    "worsenedInherited": 0,
+    "minBefore": 0.03445928991748102,
+    "minAfter": 0.03441251802874346,
+    "maxWorsening": 0.02065654784431986
+  },
+  "envelope": {
+    "samples": 16359,
+    "outsideFront": 15,
+    "outsideRear": 0,
+    "maxFrontExcess": 0.00043959565892925934,
+    "maxRearExcess": 0,
+    "noOwnHit": 0
+  }
+}

@@ -1,0 +1,144 @@
+[
+  {
+    "iteration": 133,
+    "strength": 0,
+    "nativeWebGPU": true,
+    "result": {
+      "version": "single-diagonal-fringe-133",
+      "strength": 0
+    },
+    "guidePlacement": 0.5,
+    "hairTriangles": 1114888,
+    "geometryMiB": 52.49,
+    "constructionMs": 1886.3,
+    "nonfinite": 0,
+    "internal": {
+      "scale": 2,
+      "width": 1800,
+      "height": 2400
+    },
+    "heapMiB": 334.1142053604126,
+    "junctionCamera": {
+      "target": [
+        0.29285887950441863,
+        3.972420729025267,
+        0.5736519824648958
+      ],
+      "zoom": 1.9
+    },
+    "captures": [
+      {
+        "view": "front",
+        "path": "output/qa/fringe133-0-front.png",
+        "sha256": "bf98c11a6dd20502c0f4c1520ef2e85dcab3ce2baed776dc6f7d5273cd20ff47"
+      },
+      {
+        "view": "detail",
+        "path": "output/qa/fringe133-0-detail.png",
+        "sha256": "0e083c162acdef681d7b7f10d18dd72171f3e21c7bb3e2337bebb356f3c3bf08"
+      },
+      {
+        "view": "left",
+        "path": "output/qa/fringe133-0-left.png",
+        "sha256": "80ec13df79ada59e24e8af7c7c767a38b7936fcfac6590b14fa755c84251435c"
+      },
+      {
+        "view": "right",
+        "path": "output/qa/fringe133-0-right.png",
+        "sha256": "e8a8089da4cc5712cd9ffbce76c8d5180e8750f9a05bf4b28ff304a0e4bd6eff"
+      },
+      {
+        "view": "back",
+        "path": "output/qa/fringe133-0-back.png",
+        "sha256": "9c583f8df61e69b21167c2478cc7e96f9d60a8e76143036fd99c6e8e2f44df0d"
+      },
+      {
+        "view": "junction",
+        "path": "output/qa/fringe133-0-junction.png",
+        "sha256": "d687dc4c45e98e7c2d7f9ab27b0508d8fa739340587900041102274032c92489"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "iteration": 133,
+    "strength": 1,
+    "nativeWebGPU": true,
+    "result": {
+      "version": "single-diagonal-fringe-133",
+      "strength": 1,
+      "sourceSlots": 270,
+      "principal": 220,
+      "shortCompanions": 23,
+      "templeCompanions": 27,
+      "maximumInverseError": 2.3743689917554835e-12,
+      "maximumStartCorrection": 0.1406854161925681,
+      "minimumEndY": -0.5196300140244272,
+      "maximumEndY": 0.28319607279030606,
+      "vertices": 19131,
+      "indices": 82560
+    },
+    "guidePlacement": 0.5,
+    "hairTriangles": 1114888,
+    "geometryMiB": 52.49,
+    "constructionMs": 1952.2,
+    "nonfinite": 0,
+    "internal": {
+      "scale": 2,
+      "width": 1800,
+      "height": 2400
+    },
+    "heapMiB": 337.8980073928833,
+    "junctionCamera": {
+      "target": [
+        0.29285887950441863,
+        3.972420729025267,
+        0.5736519824648958
+      ],
+      "zoom": 1.9
+    },
+    "captures": [
+      {
+        "view": "front",
+        "path": "output/qa/fringe133-1-front.png",
+        "sha256": "9dc2f871df58e6db2eb4e0735fedc335ee6de1a8a330cc017fe19c63ae7e49cc"
+      },
+      {
+        "view": "detail",
+        "path": "output/qa/fringe133-1-detail.png",
+        "sha256": "3f7d27d2d1c0879b8a34c8eba0ad5b80ed5ef47566e5eb2a751f587a8426ee05"
+      },
+      {
+        "view": "left",
+        "path": "output/qa/fringe133-1-left.png",
+        "sha256": "eec0b3220a7edfa60765fa6ec3a5253bbb22575749dd32f2607ce9d75cf220de"
+      },
+      {
+        "view": "right",
+        "path": "output/qa/fringe133-1-right.png",
+        "sha256": "23e756db3061c40a49db434bf93c32a5cd61aaa4dbaa96acd44ab971eb0c8d30"
+      },
+      {
+        "view": "back",
+        "path": "output/qa/fringe133-1-back.png",
+        "sha256": "9c583f8df61e69b21167c2478cc7e96f9d60a8e76143036fd99c6e8e2f44df0d"
+      },
+      {
+        "view": "junction",
+        "path": "output/qa/fringe133-1-junction.png",
+        "sha256": "caf454c00798ee353074b8a81fcffa9e5b16a10e7234c5915e80c32284458229"
+      },
+      {
+        "view": "group0-only-detail",
+        "path": "output/qa/fringe133-1-group0-only-detail.png",
+        "sha256": "8925d962777c26088c824b65fc0aaeab9fe95c5f38f6d5b60fa31d8c200d9993"
+      },
+      {
+        "view": "group0-only-left",
+        "path": "output/qa/fringe133-1-group0-only-left.png",
+        "sha256": "4de921c603e2b96494af6d7c39b3fc8a594a0c0be0765be0738474a86dc03ebc"
+      }
+    ],
+    "errors": []
+  }
+]

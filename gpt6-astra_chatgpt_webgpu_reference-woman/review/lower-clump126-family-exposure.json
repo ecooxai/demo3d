@@ -1,0 +1,274 @@
+{
+  "candidate": 126,
+  "revision": "shared-family-coordinate field",
+  "sourceOnly": true,
+  "strength": 1,
+  "counts": {
+    "samples": 1175,
+    "originallyFrontVisible": 868,
+    "hiddenByFixed": 307,
+    "capacityBelow002": 26,
+    "actualAbove006": 755,
+    "actualAbove010": 606,
+    "meshBelowHalfTarget": 54
+  },
+  "distributions": {
+    "requested": {
+      "count": 868,
+      "min": 0.012698654039893849,
+      "p25": 0.018252722109667958,
+      "median": 0.020951959810685365,
+      "p75": 0.022951544302981346,
+      "max": 0.026477554019361128,
+      "mean": 0.02053732360766862
+    },
+    "capacityAllowed": {
+      "count": 868,
+      "min": 0,
+      "p25": 0.012143977302857809,
+      "median": 0.01562306121353424,
+      "p75": 0.019052452905370533,
+      "max": 0.023067703469030823,
+      "mean": 0.01498423274137705
+    },
+    "capacityFraction": {
+      "count": 868,
+      "min": 0,
+      "p25": 0.6134273799006507,
+      "median": 0.8177661509976124,
+      "p75": 0.9173231916393008,
+      "max": 0.9966309803644178,
+      "mean": 0.7364056195664048
+    },
+    "actualRelief": {
+      "count": 868,
+      "min": 5.723539335811267e-7,
+      "p25": 0.008866440227684791,
+      "median": 0.012784848505722923,
+      "p75": 0.01593294414660329,
+      "max": 0.020520231353345797,
+      "mean": 0.012074507208296422
+    },
+    "expectedContactRelief": {
+      "count": 868,
+      "min": -5.551115123125783e-17,
+      "p25": 0.011009813575598021,
+      "median": 0.014588877141128886,
+      "p75": 0.017179391309028125,
+      "max": 0.02201224571555955,
+      "mean": 0.013730096015040225
+    },
+    "meshRetainedFraction": {
+      "count": 854,
+      "min": 0.006473144468739833,
+      "p25": 0.8531637081902695,
+      "median": 0.9405685504947521,
+      "p75": 0.9853737240778743,
+      "max": 1.5963932906507143,
+      "mean": 0.8800897299158787
+    }
+  },
+  "examples": [
+    {
+      "family": 6,
+      "left": true,
+      "x": -1.0637964938905264,
+      "y": -2.1,
+      "originalGuide": 82,
+      "nextGuide": 82,
+      "requested": 0.018835797946434467,
+      "capacity": 0.008487849332428573,
+      "common": 0.008486047137619801,
+      "actual": 0.0028658705275640406,
+      "expected": 0.008486047137619817
+    },
+    {
+      "family": 7,
+      "left": false,
+      "x": 0.972361038106122,
+      "y": -2.15,
+      "originalGuide": 113,
+      "nextGuide": 112,
+      "requested": 0.019144476303830742,
+      "capacity": 0.010941787587611971,
+      "common": 0.010926314085295492,
+      "actual": 0.0026563401533261644,
+      "expected": 0.0094678541918565
+    },
+    {
+      "family": 10,
+      "left": false,
+      "x": 1.208029635949444,
+      "y": -2.15,
+      "originalGuide": 124,
+      "nextGuide": 124,
+      "requested": 0.014000932516995818,
+      "capacity": 0.011569281705139696,
+      "common": 0.011288303148985924,
+      "actual": 0.0028323088476176483,
+      "expected": 0.009708017599277904
+    },
+    {
+      "family": 5,
+      "left": true,
+      "x": -1.0094469673584534,
+      "y": -2.2,
+      "originalGuide": 75,
+      "nextGuide": 75,
+      "requested": 0.014045566230546683,
+      "capacity": 0.020824612691486326,
+      "common": 0.013972136398199813,
+      "actual": 0.00627123032250998,
+      "expected": 0.01397213639819983
+    },
+    {
+      "family": 7,
+      "left": true,
+      "x": -1.0969868371678468,
+      "y": -2.2,
+      "originalGuide": 83,
+      "nextGuide": 83,
+      "requested": 0.02042556258048635,
+      "capacity": 0.006937889247074684,
+      "common": 0.006937735601244271,
+      "actual": 0.002845384477938917,
+      "expected": 0.006937685825059104
+    },
+    {
+      "family": 8,
+      "left": true,
+      "x": -1.1128978137172,
+      "y": -2.2,
+      "originalGuide": 83,
+      "nextGuide": 83,
+      "requested": 0.022700635295878117,
+      "capacity": 0.010033342087145111,
+      "common": 0.0100315170952004,
+      "actual": 0.004777040020580214,
+      "expected": 0.010029377614809985
+    },
+    {
+      "family": 3,
+      "left": false,
+      "x": 0.7846123723148535,
+      "y": -2.2,
+      "originalGuide": 103,
+      "nextGuide": 103,
+      "requested": 0.025838442309651474,
+      "capacity": 0.012455737883113141,
+      "common": 0.012451204807088225,
+      "actual": 0.003781172300091895,
+      "expected": 0.011798628247473762
+    },
+    {
+      "family": 7,
+      "left": false,
+      "x": 0.9906418709180279,
+      "y": -2.2,
+      "originalGuide": 112,
+      "nextGuide": 112,
+      "requested": 0.019144476303830742,
+      "capacity": 0.010901513838485546,
+      "common": 0.010886542677224607,
+      "actual": 0.0019099099864178237,
+      "expected": 0.009400340149894111
+    },
+    {
+      "family": 7,
+      "left": false,
+      "x": 1.0090984400043745,
+      "y": -2.25,
+      "originalGuide": 112,
+      "nextGuide": 112,
+      "requested": 0.019144476303830742,
+      "capacity": 0.011574034841904323,
+      "common": 0.011548472624763145,
+      "actual": 0.004800266194257996,
+      "expected": 0.009948890252907287
+    },
+    {
+      "family": 6,
+      "left": true,
+      "x": -1.065893846446194,
+      "y": -2.3000000000000003,
+      "originalGuide": 75,
+      "nextGuide": 75,
+      "requested": 0.022367054951377214,
+      "capacity": 0.022090803683945393,
+      "common": 0.020380477858594547,
+      "actual": 0.008105329890350399,
+      "expected": 0.020380477858594537
+    },
+    {
+      "family": 3,
+      "left": false,
+      "x": 0.7914714329535245,
+      "y": -2.3000000000000003,
+      "originalGuide": 99,
+      "nextGuide": 99,
+      "requested": 0.02446334048069624,
+      "capacity": 0.01649113620808695,
+      "common": 0.016405273204740542,
+      "actual": 0.007603935758256131,
+      "expected": 0.015527442139351024
+    },
+    {
+      "family": 2,
+      "left": true,
+      "x": -0.8350387015982288,
+      "y": -2.4000000000000004,
+      "originalGuide": 63,
+      "nextGuide": 63,
+      "requested": 0.024109113841018336,
+      "capacity": 0.01936227598805959,
+      "common": 0.018979785227354936,
+      "actual": 0.008642479217820132,
+      "expected": 0.018979785227354894
+    }
+  ],
+  "geometry": {
+    "enabled": true,
+    "sharedFamilyCoordinates": true,
+    "strength": 1,
+    "selectedGuides": 75,
+    "families": 25,
+    "lobes": {
+      "2": 42,
+      "3": 6,
+      "4": 27
+    },
+    "refinedRings": 1982,
+    "extraVertices": 31712,
+    "extraTriangles": 62224,
+    "maxRecess": 0.023043039206106064,
+    "maxSectionXY": [
+      0,
+      0
+    ],
+    "maxRearChange": 0,
+    "maxProtectedChange": 0,
+    "analyticVerticalHalfDepthFloor": 0.24,
+    "temporarySectionBytes": 2769080,
+    "constructionMs": 313.17,
+    "requestedSamples": 21249,
+    "capacityZeroSamples": 6758,
+    "sumRequested": 198.03593022544433,
+    "sumActual": 100.81265338521284,
+    "support": {
+      "triangles": 81892,
+      "queries": 21666,
+      "numericPayloadBytes": 6802556,
+      "gridReferences": 508130,
+      "constructionMs": 261.23
+    }
+  },
+  "resources": {
+    "elapsedMs": 7591.588614,
+    "peakRssMiB": 397.1484375
+  },
+  "limitations": [
+    "Finite front-facing source-triangle rays, excluding alpha and fine ribbons; native appearance remains authoritative.",
+    "Capacity uses raw baseline triangle intersections and a conservative24% vertical half-depth floor; native/contact triangle interpolation is measured separately.",
+    "The field preserves each original rear and contour ring point; complete normals, protected range and garment checks follow only if useful exposed depth remains."
+  ]
+}

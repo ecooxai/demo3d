@@ -1,0 +1,124 @@
+126 proposal — unequal clump sections with attached fine strands
+==============================================================
+Status: diagnosis/proposal only. No126 implementation or production edits.
+Baseline: accepted118 guidePlacement .5 with live122 scene/material preparation.
+Overall artistic assessment remains76/100.
+
+Evidence inspected
+------------------
+The sole uploaded reference/image1.png; all15 native118 captures; native118 JSON;
+strand111-2-front, response121-2-left, lengths107-100-back; current hair-groom source,
+the111 normal-profile module and121 material comparison script.
+
+Why the lower lengths still read as a constructed wig
+----------------------------------------------------
+The reference has a few broad flowing masses, then unequal smaller groups within
+them, then fine individual hairs. Dark channels travel with those groups, change
+width, and fade or combine at different heights. They are not evenly spaced
+parallel grooves across the whole bundle.
+
+Current source front guides have similar widths (.059-.071 half-width), eight
+vertices around each elliptical section, and common large paths in three-lane
+families. The wide inner guides maintain a second smooth surface beneath them.
+Forty-three front fine strands per lock mostly sit on the same ellipse. The result
+has a large smooth face with small streaks laid along it.118 improves placement,
+but it does not change that section structure.
+
+111 puts83 ridges around a single texture circumference. Much of this is finer
+than a useful visible clump at the ordinary portrait size; its native front still
+reads as the same broad locks.121 amplifies the optical response and exposes
+repeated ladder-like highlights.107 adds photographic wave structure in a
+repeating UV field, which creates diagonal fingerprints on the rear sheets.
+Those experiments do not supply the missing intermediate clump geometry.
+
+Recommended single structural experiment
+---------------------------------------
+Replace the exposed elliptical surface of the75 primary front locks with closed,
+asymmetric multi-lobe sections, and rebuild their existing fine paths on exactly
+that section. Keep the original center guides and accepted118.5 placement.
+Start below authoredY-1.64; crown, ear-height lengths, part, fringe, side and back
+guides remain protected. The56 inner front guides remain the baseline support in
+the first experiment, rather than gaining another overlaid surface.
+
+Each existing front lock remains one continuous mesh component. Its illuminated
+cross-section acquires2-4 unequal lobes separated by1-3 genuine concave channels.
+Use one dominant lobe and smaller neighboring ones, with irregular width ratios;
+vary the count and relative widths across the existing three-lane families. The
+channels must not appear as the same repeated M-shaped extrusion on every lock.
+
+Use a shared sectionPoint(g,t,lane,side) evaluator for MASS and all its dependent
+fine paths. Retain the old silhouette extrema and rear half of the section.
+Recess the front between lobes, rather than adding raised opaque strips above
+the original smooth parent. The old front face is replaced, so it cannot fill
+its own grooves. Cap the recess as a fraction of actual front-to-back thickness;
+at all samples the front remains above the retained rear surface. Target a
+visible3-8 pixel group width at the ordinary native portrait, with channel
+recesses around.012-.024 model units where the parent thickness permits them.
+Near tapered ends, scale the recess with section thickness and fade it gently.
+
+Each channel follows a smooth, slowly changing lane inside its parent guide.
+Its beginning, strongest region and ending are staggered across families. Use
+one or two broad cubic transitions; do not add longitudinal sinusoidal cycles,
+per-row phases, or a repeated shared start/end band. The parent guide supplies
+the main wave. Channels can converge modestly, but should not cross or create
+an additional outward tip hook. The original source-facing outer contour stays
+the baseline silhouette.
+
+Redistribute the existing fine paths by arc length over the new exposed section,
+including its sloped walls. Do not leave them suspended on the old ellipse.
+Keep their current count, material, width distribution and RNG stream. Use an
+independent deterministic seed for new section parameters. Normal seams should
+be welded, and the surface should have continuous geometric normals along its
+length. Keep accepted material settings and original maps for the first render.
+
+Sampling and topology
+---------------------
+Eight circumference samples cannot describe this section smoothly. Use24 samples
+for the altered lower region, preferably subdividing existing source ring edges
+at the start of the transition so that the upper geometry is identical. Keep
+the existing60 longitudinal intervals unless a measured interpolation defect
+requires more. A conservative all-ring24-sample estimate for75 guides adds
+144,000 triangles and about4.7MiB of vertex/index buffers; a lower-only adaptive
+layout should cost less. There are no new draw calls or textures, and the fine
+strand count stays fixed. Active MASS topology will change deliberately; source
+guide ranges must replace any audit assumption that every guide has549 vertices.
+
+Compatibility with118 and contact
+--------------------------------
+Fit the accepted118.5 field against its original parent envelopes first. Then
+construct the modified sections inside those envelopes using its transported
+axes. Keeping the rear support and silhouette avoids spending the clearance
+gained by118. It also avoids moving the embedded side locks that constrained the
+placement study. Check actual new triangles against cloth and protected locks;
+containment in a smooth conceptual ellipse is not a substitute for checking the
+original finite mesh. Preserve all protected components, colors/maps and upper
+surface geometry, and regenerate only the modified front fine paths.
+
+Before native rendering, check a sparse set of actual front/profile rays through
+the changed lower locks. A new valley that is immediately filled by an unchanged
+neighbor or inner sheet will not produce the intended visible channel. Report
+that exposed-surface coverage; do not respond by increasing shine or painting
+stronger stripes. If most intended channels are buried, the needed next scope
+is a coherent family envelope across the overlapping locks, not more detail on
+hidden geometry. That is the principal feasibility risk of this bounded test.
+
+Native acceptance criteria
+--------------------------
+Front: the lower lengths read as irregular nested groups at ordinary preview
+size. Channels follow the established waves and have unequal widths and lengths.
+The apparent improvement must persist with the accepted diffuse lighting; it
+must not depend on isolated white highlights. Source silhouette and cotton gaps
+should stay close to the118.5 baseline.
+
+Profiles: the lengths retain their mild accepted drape, thickness and continuous
+flow. Reject a ribbed hose, flat plates, serrated contour, repeated transverse
+glints, a newly detached loop, or renewed unsupported gaps.
+
+Detail/back: face, crown, fringe and rear remain visually unchanged. A relit front
+can distinguish real recessed structure from a fortuitous highlight, but the
+ordinary front and both profiles remain the primary art decision.
+
+Reject the experiment early if it is imperceptible at normal size, merely adds
+regular parallel ribs, or exposes flat inner sheets in the valleys. A technical
+pass alone does not improve the76 score. No claim is made that this one change
+can reach95; it addresses one substantial unresolved structural defect.
