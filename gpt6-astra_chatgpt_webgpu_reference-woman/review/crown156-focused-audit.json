@@ -1,0 +1,2187 @@
+{
+  "stage": "Focused coarse source gate; actual100 RGB remains a native responsibility",
+  "baselineExact": true,
+  "zeroExact": true,
+  "protectedExact": true,
+  "restorationExact": true,
+  "metrics": {
+    "version": "connected-front-crown-156",
+    "strength": 1,
+    "applied": true,
+    "sourceCaptureMs": 15.49550300001647,
+    "preparedTranslation": [
+      -0.233519084751606,
+      -0.04008519649505615,
+      -0.038236379623413086
+    ],
+    "translationAnchorResidual": 5.360568475409657e-8,
+    "vertices": 5336,
+    "triangles": 9989,
+    "copiedCollarVertices": 1170,
+    "copiedCollarTriangles": 2048,
+    "fieldControls": 396,
+    "fieldBytes": 12696,
+    "temporarySolveBytes": 1276800,
+    "maximumControlResidual": 8.039518051283778e-9,
+    "minimumNewNormalGap": 0.003518178683419611,
+    "minimumCopiedNormalGap": -0.0082001784127382,
+    "supportSamples": 4156,
+    "supportMisses": 10,
+    "newPenetrations": 0,
+    "copiedPenetrations": 2,
+    "nonfinite": 0,
+    "negativeFrontArea": 0,
+    "minimumFrontArea": 2.596166999174635e-8,
+    "maximumEdgeLength": 0.09081188981176008,
+    "uvNegative": 0,
+    "uvDegenerate": 0,
+    "chartDiagonals": {
+      "flips": 0
+    },
+    "physicalDiagonals": {
+      "flips": 16547,
+      "passes": 28
+    },
+    "growthChart": {
+      "interiorVertices": 3649,
+      "channels": [
+        {
+          "channel": 0,
+          "iterations": 133,
+          "maximumLaplacianResidual": 1.5730124145083761e-12
+        },
+        {
+          "channel": 1,
+          "iterations": 135,
+          "maximumLaplacianResidual": 1.9697996255323797e-12
+        }
+      ]
+    },
+    "maximumBoundaryNormalDegrees": null,
+    "geometryBytes": 358750,
+    "phases": {
+      "controlsMs": 13.78872500000034,
+      "smoothFieldSolveMs": 39.69806299999982,
+      "triangulationMs": 198.43508399999882,
+      "refinementMs": 276.798671999999,
+      "uvSmoothingMs": 65.35747199999969,
+      "emittedAttributesAndVertexSupportMs": 184.28443699999843
+    },
+    "surfaceTotalMs": 778.4579729999987,
+    "planMs": 50.512095000000045,
+    "removedTriangles": 12288,
+    "addedTriangles": 9989,
+    "addedTextureBytes": 0,
+    "perFrameWork": 0,
+    "support": {
+      "triangles": 103898,
+      "records": [
+        {
+          "name": "continuous-face",
+          "scalp": true,
+          "groups": [
+            [
+              0,
+              325224
+            ]
+          ]
+        },
+        {
+          "name": "sculpted-eyelids",
+          "scalp": false,
+          "groups": [
+            [
+              0,
+              9216
+            ]
+          ]
+        },
+        {
+          "name": "sculpted-eyelids",
+          "scalp": false,
+          "groups": [
+            [
+              0,
+              9216
+            ]
+          ]
+        },
+        {
+          "name": "ear-continuous-anatomical-shell",
+          "scalp": false,
+          "groups": [
+            [
+              0,
+              31680
+            ]
+          ]
+        },
+        {
+          "name": "ear-continuous-anatomical-shell",
+          "scalp": false,
+          "groups": [
+            [
+              0,
+              31680
+            ]
+          ]
+        }
+      ],
+      "indexBytes": 598152,
+      "queries": 5269,
+      "misses": 21,
+      "buildMs": 112.97400500000003
+    },
+    "elapsedMs": 948.347545999999
+  },
+  "supportChecks": {
+    "samples": 31764,
+    "newSamples": 31625,
+    "copiedSamples": 36,
+    "headMissing": 103,
+    "minimumNewGap": 0.0029926275228524973,
+    "minimumCopiedGap": -0.0088800857117854,
+    "newVisibleNegative": 0,
+    "newGeometricNegative": 0,
+    "copiedNegative": 9,
+    "examples": [
+      {
+        "triangle": 4411,
+        "old": true,
+        "gap": -0.006772374288433873,
+        "alpha": 0,
+        "kinds": [
+          "collar",
+          "collar",
+          "exterior"
+        ],
+        "head": "continuous-face",
+        "p": [
+          -1.0006165107091267,
+          0.2964390118916829,
+          0.19360070427258808
+        ]
+      },
+      {
+        "triangle": 4411,
+        "old": true,
+        "gap": -0.005682064309663763,
+        "alpha": 0,
+        "kinds": [
+          "collar",
+          "collar",
+          "exterior"
+        ],
+        "head": "continuous-face",
+        "p": [
+          -1.0028274655342102,
+          0.29403579235076904,
+          0.18847283720970154
+        ]
+      },
+      {
+        "triangle": 4411,
+        "old": true,
+        "gap": -0.0088800857117854,
+        "alpha": 0,
+        "kinds": [
+          "collar",
+          "collar",
+          "exterior"
+        ],
+        "head": "continuous-face",
+        "p": [
+          -1.0005876421928406,
+          0.29035426676273346,
+          0.1875837966799736
+        ]
+      },
+      {
+        "triangle": 4411,
+        "old": true,
+        "gap": -0.005087662139452678,
+        "alpha": 0,
+        "kinds": [
+          "collar",
+          "collar",
+          "exterior"
+        ],
+        "head": "continuous-face",
+        "p": [
+          -0.9984344244003296,
+          0.3049269765615463,
+          0.20474547892808914
+        ]
+      },
+      {
+        "triangle": 4412,
+        "old": true,
+        "gap": -0.004954605809257659,
+        "alpha": 0,
+        "kinds": [
+          "collar",
+          "exterior",
+          "exterior"
+        ],
+        "head": "continuous-face",
+        "p": [
+          -0.9946559468905131,
+          0.31157548228899634,
+          0.21656574805577594
+        ]
+      },
+      {
+        "triangle": 4412,
+        "old": true,
+        "gap": -0.005087662139452678,
+        "alpha": 0,
+        "kinds": [
+          "collar",
+          "exterior",
+          "exterior"
+        ],
+        "head": "continuous-face",
+        "p": [
+          -0.9984344244003296,
+          0.3049269765615463,
+          0.20474547892808914
+        ]
+      },
+      {
+        "triangle": 4412,
+        "old": true,
+        "gap": -0.006239835564024912,
+        "alpha": 0,
+        "kinds": [
+          "collar",
+          "exterior",
+          "exterior"
+        ],
+        "head": "continuous-face",
+        "p": [
+          -0.99164679646492,
+          0.3130589723587036,
+          0.2220313623547554
+        ]
+      },
+      {
+        "triangle": 4412,
+        "old": true,
+        "gap": -0.003320212268475456,
+        "alpha": 0,
+        "kinds": [
+          "collar",
+          "exterior",
+          "exterior"
+        ],
+        "head": "continuous-face",
+        "p": [
+          -0.9938866198062897,
+          0.3167404979467392,
+          0.22292040288448334
+        ]
+      },
+      {
+        "triangle": 4413,
+        "old": true,
+        "gap": -0.003320212268475456,
+        "alpha": 0,
+        "kinds": [
+          "collar",
+          "collar",
+          "exterior"
+        ],
+        "head": "continuous-face",
+        "p": [
+          -0.9938866198062897,
+          0.3167404979467392,
+          0.22292040288448334
+        ]
+      }
+    ],
+    "qualification": "Copied samples here use only copied boundary/collar vertex positions; their connector triangles are newly triangulated. They are not all unchanged source triangles."
+  },
+  "uvChecks": {
+    "reversed": 0,
+    "degenerate": 0,
+    "reversedVisible": 0,
+    "degenerateVisible": 0,
+    "examples": []
+  },
+  "orientation": {
+    "nonfinite": 0,
+    "negativeFrontFaces": 0,
+    "minimumNormalFaceDot": -0.20091384042484814,
+    "minimumVisibleNormalFaceDot": 0.630560030930643,
+    "negativeNormalExamples": [
+      {
+        "triangle": 8079,
+        "dot": -0.20091384042484814,
+        "alpha": 0,
+        "kinds": [
+          "exterior",
+          "interior",
+          "exterior"
+        ]
+      }
+    ],
+    "p95NormalFaceAngle": 7.167049829818346,
+    "maxNormalFaceAngle": 101.590403012681
+  },
+  "collar": {
+    "edges": 128,
+    "maximumGeometricDegrees": 43.322357800858775,
+    "maximumUpperGeometricDegrees": 18.519686406630807,
+    "copiedVertexNormalsExact": true,
+    "examples": [
+      {
+        "angle": 43.322357800858775,
+        "p": [
+          0.5477957427501678,
+          0.09160477295517921,
+          0.36328013241291046
+        ],
+        "upper": false
+      },
+      {
+        "angle": 42.547344261055585,
+        "p": [
+          0.5491541922092438,
+          0.11746902391314507,
+          0.3668092340230942
+        ],
+        "upper": false
+      },
+      {
+        "angle": 38.69493928903901,
+        "p": [
+          0.550192803144455,
+          0.14355117827653885,
+          0.3702535182237625
+        ],
+        "upper": false
+      },
+      {
+        "angle": 28.251271827284782,
+        "p": [
+          0.5508879721164703,
+          0.16986015439033508,
+          0.37362582981586456
+        ],
+        "upper": false
+      },
+      {
+        "angle": 23.892679387317244,
+        "p": [
+          -1.0028274655342102,
+          0.29403579235076904,
+          0.18847283720970154
+        ],
+        "upper": false
+      },
+      {
+        "angle": 18.519686406630807,
+        "p": [
+          0.18723569810390472,
+          1.2892983555793762,
+          0.3080971837043762
+        ],
+        "upper": true
+      }
+    ]
+  },
+  "privateLayout": {
+    "maximumUV1AffineError": 4.284083843231201e-8,
+    "maximumLinearVertexRGB": 0.13526704907417297
+  },
+  "trace": {
+    "samples": 33,
+    "maximumSurfaceDepthError": 0.01633274657253972,
+    "missing": 0,
+    "centerPathRule": "Below unbalanced posedY=.45, the guide target evaluates the accepted133 curve by height; this check measures the emitted coarse surface against that target."
+  },
+  "coverage": {
+    "independentDefinition": "Original149 attachment and predeclared head-space cleft rail; independent of emitted156 triangles",
+    "denseRail": [
+      [
+        -1.0735190847516058,
+        0.5499148035049438
+      ],
+      [
+        -0.833519084751606,
+        0.8999148035049438
+      ],
+      [
+        -0.46351908475160597,
+        0.9999148035049439
+      ],
+      [
+        -0.143519084751606,
+        1.059914803504944
+      ],
+      [
+        0.121480915248394,
+        0.9599148035049438
+      ],
+      [
+        0.33848091524839397,
+        0.8049148035049438
+      ],
+      [
+        0.526480915248394,
+        0.43991480350494383
+      ]
+    ],
+    "step": 0.018,
+    "definition": "Actual indexed prepared147 head points in the original-u.625 / fixed-rail region. Authored headXY and projected orthographic front and ±30° rays test CROWN+MASS+new connected banks at alpha>=.5. No fine strands count toward filled-surface coverage. Linear base/coverage samples; GPU mip filtering and A2C remain native checks.",
+    "views": [
+      {
+        "degrees": null,
+        "frame": "Authored head XY domain",
+        "samples": 1678,
+        "visibleIntended": 1644,
+        "selfOccluded": 0,
+        "backFacing": 34,
+        "covered": 1629,
+        "uncovered": 15,
+        "maximumUncoveredDistanceFromIndependentBoundary": 0.024760747052434213,
+        "uncoveredBeyond04": 0,
+        "criticalInteriorMisses": [],
+        "examples": [
+          {
+            "q": [
+              0.42948091524839477,
+              0.628914803504944,
+              0.33809906632657455
+            ],
+            "hair": {
+              "depth": -0.6820385816343917,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 40522
+            },
+            "head": {
+              "depth": 0.33809906632657455,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 78707
+            },
+            "boundaryDistance": 0.00030932488898068457
+          },
+          {
+            "q": [
+              0.28548091524839464,
+              0.8449148035049442,
+              0.4013006790849492
+            ],
+            "hair": {
+              "depth": -0.7215707262875174,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 37581
+            },
+            "head": {
+              "depth": 0.4013006790849492,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 85896
+            },
+            "boundaryDistance": 0.0017437145811579765
+          },
+          {
+            "q": [
+              0.2674809152483946,
+              0.8629148035049442,
+              0.40588605079642837
+            ],
+            "hair": {
+              "depth": -0.7252402785651053,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 37580
+            },
+            "head": {
+              "depth": 0.40588605079642837,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 86272
+            },
+            "boundaryDistance": 0.005928629575935459
+          },
+          {
+            "q": [
+              0.28548091524839464,
+              0.8629148035049442,
+              0.3956021775121755
+            ],
+            "hair": {
+              "depth": -0.7142524662205512,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 38539
+            },
+            "head": {
+              "depth": 0.39560217751217547,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 86277
+            },
+            "boundaryDistance": 0.01639091706287922
+          },
+          {
+            "q": [
+              0.24948091524839464,
+              0.8809148035049442,
+              0.40964866936946004
+            ],
+            "hair": {
+              "depth": -0.7291433872699183,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 37580
+            },
+            "head": {
+              "depth": 0.40964866936946004,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 87028
+            },
+            "boundaryDistance": 0.010113544570712974
+          },
+          {
+            "q": [
+              0.2674809152483946,
+              0.8809148035049442,
+              0.40007904782901427
+            ],
+            "hair": {
+              "depth": -0.7183855405605297,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 37580
+            },
+            "head": {
+              "depth": 0.4000790478290143,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 87032
+            },
+            "boundaryDistance": 0.020575832057656708
+          },
+          {
+            "q": [
+              0.24948091524839464,
+              0.8989148035049442,
+              0.4036231875095586
+            ],
+            "hair": {
+              "depth": -0.7219131512518684,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 37565
+            },
+            "head": {
+              "depth": 0.4036231875095586,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 87410
+            },
+            "boundaryDistance": 0.024760747052434213
+          },
+          {
+            "q": [
+              0.1054809152483947,
+              0.9709148035049443,
+              0.43349141079399006
+            ],
+            "hair": {
+              "depth": -0.7629175562611707,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 34651
+            },
+            "head": {
+              "depth": 0.43349141079399006,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 89661
+            },
+            "boundaryDistance": 0.004642702869510949
+          },
+          {
+            "q": [
+              0.0874809152483947,
+              0.9889148035049443,
+              0.4311194025078956
+            ],
+            "hair": {
+              "depth": -0.7625014097061347,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 34651
+            },
+            "head": {
+              "depth": 0.4311194025078956,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 90418
+            },
+            "boundaryDistance": 0.015128503266807957
+          },
+          {
+            "q": [
+              0.1054809152483947,
+              0.9889148035049443,
+              0.42605840264059014
+            ],
+            "hair": {
+              "depth": -0.7544288597107071,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 34652
+            },
+            "head": {
+              "depth": 0.42605840264059014,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 90422
+            },
+            "boundaryDistance": 0.021483533810624313
+          },
+          {
+            "q": [
+              -0.0025190847516053036,
+              1.0069148035049442,
+              0.4434540338845619
+            ],
+            "hair": {
+              "depth": -0.7829272030182881,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 28844
+            },
+            "head": {
+              "depth": 0.44345403388456184,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 91160
+            },
+            "boundaryDistance": 0.00019418148883938163
+          },
+          {
+            "q": [
+              0.015480915248394695,
+              1.0069148035049442,
+              0.4400776657078964
+            ],
+            "hair": {
+              "depth": -0.778473323417616,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 29805
+            },
+            "head": {
+              "depth": 0.44007766570789636,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 91164
+            },
+            "boundaryDistance": 0.006549212032655752
+          },
+          {
+            "q": [
+              0.033480915248394694,
+              1.0069148035049442,
+              0.43639464479399653
+            ],
+            "hair": {
+              "depth": -0.77371326732777,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 29805
+            },
+            "head": {
+              "depth": 0.4363946447939966,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 91168
+            },
+            "boundaryDistance": 0.012904242576472127
+          },
+          {
+            "q": [
+              -0.0385190847516053,
+              1.0249148035049442,
+              0.44120471790403415
+            ],
+            "hair": {
+              "depth": -0.7831100340244972,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 28827
+            },
+            "head": {
+              "depth": 0.44120471790403415,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 91534
+            },
+            "boundaryDistance": 0.004324951342320028
+          },
+          {
+            "q": [
+              -0.020519084751605302,
+              1.0249148035049442,
+              0.43839071181767375
+            ],
+            "hair": {
+              "depth": -0.7786725995703996,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 28829
+            },
+            "head": {
+              "depth": 0.43839071181767375,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 91538
+            },
+            "boundaryDistance": 0.010679981886136397
+          }
+        ],
+        "largestConnectedHoleSamples": 6,
+        "largestHoleExtentHeadXY": 0.072,
+        "largestClosedInteriorCluster": 0,
+        "maximumInscribedUncoveredWidth": 0.036,
+        "uncoveredHeadXYArea": 0.004859999999999999
+      },
+      {
+        "degrees": 0,
+        "frame": "Native world view direction",
+        "samples": 1678,
+        "visibleIntended": 1601,
+        "selfOccluded": 0,
+        "backFacing": 77,
+        "covered": 1565,
+        "uncovered": 36,
+        "maximumUncoveredDistanceFromIndependentBoundary": 0.03522303453937795,
+        "uncoveredBeyond04": 0,
+        "criticalInteriorMisses": [],
+        "examples": [
+          {
+            "q": [
+              0.4834809152483948,
+              0.5389148035049439,
+              0.28176248881778343
+            ],
+            "hair": {
+              "depth": -0.5742494334351046,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 45339
+            },
+            "head": {
+              "depth": 0.18772085354531773,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 75683
+            },
+            "boundaryDistance": 0.007104729930350551
+          },
+          {
+            "q": [
+              0.4834809152483948,
+              0.5569148035049439,
+              0.27717748465125197
+            ],
+            "hair": {
+              "depth": -0.5714032649777677,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 45339
+            },
+            "head": {
+              "depth": 0.18270924342573222,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 76443
+            },
+            "boundaryDistance": 0.015346898625689486
+          },
+          {
+            "q": [
+              0.4654809152483948,
+              0.574914803504944,
+              0.3026959386861201
+            ],
+            "hair": {
+              "depth": -0.588528898721817,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 44365
+            },
+            "head": {
+              "depth": 0.21024297732207275,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 77196
+            },
+            "boundaryDistance": 0.0075869844816735775
+          },
+          {
+            "q": [
+              0.4834809152483948,
+              0.574914803504944,
+              0.27233529593764766
+            ],
+            "hair": {
+              "depth": -0.5685827977232871,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 45338
+            },
+            "head": {
+              "depth": 0.1774437337044137,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 77204
+            },
+            "boundaryDistance": 0.023589067321028445
+          },
+          {
+            "q": [
+              0.4654809152483948,
+              0.592914803504944,
+              0.2986034590947245
+            ],
+            "hair": {
+              "depth": -0.5854396575389808,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 45323
+            },
+            "head": {
+              "depth": 0.20571760090079486,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 77577
+            },
+            "boundaryDistance": 0.015829153177012525
+          },
+          {
+            "q": [
+              0.4474809152483948,
+              0.610914803504944,
+              0.3199985658006016
+            ],
+            "hair": {
+              "depth": -0.5952913357699846,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 44365
+            },
+            "head": {
+              "depth": 0.22918065381512076,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 78331
+            },
+            "boundaryDistance": 0.008069239032996604
+          },
+          {
+            "q": [
+              0.4654809152483948,
+              0.610914803504944,
+              0.29415670727101884
+            ],
+            "hair": {
+              "depth": -0.5810008847670883,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 45323
+            },
+            "head": {
+              "depth": 0.20084247726603766,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 78338
+            },
+            "boundaryDistance": 0.02407132187235146
+          },
+          {
+            "q": [
+              0.42948091524839477,
+              0.628914803504944,
+              0.33809906632657455
+            ],
+            "hair": {
+              "depth": -0.6059279344280821,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 44364
+            },
+            "head": {
+              "depth": 0.24939118162066828,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 78707
+            },
+            "boundaryDistance": 0.00030932488898068457
+          },
+          {
+            "q": [
+              0.4474809152483948,
+              0.628914803504944,
+              0.3159231281234311
+            ],
+            "hair": {
+              "depth": -0.5923653238913618,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 44364
+            },
+            "head": {
+              "depth": 0.22467210163652696,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 78713
+            },
+            "boundaryDistance": 0.01631140772833555
+          },
+          {
+            "q": [
+              0.42948091524839477,
+              0.646914803504944,
+              0.334279909254929
+            ],
+            "hair": {
+              "depth": -0.6027692030634513,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 44349
+            },
+            "head": {
+              "depth": 0.24513563664804822,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 79466
+            },
+            "boundaryDistance": 0.008551493584319633
+          },
+          {
+            "q": [
+              0.4474809152483948,
+              0.646914803504944,
+              0.3115910270229035
+            ],
+            "hair": {
+              "depth": -0.5895417884607925,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 44364
+            },
+            "head": {
+              "depth": 0.2199101643237497,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 79473
+            },
+            "boundaryDistance": 0.02455357642367449
+          },
+          {
+            "q": [
+              0.41148091524839475,
+              0.664914803504944,
+              0.3500534244073542
+            ],
+            "hair": {
+              "depth": -0.6113862238196218,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 44348
+            },
+            "head": {
+              "depth": 0.263048901004813,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 79843
+            },
+            "boundaryDistance": 0.0007915794403037119
+          },
+          {
+            "q": [
+              0.41148091524839475,
+              0.682914803504944,
+              0.34602289472017
+            ],
+            "hair": {
+              "depth": -0.6063379600140982,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 44348
+            },
+            "head": {
+              "depth": 0.25858468321917494,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 80602
+            },
+            "boundaryDistance": 0.009033748135642661
+          },
+          {
+            "q": [
+              0.39348091524839474,
+              0.7009148035049441,
+              0.35976501722855886
+            ],
+            "hair": {
+              "depth": -0.6171624028489625,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 44347
+            },
+            "head": {
+              "depth": 0.2744925013344985,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 80979
+            },
+            "boundaryDistance": 0.001273833991626746
+          },
+          {
+            "q": [
+              0.39348091524839474,
+              0.7189148035049441,
+              0.3554377647830381
+            ],
+            "hair": {
+              "depth": -0.6103004112742215,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 44331
+            },
+            "head": {
+              "depth": 0.26973535074623195,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 81739
+            },
+            "boundaryDistance": 0.009516002686965688
+          },
+          {
+            "q": [
+              0.3754809152483947,
+              0.7369148035049441,
+              0.3673660404083069
+            ],
+            "hair": {
+              "depth": -0.6223035590787543,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 44331
+            },
+            "head": {
+              "depth": 0.2838524897306736,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 82115
+            },
+            "boundaryDistance": 0.0017560885429497735
+          },
+          {
+            "q": [
+              0.3574809152483947,
+              0.7729148035049441,
+              0.3729382849436535
+            ],
+            "hair": {
+              "depth": -0.6268889533830297,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 44330
+            },
+            "head": {
+              "depth": 0.291209612497166,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 83251
+            },
+            "boundaryDistance": 0.0022383430942728008
+          },
+          {
+            "q": [
+              0.28548091524839464,
+              0.8449148035049442,
+              0.4013006790849492
+            ],
+            "hair": {
+              "depth": -0.6607109933046211,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 42396
+            },
+            "head": {
+              "depth": 0.3285746211895133,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 85896
+            },
+            "boundaryDistance": 0.0017437145811579765
+          },
+          {
+            "q": [
+              0.30348091524839466,
+              0.8449148035049442,
+              0.3902240302674932
+            ],
+            "hair": {
+              "depth": -0.6460999525174657,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 43354
+            },
+            "head": {
+              "depth": 0.314813062513004,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 85900
+            },
+            "boundaryDistance": 0.012206002068101728
+          },
+          {
+            "q": [
+              0.2674809152483946,
+              0.8629148035049442,
+              0.40588605079642837
+            ],
+            "hair": {
+              "depth": -0.6663152201646245,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 41421
+            },
+            "head": {
+              "depth": 0.33544264509105626,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 86272
+            },
+            "boundaryDistance": 0.005928629575935459
+          }
+        ],
+        "largestConnectedHoleSamples": 11,
+        "largestHoleExtentHeadXY": 0.126,
+        "largestClosedInteriorCluster": 0,
+        "maximumInscribedUncoveredWidth": 0.036,
+        "uncoveredHeadXYArea": 0.011663999999999997
+      },
+      {
+        "degrees": -30,
+        "frame": "Native world view direction",
+        "samples": 1678,
+        "visibleIntended": 1370,
+        "selfOccluded": 0,
+        "backFacing": 308,
+        "covered": 1310,
+        "uncovered": 60,
+        "maximumUncoveredDistanceFromIndependentBoundary": 0.09171938696887419,
+        "uncoveredBeyond04": 17,
+        "criticalInteriorMisses": [
+          {
+            "q": [
+              0.3574809152483947,
+              0.8449148035049442,
+              0.3496301705877194
+            ],
+            "boundaryDistance": 0.04359286452893296,
+            "head": {
+              "depth": -0.041737795313835126,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 85914
+            },
+            "hair": {
+              "depth": -0.4117765601642166,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 135451
+            },
+            "projected": [
+              0.6048090429454142,
+              0.7722556986825145,
+              -0.04173779531383531
+            ]
+          },
+          {
+            "q": [
+              0.3394809152483947,
+              0.8629148035049442,
+              0.358245175811734
+            ],
+            "boundaryDistance": 0.047777779523710456,
+            "head": {
+              "depth": -0.02577721185196315,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 86291
+            },
+            "hair": {
+              "depth": -0.41506195707567695,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 104732
+            },
+            "projected": [
+              0.5988568775652532,
+              0.7930415067700926,
+              -0.025777211851963133
+            ]
+          },
+          {
+            "q": [
+              0.3574809152483947,
+              0.8629148035049442,
+              0.3428490980435397
+            ],
+            "boundaryDistance": 0.0582400670106542,
+            "head": {
+              "depth": -0.04891855491027107,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 86297
+            },
+            "hair": {
+              "depth": -0.40739107740473424,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 135452
+            },
+            "projected": [
+              0.6028872259270637,
+              0.7899962244868867,
+              -0.04891855491027175
+            ]
+          },
+          {
+            "q": [
+              0.30348091524839466,
+              0.8809148035049442,
+              0.3781749808773213
+            ],
+            "boundaryDistance": 0.04150040703154421,
+            "head": {
+              "depth": 0.01016048028767648,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 87042
+            },
+            "hair": {
+              "depth": -0.4259882396996231,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 103756
+            },
+            "projected": [
+              0.5862966806970367,
+              0.8168725971408766,
+              0.010160480287676132
+            ]
+          },
+          {
+            "q": [
+              0.32148091524839467,
+              0.8809148035049442,
+              0.3655636591361901
+            ],
+            "boundaryDistance": 0.051962694518487965,
+            "head": {
+              "depth": -0.010821828046538544,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 87046
+            },
+            "hair": {
+              "depth": -0.41695028814779905,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 103757
+            },
+            "projected": [
+              0.5920858454763342,
+              0.8138273148576707,
+              -0.01082182804653875
+            ]
+          },
+          {
+            "q": [
+              0.3394809152483947,
+              0.8809148035049442,
+              0.35151206806465407
+            ],
+            "boundaryDistance": 0.06242498200543171,
+            "head": {
+              "depth": -0.03292078411081369,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 87052
+            },
+            "hair": {
+              "depth": -0.4096123201940839,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 103757
+            },
+            "projected": [
+              0.5969653545014828,
+              0.8107820325744647,
+              -0.03292078411081378
+            ]
+          },
+          {
+            "q": [
+              0.30348091524839466,
+              0.8989148035049442,
+              0.3716403928524301
+            ],
+            "boundaryDistance": 0.056147609513265445,
+            "head": {
+              "depth": 0.00317082132300928,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 87423
+            },
+            "hair": {
+              "depth": -0.41996351856587105,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 103756
+            },
+            "projected": [
+              0.5845305401598458,
+              0.8346131229452486,
+              0.0031708213230090543
+            ]
+          },
+          {
+            "q": [
+              0.32148091524839467,
+              0.8989148035049442,
+              0.35873453303098074
+            ],
+            "boundaryDistance": 0.06660989700020918,
+            "head": {
+              "depth": -0.018039843799661715,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 87429
+            },
+            "hair": {
+              "depth": -0.4111173950644093,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 103757
+            },
+            "projected": [
+              0.5901336784412368,
+              0.8315678406620427,
+              -0.01803984379966228
+            ]
+          },
+          {
+            "q": [
+              0.3394809152483947,
+              0.8989148035049442,
+              0.3443920942020733
+            ],
+            "boundaryDistance": 0.07707218448715293,
+            "head": {
+              "depth": -0.040364295527286605,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 87434
+            },
+            "hair": {
+              "depth": -0.4041165184248078,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 103757
+            },
+            "projected": [
+              0.5948294917294221,
+              0.8285225583788367,
+              -0.040364295527286986
+            ]
+          },
+          {
+            "q": [
+              0.32148091524839467,
+              0.9169148035049443,
+              0.35152771346391337
+            ],
+            "boundaryDistance": 0.08125709948193043,
+            "head": {
+              "depth": -0.025550687107978504,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 88190
+            },
+            "hair": {
+              "depth": -0.4057384898177361,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 103756
+            },
+            "projected": [
+              0.5879429650289927,
+              0.8493083664664148,
+              -0.025550687107978975
+            ]
+          },
+          {
+            "q": [
+              0.3394809152483947,
+              0.9169148035049443,
+              0.33677938342241226
+            ],
+            "boundaryDistance": 0.09171938696887419,
+            "head": {
+              "depth": -0.04818982824238692,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 88194
+            },
+            "hair": {
+              "depth": -0.39886001019428186,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 105675
+            },
+            "projected": [
+              0.5923824226000216,
+              0.8462630841832088,
+              -0.048189828242387545
+            ]
+          },
+          {
+            "q": [
+              0.17748091524839468,
+              0.9709148035049443,
+              0.40905412387371287
+            ],
+            "boundaryDistance": 0.04150040703154426,
+            "head": {
+              "depth": 0.10291725085153061,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 89677
+            },
+            "hair": {
+              "depth": -0.47981516721179224,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 51964
+            },
+            "projected": [
+              0.5213244596987252,
+              0.9268922021451786,
+              0.10291725085153053
+            ]
+          },
+          {
+            "q": [
+              0.1594809152483947,
+              0.9889148035049443,
+              0.4082503545533271
+            ],
+            "boundaryDistance": 0.045685322026321765,
+            "head": {
+              "depth": 0.11157541316693778,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 90433
+            },
+            "hair": {
+              "depth": -0.48517028524304884,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 98940
+            },
+            "projected": [
+              0.5094235163501151,
+              0.9476780102327566,
+              0.11157541316693781
+            ]
+          },
+          {
+            "q": [
+              0.17748091524839468,
+              0.9889148035049443,
+              0.40131869700485007
+            ],
+            "boundaryDistance": 0.0561476095132655,
+            "head": {
+              "depth": 0.09499657576301665,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 90437
+            },
+            "hair": {
+              "depth": -0.47239520362694,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 99900
+            },
+            "projected": [
+              0.5187998846512909,
+              0.9446327279495507,
+              0.0949965757630167
+            ]
+          },
+          {
+            "q": [
+              0.1414809152483947,
+              1.0069148035049442,
+              0.4065901719362735
+            ],
+            "boundaryDistance": 0.051078371156489145,
+            "head": {
+              "depth": 0.11956959413973853,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 91190
+            },
+            "hair": {
+              "depth": -0.4901170711581616,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 51947
+            },
+            "projected": [
+              0.4969816732775451,
+              0.9684638183203345,
+              0.11956959413973844
+            ]
+          },
+          {
+            "q": [
+              0.1594809152483947,
+              1.0069148035049442,
+              0.40008972883223765
+            ],
+            "boundaryDistance": 0.060332524508042926,
+            "head": {
+              "depth": 0.10332507936589008,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 91194
+            },
+            "hair": {
+              "depth": -0.47679954555683723,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 51947
+            },
+            "projected": [
+              0.5066303911263905,
+              0.9654185360371286,
+              0.10332507936589025
+            ]
+          },
+          {
+            "q": [
+              0.0874809152483947,
+              1.0249148035049442,
+              0.41486826165663965
+            ],
+            "boundaryDistance": 0.0488101651490346,
+            "head": {
+              "depth": 0.15767834541534337,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 91560
+            },
+            "hair": {
+              "depth": -0.5178127284150835,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 50987
+            },
+            "projected": [
+              0.4633080866168346,
+              0.9953401909743244,
+              0.15767834541534334
+            ]
+          }
+        ],
+        "examples": [
+          {
+            "q": [
+              0.3754809152483947,
+              0.7369148035049441,
+              0.3673660404083069
+            ],
+            "hair": {
+              "depth": -0.4263407744294945,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 103788
+            },
+            "head": {
+              "depth": -0.027651611376224388,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 82115
+            },
+            "boundaryDistance": 0.0017560885429497735
+          },
+          {
+            "q": [
+              0.3754809152483947,
+              0.7549148035049441,
+              0.3626654157243925
+            ],
+            "hair": {
+              "depth": -0.42484869540608683,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 103788
+            },
+            "head": {
+              "depth": -0.033219389753362034,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 82875
+            },
+            "boundaryDistance": 0.009998257238288719
+          },
+          {
+            "q": [
+              0.3574809152483947,
+              0.7729148035049441,
+              0.3729382849436535
+            ],
+            "hair": {
+              "depth": -0.428052929203922,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 103773
+            },
+            "head": {
+              "depth": -0.015973456372582823,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 83251
+            },
+            "boundaryDistance": 0.0022383430942728008
+          },
+          {
+            "q": [
+              0.3754809152483947,
+              0.7729148035049441,
+              0.3575461221184183
+            ],
+            "hair": {
+              "depth": -0.4221122934581236,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 103773
+            },
+            "head": {
+              "depth": -0.039111764156810766,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 83257
+            },
+            "boundaryDistance": 0.018240425933627666
+          },
+          {
+            "q": [
+              0.3574809152483947,
+              0.7909148035049441,
+              0.36771813891239
+            ],
+            "hair": {
+              "depth": -0.42331430443297546,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 103773
+            },
+            "head": {
+              "depth": -0.021944022145792687,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 84012
+            },
+            "boundaryDistance": 0.010480511789611745
+          },
+          {
+            "q": [
+              0.3754809152483947,
+              0.7909148035049441,
+              0.3520198824111473
+            ],
+            "hair": {
+              "depth": -0.4177108776679457,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 103773
+            },
+            "head": {
+              "depth": -0.0453196458273213,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 84017
+            },
+            "boundaryDistance": 0.026482594628966603
+          },
+          {
+            "q": [
+              0.3394809152483947,
+              0.8089148035049442,
+              0.37645838200235715
+            ],
+            "hair": {
+              "depth": -0.4261941021202464,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 103772
+            },
+            "head": {
+              "depth": -0.005886341164879428,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 84389
+            },
+            "boundaryDistance": 0.003836172078546727
+          },
+          {
+            "q": [
+              0.3574809152483947,
+              0.8089148035049442,
+              0.36211971057725567
+            ],
+            "hair": {
+              "depth": -0.41899241545283306,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 103773
+            },
+            "head": {
+              "depth": -0.02820787200623687,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 84393
+            },
+            "boundaryDistance": 0.01872268048495069
+          },
+          {
+            "q": [
+              0.32148091524839467,
+              0.8269148035049442,
+              0.3838640578131819
+            ],
+            "hair": {
+              "depth": -0.4311322207638481,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 103772
+            },
+            "head": {
+              "depth": 0.0091366433940475,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 85144
+            },
+            "boundaryDistance": 0.008021087073324228
+          },
+          {
+            "q": [
+              0.3394809152483947,
+              0.8269148035049442,
+              0.37069412292432763
+            ],
+            "hair": {
+              "depth": -0.422302936706978,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 103772
+            },
+            "head": {
+              "depth": -0.012278760396842458,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 85149
+            },
+            "boundaryDistance": 0.01848337456026798
+          },
+          {
+            "q": [
+              0.3574809152483947,
+              0.8269148035049442,
+              0.35601790693701973
+            ],
+            "hair": {
+              "depth": -0.41522507132899533,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 103773
+            },
+            "head": {
+              "depth": -0.03486199115864212,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 85154
+            },
+            "boundaryDistance": 0.02906888370749802
+          },
+          {
+            "q": [
+              0.30348091524839466,
+              0.8449148035049442,
+              0.3902240302674932
+            ],
+            "hair": {
+              "depth": -0.4370967102007579,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 52956
+            },
+            "head": {
+              "depth": 0.023348889117732148,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 85900
+            },
+            "boundaryDistance": 0.012206002068101728
+          },
+          {
+            "q": [
+              0.32148091524839467,
+              0.8449148035049442,
+              0.3780782083713025
+            ],
+            "hair": {
+              "depth": -0.4272658806528431,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 103772
+            },
+            "head": {
+              "depth": 0.0027274850492846744,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 85904
+            },
+            "boundaryDistance": 0.022668289555045476
+          },
+          {
+            "q": [
+              0.3394809152483947,
+              0.8449148035049442,
+              0.36462172881377763
+            ],
+            "hair": {
+              "depth": -0.41876607497165735,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 103772
+            },
+            "head": {
+              "depth": -0.018910078199615727,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 85910
+            },
+            "boundaryDistance": 0.03313057704198921
+          },
+          {
+            "q": [
+              0.3574809152483947,
+              0.8449148035049442,
+              0.3496301705877194
+            ],
+            "hair": {
+              "depth": -0.4117765601642166,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 135451
+            },
+            "head": {
+              "depth": -0.041737795313835126,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 85914
+            },
+            "boundaryDistance": 0.04359286452893296
+          },
+          {
+            "q": [
+              0.30348091524839466,
+              0.8629148035049442,
+              0.3843665143585829
+            ],
+            "hair": {
+              "depth": -0.43252938235496463,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 103757
+            },
+            "head": {
+              "depth": 0.016884167416837167,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 86281
+            },
+            "boundaryDistance": 0.02685320454982295
+          },
+          {
+            "q": [
+              0.32148091524839467,
+              0.8629148035049442,
+              0.37196413807411544
+            ],
+            "hair": {
+              "depth": -0.4232799814754705,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 103757
+            },
+            "head": {
+              "depth": -0.003936144501176874,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 86286
+            },
+            "boundaryDistance": 0.03731549203676672
+          },
+          {
+            "q": [
+              0.3394809152483947,
+              0.8629148035049442,
+              0.358245175811734
+            ],
+            "hair": {
+              "depth": -0.41506195707567695,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 104732
+            },
+            "head": {
+              "depth": -0.02577721185196315,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 86291
+            },
+            "boundaryDistance": 0.047777779523710456
+          },
+          {
+            "q": [
+              0.3574809152483947,
+              0.8629148035049442,
+              0.3428490980435397
+            ],
+            "hair": {
+              "depth": -0.40739107740473424,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 135452
+            },
+            "head": {
+              "depth": -0.04891855491027107,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 86297
+            },
+            "boundaryDistance": 0.0582400670106542
+          },
+          {
+            "q": [
+              0.30348091524839466,
+              0.8809148035049442,
+              0.3781749808773213
+            ],
+            "hair": {
+              "depth": -0.4259882396996231,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 103756
+            },
+            "head": {
+              "depth": 0.01016048028767648,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 87042
+            },
+            "boundaryDistance": 0.04150040703154421
+          }
+        ],
+        "largestConnectedHoleSamples": 27,
+        "largestHoleExtentHeadXY": 0.19799999999999998,
+        "largestClosedInteriorCluster": 0,
+        "maximumInscribedUncoveredWidth": 0.072,
+        "uncoveredHeadXYArea": 0.019439999999999995
+      },
+      {
+        "degrees": 30,
+        "frame": "Native world view direction",
+        "samples": 1678,
+        "visibleIntended": 1638,
+        "selfOccluded": 0,
+        "backFacing": 40,
+        "covered": 1632,
+        "uncovered": 6,
+        "maximumUncoveredDistanceFromIndependentBoundary": 0.015128503266807957,
+        "uncoveredBeyond04": 0,
+        "criticalInteriorMisses": [],
+        "examples": [
+          {
+            "q": [
+              0.24948091524839464,
+              0.8809148035049442,
+              0.40964866936946004
+            ],
+            "hair": {
+              "depth": -0.8693373636053843,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 6876
+            },
+            "head": {
+              "depth": 0.5233163700034679,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 87028
+            },
+            "boundaryDistance": 0.010113544570712974
+          },
+          {
+            "q": [
+              0.23148091524839465,
+              0.8989148035049442,
+              0.4125621036879832
+            ],
+            "hair": {
+              "depth": -0.8673535527143589,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 6860
+            },
+            "head": {
+              "depth": 0.5208131159461281,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 87405
+            },
+            "boundaryDistance": 0.014298459565490492
+          },
+          {
+            "q": [
+              0.1054809152483947,
+              0.9709148035049443,
+              0.43349141079399006
+            ],
+            "hair": {
+              "depth": -0.8734127372018292,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 9740
+            },
+            "head": {
+              "depth": 0.5005415374592822,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 89661
+            },
+            "boundaryDistance": 0.004642702869510949
+          },
+          {
+            "q": [
+              0.0694809152483947,
+              0.9889148035049443,
+              0.43579664863059053
+            ],
+            "hair": {
+              "depth": -0.8717031275921332,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 9739
+            },
+            "head": {
+              "depth": 0.4911606078908458,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 90414
+            },
+            "boundaryDistance": 0.008773472722991584
+          },
+          {
+            "q": [
+              0.0874809152483947,
+              0.9889148035049443,
+              0.4311194025078956
+            ],
+            "hair": {
+              "depth": -0.8679667429124109,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 9739
+            },
+            "head": {
+              "depth": 0.4930983871255295,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 90418
+            },
+            "boundaryDistance": 0.015128503266807957
+          },
+          {
+            "q": [
+              0.015480915248394695,
+              1.0069148035049442,
+              0.4400776657078964
+            ],
+            "hair": {
+              "depth": -0.8701781339569865,
+              "alpha": 1,
+              "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+              "triangle": 10699
+            },
+            "head": {
+              "depth": 0.4773170459790124,
+              "alpha": 1,
+              "mesh": "continuous-face",
+              "triangle": 91164
+            },
+            "boundaryDistance": 0.006549212032655752
+          }
+        ],
+        "largestConnectedHoleSamples": 2,
+        "largestHoleExtentHeadXY": 0.036,
+        "largestClosedInteriorCluster": 0,
+        "maximumInscribedUncoveredWidth": 0.036,
+        "uncoveredHeadXYArea": 0.0019439999999999995
+      }
+    ]
+  },
+  "isolation": {
+    "removedTriangles": 199972,
+    "hidden": [
+      {
+        "mesh": "Independent fine crown lengths and silhouette strands",
+        "removedTriangles": 46020,
+        "records": 885
+      },
+      {
+        "mesh": "Sparse short temple edge and hairline wisps",
+        "removedTriangles": 23232,
+        "records": 484
+      },
+      {
+        "mesh": "Dense fine bowed brown fringe strands",
+        "removedTriangles": 130720,
+        "records": 1079
+      }
+    ]
+  },
+  "totalAuditMs": 15701.310657
+}

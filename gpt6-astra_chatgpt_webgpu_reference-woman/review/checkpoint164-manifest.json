@@ -1,0 +1,935 @@
+{
+  "purpose": "Development checkpoint after accepted164; goal95/98 still unmet",
+  "parentCommit": "a1b0af775280f558492ee6bad376e49c2ab0b738",
+  "branch": "gpt6-astra-chatgpt/reference-woman",
+  "acceptedIteration": 164,
+  "score": 78,
+  "goalAchieved": false,
+  "files": [
+    {
+      "file": "index.html",
+      "status": " M",
+      "bytes": 7376,
+      "sha256": "80bda6271a8480e801e583b0d6544de807f00fe140e5f78ec390d0fe1cdd8feb"
+    },
+    {
+      "file": "review/chin161-head-only-native.json",
+      "status": "??",
+      "bytes": 8235,
+      "sha256": "4f78b5a8b366e24677a736b2b57468a3500ff011e03cc8c9f0d5630651dc7b23"
+    },
+    {
+      "file": "review/chin161-head-only-native.mjs",
+      "status": "??",
+      "bytes": 7784,
+      "sha256": "4cdeb042eade51c9159521653a824ab694d195daaf38f2f6fffb8d8e87decc46"
+    },
+    {
+      "file": "review/chin161-observations.md",
+      "status": "??",
+      "bytes": 2199,
+      "sha256": "ca1d4412b5b9eb47bcaf1f9c2d03f5f0c88b36a92a7f448fd921c40bcab90efe"
+    },
+    {
+      "file": "review/chin162-proposal.md",
+      "status": "??",
+      "bytes": 10696,
+      "sha256": "10e9bcf35cd135703b492ef7af5f728c557e4b0a2a22deb8edbd95fcfcd4b90e"
+    },
+    {
+      "file": "review/collar-roll-candidate158.js",
+      "status": "??",
+      "bytes": 15491,
+      "sha256": "ab3211168b223dff18a19c514838669e7dc0f2475b78835cfa2bf4ad72db65b1"
+    },
+    {
+      "file": "review/collar158-coarse-audit.json",
+      "status": "??",
+      "bytes": 4062,
+      "sha256": "022c2e7d490d51aba95093e5c130307d5acf9d8fe1d51b9f4896d26f0c46e622"
+    },
+    {
+      "file": "review/collar158-coarse-audit.mjs",
+      "status": "??",
+      "bytes": 8567,
+      "sha256": "aff9409ffb1957edb4a4d7a51852fab2f272a439c260ebc76ecd2ff410247dc2"
+    },
+    {
+      "file": "review/collar158-coarse-view.py",
+      "status": "??",
+      "bytes": 3006,
+      "sha256": "368a6334e0c8e92ae8e7c83f9f39775480936255794af3473f8afad60216c3c6"
+    },
+    {
+      "file": "review/collar158-contact-audit.json",
+      "status": "??",
+      "bytes": 10622,
+      "sha256": "801ce9bda2e62d5710164bc08bc40538790ffe92dc8a009f3cb4b810ffbf52cc"
+    },
+    {
+      "file": "review/collar158-contact-audit.mjs",
+      "status": "??",
+      "bytes": 5766,
+      "sha256": "7a0a7e64b0dc2637f3c5b69c07cdfab0eb18d5f32bb4a0b2b922693a1d54782e"
+    },
+    {
+      "file": "review/collar158-freeze.mjs",
+      "status": "??",
+      "bytes": 5959,
+      "sha256": "6905d1190287963197ac1c998a042e2f304fb2efd005ae7d591d6d78d3d9ba91"
+    },
+    {
+      "file": "review/collar158-geometry-audit.js",
+      "status": "??",
+      "bytes": 12684,
+      "sha256": "8f06f28c94ffbb984f72681582b1f7e396118d3c8cd8b20d1b47151fcbdf56af"
+    },
+    {
+      "file": "review/collar158-handoff.md",
+      "status": "??",
+      "bytes": 9646,
+      "sha256": "6644693af91b8062c8f34a6aa7258bc1ce096d2672c81bdc94302f9488410b13"
+    },
+    {
+      "file": "review/collar158-manifest.json",
+      "status": "??",
+      "bytes": 10398,
+      "sha256": "5c298c6601ac88bb676c4dd2ff789b3d78ab0534c9b3961c1a6c374102c187c1"
+    },
+    {
+      "file": "review/collar158-native-failed-protection.json",
+      "status": "??",
+      "bytes": 1077977,
+      "sha256": "1d3c6f50f61b37ab77cbb5c23ee9dfb7fb041b84a9e459a8bf32cdffff876dac"
+    },
+    {
+      "file": "review/collar158-native-qa.js",
+      "status": "??",
+      "bytes": 23251,
+      "sha256": "8928ba45e27e1a8793d2612e6ca7d19eadeed8620a92ac66bca863059dd40cd4"
+    },
+    {
+      "file": "review/collar158-native-timing-result.json",
+      "status": "??",
+      "bytes": 853024,
+      "sha256": "4c193ae9c8bacd829cdf839ed5f4e8ea2d8ac385f15e5f4770753ef030b279c0"
+    },
+    {
+      "file": "review/collar158-native-timing.mjs",
+      "status": "??",
+      "bytes": 16103,
+      "sha256": "974a4198b76455d80d4425740ec379910d3cd8fb63a170682f2a46cbfecd7b13"
+    },
+    {
+      "file": "review/collar158-native.mjs",
+      "status": "??",
+      "bytes": 12678,
+      "sha256": "bdbe94135d229e98e3e5430bff8f2657565bd67a2165a2fd94639be222e441fe"
+    },
+    {
+      "file": "review/collar158-proposal.md",
+      "status": "??",
+      "bytes": 8632,
+      "sha256": "51cd08b781f216ca78d5ffbfbc7a58a57da530d01efc8047d36c8b5fdb0d09b8"
+    },
+    {
+      "file": "review/collar158-protection-failure-summary.json",
+      "status": "??",
+      "bytes": 680,
+      "sha256": "7aa314d0bee784439ecde349be10fcbaff40656c4e099ed491f4fd77319875f9"
+    },
+    {
+      "file": "review/collar158-proxy-audit.json",
+      "status": "??",
+      "bytes": 15356,
+      "sha256": "ac0f39fbc0ea219a769f3a6d81cd22d00d9af7b02388673925e69a1dfbaa3e5d"
+    },
+    {
+      "file": "review/collar158-proxy-audit.mjs",
+      "status": "??",
+      "bytes": 3819,
+      "sha256": "25bf22ec7adf0ba09671ec8e83ffc917338938584c4fd012ef5c06b17baf8e29"
+    },
+    {
+      "file": "review/collar158-source.mjs",
+      "status": "??",
+      "bytes": 3406,
+      "sha256": "bf20e384046d1c393d9608d8bcf5495515f60fe17ca5c1732e9a5cd0b8a1dd6b"
+    },
+    {
+      "file": "review/collar158-timing-handoff.md",
+      "status": "??",
+      "bytes": 2610,
+      "sha256": "f059b10673b5f273f7e120b800596c404ade46bb2490b52b6de700dba17dbe4c"
+    },
+    {
+      "file": "review/collar158-timing-normalization-check.json",
+      "status": "??",
+      "bytes": 2212,
+      "sha256": "6770c737a7032e124ee228e8afd4820e870284529fc2c118f8ca62b111d09da4"
+    },
+    {
+      "file": "review/collar158-timing-normalization-check.mjs",
+      "status": "??",
+      "bytes": 6852,
+      "sha256": "d9516641ccfe2f574deaea537acce019188697122143bdbc4c9a0c2e9dffb24e"
+    },
+    {
+      "file": "review/collar158-timing-transfer.json",
+      "status": "??",
+      "bytes": 876,
+      "sha256": "609d2c9dd5e251b205618e43f392c119ebc4c51f25c3b6764283b36467a326df"
+    },
+    {
+      "file": "review/collar158-visual-decision.md",
+      "status": "??",
+      "bytes": 2369,
+      "sha256": "ccf00c506b502164a0ac89aa8efbf79e7f9fd5598353b633b103b6069efeda7a"
+    },
+    {
+      "file": "review/crown156-baseline149-sources.json",
+      "status": "??",
+      "bytes": 437652,
+      "sha256": "752e7a66cf4397998c87d808296dd7043f249c8c1832d6af05f43f1090ecd171"
+    },
+    {
+      "file": "review/crown156-build.mjs",
+      "status": "??",
+      "bytes": 2026,
+      "sha256": "30911ef5d880c466b16916d87827d749b64dfebe79f67fb433ba39c635252141"
+    },
+    {
+      "file": "review/crown156-coarse-handoff.md",
+      "status": "??",
+      "bytes": 12817,
+      "sha256": "aee9f562cba57c7e8754b9a2ef212eb1723fae26a730c2b2484ca754c7a28b2b"
+    },
+    {
+      "file": "review/crown156-coarse-native-report.json",
+      "status": "??",
+      "bytes": 1574409,
+      "sha256": "4dec29fc14bb7b3a84504b5884d917359b1b857a09ad5d143a0ce91de8999c7a"
+    },
+    {
+      "file": "review/crown156-coarse-native.mjs",
+      "status": "??",
+      "bytes": 24986,
+      "sha256": "c1917e59970cb3d1d31b3d8996a9ebe9cfeadf3ae3ca91ca46136bc8cab35b7e"
+    },
+    {
+      "file": "review/crown156-connected-front-proposal.md",
+      "status": "??",
+      "bytes": 13020,
+      "sha256": "fedd6dca41f34d2c84bfe21d0c517ba0e0c0d7367883e4d82e7fcc68f0b59125"
+    },
+    {
+      "file": "review/crown156-focused-audit.json",
+      "status": "??",
+      "bytes": 64812,
+      "sha256": "feeb2a08328ffbfca3dbe78fe5a857488e12a23b139d7c8a5208da71a4ba8a46"
+    },
+    {
+      "file": "review/crown156-focused-audit.mjs",
+      "status": "??",
+      "bytes": 17017,
+      "sha256": "5d76bcb9815d9398fae1d2c2fee61e5be0f01fee181c96e80ddf3d3666eef2c6"
+    },
+    {
+      "file": "review/crown156-source.mjs",
+      "status": "??",
+      "bytes": 4831,
+      "sha256": "d90fd40bd93953bc4b9538b64166ab83387beeec1b8365887b7f80a108ddac7e"
+    },
+    {
+      "file": "review/crown156-transfer-manifest.json",
+      "status": "??",
+      "bytes": 3457,
+      "sha256": "7daa845cd8060879459a6ef5d68c4f1d4c84c6f4ee33f23f0246111a2cfdccd0"
+    },
+    {
+      "file": "review/crown156-visual-decision.md",
+      "status": "??",
+      "bytes": 5595,
+      "sha256": "01aa3ff408b08c61972bc384c177fb243e5fe6ab6c1a6ef8c7ee8c8bebf124c5"
+    },
+    {
+      "file": "review/crown163-flow-ribbon-proposal.md",
+      "status": "??",
+      "bytes": 9227,
+      "sha256": "2e23e0020e49b6b49bee0ca5d0e0aa50cbf8f8d7383d13599184fa0d7d96597b"
+    },
+    {
+      "file": "review/evidence164/chin161-head-only-clay-jaw-oblique.jpg",
+      "status": "??",
+      "bytes": 89913,
+      "sha256": "9fef55d86c2fd810d7ec865f8063f09fe86e40b24a8ff0fb4afdebe16c34ff7d"
+    },
+    {
+      "file": "review/evidence164/chin161-head-only-clay-jaw.jpg",
+      "status": "??",
+      "bytes": 83158,
+      "sha256": "c8ac81661477a2d8adc277cef587a8c8b1f53ba95714fa88bb5da10c4e9f721a"
+    },
+    {
+      "file": "review/evidence164/chin161-original-jaw.jpg",
+      "status": "??",
+      "bytes": 106492,
+      "sha256": "6b24bedfd7f7055d8b0a9838cb09d19f04a7f983d998e94a575e01962c480cd5"
+    },
+    {
+      "file": "review/evidence164/chin161-restored-jaw.jpg",
+      "status": "??",
+      "bytes": 106492,
+      "sha256": "6b24bedfd7f7055d8b0a9838cb09d19f04a7f983d998e94a575e01962c480cd5"
+    },
+    {
+      "file": "review/evidence164/collar158-timing-0-back.jpg",
+      "status": "??",
+      "bytes": 117853,
+      "sha256": "9356440cbe76fd5326b8e098064d4489da8e4ad4a5f32b07b2a0354fbffc516e"
+    },
+    {
+      "file": "review/evidence164/collar158-timing-0-collar-oblique.jpg",
+      "status": "??",
+      "bytes": 68386,
+      "sha256": "514e96f5afd73b9f15cd054de901911d70054611cc34c611dd7054dd178582c5"
+    },
+    {
+      "file": "review/evidence164/collar158-timing-0-front.jpg",
+      "status": "??",
+      "bytes": 141739,
+      "sha256": "6a959de704d43c8eb77ff4778201091fd212eed2416b33313f54505b5991f0f9"
+    },
+    {
+      "file": "review/evidence164/collar158-timing-0-garment.jpg",
+      "status": "??",
+      "bytes": 56278,
+      "sha256": "3dad43472a309ec75ca704ea550db2a8494a1515c85120ecc023dde2ad84a4e0"
+    },
+    {
+      "file": "review/evidence164/collar158-timing-0-left.jpg",
+      "status": "??",
+      "bytes": 95551,
+      "sha256": "6b3e3cd149995f864ad02682fda97f510301256f543c7c69cbf53b145deb1908"
+    },
+    {
+      "file": "review/evidence164/collar158-timing-0-restored-front.jpg",
+      "status": "??",
+      "bytes": 141739,
+      "sha256": "6a959de704d43c8eb77ff4778201091fd212eed2416b33313f54505b5991f0f9"
+    },
+    {
+      "file": "review/evidence164/collar158-timing-0-right.jpg",
+      "status": "??",
+      "bytes": 93824,
+      "sha256": "59fcb4ef891ce119524ee7a7f5a9c7d43152ef0002cbb6f698257988dcc0f5d4"
+    },
+    {
+      "file": "review/evidence164/collar158-timing-100-back.jpg",
+      "status": "??",
+      "bytes": 117853,
+      "sha256": "9356440cbe76fd5326b8e098064d4489da8e4ad4a5f32b07b2a0354fbffc516e"
+    },
+    {
+      "file": "review/evidence164/collar158-timing-100-collar-oblique.jpg",
+      "status": "??",
+      "bytes": 69130,
+      "sha256": "23e7d6176685a1e4eab8db95eaed98c52f04ea68a46526ce8b157c307950526c"
+    },
+    {
+      "file": "review/evidence164/collar158-timing-100-front.jpg",
+      "status": "??",
+      "bytes": 141791,
+      "sha256": "79fcb001ac98fe68bf586d1009bf43be320f93f893e48ab86315cf389342d248"
+    },
+    {
+      "file": "review/evidence164/collar158-timing-100-garment.jpg",
+      "status": "??",
+      "bytes": 56447,
+      "sha256": "de8e58de81ed3be8368dcb987289c64d2574ccb292a2881d2e3bdf4ce99e135c"
+    },
+    {
+      "file": "review/evidence164/collar158-timing-100-left.jpg",
+      "status": "??",
+      "bytes": 95396,
+      "sha256": "dd3d034a5e97ed69b1ded744a18973e64f1f761e8d2e9bd385ea2a4b44a11a6d"
+    },
+    {
+      "file": "review/evidence164/collar158-timing-100-restored-front.jpg",
+      "status": "??",
+      "bytes": 141739,
+      "sha256": "6a959de704d43c8eb77ff4778201091fd212eed2416b33313f54505b5991f0f9"
+    },
+    {
+      "file": "review/evidence164/collar158-timing-100-right.jpg",
+      "status": "??",
+      "bytes": 93863,
+      "sha256": "2605ab9729341263b487dab710074eae741140fb7078daf64608a211ec4a7e82"
+    },
+    {
+      "file": "review/evidence164/crown156-coarse-0-back.jpg",
+      "status": "??",
+      "bytes": 118256,
+      "sha256": "47d6151f481448e84e35898a4139b89cc954ca2636a5834c94eb87e83c6fc084"
+    },
+    {
+      "file": "review/evidence164/crown156-coarse-0-detail.jpg",
+      "status": "??",
+      "bytes": 161222,
+      "sha256": "8aa5459a32658e29b47793bb3c6229bec717dd1b97f7a4f3192c8f0b4b2ad86a"
+    },
+    {
+      "file": "review/evidence164/crown156-coarse-0-front.jpg",
+      "status": "??",
+      "bytes": 134276,
+      "sha256": "e5e5b8f7a167e3379f8919bc751881121fb738736fa3bb1d08efe104d96465e7"
+    },
+    {
+      "file": "review/evidence164/crown156-coarse-0-junction.jpg",
+      "status": "??",
+      "bytes": 123322,
+      "sha256": "cbc4873c2a4e81e119256686c646f070b9ed108220d131dad14fcef5bfcf1df7"
+    },
+    {
+      "file": "review/evidence164/crown156-coarse-0-left.jpg",
+      "status": "??",
+      "bytes": 95067,
+      "sha256": "ea79ba16e4673092ca115349bfffa2a5518a5f27d40d4c96d8aa9824230a05ab"
+    },
+    {
+      "file": "review/evidence164/crown156-coarse-0-released-detail.jpg",
+      "status": "??",
+      "bytes": 196808,
+      "sha256": "86fbc091480bd6d4ae000a249d7dd798f867813ee322e23dcec91bdbe1637e0f"
+    },
+    {
+      "file": "review/evidence164/crown156-coarse-0-restored-detail.jpg",
+      "status": "??",
+      "bytes": 161222,
+      "sha256": "8aa5459a32658e29b47793bb3c6229bec717dd1b97f7a4f3192c8f0b4b2ad86a"
+    },
+    {
+      "file": "review/evidence164/crown156-coarse-0-right.jpg",
+      "status": "??",
+      "bytes": 92619,
+      "sha256": "910bc85a79aefc114d3c6645b4d4ec2a203a5d06dc6ba63fa256b9c5141846d9"
+    },
+    {
+      "file": "review/evidence164/crown156-coarse-1-back.jpg",
+      "status": "??",
+      "bytes": 118251,
+      "sha256": "1ca54e77d9319693b915d9313899e06f8007b619848ac0e0519df292c7d2b08f"
+    },
+    {
+      "file": "review/evidence164/crown156-coarse-1-detail.jpg",
+      "status": "??",
+      "bytes": 176278,
+      "sha256": "57e5224f4332b866e443f50dc101106d54357ed24f2ea46bf86a151868dade77"
+    },
+    {
+      "file": "review/evidence164/crown156-coarse-1-front.jpg",
+      "status": "??",
+      "bytes": 140312,
+      "sha256": "c2afbe85dd9feb2d205d8f819558be825fa6424ca87ea91b36d6155ac1946444"
+    },
+    {
+      "file": "review/evidence164/crown156-coarse-1-junction.jpg",
+      "status": "??",
+      "bytes": 150033,
+      "sha256": "e4a5742e96e4e6308c79ef936feee2a490b7acb2a54d032f8dfdecffe2f97f8b"
+    },
+    {
+      "file": "review/evidence164/crown156-coarse-1-left.jpg",
+      "status": "??",
+      "bytes": 95526,
+      "sha256": "e5836bf672f138c6106a55defa047e1e174b54b87f3822b824d9484a553d6714"
+    },
+    {
+      "file": "review/evidence164/crown156-coarse-1-released-detail.jpg",
+      "status": "??",
+      "bytes": 196808,
+      "sha256": "86fbc091480bd6d4ae000a249d7dd798f867813ee322e23dcec91bdbe1637e0f"
+    },
+    {
+      "file": "review/evidence164/crown156-coarse-1-restored-detail.jpg",
+      "status": "??",
+      "bytes": 176278,
+      "sha256": "57e5224f4332b866e443f50dc101106d54357ed24f2ea46bf86a151868dade77"
+    },
+    {
+      "file": "review/evidence164/crown156-coarse-1-right.jpg",
+      "status": "??",
+      "bytes": 93864,
+      "sha256": "62ce49866dc920f1cd359fbd760b1cae9686fea1711e5676a4a2764aaeefacda"
+    },
+    {
+      "file": "review/evidence164/crown156-coarse-accepted-detail.jpg",
+      "status": "??",
+      "bytes": 196808,
+      "sha256": "86fbc091480bd6d4ae000a249d7dd798f867813ee322e23dcec91bdbe1637e0f"
+    },
+    {
+      "file": "review/evidence164/crown156-coarse-accepted-front.jpg",
+      "status": "??",
+      "bytes": 141722,
+      "sha256": "0a34f82f4829cbf51f2a86a8797a05af915b120ea5c0dcd7d46b2478932168fa"
+    },
+    {
+      "file": "review/evidence164/crown156-coarse-zero-control-detail.jpg",
+      "status": "??",
+      "bytes": 196808,
+      "sha256": "86fbc091480bd6d4ae000a249d7dd798f867813ee322e23dcec91bdbe1637e0f"
+    },
+    {
+      "file": "review/evidence164/crown156-coarse-zero-control-front.jpg",
+      "status": "??",
+      "bytes": 141722,
+      "sha256": "0a34f82f4829cbf51f2a86a8797a05af915b120ea5c0dcd7d46b2478932168fa"
+    },
+    {
+      "file": "review/evidence164/integrated164-explicit-webgl-detail.jpg",
+      "status": "??",
+      "bytes": 197682,
+      "sha256": "f938b54eb04847d1555a6976f2072d06431bc8985a674837f7b443fd238c337a"
+    },
+    {
+      "file": "review/evidence164/integrated164-explicit-webgl-front.jpg",
+      "status": "??",
+      "bytes": 140504,
+      "sha256": "6b3c942eef46e6beee0191d91ce4de8fa6ed205762d180d33f5753c9bc72fc81"
+    },
+    {
+      "file": "review/evidence164/integrated164-narrow-page.jpg",
+      "status": "??",
+      "bytes": 77277,
+      "sha256": "3a61a39996c88e97edb956eb54dd8ba8e7ee98b0a0b84849062316bad5585c34"
+    },
+    {
+      "file": "review/evidence164/integrated164-webgpu-back.jpg",
+      "status": "??",
+      "bytes": 117849,
+      "sha256": "a1898ca3e3b1c4161c6861ad8e965bb9d168d9d2bd2f0a326934208ffcf84260"
+    },
+    {
+      "file": "review/evidence164/integrated164-webgpu-detail.jpg",
+      "status": "??",
+      "bytes": 197179,
+      "sha256": "f2e8488fc279ee1659f5d6398c98f78b307e064f3c3bec20f00951bfdf66164d"
+    },
+    {
+      "file": "review/evidence164/integrated164-webgpu-front.jpg",
+      "status": "??",
+      "bytes": 141980,
+      "sha256": "826bf94cd98bc98f241a19411ef68efbb6ff76370a4736ef7e79745c2f13b91e"
+    },
+    {
+      "file": "review/evidence164/integrated164-webgpu-left.jpg",
+      "status": "??",
+      "bytes": 95413,
+      "sha256": "1cc1cb9a1f680cc4991874509636e2796cf94eda6a55c9c7fcc1766236e133d2"
+    },
+    {
+      "file": "review/evidence164/integrated164-webgpu-page.jpg",
+      "status": "??",
+      "bytes": 218585,
+      "sha256": "7a00907fba12710186b81fd5e1402062ac522b654a3a07e60bda00840d77a499"
+    },
+    {
+      "file": "review/evidence164/integrated164-webgpu-return-front.jpg",
+      "status": "??",
+      "bytes": 141980,
+      "sha256": "826bf94cd98bc98f241a19411ef68efbb6ff76370a4736ef7e79745c2f13b91e"
+    },
+    {
+      "file": "review/evidence164/integrated164-webgpu-right.jpg",
+      "status": "??",
+      "bytes": 93876,
+      "sha256": "304a529377b16d8bf3c7a79de2a069984973f1181799d6e9319fc608e148866c"
+    },
+    {
+      "file": "review/evidence164/jaw-ear159-0-back.jpg",
+      "status": "??",
+      "bytes": 117853,
+      "sha256": "8b0a7ef326cefc6c5bc72f81f978b1cecb8e07afd578ae0e9fe2bb2cc8ea7301"
+    },
+    {
+      "file": "review/evidence164/jaw-ear159-0-detail.jpg",
+      "status": "??",
+      "bytes": 196514,
+      "sha256": "30030dd37806c4f77bfd7febfb747605429af90ef63280d6a71c7e609aac00fa"
+    },
+    {
+      "file": "review/evidence164/jaw-ear159-0-ear-oblique.jpg",
+      "status": "??",
+      "bytes": 138894,
+      "sha256": "1a08fa4dfb6fad7e77e7919ff2457c52ee4d958406610477b7f9fff00e9d8a37"
+    },
+    {
+      "file": "review/evidence164/jaw-ear159-0-front.jpg",
+      "status": "??",
+      "bytes": 141741,
+      "sha256": "e85a9c406221f2008c5b2a8081724de12f7e05431eff8bda52f681162288e1e7"
+    },
+    {
+      "file": "review/evidence164/jaw-ear159-0-left.jpg",
+      "status": "??",
+      "bytes": 95648,
+      "sha256": "83e8ac00015702b817cc82a71337589a356100ba617b465550b9902e509c178e"
+    },
+    {
+      "file": "review/evidence164/jaw-ear159-0-right.jpg",
+      "status": "??",
+      "bytes": 93827,
+      "sha256": "b1985b6101f9bac844071f81bd02be9b77d82710d820f5769aeacee8f64d2219"
+    },
+    {
+      "file": "review/evidence164/jaw-ear159-1-back.jpg",
+      "status": "??",
+      "bytes": 117853,
+      "sha256": "8b0a7ef326cefc6c5bc72f81f978b1cecb8e07afd578ae0e9fe2bb2cc8ea7301"
+    },
+    {
+      "file": "review/evidence164/jaw-ear159-1-detail.jpg",
+      "status": "??",
+      "bytes": 197155,
+      "sha256": "fbee5e72c049ffb79d11fe46046b3b0cd436d2e1cf91671c020961f8dead7255"
+    },
+    {
+      "file": "review/evidence164/jaw-ear159-1-ear-oblique.jpg",
+      "status": "??",
+      "bytes": 138912,
+      "sha256": "188c5a2e411e032f47dde8c5f7ce3772fff4cd44c990930cf0ca0635eac2255f"
+    },
+    {
+      "file": "review/evidence164/jaw-ear159-1-front.jpg",
+      "status": "??",
+      "bytes": 141941,
+      "sha256": "48084cc8c7f90798f46b098dce2a3af756ca657c469961be448b7c4955d197d0"
+    },
+    {
+      "file": "review/evidence164/jaw-ear159-1-left.jpg",
+      "status": "??",
+      "bytes": 95663,
+      "sha256": "83893f5e569decee4198e0d888a07b0d9c07cfe0003578cac2f7fe4690cc0266"
+    },
+    {
+      "file": "review/evidence164/jaw-ear159-1-right.jpg",
+      "status": "??",
+      "bytes": 93837,
+      "sha256": "772060c0e3807059990ec0c2149623b5ddf2d285a2e7e47827b8c58a774e1d72"
+    },
+    {
+      "file": "review/evidence164/jaw-ear159-visibility-0-ear-oblique.jpg",
+      "status": "??",
+      "bytes": 144638,
+      "sha256": "31be9e624273a5712396cc7f9b4dc43424d569a2986c63223f8ac776bdea9061"
+    },
+    {
+      "file": "review/evidence164/jaw-ear159-visibility-1-ear-oblique.jpg",
+      "status": "??",
+      "bytes": 144614,
+      "sha256": "fd09428530b0c3bd652ba86e9a993acfcbe3ef38aafefd89aab4f0b382349bc3"
+    },
+    {
+      "file": "review/evidence164/manifest.json",
+      "status": "??",
+      "bytes": 24122,
+      "sha256": "132dc96af7acba51dde35e93cb384f4b41883cd291b2a74dfc1fabc8c52684cd"
+    },
+    {
+      "file": "review/front-root-candidate156.js",
+      "status": "??",
+      "bytes": 40559,
+      "sha256": "79a8b17ff78b7c672fb2173982554f1753b352b13c313ea3a89cd523251b1434"
+    },
+    {
+      "file": "review/hair-color-candidate156.js",
+      "status": "??",
+      "bytes": 2093,
+      "sha256": "6dcfbfd27e6f5d6d9b011a124cd343ab32f1ccbf658ed7e20c4176429714812c"
+    },
+    {
+      "file": "review/hair-groom-candidate156.js",
+      "status": "??",
+      "bytes": 45074,
+      "sha256": "78c3e4a1773514a4c8bcf9c0185a155d06c4b89be2684c55d8978fd8ca394191"
+    },
+    {
+      "file": "review/index157-baseline.html",
+      "status": "??",
+      "bytes": 7376,
+      "sha256": "c6d41a627629b27033869b338753cd017885888f7543d28a0a5ed4170cc6a671"
+    },
+    {
+      "file": "review/integrated164-native.json",
+      "status": "??",
+      "bytes": 449340,
+      "sha256": "650743e8db6d3ac77d353c629cfff8a9e849f52a3c2655da3cbb744f4989cbed"
+    },
+    {
+      "file": "review/integrated164-root-decision.md",
+      "status": "??",
+      "bytes": 4236,
+      "sha256": "8af221ae33abf0ef9e0b67349e226185cc49ad57e4e099d3a05c4f4bf5205681"
+    },
+    {
+      "file": "review/integrated164-visual-review.md",
+      "status": "??",
+      "bytes": 2633,
+      "sha256": "c3ecb995450e1666c0cc4ddd5a78a708cd5df84adcbcca27f91cbbe36d9ab4d9"
+    },
+    {
+      "file": "review/integration164/evidence.mjs",
+      "status": "??",
+      "bytes": 7722,
+      "sha256": "ea065f96f001f5ca62a9e746493d28aa363b8a9577a08da5584dc4fc6006e899"
+    },
+    {
+      "file": "review/integration164/handoff.md",
+      "status": "??",
+      "bytes": 8083,
+      "sha256": "210a7280ef97ba2a7a8bda78cea46411c828534364a3abd5c250c2c5112f12aa"
+    },
+    {
+      "file": "review/integration164/index.html",
+      "status": "??",
+      "bytes": 7376,
+      "sha256": "80bda6271a8480e801e583b0d6544de807f00fe140e5f78ec390d0fe1cdd8feb"
+    },
+    {
+      "file": "review/integration164/manifest.json",
+      "status": "??",
+      "bytes": 10777,
+      "sha256": "ebcb3188df614443191af0d9c6d54b70e3ed80ac4f5fd8e45ed2c174266cb8e5"
+    },
+    {
+      "file": "review/integration164/native.mjs",
+      "status": "??",
+      "bytes": 28389,
+      "sha256": "a499036ab0da86456319ccf9d26fdc79b729ade36bf67ff339a57e8c192d7068"
+    },
+    {
+      "file": "review/integration164/source-check-result.json",
+      "status": "??",
+      "bytes": 8926,
+      "sha256": "72ed95993f72f8d06321f3cf38e7aa0db1e524ee4f029b5ea50ee9c95d00b250"
+    },
+    {
+      "file": "review/integration164/source-check.mjs",
+      "status": "??",
+      "bytes": 6234,
+      "sha256": "219ce029573dc2dedd0999339ca8002ed970fbef71cc25dcb4d1fbfb2b08796d"
+    },
+    {
+      "file": "review/integration164/source-mapping.json",
+      "status": "??",
+      "bytes": 4361,
+      "sha256": "7d718746a9cb1917ce88d1ce3701c61ba956ebc04f12b24df6bd5225a40d818d"
+    },
+    {
+      "file": "review/integration164/src/collar-roll.js",
+      "status": "??",
+      "bytes": 15491,
+      "sha256": "ab3211168b223dff18a19c514838669e7dc0f2475b78835cfa2bf4ad72db65b1"
+    },
+    {
+      "file": "review/integration164/src/jaw-ear.js",
+      "status": "??",
+      "bytes": 10487,
+      "sha256": "3c495ace27131d758ad73f81d76c0773c7d27a1a7a1d4477e5a4939665b5aade"
+    },
+    {
+      "file": "review/integration164/src/jaw-silhouette.js",
+      "status": "??",
+      "bytes": 12231,
+      "sha256": "6b652acf8c661c7b7cc8c8b09684c546aca402a7105253241720466bb0d1703b"
+    },
+    {
+      "file": "review/integration164/src/jaw-silhouette155-config.json",
+      "status": "??",
+      "bytes": 3694,
+      "sha256": "cb704c9037402850d3df21a3d2ebbf53485ace6fa96e5ce4405080bddf12f9e5"
+    },
+    {
+      "file": "review/integration164/src/jaw-silhouette155-field.js",
+      "status": "??",
+      "bytes": 3747,
+      "sha256": "0eacd3e8e46115bf7a3f6b0c10acd5083cdc02c522a4f74139d68e91338aa040"
+    },
+    {
+      "file": "review/integration164/src/main.js",
+      "status": "??",
+      "bytes": 22081,
+      "sha256": "88280af03c4be630968aca0763d3d430ec6699ae9533ba057015c53801d4ae55"
+    },
+    {
+      "file": "review/jaw-ear-candidate159.js",
+      "status": "??",
+      "bytes": 10500,
+      "sha256": "1c318d885a53919188c82a92e126cb84b8c7b5872e5dc17c9ecac2ccbfd6a843"
+    },
+    {
+      "file": "review/jaw-ear159-baseline.json",
+      "status": "??",
+      "bytes": 8411,
+      "sha256": "bfdbb1036516af6c48db0d9682971a833f945f9cc1f6ccac069a7e26d038708c"
+    },
+    {
+      "file": "review/jaw-ear159-final-decision.md",
+      "status": "??",
+      "bytes": 2753,
+      "sha256": "d31bdbeddbb966fbbdbc7f1c202f171709724c74e06fbdf98d06cd2061589e8e"
+    },
+    {
+      "file": "review/jaw-ear159-geometry.js",
+      "status": "??",
+      "bytes": 22703,
+      "sha256": "53b2656c3069071cf154289298159d66ebee284eeeea09fb1f0a21306d14ec4b"
+    },
+    {
+      "file": "review/jaw-ear159-handoff.md",
+      "status": "??",
+      "bytes": 10180,
+      "sha256": "cb539f89d2053bbafd5c3218b2ca25a4e8b374b7ec260664b104f17647e3af2d"
+    },
+    {
+      "file": "review/jaw-ear159-independent-review.md",
+      "status": "??",
+      "bytes": 2690,
+      "sha256": "77738aecb7460bcdbf8bb85dd3cbf46484517e0676720ebb64fd580e3b000943"
+    },
+    {
+      "file": "review/jaw-ear159-local-check.json",
+      "status": "??",
+      "bytes": 5316,
+      "sha256": "b0569771066c0f8f7da8d345c0cc1f46cdf963f9e726a0e846199dfd8bfb5b32"
+    },
+    {
+      "file": "review/jaw-ear159-local-check.mjs",
+      "status": "??",
+      "bytes": 5556,
+      "sha256": "cda2e0956e5b661b23b67031d7793a48100bdade9b2a93d5f3c9c2adf05c755c"
+    },
+    {
+      "file": "review/jaw-ear159-manifest.json",
+      "status": "??",
+      "bytes": 8803,
+      "sha256": "895e9de19605a8f3d663b20b033457b234d5e3f851f254b0b7c5e615f152ca93"
+    },
+    {
+      "file": "review/jaw-ear159-native-interpretation.md",
+      "status": "??",
+      "bytes": 7571,
+      "sha256": "e6abb42a27cc71375758d434872b020971558e8aa397ef674e872c5ac395f4a0"
+    },
+    {
+      "file": "review/jaw-ear159-native-qa.js",
+      "status": "??",
+      "bytes": 16242,
+      "sha256": "d255e41e0001a293c408b117f2e4ce778bb0ae884c49a350b2267f6f1c9ef552"
+    },
+    {
+      "file": "review/jaw-ear159-native.json",
+      "status": "??",
+      "bytes": 375938,
+      "sha256": "3c3a08201ad8397462b7e7f7d68d1421aa66352cb2a6e54f81cf612f984155f9"
+    },
+    {
+      "file": "review/jaw-ear159-native.mjs",
+      "status": "??",
+      "bytes": 10758,
+      "sha256": "34ca198f2e3782e09478570d689b6e33908d628024374a5e4de6f8c68eff6f9f"
+    },
+    {
+      "file": "review/jaw-ear159-visibility-handoff.md",
+      "status": "??",
+      "bytes": 3087,
+      "sha256": "b7b9107c463a49e92da0477d5c90745f225885a2f2d286ed0acae86362a18246"
+    },
+    {
+      "file": "review/jaw-ear159-visibility-local-check.json",
+      "status": "??",
+      "bytes": 796,
+      "sha256": "9377c0ae07408b9f7d68b8f287dadf10d14197bf98d404c009c2334ec77bf68e"
+    },
+    {
+      "file": "review/jaw-ear159-visibility-native.json",
+      "status": "??",
+      "bytes": 275149,
+      "sha256": "676edcac05e0247525efaff4f966239e821c799c84153fd380ea875b02c6e2c1"
+    },
+    {
+      "file": "review/jaw-ear159-visibility-native.mjs",
+      "status": "??",
+      "bytes": 12834,
+      "sha256": "179620fe0d226bacb3951f11edcb503e97891aff50dc8cf4de52ba94c4a84a79"
+    },
+    {
+      "file": "review/jaw-ear159-visibility-sight.json",
+      "status": "??",
+      "bytes": 10722,
+      "sha256": "b96fc98a28142ca6f3e745818bbaff312ecebad4b191355d8d42104093dc23aa"
+    },
+    {
+      "file": "review/jaw-ear159-visibility-sight.mjs",
+      "status": "??",
+      "bytes": 5515,
+      "sha256": "06c9ec27adf2fad53671183e18e250ef282d71f7e98901e5805fdcf8879d9596"
+    },
+    {
+      "file": "review/main157-baseline.js",
+      "status": "??",
+      "bytes": 21796,
+      "sha256": "03fccbaf4fd627128733b9c522025c09293b1d130fd6ae89c4a61170bb146ea5"
+    },
+    {
+      "file": "review/quality-journal.json",
+      "status": " M",
+      "bytes": 111829,
+      "sha256": "fadc86c47368dc748cd148d5ba5dd9ea517701c45f72733dbb16b815aad88fd0"
+    },
+    {
+      "file": "review/selected158159-root-decision.md",
+      "status": "??",
+      "bytes": 4209,
+      "sha256": "b97d1b1d0393ed85671f4acacd1e32ea3d5abde7dd1246f6ab0444680f7c323a"
+    },
+    {
+      "file": "src/collar-roll.js",
+      "status": "??",
+      "bytes": 15491,
+      "sha256": "ab3211168b223dff18a19c514838669e7dc0f2475b78835cfa2bf4ad72db65b1"
+    },
+    {
+      "file": "src/jaw-ear.js",
+      "status": "??",
+      "bytes": 10487,
+      "sha256": "3c495ace27131d758ad73f81d76c0773c7d27a1a7a1d4477e5a4939665b5aade"
+    },
+    {
+      "file": "src/jaw-silhouette.js",
+      "status": "??",
+      "bytes": 12231,
+      "sha256": "6b652acf8c661c7b7cc8c8b09684c546aca402a7105253241720466bb0d1703b"
+    },
+    {
+      "file": "src/jaw-silhouette155-config.json",
+      "status": "??",
+      "bytes": 3694,
+      "sha256": "cb704c9037402850d3df21a3d2ebbf53485ace6fa96e5ce4405080bddf12f9e5"
+    },
+    {
+      "file": "src/jaw-silhouette155-field.js",
+      "status": "??",
+      "bytes": 3747,
+      "sha256": "0eacd3e8e46115bf7a3f6b0c10acd5083cdc02c522a4f74139d68e91338aa040"
+    },
+    {
+      "file": "src/main.js",
+      "status": " M",
+      "bytes": 22081,
+      "sha256": "88280af03c4be630968aca0763d3d430ec6699ae9533ba057015c53801d4ae55"
+    }
+  ],
+  "manifestExcludesItself": true
+}

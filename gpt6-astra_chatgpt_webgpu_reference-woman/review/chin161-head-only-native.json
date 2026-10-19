@@ -1,0 +1,337 @@
+{
+  "iteration": 161,
+  "acceptedBase": 157,
+  "score": 78,
+  "status": "Passed; diagnosis pending visual inspection",
+  "scope": "Read-only head-only chin outline. Original geometry and materials remain untouched; hide only the neck while using temporary160clay materials. Compare with160clay-neck-visible images; no geometry candidate or new score.",
+  "files": {
+    "src/main.js": {
+      "bytes": 21796,
+      "sha256": "03fccbaf4fd627128733b9c522025c09293b1d130fd6ae89c4a61170bb146ea5"
+    },
+    "review/chin160-diagnostic-qa.js": {
+      "bytes": 6367,
+      "sha256": "88d0341c32be7a2fb5ffa57989b72c7018998b72313c25c8fbe0006ffc45f6c3"
+    },
+    "review/chin161-head-only-native.mjs": {
+      "bytes": 7784,
+      "sha256": "4cdeb042eade51c9159521653a824ab694d195daaf38f2f6fffb8d8e87decc46"
+    },
+    "review/integrated157-native.json": {
+      "bytes": 203068,
+      "sha256": "757df6877443afb227f90e539b7456b5f07e28aa32a2e7491dadd3f31ee2caa5"
+    },
+    "review/jaw-silhouette155-native.json": {
+      "bytes": 337654,
+      "sha256": "e9f57d86ea02ea24d5271a71f516f4e5b0266e95eaa6b057b6877f254da0921a"
+    }
+  },
+  "views": [
+    {
+      "name": "jaw",
+      "camera": {
+        "position": [
+          0.008,
+          2.1000000000000005,
+          8.3
+        ],
+        "target": [
+          0.008,
+          2.1,
+          0.3
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "frustum": [
+          -0.63,
+          0.63,
+          0.84,
+          -0.84
+        ],
+        "zoom": 1
+      }
+    },
+    {
+      "name": "jaw-oblique",
+      "camera": {
+        "position": [
+          -3.1920000000000006,
+          2.1000000000000005,
+          8.300000000000002
+        ],
+        "target": [
+          0.008,
+          2.1,
+          0.3
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "frustum": [
+          -0.63,
+          0.63,
+          0.84,
+          -0.84
+        ],
+        "zoom": 1
+      }
+    }
+  ],
+  "cases": [
+    {
+      "mode": "original",
+      "captures": [
+        {
+          "view": "jaw",
+          "camera": {
+            "position": [
+              0.008,
+              2.1000000000000005,
+              8.3
+            ],
+            "target": [
+              0.008,
+              2.1,
+              0.3
+            ],
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "frustum": [
+              -0.63,
+              0.63,
+              0.84,
+              -0.84
+            ],
+            "zoom": 1
+          },
+          "file": "output/qa/chin161-original-jaw.png",
+          "bytes": 503379,
+          "sha256": "5c8858f1684d69e363a9f275c4cd9ca6051715819d97ddf755f9566e258631c0"
+        }
+      ],
+      "integrity": {
+        "stage": "captured-original",
+        "mode": "original",
+        "meshBindings": 64,
+        "selectedAttributes": 10,
+        "originalMaterials": 3,
+        "originalDisposals": 0,
+        "passed": true
+      }
+    },
+    {
+      "mode": "head-only-clay",
+      "captures": [
+        {
+          "view": "jaw",
+          "camera": {
+            "position": [
+              0.008,
+              2.1000000000000005,
+              8.3
+            ],
+            "target": [
+              0.008,
+              2.1,
+              0.3
+            ],
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "frustum": [
+              -0.63,
+              0.63,
+              0.84,
+              -0.84
+            ],
+            "zoom": 1
+          },
+          "file": "output/qa/chin161-head-only-clay-jaw.png",
+          "bytes": 326045,
+          "sha256": "8e1655d321834441ea0dfbe8f1d0c14857f867f321f930b6290037bd40268c38"
+        },
+        {
+          "view": "jaw-oblique",
+          "camera": {
+            "position": [
+              -3.1920000000000006,
+              2.1000000000000005,
+              8.300000000000002
+            ],
+            "target": [
+              0.008,
+              2.1,
+              0.3
+            ],
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "frustum": [
+              -0.63,
+              0.63,
+              0.84,
+              -0.84
+            ],
+            "zoom": 1
+          },
+          "file": "output/qa/chin161-head-only-clay-jaw-oblique.png",
+          "bytes": 364126,
+          "sha256": "2c08fdb0b0c3082656b778b430383c4dd4cc739a13592df3be2dce3152a57707"
+        }
+      ],
+      "integrity": {
+        "stage": "captured-head-only-clay",
+        "mode": "clay",
+        "meshBindings": 64,
+        "selectedAttributes": 10,
+        "originalMaterials": 3,
+        "originalDisposals": 0,
+        "passed": true
+      }
+    }
+  ],
+  "errors": [],
+  "setup": {
+    "iteration": 160,
+    "acceptedBase": 157,
+    "score": 78,
+    "status": "Native diagnostic ready",
+    "modes": [],
+    "checkpoints": [
+      {
+        "stage": "after-first-upload",
+        "mode": "original",
+        "meshBindings": 64,
+        "selectedAttributes": 10,
+        "originalMaterials": 3,
+        "originalDisposals": 0,
+        "passed": true
+      }
+    ],
+    "sourceDisposals": [],
+    "interpretation": "Geometry and original appearance stay fixed. Uniform clay tests lit shape; unlit color tests the existing color map and vertex colors without studio lighting. These are diagnostic views, not selectable production appearances or a new quality score.",
+    "sourceMeshes": 64,
+    "selectedAttributes": 10,
+    "originalMaterials": 3,
+    "originalTextures": 4,
+    "privateMaterials": 6,
+    "disposals": []
+  },
+  "restoration": {
+    "camera": {
+      "position": [
+        0.008,
+        2.1000000000000005,
+        8.3
+      ],
+      "target": [
+        0.008,
+        2.1,
+        0.3
+      ],
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "frustum": [
+        -0.63,
+        0.63,
+        0.84,
+        -0.84
+      ],
+      "zoom": 1
+    },
+    "file": "output/qa/chin161-restored-jaw.png",
+    "bytes": 503379,
+    "sha256": "5c8858f1684d69e363a9f275c4cd9ca6051715819d97ddf755f9566e258631c0",
+    "matchesOriginalJaw": true
+  },
+  "visibility": {
+    "restoredMeshFlags": 64,
+    "allExact": true
+  },
+  "cleanup": {
+    "originalBindingsRestored": true,
+    "privateMaterialsDisposed": 6,
+    "originalDisposals": 0,
+    "qaReferencesReleased": true
+  },
+  "audit": {
+    "iteration": 160,
+    "acceptedBase": 157,
+    "score": 78,
+    "status": "Native diagnostic ready",
+    "modes": [
+      "original",
+      "clay"
+    ],
+    "checkpoints": [
+      {
+        "stage": "after-first-upload",
+        "mode": "original",
+        "meshBindings": 64,
+        "selectedAttributes": 10,
+        "originalMaterials": 3,
+        "originalDisposals": 0,
+        "passed": true
+      },
+      {
+        "stage": "captured-original",
+        "mode": "original",
+        "meshBindings": 64,
+        "selectedAttributes": 10,
+        "originalMaterials": 3,
+        "originalDisposals": 0,
+        "passed": true
+      },
+      {
+        "stage": "captured-head-only-clay",
+        "mode": "clay",
+        "meshBindings": 64,
+        "selectedAttributes": 10,
+        "originalMaterials": 3,
+        "originalDisposals": 0,
+        "passed": true
+      },
+      {
+        "stage": "restored-before-private-disposal",
+        "mode": "original",
+        "meshBindings": 64,
+        "selectedAttributes": 10,
+        "originalMaterials": 3,
+        "originalDisposals": 0,
+        "passed": true
+      }
+    ],
+    "sourceDisposals": [],
+    "interpretation": "Geometry and original appearance stay fixed. Uniform clay tests lit shape; unlit color tests the existing color map and vertex colors without studio lighting. These are diagnostic views, not selectable production appearances or a new quality score.",
+    "sourceMeshes": 64,
+    "selectedAttributes": 10,
+    "originalMaterials": 3,
+    "originalTextures": 4,
+    "privateMaterials": 6,
+    "cleanup": {
+      "originalBindingsRestored": true,
+      "privateMaterialsDisposed": 6,
+      "originalDisposals": 0,
+      "qaReferencesReleased": true
+    }
+  },
+  "idleFrames": 0,
+  "finalCleanup": {
+    "alreadyReleased": true
+  }
+}

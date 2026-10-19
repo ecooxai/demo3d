@@ -1,0 +1,124 @@
+{
+  "iteration": 158,
+  "status": "Coarse source shape and normal/resource checks passed; nearby contact and native art pending",
+  "scoreUnchanged": 78,
+  "scope": "Current accepted collar/facing/placket/torso source and154 positions with original Float32 geometry. The two edge/fold tubes use a local centripetal-curve arithmetic fixture. Actual installed Three/native buffers and nearby complete-scene triangles remain the final runtime authority. No reference image pixels are read.",
+  "metrics": {
+    "version": "collar-free-leaf-roll-158",
+    "strength": 1,
+    "applied": true,
+    "meshes": [
+      {
+        "mesh": "blouse-left-spread-collar",
+        "sourceVertices": 2450,
+        "sourceTriangles": 4896,
+        "ownedVertices": 1540,
+        "changedVertices": 1519,
+        "changedNormals": 1539,
+        "minimumJacobian": 0.8672684587320225,
+        "maxDisplacement": 0.0663792986182708,
+        "privateBytes": 137176
+      },
+      {
+        "mesh": "blouse-left-collar-edge",
+        "sourceVertices": 485,
+        "sourceTriangles": 768,
+        "ownedVertices": 405,
+        "changedVertices": 405,
+        "changedNormals": 405,
+        "minimumJacobian": 0.8677617011967697,
+        "maxDisplacement": 0.06635908955606681,
+        "privateBytes": 20128
+      },
+      {
+        "mesh": "blouse-right-spread-collar",
+        "sourceVertices": 2450,
+        "sourceTriangles": 4896,
+        "ownedVertices": 1540,
+        "changedVertices": 1518,
+        "changedNormals": 1539,
+        "minimumJacobian": 0.8928471579976774,
+        "maxDisplacement": 0.050055862798944036,
+        "privateBytes": 137176
+      },
+      {
+        "mesh": "blouse-right-collar-edge",
+        "sourceVertices": 485,
+        "sourceTriangles": 768,
+        "ownedVertices": 406,
+        "changedVertices": 404,
+        "changedNormals": 406,
+        "minimumJacobian": 0.8932661899856262,
+        "maxDisplacement": 0.05004392134438918,
+        "privateBytes": 20128
+      }
+    ],
+    "sourceVertices": 5870,
+    "sourceTriangles": 11328,
+    "ownedVertices": 3891,
+    "changedVertices": 3846,
+    "changedNormals": 3889,
+    "minimumJacobian": 0.8672684587320225,
+    "maximumJacobian": 1,
+    "maxDisplacement": 0.0663792986182708,
+    "maxXYReturn": 0.035959600820496616,
+    "maxHeight": 0.05999458193541629,
+    "maxNormalLengthError": 4.056535318763821e-8,
+    "minNormalCosine": 0.884903842060943,
+    "zeroNormalsPreserved": 0,
+    "maxInverseResidual": 1.9972912213006566e-13,
+    "maxFrontChartResidual": 8.718889676264241e-8,
+    "meshToBlouseIdentityResidual": 0,
+    "protectedFoldVertices": 810,
+    "privateGeometries": 4,
+    "sourceGeometryBytes": 314608,
+    "privateAttributeBytes": 314608,
+    "retainsSourceForQA": true,
+    "extraVertices": 0,
+    "extraTriangles": 0,
+    "extraMaps": 0,
+    "extraDraws": 0,
+    "elapsedMs": 48.05898400000001
+  },
+  "protection": {
+    "owned": 3891,
+    "protectedPositionChanges": 0,
+    "protectedNormalChanges": 0,
+    "immutableChanges": 0,
+    "allFourOriginalsUnmodified": true,
+    "otherMeshArraysExact": true,
+    "allReplacementBuffersPrivate": true,
+    "trueZeroNoop": true,
+    "sameArgumentIdempotent": true,
+    "changedArgumentRejected": true,
+    "wrongFrameAtomic": true,
+    "release": {
+      "released": true,
+      "privateGeometriesDisposed": 4,
+      "sourceGeometriesRestored": true
+    }
+  },
+  "normal": {
+    "samples": 108,
+    "maxJacobianError": 8.989121669245037e-9,
+    "normalError": 4.056535318763821e-8,
+    "maxSourceYFormulaError": 4.440892098500626e-16
+  },
+  "emittedGeometry": {
+    "affectedTriangles": 7705,
+    "newDegenerate": 0,
+    "reversed": 0,
+    "minTriangleCosine": 0.8884433380774893,
+    "minAreaRatio": 0.8130531065095196,
+    "maxAreaRatio": 1.1629176852356777,
+    "maxChordError": 0.0004759963520531643,
+    "minThicknessRatio": 0.8603037506721692,
+    "maxThicknessRatio": 1.1535156872004475,
+    "noNewTriangles": true
+  },
+  "resources": {
+    "elapsedMs": 1065.556032,
+    "cpuMs": 1494.073,
+    "peakRssMiB": 84.94140625
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "candidate": 159,
+  "study": "opposite-side visibility",
+  "passed": true,
+  "sourceOnly": true,
+  "entryByteIdenticalToFrozen159": true,
+  "entryBytes": 31050,
+  "entrySHA256": "f335a4e529c08918c55f74578e34c14fccf73b13895a94addc6d0c7f46e0770e",
+  "sameCompiledOutfile": "/workspace/scratch/5b53269fd49c/gpt6-astra_chatgpt_webgpu_reference-woman/output/qa/app-jaw-ear159.js",
+  "noRiskInvocation": true,
+  "modulesSyntaxPassed": 2,
+  "nativeNotRunLocally": true,
+  "files": {
+    "review/jaw-ear159-native.mjs": {
+      "bytes": 10758,
+      "sha256": "34ca198f2e3782e09478570d689b6e33908d628024374a5e4de6f8c68eff6f9f"
+    },
+    "review/jaw-ear159-visibility-native.mjs": {
+      "bytes": 12834,
+      "sha256": "179620fe0d226bacb3951f11edcb503e97891aff50dc8cf4de52ba94c4a84a79"
+    }
+  }
+}

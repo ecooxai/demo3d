@@ -1,0 +1,139 @@
+{
+  "candidate": 159,
+  "acceptedBase": 157,
+  "scoreUnchanged": 78,
+  "status": "Passed local provenance, syntax and moving-query regression; actual native geometry/art pending",
+  "guardedFileCount": 50,
+  "guardedFiles": [
+    "index.html",
+    "package.json",
+    "reference/image1-color.jpg",
+    "review/integrated157-manifest.json",
+    "review/integrated157-native.json",
+    "review/jaw-ear-candidate159.js",
+    "review/jaw-ear159-geometry.js",
+    "review/jaw-ear159-native-qa.js",
+    "review/jaw-ear159-native.mjs",
+    "review/jaw-silhouette-candidate155.js",
+    "review/jaw-silhouette155-config.json",
+    "review/jaw-silhouette155-field.js",
+    "review/jaw-silhouette155-geometry-audit.js",
+    "review/jaw-silhouette155-native.json",
+    "review/near-ear144-geometry.mjs",
+    "scripts/build.mjs",
+    "src/blouse-drape.js",
+    "src/blouse.js",
+    "src/brow-guides.js",
+    "src/ear.js",
+    "src/export-portrait.js",
+    "src/eye-contour-config.json",
+    "src/eye-contour-field.js",
+    "src/eye-contour.js",
+    "src/eyelash-refinement.js",
+    "src/eyelash-sweep.js",
+    "src/face-refinement.js",
+    "src/face.js",
+    "src/hair-color.js",
+    "src/hair-contact.js",
+    "src/hair-fibers.js",
+    "src/hair-groom.js",
+    "src/hair.js",
+    "src/lip-continuity.js",
+    "src/lip-refinement.js",
+    "src/lower-guide-placement.js",
+    "src/main.js",
+    "src/near-ear.js",
+    "src/portrait-balance.js",
+    "src/portrait-pose.js",
+    "src/portrait-proportions.js",
+    "src/reference-cloth.js",
+    "src/reference-crown.js",
+    "src/reference-ear.js",
+    "src/reference-neck.js",
+    "src/reference-skin.js",
+    "src/render-quality.js",
+    "src/skin-illumination.js",
+    "src/style.css",
+    "src/upper-lip-relief.js"
+  ],
+  "syntaxFiles": [
+    "review/jaw-ear-candidate159.js",
+    "review/jaw-ear159-geometry.js",
+    "review/jaw-ear159-native-qa.js",
+    "review/jaw-ear159-native.mjs"
+  ],
+  "actual155SourceAttributeRows": 20,
+  "actual155SelectedFaceNeckAttributeRows": 10,
+  "unchanged155Dependencies": [
+    "review/jaw-silhouette-candidate155.js",
+    "review/jaw-silhouette155-field.js",
+    "review/jaw-silhouette155-config.json",
+    "review/jaw-silhouette155-geometry-audit.js"
+  ],
+  "accepted157NativeEvidence": {
+    "file": "review/integrated157-native.json",
+    "bytes": 203068,
+    "sha256": "757df6877443afb227f90e539b7456b5f07e28aa32a2e7491dadd3f31ee2caa5",
+    "status": "Passed"
+  },
+  "reusedCertificate": {
+    "source": {
+      "file": "review/jaw-silhouette155-native.json",
+      "bytes": 337654,
+      "sha256": "e9f57d86ea02ea24d5271a71f516f4e5b0266e95eaa6b057b6877f254da0921a",
+      "sameFrozenFieldDependencies": [
+        "review/jaw-silhouette-candidate155.js",
+        "review/jaw-silhouette155-field.js",
+        "review/jaw-silhouette155-config.json",
+        "review/jaw-silhouette155-geometry-audit.js"
+      ],
+      "rerunFieldGrid": false
+    },
+    "analyticMinimumDeterminant": 0.4802485256249629,
+    "certifiedMinimumDeterminant": 0.5864116971751475,
+    "maximumWorldDisplacementUpper": 0.09546270743881537,
+    "protectedMouthBox": [
+      435.3194607999864,
+      569.7529824434536,
+      632.594098471038,
+      682.0730536583047
+    ],
+    "rerunGrid": false
+  },
+  "movingQuery": {
+    "movingQueryChecks": 1,
+    "allocations": {
+      "trackedTypedBufferPeakBytes": 504,
+      "trackedTypedBufferTotalAllocatedBytes": 504,
+      "trackedTypedBuffersStillHeld": 0,
+      "trackedTypedBytesStillHeld": 0,
+      "interpretation": "Tracks audit-owned typed arrays only. Original/replacement geometry, JavaScript object overhead and renderer allocations are separate. Arrays are not returned or cached."
+    },
+    "qualification": "Synthetic common translation only; actual native ear/face geometry remains pending."
+  },
+  "storageEstimates": {
+    "replacementBeforeUpload": 8295776,
+    "earBeforeUpload": 591536,
+    "faceNeckBeforeUpload": 7704240,
+    "indexWideningEstimate": 168960,
+    "replacementAfterExpectedNativeIndexWidening": 8464736,
+    "temporaryOriginalCPUBytesRetainedByNativeQA": 8295776,
+    "originalReplacementGPUUploadsBefore159": 0,
+    "productionSourceGeometryReferencesRetainedBy159": 0,
+    "addedDraws": 0,
+    "addedTextureBytes": 0,
+    "addedPerFrameWork": 0,
+    "qualification": "Byte estimates use actual155 source inventories with the same four selected157 meshes. The native wrapper verifies current source parity and reports actual replacement/index storage. Replacement size is not an equal permanent CPU/GPU increase; QA retains originals temporarily. Renderer overhead and unrelated existing caches are excluded."
+  },
+  "peerRead": {
+    "reviewer": "/root/quality_review_42",
+    "scope": "159 ear frame and normal composition, moved support-query coordinates and four-binding restore order",
+    "result": "No concrete normal-path math/frame, moved-query or restore-order blocker found; read-only, no extra tests."
+  },
+  "limitations": [
+    "No native renderer was run locally.",
+    "The common map certificate does not certify linear ear triangles or fixed-hair contacts.",
+    "Native sampled attachment offsets remain directional quantities, not penetration depths or proof of a continuous weld.",
+    "No artistic gain or score increase is inferred from these checks."
+  ]
+}

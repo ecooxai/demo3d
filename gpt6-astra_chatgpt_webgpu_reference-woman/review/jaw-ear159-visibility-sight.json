@@ -1,0 +1,404 @@
+{
+  "candidate": 159,
+  "study": "opposite-side visibility",
+  "passed": true,
+  "positionHashes": {
+    "face": "ad2176b2b673aa42346c1acd276037a625f23374177c7bc1342dc45de94f19e2",
+    "ear": "77b2cae80786d50a96bbc719f81b1fd983131777ea06aa142a7f61eb7d8c0e4b"
+  },
+  "faceIndexLogicalSHA256": "f557228c97f184969a74a79925ada9eba7eca179edf3dd723b08848eeee3ea9b",
+  "earUVSHA256": "7227a35923be85ff8385f5fbea668d779dffb19e71e7901ffe937b15aa14373d",
+  "fixedCenter": [
+    0.7215057941128521,
+    2.524026346417104,
+    -0.06596804776300413
+  ],
+  "span": 1.1,
+  "views": [
+    {
+      "cameraOffset": [
+        -3.2,
+        0,
+        8
+      ],
+      "samples": [
+        {
+          "id": 2364,
+          "uv": [
+            0.3236669898033142,
+            0.08418022841215134
+          ],
+          "world": [
+            0.6971269646139834,
+            2.457534646274463,
+            -0.029934669980587074
+          ],
+          "faceAhead": true,
+          "nearestFaceDistance": 0.5544806710735533,
+          "faceTriangle": 38271,
+          "framing": {
+            "x": -0.009252714394830762,
+            "y": -0.06649170014264083,
+            "inside": true
+          }
+        },
+        {
+          "id": 1693,
+          "uv": [
+            0.33316051959991455,
+            0.20240679383277893
+          ],
+          "world": [
+            0.7109787568364835,
+            2.520122195609376,
+            -0.027013336802430482
+          ],
+          "faceAhead": true,
+          "nearestFaceDistance": 0.5648880798487594,
+          "faceTriangle": 41308,
+          "framing": {
+            "x": 0.004693307715637564,
+            "y": -0.0039041508077279907,
+            "inside": true
+          }
+        },
+        {
+          "id": 1121,
+          "uv": [
+            0.3249630630016327,
+            0.32771560549736023
+          ],
+          "world": [
+            0.7145981223582494,
+            2.587880654484781,
+            -0.06422698258559435
+          ],
+          "faceAhead": true,
+          "nearestFaceDistance": 0.031147939532029392,
+          "faceTriangle": 46350,
+          "framing": {
+            "x": -0.005766996838620307,
+            "y": 0.06385430806767722,
+            "inside": true
+          }
+        },
+        {
+          "id": 2267,
+          "uv": [
+            0.3690341114997864,
+            0.08692829310894012
+          ],
+          "world": [
+            0.7088186899528401,
+            2.4570275656043177,
+            -0.030903784672289568
+          ],
+          "faceAhead": true,
+          "nearestFaceDistance": 0.008339439051300405,
+          "faceTriangle": 40650,
+          "framing": {
+            "x": 0.001242859897714211,
+            "y": -0.06699878081278632,
+            "inside": true
+          }
+        },
+        {
+          "id": 1595,
+          "uv": [
+            0.3926491439342499,
+            0.19719921052455902
+          ],
+          "world": [
+            0.7249046760685761,
+            2.514758610885892,
+            -0.03192868599373601
+          ],
+          "faceAhead": true,
+          "nearestFaceDistance": 0.014660296000736747,
+          "faceTriangle": 43309,
+          "framing": {
+            "x": 0.015797684261110764,
+            "y": -0.009267735531211851,
+            "inside": true
+          }
+        },
+        {
+          "id": 829,
+          "uv": [
+            0.3915802538394928,
+            0.3337033987045288
+          ],
+          "world": [
+            0.7309509231052169,
+            2.5882324645156185,
+            -0.07188407496660329
+          ],
+          "faceAhead": true,
+          "nearestFaceDistance": 0.05545071285529927,
+          "faceTriangle": 46349,
+          "framing": {
+            "x": 0.0065724247673413505,
+            "y": 0.06420611809851451,
+            "inside": true
+          }
+        },
+        {
+          "id": 2169,
+          "uv": [
+            0.45933327078819275,
+            0.08611585199832916
+          ],
+          "world": [
+            0.7308162627820127,
+            2.452685602251724,
+            -0.037135098662798335
+          ],
+          "faceAhead": true,
+          "nearestFaceDistance": 0.06226761748804348,
+          "faceTriangle": 40644,
+          "framing": {
+            "x": 0.019352841608142025,
+            "y": -0.07134074416538017,
+            "inside": true
+          }
+        },
+        {
+          "id": 1497,
+          "uv": [
+            0.45649272203445435,
+            0.20142841339111328
+          ],
+          "world": [
+            0.7400037748325676,
+            2.5142568761215314,
+            -0.041912670912343415
+          ],
+          "faceAhead": true,
+          "nearestFaceDistance": 0.04366004750416096,
+          "faceTriangle": 43307,
+          "framing": {
+            "x": 0.026108886605220538,
+            "y": -0.009769470295572624,
+            "inside": true
+          }
+        },
+        {
+          "id": 729,
+          "uv": [
+            0.4532463550567627,
+            0.3332142233848572
+          ],
+          "world": [
+            0.746981087863119,
+            2.5852971612273494,
+            -0.06992662536378397
+          ],
+          "faceAhead": true,
+          "nearestFaceDistance": 0.07094477391018338,
+          "faceTriangle": 46346,
+          "framing": {
+            "x": 0.02218303762802392,
+            "y": 0.06127081481024543,
+            "inside": true
+          }
+        }
+      ],
+      "faceClear": 0,
+      "faceOccluded": 9,
+      "allInsideFrustum": true
+    },
+    {
+      "cameraOffset": [
+        3.2,
+        0,
+        8
+      ],
+      "samples": [
+        {
+          "id": 2364,
+          "uv": [
+            0.3236669898033142,
+            0.08418022841215134
+          ],
+          "world": [
+            0.6971269646139834,
+            2.457534646274463,
+            -0.029934669980587074
+          ],
+          "faceAhead": true,
+          "nearestFaceDistance": 0.028789019681825238,
+          "faceTriangle": 40648,
+          "framing": {
+            "x": -0.036017635486700374,
+            "y": -0.06649170014264083,
+            "inside": true
+          }
+        },
+        {
+          "id": 1693,
+          "uv": [
+            0.33316051959991455,
+            0.20240679383277893
+          ],
+          "world": [
+            0.7109787568364835,
+            2.520122195609376,
+            -0.027013336802430482
+          ],
+          "faceAhead": true,
+          "nearestFaceDistance": 0.04899421521347688,
+          "faceTriangle": 43305,
+          "framing": {
+            "x": -0.024241525186014565,
+            "y": -0.0039041508077279907,
+            "inside": true
+          }
+        },
+        {
+          "id": 1121,
+          "uv": [
+            0.3249630630016327,
+            0.32771560549736023
+          ],
+          "world": [
+            0.7145981223582494,
+            2.587880654484781,
+            -0.06422698258559435
+          ],
+          "faceAhead": false,
+          "nearestFaceDistance": null,
+          "faceTriangle": null,
+          "framing": {
+            "x": -0.0070602275862499,
+            "y": 0.06385430806767722,
+            "inside": true
+          }
+        },
+        {
+          "id": 2267,
+          "uv": [
+            0.3690341114997864,
+            0.08692829310894012
+          ],
+          "world": [
+            0.7088186899528401,
+            2.4570275656043177,
+            -0.030903784672289568
+          ],
+          "faceAhead": false,
+          "nearestFaceDistance": null,
+          "faceTriangle": null,
+          "framing": {
+            "x": -0.02480222087252322,
+            "y": -0.06699878081278632,
+            "inside": true
+          }
+        },
+        {
+          "id": 1595,
+          "uv": [
+            0.3926491439342499,
+            0.19719921052455902
+          ],
+          "world": [
+            0.7249046760685761,
+            2.514758610885892,
+            -0.03192868599373601
+          ],
+          "faceAhead": false,
+          "nearestFaceDistance": null,
+          "faceTriangle": null,
+          "framing": {
+            "x": -0.00948611891919025,
+            "y": -0.009267735531211851,
+            "inside": true
+          }
+        },
+        {
+          "id": 829,
+          "uv": [
+            0.3915802538394928,
+            0.3337033987045288
+          ],
+          "world": [
+            0.7309509231052169,
+            2.5882324645156185,
+            -0.07188407496660329
+          ],
+          "faceAhead": false,
+          "nearestFaceDistance": null,
+          "faceTriangle": null,
+          "framing": {
+            "x": 0.010966739456289284,
+            "y": 0.06420611809851451,
+            "inside": true
+          }
+        },
+        {
+          "id": 2169,
+          "uv": [
+            0.45933327078819275,
+            0.08611585199832916
+          ],
+          "world": [
+            0.7308162627820127,
+            2.452685602251724,
+            -0.037135098662798335
+          ],
+          "faceAhead": false,
+          "nearestFaceDistance": null,
+          "faceTriangle": null,
+          "framing": {
+            "x": -0.00206373532707573,
+            "y": -0.07134074416538017,
+            "inside": true
+          }
+        },
+        {
+          "id": 1497,
+          "uv": [
+            0.45649272203445435,
+            0.20142841339111328
+          ],
+          "world": [
+            0.7400037748325676,
+            2.5142568761215314,
+            -0.041912670912343415
+          ],
+          "faceAhead": false,
+          "nearestFaceDistance": null,
+          "faceTriangle": null,
+          "framing": {
+            "x": 0.008241001248181072,
+            "y": -0.009769470295572624,
+            "inside": true
+          }
+        },
+        {
+          "id": 729,
+          "uv": [
+            0.4532463550567627,
+            0.3332142233848572
+          ],
+          "world": [
+            0.746981087863119,
+            2.5852971612273494,
+            -0.06992662536378397
+          ],
+          "faceAhead": false,
+          "nearestFaceDistance": null,
+          "faceTriangle": null,
+          "framing": {
+            "x": 0.025123395253131578,
+            "y": 0.06127081481024543,
+            "inside": true
+          }
+        }
+      ],
+      "faceClear": 7,
+      "faceOccluded": 2,
+      "allInsideFrustum": true
+    }
+  ],
+  "scope": "Nine actual lower-inner far-ear source samples; face/ear positions, face triangle indices and ear UV hashes equal the completed native159 OFF scene. Rays test the actual continuous-face triangles, treating both sides as potential occluders. Hair, ear self-occlusion, alpha and light are deliberately not certified; the two new native images decide actual visibility. No field/contact grid or other study was rerun."
+}

@@ -1,0 +1,107 @@
+{
+  "iteration": 156,
+  "status": "Frozen coarse pair; native art pending; known17 oblique interior misses retained",
+  "baseline": "immutable149; accepted78",
+  "command": "node review/crown156-coarse-native.mjs",
+  "productionSourceEdits": false,
+  "files": [
+    {
+      "path": "review/front-root-candidate156.js",
+      "role": "runtime",
+      "transfer": true,
+      "bytes": 40559,
+      "sha256": "79a8b17ff78b7c672fb2173982554f1753b352b13c313ea3a89cd523251b1434"
+    },
+    {
+      "path": "review/hair-groom-candidate156.js",
+      "role": "runtime",
+      "transfer": true,
+      "bytes": 45074,
+      "sha256": "78c3e4a1773514a4c8bcf9c0185a155d06c4b89be2684c55d8978fd8ca394191"
+    },
+    {
+      "path": "review/hair-color-candidate156.js",
+      "role": "runtime",
+      "transfer": true,
+      "bytes": 2093,
+      "sha256": "6dcfbfd27e6f5d6d9b011a124cd343ab32f1ccbf658ed7e20c4176429714812c"
+    },
+    {
+      "path": "review/crown156-coarse-native.mjs",
+      "role": "runtime",
+      "transfer": true,
+      "bytes": 24986,
+      "sha256": "c1917e59970cb3d1d31b3d8996a9ebe9cfeadf3ae3ca91ca46136bc8cab35b7e"
+    },
+    {
+      "path": "review/crown156-baseline149-sources.json",
+      "role": "runtime",
+      "transfer": true,
+      "bytes": 437652,
+      "sha256": "752e7a66cf4397998c87d808296dd7043f249c8c1832d6af05f43f1090ecd171"
+    },
+    {
+      "path": "review/main149-baseline.js",
+      "role": "existing immutable runtime entry",
+      "transfer": true,
+      "bytes": 21532,
+      "sha256": "a85fa76871b72b9ec1ed1cc545598c5066d346fdbb6e3226b6a247f9ddea9521"
+    },
+    {
+      "path": "review/crown156-coarse-handoff.md",
+      "role": "handoff",
+      "transfer": true,
+      "bytes": 12817,
+      "sha256": "aee9f562cba57c7e8754b9a2ef212eb1723fae26a730c2b2484ca754c7a28b2b"
+    },
+    {
+      "path": "review/crown156-focused-audit.json",
+      "role": "source evidence",
+      "transfer": true,
+      "bytes": 64812,
+      "sha256": "feeb2a08328ffbfca3dbe78fe5a857488e12a23b139d7c8a5208da71a4ba8a46"
+    },
+    {
+      "path": "review/crown156-focused-audit.mjs",
+      "role": "audit source",
+      "transfer": false,
+      "bytes": 17017,
+      "sha256": "5d76bcb9815d9398fae1d2c2fee61e5be0f01fee181c96e80ddf3d3666eef2c6"
+    },
+    {
+      "path": "review/crown156-source.mjs",
+      "role": "audit fixture",
+      "transfer": false,
+      "bytes": 4831,
+      "sha256": "d90fd40bd93953bc4b9538b64166ab83387beeec1b8365887b7f80a108ddac7e"
+    },
+    {
+      "path": "review/crown156-build.mjs",
+      "role": "constructor instrumentation generator",
+      "transfer": false,
+      "bytes": 2026,
+      "sha256": "30911ef5d880c466b16916d87827d749b64dfebe79f67fb433ba39c635252141"
+    },
+    {
+      "path": "review/crown156-connected-front-proposal.md",
+      "role": "approved proposal",
+      "transfer": false,
+      "bytes": 13020,
+      "sha256": "fedd6dca41f34d2c84bfe21d0c517ba0e0c0d7367883e4d82e7fcc68f0b59125"
+    },
+    {
+      "path": "src/eye-contour-config.json",
+      "role": "existing guarded non-JS baseline dependency",
+      "transfer": false,
+      "bytes": 5229,
+      "sha256": "80c678db068d31d33b2ad0e23424419d029047038de6c19f044fa7869605bfb8"
+    },
+    {
+      "path": "reference/image1-color.jpg",
+      "role": "existing guarded sole-photo derivative",
+      "transfer": false,
+      "bytes": 428568,
+      "sha256": "ef577a4eb5a7da2ab153cb93d0540760f756c23cb8d8fcba7271d6bd15976174"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "scope": "Pure normalization check only; no browser, renderer, bundle, geometry fixture or production edits.",
+  "wrapper": {
+    "path": "review/collar158-native-timing.mjs",
+    "bytes": 16103,
+    "sha256": "974a4198b76455d80d4425740ec379910d3cd8fb63a170682f2a46cbfecd7b13"
+  },
+  "originalWrapperSHA256": "bdbe94135d229e98e3e5430bff8f2657565bd67a2165a2fd94639be222e441fe",
+  "manifestSHA256": "5c298c6601ac88bb676c4dd2ff789b3d78ab0534c9b3961c1a6c374102c187c1",
+  "frozenRuntimeGuardCount": 39,
+  "originalRuntimeGuardLoopExact": true,
+  "perPageQAFileSHA256": "8928ba45e27e1a8793d2612e6ca7d19eadeed8620a92ac66bca863059dd40cd4",
+  "measuredDifferenceFields": 3,
+  "measuredTimings": [
+    {
+      "path": "protectedSignature/materials/36/metadata/referenceCrownMicrocontrast/bakeMs",
+      "before": 193.20000000298023,
+      "after": 204
+    },
+    {
+      "path": "protectedSignature/materials/36/metadata/referenceCrownMicrocontrast/elapsedMs",
+      "before": 195.79999999701977,
+      "after": 208.5
+    },
+    {
+      "path": "protectedSignature/textures/0/metadata/bakeMs",
+      "before": 818.2999999970198,
+      "after": 823.9000000059605
+    }
+  ],
+  "normalizationEqualForExactlyMeasuredChanges": true,
+  "eachMeasuredFieldAccepted": [
+    "protectedSignature/materials/36/metadata/referenceCrownMicrocontrast/bakeMs",
+    "protectedSignature/materials/36/metadata/referenceCrownMicrocontrast/elapsedMs",
+    "protectedSignature/textures/0/metadata/bakeMs"
+  ],
+  "otherDifferencesPreserved": [
+    "adjacent material bakeMs",
+    "adjacent texture bakeMs",
+    "same crown metadata otherMs",
+    "same texture metadata otherMs",
+    "crown version",
+    "material physical values",
+    "texture pixels",
+    "texture sampler",
+    "geometry buffer",
+    "object transform"
+  ],
+  "malformedInputsRejected": [
+    "missing measured leaf",
+    "non-numeric measured leaf",
+    "nonfinite serialized measured leaf",
+    "negative measured leaf",
+    "noncanonical metadata text"
+  ],
+  "rawSignaturesUnchanged": true,
+  "deepFrozenInputAccepted": true,
+  "ownWrapperHashInNativeProvenance": true,
+  "separateNativeResult": "output/qa/collar158-native-timing-result.json",
+  "nativeRun": false
+}

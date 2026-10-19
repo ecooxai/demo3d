@@ -1,0 +1,288 @@
+{
+  "iteration": 164,
+  "status": "Passed",
+  "mode": "staged source; production remains157",
+  "score": 78,
+  "syntaxFiles": [
+    "review/integration164/src/collar-roll.js",
+    "review/integration164/src/jaw-ear.js",
+    "review/integration164/src/jaw-silhouette.js",
+    "review/integration164/src/jaw-silhouette155-field.js",
+    "review/integration164/src/main.js",
+    "review/integration164/evidence.mjs",
+    "review/integration164/native.mjs",
+    "review/integration164/source-check.mjs"
+  ],
+  "copies": [
+    {
+      "target": "src/collar-roll.js",
+      "source": "review/collar-roll-candidate158.js",
+      "sourceSHA256": "ab3211168b223dff18a19c514838669e7dc0f2475b78835cfa2bf4ad72db65b1",
+      "sha256": "ab3211168b223dff18a19c514838669e7dc0f2475b78835cfa2bf4ad72db65b1",
+      "importSpecifierChanges": 0,
+      "otherExactReplacements": 0
+    },
+    {
+      "target": "src/jaw-ear.js",
+      "source": "review/jaw-ear-candidate159.js",
+      "sourceSHA256": "1c318d885a53919188c82a92e126cb84b8c7b5872e5dc17c9ecac2ccbfd6a843",
+      "sha256": "3c495ace27131d758ad73f81d76c0773c7d27a1a7a1d4477e5a4939665b5aade",
+      "importSpecifierChanges": 1,
+      "otherExactReplacements": 0
+    },
+    {
+      "target": "src/jaw-silhouette.js",
+      "source": "review/jaw-silhouette-candidate155.js",
+      "sourceSHA256": "6b652acf8c661c7b7cc8c8b09684c546aca402a7105253241720466bb0d1703b",
+      "sha256": "6b652acf8c661c7b7cc8c8b09684c546aca402a7105253241720466bb0d1703b",
+      "importSpecifierChanges": 0,
+      "otherExactReplacements": 0
+    },
+    {
+      "target": "src/jaw-silhouette155-field.js",
+      "source": "review/jaw-silhouette155-field.js",
+      "sourceSHA256": "0eacd3e8e46115bf7a3f6b0c10acd5083cdc02c522a4f74139d68e91338aa040",
+      "sha256": "0eacd3e8e46115bf7a3f6b0c10acd5083cdc02c522a4f74139d68e91338aa040",
+      "importSpecifierChanges": 0,
+      "otherExactReplacements": 0
+    },
+    {
+      "target": "src/jaw-silhouette155-config.json",
+      "source": "review/jaw-silhouette155-config.json",
+      "sourceSHA256": "cb704c9037402850d3df21a3d2ebbf53485ace6fa96e5ce4405080bddf12f9e5",
+      "sha256": "cb704c9037402850d3df21a3d2ebbf53485ace6fa96e5ce4405080bddf12f9e5",
+      "importSpecifierChanges": 0,
+      "otherExactReplacements": 0
+    },
+    {
+      "target": "src/main.js",
+      "source": "src/main.js",
+      "sourceSHA256": "03fccbaf4fd627128733b9c522025c09293b1d130fd6ae89c4a61170bb146ea5",
+      "sha256": "88280af03c4be630968aca0763d3d430ec6699ae9533ba057015c53801d4ae55",
+      "importSpecifierChanges": 0,
+      "otherExactReplacements": 4
+    },
+    {
+      "target": "index.html",
+      "source": "index.html",
+      "sourceSHA256": "c6d41a627629b27033869b338753cd017885888f7543d28a0a5ed4170cc6a671",
+      "sha256": "80bda6271a8480e801e583b0d6544de807f00fe140e5f78ec390d0fe1cdd8feb",
+      "importSpecifierChanges": 0,
+      "otherExactReplacements": 1
+    }
+  ],
+  "virtualImportDependencies": [
+    {
+      "from": "src/jaw-ear.js",
+      "to": "src/jaw-silhouette.js",
+      "resolved": "review/integration164/src/jaw-silhouette.js"
+    },
+    {
+      "from": "src/jaw-silhouette.js",
+      "to": "src/jaw-silhouette155-config.json",
+      "resolved": "review/integration164/src/jaw-silhouette155-config.json"
+    },
+    {
+      "from": "src/jaw-silhouette.js",
+      "to": "src/jaw-silhouette155-field.js",
+      "resolved": "review/integration164/src/jaw-silhouette155-field.js"
+    },
+    {
+      "from": "src/main.js",
+      "to": "src/export-portrait.js",
+      "resolved": "src/export-portrait.js"
+    },
+    {
+      "from": "src/main.js",
+      "to": "src/face.js",
+      "resolved": "src/face.js"
+    },
+    {
+      "from": "src/main.js",
+      "to": "src/reference-skin.js",
+      "resolved": "src/reference-skin.js"
+    },
+    {
+      "from": "src/main.js",
+      "to": "src/reference-neck.js",
+      "resolved": "src/reference-neck.js"
+    },
+    {
+      "from": "src/main.js",
+      "to": "src/skin-illumination.js",
+      "resolved": "src/skin-illumination.js"
+    },
+    {
+      "from": "src/main.js",
+      "to": "src/portrait-proportions.js",
+      "resolved": "src/portrait-proportions.js"
+    },
+    {
+      "from": "src/main.js",
+      "to": "src/portrait-pose.js",
+      "resolved": "src/portrait-pose.js"
+    },
+    {
+      "from": "src/main.js",
+      "to": "src/portrait-balance.js",
+      "resolved": "src/portrait-balance.js"
+    },
+    {
+      "from": "src/main.js",
+      "to": "src/face-refinement.js",
+      "resolved": "src/face-refinement.js"
+    },
+    {
+      "from": "src/main.js",
+      "to": "src/lip-refinement.js",
+      "resolved": "src/lip-refinement.js"
+    },
+    {
+      "from": "src/main.js",
+      "to": "src/lip-continuity.js",
+      "resolved": "src/lip-continuity.js"
+    },
+    {
+      "from": "src/main.js",
+      "to": "src/upper-lip-relief.js",
+      "resolved": "src/upper-lip-relief.js"
+    },
+    {
+      "from": "src/main.js",
+      "to": "src/eye-contour.js",
+      "resolved": "src/eye-contour.js"
+    },
+    {
+      "from": "src/main.js",
+      "to": "src/eyelash-refinement.js",
+      "resolved": "src/eyelash-refinement.js"
+    },
+    {
+      "from": "src/main.js",
+      "to": "src/blouse-drape.js",
+      "resolved": "src/blouse-drape.js"
+    },
+    {
+      "from": "src/main.js",
+      "to": "src/collar-roll.js",
+      "resolved": "review/integration164/src/collar-roll.js"
+    },
+    {
+      "from": "src/main.js",
+      "to": "src/jaw-ear.js",
+      "resolved": "review/integration164/src/jaw-ear.js"
+    },
+    {
+      "from": "src/main.js",
+      "to": "src/hair-color.js",
+      "resolved": "src/hair-color.js"
+    },
+    {
+      "from": "src/main.js",
+      "to": "src/reference-ear.js",
+      "resolved": "src/reference-ear.js"
+    },
+    {
+      "from": "src/main.js",
+      "to": "src/near-ear.js",
+      "resolved": "src/near-ear.js"
+    },
+    {
+      "from": "src/main.js",
+      "to": "src/reference-cloth.js",
+      "resolved": "src/reference-cloth.js"
+    },
+    {
+      "from": "src/main.js",
+      "to": "src/hair.js",
+      "resolved": "src/hair.js"
+    },
+    {
+      "from": "src/main.js",
+      "to": "src/hair-fibers.js",
+      "resolved": "src/hair-fibers.js"
+    },
+    {
+      "from": "src/main.js",
+      "to": "src/hair-groom.js",
+      "resolved": "src/hair-groom.js"
+    },
+    {
+      "from": "src/main.js",
+      "to": "src/reference-crown.js",
+      "resolved": "src/reference-crown.js"
+    },
+    {
+      "from": "src/main.js",
+      "to": "src/render-quality.js",
+      "resolved": "src/render-quality.js"
+    },
+    {
+      "from": "src/main.js",
+      "to": "src/blouse.js",
+      "resolved": "src/blouse.js"
+    }
+  ],
+  "runtimeGuardFiles": 43,
+  "preparationOrder": [
+    "state.referenceCloth117=await applyReferenceCloth117",
+    "state.blouseDrape154=applyBlouseDrape154",
+    "state.collarRoll158=applyCollarRoll158",
+    "state.balance=applyPortraitBalance",
+    "state.mouthContinuity130=applyMouthContinuity130",
+    "state.upperLipRelief140=applyUpperLipRelief140",
+    "state.eyeContour147=applyEyeContour147",
+    "state.eyelash151=applyEyelash151",
+    "state.jawEar159=applyJawEar159"
+  ],
+  "sourceRetention": {
+    "explicitProductionFalse": true,
+    "collarOriginalReferencesNull": true,
+    "jawEarStagingNull": true,
+    "jawEarOriginalBindingsNull": true,
+    "nested155StagingNull": true
+  },
+  "nativeEvidence": [
+    {
+      "role": "integration157",
+      "file": "review/integrated157-native.json",
+      "sha256": "757df6877443afb227f90e539b7456b5f07e28aa32a2e7491dadd3f31ee2caa5"
+    },
+    {
+      "role": "collar158",
+      "file": "review/collar158-native-timing-result.json",
+      "sha256": "4c193ae9c8bacd829cdf839ed5f4e8ea2d8ac385f15e5f4770753ef030b279c0"
+    },
+    {
+      "role": "jaw159",
+      "file": "review/jaw-ear159-native.json",
+      "sha256": "3c3a08201ad8397462b7e7f7d68d1421aa66352cb2a6e54f81cf612f984155f9"
+    },
+    {
+      "role": "visibility159",
+      "file": "review/jaw-ear159-visibility-native.json",
+      "sha256": "676edcac05e0247525efaff4f966239e821c799c84153fd380ea875b02c6e2c1"
+    }
+  ],
+  "attributeMerge": {
+    "baseline": "Actual unmodified157 native snapshot retained in completed158; all282 rows independently match both159 source snapshots",
+    "baselineAttributes": 282,
+    "selectedCollarAttributes": 18,
+    "selectedJawEarAttributes": 20,
+    "substitutedAttributes": 38,
+    "unchangedBaselineAttributes": 244,
+    "contentChangedAttributes": 16,
+    "meshBindings": 64,
+    "logicalIndices": 64,
+    "materialValues": 50,
+    "textureImagesAndSamplers": 10,
+    "collarPrivateBytesBeforeUpload": 314608,
+    "collarPrivateBytesAfterUpload": 382576,
+    "jawEarPrivateBytesBeforeUpload": 8295776,
+    "jawEarPrivateBytesAfterUpload": 8464736,
+    "componentFieldOrContactReruns": 0
+  },
+  "componentFieldOrContactReruns": 0,
+  "localNativeExecution": false,
+  "rssMiB": 40.5390625
+}
