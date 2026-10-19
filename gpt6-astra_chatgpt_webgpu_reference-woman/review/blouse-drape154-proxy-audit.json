@@ -1,0 +1,175 @@
+{
+  "candidate": 154,
+  "passed": true,
+  "sourceOnly": true,
+  "scope": "Actual native QA prepare/afterBalance/cleanup invoked with the established arithmetic cloth grid, Matrix4 fixture and minimal dispose events. Both full balanced original attribute hashes match. Installed native Three buffer ownership and rendering remain root-only checks.",
+  "results": [
+    {
+      "strength": 0,
+      "originalAfter99Attributes": [
+        {
+          "label": "balanced-original-torso",
+          "key": "position",
+          "type": "Float32Array",
+          "bytes": 261708,
+          "values": 65427,
+          "sha256": "fcc6fadb54d3ed90e318448f72f4d749ac79f5ca1134beb4fa130da76d5fb237",
+          "indexLogicalSHA256": null
+        },
+        {
+          "label": "balanced-original-torso",
+          "key": "uv",
+          "type": "Float32Array",
+          "bytes": 174472,
+          "values": 43618,
+          "sha256": "7309f314f2fcf3c9179ee775c22ed522880206ca84c1838893e089f363c6ce21",
+          "indexLogicalSHA256": null
+        },
+        {
+          "label": "balanced-original-torso",
+          "key": "normal",
+          "type": "Float32Array",
+          "bytes": 261708,
+          "values": 65427,
+          "sha256": "e8a56d6d9c9d2335cbc2d747aa45f6b6fe6f3b89ea9bd8b754d579acc6b07e23",
+          "indexLogicalSHA256": null
+        },
+        {
+          "label": "balanced-original-torso",
+          "key": "color",
+          "type": "Float32Array",
+          "bytes": 261708,
+          "values": 65427,
+          "sha256": "e838c20428cf2b2fcbca5e84558bd0bebe4166e65bd5f1c8da67d7d4c335df75",
+          "indexLogicalSHA256": null
+        },
+        {
+          "label": "balanced-original-torso",
+          "key": "index",
+          "type": "Uint16Array",
+          "bytes": 258048,
+          "values": 129024,
+          "sha256": "3f835e847c5ce4a3a956152593299f9f58ca6d791dc4df85aa9beffb5e3634a1",
+          "indexLogicalSHA256": "60d2b1eced29c0d3b6eb349fa02f743e2331b034942abeb3dc93d1ce821535b4"
+        }
+      ],
+      "protected": {
+        "xyChanges": 0,
+        "unownedPositionChanges": 0,
+        "unownedNormalChanges": 0
+      },
+      "proxy": {
+        "used": false,
+        "rendered": false,
+        "extraDraws": 0,
+        "frameResidual": 2.168404344971009e-19,
+        "singleUnchanged99Pass": false,
+        "metrics": null,
+        "elapsedMs": 0
+      },
+      "cleanup": {
+        "released": false,
+        "privateGeometriesDisposed": 0,
+        "balancedOriginalRestored": true,
+        "originalResourceDisposals": 0,
+        "privateGeometryDisposals": 0,
+        "privateDisposalsHaveNoSourceBindings": true,
+        "qaRecordsReleased": true
+      }
+    },
+    {
+      "strength": 1,
+      "originalAfter99Attributes": [
+        {
+          "label": "balanced-original-torso",
+          "key": "position",
+          "type": "Float32Array",
+          "bytes": 261708,
+          "values": 65427,
+          "sha256": "fcc6fadb54d3ed90e318448f72f4d749ac79f5ca1134beb4fa130da76d5fb237",
+          "indexLogicalSHA256": null
+        },
+        {
+          "label": "balanced-original-torso",
+          "key": "uv",
+          "type": "Float32Array",
+          "bytes": 174472,
+          "values": 43618,
+          "sha256": "7309f314f2fcf3c9179ee775c22ed522880206ca84c1838893e089f363c6ce21",
+          "indexLogicalSHA256": null
+        },
+        {
+          "label": "balanced-original-torso",
+          "key": "normal",
+          "type": "Float32Array",
+          "bytes": 261708,
+          "values": 65427,
+          "sha256": "e8a56d6d9c9d2335cbc2d747aa45f6b6fe6f3b89ea9bd8b754d579acc6b07e23",
+          "indexLogicalSHA256": null
+        },
+        {
+          "label": "balanced-original-torso",
+          "key": "color",
+          "type": "Float32Array",
+          "bytes": 261708,
+          "values": 65427,
+          "sha256": "e838c20428cf2b2fcbca5e84558bd0bebe4166e65bd5f1c8da67d7d4c335df75",
+          "indexLogicalSHA256": null
+        },
+        {
+          "label": "balanced-original-torso",
+          "key": "index",
+          "type": "Uint16Array",
+          "bytes": 258048,
+          "values": 129024,
+          "sha256": "3f835e847c5ce4a3a956152593299f9f58ca6d791dc4df85aa9beffb5e3634a1",
+          "indexLogicalSHA256": "60d2b1eced29c0d3b6eb349fa02f743e2331b034942abeb3dc93d1ce821535b4"
+        }
+      ],
+      "protected": {
+        "xyChanges": 0,
+        "unownedPositionChanges": 0,
+        "unownedNormalChanges": 0
+      },
+      "proxy": {
+        "used": true,
+        "rendered": false,
+        "extraDraws": 0,
+        "frameResidual": 2.168404344971009e-19,
+        "singleUnchanged99Pass": true,
+        "metrics": {
+          "version": "shared-portrait-balance-99",
+          "shiftX": -0.24,
+          "applied": true,
+          "meshes": 1,
+          "vertices": 21809,
+          "changedVertices": 18645,
+          "uniformVertices": 10355,
+          "transitionVertices": 8290,
+          "unchangedOuterVertices": 3164,
+          "clonedSharedGeometries": 0,
+          "zeroNormalsPreserved": 0,
+          "analyticMinimumJacobian": 0.47058823529411764,
+          "minimumJacobian": 0.47058841208734764,
+          "maximumJacobian": 1.5294116571258096,
+          "maximumModelDisplacement": 0.24,
+          "maximumLocalDisplacement": 0.24,
+          "maximumUpdatedNormalLengthError": 4.0889753361028625e-8,
+          "rigidComponents": {},
+          "elapsedMs": 14.435480999999982
+        },
+        "elapsedMs": 14.650359000000094
+      },
+      "cleanup": {
+        "released": true,
+        "privateGeometriesDisposed": 1,
+        "sourceGeometryRestored": true,
+        "balancedOriginalRestored": true,
+        "originalResourceDisposals": 0,
+        "privateGeometryDisposals": 1,
+        "privateDisposalsHaveNoSourceBindings": true,
+        "qaRecordsReleased": true
+      }
+    }
+  ]
+}

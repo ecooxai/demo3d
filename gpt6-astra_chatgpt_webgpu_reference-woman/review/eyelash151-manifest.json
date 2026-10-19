@@ -1,0 +1,133 @@
+{
+  "candidate": 151,
+  "status": "Frozen for root-only first native art comparison",
+  "acceptedBase": 149,
+  "scoreUnchanged": 78,
+  "productionEdited": false,
+  "runtimeFiles": {
+    "review/eyelash-sweep151.js": {
+      "bytes": 10234,
+      "sha256": "ec468f644708d7fd5a7b70d0423d9c42a0979816a8199607b69bb32807ce528b"
+    },
+    "review/eyelash-candidate151.js": {
+      "bytes": 14510,
+      "sha256": "7f03bc3686dc24caf53b83c4aa5b67ba7a4244ca4e1b3646ae2b11aacf9475f4"
+    },
+    "review/eyelash151-geometry-audit.js": {
+      "bytes": 8222,
+      "sha256": "bb9f8467da6f580cbe32a60a5b49401394df88cee23ceabb57f78bb17c196f2a"
+    },
+    "review/near-ear144-geometry.mjs": {
+      "bytes": 7979,
+      "sha256": "3377610957ee596e7d63cac772404081a4058ca92ff8ff7e18020504b369aee4"
+    },
+    "review/eyelash151-native-qa.js": {
+      "bytes": 19000,
+      "sha256": "daa59b45e4a9e0c6dd66e6619c66c627c8dde897a031702edc38975f834172c3"
+    },
+    "review/eyelash151-native.mjs": {
+      "bytes": 9936,
+      "sha256": "d211e27f21b4a02bad7f781a7610ba70574aa0db5c74f60314742134bd8dda4c"
+    },
+    "review/eyelash151-cameras.json": {
+      "bytes": 1167,
+      "sha256": "d7ae5c3152e18e7e24a3ab53c23749ebb5dd25689cdc76a401126ab310b78012"
+    },
+    "src/main.js": {
+      "bytes": 21532,
+      "sha256": "a85fa76871b72b9ec1ed1cc545598c5066d346fdbb6e3226b6a247f9ddea9521"
+    },
+    "src/face.js": {
+      "bytes": 22966,
+      "sha256": "0c70ec7cff943e14445daed5cf40dd5aee251756897152c72a3f0b8ea3119321"
+    },
+    "src/hair-groom.js": {
+      "bytes": 44537,
+      "sha256": "a7b04c16fd8e13277e9418954c996c2370895f84ef446ed295ccb942a73a002d"
+    },
+    "src/reference-skin.js": {
+      "bytes": 21381,
+      "sha256": "c20bf43aa89e5cfbbc658a39b599148588ab844701db5fa51aef7a69449b0c73"
+    },
+    "src/eye-contour.js": {
+      "bytes": 11265,
+      "sha256": "c3b6e6857af712a6e4b4c7280be44a0d64cb8a19e4fd94671304acf39c412b79"
+    },
+    "src/eye-contour-field.js": {
+      "bytes": 3638,
+      "sha256": "15649a72bd4823bb48b2d7c143db9e8a445272c4ecdbcc0df84f17d2093f97fd"
+    },
+    "src/eye-contour-config.json": {
+      "bytes": 5229,
+      "sha256": "80c678db068d31d33b2ad0e23424419d029047038de6c19f044fa7869605bfb8"
+    },
+    "src/hair-color.js": {
+      "bytes": 2016,
+      "sha256": "a49c0ea4be9ead7ca1c1a45f6d1174f38ecabd31031935bbc9d00d3ce53590e1"
+    },
+    "src/lip-continuity.js": {
+      "bytes": 26860,
+      "sha256": "fb2f288b264d9f2abade0aa4347d55e059c0179a0260dcf2e918d08745417c28"
+    },
+    "src/upper-lip-relief.js": {
+      "bytes": 23201,
+      "sha256": "d5ffaea4587dd5d57df92a8923de5f30066488d5b328623ee713c81527a0c26e"
+    }
+  },
+  "sourceAuditFiles": {
+    "review/eyelash151-source.mjs": {
+      "bytes": 7250,
+      "sha256": "0a40d93d042d21be0610038ad5904f2141dc99d03caaf993b468e2e5bd400ca5"
+    },
+    "review/eyelash151-audit.mjs": {
+      "bytes": 11393,
+      "sha256": "bbae4035dc8274385e6c3f6f90a680494d1ba8224c8afa214a450b501f86eafe"
+    },
+    "review/eyelash151-audit.json": {
+      "bytes": 189375,
+      "sha256": "2c050ad8fe58835dafbb1678e4feaf3c064441ab8c862578cbb663571078db72"
+    },
+    "review/eye-contour147-source.mjs": {
+      "bytes": 4370,
+      "sha256": "044509feb4ca233ff3a32b727e88901d6eda9e886253cc7018e3968965e390b0"
+    },
+    "review/torso-depth110-harness.mjs": {
+      "bytes": 1110,
+      "sha256": "c345007fbcb30301f56f825c169d5c1af04681185d06a5f4c38e0f13b1789176"
+    },
+    "review/portrait-balance99-audit.mjs": {
+      "bytes": 16139,
+      "sha256": "6080b8e07b4abb8d230673141972e7df9626d03a310b2f3023bf98c0a3c9d322"
+    },
+    "review/mouth-continuity130-audit.mjs": {
+      "bytes": 20092,
+      "sha256": "227b0fb7cd093b6ab21009a22d94ecda584186995a043389836890c8f4387a18"
+    },
+    "review/hair-contact86-audit.mjs": {
+      "bytes": 14911,
+      "sha256": "09ff9d1c07c0592cf63c9f6c49f470c8e562268884b86adf03c41196efd9bd10"
+    },
+    "review/gpt6-astra_chatgpt_eyelash151-proposal.md": {
+      "bytes": 13287,
+      "sha256": "6dba81d3dd78e30771134bdf2cd3568f21dccc8528c2837ca7b4963eee26f158"
+    }
+  },
+  "nativeTransferFiles": [
+    "review/eyelash-sweep151.js",
+    "review/eyelash-candidate151.js",
+    "review/eyelash151-geometry-audit.js",
+    "review/near-ear144-geometry.mjs",
+    "review/eyelash151-native-qa.js",
+    "review/eyelash151-native.mjs",
+    "review/eyelash151-cameras.json",
+    "review/eyelash151-manifest.json"
+  ],
+  "localChecks": {
+    "sourceAudit": "review/eyelash151-audit.json",
+    "sevenModulesSyntaxPassed": true,
+    "injectedLiveMainSyntaxPassed": true,
+    "cachedAfter147MarkerCount": 1,
+    "nativeExecutionPerformedLocally": false
+  },
+  "runtimeDependencies": "Installed project Three r186, esbuild and Playwright on the parent-owned Mac; no package installation, browser, downloaded asset or image generation was used locally."
+}

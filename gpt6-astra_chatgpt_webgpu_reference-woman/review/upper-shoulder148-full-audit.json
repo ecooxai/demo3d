@@ -1,0 +1,1252 @@
+{
+  "sourceOnly": true,
+  "iteration": 148,
+  "score": 78,
+  "offByteExact": true,
+  "geometry": {
+    "vertices": 955385,
+    "triangles": 1114888,
+    "addedVertices": 0,
+    "addedTriangles": 0,
+    "nonfinite": 0,
+    "normalError": 4.9655871747766867e-8,
+    "zeroNormals": 3,
+    "changedPositions": 42438,
+    "changedNormals": 43893,
+    "protectedPositionChanges": 0,
+    "protectedNormalChanges": 0,
+    "lowerPositionChanges": 0,
+    "lowerNormalChanges": 0,
+    "upperPositionChanges": 0,
+    "upperNormalChanges": 0,
+    "maxModelXYResidual": 2.3726086186693877e-7,
+    "maxFineFieldResidual": 1.3218140256722346e-7,
+    "minimumTriangleNormalCos": 0.9481968627029499,
+    "triangleFlips": 0
+  },
+  "records": [
+    {
+      "mesh": 0,
+      "name": "Continuous parted crown with longitudinal fiber flow",
+      "vertices": 24455,
+      "triangles": 47744,
+      "changedPositions": 0,
+      "changedNormals": 0,
+      "protectedIntervals": 1
+    },
+    {
+      "mesh": 1,
+      "name": "Overlapping layered S-wave hair around front back and shoulders",
+      "vertices": 159210,
+      "triangles": 278400,
+      "changedPositions": 10033,
+      "changedNormals": 11432,
+      "protectedIntervals": 131
+    },
+    {
+      "mesh": 2,
+      "name": "Independent fine crown lengths and silhouette strands",
+      "vertices": 646260,
+      "triangles": 623976,
+      "changedPositions": 32405,
+      "changedNormals": 32461,
+      "protectedIntervals": 2430
+    },
+    {
+      "mesh": 3,
+      "name": "Dense fine bowed brown fringe strands",
+      "vertices": 92568,
+      "triangles": 133160,
+      "changedPositions": 0,
+      "changedNormals": 0,
+      "protectedIntervals": 1
+    },
+    {
+      "mesh": 4,
+      "name": "Sparse short temple edge and hairline wisps",
+      "vertices": 32892,
+      "triangles": 31608,
+      "changedPositions": 0,
+      "changedNormals": 0,
+      "protectedIntervals": 1
+    }
+  ],
+  "normalTransport": {
+    "maxJetValueError": 0,
+    "maxGradientError": 4.47481869701033e-10,
+    "continuousDeterminant": 1,
+    "description": "Accepted fine normals are transported through the same analytic model-space shear. Protected zero-field points/normals are copied exactly; real triangles checked separately."
+  },
+  "fineContacts": {
+    "samples": 87893,
+    "newClothCrossings": 0,
+    "minForwardNormalGap": 0.004471534710655022,
+    "examples": [],
+    "maxChordFieldDeviation": 0.017290155389102696,
+    "chordExamples": [
+      {
+        "id": 58,
+        "kind": "regular",
+        "row": 12,
+        "point": [
+          -0.6271363941801005,
+          2.2078147510157358,
+          0.14304420732966133
+        ],
+        "deviation": 0.0007028825124034688
+      },
+      {
+        "id": 58,
+        "kind": "regular",
+        "row": 12,
+        "point": [
+          -0.6284640253724812,
+          2.20750114280305,
+          0.14283113108797277
+        ],
+        "deviation": 0.0007123870661195908
+      },
+      {
+        "id": 58,
+        "kind": "regular",
+        "row": 13,
+        "point": [
+          -0.5708807924429005,
+          1.9780470931875662,
+          0.20128260617482405
+        ],
+        "deviation": 0.008788114441560003
+      },
+      {
+        "id": 58,
+        "kind": "regular",
+        "row": 18,
+        "point": [
+          -0.28858803591887866,
+          0.7619711672231,
+          0.7963783523379464
+        ],
+        "deviation": 0.009440936494860091
+      },
+      {
+        "id": 58,
+        "kind": "regular",
+        "row": 14,
+        "point": [
+          -0.45623222976196787,
+          1.615794875830603,
+          0.35338684467761766
+        ],
+        "deviation": 0.009546936661684033
+      },
+      {
+        "id": 58,
+        "kind": "regular",
+        "row": 16,
+        "point": [
+          -0.30027555931829186,
+          1.1101760800705924,
+          0.6749797354465812
+        ],
+        "deviation": 0.014475808285679015
+      },
+      {
+        "id": 58,
+        "kind": "regular",
+        "row": 17,
+        "point": [
+          -0.297803785921235,
+          0.8253388636382641,
+          0.8191470913613764
+        ],
+        "deviation": 0.014506482102756969
+      },
+      {
+        "id": 59,
+        "kind": "regular",
+        "row": 17,
+        "point": [
+          -0.3053889951032758,
+          0.8253071901498781,
+          0.8127680628449085
+        ],
+        "deviation": 0.014628297012782192
+      },
+      {
+        "id": 61,
+        "kind": "regular",
+        "row": 16,
+        "point": [
+          -0.3552594081304584,
+          1.1597413961658614,
+          0.6427967405563866
+        ],
+        "deviation": 0.01516438786578908
+      },
+      {
+        "id": 135,
+        "kind": "regular",
+        "row": 14,
+        "point": [
+          -0.590948362215616,
+          1.7362884213959224,
+          0.3365003327850774
+        ],
+        "deviation": 0.015631204860691778
+      },
+      {
+        "id": 135,
+        "kind": "regular",
+        "row": 14,
+        "point": [
+          -0.592759304687356,
+          1.7358537729777497,
+          0.33640831232848734
+        ],
+        "deviation": 0.015690897468860154
+      },
+      {
+        "id": 135,
+        "kind": "regular",
+        "row": 14,
+        "point": [
+          -0.6259601422742709,
+          1.7379899972202826,
+          0.37599250241115323
+        ],
+        "deviation": 0.01585555924916561
+      },
+      {
+        "id": 135,
+        "kind": "regular",
+        "row": 14,
+        "point": [
+          -0.6277348782881336,
+          1.737562490646766,
+          0.37588179402279354
+        ],
+        "deviation": 0.015912883615184656
+      },
+      {
+        "id": 135,
+        "kind": "regular",
+        "row": 14,
+        "point": [
+          -0.6457984197456881,
+          1.724810370516351,
+          0.37748538020989153
+        ],
+        "deviation": 0.016553921889163922
+      },
+      {
+        "id": 135,
+        "kind": "regular",
+        "row": 14,
+        "point": [
+          -0.6473777036972659,
+          1.7244107481809878,
+          0.3773763592083718
+        ],
+        "deviation": 0.016598912878545827
+      },
+      {
+        "id": 135,
+        "kind": "regular",
+        "row": 14,
+        "point": [
+          -0.6659436489677895,
+          1.7300568477914744,
+          0.36275415129483246
+        ],
+        "deviation": 0.016686288978837546
+      },
+      {
+        "id": 135,
+        "kind": "regular",
+        "row": 14,
+        "point": [
+          -0.667761504971298,
+          1.7296098588459268,
+          0.36261474589911935
+        ],
+        "deviation": 0.016739061269757674
+      },
+      {
+        "id": 138,
+        "kind": "regular",
+        "row": 14,
+        "point": [
+          -0.6771600826137968,
+          1.6765200472059134,
+          0.41415965124870724
+        ],
+        "deviation": 0.017125895517267786
+      },
+      {
+        "id": 138,
+        "kind": "regular",
+        "row": 14,
+        "point": [
+          -0.6791594771079688,
+          1.676606298303251,
+          0.41406142515040456
+        ],
+        "deviation": 0.017125953864558244
+      },
+      {
+        "id": 138,
+        "kind": "regular",
+        "row": 14,
+        "point": [
+          -0.6813662339208659,
+          1.697237947949231,
+          0.40489590057952196
+        ],
+        "deviation": 0.017273608298156204
+      }
+    ],
+    "scope": "Original fine cuts, actual moved ribbon edge/interior samples against actual body/collar/neck triangles. Deviation from continuous field is reported without claiming global triangle contact/disjointness."
+  },
+  "change": {
+    "version": "shared-upper-shoulder-148-native-v3",
+    "enabled": true,
+    "changed": true,
+    "stage": "original-MASS-and-dependent-fibers",
+    "selectedGuides": [
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      148,
+      149,
+      150,
+      151,
+      152,
+      153,
+      154,
+      155,
+      172,
+      173,
+      174,
+      175,
+      176,
+      177,
+      178,
+      179,
+      180,
+      181,
+      182,
+      183,
+      184,
+      185,
+      186,
+      187,
+      188,
+      189,
+      190,
+      191,
+      192,
+      193,
+      194,
+      195,
+      196,
+      197,
+      198,
+      199
+    ],
+    "baseFibers": 2415,
+    "attachedFibers": 2415,
+    "attachedFlyaways": 27,
+    "changedFineVertices": 32461,
+    "coarseFineAllocation": 0,
+    "extraVertices": 0,
+    "extraTriangles": 0,
+    "extraDrawCalls": 0,
+    "extraTextures": 0,
+    "second118Fit": false,
+    "retained86": 0.35,
+    "coefficientFingerprint": "aee55b27f5e40c9f6eb41cdd351dccefabe8f7567f5420172c257bda9adec66a",
+    "specification": {
+      "version": "shared-upper-shoulder-148-native-v3",
+      "selectedGuides": [
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199
+      ],
+      "baseFibers": 2415,
+      "top": 2.17,
+      "fullTop": 1.45,
+      "fullBottom": 1.3,
+      "bottom": 0.69,
+      "peak": 0.18,
+      "headY": 2.95,
+      "headShiftX": 0.26,
+      "headTilt": -0.17,
+      "headYaw": 0.16,
+      "guidePlacement": 0.5,
+      "contact": 0.35,
+      "protectedLowerY": 0.55,
+      "protectedUpperY": 2.3
+    },
+    "transport": {
+      "forwardCalls": 51229,
+      "inverseCalls": 10054,
+      "maximumInverseResidual": 2.949875947545439e-13,
+      "maximumCenterXYResidual": 2.089609621416101e-14,
+      "maximumPull": 0.11016109037627951
+    },
+    "preparationMs": 0.22564299999794457,
+    "fiberTransportMs": 54.12292700000398,
+    "fineRanges": [
+      {
+        "id": 58,
+        "kind": "regular",
+        "first": 114376,
+        "count": 2494,
+        "fibers": 43
+      },
+      {
+        "id": 59,
+        "kind": "regular",
+        "first": 116870,
+        "count": 2494,
+        "fibers": 43
+      },
+      {
+        "id": 60,
+        "kind": "regular",
+        "first": 119364,
+        "count": 2494,
+        "fibers": 43
+      },
+      {
+        "id": 61,
+        "kind": "regular",
+        "first": 121858,
+        "count": 2494,
+        "fibers": 43
+      },
+      {
+        "id": 62,
+        "kind": "regular",
+        "first": 124352,
+        "count": 2494,
+        "fibers": 43
+      },
+      {
+        "id": 63,
+        "kind": "regular",
+        "first": 126846,
+        "count": 2494,
+        "fibers": 43
+      },
+      {
+        "id": 64,
+        "kind": "regular",
+        "first": 129340,
+        "count": 2494,
+        "fibers": 43
+      },
+      {
+        "id": 65,
+        "kind": "regular",
+        "first": 131834,
+        "count": 2494,
+        "fibers": 43
+      },
+      {
+        "id": 66,
+        "kind": "regular",
+        "first": 134328,
+        "count": 2494,
+        "fibers": 43
+      },
+      {
+        "id": 67,
+        "kind": "regular",
+        "first": 136822,
+        "count": 2494,
+        "fibers": 43
+      },
+      {
+        "id": 68,
+        "kind": "regular",
+        "first": 139316,
+        "count": 2494,
+        "fibers": 43
+      },
+      {
+        "id": 69,
+        "kind": "regular",
+        "first": 141810,
+        "count": 2494,
+        "fibers": 43
+      },
+      {
+        "id": 70,
+        "kind": "regular",
+        "first": 144304,
+        "count": 2494,
+        "fibers": 43
+      },
+      {
+        "id": 71,
+        "kind": "regular",
+        "first": 146798,
+        "count": 2494,
+        "fibers": 43
+      },
+      {
+        "id": 72,
+        "kind": "regular",
+        "first": 149292,
+        "count": 2494,
+        "fibers": 43
+      },
+      {
+        "id": 73,
+        "kind": "regular",
+        "first": 151786,
+        "count": 2494,
+        "fibers": 43
+      },
+      {
+        "id": 74,
+        "kind": "regular",
+        "first": 154280,
+        "count": 2494,
+        "fibers": 43
+      },
+      {
+        "id": 75,
+        "kind": "regular",
+        "first": 156774,
+        "count": 2494,
+        "fibers": 43
+      },
+      {
+        "id": 76,
+        "kind": "regular",
+        "first": 159268,
+        "count": 2494,
+        "fibers": 43
+      },
+      {
+        "id": 77,
+        "kind": "regular",
+        "first": 161762,
+        "count": 2494,
+        "fibers": 43
+      },
+      {
+        "id": 78,
+        "kind": "regular",
+        "first": 164256,
+        "count": 2494,
+        "fibers": 43
+      },
+      {
+        "id": 79,
+        "kind": "regular",
+        "first": 166750,
+        "count": 2494,
+        "fibers": 43
+      },
+      {
+        "id": 80,
+        "kind": "regular",
+        "first": 169244,
+        "count": 2494,
+        "fibers": 43
+      },
+      {
+        "id": 81,
+        "kind": "regular",
+        "first": 171738,
+        "count": 2494,
+        "fibers": 43
+      },
+      {
+        "id": 82,
+        "kind": "regular",
+        "first": 174232,
+        "count": 2494,
+        "fibers": 43
+      },
+      {
+        "id": 83,
+        "kind": "regular",
+        "first": 176726,
+        "count": 2494,
+        "fibers": 43
+      },
+      {
+        "id": 84,
+        "kind": "regular",
+        "first": 179220,
+        "count": 2494,
+        "fibers": 43
+      },
+      {
+        "id": 85,
+        "kind": "regular",
+        "first": 181714,
+        "count": 2494,
+        "fibers": 43
+      },
+      {
+        "id": 86,
+        "kind": "regular",
+        "first": 184208,
+        "count": 2494,
+        "fibers": 43
+      },
+      {
+        "id": 87,
+        "kind": "regular",
+        "first": 186702,
+        "count": 2494,
+        "fibers": 43
+      },
+      {
+        "id": 88,
+        "kind": "regular",
+        "first": 189196,
+        "count": 2494,
+        "fibers": 43
+      },
+      {
+        "id": 89,
+        "kind": "regular",
+        "first": 191690,
+        "count": 2494,
+        "fibers": 43
+      },
+      {
+        "id": 90,
+        "kind": "regular",
+        "first": 194184,
+        "count": 2494,
+        "fibers": 43
+      },
+      {
+        "id": 133,
+        "kind": "regular",
+        "first": 301426,
+        "count": 3132,
+        "fibers": 54
+      },
+      {
+        "id": 134,
+        "kind": "regular",
+        "first": 304558,
+        "count": 3132,
+        "fibers": 54
+      },
+      {
+        "id": 135,
+        "kind": "regular",
+        "first": 307690,
+        "count": 3132,
+        "fibers": 54
+      },
+      {
+        "id": 136,
+        "kind": "regular",
+        "first": 310822,
+        "count": 3132,
+        "fibers": 54
+      },
+      {
+        "id": 137,
+        "kind": "regular",
+        "first": 313954,
+        "count": 3132,
+        "fibers": 54
+      },
+      {
+        "id": 138,
+        "kind": "regular",
+        "first": 317086,
+        "count": 3132,
+        "fibers": 54
+      },
+      {
+        "id": 148,
+        "kind": "regular",
+        "first": 348406,
+        "count": 1624,
+        "fibers": 28
+      },
+      {
+        "id": 149,
+        "kind": "regular",
+        "first": 350030,
+        "count": 1624,
+        "fibers": 28
+      },
+      {
+        "id": 150,
+        "kind": "regular",
+        "first": 351654,
+        "count": 1624,
+        "fibers": 28
+      },
+      {
+        "id": 151,
+        "kind": "regular",
+        "first": 353278,
+        "count": 1624,
+        "fibers": 28
+      },
+      {
+        "id": 152,
+        "kind": "regular",
+        "first": 354902,
+        "count": 1624,
+        "fibers": 28
+      },
+      {
+        "id": 153,
+        "kind": "regular",
+        "first": 356526,
+        "count": 1624,
+        "fibers": 28
+      },
+      {
+        "id": 154,
+        "kind": "regular",
+        "first": 358150,
+        "count": 1624,
+        "fibers": 28
+      },
+      {
+        "id": 155,
+        "kind": "regular",
+        "first": 359774,
+        "count": 1624,
+        "fibers": 28
+      },
+      {
+        "id": 172,
+        "kind": "regular",
+        "first": 387382,
+        "count": 928,
+        "fibers": 16
+      },
+      {
+        "id": 173,
+        "kind": "regular",
+        "first": 388310,
+        "count": 928,
+        "fibers": 16
+      },
+      {
+        "id": 174,
+        "kind": "regular",
+        "first": 389238,
+        "count": 928,
+        "fibers": 16
+      },
+      {
+        "id": 175,
+        "kind": "regular",
+        "first": 390166,
+        "count": 928,
+        "fibers": 16
+      },
+      {
+        "id": 176,
+        "kind": "regular",
+        "first": 391094,
+        "count": 928,
+        "fibers": 16
+      },
+      {
+        "id": 177,
+        "kind": "regular",
+        "first": 392022,
+        "count": 928,
+        "fibers": 16
+      },
+      {
+        "id": 178,
+        "kind": "regular",
+        "first": 392950,
+        "count": 928,
+        "fibers": 16
+      },
+      {
+        "id": 179,
+        "kind": "regular",
+        "first": 393878,
+        "count": 928,
+        "fibers": 16
+      },
+      {
+        "id": 180,
+        "kind": "regular",
+        "first": 394806,
+        "count": 928,
+        "fibers": 16
+      },
+      {
+        "id": 181,
+        "kind": "regular",
+        "first": 395734,
+        "count": 928,
+        "fibers": 16
+      },
+      {
+        "id": 182,
+        "kind": "regular",
+        "first": 396662,
+        "count": 928,
+        "fibers": 16
+      },
+      {
+        "id": 183,
+        "kind": "regular",
+        "first": 397590,
+        "count": 928,
+        "fibers": 16
+      },
+      {
+        "id": 184,
+        "kind": "regular",
+        "first": 398518,
+        "count": 928,
+        "fibers": 16
+      },
+      {
+        "id": 185,
+        "kind": "regular",
+        "first": 399446,
+        "count": 928,
+        "fibers": 16
+      },
+      {
+        "id": 186,
+        "kind": "regular",
+        "first": 400374,
+        "count": 928,
+        "fibers": 16
+      },
+      {
+        "id": 187,
+        "kind": "regular",
+        "first": 401302,
+        "count": 928,
+        "fibers": 16
+      },
+      {
+        "id": 188,
+        "kind": "regular",
+        "first": 402230,
+        "count": 928,
+        "fibers": 16
+      },
+      {
+        "id": 189,
+        "kind": "regular",
+        "first": 403158,
+        "count": 928,
+        "fibers": 16
+      },
+      {
+        "id": 190,
+        "kind": "regular",
+        "first": 404086,
+        "count": 928,
+        "fibers": 16
+      },
+      {
+        "id": 191,
+        "kind": "regular",
+        "first": 405014,
+        "count": 928,
+        "fibers": 16
+      },
+      {
+        "id": 192,
+        "kind": "regular",
+        "first": 405942,
+        "count": 928,
+        "fibers": 16
+      },
+      {
+        "id": 193,
+        "kind": "regular",
+        "first": 406870,
+        "count": 928,
+        "fibers": 16
+      },
+      {
+        "id": 194,
+        "kind": "regular",
+        "first": 407798,
+        "count": 928,
+        "fibers": 16
+      },
+      {
+        "id": 195,
+        "kind": "regular",
+        "first": 408726,
+        "count": 928,
+        "fibers": 16
+      },
+      {
+        "id": 196,
+        "kind": "regular",
+        "first": 409654,
+        "count": 928,
+        "fibers": 16
+      },
+      {
+        "id": 197,
+        "kind": "regular",
+        "first": 410582,
+        "count": 928,
+        "fibers": 16
+      },
+      {
+        "id": 198,
+        "kind": "regular",
+        "first": 411510,
+        "count": 928,
+        "fibers": 16
+      },
+      {
+        "id": 199,
+        "kind": "regular",
+        "first": 412438,
+        "count": 928,
+        "fibers": 16
+      },
+      {
+        "id": 192,
+        "kind": "flyaway",
+        "first": 608244,
+        "count": 50,
+        "fibers": 1
+      },
+      {
+        "id": 136,
+        "kind": "flyaway",
+        "first": 608644,
+        "count": 50,
+        "fibers": 1
+      },
+      {
+        "id": 193,
+        "kind": "flyaway",
+        "first": 608994,
+        "count": 50,
+        "fibers": 1
+      },
+      {
+        "id": 189,
+        "kind": "flyaway",
+        "first": 609094,
+        "count": 50,
+        "fibers": 1
+      },
+      {
+        "id": 191,
+        "kind": "flyaway",
+        "first": 609294,
+        "count": 50,
+        "fibers": 1
+      },
+      {
+        "id": 174,
+        "kind": "flyaway",
+        "first": 609394,
+        "count": 50,
+        "fibers": 1
+      },
+      {
+        "id": 179,
+        "kind": "flyaway",
+        "first": 609544,
+        "count": 50,
+        "fibers": 1
+      },
+      {
+        "id": 150,
+        "kind": "flyaway",
+        "first": 609594,
+        "count": 50,
+        "fibers": 1
+      },
+      {
+        "id": 77,
+        "kind": "flyaway",
+        "first": 609644,
+        "count": 50,
+        "fibers": 1
+      },
+      {
+        "id": 82,
+        "kind": "flyaway",
+        "first": 609794,
+        "count": 50,
+        "fibers": 1
+      },
+      {
+        "id": 182,
+        "kind": "flyaway",
+        "first": 609994,
+        "count": 50,
+        "fibers": 1
+      },
+      {
+        "id": 138,
+        "kind": "flyaway",
+        "first": 610094,
+        "count": 50,
+        "fibers": 1
+      },
+      {
+        "id": 88,
+        "kind": "flyaway",
+        "first": 610144,
+        "count": 50,
+        "fibers": 1
+      },
+      {
+        "id": 183,
+        "kind": "flyaway",
+        "first": 610294,
+        "count": 50,
+        "fibers": 1
+      },
+      {
+        "id": 172,
+        "kind": "flyaway",
+        "first": 610344,
+        "count": 50,
+        "fibers": 1
+      },
+      {
+        "id": 150,
+        "kind": "flyaway",
+        "first": 610644,
+        "count": 50,
+        "fibers": 1
+      },
+      {
+        "id": 187,
+        "kind": "flyaway",
+        "first": 610694,
+        "count": 50,
+        "fibers": 1
+      },
+      {
+        "id": 188,
+        "kind": "flyaway",
+        "first": 610794,
+        "count": 50,
+        "fibers": 1
+      },
+      {
+        "id": 148,
+        "kind": "flyaway",
+        "first": 610894,
+        "count": 50,
+        "fibers": 1
+      },
+      {
+        "id": 179,
+        "kind": "flyaway",
+        "first": 611194,
+        "count": 50,
+        "fibers": 1
+      },
+      {
+        "id": 181,
+        "kind": "flyaway",
+        "first": 611244,
+        "count": 50,
+        "fibers": 1
+      },
+      {
+        "id": 60,
+        "kind": "flyaway",
+        "first": 611394,
+        "count": 50,
+        "fibers": 1
+      },
+      {
+        "id": 190,
+        "kind": "flyaway",
+        "first": 611444,
+        "count": 50,
+        "fibers": 1
+      },
+      {
+        "id": 136,
+        "kind": "flyaway",
+        "first": 611544,
+        "count": 50,
+        "fibers": 1
+      },
+      {
+        "id": 150,
+        "kind": "flyaway",
+        "first": 611594,
+        "count": 50,
+        "fibers": 1
+      },
+      {
+        "id": 173,
+        "kind": "flyaway",
+        "first": 611644,
+        "count": 50,
+        "fibers": 1
+      },
+      {
+        "id": 197,
+        "kind": "flyaway",
+        "first": 611844,
+        "count": 50,
+        "fibers": 1
+      }
+    ],
+    "fineNormalTransport": "analytic inverse transpose of the same model-space depth shear"
+  },
+  "constructionMs": {
+    "original": 16474.903183000002,
+    "off": 16498.150904000002,
+    "on": 15987.967320000003
+  },
+  "sourceHashes": {
+    "src/main.js": "a85fa76871b72b9ec1ed1cc545598c5066d346fdbb6e3226b6a247f9ddea9521",
+    "src/hair-groom.js": "a7b04c16fd8e13277e9418954c996c2370895f84ef446ed295ccb942a73a002d",
+    "src/blouse.js": "02b15fe9bbdfa428be27fd0f9ed44f7171b3178056b32c9586b8cf63a1da63a6",
+    "src/hair-contact.js": "d90133757b57670870566246ef774814e57a1e1b777119e3c772cc0ca50fe975",
+    "src/lower-guide-placement.js": "63508d027e848f8af0002e49eb5ffcae11595541ad4ecf3e868c596a5f9e36eb",
+    "src/face.js": "0c70ec7cff943e14445daed5cf40dd5aee251756897152c72a3f0b8ea3119321",
+    "src/portrait-proportions.js": "8b461a46da1bb92f62c450ff9c4e98f9765682e3e49c126e7bb52f04de3c8873",
+    "src/portrait-pose.js": "7a9e9264197275c5c3b631b3e5dccfec3c0e30237cb698ced63f5b8c07b1efc8",
+    "src/portrait-balance.js": "467873c3ba67ae6411781bd3600f888d2d6af1fd7f83d392824da241e78fbb67",
+    "src/eye-contour.js": "c3b6e6857af712a6e4b4c7280be44a0d64cb8a19e4fd94671304acf39c412b79",
+    "src/hair-color.js": "a49c0ea4be9ead7ca1c1a45f6d1174f38ecabd31031935bbc9d00d3ce53590e1",
+    "review/hair-groom-candidate148.js": "16a97d4964a318d240257e727179f9198537faab0117c76b5310ef83641d2fba",
+    "review/upper-shoulder-paths148.js": "1474414832f1ec2a5399f6bf3254bab64ba1fa4cf757a5b2900617794ee571cf",
+    "review/upper-shoulder148-native-coefficients.js": "206c769092ca3e7d710ac62c126ae24ef905653670d734df21aeb4089854665e"
+  },
+  "resources": {
+    "elapsedMs": 54743.157731,
+    "cpuMs": 28706.86,
+    "peakRssMiB": 754.2421875,
+    "heapMiB": 146.90872192382812
+  }
+}

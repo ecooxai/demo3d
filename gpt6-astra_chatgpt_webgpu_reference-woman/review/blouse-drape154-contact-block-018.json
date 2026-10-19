@@ -1,0 +1,337 @@
+{
+  "candidate": 154,
+  "status": "Coarse contact block; no native-ready claim",
+  "spec": {
+    "version": "blouse-drape-154",
+    "mesh": "blouse-continuous-torso-and-sleeves",
+    "nu": 192,
+    "nv": 112,
+    "vertices": 21809,
+    "triangles": 43008,
+    "d": [
+      0.18,
+      0.36,
+      0.56,
+      0.76
+    ],
+    "y": [
+      -0.96,
+      -0.84,
+      0.22,
+      0.34
+    ],
+    "radius": [
+      0.2,
+      0.27
+    ],
+    "center": [
+      -0.209,
+      -0.44,
+      0.18
+    ],
+    "crest": 0.018,
+    "trough": 0.028,
+    "crestWidth": [
+      0.105,
+      0.02
+    ],
+    "troughWidth": [
+      0.06,
+      0.02
+    ],
+    "troughOffset": [
+      0.105,
+      0.02
+    ],
+    "description": "One bounded asymmetric roll along the existing middle-left button fold; all loose-panel X/Y and every other object remain unchanged."
+  },
+  "metrics": {
+    "version": "blouse-drape-154",
+    "strength": 1,
+    "applied": true,
+    "sourceVertices": 21809,
+    "sourceTriangles": 43008,
+    "ownedVertices": 254,
+    "changedVertices": 248,
+    "changedNormals": 254,
+    "maxOutwardDisplacement": 0.01683618889944724,
+    "maxInwardDisplacement": -0.021901686787621874,
+    "maxGradient": 0.5300665458236349,
+    "minNormalCosine": 0.9247736499676084,
+    "maxNormalLengthError": 3.686445260164817e-8,
+    "zeroNormalsPreserved": 0,
+    "continuousJacobian": 1,
+    "meshToBlouseIdentityResidual": 0,
+    "privateGeometries": 1,
+    "privateAttributeBytes": 1217644,
+    "sourceGeometryBytes": 1217644,
+    "privateAttributes": [
+      {
+        "key": "position",
+        "type": "Float32Array",
+        "count": 21809,
+        "itemSize": 3,
+        "bytes": 261708
+      },
+      {
+        "key": "uv",
+        "type": "Float32Array",
+        "count": 21809,
+        "itemSize": 2,
+        "bytes": 174472
+      },
+      {
+        "key": "normal",
+        "type": "Float32Array",
+        "count": 21809,
+        "itemSize": 3,
+        "bytes": 261708
+      },
+      {
+        "key": "color",
+        "type": "Float32Array",
+        "count": 21809,
+        "itemSize": 3,
+        "bytes": 261708
+      },
+      {
+        "key": "index",
+        "type": "Uint16Array",
+        "count": 129024,
+        "itemSize": 1,
+        "bytes": 258048
+      }
+    ],
+    "extraVertices": 0,
+    "extraTriangles": 0,
+    "extraTextures": 0,
+    "extraDraws": 0,
+    "retainsSourceForQA": true,
+    "elapsedMs": 20.317543
+  },
+  "hairRisk": {
+    "stage": "Actual current mesh triangles in blouse-local coordinates; caller supplies equally posed/balanced source and candidate.",
+    "scope": "Only emitted torso triangles touching the owned band and fixed hair triangles whose XY boxes overlap their union. Actual triangle-pair tests include finite edges and coplanar overlap. Projected vertex/edge/centroid gaps are additional samples, not shortest-distance or global disjointness proofs.",
+    "ownedVertices": 254,
+    "affectedTriangles": 576,
+    "changedPositionComponents": 248,
+    "nonfinite": 0,
+    "newDegenerate": 0,
+    "reversed": 0,
+    "minTriangleNormalCosine": 0.9176215825277,
+    "minAreaRatio": 0.9653667032732635,
+    "maxAreaRatio": 1.2466160504600254,
+    "unionBounds": [
+      -0.887520968914032,
+      -0.6949931979179382,
+      0.7150924801826477,
+      -0.23975704610347748,
+      0.007166776806116104,
+      0.8797271847724915
+    ],
+    "allHairTriangles": 1114888,
+    "projectedCandidates": 13107,
+    "obstacleInventory": [
+      {
+        "mesh": "Continuous parted crown with longitudinal fiber flow",
+        "triangles": 47744,
+        "projectedTriangles": 0
+      },
+      {
+        "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+        "triangles": 278400,
+        "projectedTriangles": 5571
+      },
+      {
+        "mesh": "Independent fine crown lengths and silhouette strands",
+        "triangles": 623976,
+        "projectedTriangles": 7536
+      },
+      {
+        "mesh": "Dense fine bowed brown fringe strands",
+        "triangles": 133160,
+        "projectedTriangles": 0
+      },
+      {
+        "mesh": "Sparse short temple edge and hairline wisps",
+        "triangles": 31608,
+        "projectedTriangles": 0
+      }
+    ],
+    "triangleContacts": {
+      "pairTests": 332,
+      "beforePairs": 46,
+      "afterPairs": 50,
+      "newPairs": 4,
+      "removedPairs": 0,
+      "retainedPairs": 46,
+      "examples": [
+        {
+          "bodyTriangle": 21107,
+          "hairMesh": "Independent fine crown lengths and silhouette strands",
+          "hairTriangle": 292934,
+          "body": [
+            [
+              -0.5455008745193481,
+              -0.3384322226047516,
+              0.8615202307701111
+            ],
+            [
+              -0.5972205400466919,
+              -0.356723427772522,
+              0.8415285348892212
+            ],
+            [
+              -0.5446637272834778,
+              -0.36187809705734253,
+              0.8579084277153015
+            ]
+          ],
+          "hair": [
+            [
+              -0.6036105840381332,
+              -0.38770811019968354,
+              0.872483996925989
+            ],
+            [
+              -0.6033696636958711,
+              -0.38806584251311493,
+              0.8725049278970846
+            ],
+            [
+              -0.5502327692442722,
+              -0.346531731595197,
+              0.8529641416489844
+            ]
+          ]
+        },
+        {
+          "bodyTriangle": 21107,
+          "hairMesh": "Independent fine crown lengths and silhouette strands",
+          "hairTriangle": 292935,
+          "body": [
+            [
+              -0.5455008745193481,
+              -0.3384322226047516,
+              0.8615202307701111
+            ],
+            [
+              -0.5972205400466919,
+              -0.356723427772522,
+              0.8415285348892212
+            ],
+            [
+              -0.5446637272834778,
+              -0.36187809705734253,
+              0.8579084277153015
+            ]
+          ],
+          "hair": [
+            [
+              -0.6033696636958711,
+              -0.38806584251311493,
+              0.8725049278970846
+            ],
+            [
+              -0.550214916453944,
+              -0.3465592179443071,
+              0.8529656525127127
+            ],
+            [
+              -0.5502327692442722,
+              -0.346531731595197,
+              0.8529641416489844
+            ]
+          ]
+        },
+        {
+          "bodyTriangle": 21107,
+          "hairMesh": "Independent fine crown lengths and silhouette strands",
+          "hairTriangle": 293382,
+          "body": [
+            [
+              -0.5455008745193481,
+              -0.3384322226047516,
+              0.8615202307701111
+            ],
+            [
+              -0.5972205400466919,
+              -0.356723427772522,
+              0.8415285348892212
+            ],
+            [
+              -0.5446637272834778,
+              -0.36187809705734253,
+              0.8579084277153015
+            ]
+          ],
+          "hair": [
+            [
+              -0.6048067684115985,
+              -0.3859504624842671,
+              0.866226068848396
+            ],
+            [
+              -0.604598196398408,
+              -0.38626199354573254,
+              0.866244218432955
+            ],
+            [
+              -0.5528824734551232,
+              -0.34669675502283326,
+              0.8469813473448148
+            ]
+          ]
+        },
+        {
+          "bodyTriangle": 21107,
+          "hairMesh": "Independent fine crown lengths and silhouette strands",
+          "hairTriangle": 293383,
+          "body": [
+            [
+              -0.5455008745193481,
+              -0.3384322226047516,
+              0.8615202307701111
+            ],
+            [
+              -0.5972205400466919,
+              -0.356723427772522,
+              0.8415285348892212
+            ],
+            [
+              -0.5446637272834778,
+              -0.36187809705734253,
+              0.8579084277153015
+            ]
+          ],
+          "hair": [
+            [
+              -0.604598196398408,
+              -0.38626199354573254,
+              0.866244218432955
+            ],
+            [
+              -0.5528645178227328,
+              -0.3467245064584832,
+              0.8469829000801269
+            ],
+            [
+              -0.5528824734551232,
+              -0.34669675502283326,
+              0.8469813473448148
+            ]
+          ]
+        }
+      ]
+    },
+    "sampledDepth": {
+      "samplesPerBodyTriangle": 7,
+      "forwardHairHits": 5745,
+      "minForwardGapBefore": 0.019089888599566618,
+      "minForwardGapAfter": 0.008340375506847741,
+      "newCrossings": 0,
+      "examples": []
+    },
+    "elapsedMs": 799.0660760000001
+  }
+}

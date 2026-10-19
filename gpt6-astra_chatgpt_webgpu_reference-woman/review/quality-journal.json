@@ -4,7 +4,7 @@
   "goal_achieved": false,
   "method": "Visual self-assessment against the sole uploaded image, supplemented by independent agent review. Scores are subjective and are not a certification of AAA production quality.",
   "scope": "Recorded assessments whose numeric results remain available. No missing historical scores have been invented.",
-  "current_accepted_iteration": 149,
+  "current_accepted_iteration": 157,
   "current_accepted_score": 78,
   "assessments": [
     {
@@ -931,6 +931,116 @@
         "1": 78
       },
       "notes": "Both reviewers viewed soleimage1 and all14 native front/detail/profiles/back/eye/eye-oblique captures before sharing scores. Inner corners and lid-to-iris relationship give a more open attentive gaze closer to the reference, reducing heavier slanted far-eye expression; no visible new lid gap, corneal failure, poke-through or profile regression. Back nativePNGexact.35headmeshes,31privategeometries,47479positions/70885triangleschange,0newdegeneracies/reversals,minarea.57233973,mintransported-geometricnormal.99811471,maximum fixedmanualcontrol residual.00150803photo pixels.282originalattrs/10textures,5838zeroNormals unchanged;113664outsidevertices exact; accepted140mouthgeometryreferencesexact. Nativehelper71.3ms once,9361962B replacementbeforeupload/9712704after/GPUattributeestimate9734976, not equal permanent memory increase;defaultprodretainsmetrics only. Ocular iris/cornea,lid/cornea,lid/sclera gain0pairs; existing lid/face newpairIDs1/34,fringe/near-lashes106to94 with75new/87removed; fringe/face190to189 no new,nearcornea2to0,wisps/face2to2. These are qualified finite-window contacts, not global disjointness. Nativeallcamerasmatch,idle0/errors0,cleanup31private/0original. Fullnative773341B SHA375db921d8e72a999eba9d0d2bcf1959362c251298a81f311c2ec61ff739c6e8. Promoted exactapplier excepttwoimportpaths, config/field byteexact; appliesonceafter140 withdefaultQAretentionfalse. Combinedwith149color production149at78."
+    },
+    {
+      "iteration": 148,
+      "score": 77,
+      "reviewer": "root and quality_review_42, independently formed",
+      "decision": "reject upper-shoulder depth field; retain149at78",
+      "variants": {
+        "0": 78,
+        "100": 77
+      },
+      "notes": "All12nativeviews and image1 reviewed. Near shoulder stand-off narrows modestly but creates a sharper upper turn, taut diagonal strip and narrow bright slot belowchin in nearprofile. Lowerends/front likeness/protectedfar/back remain broadlystable; no compensatinggain. Same1114888hairtri/52.49MiB,955385hairvertices, protectedattrs/materials/maps exact;0nonfinite/newsource-sampledclothcrossings/errors/idle. Nativefield.1ms/fines8.5ms, construction1674.8to1670.0ms pairednoise. Each restoredfrontPNG exactlymatches its own starting mode; OFF/ON images are different. Fullnative69770B SHA7bdd2f98ef99c6999a7c9f514541aa046af38bc1192d147867943c235ba25cda. Frozen148rejected; no further refinement/testing or productionpromotion."
+    },
+    {
+      "iteration": 152,
+      "score": 78,
+      "scoreScope": "Read-only measurement; accepted production unchanged.",
+      "reviewer": "root",
+      "decision": "measure actual visible jaw sides and exclude hidden chin control",
+      "notes": "Actualfullindexedhead contours at7manualphoto rows projectedthroughfront/detail and checked with .25pxinward geometricrays.11head-nearest sides identified; left720/738/750 andoriginalchinUVbehindneck. ChinUV190photo470.4546/753.9969 nearestnecktriangle5760; -36.55pxXresidual is notvisiblechinerror. Manualskinboundsapproximate andraytestdoesnotmodelhairalpha.64meshbindings/10selectedattrs exact,27.78MBtemporaryQAarrays,640.8/688.6ms and0errors. Rootviewedbothnativeoverlaysandsoleimage. Fullnative86449B SHA3f105d468888d2af3612c9cbd1c08d566b480e1f042c8c047a73a8d577221b3e. No geometry/material/sourcepixelanalysis."
+    },
+    {
+      "iteration": 153,
+      "score": 75,
+      "reviewer": "root; glb_export_repair source/math peer review",
+      "decision": "reject localized jaw/neck silhouette field; retain149at78",
+      "variants": {
+        "0": 78,
+        "1": 75
+      },
+      "notes": "All14nativeviews andimage1 reviewed. Lower side residuals improve but ordinaryfront/detail develop conspicuous inward steps belowcheeks and pinchedmiddlejaw; jawoblique nearnecktransition lessnatural. Protectedfeatures/profiles/backstable cannotcompensate. NativeWebGPU Neutral1.4/AA2, helper29.2ms,2privategeos7704240Bpre/7746480post replacingoldbuffers. Source64meshes/282attrs/10mapsprotected,80748outsideverticesexact,140mouthfieldinactive,0errors/idle/originaldispose. Face32206verts64600tri andneck1187verts2449tri change,0newdeg/reversal,minarea.679295/.652815. Fullsupport2487159pointcert minJ.159419aftermargin, actualmaxdisp.0892555/globalupper.09500915; thisdoesnotcertifyanatomy/discreteinterfaces. Fullnative336933B SHA918cb5813c9e99aeb32b2f75fb4b5b5e4f517aaefb67563239fc163125702fec. No153productionpromotion or additionaloptionaltest."
+    },
+    {
+      "iteration": 151,
+      "score": 78,
+      "reviewer": "root and quality_review_42 independent art; glb_export_repair native contact interpretation",
+      "decision": "select tapered shorter existing lashes for integration; production149unchanged pending integration",
+      "variants": {
+        "0": 78,
+        "1": 78
+      },
+      "notes": "All12nativeviews and image1 reviewed byroot/quality/glb. Upper andlower regularuprightspokes diminish ineye/eyeoblique; front/detailslightlylessartificial andprofilesstable. Unchangedmargins/menisci/maps/bakedlargelashshapes receive nocredit. Nativehelper100.5ms,80fibers2064verts2616tri unchanged,320rootverticesexact,2privategeos81744Bpreupload,282sourceattrs/10mapsprotected,0errors/idle/originaldispose. Actualocular-root1917to1907:16new26removed onfirststrip versusmargin/waterline/meniscus priorgap1.95e-7to2.27e-5; allocular-distal/iris/cornea/sclera/facecontacts0inwindow. Fringenear-distal94to48 with40new86removed8retained; sixstoredexamplesupperfiber18triangle660u1/3to1/2 underfringe, notglobalburial/depthcertificate. No visible newcontactdefect. OFF/ONrestoredPNGbyteidentical58afd99ad40f4af83a39abdb2a831e123ef997dd00549d61231019d69a5f05a2; initialOFFdiff3069pixels8995channelsmax3onlyoverlaybounds21,1006..120,1036; causeunexplained, no portraitdiff. Fullnative1402508B SHAccf5643c7e291ae66acd7461248d8d3079fd385620e4778908b0e6d9808af922. Narrowgeometrygain, noadditionalpoint; selectedforlaterproductionintegration aftercurrentbaseline-dependentcrownreview."
+    },
+    {
+      "iteration": 150,
+      "score": 78,
+      "scoreScope": "Accepted production remains149 at78; the incomplete coarse OFF/ON pair is not assigned a replacement production score.",
+      "reviewer": "root and hair_groom_director, independently formed",
+      "decision": "reject coarse crown ownership and routes before fine rebuilding",
+      "notes": "All12 native views and image1 reviewed. ON exposes a continuous scalp arc below the retained crown, thick separated strap-like fringe groups, and a regular ladder of raised roots at the part. These are visible in ordinary front/detail and both profiles; white glints amplify an underlying geometry/coverage failure. Back is visually unchanged. Boundary-ray support did not establish continuous coverage over the neighboring interior area. Native coarse counts961042 to993874 triangles and51.3677 to52.7857 MiB after index widening; helper186.7ms. Post100 map/UV1/color data exact;0 browser errors, idle frames or source-integrity issues. Each coarse camera restoration and released-detail comparison is PNG-exact. Accepted to unhidden ZERO front is exact; detail has one unexplained pixel/channel difference of1 at667,477. Full native report1495592B SHA f324df3c877f02ae32f1523f59981d0664071c90a16a9c243b24e0aff0b7f813. No fine rebuilding, production promotion or additional150 testing."
+    },
+    {
+      "iteration": 155,
+      "score": 78,
+      "scoreScope": "Useful jaw appearance at78; not promoted because focused interfaces reveal far-ear attachment regression.",
+      "reviewer": "root and glb_export_repair, independently formed",
+      "decision": "hold otherwise selected jaw shape pending159 common-field ear repair",
+      "variants": {
+        "0": 78,
+        "1": 78
+      },
+      "notes": "All14 native views and image1 reviewed. ON reduces lower-face breadth and follows the reference taper more closely. The distributed field avoids153 localized inward cheek notches. Jaw and jaw-oblique remain connected; mouth/expression are preserved; profiles/back show no meaningful regression at the supplied scale. Slightly more exposed far-ear edge motivates a narrow actual-scene interface audit before promotion. Existing planar under-chin shading and coarse hair limit whole-scene realism, so no point is added. Native helper27.9ms,2 private geometries7704240B before upload,0 new degenerate/reversed/opposed triangles;282 source attributes protected,2 private geometries released,0 originals disposed,0 errors or idle frames. Global field lower Jacobian certificate0.5864116972 and independent analytic bound0.4802485256 establish invertibility of the continuous field, not anatomy or discrete interface clearance. Full native report337654B SHA e9f57d86ea02ea24d5271a71f516f4e5b0266e95eaa6b057b6877f254da0921a. No production promotion yet.",
+      "interfaceFollowup": {
+        "nativeReportSHA256": "c93dd09eb540dd607bf806cda86434d5c103da50083c50f6b80079d44b07c132",
+        "beforeContacts": 907,
+        "afterContacts": 790,
+        "newPairs": 498,
+        "removedPairs": 615,
+        "farEarBaselineBand": 1159,
+        "farEarReleasedSamples": 257,
+        "farEarLostLateralHits": 0,
+        "farEarMaximumAfterAxialOffset": 0.052974060680647854,
+        "faceOnlyNewlyUncoveredSamples": {
+          "detail": 410,
+          "jawOblique": 279
+        },
+        "interpretation": "Directional support and face-only rays are sampled measurements, not signed closest gaps, pixel areas or whole-scene visibility. More exposed lower inner far-ear edge is a concrete regression although no large open background seam is obvious.159 will carry both ears through the same unchanged155 world map, with discrete ear/fixedhair checks.",
+        "qaElapsedMs": 620,
+        "peakTypedBytes": 27359952,
+        "heldTypedBytesAfter": 0,
+        "originalDisposals": 0,
+        "idleFrames": 0,
+        "errors": 0
+      }
+    },
+    {
+      "iteration": 154,
+      "score": 78,
+      "scoreScope": "Selected local blouse improvement; production149 unchanged pending integration.",
+      "reviewer": "root and quality_review_42, judgments formed separately; quality42 authored154",
+      "decision": "select unchanged compact soft cotton hollow after117/before99",
+      "variants": {
+        "0": 78,
+        "100": 78
+      },
+      "notes": "All12 native views and soleimage1 reviewed. Small clearer continuous diagonal hollow left/below middle bodybutton; isolatedgarment shows a broader relaxed shoulder and narrower soft hollow without embossed ridge/padded stripe/doubledpaintedshadow. Profiles/back/detail visuallystable. Broadpanels/rigidcollar/hair remain, no additionalwhole-scenepoint. Nativehelper8.1ms once,254owned250Z/254normalchanges,0X/Y/outsidechanges,1privategeometry1217644Bpre/1475692Bpostindex replacingoriginal.0addedtriangles/maps/draws;4.4msoriginal99proxy QA-only. Actualhaircontact46before46after46retained0new/removed; sampledminforwardgap.019090to.018644, notglobalclearance.282attributes/10images/9cachedpreparationidentitiesprotected. Bothrestoredfrontsbyteexact initialOFF PNG506720B SHA63d75b1df944dbf150fb7d8d2318f403a1230c48b924ee28855b17def6867c61.0errors/idle/originaldispose;private1cleanup. Fullnative780726B SHA6996136041d83880154f9c751a2f5470fabe3fd136c54f630b3705e3dfdab81d. Selectedsourcebyteexact copiedunreferenced tosrc/blouse-drape.js; preserveprodQAretentionfalse."
+    },
+    {
+      "iteration": 157,
+      "score": 78,
+      "reviewer": "root and quality_review_42 integration review",
+      "decision": "accept combined151 lashes and154 blouse; keep155 deferred",
+      "notes": "Root andpeer reviewedall10native images plus soleimage1 andselectedcomponentreferences. Quieter existinglashes andsoft middle-buttonfold surviveintegration without new ordinaryfront/detail/profile/backdefect. Broadhaircap, regularlocks, flatrearhair, profilebridges andstiffcollarstilllimitrealism. No additionalwhole-scenepoint. Mac1828build and1829nativepassed; selectednativebaseline282attributes with13replacements on3meshes and64exactlogicalindices. ThroughWebGPU→explicitWebGL→WebGPU:282attributeobjects/buffers,64meshbindings,50materialvalues,10texturepixels/samplers,8cachedpreparations,5uniformtints exact;0originaldisposals/idle/errors. ReturnedWebGPUfrontPNGbyteexactinitialfront. Production147retainfalse0origrefs,151retainfalse0origrefs,154retainsfalse. Oncehelperobservations151111.7ms/15410.7ms, notspeedupclaims. Narrow390x844CSSdoc390 stage354x472at18,197.89, titleabove, actualoutput900x1200retained; notphysicalphoneperformance. Fullnative203068B SHA757df6877443afb227f90e539b7456b5f07e28aa32a2e7491dadd3f31ee2caa5. Productionmain21796B SHA03fccbaf4fd627128733b9c522025c09293b1d130fd6ae89c4a61170bb146ea5. Goal95/98unmet; continue156crown158collar159earcoherentjaw."
+    },
+    {
+      "iteration": 160,
+      "score": 78,
+      "scoreScope": "Read-only material diagnostic; production157 unchanged.",
+      "reviewer": "root",
+      "decision": "locate primary hard chin shelf in lit surface/junction response; no new material or geometry adopted",
+      "notes": "Root viewedsoleimage1 andsixactualnativeviews: original/clay/unlitcolor atmatchedjaw/jawoblique cameras. Hard shadedunderside persistswithuniformlitmaterial aftermaps/vertexcolorsremoved;unlitexistingcolorlookssofter buttruncatedboundaryremains. Thisimplicateslitgeometry/normalresponseandface-neckjunction, notaprovenbadvertexrow. Earlier152identifiedactualchinUVhiddenbehindneck, soavoidusingburiedUVasvisiblecontrol. Native1840sourcebindings/geometry/frames/selectedattributeandoriginalmaterialmapidentitiesprotected,6privateMatdisposals0original,restoredjawPNGbyteexact,0errorsidle. Fullnative10733B SHAdf263a4774edf14c6d9ce9ebc816b2e1476fcf8d69fbdd575bbe5bb9f752224d. No newgeometryorstrengthapproved,95/98goalunmet."
     }
   ]
 }

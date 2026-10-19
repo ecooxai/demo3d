@@ -14,6 +14,8 @@ import { applyLipThicknessRefinement } from './lip-refinement.js';
 import { applyMouthContinuity130 } from './lip-continuity.js';
 import { applyUpperLipRelief140 } from './upper-lip-relief.js';
 import { applyEyeContour147 } from './eye-contour.js';
+import { applyEyelash151 } from './eyelash-refinement.js';
+import { applyBlouseDrape154 } from './blouse-drape.js';
 import { applyHairColor149 } from './hair-color.js';
 import { applyReferenceEarColor } from './reference-ear.js';
 import { applyNearEarYaw115 } from './near-ear.js';
@@ -30,7 +32,7 @@ const hairChoice=new URLSearchParams(location.search).get('hair')||'groom';
 const fiberCandidate=hairChoice==='fibers';
 const groomCandidate=hairChoice==='groom';
 const coverageCandidate=hairChoice==='coverage';
-const state = { backend: new URLSearchParams(location.search).get('backend') === 'webgl' ? 'webgl' : 'webgpu', width: 900, height: 1200, iteration: groomCandidate?149:coverageCandidate?32:fiberCandidate?25:27, score: groomCandidate?78:fiberCandidate?61:68, renderedFrames: 0, renderMs: 0, rotating: false, view: 'front', ready: false, lighting: 'soft', antialiasing: 2, internalRender: null };
+const state = { backend: new URLSearchParams(location.search).get('backend') === 'webgl' ? 'webgl' : 'webgpu', width: 900, height: 1200, iteration: groomCandidate?157:coverageCandidate?32:fiberCandidate?25:27, score: groomCandidate?78:fiberCandidate?61:68, renderedFrames: 0, renderMs: 0, rotating: false, view: 'front', ready: false, lighting: 'soft', antialiasing: 2, internalRender: null };
 let portraitOutput=createPortraitOutput();
 const scene = new THREE.Scene();
 scene.background = new THREE.Color('#cbe3f3');
@@ -242,12 +244,14 @@ async function initialize(backend=state.backend) {
       state.referenceEar=await applyReferenceEarColor(anatomicalHead,{strength:1});
       state.nearEarYaw115=applyNearEarYaw115(anatomicalHead,{degrees:-25});
       state.referenceCloth117=await applyReferenceCloth117(anatomicalBlouse,{strength:.5});
+      state.blouseDrape154=applyBlouseDrape154(anatomicalBlouse,{strength:1});
       state.balance=applyPortraitBalance(model,{shiftX:-.24});
       detailTarget.x=.02+state.pose.shiftX+state.balance.shiftX;
       if(!skinIlluminationApplied){state.skinIllumination=compensateReferenceSkin(anatomicalHead,scene,{strength:.35});skinIlluminationApplied=true;}
       state.mouthContinuity130=applyMouthContinuity130(anatomicalHead,{strength:1});
       state.upperLipRelief140=applyUpperLipRelief140(anatomicalHead,{strength:1});
       state.eyeContour147=applyEyeContour147(anatomicalHead,{strength:1});
+      state.eyelash151=applyEyelash151(anatomicalHead,{strength:1});
     })();
     await scenePreparationPromise;
     if(backend==='webgpu') {

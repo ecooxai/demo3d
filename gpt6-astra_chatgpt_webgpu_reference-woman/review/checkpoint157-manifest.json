@@ -1,0 +1,1110 @@
+{
+  "kind": "Development checkpoint",
+  "acceptedIteration": 157,
+  "acceptedScore": 78,
+  "goalAchieved": false,
+  "parentCommit": "60256cd06b323be4b639ea2fdc987c293de9dcd0",
+  "createdUTC": "2026-10-19T09:31:11.623277+00:00",
+  "changes": "Integrate151 eyelashes and154 blouse. Hold155 for coherent159 ear deformation. Preserve complete150/151/152/153/154/155/157/160 and148 comparison evidence.160 is read-only.156/158/159 are ongoing local candidate work, not accepted production.",
+  "native157ReportSHA256": "757df6877443afb227f90e539b7456b5f07e28aa32a2e7491dadd3f31ee2caa5",
+  "evidence157ManifestSHA256": "51fa7940ff8cbe8a08b72872f595c34868101134ef8bcc5b05903be4de2cb542",
+  "files": [
+    {
+      "file": "index.html",
+      "bytes": 7376,
+      "sha256": "c6d41a627629b27033869b338753cd017885888f7543d28a0a5ed4170cc6a671"
+    },
+    {
+      "file": "review/blouse-drape-candidate154.js",
+      "bytes": 10407,
+      "sha256": "eceb86f01cc60b2fb711bd32669a88dc7aeff0be0e40d2ba10180764b07790a3"
+    },
+    {
+      "file": "review/blouse-drape154-contact-block-018.json",
+      "bytes": 8782,
+      "sha256": "b2b2d66c0e4868a2811cd907f57834f9fd3678aa978f3933c0117661c8153b92"
+    },
+    {
+      "file": "review/blouse-drape154-contact-block-040.json",
+      "bytes": 21951,
+      "sha256": "f5710a2056a391b3ae9a9d880bf3e734d1d0bc112c987fd504eaed6bd62987e7"
+    },
+    {
+      "file": "review/blouse-drape154-contact-limit.json",
+      "bytes": 4596,
+      "sha256": "dc36643ff0e8b4466109e3b3a010dc8283413825f474b2b38307d800c6c0dad1"
+    },
+    {
+      "file": "review/blouse-drape154-contact-limit.mjs",
+      "bytes": 2963,
+      "sha256": "4e62608d6b2d5cda50ddb097e8d78fb289c280c8c867dd4df1fb9095b973c622"
+    },
+    {
+      "file": "review/blouse-drape154-entry-rejection.json",
+      "bytes": 629,
+      "sha256": "be897ff422a8b37d1b7de1299d32e57c6c2e26ad213d63f76ff5f57a8085a4e1"
+    },
+    {
+      "file": "review/blouse-drape154-freeze.mjs",
+      "bytes": 5472,
+      "sha256": "d9be5c2f3b507191825293d8b05affa724878848d744a648f070a47e77ebd7ef"
+    },
+    {
+      "file": "review/blouse-drape154-geometry-audit.js",
+      "bytes": 8780,
+      "sha256": "f039f4d56befe8ab456965f91957240a596177a62e3469158175201109b9fea6"
+    },
+    {
+      "file": "review/blouse-drape154-handoff.md",
+      "bytes": 9170,
+      "sha256": "45e6917be1e289d4b555ae420522f16e4b1864dbc0d5f2cbfef3e14dfd7010fb"
+    },
+    {
+      "file": "review/blouse-drape154-manifest.json",
+      "bytes": 8538,
+      "sha256": "59a1dbab269a14d7f9ac221e689eab129f5d9d1ef689babf29098c3f23040ef4"
+    },
+    {
+      "file": "review/blouse-drape154-native-qa.js",
+      "bytes": 21333,
+      "sha256": "6dfce06ed5571399ad95217af4a4efb86fa8324e1fe316c4413bc3a4e8da4622"
+    },
+    {
+      "file": "review/blouse-drape154-native-result.json",
+      "bytes": 780726,
+      "sha256": "6996136041d83880154f9c751a2f5470fabe3fd136c54f630b3705e3dfdab81d"
+    },
+    {
+      "file": "review/blouse-drape154-native.mjs",
+      "bytes": 12412,
+      "sha256": "9a0c4c7813749dbea4b99d45efd77d58316f7a5945495e38237e45ae3b9205b1"
+    },
+    {
+      "file": "review/blouse-drape154-plan.md",
+      "bytes": 9399,
+      "sha256": "fdfa6eb2d5540c4859242854326e06c6c8cea3251852b5fc005c04ed051ec2a5"
+    },
+    {
+      "file": "review/blouse-drape154-proxy-audit.json",
+      "bytes": 5877,
+      "sha256": "8f6055068e020d4df45057130b820027d85761ae9825511a323dd2ad4fe6ae58"
+    },
+    {
+      "file": "review/blouse-drape154-proxy-audit.mjs",
+      "bytes": 4274,
+      "sha256": "5c6ed67574ece459b497da50912ab710f96b406f97fa9d88575e7bec7bb99be8"
+    },
+    {
+      "file": "review/blouse-drape154-source-audit.json",
+      "bytes": 8640,
+      "sha256": "525e00c8c840e195c4753947c9d61b0b282d587b0cf31721cb1a74790e447501"
+    },
+    {
+      "file": "review/blouse-drape154-source-audit.mjs",
+      "bytes": 11948,
+      "sha256": "4f1dce626a35b49d5910c502719b7fdde09a3156b7c65ab9dd6e5d1527cac5e9"
+    },
+    {
+      "file": "review/blouse-drape154-visual-decision.md",
+      "bytes": 4525,
+      "sha256": "0c94184deebce8a58badabb51776beb7a39b935ec94ea3b8b62d80697ad843ff"
+    },
+    {
+      "file": "review/chin160-diagnostic-native.json",
+      "bytes": 10733,
+      "sha256": "df263a4774edf14c6d9ce9ebc816b2e1476fcf8d69fbdd575bbe5bb9f752224d"
+    },
+    {
+      "file": "review/chin160-diagnostic-native.mjs",
+      "bytes": 6814,
+      "sha256": "a1f5ccf5f7d03d32debab43149a24cdf373561e7e671f73b99b19d6663743bad"
+    },
+    {
+      "file": "review/chin160-diagnostic-qa.js",
+      "bytes": 6367,
+      "sha256": "88d0341c32be7a2fb5ffa57989b72c7018998b72313c25c8fbe0006ffc45f6c3"
+    },
+    {
+      "file": "review/chin160-observations.md",
+      "bytes": 2433,
+      "sha256": "06f5e7e35db27c469f251f49cfe73e3dc9f7816037c23d607518043b5464f817"
+    },
+    {
+      "file": "review/crown150-build.mjs",
+      "bytes": 2061,
+      "sha256": "06305a36d71b1856399a9cb30185a1e787d3820921af2ff7df9251f46d3facb2"
+    },
+    {
+      "file": "review/crown150-coarse-handoff.md",
+      "bytes": 10076,
+      "sha256": "67ea61410377e89b03f9d02c10f8f18a3269d5d270ec371c223a132539cb758d"
+    },
+    {
+      "file": "review/crown150-coarse-native-report.json",
+      "bytes": 1495592,
+      "sha256": "f324df3c877f02ae32f1523f59981d0664071c90a16a9c243b24e0aff0b7f813"
+    },
+    {
+      "file": "review/crown150-coarse-native.mjs",
+      "bytes": 23020,
+      "sha256": "fff891bfb30cc7fb508a9a51b0e2bcfbc72aa689da094ced469cf15f6639f739"
+    },
+    {
+      "file": "review/crown150-coarse-visual-decision.md",
+      "bytes": 4831,
+      "sha256": "15b05c8973063e9e24bea6a109ab5b2bb09b5e58b3a9c3614d5a453d3b70eff2"
+    },
+    {
+      "file": "review/crown150-first-gate.mjs",
+      "bytes": 4052,
+      "sha256": "94b084916a3fc9df3f7ac38e54375d216c602f3e225d5a01910118e4724b8ed9"
+    },
+    {
+      "file": "review/crown150-focused-checks.mjs",
+      "bytes": 8519,
+      "sha256": "b95c829b4fc3b09cadd2d60d33a58ea5603d347fc70c1a839c1fb36007f5cf2c"
+    },
+    {
+      "file": "review/crown150-ownership-measurements-pre-untucked-correction.json",
+      "bytes": 5316,
+      "sha256": "5c3b45a75b6631acc5a7e5731ed7cd08e43df54445f915dc0b2ab07dfefd3d2b"
+    },
+    {
+      "file": "review/crown150-ownership-measurements.json",
+      "bytes": 5572,
+      "sha256": "5bbb1e6368ffb6aeefd311957ca27db4ae01e523c2ceef86e494bd5d5366fa78"
+    },
+    {
+      "file": "review/crown150-source.mjs",
+      "bytes": 3408,
+      "sha256": "a11a44b9b3b3dd9e1e60e6ab97637b5d905c681ad2f9c16d5eaa83ba785b2dd0"
+    },
+    {
+      "file": "review/crown150-transfer-manifest.json",
+      "bytes": 2633,
+      "sha256": "1a17035f89fea9e31512b55092a2be056b04d706ad41f60babcd4a867b68edc8"
+    },
+    {
+      "file": "review/evidence157/blouse-drape154-0-back.jpg",
+      "bytes": 117848,
+      "sha256": "a47f82ba2b066f7feb82d121c1fe2769862fc89dd67b8bd4bea288c9a79c6c9a"
+    },
+    {
+      "file": "review/evidence157/blouse-drape154-0-detail.jpg",
+      "bytes": 196758,
+      "sha256": "f8a4a05fec775bf5266fa05e02713b42da3297ad6607b1f22aa00c1f7bdf12eb"
+    },
+    {
+      "file": "review/evidence157/blouse-drape154-0-front.jpg",
+      "bytes": 141722,
+      "sha256": "7ff2274258d1da6089158d5e75da4556a82bcab574e9e3028ed92fa6d678b4b1"
+    },
+    {
+      "file": "review/evidence157/blouse-drape154-0-garment.jpg",
+      "bytes": 56190,
+      "sha256": "ad2d528a22301ae28196a5e16022d1548b2ae1a571f64491ac9b900e7ce24cf4"
+    },
+    {
+      "file": "review/evidence157/blouse-drape154-0-left.jpg",
+      "bytes": 95554,
+      "sha256": "8704de89e36ebc6c8746d116cb5d7eb90fb8c33f80cf39aa138f081db34e63f6"
+    },
+    {
+      "file": "review/evidence157/blouse-drape154-0-restored-front.jpg",
+      "bytes": 141722,
+      "sha256": "7ff2274258d1da6089158d5e75da4556a82bcab574e9e3028ed92fa6d678b4b1"
+    },
+    {
+      "file": "review/evidence157/blouse-drape154-0-right.jpg",
+      "bytes": 93864,
+      "sha256": "4133620d3d6033f404aa69acf904508ac10bcfcc5a61b96f01e5c4ad5813a5ed"
+    },
+    {
+      "file": "review/evidence157/blouse-drape154-100-back.jpg",
+      "bytes": 117848,
+      "sha256": "a47f82ba2b066f7feb82d121c1fe2769862fc89dd67b8bd4bea288c9a79c6c9a"
+    },
+    {
+      "file": "review/evidence157/blouse-drape154-100-detail.jpg",
+      "bytes": 196808,
+      "sha256": "d6770f3e9b881932ffcf861a8b18c6a5985ad50d42ebd87efe130a1fc5f438a5"
+    },
+    {
+      "file": "review/evidence157/blouse-drape154-100-front.jpg",
+      "bytes": 141752,
+      "sha256": "ab0a83e89b759f7a2dfd7660d4b3b67bdbc4a9663a53de653cab075188c8d13f"
+    },
+    {
+      "file": "review/evidence157/blouse-drape154-100-garment.jpg",
+      "bytes": 56274,
+      "sha256": "fb33f7725532b53bd316f75458c3e969e2ff3116aee4a28b66ff9fd84aa06767"
+    },
+    {
+      "file": "review/evidence157/blouse-drape154-100-left.jpg",
+      "bytes": 95566,
+      "sha256": "fcea3ae1e4f9a499891e836eb14b9bb6db6d099aea4c750bfbfc7d91204b099b"
+    },
+    {
+      "file": "review/evidence157/blouse-drape154-100-restored-front.jpg",
+      "bytes": 141722,
+      "sha256": "7ff2274258d1da6089158d5e75da4556a82bcab574e9e3028ed92fa6d678b4b1"
+    },
+    {
+      "file": "review/evidence157/blouse-drape154-100-right.jpg",
+      "bytes": 93864,
+      "sha256": "4133620d3d6033f404aa69acf904508ac10bcfcc5a61b96f01e5c4ad5813a5ed"
+    },
+    {
+      "file": "review/evidence157/chin160-clay-jaw-oblique.jpg",
+      "bytes": 87870,
+      "sha256": "ad3764168fe91338b70e273437dcc439ef5448db626d71ae63b257971c74c080"
+    },
+    {
+      "file": "review/evidence157/chin160-clay-jaw.jpg",
+      "bytes": 82913,
+      "sha256": "5c871d3cc45529898698d61680b6158ff2c153c8ce98d5c330411cd7d324087b"
+    },
+    {
+      "file": "review/evidence157/chin160-original-jaw-oblique.jpg",
+      "bytes": 109197,
+      "sha256": "d93a48fb5aa44d58da60e0cafda8f028393dd36cd2c89f32723fdf5f2e03de98"
+    },
+    {
+      "file": "review/evidence157/chin160-original-jaw.jpg",
+      "bytes": 106504,
+      "sha256": "c59fe23a16befd3201e8cc189d43054d37db78fc2aabccd57683c8af73a2c03e"
+    },
+    {
+      "file": "review/evidence157/chin160-restored-jaw.jpg",
+      "bytes": 106504,
+      "sha256": "c59fe23a16befd3201e8cc189d43054d37db78fc2aabccd57683c8af73a2c03e"
+    },
+    {
+      "file": "review/evidence157/chin160-unlit-jaw-oblique.jpg",
+      "bytes": 105710,
+      "sha256": "0e185af1381ee3ee2aa6122ad9a0a21fa24be7ca69b5fb0dc50f0aace3a1030b"
+    },
+    {
+      "file": "review/evidence157/chin160-unlit-jaw.jpg",
+      "bytes": 104543,
+      "sha256": "6aeccf23ea7055a9982dbea59e29a920dc9115a17fb96c29a56976f6a836cfe1"
+    },
+    {
+      "file": "review/evidence157/crown150-coarse-0-back.jpg",
+      "bytes": 118244,
+      "sha256": "5aec18db594df787a96519509b8ee7ca3c88733154115c63f2effcd228830be6"
+    },
+    {
+      "file": "review/evidence157/crown150-coarse-0-detail.jpg",
+      "bytes": 167366,
+      "sha256": "ea9fdd39e99d81a3e3687f57c4794c0d6b8b9ebc0058dd3357c876984967cb41"
+    },
+    {
+      "file": "review/evidence157/crown150-coarse-0-front.jpg",
+      "bytes": 134963,
+      "sha256": "7131c85a18d45ef42dab880f9fe6119825e92736ff37af4a37cb3e62b0af5b00"
+    },
+    {
+      "file": "review/evidence157/crown150-coarse-0-junction.jpg",
+      "bytes": 149738,
+      "sha256": "6b9fc95a34218dd554d72453713d048abac437192527b886912a83f4a654698d"
+    },
+    {
+      "file": "review/evidence157/crown150-coarse-0-left.jpg",
+      "bytes": 95107,
+      "sha256": "0fc3a5c9ffffe228dc285e65452e014b81a003dc2fac43822ffad5e165bdf6e7"
+    },
+    {
+      "file": "review/evidence157/crown150-coarse-0-released-detail.jpg",
+      "bytes": 196808,
+      "sha256": "86fbc091480bd6d4ae000a249d7dd798f867813ee322e23dcec91bdbe1637e0f"
+    },
+    {
+      "file": "review/evidence157/crown150-coarse-0-restored-detail.jpg",
+      "bytes": 167366,
+      "sha256": "ea9fdd39e99d81a3e3687f57c4794c0d6b8b9ebc0058dd3357c876984967cb41"
+    },
+    {
+      "file": "review/evidence157/crown150-coarse-0-right.jpg",
+      "bytes": 93001,
+      "sha256": "0d0bbe897ec35bb8a75f9b33375eadb00331d43a23ec1160f191c4a32e6492a0"
+    },
+    {
+      "file": "review/evidence157/crown150-coarse-1-back.jpg",
+      "bytes": 118244,
+      "sha256": "5aec18db594df787a96519509b8ee7ca3c88733154115c63f2effcd228830be6"
+    },
+    {
+      "file": "review/evidence157/crown150-coarse-1-detail.jpg",
+      "bytes": 204199,
+      "sha256": "7a2343a16d71cc2984b213e8d50a38b063f4f7c1e2bf1f35ba766ec2b81e5850"
+    },
+    {
+      "file": "review/evidence157/crown150-coarse-1-front.jpg",
+      "bytes": 146850,
+      "sha256": "3485015a3b84ecf44b2727fd1a02385dab9c647e3f3c92bafd28ab9f708aa561"
+    },
+    {
+      "file": "review/evidence157/crown150-coarse-1-junction.jpg",
+      "bytes": 245547,
+      "sha256": "00bcaac3c3a0048bfa7022851c228cdbdb75f7777c94360454fcdd144ec59e3c"
+    },
+    {
+      "file": "review/evidence157/crown150-coarse-1-left.jpg",
+      "bytes": 95861,
+      "sha256": "6bae518f374e17bfbfb93efbdb8c848430137445212063af0ec64d0c7e470a17"
+    },
+    {
+      "file": "review/evidence157/crown150-coarse-1-released-detail.jpg",
+      "bytes": 196808,
+      "sha256": "86fbc091480bd6d4ae000a249d7dd798f867813ee322e23dcec91bdbe1637e0f"
+    },
+    {
+      "file": "review/evidence157/crown150-coarse-1-restored-detail.jpg",
+      "bytes": 204199,
+      "sha256": "7a2343a16d71cc2984b213e8d50a38b063f4f7c1e2bf1f35ba766ec2b81e5850"
+    },
+    {
+      "file": "review/evidence157/crown150-coarse-1-right.jpg",
+      "bytes": 95982,
+      "sha256": "033d170a7fd1b08bb110cd474bb8fa0bc7c20b9f706b889bfa2b06a1c27a2507"
+    },
+    {
+      "file": "review/evidence157/crown150-coarse-accepted-detail.jpg",
+      "bytes": 196808,
+      "sha256": "86fbc091480bd6d4ae000a249d7dd798f867813ee322e23dcec91bdbe1637e0f"
+    },
+    {
+      "file": "review/evidence157/crown150-coarse-accepted-front.jpg",
+      "bytes": 141722,
+      "sha256": "0a34f82f4829cbf51f2a86a8797a05af915b120ea5c0dcd7d46b2478932168fa"
+    },
+    {
+      "file": "review/evidence157/crown150-coarse-zero-control-detail.jpg",
+      "bytes": 196808,
+      "sha256": "cfe7f97e44685bc65c73f4ef4b7bf0b9ba2df46a33100e6e53a98fb1f3f5b940"
+    },
+    {
+      "file": "review/evidence157/crown150-coarse-zero-control-front.jpg",
+      "bytes": 141722,
+      "sha256": "0a34f82f4829cbf51f2a86a8797a05af915b120ea5c0dcd7d46b2478932168fa"
+    },
+    {
+      "file": "review/evidence157/eyelash151-0-detail.jpg",
+      "bytes": 196764,
+      "sha256": "500ecbc918bdc6831db6b4398c066fd8da320ab887da25ed0edc3575b9d4e4bc"
+    },
+    {
+      "file": "review/evidence157/eyelash151-0-eye-oblique.jpg",
+      "bytes": 234834,
+      "sha256": "962d3128375912d3f840dfc1088a1f616e17c74f7223ea68d549092a27d98daf"
+    },
+    {
+      "file": "review/evidence157/eyelash151-0-eye.jpg",
+      "bytes": 235818,
+      "sha256": "a7bc4d5fcad8c4f88a31100c46f000ef6449bae0986468b4e6358b4b4905e2e7"
+    },
+    {
+      "file": "review/evidence157/eyelash151-0-front.jpg",
+      "bytes": 141707,
+      "sha256": "52091c03b1c4307edaa4ed5b1ab94c20e8cd5b123f2bc972c8fe1ff89e582a17"
+    },
+    {
+      "file": "review/evidence157/eyelash151-0-left.jpg",
+      "bytes": 95636,
+      "sha256": "230fa005a05430d2e9d2ad9a6802cfd54452e74b36664684f20f437f8e4b3de9"
+    },
+    {
+      "file": "review/evidence157/eyelash151-0-restored-front.jpg",
+      "bytes": 141749,
+      "sha256": "f7a1808d9ce51530fe09065bc3188efa9603c7e7a824ab900032168df5698e3f"
+    },
+    {
+      "file": "review/evidence157/eyelash151-0-right.jpg",
+      "bytes": 93851,
+      "sha256": "6674951341b3b667a8ed73a0b33e5e5ef9f6910778540a829de8f8b02d165bb7"
+    },
+    {
+      "file": "review/evidence157/eyelash151-1-detail.jpg",
+      "bytes": 196501,
+      "sha256": "dd6ab0c6f781db139322b010a4d63ac4b09646e22a5f09f1aa8031ee90f1c705"
+    },
+    {
+      "file": "review/evidence157/eyelash151-1-eye-oblique.jpg",
+      "bytes": 233609,
+      "sha256": "c58ef518ceccb138c6395e64931f044a424275387a333d63fdecf2c12fe396cb"
+    },
+    {
+      "file": "review/evidence157/eyelash151-1-eye.jpg",
+      "bytes": 234569,
+      "sha256": "33c77665d4e592ac91ee3dcd9782cf60b90944a1ab4449e429d8f8be710f4bb1"
+    },
+    {
+      "file": "review/evidence157/eyelash151-1-front.jpg",
+      "bytes": 141692,
+      "sha256": "44bbf00118ee650d20b1e92e18c594fd145766a540c0002b311f208aebc52f51"
+    },
+    {
+      "file": "review/evidence157/eyelash151-1-left.jpg",
+      "bytes": 95619,
+      "sha256": "91b40b4fd3cd6f0397633a126eb6c93f4a485a686a6eab8da1e8373f945da7e6"
+    },
+    {
+      "file": "review/evidence157/eyelash151-1-restored-front.jpg",
+      "bytes": 141749,
+      "sha256": "f7a1808d9ce51530fe09065bc3188efa9603c7e7a824ab900032168df5698e3f"
+    },
+    {
+      "file": "review/evidence157/eyelash151-1-right.jpg",
+      "bytes": 93814,
+      "sha256": "a2216d60b88d902a8cbd80eacecf8b01a931b3813a8f205c9a1450230a916f67"
+    },
+    {
+      "file": "review/evidence157/integrated157-explicit-webgl-detail.jpg",
+      "bytes": 196924,
+      "sha256": "cb6de2a83dea7e2d4f7a675fca24e69345e5dd0c1bd177444fcae393204a0d84"
+    },
+    {
+      "file": "review/evidence157/integrated157-explicit-webgl-front.jpg",
+      "bytes": 140279,
+      "sha256": "8a48417242cf357913ec60e56cc8d4fe09616d5026923d25a14ff2e9e01d6620"
+    },
+    {
+      "file": "review/evidence157/integrated157-narrow-page.jpg",
+      "bytes": 77255,
+      "sha256": "5f1f6bed33930175f5c4d3cd5d6935d1839b8f4d57dc906c1cea3b85fbf9c756"
+    },
+    {
+      "file": "review/evidence157/integrated157-webgpu-back.jpg",
+      "bytes": 117835,
+      "sha256": "5e581771aea01ab79a42de04bb1bbbda5036673f01ddf81d3a4ce9cc0ce61796"
+    },
+    {
+      "file": "review/evidence157/integrated157-webgpu-detail.jpg",
+      "bytes": 196567,
+      "sha256": "a17066be9c17dc988bc8deddca47be52684c4b1ecfdd82a0a3b242fa8271ad40"
+    },
+    {
+      "file": "review/evidence157/integrated157-webgpu-front.jpg",
+      "bytes": 141730,
+      "sha256": "8f8bbd2186e9ec5742186ccc88a59f5c2bb5d4cfd63731193b7a53a27acd4abe"
+    },
+    {
+      "file": "review/evidence157/integrated157-webgpu-left.jpg",
+      "bytes": 95530,
+      "sha256": "74cdfd31e89b3df6d8e2969cf91e029ec120ed39b98e21b2fe0c062125176586"
+    },
+    {
+      "file": "review/evidence157/integrated157-webgpu-page.jpg",
+      "bytes": 218405,
+      "sha256": "e37699f36585bc595c4334e4a129a9ec0de47849bce1d30f1f2584cce20a26d7"
+    },
+    {
+      "file": "review/evidence157/integrated157-webgpu-return-front.jpg",
+      "bytes": 141730,
+      "sha256": "8f8bbd2186e9ec5742186ccc88a59f5c2bb5d4cfd63731193b7a53a27acd4abe"
+    },
+    {
+      "file": "review/evidence157/integrated157-webgpu-right.jpg",
+      "bytes": 93812,
+      "sha256": "2a8fbba1096f1c8627e2e23589fe440a5ce925c54c16631b233d78c2bdf9cc44"
+    },
+    {
+      "file": "review/evidence157/jaw-silhouette152-detail-overlay.jpg",
+      "bytes": 206062,
+      "sha256": "fc3462e382a8e8c8a6eb87e0c8a47b7f08daa63d0a34acf01b6b80120f33e055"
+    },
+    {
+      "file": "review/evidence157/jaw-silhouette152-front-overlay.jpg",
+      "bytes": 148350,
+      "sha256": "45478f07321dce66bf30c2f3c01a9f11481c4cce96722c6aee699f4b1b0202fa"
+    },
+    {
+      "file": "review/evidence157/jaw-silhouette153-0-back.jpg",
+      "bytes": 117846,
+      "sha256": "ff8e4df913d0754ba36628160eddbd57dd6dcce880508781fc31465fb9aed675"
+    },
+    {
+      "file": "review/evidence157/jaw-silhouette153-0-detail.jpg",
+      "bytes": 196760,
+      "sha256": "2305b7250e2427b4d43aeaf87b2025badfa82a382fc598e945616516755cc483"
+    },
+    {
+      "file": "review/evidence157/jaw-silhouette153-0-front.jpg",
+      "bytes": 141719,
+      "sha256": "8a8dd7ecd310de1ad61f3dc1d932ade015737ba97f53a4e4f9a44730154849d7"
+    },
+    {
+      "file": "review/evidence157/jaw-silhouette153-0-jaw-oblique.jpg",
+      "bytes": 109327,
+      "sha256": "6f2652adcfcf9405614753fc6a5c5492b08ffda62b0671c2a5234611349fef80"
+    },
+    {
+      "file": "review/evidence157/jaw-silhouette153-0-jaw.jpg",
+      "bytes": 106632,
+      "sha256": "8a03b6b9980c53889a87270fb89c6dd95dae3f945030eb717937f8a765fcaf99"
+    },
+    {
+      "file": "review/evidence157/jaw-silhouette153-0-left.jpg",
+      "bytes": 95641,
+      "sha256": "6265a550df45ac4035919aaef8415169ec24aa6194eb8fc1481ac30a80d2c10f"
+    },
+    {
+      "file": "review/evidence157/jaw-silhouette153-0-right.jpg",
+      "bytes": 93858,
+      "sha256": "8819ac8bfe9103710ecc14e848826bd364eff41e42abb96d3e58d889f7d08ce0"
+    },
+    {
+      "file": "review/evidence157/jaw-silhouette153-1-back.jpg",
+      "bytes": 117846,
+      "sha256": "ff8e4df913d0754ba36628160eddbd57dd6dcce880508781fc31465fb9aed675"
+    },
+    {
+      "file": "review/evidence157/jaw-silhouette153-1-detail.jpg",
+      "bytes": 196986,
+      "sha256": "12a8b0b475ab0ac1c863f7a584c95262848317854d5b5bf6be8988c1f8ec0b89"
+    },
+    {
+      "file": "review/evidence157/jaw-silhouette153-1-front.jpg",
+      "bytes": 141915,
+      "sha256": "36c40f44e082c154988eac6d6d3ca800f77c0cec015b1d18b3d694502f30caa3"
+    },
+    {
+      "file": "review/evidence157/jaw-silhouette153-1-jaw-oblique.jpg",
+      "bytes": 109954,
+      "sha256": "54229ffce77437a3800f5940f7f1a23ddf8ca6c2bef18b6a0813a106fe71488c"
+    },
+    {
+      "file": "review/evidence157/jaw-silhouette153-1-jaw.jpg",
+      "bytes": 107747,
+      "sha256": "e97d728e9012a93f0f25543626b0765681300ef40c42de878eb6a494b28c8349"
+    },
+    {
+      "file": "review/evidence157/jaw-silhouette153-1-left.jpg",
+      "bytes": 95675,
+      "sha256": "f818d2a89fed73be74fb4900ba29206af55a34bd740832ac452d9f222af1fce3"
+    },
+    {
+      "file": "review/evidence157/jaw-silhouette153-1-right.jpg",
+      "bytes": 93858,
+      "sha256": "6a6b4b884c431214eba950da5762241f9e1799b56674e00fff05ac859cb08369"
+    },
+    {
+      "file": "review/evidence157/jaw-silhouette155-0-back.jpg",
+      "bytes": 117843,
+      "sha256": "4f2a33b1814137df1681cb077e8daaf6d96a5c5302fc958fbf08ccdb036f5f54"
+    },
+    {
+      "file": "review/evidence157/jaw-silhouette155-0-detail.jpg",
+      "bytes": 196786,
+      "sha256": "723055f6a6524b8b5b221b75ea3e4ec4014839ab06016ed6eb9a479e6d9af188"
+    },
+    {
+      "file": "review/evidence157/jaw-silhouette155-0-front.jpg",
+      "bytes": 141721,
+      "sha256": "9d04ce4c910103662c21ee636f6913a4a1058f4d87f404fe3db8882dd24c8000"
+    },
+    {
+      "file": "review/evidence157/jaw-silhouette155-0-jaw-oblique.jpg",
+      "bytes": 109331,
+      "sha256": "8328f5fe5bd19e2f4acecc4b291ef80f8e75952a955b82037ce58319a5239d37"
+    },
+    {
+      "file": "review/evidence157/jaw-silhouette155-0-jaw.jpg",
+      "bytes": 106635,
+      "sha256": "e8f59dbd8b8313a260364489ace60dcb81a9cad7c680c69d26ce09b9bfcab860"
+    },
+    {
+      "file": "review/evidence157/jaw-silhouette155-0-left.jpg",
+      "bytes": 95640,
+      "sha256": "e77c1eb8f76ff99fe2316369036c7140f11dae777f44ca3b6e0f65a4f3081303"
+    },
+    {
+      "file": "review/evidence157/jaw-silhouette155-0-right.jpg",
+      "bytes": 93858,
+      "sha256": "76c97a0ae3307f4c073e26e50c91a67238c76b6ad4b1e9af1212ea2c8f98a6a4"
+    },
+    {
+      "file": "review/evidence157/jaw-silhouette155-1-back.jpg",
+      "bytes": 117843,
+      "sha256": "4f2a33b1814137df1681cb077e8daaf6d96a5c5302fc958fbf08ccdb036f5f54"
+    },
+    {
+      "file": "review/evidence157/jaw-silhouette155-1-detail.jpg",
+      "bytes": 197368,
+      "sha256": "a933a9c00c6e90f8b29e77321ff355c0c091e34af780bdfe46a7488445d8ff4c"
+    },
+    {
+      "file": "review/evidence157/jaw-silhouette155-1-front.jpg",
+      "bytes": 141963,
+      "sha256": "1e465a552295cc1486ad9d7046cfaa1d7542f632d4e25fea60cc4b7e2f638d6a"
+    },
+    {
+      "file": "review/evidence157/jaw-silhouette155-1-jaw-oblique.jpg",
+      "bytes": 111129,
+      "sha256": "c350f0f5a9f56ad2bd5b73861621d315808ae884daea881b4c047059a0b07d82"
+    },
+    {
+      "file": "review/evidence157/jaw-silhouette155-1-jaw.jpg",
+      "bytes": 108174,
+      "sha256": "78cad6e5d00045a3e9c955cc7fb8ba471828cd981056968e0b70d3e094a910a1"
+    },
+    {
+      "file": "review/evidence157/jaw-silhouette155-1-left.jpg",
+      "bytes": 95655,
+      "sha256": "3b5841b35afe19325af6c4d2ea1e8b41d43de715b8e7937b7948b2270d60eacd"
+    },
+    {
+      "file": "review/evidence157/jaw-silhouette155-1-right.jpg",
+      "bytes": 93868,
+      "sha256": "45f307edd2f3a9e7ca959e5f2d96522c2e5c1590123b5d38aa72bcb56d5fa3e0"
+    },
+    {
+      "file": "review/evidence157/manifest.json",
+      "bytes": 41778,
+      "sha256": "51fa7940ff8cbe8a08b72872f595c34868101134ef8bcc5b05903be4de2cb542"
+    },
+    {
+      "file": "review/evidence157/upper-shoulder148-0-back.jpg",
+      "bytes": 117846,
+      "sha256": "7ae2f904f96d3e289d128161d4965584a6ae4282e4c493584134fa552d4945ee"
+    },
+    {
+      "file": "review/evidence157/upper-shoulder148-0-detail.jpg",
+      "bytes": 196804,
+      "sha256": "9f33083e0b1311c436b26027d3777e24ee98f4b0f4e79dbd9f36c3db8bdbe8df"
+    },
+    {
+      "file": "review/evidence157/upper-shoulder148-0-front.jpg",
+      "bytes": 141718,
+      "sha256": "13ba2949d8181e6b59418effe24123489044f4948d6dabbbd7299041777da77b"
+    },
+    {
+      "file": "review/evidence157/upper-shoulder148-0-left.jpg",
+      "bytes": 95547,
+      "sha256": "ca67c3f9f655c5ccc476dbaad8179ed8560bbd6519c70315364fc4935415dac7"
+    },
+    {
+      "file": "review/evidence157/upper-shoulder148-0-restored-front.jpg",
+      "bytes": 141718,
+      "sha256": "13ba2949d8181e6b59418effe24123489044f4948d6dabbbd7299041777da77b"
+    },
+    {
+      "file": "review/evidence157/upper-shoulder148-0-right.jpg",
+      "bytes": 93852,
+      "sha256": "f1500a19bf331d7dfd6a16dc0ef393f41e298bcfa088113a81a8f227b2cb940e"
+    },
+    {
+      "file": "review/evidence157/upper-shoulder148-0-shoulder.jpg",
+      "bytes": 150505,
+      "sha256": "a5aa8faf0510013eeae1536b3da181b583d25049784a320685a7e32d6842a6fe"
+    },
+    {
+      "file": "review/evidence157/upper-shoulder148-100-back.jpg",
+      "bytes": 117847,
+      "sha256": "847513160a1214830ab5e74bae700c9f7776801fada87a539a9a44dfbc233faf"
+    },
+    {
+      "file": "review/evidence157/upper-shoulder148-100-detail.jpg",
+      "bytes": 196903,
+      "sha256": "1f03c0e1dbfd81a68d53fe48bad1091c3ebbaf351f29e847d6f8837f7027a45e"
+    },
+    {
+      "file": "review/evidence157/upper-shoulder148-100-front.jpg",
+      "bytes": 141837,
+      "sha256": "a1c4ac84697497b693ede43af5ce7da5e86b124c044a8f7b483540ed2cb2c91e"
+    },
+    {
+      "file": "review/evidence157/upper-shoulder148-100-left.jpg",
+      "bytes": 95848,
+      "sha256": "87890c7a614d3223b85d206d47401a73910a8dc208c9cee2f54de5288e75fa7f"
+    },
+    {
+      "file": "review/evidence157/upper-shoulder148-100-restored-front.jpg",
+      "bytes": 141837,
+      "sha256": "a1c4ac84697497b693ede43af5ce7da5e86b124c044a8f7b483540ed2cb2c91e"
+    },
+    {
+      "file": "review/evidence157/upper-shoulder148-100-right.jpg",
+      "bytes": 93978,
+      "sha256": "1bb4175c4d1a301d180be963c38e67a32076357ed15b68efac05bc2b287e3631"
+    },
+    {
+      "file": "review/evidence157/upper-shoulder148-100-shoulder.jpg",
+      "bytes": 150775,
+      "sha256": "640761529e62deeaa8bbd36a4b4489fc069fce9dd375b21f1cf3104e2c8be0b5"
+    },
+    {
+      "file": "review/eyelash-candidate151.js",
+      "bytes": 14510,
+      "sha256": "7f03bc3686dc24caf53b83c4aa5b67ba7a4244ca4e1b3646ae2b11aacf9475f4"
+    },
+    {
+      "file": "review/eyelash-sweep151.js",
+      "bytes": 10234,
+      "sha256": "ec468f644708d7fd5a7b70d0423d9c42a0979816a8199607b69bb32807ce528b"
+    },
+    {
+      "file": "review/eyelash151-audit.json",
+      "bytes": 189375,
+      "sha256": "2c050ad8fe58835dafbb1678e4feaf3c064441ab8c862578cbb663571078db72"
+    },
+    {
+      "file": "review/eyelash151-audit.mjs",
+      "bytes": 11393,
+      "sha256": "bbae4035dc8274385e6c3f6f90a680494d1ba8224c8afa214a450b501f86eafe"
+    },
+    {
+      "file": "review/eyelash151-cameras.json",
+      "bytes": 1167,
+      "sha256": "d7ae5c3152e18e7e24a3ab53c23749ebb5dd25689cdc76a401126ab310b78012"
+    },
+    {
+      "file": "review/eyelash151-geometry-audit.js",
+      "bytes": 8222,
+      "sha256": "bb9f8467da6f580cbe32a60a5b49401394df88cee23ceabb57f78bb17c196f2a"
+    },
+    {
+      "file": "review/eyelash151-handoff.md",
+      "bytes": 8032,
+      "sha256": "23c727d0f9e6533633a26af508a68cb81b23e1cf261a77921047716a566c4d0b"
+    },
+    {
+      "file": "review/eyelash151-manifest.json",
+      "bytes": 4843,
+      "sha256": "88845195e931cda37037bf8e215a600b5c125e5e99781bdc08715dca2fc46665"
+    },
+    {
+      "file": "review/eyelash151-native-interpretation.md",
+      "bytes": 8592,
+      "sha256": "07a183b00a65f00c120c87ed8f3a04e8cb304024645be48cf061470cf3df1843"
+    },
+    {
+      "file": "review/eyelash151-native-qa.js",
+      "bytes": 19000,
+      "sha256": "daa59b45e4a9e0c6dd66e6619c66c627c8dde897a031702edc38975f834172c3"
+    },
+    {
+      "file": "review/eyelash151-native.json",
+      "bytes": 1402508,
+      "sha256": "ccf5643c7e291ae66acd7461248d8d3079fd385620e4778908b0e6d9808af922"
+    },
+    {
+      "file": "review/eyelash151-native.mjs",
+      "bytes": 9936,
+      "sha256": "d211e27f21b4a02bad7f781a7610ba70574aa0db5c74f60314742134bd8dda4c"
+    },
+    {
+      "file": "review/eyelash151-restoration-diff.json",
+      "bytes": 590,
+      "sha256": "d533973f2d7a10877e6263757867538b5c0e29064abab6c3d067d28ee5425b44"
+    },
+    {
+      "file": "review/eyelash151-source.mjs",
+      "bytes": 7250,
+      "sha256": "0a40d93d042d21be0610038ad5904f2141dc99d03caaf993b468e2e5bd400ca5"
+    },
+    {
+      "file": "review/eyelash151-visual-decision.md",
+      "bytes": 4582,
+      "sha256": "863b891e21a022107aa4e2f82e7a384d6bd5771ca58fb31bf3c3dbd6d302cfda"
+    },
+    {
+      "file": "review/front-root-candidate150.js",
+      "bytes": 29227,
+      "sha256": "e4282d00ef4cafec6f2dcb0702d7c34ca0ab638bc0f8f51b111d332759b1f279"
+    },
+    {
+      "file": "review/hair-color-candidate150.js",
+      "bytes": 2101,
+      "sha256": "0884f6b4da2f9140c32e858ba14f4870587caaa8f003106ad1233f9e09eff47c"
+    },
+    {
+      "file": "review/hair-groom-candidate148.js",
+      "bytes": 45461,
+      "sha256": "16a97d4964a318d240257e727179f9198537faab0117c76b5310ef83641d2fba"
+    },
+    {
+      "file": "review/hair-groom-candidate150.js",
+      "bytes": 45109,
+      "sha256": "ebfa5c6f9a4c0789979e249ba70926d3a2b1ebf58e529d06e7635905e6e27bc9"
+    },
+    {
+      "file": "review/integrated157-handoff.md",
+      "bytes": 1971,
+      "sha256": "0cd0b850d53ea43f8eebac536d7f255763e0946d6e40d7816821c34b589471e7"
+    },
+    {
+      "file": "review/integrated157-manifest.json",
+      "bytes": 7683,
+      "sha256": "99bbd3e8c496fe4066c6278bc8374c79ad7e8cad453bd48e0894f175863e5609"
+    },
+    {
+      "file": "review/integrated157-native.json",
+      "bytes": 203068,
+      "sha256": "757df6877443afb227f90e539b7456b5f07e28aa32a2e7491dadd3f31ee2caa5"
+    },
+    {
+      "file": "review/integrated157-native.mjs",
+      "bytes": 18793,
+      "sha256": "3c1b19b920911a516c70205db3b74ab54947222bbdafa3dea2b1f73655a2bafa"
+    },
+    {
+      "file": "review/integrated157-root-decision.md",
+      "bytes": 2396,
+      "sha256": "0ceee3ab40aaf79d69da7acc6d14204f50cb804ab473c65584c1bc461318e7e5"
+    },
+    {
+      "file": "review/integrated157-visual-review.md",
+      "bytes": 3609,
+      "sha256": "09ea0ff1674d9cfadc4524e37fc71ebbcc7d94a8a06664ab853abbfad5de554d"
+    },
+    {
+      "file": "review/integration157-prepared-copies.json",
+      "bytes": 2805,
+      "sha256": "54f3c1055a0fdd8a5300febe77f16a034c2ebeebf55b4b5c2ac931a2f3354196"
+    },
+    {
+      "file": "review/jaw-silhouette-candidate153.js",
+      "bytes": 12145,
+      "sha256": "dc48f30517cc2de40dbecaa29165cf19c94d3c075473cdfe1c8cd558435e8aa6"
+    },
+    {
+      "file": "review/jaw-silhouette-candidate155.js",
+      "bytes": 12231,
+      "sha256": "6b652acf8c661c7b7cc8c8b09684c546aca402a7105253241720466bb0d1703b"
+    },
+    {
+      "file": "review/jaw-silhouette152-native.json",
+      "bytes": 86449,
+      "sha256": "3f105d468888d2af3612c9cbd1c08d566b480e1f042c8c047a73a8d577221b3e"
+    },
+    {
+      "file": "review/jaw-silhouette152-native.mjs",
+      "bytes": 14044,
+      "sha256": "44e5f2eab1747bd1a23d39a83f2edb3453d6015b17d546fcb27fd67c843c2bba"
+    },
+    {
+      "file": "review/jaw-silhouette152-observations.md",
+      "bytes": 2339,
+      "sha256": "f64b63e78d6002537a56a44592a9afeb36d2cbac7a7859770e0bd5163504c8c7"
+    },
+    {
+      "file": "review/jaw-silhouette153-config.json",
+      "bytes": 3328,
+      "sha256": "1d8566dce14415f9eed70e8e0038e6fd501960ff8e6f2a3a9cbda76a98f83d9e"
+    },
+    {
+      "file": "review/jaw-silhouette153-field.js",
+      "bytes": 4034,
+      "sha256": "d8ae052322e06c469628919902a79ca5db12a0179af808879c300ea38543c039"
+    },
+    {
+      "file": "review/jaw-silhouette153-geometry-audit.js",
+      "bytes": 6089,
+      "sha256": "38f3dd663f02ee8219b664b9c67e19acdbd5928b8e492d0882839f333696bd9f"
+    },
+    {
+      "file": "review/jaw-silhouette153-native-qa.js",
+      "bytes": 17957,
+      "sha256": "f59b8cd2cf49a01f67a23ebee13ad8b17998ed42e14dc47b043fcfca8aec50c4"
+    },
+    {
+      "file": "review/jaw-silhouette153-native.json",
+      "bytes": 336933,
+      "sha256": "918cb5813c9e99aeb32b2f75fb4b5b5e4f517aaefb67563239fc163125702fec"
+    },
+    {
+      "file": "review/jaw-silhouette153-native.mjs",
+      "bytes": 9418,
+      "sha256": "ea75da8a149a6330e1e92cf3e74bf1007d01336d739013fd466cb6cd3f021818"
+    },
+    {
+      "file": "review/jaw-silhouette153-proposal.md",
+      "bytes": 4493,
+      "sha256": "ceebd32cabc19909f735e3e46d8b82f00600b1ade7f1ebcc403ca3b352106b1f"
+    },
+    {
+      "file": "review/jaw-silhouette153-visual-decision.md",
+      "bytes": 4253,
+      "sha256": "8a36ef2a192dfb2c6aed14f28d2b375a862973df4a61e7a767c0053d44fd4ae8"
+    },
+    {
+      "file": "review/jaw-silhouette155-config.json",
+      "bytes": 3694,
+      "sha256": "cb704c9037402850d3df21a3d2ebbf53485ace6fa96e5ce4405080bddf12f9e5"
+    },
+    {
+      "file": "review/jaw-silhouette155-field-audit.json",
+      "bytes": 6237,
+      "sha256": "48e085b9f227d4871f7ee8b07682a4b1f5283d45940d04ca3664382e4eca9faa"
+    },
+    {
+      "file": "review/jaw-silhouette155-field-audit.mjs",
+      "bytes": 4023,
+      "sha256": "02743c1203460f9125180d248e989833af3759a94f147e1e7ec3747f89d35c8f"
+    },
+    {
+      "file": "review/jaw-silhouette155-field.js",
+      "bytes": 3747,
+      "sha256": "0eacd3e8e46115bf7a3f6b0c10acd5083cdc02c522a4f74139d68e91338aa040"
+    },
+    {
+      "file": "review/jaw-silhouette155-geometry-audit.js",
+      "bytes": 6189,
+      "sha256": "7750502f45887543105de6af78be2d5b283062c2c6532e9b0cc306c0749c9841"
+    },
+    {
+      "file": "review/jaw-silhouette155-native-qa.js",
+      "bytes": 17957,
+      "sha256": "71a81c9b642d0b0d703efe8265d2b4aa0ac0375971405100fef4722d17ce3d0f"
+    },
+    {
+      "file": "review/jaw-silhouette155-native.json",
+      "bytes": 337654,
+      "sha256": "e9f57d86ea02ea24d5271a71f516f4e5b0266e95eaa6b057b6877f254da0921a"
+    },
+    {
+      "file": "review/jaw-silhouette155-native.mjs",
+      "bytes": 9535,
+      "sha256": "4fc4db13fdd79a9c629c40dd898010087dbf6fd56116a8cefa6f1ded3b0e9e30"
+    },
+    {
+      "file": "review/jaw-silhouette155-proposal.md",
+      "bytes": 4206,
+      "sha256": "69138e8ccd00e53c62c28c02bdd007e1f0daa6193ad6d0115068a65b25bc5a4c"
+    },
+    {
+      "file": "review/jaw-silhouette155-visual-decision.md",
+      "bytes": 4169,
+      "sha256": "c6029a272f0068fd8cb86ec0be6aa1b6e0aa226005ca1e04a56f5569035d11e5"
+    },
+    {
+      "file": "review/jaw155-interface-geometry.js",
+      "bytes": 27781,
+      "sha256": "12f7715862a8a1112b27f309ed112d0c5b489007e864df1e3c296fc284949d24"
+    },
+    {
+      "file": "review/jaw155-interface-handoff.md",
+      "bytes": 6472,
+      "sha256": "00196a2a18ffd4814b30265c740b4153abff96c3c6b49e3822f4b5debd934d95"
+    },
+    {
+      "file": "review/jaw155-interface-interpretation.md",
+      "bytes": 8511,
+      "sha256": "45bc017e4c499dde3ccfea50e4b48dd95a0962d70a123f5ab0646c43cb2be716"
+    },
+    {
+      "file": "review/jaw155-interface-local-check.json",
+      "bytes": 2422,
+      "sha256": "19e2f601d9b2108ed56fefd153f3dbdfdbcb421c9c678942cc1be5dbce9fd139"
+    },
+    {
+      "file": "review/jaw155-interface-local-check.mjs",
+      "bytes": 2057,
+      "sha256": "19169d1661c76b13c39ecaac0e01ae3cb700ad73aa31ef3843ccb8449645fd33"
+    },
+    {
+      "file": "review/jaw155-interface-manifest.json",
+      "bytes": 8431,
+      "sha256": "dd4bf678c59c2c9193ddd75267e21ee3a18338312f1a2021ce37222e9b2d8624"
+    },
+    {
+      "file": "review/jaw155-interface-native.json",
+      "bytes": 196999,
+      "sha256": "c93dd09eb540dd607bf806cda86434d5c103da50083c50f6b80079d44b07c132"
+    },
+    {
+      "file": "review/jaw155-interface-native.mjs",
+      "bytes": 8093,
+      "sha256": "a8faf81a2d1adc9cd51736f2f6c7214323f86cb37c5bdd90084036f6e59beb3b"
+    },
+    {
+      "file": "review/jaw155-interface-qa.js",
+      "bytes": 11089,
+      "sha256": "fcd6e70b09db3e1c401a744acf8184d23e27c15f47d44fd266f92b8d8ac27421"
+    },
+    {
+      "file": "review/main149-baseline.js",
+      "bytes": 21532,
+      "sha256": "a85fa76871b72b9ec1ed1cc545598c5066d346fdbb6e3226b6a247f9ddea9521"
+    },
+    {
+      "file": "review/quality-journal.json",
+      "bytes": 102471,
+      "sha256": "093f69cd0f12e4df993c61c9107624aa3b4ea506db952c7e7339ecb56ea2624f"
+    },
+    {
+      "file": "review/upper-shoulder-paths148.js",
+      "bytes": 11797,
+      "sha256": "1474414832f1ec2a5399f6bf3254bab64ba1fa4cf757a5b2900617794ee571cf"
+    },
+    {
+      "file": "review/upper-shoulder148-full-audit.json",
+      "bytes": 25784,
+      "sha256": "5a6e9194c8dc1a4983bdf8db5c0d4770440e2adb003fb7ac621d38411f99126a"
+    },
+    {
+      "file": "review/upper-shoulder148-handoff.md",
+      "bytes": 7579,
+      "sha256": "70100cd877e2fbd9a38fb4ead464eccb66a03e2b558c183755b6b23032fc6959"
+    },
+    {
+      "file": "review/upper-shoulder148-native-captures.json",
+      "bytes": 2435,
+      "sha256": "318298ded4eab8bfd0ae0a908445e406e0f78ac2b6b989e42ebf5de290e3f0f5"
+    },
+    {
+      "file": "review/upper-shoulder148-native-coefficients.js",
+      "bytes": 2636,
+      "sha256": "206c769092ca3e7d710ac62c126ae24ef905653670d734df21aeb4089854665e"
+    },
+    {
+      "file": "review/upper-shoulder148-native-layout.json",
+      "bytes": 42755,
+      "sha256": "45fb64f0d4ab036d751bdc6223b394831a1d464f27d6dd811317cbcd7f519140"
+    },
+    {
+      "file": "review/upper-shoulder148-native-result.json",
+      "bytes": 69770,
+      "sha256": "7bdd2f98ef99c6999a7c9f514541aa046af38bc1192d147867943c235ba25cda"
+    },
+    {
+      "file": "review/upper-shoulder148-native.mjs",
+      "bytes": 13193,
+      "sha256": "9285e59e745eba7a01c4b599cca77fc52b2779f979389ade9fb594856aa963c1"
+    },
+    {
+      "file": "review/upper-shoulder148-transfer-manifest.json",
+      "bytes": 1364,
+      "sha256": "f387c5c8d90b54bbf74d1615515d7dfbd91b780975028fc0d4683c853d692422"
+    },
+    {
+      "file": "review/upper-shoulder148-visual-decision.md",
+      "bytes": 4717,
+      "sha256": "4252bc0fe69bf0bfd4648cad067e42b0ccf51922b1b0762218ad8883bbfbca83"
+    },
+    {
+      "file": "src/blouse-drape.js",
+      "bytes": 10407,
+      "sha256": "eceb86f01cc60b2fb711bd32669a88dc7aeff0be0e40d2ba10180764b07790a3"
+    },
+    {
+      "file": "src/eyelash-refinement.js",
+      "bytes": 14507,
+      "sha256": "5e1ddbb75f41e0603bfbdb0f4e0f8a4561777c8154e0d4c863058daffb29f704"
+    },
+    {
+      "file": "src/eyelash-sweep.js",
+      "bytes": 10234,
+      "sha256": "ec468f644708d7fd5a7b70d0423d9c42a0979816a8199607b69bb32807ce528b"
+    },
+    {
+      "file": "src/main.js",
+      "bytes": 21796,
+      "sha256": "03fccbaf4fd627128733b9c522025c09293b1d130fd6ae89c4a61170bb146ea5"
+    }
+  ],
+  "taskTextPreservedBytes": 5417,
+  "finalPostTaskWork": "Deferred until quality goal; no finalAGENTS handoff, finalshowcase/video, push or deployment."
+}

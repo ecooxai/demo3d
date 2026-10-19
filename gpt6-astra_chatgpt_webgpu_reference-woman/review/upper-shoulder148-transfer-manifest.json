@@ -1,0 +1,43 @@
+{
+  "study": 148,
+  "accepted": 149,
+  "score": 78,
+  "files": [
+    {
+      "path": "review/hair-groom-candidate148.js",
+      "bytes": 45461,
+      "sha256": "16a97d4964a318d240257e727179f9198537faab0117c76b5310ef83641d2fba"
+    },
+    {
+      "path": "review/upper-shoulder-paths148.js",
+      "bytes": 11797,
+      "sha256": "1474414832f1ec2a5399f6bf3254bab64ba1fa4cf757a5b2900617794ee571cf"
+    },
+    {
+      "path": "review/upper-shoulder148-native-coefficients.js",
+      "bytes": 2636,
+      "sha256": "206c769092ca3e7d710ac62c126ae24ef905653670d734df21aeb4089854665e"
+    },
+    {
+      "path": "review/upper-shoulder148-native-layout.json",
+      "bytes": 42755,
+      "sha256": "45fb64f0d4ab036d751bdc6223b394831a1d464f27d6dd811317cbcd7f519140"
+    },
+    {
+      "path": "review/upper-shoulder148-native.mjs",
+      "bytes": 13193,
+      "sha256": "9285e59e745eba7a01c4b599cca77fc52b2779f979389ade9fb594856aa963c1"
+    },
+    {
+      "path": "review/upper-shoulder148-full-audit.json",
+      "bytes": 25784,
+      "sha256": "5a6e9194c8dc1a4983bdf8db5c0d4770440e2adb003fb7ac621d38411f99126a"
+    },
+    {
+      "path": "review/upper-shoulder148-handoff.md",
+      "bytes": 7579,
+      "sha256": "70100cd877e2fbd9a38fb4ead464eccb66a03e2b558c183755b6b23032fc6959"
+    }
+  ],
+  "excluded": "All mesh coordinate JSON, source harness captures and plots."
+}

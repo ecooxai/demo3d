@@ -1,0 +1,166 @@
+{
+  "candidate": 154,
+  "source": "Exact projected overlap vertices of all stored new contact pairs from the blocked .018 coarse surface.",
+  "currentCoefficient": 0.018,
+  "margin": 0.0005,
+  "minimumCrestCoefficientBound": 0.0065126384144708555,
+  "proposedCrest": 0.006,
+  "samples": 14,
+  "rows": [
+    {
+      "bodyTriangle": 21107,
+      "hairTriangle": 292934,
+      "point": [
+        -0.5672543965929827,
+        -0.3596624484460411
+      ],
+      "currentGap": 0.008321015514198615,
+      "crestWeight": 0.9917770167000709,
+      "coefficientUpperBound": 0.025885860815994095
+    },
+    {
+      "bodyTriangle": 21107,
+      "hairTriangle": 292934,
+      "point": [
+        -0.5670564607790544,
+        -0.35968186160309495
+      ],
+      "currentGap": 0.008221464293856506,
+      "crestWeight": 0.991840127555133,
+      "coefficientUpperBound": 0.025784988809526965
+    },
+    {
+      "bodyTriangle": 21107,
+      "hairTriangle": 292934,
+      "point": [
+        -0.5502327692442686,
+        -0.3465317315951942
+      ],
+      "currentGap": -0.0056618659475395905,
+      "crestWeight": 0.9795373598114332,
+      "coefficientUpperBound": 0.011709412013926874
+    },
+    {
+      "bodyTriangle": 21107,
+      "hairTriangle": 292935,
+      "point": [
+        -0.5670564607790544,
+        -0.35968186160309495
+      ],
+      "currentGap": 0.008221464293860281,
+      "crestWeight": 0.991840127555133,
+      "coefficientUpperBound": 0.025784988809530767
+    },
+    {
+      "bodyTriangle": 21107,
+      "hairTriangle": 292935,
+      "point": [
+        -0.5670242507485223,
+        -0.3596850206998194
+      ],
+      "currentGap": 0.008205102820355692,
+      "crestWeight": 0.9918503975640219,
+      "coefficientUpperBound": 0.02576841229209503
+    },
+    {
+      "bodyTriangle": 21107,
+      "hairTriangle": 292935,
+      "point": [
+        -0.550214916453944,
+        -0.3465592179443071
+      ],
+      "currentGap": -0.005661653276269107,
+      "crestWeight": 0.9795737723450602,
+      "coefficientUpperBound": 0.01170986295241617
+    },
+    {
+      "bodyTriangle": 21107,
+      "hairTriangle": 292935,
+      "point": [
+        -0.5502327692442722,
+        -0.346531731595197
+      ],
+      "currentGap": -0.005661865947536593,
+      "crestWeight": 0.9795373598114359,
+      "coefficientUpperBound": 0.011709412013929948
+    },
+    {
+      "bodyTriangle": 21107,
+      "hairTriangle": 293382,
+      "point": [
+        -0.5697141987218629,
+        -0.3594211958697557
+      ],
+      "currentGap": 0.0031185158234483534,
+      "crestWeight": 0.9909927209601714,
+      "coefficientUpperBound": 0.02064231590007167
+    },
+    {
+      "bodyTriangle": 21107,
+      "hairTriangle": 293382,
+      "point": [
+        -0.5695372716435764,
+        -0.3594385485311548
+      ],
+      "currentGap": 0.0030285401390054423,
+      "crestWeight": 0.9910491332838068,
+      "coefficientUpperBound": 0.020551377176051013
+    },
+    {
+      "bodyTriangle": 21107,
+      "hairTriangle": 293382,
+      "point": [
+        -0.5528824734551238,
+        -0.34669675502283365
+      ],
+      "currentGap": -0.010748421227814942,
+      "crestWeight": 0.9791997182351473,
+      "coefficientUpperBound": 0.0065126384144713135
+    },
+    {
+      "bodyTriangle": 21107,
+      "hairTriangle": 293383,
+      "point": [
+        -0.5695372716435764,
+        -0.3594385485311548
+      ],
+      "currentGap": 0.003028540139003555,
+      "crestWeight": 0.9910491332838068,
+      "coefficientUpperBound": 0.02055137717604911
+    },
+    {
+      "bodyTriangle": 21107,
+      "hairTriangle": 293383,
+      "point": [
+        -0.5695046651326692,
+        -0.3594417465138981
+      ],
+      "currentGap": 0.0030118229560675003,
+      "crestWeight": 0.9910595297085019,
+      "coefficientUpperBound": 0.020534482420855482
+    },
+    {
+      "bodyTriangle": 21107,
+      "hairTriangle": 293383,
+      "point": [
+        -0.5528645178227328,
+        -0.3467245064584832
+      ],
+      "currentGap": -0.010748156468751047,
+      "crestWeight": 0.9792364679522882,
+      "coefficientUpperBound": 0.0065133398960596145
+    },
+    {
+      "bodyTriangle": 21107,
+      "hairTriangle": 293383,
+      "point": [
+        -0.5528824734551232,
+        -0.34669675502283326
+      ],
+      "currentGap": -0.010748421227815386,
+      "crestWeight": 0.9791997182351468,
+      "coefficientUpperBound": 0.0065126384144708555
+    }
+  ],
+  "qualification": "Bound concerns these observed newly crossing front pairs. A complete focused triangle check must still confirm no new pair elsewhere after the restrained coefficient; no pair tolerance is changed."
+}
