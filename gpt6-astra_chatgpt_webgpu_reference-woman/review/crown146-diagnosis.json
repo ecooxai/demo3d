@@ -1,0 +1,530 @@
+{
+  "version": "read-only-crown146-diagnosis",
+  "candidateImplemented": false,
+  "inputs": {
+    "src/hair-groom.js": "a7b04c16fd8e13277e9418954c996c2370895f84ef446ed295ccb942a73a002d",
+    "review/hair-groom-candidate142.js": "1bd93776a197fed22533fb170b094b96b58187e19a2d943d52e9f3c127af07c4",
+    "review/crown-chart-candidate142.js": "a7c269c61de31c1a5009b6750c37ad2203b0470d83614dd47655b5c1dac1ec67",
+    "src/reference-crown.js": "49beecc7792eacd5f51c45718132f3ad9a1749b471ecce6f3fb498e8397f226d",
+    "src/main.js": "2e1e13d2fe6bbc87a29809ce6d0aa12dc8ee70853dac2c4a82322c58d703593a"
+  },
+  "coordinateMetrics": [
+    {
+      "side": -1,
+      "u": 0.9,
+      "v": 0.78,
+      "old": [
+        -0.14481167799223024,
+        1.106359961747687,
+        0.6157907975522248
+      ],
+      "on": [
+        -0.14488416778620866,
+        1.105241363099637,
+        0.6157352261578549
+      ],
+      "growthMetricRatio": 1.1996222166376243,
+      "transverseMetricRatio": 1.0006397736760908,
+      "areaMetricRatio": 1.4173089117880118,
+      "uvAngleBefore": 141.6541660913359,
+      "uvAngleAfter": 132.90204217641087,
+      "growthDirectionTurnDegrees": 9.48318451127353,
+      "normalTurnDegrees": 5.201509341477753,
+      "oldCameraFacing": 0.9582146723910377,
+      "onCameraFacing": 0.9801633884589805
+    },
+    {
+      "side": -1,
+      "u": 0.93,
+      "v": 0.8,
+      "old": [
+        -0.09050579240736302,
+        1.1229990979971842,
+        0.6147105359545243
+      ],
+      "on": [
+        -0.09097901561547317,
+        1.1142839088407681,
+        0.6143478516609169
+      ],
+      "growthMetricRatio": 1.675841541669599,
+      "transverseMetricRatio": 0.9433857462114152,
+      "areaMetricRatio": 7.337719437452091,
+      "uvAngleBefore": 167.57051592881538,
+      "uvAngleAfter": 92.58581409446103,
+      "growthDirectionTurnDegrees": 25.296450358915685,
+      "normalTurnDegrees": 61.211242633357415,
+      "oldCameraFacing": 0.23249668160642945,
+      "onCameraFacing": 0.9457784965755381
+    },
+    {
+      "side": -1,
+      "u": 0.95,
+      "v": 0.7,
+      "old": [
+        -0.019627567327667402,
+        1.158233336705516,
+        0.607420454105619
+      ],
+      "on": [
+        -0.02111009125311974,
+        1.1357307849290361,
+        0.61138717794557
+      ],
+      "growthMetricRatio": 1.6933116125245584,
+      "transverseMetricRatio": 1.0270813407887165,
+      "areaMetricRatio": 3.757141394852569,
+      "uvAngleBefore": 164.42441875154677,
+      "uvAngleAfter": 144.54502665209563,
+      "growthDirectionTurnDegrees": 36.84383345923686,
+      "normalTurnDegrees": 111.34139563465818,
+      "oldCameraFacing": -0.40641869962667215,
+      "onCameraFacing": 0.9617772936099751
+    },
+    {
+      "side": -1,
+      "u": 0.97,
+      "v": 0.65,
+      "old": [
+        0.028066863259102213,
+        1.1704235363010511,
+        0.6035048537594206
+      ],
+      "on": [
+        0.0537452640311402,
+        1.0781077024143735,
+        0.6123321751470652
+      ],
+      "growthMetricRatio": 1.0219244188059837,
+      "transverseMetricRatio": 5.128492650327426,
+      "areaMetricRatio": 15.907919400526268,
+      "uvAngleBefore": 160.77536113765467,
+      "uvAngleAfter": 91.90214449921224,
+      "growthDirectionTurnDegrees": 44.254393222706035,
+      "normalTurnDegrees": 134.81953411281808,
+      "oldCameraFacing": -0.5551316232480379,
+      "onCameraFacing": 0.9559873160525381
+    },
+    {
+      "side": -1,
+      "u": 0.985,
+      "v": 0.8,
+      "old": [
+        0.019991202327285018,
+        1.1798870944474866,
+        0.5895058066980624
+      ],
+      "on": [
+        0.10858664581310301,
+        1.0344138292724399,
+        0.6249818545416082
+      ],
+      "growthMetricRatio": 0.48365304879097154,
+      "transverseMetricRatio": 2.841880396367656,
+      "areaMetricRatio": 1.2286573679315278,
+      "uvAngleBefore": 142.3434928256284,
+      "uvAngleAfter": 146.89947411372668,
+      "growthDirectionTurnDegrees": 57.153583901025485,
+      "normalTurnDegrees": 149.48992333221105,
+      "oldCameraFacing": -0.5487423490234974,
+      "onCameraFacing": 0.8902220148010405
+    },
+    {
+      "side": -1,
+      "u": 0.993,
+      "v": 0.9,
+      "old": [
+        0.015498284939137687,
+        1.1880342734280123,
+        0.5767094606355043
+      ],
+      "on": [
+        0.1465206111521956,
+        1.0318241723631458,
+        0.6274140293018229
+      ],
+      "growthMetricRatio": 0.2020134175280735,
+      "transverseMetricRatio": 2.838388119781382,
+      "areaMetricRatio": 0.42761499501308614,
+      "uvAngleBefore": 137.32121050177489,
+      "uvAngleAfter": 149.6325572100148,
+      "growthDirectionTurnDegrees": 66.83029857917855,
+      "normalTurnDegrees": 146.3037875869823,
+      "oldCameraFacing": -0.5114976200801626,
+      "onCameraFacing": 0.8941304176767989
+    },
+    {
+      "side": 1,
+      "u": 0.9,
+      "v": 0.8,
+      "old": [
+        0.2632369307977254,
+        1.0035837241039518,
+        0.6297993572459527
+      ],
+      "on": [
+        0.2625135250389323,
+        0.9859953460897574,
+        0.6186568977130139
+      ],
+      "growthMetricRatio": 1.4436926825767067,
+      "transverseMetricRatio": 1.110999618265385,
+      "areaMetricRatio": 1.5843270485870524,
+      "uvAngleBefore": 103.2013513876105,
+      "uvAngleAfter": 74.08456354557096,
+      "growthDirectionTurnDegrees": 15.763683998975075,
+      "normalTurnDegrees": 30.993565979747864,
+      "oldCameraFacing": 0.8815127529469037,
+      "onCameraFacing": 0.9982283922702543
+    },
+    {
+      "side": 1,
+      "u": 0.93,
+      "v": 0.6,
+      "old": [
+        0.18546477078438703,
+        1.1020662336932752,
+        0.609073682816833
+      ],
+      "on": [
+        0.2062317907883472,
+        1.050705520928375,
+        0.5937385223832481
+      ],
+      "growthMetricRatio": 1.4874774848956014,
+      "transverseMetricRatio": 0.4101018172074368,
+      "areaMetricRatio": 0.7304237969665806,
+      "uvAngleBefore": 124.681384954607,
+      "uvAngleAfter": 100.05451065310831,
+      "growthDirectionTurnDegrees": 8.696930337256463,
+      "normalTurnDegrees": 38.47561646281837,
+      "oldCameraFacing": 0.8705732197938812,
+      "onCameraFacing": 0.4941483185602281
+    },
+    {
+      "side": 1,
+      "u": 0.96,
+      "v": 0.5,
+      "old": [
+        0.14527515213330064,
+        1.139269527116876,
+        0.596977124139034
+      ],
+      "on": [
+        0.19054297438779316,
+        1.0738332545925355,
+        0.604880253992508
+      ],
+      "growthMetricRatio": 2.1867790774853226,
+      "transverseMetricRatio": 0.6769406056326804,
+      "areaMetricRatio": 1.0744249403880965,
+      "uvAngleBefore": 41.46422112551913,
+      "uvAngleAfter": 28.724211845992322,
+      "growthDirectionTurnDegrees": 75.66953942242624,
+      "normalTurnDegrees": 33.958670778297744,
+      "oldCameraFacing": 0.8284244250528305,
+      "onCameraFacing": 0.5262649407393067
+    },
+    {
+      "side": 1,
+      "u": 0.985,
+      "v": 0.8,
+      "old": [
+        0.07368346294560607,
+        1.1692718821072383,
+        0.5838322853545844
+      ],
+      "on": [
+        0.18935890431993269,
+        1.03210111840766,
+        0.6272112349008362
+      ],
+      "growthMetricRatio": 0.37629020042761013,
+      "transverseMetricRatio": 0.15355111692027343,
+      "areaMetricRatio": 0.19545598406795928,
+      "uvAngleBefore": 13.994389179128483,
+      "uvAngleAfter": 125.11034787575497,
+      "growthDirectionTurnDegrees": 131.02198254221548,
+      "normalTurnDegrees": 136.21547753856782,
+      "oldCameraFacing": -0.21065780602666118,
+      "onCameraFacing": 0.7873739901378538
+    }
+  ],
+  "releaseLengths": [
+    {
+      "side": -1,
+      "u": 0.83,
+      "prefixV": 0.805,
+      "oldEndpoint": [
+        -0.42570510245657356,
+        0.8590196348801531,
+        0.5979067331108974
+      ],
+      "onEndpoint": [
+        -0.42570510245657356,
+        0.84,
+        0.575723131729086
+      ],
+      "oldReleaseArc": 0.1221250616515908,
+      "onReleaseArc": 0.1328188952128475,
+      "ratio": 1.0875646113634319
+    },
+    {
+      "side": -1,
+      "u": 0.86,
+      "prefixV": 0.7817555310523383,
+      "oldEndpoint": [
+        -0.3364240530587866,
+        0.972264458436578,
+        0.5981984412672361
+      ],
+      "onEndpoint": [
+        -0.3364240530587866,
+        0.88,
+        0.5945342712095212
+      ],
+      "oldReleaseArc": 0.09505029947840014,
+      "onReleaseArc": 0.14497376393505626,
+      "ratio": 1.5252320585060446
+    },
+    {
+      "side": -1,
+      "u": 0.9,
+      "prefixV": 0.765,
+      "oldEndpoint": [
+        -0.2337331652426971,
+        1.02534327089873,
+        0.6126519956257451
+      ],
+      "onEndpoint": [
+        -0.2337331652426971,
+        0.91,
+        0.6090818392808286
+      ],
+      "oldReleaseArc": 0.0685066847014816,
+      "onReleaseArc": 0.12668312953051789,
+      "ratio": 1.8492082937970302
+    },
+    {
+      "side": -1,
+      "u": 0.93,
+      "prefixV": 0.7539951999999999,
+      "oldEndpoint": [
+        -0.1559824617172287,
+        1.0773195588749092,
+        0.6082944548954462
+      ],
+      "onEndpoint": [
+        -0.1559824617172287,
+        0.96,
+        0.6053410653180978
+      ],
+      "oldReleaseArc": 0.04993056785758866,
+      "onReleaseArc": 0.1053023295821334,
+      "ratio": 2.1089752049781483
+    },
+    {
+      "side": -1,
+      "u": 0.95,
+      "prefixV": 0.575,
+      "oldEndpoint": [
+        -0.1045219635381041,
+        1.12447896768617,
+        0.593868717333765
+      ],
+      "onEndpoint": [
+        -0.1045219635381041,
+        0.995,
+        0.625
+      ],
+      "oldReleaseArc": 0.038742453681292144,
+      "onReleaseArc": 0.06203630116885104,
+      "ratio": 1.6012486374554786
+    },
+    {
+      "side": -1,
+      "u": 0.97,
+      "prefixV": 0.575,
+      "oldEndpoint": [
+        -0.055777331597209684,
+        1.166674942522589,
+        0.5768332975373656
+      ],
+      "onEndpoint": [
+        -0.005986115826763571,
+        1.0134820139647656,
+        0.6277354671821379
+      ],
+      "oldReleaseArc": 0.0316708760828847,
+      "onReleaseArc": 0.029094911753249474,
+      "ratio": 0.9186645698434813
+    },
+    {
+      "side": -1,
+      "u": 0.985,
+      "prefixV": 0.575,
+      "oldEndpoint": [
+        -0.02129107425001135,
+        1.188309846365793,
+        0.5667352607781959
+      ],
+      "onEndpoint": [
+        0.09077974537396305,
+        1.023938624322922,
+        0.6290136159030194
+      ],
+      "oldReleaseArc": 0.029915509229440147,
+      "onReleaseArc": 0.012604043608416344,
+      "ratio": 0.42132137921331386
+    },
+    {
+      "side": 1,
+      "u": 0.86,
+      "prefixV": 0.705,
+      "oldEndpoint": [
+        0.3787553306473567,
+        0.8543187931142417,
+        0.6337219648172914
+      ],
+      "onEndpoint": [
+        0.3787553306473567,
+        0.835,
+        0.5930318930542197
+      ],
+      "oldReleaseArc": 0.07360038890671804,
+      "onReleaseArc": 0.07660416775967092,
+      "ratio": 1.0408119970230036
+    },
+    {
+      "side": 1,
+      "u": 0.9,
+      "prefixV": 0.705,
+      "oldEndpoint": [
+        0.27041134942719885,
+        0.9267300432251746,
+        0.6482334158834333
+      ],
+      "onEndpoint": [
+        0.27041134942719885,
+        0.875,
+        0.6112932157576207
+      ],
+      "oldReleaseArc": 0.04960288848570531,
+      "onReleaseArc": 0.06650322477550502,
+      "ratio": 1.3407127448771476
+    },
+    {
+      "side": 1,
+      "u": 0.93,
+      "prefixV": 0.705,
+      "oldEndpoint": [
+        0.1869869721754904,
+        1.0099589323872773,
+        0.6368697723853408
+      ],
+      "onEndpoint": [
+        0.223,
+        0.935,
+        0.626
+      ],
+      "oldReleaseArc": 0.030409794679317186,
+      "onReleaseArc": 0.03376957554843123,
+      "ratio": 1.1104835104789166
+    },
+    {
+      "side": 1,
+      "u": 0.96,
+      "prefixV": 0.705,
+      "oldEndpoint": [
+        0.10567960829646013,
+        1.1198434640768782,
+        0.5992121469300643
+      ],
+      "onEndpoint": [
+        0.201,
+        0.995,
+        0.635
+      ],
+      "oldReleaseArc": 0.011669109976496056,
+      "onReleaseArc": 0.018497473399964257,
+      "ratio": 1.585165744193165
+    },
+    {
+      "side": 1,
+      "u": 0.985,
+      "prefixV": 0.705,
+      "oldEndpoint": [
+        0.04542145445700829,
+        1.1839471276977138,
+        0.5692563670639587
+      ],
+      "onEndpoint": [
+        0.19078501789133337,
+        1.0210752243813863,
+        0.6317738431702887
+      ],
+      "oldReleaseArc": 0.021845951657602995,
+      "onReleaseArc": 0.0071959999835327195,
+      "ratio": 0.32939741405260836
+    }
+  ],
+  "actualEmittedFacing": {
+    "changedTriangles": 3505,
+    "offBackToOnFront": 898,
+    "offFrontToOnBack": 0,
+    "bothFront": 2607,
+    "bothBack": 0,
+    "newFrontFullVertexAlpha": 736,
+    "maximumVertexNormalTurnDegrees": 179.60484431790826
+  },
+  "atlas100NormalWeight": {
+    "samples": 3505,
+    "offZeroToOnNonzero": 865,
+    "offZeroToOnAboveHalf": 736,
+    "maximumAbsoluteWeightDifference": 1,
+    "examples": [
+      {
+        "triangle": 24439,
+        "u": 0.9661458333333334,
+        "v": 0.5729166748316864,
+        "off": 0,
+        "on": 1
+      },
+      {
+        "triangle": 24440,
+        "u": 0.9713541666666666,
+        "v": 0.567708344764361,
+        "off": 0,
+        "on": 1
+      },
+      {
+        "triangle": 24441,
+        "u": 0.9739583333333334,
+        "v": 0.5729166748316864,
+        "off": 0,
+        "on": 1
+      },
+      {
+        "triangle": 24694,
+        "u": 0.9635416666666666,
+        "v": 0.5833333349663373,
+        "off": 0,
+        "on": 1
+      },
+      {
+        "triangle": 24695,
+        "u": 0.9661458333333334,
+        "v": 0.5885416650336627,
+        "off": 0,
+        "on": 1
+      }
+    ]
+  },
+  "limits": [
+    "Geometric and normal-weight measurements only; no photograph pixels are read.",
+    "Camera-facing classification uses actual emitted triangles and accepted head Ry(.16)Rz(-.17), but is not an occlusion or pixel-ownership test.",
+    "100 weighting is evaluated at triangle centroids from interpolated actual vertex normals; the native atlas uses dense grid samples, so these counts are explanatory samples, not changed-texel counts.",
+    "UV0, vertex-alpha and original coverage-map inputs were unchanged in142. Native final100 RGB can change because its normal-dependent contrast weight is rebaked.",
+    "Native art has already rejected142; no material, alpha or strength rescue is proposed."
+  ]
+}

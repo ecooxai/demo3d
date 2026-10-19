@@ -1,0 +1,247 @@
+{
+  "iteration": 147,
+  "score": 77,
+  "status": "Source field only; no geometry or native candidate yet",
+  "baseMainSHA256": "2e1e13d2fe6bbc87a29809ce6d0aa12dc8ee70853dac2c4a82322c58d703593a",
+  "measurementSHA256": "e3d6da292dd4fcb9d52bdcab5a4fe31871d0b291fae514c883f969525c4a744b",
+  "radiusPhotoPixels": 80,
+  "depthGateWorldZ": [
+    0.1,
+    0.35
+  ],
+  "frame": {
+    "a": 268.92735334295145,
+    "b": -0.18101144835782712,
+    "worldOrigin": [
+      -0.21510119487437857,
+      3.0571396340962576
+    ],
+    "photoOrigin": [
+      448,
+      432
+    ]
+  },
+  "controls": [
+    {
+      "index": 0,
+      "label": "near iris",
+      "at": [
+        448,
+        432
+      ],
+      "delta": [
+        0,
+        0
+      ],
+      "method": "triangle UV interpolation",
+      "world": [
+        -0.21510119487437857,
+        3.0571396340962576,
+        0.6057848086516415
+      ]
+    },
+    {
+      "index": 1,
+      "label": "far iris",
+      "at": [
+        626.9999999999999,
+        463
+      ],
+      "delta": [
+        0,
+        0
+      ],
+      "method": "triangle UV interpolation",
+      "world": [
+        0.45042817950513186,
+        2.9414189085949936,
+        0.49838203711084444
+      ]
+    },
+    {
+      "index": 2,
+      "label": "near outer canthus",
+      "at": [
+        397.0083085387133,
+        419.9860378573642
+      ],
+      "delta": [
+        -0.008308538713322378,
+        4.013962142635819
+      ],
+      "method": "triangle UV interpolation",
+      "world": [
+        -0.40468243787715286,
+        3.10194087267703,
+        0.5609412800259845
+      ]
+    },
+    {
+      "index": 3,
+      "label": "near inner canthus",
+      "at": [
+        497.3532912027181,
+        444.0114917482097
+      ],
+      "delta": [
+        -4.353291202718083,
+        8.988508251790279
+      ],
+      "method": "triangle UV interpolation",
+      "world": [
+        -0.03161229552182471,
+        3.0123516822947205,
+        0.6128623453222201
+      ]
+    },
+    {
+      "index": 4,
+      "label": "far inner canthus",
+      "at": [
+        579.5257896495282,
+        458.2424830527937
+      ],
+      "delta": [
+        12.474210350471822,
+        14.757516947206284
+      ],
+      "method": "triangle UV interpolation",
+      "world": [
+        0.2739084390174363,
+        2.9592284358950596,
+        0.5635575847786
+      ]
+    },
+    {
+      "index": 5,
+      "label": "far outer canthus",
+      "at": [
+        672.8358106469561,
+        467.7550468179161
+      ],
+      "delta": [
+        2.1641893530438665,
+        8.244953182083918
+      ],
+      "method": "triangle UV interpolation",
+      "world": [
+        0.6208555784058952,
+        2.9236226670868724,
+        0.39544047803328713
+      ]
+    },
+    {
+      "index": 6,
+      "label": "near upper aperture",
+      "at": [
+        452.1137328930858,
+        409.67995042587773
+      ],
+      "delta": [
+        -4.113732893085796,
+        4.320049574122265
+      ],
+      "method": "triangle UV interpolation",
+      "world": [
+        -0.19974851950791112,
+        3.1401258766137965,
+        0.6115055943644196
+      ]
+    },
+    {
+      "index": 7,
+      "label": "near lower aperture",
+      "at": [
+        445.7650787423582,
+        447.98934524350307
+      ],
+      "delta": [
+        3.2349212576418154,
+        3.0106547564969333
+      ],
+      "method": "existing rounded-boundary UV vertex",
+      "world": [
+        -0.22345171195401026,
+        2.997689252773673,
+        0.6180948454389795
+      ]
+    },
+    {
+      "index": 8,
+      "label": "far upper aperture",
+      "at": [
+        631.1137328948853,
+        440.6799504258965
+      ],
+      "delta": [
+        -1.1137328948852883,
+        3.320049574103507
+      ],
+      "method": "triangle UV interpolation",
+      "world": [
+        0.46578085487829135,
+        3.0244051511124583,
+        0.5041028228629677
+      ]
+    },
+    {
+      "index": 9,
+      "label": "far lower aperture",
+      "at": [
+        624.7650827356044,
+        478.989345935071
+      ],
+      "delta": [
+        2.2349172643955626,
+        5.0106540649289855
+      ],
+      "method": "existing rounded-boundary UV vertex",
+      "world": [
+        0.4420776772725545,
+        2.881968524690836,
+        0.5106920715021622
+      ]
+    },
+    {
+      "index": 10,
+      "label": "nose tip",
+      "at": [
+        526.9567896312257,
+        578.309677838632
+      ],
+      "delta": [
+        0,
+        0
+      ],
+      "method": "triangle UV interpolation",
+      "world": [
+        0.0781314339880291,
+        2.512893188050146,
+        0.8311749342817641
+      ]
+    },
+    {
+      "index": 11,
+      "label": "nose bridge",
+      "at": [
+        535.3122893095834,
+        509.78842004534323
+      ],
+      "delta": [
+        0,
+        0
+      ],
+      "method": "triangle UV interpolation",
+      "world": [
+        0.10937264660880808,
+        2.767666835745138,
+        0.7502585246321145
+      ]
+    }
+  ],
+  "scope": "One compact common field for eye contours using the existing manually placed image1 points. Iris centers, accepted nasal bridge and nose tip pinned; source image pixels, UVs, maps, materials and hair remain outside this field study.",
+  "lowerFadePhotoY": [
+    560,
+    600
+  ]
+}

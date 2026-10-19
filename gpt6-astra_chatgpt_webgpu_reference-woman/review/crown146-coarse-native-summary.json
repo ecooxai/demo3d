@@ -1,0 +1,590 @@
+{
+  "fullNativeReport": {
+    "file": "review/crown146-coarse-native-report.json",
+    "bytes": 300580,
+    "sha256": "6d850fde8d7fd54ca40fbddaf6241959e432ad9922d6e7d87ea9b355eec4b168"
+  },
+  "omissions": "Only repeated hidden[].rows omitted; exact ranges remain in full report and source contract.",
+  "cases": [
+    {
+      "iteration": 146,
+      "stage": "coarse diagnostic; baseline quality77 retained pending art",
+      "strength": 0,
+      "mainSHA256": "2e1e13d2fe6bbc87a29809ce6d0aa12dc8ee70853dac2c4a82322c58d703593a",
+      "hairSHA256": "7708972bd77d85db749e32180d1822278133b151eb68f86695b3665145a6f217",
+      "helperSHA256": "6409701a815d142048204e1b8ef8703b015805829f50246d650bf51997679068",
+      "nativeWebGPU": true,
+      "result": {
+        "version": "coordinated-coarse-crown146",
+        "strength": 0
+      },
+      "guidePlacement": 0.5,
+      "diagonalFringe": 1,
+      "side": 0,
+      "shadowSide": 2,
+      "upperLipRelief140": {
+        "version": "upper-lip-relief-140",
+        "strength": 1,
+        "applied": true,
+        "blend": 0.5,
+        "frame": {
+          "samples": 1717,
+          "commonOffset": [
+            -0.23351908266304588,
+            -0.04008513691786831,
+            -0.03823637957573096
+          ],
+          "maximumUVResidual": 6.845613331751821e-08,
+          "maximumXYResidual": 9.547105361135122e-08,
+          "maximumZResidual": 5.692150666786189e-08,
+          "tolerance": 1.2e-06,
+          "fittedSlopes": false,
+          "baselineProfile": "Accepted full130, including its corner gate"
+        },
+        "privateGeometryCount": 1,
+        "privateAttributeBytes": 94748,
+        "changedPositions": 1259,
+        "changedNormals": 1261,
+        "maximumDepthReduction": 0.00689344621890751,
+        "maximumOutwardDisplacement": 0,
+        "maximumAnatomicalXYRoundoff": 1.9133183876719062e-19,
+        "maximumNormalLengthError": 4.274486775646125e-08,
+        "maximumTransportedNormalDegrees": 18.080336549959185,
+        "minimumJacobian": 1,
+        "maximumJacobian": 1,
+        "faceTrianglesIndexed": 1091,
+        "faceIndexCells": 512,
+        "minimumBaselineClearance": 0.000992828070697449,
+        "minimumRepairedClearance": 0.000992828070697449,
+        "clearanceIntersectionVertices": 34942,
+        "clearanceIntersectionPolygons": 9673,
+        "minimumFaceProjectionCoverage": 0.9999999999345901,
+        "clearanceMethod": "Full triangle/triangle XY intersection polygons; affine depth minima at their vertices",
+        "projectedOrientationFlips": 0,
+        "minimumTriangleAreaRatio": 0.7377114837493607,
+        "maximumGeometricNormalTurnDegrees": 18.527929512599123,
+        "normalOperation": "One analytic inverse-transpose transport from accepted130 normals",
+        "extraAuthoredNormalEdit": false,
+        "materialChanged": false,
+        "textureChanged": false,
+        "meshToHead": [
+          1,
+          1.214306433183765e-17,
+          0,
+          0,
+          1.214306433183765e-17,
+          1,
+          0,
+          0,
+          2.7755575615628914e-17,
+          0,
+          1,
+          0,
+          1.6653345369377348e-16,
+          0,
+          0,
+          1
+        ],
+        "headToMesh": [
+          1,
+          -1.214306433183765e-17,
+          0,
+          0,
+          -1.214306433183765e-17,
+          1,
+          0,
+          0,
+          -2.7755575615628914e-17,
+          3.3703774026776627e-34,
+          1,
+          0,
+          -1.6653345369377348e-16,
+          2.0222264416065976e-33,
+          0,
+          1
+        ],
+        "elapsedMs": 37.70000000298023
+      },
+      "hairTriangles": 1114888,
+      "coarseTriangles": 1070108,
+      "geometryMiB": 52.49,
+      "constructionMs": 1880.7,
+      "nonfinite": 0,
+      "internal": {
+        "scale": 2,
+        "width": 1800,
+        "height": 2400
+      },
+      "heapMiB": 354.144814491272,
+      "hidden": [
+        {
+          "mesh": "Independent fine crown lengths and silhouette strands",
+          "ribbons": 575,
+          "removedTriangles": 29900,
+          "originalIndexSHA256": "a254d7ef6f9e1d548b32e558ad12c7843099f65b5826f864b7bf96f874da3c13",
+          "coarseIndexSHA256": "74a8d6bd653e9088f3cf67563cfcf8a8ec3fdc38827f5f958800732ce2242aa7",
+          "omittedRows": {
+            "entries": 575,
+            "compactJSONBytes": 39616,
+            "sha256": "a0c938f6073ec667693770854bae1d487cc5f634cba0e4cfe807fcb19fc12ad5"
+          }
+        },
+        {
+          "mesh": "Sparse short temple edge and hairline wisps",
+          "ribbons": 310,
+          "removedTriangles": 14880,
+          "originalIndexSHA256": "7d5ba6d9045d67610302db2a62b54d61e7cd0575cec76b38c1bbc8a159713e93",
+          "coarseIndexSHA256": "5699bcfa6c1fcfe94a9abf2068cf336ebcce80c1a6d5737823a5b4bd86e3986b",
+          "omittedRows": {
+            "entries": 310,
+            "compactJSONBytes": 20846,
+            "sha256": "a7300e4a61666937b36fb5c790765f4d2f5c75bd2153f1f4490dfbe4740b22c5"
+          }
+        }
+      ],
+      "post100Maps": {
+        "map": {
+          "name": "Reference-only strand-space crown contrast / UV1",
+          "width": 2048,
+          "height": 2048,
+          "channel": 1,
+          "sha256": "cccf4341748b12c9bb4104709c2820565a6cb5f139d6d6e4221a22827a617a6a",
+          "colorSpace": "srgb",
+          "wrapS": 1000,
+          "wrapT": 1001,
+          "minFilter": 1008,
+          "magFilter": 1006
+        },
+        "alphaMap": {
+          "name": "Exact accepted crown coverage / UV0",
+          "width": 512,
+          "height": 1024,
+          "channel": 0,
+          "sha256": "9af3236a480e0252fa2fb85bdbc178cfd0c96a03e19b64e0c5624db817056471",
+          "colorSpace": "",
+          "wrapS": 1000,
+          "wrapT": 1001,
+          "minFilter": 1008,
+          "magFilter": 1006
+        },
+        "normalMap": {
+          "name": "Original fine longitudinal hair relief",
+          "width": 512,
+          "height": 1024,
+          "channel": 0,
+          "sha256": "da01003d6710455e35864f2d4d26923af0bfc89edfb1dc3651943f3ffb579aa6",
+          "colorSpace": "",
+          "wrapS": 1000,
+          "wrapT": 1001,
+          "minFilter": 1008,
+          "magFilter": 1006
+        }
+      },
+      "post100UV1SHA256": "b0cb5698910a677cb3a21f64f3efaad1d8f6092720ab14822ee72d811b578007",
+      "post100ColorSHA256": "335a664131f9609758025fcf5eaf07efe9123875409edc623f10e58445a06a48",
+      "junctionCamera": {
+        "target": [
+          0.1863736789718962,
+          4.02345363620646,
+          0.5689106698238522
+        ],
+        "zoom": 1.9,
+        "baselineVertex": 12309
+      },
+      "captures": [
+        {
+          "view": "front",
+          "path": "output/qa/crown146-coarse-0-front.png",
+          "sha256": "7ec0b823a6ea993674a3dcab3d7be682cfd3b9a881d5e907dbf57e0e9753b3ea"
+        },
+        {
+          "view": "detail",
+          "path": "output/qa/crown146-coarse-0-detail.png",
+          "sha256": "3842a2e6454d321670ad17c27082caaf014f1af68372711414696ea82b6448c2"
+        },
+        {
+          "view": "left",
+          "path": "output/qa/crown146-coarse-0-left.png",
+          "sha256": "438b328307c48d072a8c772a865c6045f43ba8f90b9cc79c50b90f5d7e988fb1"
+        },
+        {
+          "view": "right",
+          "path": "output/qa/crown146-coarse-0-right.png",
+          "sha256": "b0969fd3730739b0af8896b9ecd5634dcb950dc50fba8de8fd74e9eb53fd8d46"
+        },
+        {
+          "view": "back",
+          "path": "output/qa/crown146-coarse-0-back.png",
+          "sha256": "b370d1e238e48685333adb6e8649d43f898919374b2ebe269117ed251c66d2aa"
+        },
+        {
+          "view": "junction",
+          "path": "output/qa/crown146-coarse-0-junction.png",
+          "sha256": "0889f7005ecca33b6d54020b4b58efc01a297a6220ef93f70dbab0cd71f46100"
+        },
+        {
+          "view": "restored-detail",
+          "path": "output/qa/crown146-coarse-0-restored-detail.png",
+          "sha256": "3842a2e6454d321670ad17c27082caaf014f1af68372711414696ea82b6448c2"
+        }
+      ],
+      "strictRestoredDetail": true,
+      "errors": []
+    },
+    {
+      "iteration": 146,
+      "stage": "coarse diagnostic; baseline quality77 retained pending art",
+      "strength": 1,
+      "mainSHA256": "2e1e13d2fe6bbc87a29809ce6d0aa12dc8ee70853dac2c4a82322c58d703593a",
+      "hairSHA256": "7708972bd77d85db749e32180d1822278133b151eb68f86695b3665145a6f217",
+      "helperSHA256": "6409701a815d142048204e1b8ef8703b015805829f50246d650bf51997679068",
+      "nativeWebGPU": true,
+      "result": {
+        "version": "coordinated-coarse-crown146",
+        "stage": "coarse-only; owned old crown/edge fibers require later resampling",
+        "changedCrownVertices": 4196,
+        "changedFringeStrands": 938,
+        "sourceSlots": 1135,
+        "maximumRootInset": 0.035,
+        "maximumRootOutset": 0,
+        "maximumUpperJoinError": 1.5844565503307617e-07,
+        "maximumCutTangentAngle": 0.003479198948137662,
+        "maximumCutCurvatureJump": 93.88519837510722,
+        "maximumDepthArch": 0,
+        "minimumCubicYControlGap": 0.0009148233564100217,
+        "minimumLeftXControlGap": 0.007568772155511466,
+        "shortEndCuts": 19,
+        "partTip": [
+          0.18536808510638297,
+          1.034719510882547,
+          0.5916382730455075
+        ],
+        "protectedCutY": [
+          0.74,
+          0.76,
+          0.78,
+          0.73,
+          0.63,
+          0.5
+        ],
+        "endpointRails": {
+          "1": [
+            [
+              0.745,
+              0.6867188502576188,
+              0.42080562382380154
+            ],
+            [
+              0.78,
+              0.6064591004775853,
+              0.575
+            ],
+            [
+              0.82,
+              0.5011125463735076,
+              0.715
+            ],
+            [
+              0.865,
+              0.36392459068495353,
+              0.9
+            ],
+            [
+              0.9,
+              0.27041134942719885,
+              0.987
+            ],
+            [
+              0.935,
+              0.221,
+              1.065
+            ],
+            [
+              0.956,
+              0.204,
+              1.065
+            ],
+            [
+              0.978,
+              0.193,
+              1.05
+            ],
+            [
+              1,
+              0.18536808510638297,
+              1.034719510882547
+            ]
+          ],
+          "-1": [
+            [
+              0.755,
+              -0.6205416453656818,
+              0.6691002977058927
+            ],
+            [
+              0.8,
+              -0.511988586114973,
+              0.792
+            ],
+            [
+              0.81,
+              -0.48443342809332285,
+              0.82
+            ],
+            [
+              0.85,
+              -0.36557546362554044,
+              0.942
+            ],
+            [
+              0.9,
+              -0.23373316524269716,
+              1.035
+            ],
+            [
+              0.935,
+              -0.1429463690643857,
+              1.098
+            ],
+            [
+              0.95,
+              -0.1045219635381041,
+              1.112
+            ],
+            [
+              0.972,
+              0.025,
+              1.066
+            ],
+            [
+              0.985,
+              0.095,
+              1.047
+            ],
+            [
+              1,
+              0.18536808510638297,
+              1.034719510882547
+            ]
+          ]
+        },
+        "protectedFringeVertices": 31263,
+        "changedFringeVertices": 61305,
+        "maximumAdjacentLowerNormalAngle": 9.513364145014263,
+        "strength": 1
+      },
+      "guidePlacement": 0.5,
+      "diagonalFringe": 1,
+      "side": 0,
+      "shadowSide": 2,
+      "upperLipRelief140": {
+        "version": "upper-lip-relief-140",
+        "strength": 1,
+        "applied": true,
+        "blend": 0.5,
+        "frame": {
+          "samples": 1717,
+          "commonOffset": [
+            -0.23351908266304588,
+            -0.04008513691786831,
+            -0.03823637957573096
+          ],
+          "maximumUVResidual": 6.845613331751821e-08,
+          "maximumXYResidual": 9.547105361135122e-08,
+          "maximumZResidual": 5.692150666786189e-08,
+          "tolerance": 1.2e-06,
+          "fittedSlopes": false,
+          "baselineProfile": "Accepted full130, including its corner gate"
+        },
+        "privateGeometryCount": 1,
+        "privateAttributeBytes": 94748,
+        "changedPositions": 1259,
+        "changedNormals": 1261,
+        "maximumDepthReduction": 0.00689344621890751,
+        "maximumOutwardDisplacement": 0,
+        "maximumAnatomicalXYRoundoff": 1.9133183876719062e-19,
+        "maximumNormalLengthError": 4.274486775646125e-08,
+        "maximumTransportedNormalDegrees": 18.080336549959185,
+        "minimumJacobian": 1,
+        "maximumJacobian": 1,
+        "faceTrianglesIndexed": 1091,
+        "faceIndexCells": 512,
+        "minimumBaselineClearance": 0.000992828070697449,
+        "minimumRepairedClearance": 0.000992828070697449,
+        "clearanceIntersectionVertices": 34942,
+        "clearanceIntersectionPolygons": 9673,
+        "minimumFaceProjectionCoverage": 0.9999999999345901,
+        "clearanceMethod": "Full triangle/triangle XY intersection polygons; affine depth minima at their vertices",
+        "projectedOrientationFlips": 0,
+        "minimumTriangleAreaRatio": 0.7377114837493607,
+        "maximumGeometricNormalTurnDegrees": 18.527929512599123,
+        "normalOperation": "One analytic inverse-transpose transport from accepted130 normals",
+        "extraAuthoredNormalEdit": false,
+        "materialChanged": false,
+        "textureChanged": false,
+        "meshToHead": [
+          1,
+          1.214306433183765e-17,
+          0,
+          0,
+          1.214306433183765e-17,
+          1,
+          0,
+          0,
+          2.7755575615628914e-17,
+          0,
+          1,
+          0,
+          1.6653345369377348e-16,
+          0,
+          0,
+          1
+        ],
+        "headToMesh": [
+          1,
+          -1.214306433183765e-17,
+          0,
+          0,
+          -1.214306433183765e-17,
+          1,
+          0,
+          0,
+          -2.7755575615628914e-17,
+          3.3703774026776627e-34,
+          1,
+          0,
+          -1.6653345369377348e-16,
+          2.0222264416065976e-33,
+          0,
+          1
+        ],
+        "elapsedMs": 42.29999999701977
+      },
+      "hairTriangles": 1114888,
+      "coarseTriangles": 1070108,
+      "geometryMiB": 52.49,
+      "constructionMs": 2011.7,
+      "nonfinite": 0,
+      "internal": {
+        "scale": 2,
+        "width": 1800,
+        "height": 2400
+      },
+      "heapMiB": 390.71939182281494,
+      "hidden": [
+        {
+          "mesh": "Independent fine crown lengths and silhouette strands",
+          "ribbons": 575,
+          "removedTriangles": 29900,
+          "originalIndexSHA256": "a254d7ef6f9e1d548b32e558ad12c7843099f65b5826f864b7bf96f874da3c13",
+          "coarseIndexSHA256": "74a8d6bd653e9088f3cf67563cfcf8a8ec3fdc38827f5f958800732ce2242aa7",
+          "omittedRows": {
+            "entries": 575,
+            "compactJSONBytes": 39616,
+            "sha256": "a0c938f6073ec667693770854bae1d487cc5f634cba0e4cfe807fcb19fc12ad5"
+          }
+        },
+        {
+          "mesh": "Sparse short temple edge and hairline wisps",
+          "ribbons": 310,
+          "removedTriangles": 14880,
+          "originalIndexSHA256": "7d5ba6d9045d67610302db2a62b54d61e7cd0575cec76b38c1bbc8a159713e93",
+          "coarseIndexSHA256": "5699bcfa6c1fcfe94a9abf2068cf336ebcce80c1a6d5737823a5b4bd86e3986b",
+          "omittedRows": {
+            "entries": 310,
+            "compactJSONBytes": 20846,
+            "sha256": "a7300e4a61666937b36fb5c790765f4d2f5c75bd2153f1f4490dfbe4740b22c5"
+          }
+        }
+      ],
+      "post100Maps": {
+        "map": {
+          "name": "Reference-only strand-space crown contrast / UV1",
+          "width": 2048,
+          "height": 2048,
+          "channel": 1,
+          "sha256": "3966a97a47b95af8d6bdbcfe82d2647f63aade4b4950074b388df6ca7a7157de",
+          "colorSpace": "srgb",
+          "wrapS": 1000,
+          "wrapT": 1001,
+          "minFilter": 1008,
+          "magFilter": 1006
+        },
+        "alphaMap": {
+          "name": "Exact accepted crown coverage / UV0",
+          "width": 512,
+          "height": 1024,
+          "channel": 0,
+          "sha256": "9af3236a480e0252fa2fb85bdbc178cfd0c96a03e19b64e0c5624db817056471",
+          "colorSpace": "",
+          "wrapS": 1000,
+          "wrapT": 1001,
+          "minFilter": 1008,
+          "magFilter": 1006
+        },
+        "normalMap": {
+          "name": "Original fine longitudinal hair relief",
+          "width": 512,
+          "height": 1024,
+          "channel": 0,
+          "sha256": "da01003d6710455e35864f2d4d26923af0bfc89edfb1dc3651943f3ffb579aa6",
+          "colorSpace": "",
+          "wrapS": 1000,
+          "wrapT": 1001,
+          "minFilter": 1008,
+          "magFilter": 1006
+        }
+      },
+      "post100UV1SHA256": "b0cb5698910a677cb3a21f64f3efaad1d8f6092720ab14822ee72d811b578007",
+      "post100ColorSHA256": "335a664131f9609758025fcf5eaf07efe9123875409edc623f10e58445a06a48",
+      "junctionCamera": {
+        "target": [
+          0.1863736789718962,
+          4.02345363620646,
+          0.5689106698238522
+        ],
+        "zoom": 1.9,
+        "baselineVertex": 12309
+      },
+      "captures": [
+        {
+          "view": "front",
+          "path": "output/qa/crown146-coarse-1-front.png",
+          "sha256": "2792caa9e685ceb057f6d0965201bc5532d244630fabbb0c464e30cf743654b8"
+        },
+        {
+          "view": "detail",
+          "path": "output/qa/crown146-coarse-1-detail.png",
+          "sha256": "c2009aa8a2368f395bd1e11e07e6cd409137d6a00113eee68d8afbd98c29a32a"
+        },
+        {
+          "view": "left",
+          "path": "output/qa/crown146-coarse-1-left.png",
+          "sha256": "b1e85b9984dc38085035b362a58d1de4b3e973e095a4a366163c51008d9f4eae"
+        },
+        {
+          "view": "right",
+          "path": "output/qa/crown146-coarse-1-right.png",
+          "sha256": "f46943e69e8fefe69fb739dd508b7e31dd0c96e663772e300fc91c8b58a79f57"
+        },
+        {
+          "view": "back",
+          "path": "output/qa/crown146-coarse-1-back.png",
+          "sha256": "b370d1e238e48685333adb6e8649d43f898919374b2ebe269117ed251c66d2aa"
+        },
+        {
+          "view": "junction",
+          "path": "output/qa/crown146-coarse-1-junction.png",
+          "sha256": "b305b022e44e2d3178e42bbf489210e9d948f8c3cb5a1bbee57856eb2fca7d26"
+        },
+        {
+          "view": "restored-detail",
+          "path": "output/qa/crown146-coarse-1-restored-detail.png",
+          "sha256": "c2009aa8a2368f395bd1e11e07e6cd409137d6a00113eee68d8afbd98c29a32a"
+        }
+      ],
+      "strictRestoredDetail": true,
+      "errors": []
+    }
+  ]
+}

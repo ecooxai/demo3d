@@ -1,0 +1,584 @@
+{
+  "version": "crown142-focused-actual-geometry",
+  "nativeArtPending": true,
+  "sourceHashes": {
+    "review/hair-groom-candidate133.js": "a7b04c16fd8e13277e9418954c996c2370895f84ef446ed295ccb942a73a002d",
+    "review/hair-groom-candidate142.js": "1bd93776a197fed22533fb170b094b96b58187e19a2d943d52e9f3c127af07c4",
+    "review/crown-chart-candidate142.js": "a7c269c61de31c1a5009b6750c37ad2203b0470d83614dd47655b5c1dac1ec67",
+    "src/main.js": "2e1e13d2fe6bbc87a29809ce6d0aa12dc8ee70853dac2c4a82322c58d703593a"
+  },
+  "counts": {
+    "off": 1114888,
+    "on": 1114888,
+    "offMiB": 52.49,
+    "onMiB": 52.49
+  },
+  "timings": {
+    "original": 5765.2,
+    "off": 4526.9,
+    "on": 5519
+  },
+  "offExact": true,
+  "nonfinite": 0,
+  "attributes": [
+    {
+      "mesh": "Continuous parted crown with longitudinal fiber flow",
+      "unchanged": {
+        "index": true,
+        "position": false,
+        "color": true,
+        "uv": true,
+        "normal": false
+      }
+    },
+    {
+      "mesh": "Overlapping layered S-wave hair around front back and shoulders",
+      "unchanged": {
+        "index": true,
+        "position": true,
+        "color": true,
+        "uv": true,
+        "normal": true
+      }
+    },
+    {
+      "mesh": "Independent fine crown lengths and silhouette strands",
+      "unchanged": {
+        "index": true,
+        "position": false,
+        "color": true,
+        "uv": true,
+        "normal": false
+      }
+    },
+    {
+      "mesh": "Dense fine bowed brown fringe strands",
+      "unchanged": {
+        "index": true,
+        "position": true,
+        "color": true,
+        "uv": true,
+        "normal": true
+      }
+    },
+    {
+      "mesh": "Sparse short temple edge and hairline wisps",
+      "unchanged": {
+        "index": true,
+        "position": false,
+        "color": true,
+        "uv": true,
+        "normal": false
+      }
+    }
+  ],
+  "errors": [],
+  "crownProtection": {
+    "protectedVertices": 22612,
+    "protectedPositionChanges": 0,
+    "protectedNormalChanges": 0,
+    "maxMove": 0.2456122855569298,
+    "changedBounds": {
+      "minY": 0.7620627284049988,
+      "minX": -0.4992680549621582,
+      "maxX": 0.4286069869995117
+    }
+  },
+  "actualCrownTriangles": {
+    "baselineDegenerate": 144,
+    "newPoleDegenerate": 128,
+    "unexpectedDegenerate": 0,
+    "minNondegenerateDoubleArea": 6.082178242527729e-7,
+    "minSignedAnalyticalNormal": 0.7137162155152807,
+    "worstFace": {
+      "f": 26990,
+      "side": -1,
+      "u": 0.9322916666666666,
+      "v": 0.7239583692594206
+    },
+    "minNormalLength": 0.9999999636246841,
+    "poleDistance": 0,
+    "poleNormalDifference": 0
+  },
+  "rootProtection": {
+    "rootSamples": 2023,
+    "maxRootDelta": 0
+  },
+  "sharedField": {
+    "minNormalizedJacobian": 0.061142672865968944,
+    "minPoleScaledSignedJacobian": 0.6176329506424801,
+    "negativeJac": 0,
+    "worstJac": {
+      "side": -1,
+      "u": 0.81575,
+      "v": 1
+    },
+    "maxExposedYDerivative": 0,
+    "maxRetainedEarlyYDerivative": 0.06874448462701746
+  },
+  "actualRibbonHost": {
+    "changed": {
+      "samples": 37608,
+      "min": 0.000056192026990503474,
+      "buried": 0,
+      "worst": {
+        "side": 1,
+        "k": 1149,
+        "u": 0.9997219827996324,
+        "v": 0.7300581874711385,
+        "mid": false
+      }
+    },
+    "protectedWithinOwned": {
+      "samples": 28218,
+      "min": 0.002059249876877169,
+      "buried": 0,
+      "worst": {
+        "side": -1,
+        "k": 921,
+        "u": 0.8011854579877044,
+        "v": 0.019075436195506393,
+        "mid": true
+      }
+    },
+    "straightMidSegments": {
+      "samples": 32292,
+      "min": 0.000056219356509523906,
+      "buried": 0,
+      "worst": {
+        "side": 1,
+        "k": 1149,
+        "u": 0.9997219827996324,
+        "v": 0.7108461299061086,
+        "mid": true
+      }
+    },
+    "ownedRows": 414,
+    "protectedDetailChanges": 0,
+    "protectedDetailNormals": 0
+  },
+  "actualRibbonOrdering": {
+    "tested": 5776,
+    "pureClosingTested": 2160,
+    "pureClosingReversals": 0,
+    "baselineReversals": 226,
+    "onReversals": 125,
+    "newReversals": 5,
+    "crossLayerNewReversals": 4,
+    "sameLayerNewReversals": 1,
+    "minNewReversalNormalSeparation": 0.0003053582524921435,
+    "maxNewReversalTransverseMagnitude": 0.0003205104601675411,
+    "minPureClosingGap": 0.0001251063072476147,
+    "minPureClosingEdgeGap": -0.0012710165707034825,
+    "newReversalExamples": [
+      {
+        "side": -1,
+        "k": 997,
+        "u": 0.8676512644952061,
+        "v": 0.8166666666666668,
+        "gap": -0.00010154565529840745,
+        "oldGap": 0.00007027823544103839,
+        "crossLayer": false,
+        "normalSeparation": 0.0003053582524921435
+      },
+      {
+        "side": 1,
+        "k": 983,
+        "u": 0.8557547570635848,
+        "v": 0.7758333333333334,
+        "gap": -0.00005463204376727335,
+        "oldGap": 0.000013797974435986399,
+        "crossLayer": true,
+        "normalSeparation": 0.0017195293936351607
+      },
+      {
+        "side": 1,
+        "k": 1025,
+        "u": 0.8922092554656607,
+        "v": 0.4083333333333334,
+        "gap": -0.00011814642493111023,
+        "oldGap": 0.00009376453334127206,
+        "crossLayer": true,
+        "normalSeparation": 0.002602428800828103
+      },
+      {
+        "side": 1,
+        "k": 1031,
+        "u": 0.8974370879285525,
+        "v": 0.32666666666666666,
+        "gap": -0.0003205104601675411,
+        "oldGap": 0.00019551972398222178,
+        "crossLayer": true,
+        "normalSeparation": 0.0018701933569391803
+      },
+      {
+        "side": 1,
+        "k": 1037,
+        "u": 0.9023720448865636,
+        "v": 0.49,
+        "gap": -0.00013308715134804526,
+        "oldGap": 0.00044447433769159603,
+        "crossLayer": true,
+        "normalSeparation": 0.002279482430851253
+      }
+    ],
+    "pureClosingExamples": [],
+    "minimumPolePlaneDot": 0.9999999999999998,
+    "projectedOverlapTrianglePairs": {
+      "pairs": [
+        {
+          "side": -1,
+          "k": 997,
+          "baselineIntersections": 6,
+          "onIntersections": 11,
+          "newIntersections": 5,
+          "newOwnedIntersections": 5,
+          "baselineContactComponents": 3,
+          "onContactComponents": 3,
+          "newContactComponents": 0,
+          "baselineContacts": [
+            [
+              2,
+              3
+            ],
+            [
+              34,
+              32
+            ],
+            [
+              34,
+              33
+            ],
+            [
+              35,
+              33
+            ],
+            [
+              39,
+              38
+            ],
+            [
+              39,
+              39
+            ]
+          ],
+          "currentContacts": [
+            [
+              2,
+              3
+            ],
+            [
+              34,
+              32
+            ],
+            [
+              34,
+              33
+            ],
+            [
+              35,
+              33
+            ],
+            [
+              39,
+              38
+            ],
+            [
+              39,
+              39
+            ],
+            [
+              40,
+              38
+            ],
+            [
+              40,
+              39
+            ],
+            [
+              40,
+              40
+            ],
+            [
+              41,
+              39
+            ],
+            [
+              41,
+              40
+            ]
+          ],
+          "examples": [
+            {
+              "a": 40,
+              "b": 38,
+              "owned": true,
+              "u": 0.8668214865888463,
+              "v": 0.7827765664869534
+            },
+            {
+              "a": 40,
+              "b": 39,
+              "owned": true,
+              "u": 0.8668214865888463,
+              "v": 0.7827765664869534
+            },
+            {
+              "a": 40,
+              "b": 40,
+              "owned": true,
+              "u": 0.8668214865888463,
+              "v": 0.7827765664869534
+            },
+            {
+              "a": 41,
+              "b": 39,
+              "owned": true,
+              "u": 0.8668214865888463,
+              "v": 0.7827765664869534
+            },
+            {
+              "a": 41,
+              "b": 40,
+              "owned": true,
+              "u": 0.8668214865888463,
+              "v": 0.7827765664869534
+            }
+          ]
+        },
+        {
+          "side": 1,
+          "k": 983,
+          "baselineIntersections": 0,
+          "onIntersections": 0,
+          "newIntersections": 0,
+          "newOwnedIntersections": 0,
+          "baselineContactComponents": 0,
+          "onContactComponents": 0,
+          "newContactComponents": 0,
+          "baselineContacts": [],
+          "currentContacts": [],
+          "examples": []
+        },
+        {
+          "side": 1,
+          "k": 1025,
+          "baselineIntersections": 2,
+          "onIntersections": 0,
+          "newIntersections": 0,
+          "newOwnedIntersections": 0,
+          "baselineContactComponents": 1,
+          "onContactComponents": 0,
+          "newContactComponents": 0,
+          "baselineContacts": [
+            [
+              50,
+              50
+            ],
+            [
+              51,
+              50
+            ]
+          ],
+          "currentContacts": [],
+          "examples": []
+        },
+        {
+          "side": 1,
+          "k": 1031,
+          "baselineIntersections": 1,
+          "onIntersections": 0,
+          "newIntersections": 0,
+          "newOwnedIntersections": 0,
+          "baselineContactComponents": 1,
+          "onContactComponents": 0,
+          "newContactComponents": 0,
+          "baselineContacts": [
+            [
+              5,
+              4
+            ]
+          ],
+          "currentContacts": [],
+          "examples": []
+        },
+        {
+          "side": 1,
+          "k": 1037,
+          "baselineIntersections": 0,
+          "onIntersections": 0,
+          "newIntersections": 0,
+          "newOwnedIntersections": 0,
+          "baselineContactComponents": 0,
+          "onContactComponents": 0,
+          "newContactComponents": 0,
+          "baselineContacts": [],
+          "currentContacts": [],
+          "examples": []
+        }
+      ],
+      "newOwnedTrianglePairs": 5,
+      "newContactComponents": 0,
+      "trianglePairsPerFiberPair": 2704,
+      "separationTolerance": 1e-10,
+      "matching": "An existing contact may move across its immediately adjacent emitted quad; separate new contact regions fail."
+    }
+  },
+  "wisps": {
+    "changed": 220,
+    "perSide": {
+      "1": {
+        "kRange": [
+          213,
+          309
+        ],
+        "uRange": [
+          0.8408321985239464,
+          0.9891603470497554
+        ]
+      },
+      "-1": {
+        "kRange": [
+          187,
+          309
+        ],
+        "uRange": [
+          0.8007076134119303,
+          0.9894376316506777
+        ]
+      }
+    },
+    "protectedWispPositionChanges": 0,
+    "protectedWispNormalChanges": 0,
+    "templeEarAndFlyawaysProtected": true
+  },
+  "metadata": {
+    "version": "shared-front-crown-chart142",
+    "strength": 1,
+    "changed": true,
+    "extraVertices": 0,
+    "extraTriangles": 0,
+    "alphaUnchanged": true,
+    "sharedPole": [
+      0.18536808510638297,
+      1.034719510882547,
+      0.6266382730455076
+    ],
+    "polePlane": [
+      0,
+      0.3934273992191604,
+      0.919355688264149
+    ],
+    "changedCrownVertices": 1843,
+    "changedCrownFibers": 414,
+    "changedEdgeWisps": 220,
+    "poleVertices": 130,
+    "intendedAdditionalDegenerateTriangles": 128,
+    "protectedFringe": "All accepted133 geometry and root footprints",
+    "endpointRails": {
+      "1": {
+        "anchors": [
+          [
+            0.84,
+            0.44025135885137806,
+            0.7580264251192015,
+            0.6333495301222549
+          ],
+          [
+            0.86,
+            0.3787553306473567,
+            0.835,
+            0.5930318930542197
+          ],
+          [
+            0.9,
+            0.27041134942719885,
+            0.875,
+            0.6112932157576207
+          ],
+          [
+            0.93,
+            0.223,
+            0.935,
+            0.626
+          ],
+          [
+            0.96,
+            0.201,
+            0.995,
+            0.635
+          ],
+          [
+            1,
+            0.18536808510638297,
+            1.034719510882547,
+            0.6266382730455076
+          ]
+        ],
+        "endDerivative": [
+          -0.3907978723404256,
+          0.9929877720636767,
+          -0.42493737908672624
+        ]
+      },
+      "-1": {
+        "anchors": [
+          [
+            0.8,
+            -0.511988586114973,
+            0.7479551873975592,
+            0.5806624519541121
+          ],
+          [
+            0.83,
+            -0.42570510245657356,
+            0.84,
+            0.575723131729086
+          ],
+          [
+            0.86,
+            -0.3364240530587866,
+            0.88,
+            0.5945342712095212
+          ],
+          [
+            0.9,
+            -0.2337331652426971,
+            0.91,
+            0.6090818392808286
+          ],
+          [
+            0.93,
+            -0.1559824617172287,
+            0.96,
+            0.6053410653180978
+          ],
+          [
+            0.95,
+            -0.1045219635381041,
+            0.995,
+            0.625
+          ],
+          [
+            1,
+            0.18536808510638297,
+            1.034719510882547,
+            0.6266382730455076
+          ]
+        ],
+        "endDerivative": [
+          5.797800972889736,
+          0.7943902176509414,
+          -0.339949903269381
+        ]
+      }
+    },
+    "poleNormal": [
+      -0.00869170264926606,
+      0.39726890321059766,
+      0.9176610882275141
+    ],
+    "poleIncidentNondegenerateFaces": 128
+  },
+  "pass": true
+}

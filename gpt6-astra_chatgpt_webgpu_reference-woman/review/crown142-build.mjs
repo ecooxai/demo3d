@@ -1,0 +1,24 @@
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+const base='review/hair-groom-candidate133.js',out='review/hair-groom-candidate142.js';
+let source=fs.readFileSync(base,'utf8');
+const expected='a7b04c16fd8e13277e9418954c996c2370895f84ef446ed295ccb942a73a002d';
+if(crypto.createHash('sha256').update(source).digest('hex')!==expected)throw Error('Frozen133 base changed.');
+function replace(a,b){if(source.split(a).length!==2)throw Error('142 expected one marker: '+a.slice(0,110));source=source.replace(a,b);}
+source="import { createCrownChart142 } from '../review/crown-chart-candidate142.js';\n"+source;
+replace('guidePlacement=0,diagonalFringe133=0}={})','guidePlacement=0,diagonalFringe133=0,crownChart142=0}={})');
+replace('function frame(c,t,front=false){','function frame(c,t,front=false){\n if(c.frame142)return c.frame142(t);');
+replace('w=width*(.20+.80*smooth(0,.027,t))','w=width*(c.width142?c.width142(t):1)*(.20+.80*smooth(0,.027,t))');
+replace(" const palette=['#4c403c'"," const chart142=crownChart142?createCrownChart142({THREE,base:crown,forehead,strength:crownChart142}):null;\n const palette=['#4c403c'");
+replace(' const partRows=[];',' const partRows=[],originalCrown142=chart142?[...crownBatch.p]:null,protectedCrown142=chart142?Array(crownBatch.p.length/3).fill(true):null,crownFibers142=[];');
+replace('const u=i/nu,v=j/nv,p=crown(side,u,v,.002),shade=', 'const u=i/nu,v=j/nv,p0=crown(side,u,v,.002),p=chart142?chart142.sample(side,u,v,.002):p0,shade=');
+replace('   vertex(crownBatch,p,c,u,v*.73,feather);','   vertex(crownBatch,p,c,u,v*.73,feather);\n   if(chart142){originalCrown142.push(p0.x,p0.y,p0.z);const identity=chart142.protectedPoint(side,u,v);protectedCrown142.push(identity);if(!identity)chart142.metrics.changedCrownVertices++;}');
+replace('end=.985+random()*.015,ps=[];', 'end=.985+random()*.015,ps=[],samples142=chart142?[]:null;');
+replace('p=crown(side,clamp(u+wander),v,height);ps.push(p);}', 'p=crown(side,clamp(u+wander),v,height);ps.push(p);if(chart142)samples142.push({u:clamp(u+wander),v,lift:height});}');
+replace('  ribbon(detail,curve(ps),.00048+random()*.00028,pick(),26,false,phase,.96);fiberCount++;', '  const c0=curve(ps),width=.00048+random()*.00028,color=pick(),first142=detail.p.length/3,shaped142=chart142?chart142.fiberCurve({side,u,samples:samples142,oldCurve:c0,oldFrame:frame,width,k,first:first142}):{curve:c0,width};\n  ribbon(detail,shaped142.curve,shaped142.width,color,26,false,phase,.96);fiberCount++;\n  if(chart142&&shaped142.params)crownFibers142.push({side,k,u,first:first142,...shaped142});');
+replace(' const u=.51+(k+random())/310*.48,v0=.79+random()*.12,ps=[],a=crown(side,u,.982,.006),b=crown(side,u,1,.006),d=b.clone().sub(a).normalize(),extension=.07+random()*.18;', ' const u=.51+(k+random())/310*.48,v0=.79+random()*.12,ps=[],field142=chart142&&chart142.active(side,u)>0?chart142.sample:crown,a=field142(side,u,.982,.006),b=field142(side,u,1,.006),d=b.clone().sub(a).normalize(),extension0=.07+random()*.18,extension=chart142?chart142.wispExtension(side,u,extension0):extension0;\n  if(field142!==crown){chart142.metrics.changedEdgeWisps++;chart142.metrics.frontWispRows.push({side,k,u,first:wisps.p.length/3,extension,oldExtension:extension0});}');
+replace('for(let j=0;j<9;j++)ps.push(crown(side,u,mix(v0,1,j/8),.007));','for(let j=0;j<9;j++)ps.push(field142(side,u,mix(v0,1,j/8),.007));');
+replace(' root.children[root.children.length-2].renderOrder=3;'," if(chart142)chart142.finishCrown(root.children[0],makeMesh({...crownBatch,p:originalCrown142},crownMaterial,'Crown142 transient baseline normal source',headTilt),protectedCrown142,partRows);\n root.children[root.children.length-2].renderOrder=3;");
+replace(' root.userData.fringeDistribution108=fringeStats108;',' root.userData.fringeDistribution108=fringeStats108;\n if(chart142){root.userData.crownChart142={...chart142.metrics};delete root.userData.crownChart142.frontFiberRows;delete root.userData.crownChart142.frontWispRows;}');
+fs.writeFileSync(out,source);
+console.log(JSON.stringify({file:out,bytes:Buffer.byteLength(source),sha256:crypto.createHash('sha256').update(source).digest('hex')}));

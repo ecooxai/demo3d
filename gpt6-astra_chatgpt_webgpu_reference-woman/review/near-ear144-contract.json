@@ -1,0 +1,64 @@
+{
+  "iteration": 144,
+  "score": 77,
+  "sourceOnly": true,
+  "native": false,
+  "status": "Passed",
+  "coefficientFingerprint": "658144a4afac9dd3835d2422d9776f11fc922b1d61e539c0fba0624b5d38dad8",
+  "fixtures": [
+    {
+      "name": "parallel face gap",
+      "expectedSquaredDistance": 0.000025,
+      "actualSquaredDistance": 0.000025
+    },
+    {
+      "name": "crossing interiors",
+      "expectedSquaredDistance": 0,
+      "actualSquaredDistance": 0
+    },
+    {
+      "name": "coplanar overlap",
+      "expectedSquaredDistance": 0,
+      "actualSquaredDistance": 7.703719777548943e-34
+    },
+    {
+      "name": "coplanar disjoint",
+      "expectedSquaredDistance": 1,
+      "actualSquaredDistance": 1
+    },
+    {
+      "name": "separated in two axes",
+      "expectedSquaredDistance": 1.000025,
+      "actualSquaredDistance": 1.000025
+    }
+  ],
+  "clearanceFixture": {
+    "minimumDistance": 0,
+    "intersectionPairs": 1
+  },
+  "continuity": {
+    "value": 0,
+    "firstDerivative": 5.551115123125783e-16,
+    "secondDerivative": 3.907985046680551e-14,
+    "endpointJetMaximum": 0
+  },
+  "finiteDifference": {
+    "samples": 4095,
+    "step": 0.000001,
+    "derivativeMaximumError": 1.09540376769246e-10
+  },
+  "sampledNormMaximum": 0.21618649701410053,
+  "continuousCenterBound": {
+    "lower": 0.21618652087348175,
+    "upper": 0.2161865217036355,
+    "tolerance": 1e-9,
+    "subdivisions": 12,
+    "method": "Convex-hull subdivision of 2D quintic Bezier displacement"
+  },
+  "exactOutsideSupport": true,
+  "offIsNoOp": true,
+  "limitations": [
+    "The fixtures validate the triangle-distance utility, not the visual result.",
+    "The finite-difference derivative check is numerical; exact C2 joins are checked separately from endpoint polynomial jets."
+  ]
+}

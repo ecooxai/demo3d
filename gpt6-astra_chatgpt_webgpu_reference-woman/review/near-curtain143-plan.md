@@ -1,6 +1,6 @@
 # Proposal 143 — continuous near-curtain layout
 
-**Proposal only. No production, candidate 138, material or geometry files have been changed. Baseline remains 77/100.** One isolated off/on native comparison should decide whether this architecture is worth keeping after its focused source checks.
+**Approved design record, followed by the implementation addendum below.** The original proposal is retained to explain the design choices. Isolated143 review files now implement the lower continuum; production and frozen138 remain unchanged. Baseline remains77/100 pending one native off/on comparison.
 
 ## Intended visible change
 
@@ -75,3 +75,15 @@ Then run one focused actual-geometry check: finite/unit normals and section orie
 Root should capture one off/on comparison on the current accepted scene: front, detail, both profiles, back and the same near-curtain closeup. Keep display, camera, material, maps and light unchanged.
 
 Acceptance requires a connected shoulder-to-chest fall, unequal broad flows readable at ordinary size, narrower dark hair channels without large white slots, retained 3D volume in profile, and varied ends without repeated squared bends or hooks. Detail and back must remain protected. A silhouette or shoulder regression rejects the whole candidate. No strength sweep is proposed. Overall score remains 77 until those native images establish an actual improvement.
+
+## Implementation addendum — final coarse mechanism
+
+The approved scope was extended to existing side154/155 and their56 base fibers after the fixed upper fan exposed a concrete transition contradiction. Final ownership is69 guides and2,247 base fibers; their23 assigned flyaways follow the same lower hosts. All other side/back/far/crown/fringe components remain protected. Rear companions use q .46/.60 and a shared−.15 raw depth layer, retaining their accepted upper routes and section depth.
+
+The exact accepted route continues through authoredY−2.15 (modelY .80); the common field is fully active at−2.90 (modelY .05). This longer join is required by the inherited fan, so the intended gain is explicitly limited to the lower curtain. A C2 physical-height Hermite join matches the accepted position/tangent/curvature to the common field. Endpoint-height changes begin only after the full join. The sampled normalized lower lateral derivative is positive, range .3621–1.5543; the provisional narrower spacing bound was superseded by actual continuous coverage checks.
+
+The offline field uses36 coupled coefficients fitted to841 support targets with lateral/height regularization and shared lower bounds. The native helper only evaluates the frozen field and builds the existing closed sections. It applies neither another118 fit nor a final-mesh compression. Frozen source/pose input hashes reject stale native construction.
+
+Final coarse body/collar samples are clear. The fixed ten near-side cores and fully joined region have0 sampled inside cases. The178 new internal rear-companion transition overlaps are explicitly documented and covered by the tested opaque hair/model envelope. Root approved retaining buried closed-support overlap instead of adding a large outward lift. See the coarse-decision and side-audit files for the exact limits.
+
+Fine sampling retains original samples above the actual deformation pin. Extra triangle-edge cuts and adaptive subdivision apply only below that pin. The first full build adds228,800 vertices/triangles and12,812,800 bytes (12.22MiB), with no new draw calls or maps. This cost requires visible native benefit. Fine transition burial and native appearance remain separate gates.
