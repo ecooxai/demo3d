@@ -30,11 +30,11 @@ export function createMaterialLibrary() {
 
   const mats = {
     skin: new THREE.MeshToonMaterial({
-      color: 0xffd9d4,
+      color: 0xf8c9b7,
       gradientMap,
     }),
     skinShade: new THREE.MeshToonMaterial({
-      color: 0xf1bec0,
+      color: 0xe7a99c,
       gradientMap,
     }),
     lip: new THREE.MeshStandardMaterial({
@@ -159,6 +159,7 @@ export function createMaterialLibrary() {
       sheenRoughness: 0.72,
     }),
     pillowShade: new THREE.MeshStandardMaterial({ color: 0xbcc9e4, roughness: 0.86 }),
+    pillowCrease: new THREE.MeshStandardMaterial({ color: 0xd3dcec, roughness: 0.92 }),
     haloDark: new THREE.MeshPhysicalMaterial({
       color: 0x0c1427,
       roughness: 0.25,

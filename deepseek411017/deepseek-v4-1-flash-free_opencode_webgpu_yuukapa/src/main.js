@@ -12,6 +12,7 @@ const loading = document.querySelector('#stage-loading');
 const loadingBar = document.querySelector('#loading-bar');
 const toast = document.querySelector('#toast');
 const backendReadout = document.querySelector('#backend-readout');
+const creditTool = document.querySelector('#credit-tool');
 const resolutionReadout = document.querySelector('#resolution-readout');
 const fpsReadout = document.querySelector('#fps-readout');
 const backendNote = document.querySelector('#backend-note');
@@ -53,8 +54,8 @@ let scene = null;
 let camera = null;
 let controls = null;
 let clock = null;
-let currentIteration = 4;
-let currentScore = 90;
+let currentIteration = 5;
+let currentScore = 91;
 let cameraTween = null;
 let orbitWasAuto = false;
 let toastTimer = null;
@@ -98,6 +99,7 @@ async function boot() {
   }
 
   backendReadout.textContent = currentBackend.toUpperCase();
+  creditTool.textContent = `OPENCODE · ${currentBackend.toUpperCase()}`;
   updateBackendSelection();
   await initScene(currentBackend);
 }

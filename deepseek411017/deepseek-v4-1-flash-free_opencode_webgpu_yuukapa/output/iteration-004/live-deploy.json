@@ -1,0 +1,31 @@
+{
+  "url": "https://yuukapa-deepseek-v41-flash.surge.sh/",
+  "report": {
+    "auto": {
+      "ready": true,
+      "backend": "webgpu",
+      "score": {
+        "iteration": 4,
+        "score": 90
+      },
+      "resolution": [
+        900,
+        1200
+      ],
+      "logs": []
+    },
+    "webgl": {
+      "ready": true,
+      "backend": "webgl",
+      "score": {
+        "iteration": 4,
+        "score": 90
+      },
+      "resolution": [
+        900,
+        1200
+      ],
+      "logs": []
+    }
+  }
+}

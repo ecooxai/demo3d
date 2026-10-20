@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import puppeteer from 'puppeteer-core';
 
-const outDir = path.resolve('output/iteration-004');
+const outDir = path.resolve('output/iteration-005');
 fs.mkdirSync(outDir, { recursive: true });
 
 const browser = await puppeteer.launch({

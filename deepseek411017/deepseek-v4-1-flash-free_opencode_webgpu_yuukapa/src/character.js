@@ -335,10 +335,10 @@ function createBow(mats, scale = 1) {
 
   function makeLoop(sign) {
     const shape = new THREE.Shape();
-    shape.moveTo(0, 0.03);
-    shape.bezierCurveTo(sign * 0.18, 0.26, sign * 0.52, 0.29, sign * 0.72, 0.095);
-    shape.bezierCurveTo(sign * 0.75, -0.02, sign * 0.5, -0.14, sign * 0.27, -0.115);
-    shape.quadraticCurveTo(sign * 0.09, -0.085, 0, -0.04);
+    shape.moveTo(0, 0.02);
+    shape.bezierCurveTo(sign * 0.16, 0.26, sign * 0.48, 0.28, sign * 0.62, 0.08);
+    shape.bezierCurveTo(sign * 0.68, -0.05, sign * 0.5, -0.2, sign * 0.3, -0.18);
+    shape.quadraticCurveTo(sign * 0.11, -0.12, 0, -0.04);
     shape.closePath();
     const geometry = new THREE.ExtrudeGeometry(shape, {
       depth: 0.075,
@@ -356,8 +356,8 @@ function createBow(mats, scale = 1) {
   function makeFold(sign) {
     const shape = new THREE.Shape();
     shape.moveTo(0, 0.008);
-    shape.bezierCurveTo(sign * 0.19, 0.13, sign * 0.44, 0.135, sign * 0.56, 0.04);
-    shape.bezierCurveTo(sign * 0.4, -0.05, sign * 0.2, -0.075, 0, -0.03);
+    shape.bezierCurveTo(sign * 0.16, 0.1, sign * 0.4, 0.1, sign * 0.52, 0.03);
+    shape.bezierCurveTo(sign * 0.38, -0.06, sign * 0.18, -0.085, 0, -0.03);
     shape.closePath();
     const geometry = new THREE.ExtrudeGeometry(shape, {
       depth: 0.01,
@@ -373,28 +373,32 @@ function createBow(mats, scale = 1) {
 
   for (const sign of [-1, 1]) {
     const loop = new THREE.Mesh(makeLoop(sign), mats.trim);
-    loop.position.set(sign * 0.035, 0.045, 0);
-    loop.rotation.z = sign * 0.09;
-    loop.rotation.y = sign * 0.07;
+    const loopScale = sign < 0 ? 1.06 : 0.92;
+    loop.scale.set(loopScale, loopScale, 1);
+    loop.position.set(sign * 0.02, 0.03 + (sign < 0 ? 0.008 : -0.003), 0);
+    loop.rotation.z = -sign * 0.2;
+    loop.rotation.y = sign * 0.06;
     loop.castShadow = true;
     addOutline(loop, { thickness: 1.008, material: mats.outline });
     group.add(loop);
 
     const fold = new THREE.Mesh(makeFold(sign), mats.bowShade);
-    fold.rotation.z = sign * 0.09;
-    fold.rotation.y = sign * 0.07;
+    fold.scale.set(loopScale, loopScale, 1);
+    fold.rotation.z = -sign * 0.2;
+    fold.rotation.y = sign * 0.06;
     group.add(fold);
   }
 
-  const knot = new THREE.Mesh(new THREE.SphereGeometry(0.125, 32, 22), mats.trim);
-  knot.scale.set(0.92, 0.98, 0.72);
-  knot.position.set(0, 0.02, 0.062);
+  const knot = new THREE.Mesh(new THREE.SphereGeometry(0.145, 32, 22), mats.trim);
+  knot.scale.set(0.95, 1.0, 0.82);
+  knot.position.set(0, 0.015, 0.065);
   knot.castShadow = true;
+  addOutline(knot, { thickness: 1.012, material: mats.outline });
   group.add(knot);
 
-  const knotFold = new THREE.Mesh(new THREE.CapsuleGeometry(0.024, 0.15, 4, 8), mats.bowShade);
+  const knotFold = new THREE.Mesh(new THREE.CapsuleGeometry(0.026, 0.175, 4, 8), mats.bowShade);
   knotFold.rotation.z = Math.PI / 2;
-  knotFold.position.set(0, 0.015, 0.132);
+  knotFold.position.set(0, 0.012, 0.142);
   group.add(knotFold);
 
   const tailGeometry = new THREE.ExtrudeGeometry(makePetalShape(0.12, 0.62), {
@@ -450,13 +454,13 @@ function createHalo(mats) {
     transparent: true,
     depthWrite: false,
     blending: THREE.AdditiveBlending,
-    opacity: 0.34,
+    opacity: 0.22,
     toneMapped: false,
   }));
   sprite.scale.set(2.2, 2.2, 1);
   group.add(sprite);
 
-  const light = new THREE.PointLight(0x8ceaff, 2.2, 4.6, 2.2);
+  const light = new THREE.PointLight(0x8ceaff, 0.9, 4.6, 2.2);
   group.add(light);
 
   const sparkleMat = new THREE.SpriteMaterial({
@@ -843,24 +847,24 @@ export function createCharacter(mats) {
 
   // ——— Pillow and left hand ———————————————————————————————
   const pillowGroup = new THREE.Group();
-  pillowGroup.position.set(1.4, 2.96, 0.36);
+  pillowGroup.position.set(1.4, 2.74, 0.36);
   pillowGroup.rotation.set(-0.15, 0.06, -0.2);
   body.add(pillowGroup);
 
-  const pillow = new THREE.Mesh(makePillowGeometry(1.6, 1.94, 0.62, 0.24, 24), mats.pillow);
+  const pillow = new THREE.Mesh(makePillowGeometry(1.5, 1.84, 0.58, 0.23, 24), mats.pillow);
   pillow.castShadow = true;
   pillow.receiveShadow = true;
   pillowGroup.add(pillow);
 
   const seamMat = mats.pillowShade;
   const frontSeam = makeTubeGeometry(
-    makeRoundedRectPoints(1.28, 1.56, 0.12, 0.249),
+    makeRoundedRectPoints(1.28, 1.56, 0.12, 0.3),
     [0.009],
     72,
     6,
   );
   const backSeam = makeTubeGeometry(
-    makeRoundedRectPoints(1.28, 1.56, 0.12, -0.249),
+    makeRoundedRectPoints(1.28, 1.56, 0.12, -0.3),
     [0.009],
     72,
     6,
@@ -869,21 +873,36 @@ export function createCharacter(mats) {
   pillowGroup.add(new THREE.Mesh(backSeam, seamMat));
 
   const crease1 = makeTubeGeometry([
-    new THREE.Vector3(-0.5, 0.8, 0.253),
-    new THREE.Vector3(-0.26, 0.66, 0.262),
-    new THREE.Vector3(-0.14, 0.42, 0.266),
-    new THREE.Vector3(-0.32, 0.4, 0.258),
-    new THREE.Vector3(-0.5, 0.34, 0.25),
-  ], [0.006, 0.009, 0.007, 0.006, 0.003], 24, 6);
+    new THREE.Vector3(-0.48, 0.74, 0.32),
+    new THREE.Vector3(-0.26, 0.6, 0.35),
+    new THREE.Vector3(-0.14, 0.38, 0.37),
+    new THREE.Vector3(-0.32, 0.36, 0.36),
+    new THREE.Vector3(-0.48, 0.3, 0.33),
+  ], [0.006, 0.01, 0.009, 0.007, 0.003], 24, 6);
   const crease2 = makeTubeGeometry([
-    new THREE.Vector3(0.58, -0.42, 0.252),
-    new THREE.Vector3(0.36, -0.6, 0.264),
-    new THREE.Vector3(0.16, -0.66, 0.266),
-    new THREE.Vector3(0.36, -0.82, 0.258),
-    new THREE.Vector3(0.58, -0.86, 0.248),
-  ], [0.005, 0.008, 0.006, 0.005, 0.003], 24, 6);
-  pillowGroup.add(new THREE.Mesh(crease1, seamMat));
-  pillowGroup.add(new THREE.Mesh(crease2, seamMat));
+    new THREE.Vector3(0.54, -0.36, 0.32),
+    new THREE.Vector3(0.34, -0.52, 0.35),
+    new THREE.Vector3(0.16, -0.58, 0.36),
+    new THREE.Vector3(0.34, -0.72, 0.35),
+    new THREE.Vector3(0.54, -0.76, 0.32),
+  ], [0.005, 0.009, 0.007, 0.005, 0.003], 24, 6);
+  const crease3 = makeTubeGeometry([
+    new THREE.Vector3(-0.5, -0.2, 0.34),
+    new THREE.Vector3(-0.3, -0.08, 0.37),
+    new THREE.Vector3(-0.06, -0.02, 0.39),
+    new THREE.Vector3(0.14, 0.06, 0.39),
+  ], [0.004, 0.007, 0.006, 0.002], 20, 5);
+  const crease4 = makeTubeGeometry([
+    new THREE.Vector3(0.1, 0.5, 0.37),
+    new THREE.Vector3(0.28, 0.36, 0.37),
+    new THREE.Vector3(0.46, 0.26, 0.35),
+    new THREE.Vector3(0.58, 0.1, 0.32),
+  ], [0.003, 0.006, 0.005, 0.002], 20, 5);
+  const creaseMat = mats.pillowCrease;
+  pillowGroup.add(new THREE.Mesh(crease1, creaseMat));
+  pillowGroup.add(new THREE.Mesh(crease2, creaseMat));
+  pillowGroup.add(new THREE.Mesh(crease3, creaseMat));
+  pillowGroup.add(new THREE.Mesh(crease4, creaseMat));
 
   const leftHand = createHand(mats, { side: 1, grasp: true });
   leftHand.scale.setScalar(1.08);
@@ -902,8 +921,8 @@ export function createCharacter(mats) {
   });
 
   const head = new THREE.Group();
-  head.position.set(0, 6.96, 0.015);
-  head.scale.setScalar(1.0);
+  head.position.set(0, 7.05, 0.015);
+  head.scale.setScalar(0.92);
   head.rotation.z = -0.018;
   head.rotation.y = 0.035;
   body.add(head);
@@ -1054,19 +1073,20 @@ export function createCharacter(mats) {
     hairGroup.add(shine);
   }
 
-  // Face-framing side locks.
+  // Face-framing side locks: thin and pushed to the temples so the
+  // pyjama placket stays readable.
   for (const side of [-1, 1]) {
     const points = [
-      new THREE.Vector3(side * 0.45, 0.56, 0.16),
-      new THREE.Vector3(side * 0.57, 0.2, 0.44),
-      new THREE.Vector3(side * 0.6, -0.45, 0.6),
-      new THREE.Vector3(side * 0.58, -1.1, 0.64),
-      new THREE.Vector3(side * 0.55, -1.55, 0.58),
+      new THREE.Vector3(side * 0.53, 0.56, 0.13),
+      new THREE.Vector3(side * 0.64, 0.2, 0.4),
+      new THREE.Vector3(side * 0.68, -0.45, 0.56),
+      new THREE.Vector3(side * 0.66, -1.05, 0.6),
+      new THREE.Vector3(side * 0.63, -1.38, 0.55),
     ];
     const lock = new THREE.Mesh(makeHairLockGeometry(
       points,
-      [0.15, 0.175, 0.185, 0.14, 0.02],
-      [0.04, 0.05, 0.052, 0.04, 0.008],
+      [0.105, 0.13, 0.135, 0.1, 0.016],
+      [0.032, 0.042, 0.044, 0.032, 0.007],
       new THREE.Vector3(0, 0, 0.08),
       32,
       8,
@@ -1089,13 +1109,13 @@ export function createCharacter(mats) {
     hairGroup.add(outer);
 
     const inner = new THREE.Mesh(makeHairLockGeometry([
-      new THREE.Vector3(side * 0.39, 0.58, 0.16),
-      new THREE.Vector3(side * 0.48, 0.22, 0.44),
-      new THREE.Vector3(side * 0.55, -0.6, 0.6),
-      new THREE.Vector3(side * 0.63, -1.65, 0.62),
-      new THREE.Vector3(side * 0.66, -2.6, 0.56),
-      new THREE.Vector3(side * 0.7, -3.1, 0.5),
-    ], [0.06, 0.11, 0.14, 0.125, 0.075, 0.01], [0.025, 0.038, 0.044, 0.038, 0.024, 0.005], new THREE.Vector3(0, 0, 0.7), 38, 8), mats.hair);
+      new THREE.Vector3(side * 0.46, 0.58, 0.16),
+      new THREE.Vector3(side * 0.55, 0.22, 0.44),
+      new THREE.Vector3(side * 0.63, -0.6, 0.6),
+      new THREE.Vector3(side * 0.72, -1.65, 0.62),
+      new THREE.Vector3(side * 0.76, -2.6, 0.56),
+      new THREE.Vector3(side * 0.8, -3.1, 0.5),
+    ], [0.05, 0.09, 0.115, 0.105, 0.065, 0.008], [0.025, 0.038, 0.044, 0.038, 0.024, 0.005], new THREE.Vector3(0, 0, 0.7), 38, 8), mats.hair);
     inner.castShadow = true;
     hairGroup.add(inner);
 
@@ -1188,20 +1208,20 @@ export function createCharacter(mats) {
   // ——— Headband and bow ——————————————————————————————————
   // A soft white band wraps the crown so the bow reads as worn, not floating.
   const headband = new THREE.Mesh(
-    new THREE.TorusGeometry(0.6, 0.05, 18, 108),
+    new THREE.TorusGeometry(0.625, 0.052, 18, 108),
     mats.trim,
   );
   headband.rotation.x = Math.PI / 2;
-  headband.position.set(0, 0.272, -0.012);
-  headband.scale.set(1.0, 0.88, 1.04);
+  headband.position.set(0, 0.33, -0.012);
+  headband.scale.set(1.0, 0.88, 1.05);
   headband.castShadow = false;
   addOutline(headband, { thickness: 1.02, material: mats.outline });
   hairGroup.add(headband);
 
-  const bow = createBow(mats, 1.0);
-  bow.position.set(0.015, 0.665, 0.15);
-  bow.rotation.x = -0.3;
-  bow.rotation.z = 0.055;
+  const bow = createBow(mats, 1.08);
+  bow.position.set(-0.1, 0.73, 0.1);
+  bow.rotation.x = -0.32;
+  bow.rotation.z = -0.08;
   hairGroup.add(bow);
 
   // ——— Halo ————————————————————————————————————————————————
@@ -1255,7 +1275,7 @@ export function createCharacter(mats) {
     halo.userData.sparkles.rotation.y = time * 0.12;
 
     pillowGroup.rotation.z = -0.2 + Math.sin(time * 0.5) * 0.004;
-    pillowGroup.position.y = 2.96 + Math.sin(time * 0.62 + 0.4) * 0.005;
+    pillowGroup.position.y = 2.74 + Math.sin(time * 0.62 + 0.4) * 0.005;
   };
 
   return {

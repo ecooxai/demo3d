@@ -1,0 +1,74 @@
+{
+  "webgpu": {
+    "hasGpuApi": true,
+    "hasAdapter": true,
+    "ready": true,
+    "backend": "webgpu",
+    "score": {
+      "iteration": 5,
+      "score": 91
+    },
+    "resolution": [
+      900,
+      1200
+    ],
+    "promptVisible": true,
+    "promptOpen": false,
+    "fatalVisible": false,
+    "logs": []
+  },
+  "webgl": {
+    "hasGpuApi": true,
+    "hasAdapter": true,
+    "ready": true,
+    "backend": "webgl",
+    "score": {
+      "iteration": 5,
+      "score": 91
+    },
+    "resolution": [
+      900,
+      1200
+    ],
+    "promptVisible": true,
+    "promptOpen": false,
+    "fatalVisible": false,
+    "logs": []
+  },
+  "auto": {
+    "hasGpuApi": true,
+    "hasAdapter": true,
+    "ready": true,
+    "backend": "webgpu",
+    "score": {
+      "iteration": 5,
+      "score": 91
+    },
+    "resolution": [
+      900,
+      1200
+    ],
+    "promptVisible": true,
+    "promptOpen": false,
+    "fatalVisible": false,
+    "logs": []
+  },
+  "mobile": {
+    "hasGpuApi": true,
+    "hasAdapter": true,
+    "ready": true,
+    "backend": "webgl",
+    "score": {
+      "iteration": 5,
+      "score": 91
+    },
+    "resolution": [
+      900,
+      1200
+    ],
+    "promptVisible": true,
+    "promptOpen": false,
+    "fatalVisible": false,
+    "logs": []
+  }
+}
