@@ -196,7 +196,7 @@ export function makePillow(M, {
   for (let i = 0; i <= rows; i++) {
     const t = i / rows;
     // the sheet widens as it falls away from the gathered corner
-    const wid = lerp(0.035, w, Math.pow(t, 0.62));
+    const wid = lerp(0.030, w, Math.pow(Math.sin(Math.PI * 0.5 * Math.min(1, t * 1.02)), 0.55));
     const drop = t * h;
     for (let j = 0; j <= cols; j++) {
       const s = j / cols;
@@ -207,15 +207,17 @@ export function makePillow(M, {
       const pinch = new THREE.Vector3(gather.x, gather.y, gather.z);
 
       // gentle drape waves across the cloth
-      const wave = Math.sin(u * 2.4 + t * 1.6) * 0.028 * smoothstep(0.05, 0.6, t);
-      const wave2 = Math.cos(s * Math.PI * 2.2) * 0.020 * smoothstep(0.1, 0.8, t);
+      const wave = Math.sin(u * 2.4 + t * 1.6) * 0.030 * smoothstep(0.05, 0.6, t);
+      const wave2 = Math.cos(s * Math.PI * 2.2) * 0.022 * smoothstep(0.1, 0.8, t);
+      // the free edge flutters as it falls
+      const flutter = Math.sin(u * 3.1 + t * 5.0) * 0.030 * Math.pow(t, 2.2) * (1 - u * u);
 
       // the sheet bulges outwards in the middle
       const bulge = Math.sin(Math.PI * Math.min(1, t * 1.05)) * (1 - u * u) * d;
 
       let x = u * wid * 0.5 + wave * 0.4;
       let y = -drop;
-      let z = bulge + wave2;
+      let z = bulge + wave2 + flutter;
 
       // pull the top rows into the pinch
       x = lerp(x, pinch.x, gatherK * 0.92);

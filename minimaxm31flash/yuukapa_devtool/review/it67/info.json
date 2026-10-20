@@ -1,0 +1,17 @@
+{
+  "ready": true,
+  "info": {
+    "backend": "webgl",
+    "fps": 45,
+    "res": "900x1200",
+    "model": "minimax-m3.1-flash",
+    "view": "three4"
+  },
+  "views": [
+    "front",
+    "three4"
+  ],
+  "backend": "webgl",
+  "W": 900,
+  "H": 1200
+}

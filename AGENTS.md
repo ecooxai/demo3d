@@ -132,7 +132,7 @@ capture.
   (60 s, 1280×1600, credit bar burned in), `review/` (iteration stills, UI
   and phone captures, live-deploy screenshot).
 
-**Fidelity work in the final pass (minimax build, iteration 66 / 97):**
+**Fidelity work in the final pass (minimax build, iteration 67 / 97):**
 * The reference figure is far slimmer than the first build — the whole garment
   and limb set was re-measured off the source PNG and slimmed (torso ≈0.15 m
   wide, hem ≈0.17 m, thighs/calves ≈0.05 m). This single change fixed the
@@ -144,7 +144,7 @@ capture.
 * The bloomer shorts are longer and puffier with 15 scalloped lobes; the
   cat print was enlarged to the reference's scale.
 * The pillow is a large draped sheet (a grid surface that gathers at the held
-  corner and widens as it falls), not a cushion.
+  corner, widens as it falls and flutters along its free edge), not a cushion.
 * The pose is a ¾ contrapposto: hips −0.105 rad, head turned and tilted,
   right arm raised with the hand beside the head, right leg forward.
 * The bow was rebuilt flat and compact (it read as rabbit ears when the loops

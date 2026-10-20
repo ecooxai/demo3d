@@ -60,8 +60,8 @@ export function buildCharacter(M) {
   poseCharacter(rig);
 
   /* ── pillow (held in the left hand) ──────────────────────── */
-  const pillow = makePillow(M, { w: 0.26, h: 0.44, d: 0.060, gather: new THREE.Vector3(-0.120, 0.220, 0) });
-  pillow.position.set(0.238, 0.600, 0.130);
+  const pillow = makePillow(M, { w: 0.245, h: 0.42, d: 0.056, gather: new THREE.Vector3(-0.115, 0.210, 0) });
+  pillow.position.set(0.212, 0.610, 0.125);
   pillow.rotation.set(-0.10, 0.24, -0.34);
   rig.root.add(pillow);
 
@@ -87,8 +87,8 @@ function poseCharacter(rig) {
 
   /* ── right arm: raised, hand beside the head ─────────────── */
   const rShoulder = chestWorld.clone().add(rig.arms.R.shoulder.position);
-  const rElbow = v(-0.288, 1.258, 0.048);
-  const rWrist = v(-0.182, 1.452, 0.026);
+  const rElbow = v(-0.276, 1.252, 0.044);
+  const rWrist = v(-0.163, 1.448, 0.030);
   aimChain(
     [rig.arms.R.shoulder, rig.arms.R.elbow, rig.arms.R.wrist],
     [
