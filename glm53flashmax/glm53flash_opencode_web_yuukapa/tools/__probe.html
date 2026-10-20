@@ -1,0 +1,23 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<script type="importmap">{"imports":{"three":"./vendor/three/three.webgpu.js","three/addons/":"./vendor/three/addons/"}}</script>
+<body style="margin:0;background:#444">
+<script type="module">
+import * as THREE from 'three';
+import { buildFigure } from './src/figure.js';
+const parts = buildFigure();
+const report = [];
+parts.hairAll.updateMatrixWorld(true);
+parts.hairAll.children.forEach((m, mi) => {
+  m.traverse((o) => {
+    if (!o.isMesh || o.name === 'outline') return;
+    const col = o.geometry.getAttribute('color');
+    const bx = new THREE.Box3().setFromObject(o);
+    const size = new THREE.Vector3(); bx.getSize(size);
+    const sample = col ? [col.getX(0), col.getY(0), col.getZ(0)].map(v => +v.toFixed(2)) : null;
+    const mid = col ? [(Math.floor(col.count / 2))].flatMap(k => [col.getX(k), col.getY(k), col.getZ(k)]).map(v => +v.toFixed(2)) : null;
+    report.push({ i: mi, name: (o.parent === parts.hairAll ? 'strand' : 'sub'), verts: col ? col.count : 0, c: sample, m: mid, size: [+size.x.toFixed(2), +size.y.toFixed(2), +size.z.toFixed(2)], pos: [o.position.x.toFixed(2), o.position.y.toFixed(2)] });
+  });
+});
+document.title = JSON.stringify(report);
+</script>
+</body></html>

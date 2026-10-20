@@ -1,0 +1,17 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><body>
+<script>
+const pts = JSON.parse(new URLSearchParams(location.search).get('pts') || '[]');
+const img = new Image();
+img.src = '/shots/' + (new URLSearchParams(location.search).get('f') || 'it42-a0.png');
+img.onload = () => {
+  const c = document.createElement('canvas');
+  c.width = img.width; c.height = img.height;
+  const g = c.getContext('2d');
+  g.drawImage(img, 0, 0);
+  const out = pts.map(([x, y]) => {
+    const d = g.getImageData(x, y, 1, 1).data;
+    return `${x},${y}=#${[d[0], d[1], d[2]].map(v => v.toString(16).padStart(2, '0')).join('')}`;
+  });
+  document.title = out.join(' | ');
+};
+</script></body></html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+  html,body{margin:0;background:#05070c;color:#fff;font-family:"Helvetica Neue",Arial,sans-serif}
+  .wrap{display:flex;min-height:100vh}
+  .stage{flex:1;position:relative;display:grid;place-items:center;background:#cde9f7;overflow:hidden}
+  .credit{position:absolute;left:0;right:0;bottom:0;background:#05070c;color:#fff;
+          padding:26px 34px;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;
+          border-top:3px solid #fff}
+  .credit .who{font-family:"Arial Black","Helvetica Neue",Arial;font-size:44px;letter-spacing:.5px;line-height:1.1}
+  .credit .who b{font-weight:900}
+  .credit .sub{margin-top:8px;font-size:19px;font-weight:700;color:#9fd8ff;letter-spacing:.4px}
+  .credit .note{font-size:15px;font-weight:600;color:#b9c2cf;text-align:right;max-width:320px;line-height:1.5}
+  .side{width:330px;background:#05070c;padding:34px 26px;display:flex;flex-direction:column;gap:18px}
+  .side h1{font-family:"Arial Black",Arial;font-size:26px;margin:0;letter-spacing:.5px}
+  .side p{margin:0;font-size:14px;line-height:1.65;color:#c6d0dc}
+  .side .k{color:#fff;font-weight:700}
+  .side img{width:100%;border-radius:10px;border:1px solid #1d2530}
+  .side .links{margin-top:auto;font-size:13px;color:#7e8896}
+  @media (max-width:900px){ .wrap{flex-direction:column} .side{width:auto} }
+</style></head><body>
+<div class="wrap">
+  <div class="stage">
+    <iframe id="app" src="./app/index.html" style="border:0;width:100%;height:100%"></iframe>
+    <div class="credit">
+      <div>
+        <div class="who"><b>GLM-5.3-Flash</b> · opencode</div>
+        <div class="sub">Yuu-Kapa — rebuilt as real-time 3D from one reference image</div>
+      </div>
+      <div class="note">Every vertex and every texture generated procedurally in code.<br>three.js r180 · WebGPU (WebGL 2 fallback) · no imported assets.</div>
+    </div>
+  </div>
+  <div class="side">
+    <h1>Yuu-Kapa</h1>
+    <p><span class="k">Model:</span> GLM-5.3-Flash<br>
+       <span class="k">Agent:</span> opencode<br>
+       <span class="k">Tool:</span> web (three.js r180, WebGPU + WebGL 2)</p>
+    <p>The pajama girl with the halo, the white bow, the cat-print pyjamas and the pillow —
+       rebuilt as a real-time 3D character from a single illustration.</p>
+    <p><span class="k">Built from scratch:</span> custom lofts, ribbon strands, lathed garments,
+       Canvas2D face and cat-print textures, inverted-hull ink outlines.</p>
+    <img src="./cards/front.png" alt="front view"/>
+    <img src="./cards/face.png" alt="face close-up"/>
+    <div class="links">Deliverables: 60 s showcase video · iteration stills · this interactive viewer</div>
+  </div>
+</div>
+</body></html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<script type="importmap">{"imports":{"three":"./vendor/three/three.webgpu.js","three/addons/":"./vendor/three/addons/"}}</script>
+<body style="margin:0;background:#666">
+<script type="module">
+import * as THREE from 'three';
+import { WebGPURenderer } from 'three';
+import { ribbon } from './src/geometry.js';
+import { toonRamp } from './src/materials.js';
+
+const { geom, center } = ribbon([
+  new THREE.Vector3(0,0,0), new THREE.Vector3(0.02,0.35,0.02),
+  new THREE.Vector3(0.0,1.4,-0.08), new THREE.Vector3(0,1.6,-0.02),
+], { w: 0.18, t: 0.09, colorA: 0x5a4e82, colorB: 0x8b7fb0, gradStart: 0.3, segs: 40 });
+
+const matA = new THREE.MeshToonMaterial({ color: 0xffffff, gradientMap: toonRamp(), vertexColors: true });
+const matB = new THREE.MeshToonMaterial({ color: 0x5a4e82, gradientMap: toonRamp(), vertexColors: false });
+const matC = new THREE.MeshLambertMaterial({ color: 0xffffff, vertexColors: true });
+
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x99aacc);
+const cam = new THREE.PerspectiveCamera(35, 1.4, .1, 10);
+cam.position.set(0, 0.8, 2.6);
+const hemi = new THREE.HemisphereLight(0xf0f7ff, 0xc6b6d8, 0.55); scene.add(hemi);
+const key = new THREE.DirectionalLight(0xfff2e6, 0.95); key.position.set(0.9, 1.7, 1.4); scene.add(key);
+const rim = new THREE.DirectionalLight(0xcdd8ff, 0.5); rim.position.set(-1.3, 1.3, -1.6); scene.add(rim);
+const fill = new THREE.DirectionalLight(0xdfe9ff, 0.22); fill.position.set(-0.7, 0.7, 1.5); scene.add(fill);
+
+const strip = (mat, x) => {
+  const m = new THREE.Mesh(geom, mat);
+  m.position.set(x, 0, 0);
+  scene.add(m);
+};
+strip(matA, -0.65); strip(matB, 0); strip(matC, 0.65);
+window.__RDY__ = 'waiting';
+const cv = document.createElement('canvas');
+document.body.appendChild(cv);
+const renderer = new WebGPURenderer({ canvas: cv, antialias: true, forceWebGL: true });
+renderer.setSize(700, 500, false);
+cv.style.width = '700px'; cv.style.height = '500px';
+await renderer.init();
+window.__RDY__ = 'init-ok ' + (renderer.backend?.isWebGPUBackend ? 'WebGPU' : 'WebGL2');
+function loop() { requestAnimationFrame(loop); renderer.render(scene, cam); }
+loop();
+</script>
+</body></html>

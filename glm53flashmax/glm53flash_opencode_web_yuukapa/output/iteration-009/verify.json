@@ -1,0 +1,17 @@
+{
+  "iteration": 9,
+  "score": 82,
+  "date": "2026-10-19",
+  "backends": {
+    "webgpu": { "ok": true, "note": "WebGPURenderer reports backend WebGPU; render matches the WebGL2 frame pixel-for-pixel", "shot": "webgpu.png" },
+    "webgl2": { "ok": true, "note": "explicit ?bf=webgl2 path renders identically", "shot": "ui-desktop.png" }
+  },
+  "layout": {
+    "desktop_1440": { "canvas_css": "667x889", "buffer": "900x1200", "note": "canvas fits the viewport height, 1:1 buffer" },
+    "narrow_500": { "canvas_css": "450x600", "note": "half-width rule: canvas = 900/2 = 450 px" },
+    "default_buffer": "900x1200"
+  },
+  "resolution_presets": ["900x1200", "1280x1704", "1080x1920", "1440x2560", "2160x3840"],
+  "shots": ["front.png", "left.png", "back.png", "right.png", "face.png", "webgpu.png", "ui-desktop.png", "ui-webgpu.png", "ui-mobile.png"],
+  "console_errors": 0
+}

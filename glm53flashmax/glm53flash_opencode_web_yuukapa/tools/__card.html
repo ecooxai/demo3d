@@ -1,0 +1,32 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+  html,body{margin:0;background:#000;height:100%}
+  .card{width:736px;height:976px;background:#000;color:#fff;display:flex;flex-direction:column;
+        align-items:center;justify-content:center;gap:26px;font-family:"Helvetica Neue",Arial,sans-serif;text-align:center}
+  .big{font-family:"Arial Black","Helvetica Neue",Arial;font-size:86px;letter-spacing:2px;line-height:1.05}
+  .mid{font-family:"Arial Black","Helvetica Neue",Arial;font-size:58px;letter-spacing:1px}
+  .sub{font-size:26px;font-weight:700;color:#fff}
+  .accent{font-size:25px;font-weight:700;color:#9fd8ff}
+  .dim{font-size:22px;font-weight:700;color:#b9b9b9}
+  .rule{width:220px;height:5px;background:#fff;opacity:.9}
+</style></head><body>
+<div class="card" id="c"></div>
+<script>
+const q = new URLSearchParams(location.search);
+const which = q.get('c') || 'title';
+const c = document.getElementById('c');
+if (which === 'title') {
+  c.innerHTML = `
+    <div class="big">YUU-KAPA</div>
+    <div class="rule"></div>
+    <div class="sub">a real-time 3D character rebuilt<br>from a single reference image</div>
+    <div class="accent">GLM-5.3-Flash &nbsp;·&nbsp; opencode &nbsp;·&nbsp; three.js r180 &nbsp;·&nbsp; WebGPU</div>
+    <div class="dim">every vertex and every texture generated procedurally</div>`;
+} else {
+  c.innerHTML = `
+    <div class="mid">GLM-5.3-Flash</div>
+    <div class="rule"></div>
+    <div class="big" style="font-size:64px">opencode</div>
+    <div class="accent">built from scratch with the web tool &nbsp;·&nbsp; no imported assets</div>
+    <div class="dim">iteration 009 &nbsp;·&nbsp; score 82/100</div>`;
+}
+</script></body></html>

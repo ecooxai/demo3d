@@ -1,0 +1,25 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+  html,body{margin:0;background:#000;color:#fff;width:900px;height:1200px;overflow:hidden;
+            font-family:"Helvetica Neue",Arial,sans-serif}
+  .frame{position:relative;width:900px;height:1200px;background:#05070c}
+  .frame img{position:absolute;top:0;left:0;width:900px;height:900px;object-fit:cover;object-position:center 42%}
+  .panel{position:absolute;bottom:0;left:0;width:900px;height:300px;background:#05070c;
+         display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;
+         border-top:4px solid #fff;text-align:center}
+  .who{font-family:"Arial Black","Helvetica Neue",Arial;font-size:58px;letter-spacing:.5px;line-height:1}
+  .what{font-size:25px;font-weight:700;color:#9fd8ff}
+  .tiny{font-size:18px;font-weight:600;color:#b9c2cf}
+</style></head><body>
+<div class="frame">
+  <img id="im" alt="render"/>
+  <div class="panel">
+    <div class="who">GLM-5.3-Flash · opencode</div>
+    <div class="what" id="cap">Yuu-Kapa — a real-time 3D character rebuilt from one reference image</div>
+    <div class="tiny">three.js r180 · WebGPU + WebGL 2 · every vertex and texture generated procedurally</div>
+  </div>
+</div>
+<script>
+const q = new URLSearchParams(location.search);
+document.getElementById('im').src = q.get('img') || '';
+if (q.get('cap')) document.getElementById('cap').textContent = q.get('cap');
+</script></body></html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><body style="margin:0;background:#111">
+<canvas></canvas><script>
+const c = document.querySelector('canvas');
+c.width = 320; c.height = 380;
+const A = new Image();
+A.src = '/shots/it21-front.png';
+A.onload = () => {
+  const ctx = c.getContext('2d');
+  ctx.imageSmoothingEnabled = false;
+  // head region of the 900x1400 front shot
+  ctx.drawImage(A, 350, 250, 160, 190, 0, 0, 320, 380);
+  document.title = 'ok';
+};
+</script></body></html>

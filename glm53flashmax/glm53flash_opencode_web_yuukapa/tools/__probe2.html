@@ -1,0 +1,30 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<script type="importmap">{"imports":{"three":"./vendor/three/three.webgpu.js","three/addons/":"./vendor/three/addons/"}}</script>
+<body style="margin:0;background:#444">
+<script type="module">
+import * as THREE from 'three';
+import { buildFigure } from './src/figure.js';
+const parts = buildFigure();
+parts.root.updateMatrixWorld(true);
+const out = [];
+parts.root.traverse((o) => {
+  if (!o.isMesh) return;
+  const bx = new THREE.Box3().setFromObject(o);
+  const c = new THREE.Vector3(); bx.getCenter(c);
+  const s = new THREE.Vector3(); bx.getSize(s);
+  if (c.y < 1.30 || c.y > 1.55) return;         // chin/neck zone
+  if (s.z > 0.02 && Math.abs(c.x) < 0.2) {        // thin vertical plates near center
+    const col = o.material && o.material.color ? o.material.color.getHexString() : 'none';
+    out.push({
+      mesh: o.name || o.parent?.name || 'anon',
+      mat: col,
+      y: +c.y.toFixed(3), x: +c.x.toFixed(3), z: +c.z.toFixed(3),
+      w: +s.x.toFixed(3), h: +s.y.toFixed(3), d: +s.z.toFixed(3),
+      par: o.parent?.type,
+    });
+  }
+});
+out.sort((a, b) => b.h - a.h);
+document.title = JSON.stringify(out);
+</script>
+</body></html>

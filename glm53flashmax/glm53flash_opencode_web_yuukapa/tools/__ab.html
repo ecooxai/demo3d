@@ -1,0 +1,20 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><body style="margin:0;background:#222;display:flex">
+<canvas></canvas>
+<script>
+const c = document.querySelector('canvas');
+c.width = 720; c.height = 840;
+const ctx = c.getContext('2d');
+const A = new Image(), B = new Image();
+A.src = '/shots/probe-live.png'; B.src = '/shots/bx-collar.png';
+let drawn = 0;
+function go() {
+  if (++drawn < 2) return;
+  // region of interest in shot space: x 320..600, y 300..620 -> x2 zoom
+  const sx = 320, sy = 300, sw = 280, sh = 320, zoom = 2;
+  ctx.fillStyle = '#111'; ctx.fillRect(0, 0, c.width, c.height);
+  ctx.drawImage(A, sx, sy, sw, sh, 20, 20, sw * zoom, sh * zoom);
+  ctx.drawImage(B, sx, sy, sw, sh, 40 + sw * zoom, 20, sw * zoom, sh * zoom);
+  document.title = 'done';
+}
+A.onload = go; B.onload = go;
+</script></body></html>

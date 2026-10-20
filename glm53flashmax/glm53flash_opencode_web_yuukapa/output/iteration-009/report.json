@@ -1,0 +1,25 @@
+{
+  "iteration": 9,
+  "score": 82,
+  "title": "Yuu-Kapa / Pillowlight Reverie",
+  "model": "GLM-5.3-Flash",
+  "agent": "opencode",
+  "tool": "web (three.js r180, WebGPU + WebGL 2)",
+  "source": "ref/image1_yuukapa.png (single reference image)",
+  "assets_imported": 0,
+  "changes": [
+    "warm peach skin on the soft toon ramp (was cold mauve with a 6-step ramp)",
+    "smooth tapered neck column replaces the stacked-sphere neck",
+    "broad white ribbon bow rebuilt as flat extruded petals on the crown + ruffled bonnet",
+    "pillow rebuilt as a big draped cushion (0.40 x 0.62 m) gripped at its corner in her left hand, hanging behind the leg",
+    "back mane trimmed from mid-thigh to the waist with separated tapered tips",
+    "irises enlarged and the lid line lifted so the eyes read open, not sleepy",
+    "bright pastel light rig (measured with a pixel probe) so whites stay white",
+    "sleeve cuffs no longer flare; elbow/knee ball bulges removed"
+  ],
+  "known_gaps": [
+    "the pillow is still a cushion rather than a fully draped sheet",
+    "the pyjama placket is white while the reference keeps it in cloth colour",
+    "the bow reads slightly flat from the side"
+  ]
+}
