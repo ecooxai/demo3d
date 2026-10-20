@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Yuukapa — minimax-m3.1-flash / opencode</title>
+<meta name="description" content="A fully procedural 3D anime character rendered in real time with WebGPU. Built from scratch by minimax-m3.1-flash via opencode." />
+<style>
+  :root{
+    --ink:#eef3ff; --dim:#9aa8c8; --accent:#8fd0ff; --accent2:#b39ef2;
+    --bg:#0b1020; --card:#141b30;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;min-height:100%;background:
+      radial-gradient(120% 90% at 50% -10%, #1c2748 0%, #0b1020 60%),
+      linear-gradient(180deg,#0b1020,#070a14);
+    color:var(--ink);
+    font-family:"Inter","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    -webkit-font-smoothing:antialiased}
+  .wrap{max-width:1040px;margin:0 auto;padding:clamp(28px,6vw,72px) 20px 60px}
+  .eyebrow{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);font-weight:700}
+  h1{margin:10px 0 6px;font-size:clamp(38px,7vw,74px);line-height:1;letter-spacing:-.02em}
+  .lede{color:var(--dim);font-size:clamp(15px,2vw,19px);line-height:1.65;max-width:62ch}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:34px 0}
+  .card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:20px}
+  .card h2{margin:0 0 6px;font-size:15px;letter-spacing:.01em}
+  .card p{margin:0;color:var(--dim);font-size:13.5px;line-height:1.6}
+  .cta{display:inline-flex;align-items:center;gap:9px;background:linear-gradient(140deg,#6a58e6,#3a2f92);
+    color:#fff;text-decoration:none;font-weight:700;font-size:15px;padding:13px 22px;border-radius:12px;
+    box-shadow:0 16px 40px -18px rgba(90,70,220,.9);transition:transform .18s ease}
+  .cta:hover{transform:translateY(-2px)}
+  .cta.alt{background:rgba(255,255,255,.08);box-shadow:none;border:1px solid rgba(255,255,255,.14)}
+  .row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+  video{width:100%;border-radius:16px;border:1px solid rgba(255,255,255,.1);background:#000;display:block}
+  .credit{margin-top:40px;background:#000;border-radius:16px;padding:22px 24px;text-align:center}
+  .credit .m{font-size:clamp(22px,3.6vw,40px);font-weight:800;letter-spacing:.01em}
+  .credit .s{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent2);margin-top:8px}
+  .credit .d{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#6f7b99;margin-top:10px}
+  footer{margin-top:44px;color:#5d6a8c;font-size:12px;letter-spacing:.06em}
+  code{background:rgba(255,255,255,.07);padding:2px 7px;border-radius:6px;font-size:12.5px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">WebGPU · real-time toon NPR</div>
+  <h1>Yuukapa</h1>
+  <p class="lede">
+    A fully procedural 3D reconstruction of the reference illustration — indigo mane,
+    violet anime eyes, cat-print pyjamas, scalloped bloomer hem, halo, bow and pillow.
+    Every vertex and every texture is generated in code; nothing is imported.
+  </p>
+
+  <div class="row" style="margin:26px 0 6px">
+    <a class="cta" href="yuukapa_showcase/src/index.html">Open the live viewer →</a>
+    <a class="cta alt" href="yuukapa_minimax-m31-flash_opencode_showcase.mp4">Watch the 60 s showcase</a>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h2>WebGPU first</h2>
+      <p>WebGPURenderer with an explicit WebGL&nbsp;2 fallback — the app asks before it ever
+         drops to another backend.</p>
+    </div>
+    <div class="card">
+      <h2>Toon NPR</h2>
+      <p>Four-step cel ramp, inverted-hull ink outlines and fresnel rim shells over a
+         sculpted, painted face.</p>
+    </div>
+    <div class="card">
+      <h2>Procedural everything</h2>
+      <p>Swept ribbons, lofts, super-ellipsoids and Canvas2D textures — built by
+         <code>src/js/lib</code>.</p>
+    </div>
+    <div class="card">
+      <h2>Any screen</h2>
+      <p>900×1200 by default, selectable up to 4K, with orbit, camera presets and
+         PNG/webm capture.</p>
+    </div>
+  </div>
+
+  <video controls preload="none" poster="">
+    <source src="yuukapa_minimax-m31-flash_opencode_showcase.mp4" type="video/mp4" />
+  </video>
+
+  <div class="credit">
+    <div class="m">minimax-m3.1-flash · opencode</div>
+    <div class="s">web · three.js r186 webgpu/tsl</div>
+    <div class="d">Yuukapa — procedurally modelled anime character, 100% generated from scratch</div>
+  </div>
+
+  <footer>Repository: github.com/ecooxai/demo3d · branch minimax-m31-flash/opencode-webgpu-yuukapa</footer>
+</div>
+</body>
+</html>

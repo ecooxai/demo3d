@@ -9,6 +9,7 @@
     "shot": "node tools/shoot.mjs"
   },
   "devDependencies": {
-    "puppeteer-core": "^25.14.0"
+    "puppeteer-core": "^25.14.0",
+    "surge": "^0.46.0"
   }
 }

@@ -112,14 +112,24 @@ export function buildFigure(fx = {}) {
   scalp.scale.set(1.0, 1.06, 1.02);
   body.add(scalp);
 
+  const QS = new URLSearchParams(typeof location !== 'undefined' ? location.search : '');
+  const DBG = {
+    hide: (QS.get('hide') || '').split(',').filter(Boolean),
+    recolor: !!QS.get('recolor'),
+  };
+
   /* ================= hair ribbons ================= */
   const hairAll = new THREE.Group();
   body.add(hairAll);
   const HA = P.hairMid, HB = P.hairTip; // root color -> tip color
 
   function strand(pts3, o = {}) {
+    let colorA = o.colorA ?? HA;
+    if (DBG.recolor && o.tag === 'back') colorA = 0xff8800;
+    if (DBG.recolor && o.tag === 'side') colorA = 0x00ff00;
+    if (DBG.recolor && o.tag === 'lock') colorA = 0xff00ff;
     const { geom, center } = ribbon(pts3, {
-      colorA: o.colorA ?? HA, colorB: o.colorB ?? HB,
+      colorA, colorB: o.colorB ?? HB,
       gradStart: o.gradStart ?? 0.45, ...o,
     });
     const mesh = new THREE.Mesh(geom, hairMat);
@@ -180,36 +190,36 @@ export function buildFigure(fx = {}) {
   strand([
     V3(0.070, 1.590, 0.030), V3(0.104, 1.500, 0.018), V3(0.142, 1.390, 0.012),
     V3(0.163, 1.270, 0.008), V3(0.172, 1.130, 0.006), V3(0.168, 1.020, 0.002),
-  ], { w: 0.052, t: 0.030, wTip: 0.012, tipStart: 0.5, gradStart: 0.42 });
+  ], { w: 0.052, t: 0.030, wTip: 0.012, tipStart: 0.5, gradStart: 0.42, tag: 'lock' });
 
   // — her right long strand beyond the raised arm —
   strand([
     V3(-0.068, 1.580, 0.014), V3(-0.098, 1.470, 0.006), V3(-0.130, 1.340, 0.000),
     V3(-0.150, 1.190, -0.006), V3(-0.156, 1.040, -0.010), V3(-0.146, 0.930, -0.012),
-  ], { w: 0.048, t: 0.028, wTip: 0.011, tipStart: 0.5, gradStart: 0.42 });
+  ], { w: 0.048, t: 0.028, wTip: 0.011, tipStart: 0.5, gradStart: 0.42, tag: 'lock' });
 
   // — back mass: crown → waist → spikes (S-curve hugging the back) —
   strand([
     V3(0.030, 1.600, -0.030), V3(0.010, 1.470, -0.105), V3(0.004, 1.280, -0.128),
     V3(-0.010, 1.060, -0.120), V3(-0.020, 0.800, -0.100), V3(-0.022, 0.520, -0.070),
-  ], { w: 0.072, t: 0.050, wTip: 0.020, tipStart: 0.5, gradStart: 0.4 });
+  ], { w: 0.072, t: 0.050, wTip: 0.020, tipStart: 0.5, gradStart: 0.4, tag: 'back' });
   strand([
     V3(-0.038, 1.586, -0.026), V3(-0.058, 1.440, -0.092), V3(-0.070, 1.230, -0.118),
     V3(-0.082, 0.990, -0.112), V3(-0.094, 0.740, -0.096), V3(-0.100, 0.560, -0.070),
-  ], { w: 0.066, t: 0.046, wTip: 0.018, tipStart: 0.52, gradStart: 0.4 });
+  ], { w: 0.066, t: 0.046, wTip: 0.018, tipStart: 0.52, gradStart: 0.4, tag: 'back' });
   strand([
     V3(0.046, 1.588, -0.026), V3(0.072, 1.450, -0.088), V3(0.090, 1.250, -0.112),
     V3(0.104, 1.010, -0.108), V3(0.114, 0.760, -0.094), V3(0.118, 0.590, -0.068),
-  ], { w: 0.064, t: 0.046, wTip: 0.018, tipStart: 0.52, gradStart: 0.4 });
+  ], { w: 0.064, t: 0.046, wTip: 0.018, tipStart: 0.52, gradStart: 0.4, tag: 'back' });
   // outer side-falls behind arms
   strand([
     V3(-0.058, 1.560, -0.010), V3(-0.086, 1.400, -0.040), V3(-0.110, 1.240, -0.050),
     V3(-0.126, 1.060, -0.048), V3(-0.130, 0.900, -0.040),
-  ], { w: 0.046, t: 0.030, wTip: 0.012, tipStart: 0.55, gradStart: 0.45 });
+  ], { w: 0.046, t: 0.030, wTip: 0.012, tipStart: 0.55, gradStart: 0.45, tag: 'side' });
   strand([
     V3(0.060, 1.560, -0.008), V3(0.090, 1.400, -0.036), V3(0.112, 1.240, -0.044),
     V3(0.124, 1.070, -0.042), V3(0.126, 0.920, -0.036),
-  ], { w: 0.046, t: 0.030, wTip: 0.012, tipStart: 0.55, gradStart: 0.45 });
+  ], { w: 0.046, t: 0.030, wTip: 0.012, tipStart: 0.55, gradStart: 0.45, tag: 'side' });
   // thin flyaways
   strand([
     V3(0.020, 1.596, -0.048), V3(0.040, 1.420, -0.100), V3(0.058, 1.160, -0.132),

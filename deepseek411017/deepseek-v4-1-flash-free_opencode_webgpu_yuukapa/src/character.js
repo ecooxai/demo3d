@@ -1178,10 +1178,22 @@ export function createCharacter(mats) {
   }
 
   // ——— Headband and bow ——————————————————————————————————
-  const bow = createBow(mats, 1.04);
-  bow.position.set(-0.02, 0.81, 0.22);
-  bow.rotation.x = -0.26;
-  bow.rotation.z = 0.05;
+  // A soft white band wraps the crown so the bow reads as worn, not floating.
+  const headband = new THREE.Mesh(
+    new THREE.TorusGeometry(0.638, 0.05, 18, 108),
+    mats.trim,
+  );
+  headband.rotation.x = Math.PI / 2;
+  headband.position.set(0, 0.285, -0.02);
+  headband.scale.set(1, 1.035, 1.02);
+  headband.castShadow = false;
+  addOutline(headband, { thickness: 1.02, material: mats.outline });
+  hairGroup.add(headband);
+
+  const bow = createBow(mats, 1.0);
+  bow.position.set(0.015, 0.665, 0.15);
+  bow.rotation.x = -0.3;
+  bow.rotation.z = 0.055;
   hairGroup.add(bow);
 
   // ——— Halo ————————————————————————————————————————————————
@@ -1193,7 +1205,7 @@ export function createCharacter(mats) {
   });
 
   const halo = createHalo(mats);
-  halo.position.set(0, 8.56, -0.015);
+  halo.position.set(0, 8.3, -0.015);
   halo.rotation.z = 0.045;
   halo.rotation.x = 0.06;
   root.add(halo);
@@ -1230,7 +1242,7 @@ export function createCharacter(mats) {
       }
     }
 
-    halo.position.y = 8.56 + Math.sin(time * 0.82) * 0.035;
+    halo.position.y = 8.3 + Math.sin(time * 0.82) * 0.035;
     halo.rotation.y = Math.sin(time * 0.19) * 0.04;
     halo.userData.sparkles.rotation.y = time * 0.12;
 
