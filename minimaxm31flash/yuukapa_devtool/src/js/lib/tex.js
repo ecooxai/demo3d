@@ -441,9 +441,9 @@ export function makePillowTexture() {
 
   // gentle large-scale shading
   const gr = g.createLinearGradient(0, 0, S * 0.6, S);
-  gr.addColorStop(0, 'rgba(214,226,240,0.45)');
+  gr.addColorStop(0, 'rgba(224,234,246,0.32)');
   gr.addColorStop(0.45, 'rgba(255,255,255,0)');
-  gr.addColorStop(1, 'rgba(196,212,230,0.35)');
+  gr.addColorStop(1, 'rgba(214,228,243,0.22)');
   g.fillStyle = gr; g.fillRect(0, 0, S, S);
 
   // creases
@@ -453,7 +453,7 @@ export function makePillowTexture() {
     const x0 = rand() * S, y0 = rand() * S;
     const len = 60 + rand() * 190;
     const a = rand() * Math.PI;
-    g.strokeStyle = 'rgba(176,196,218,0.6)';
+    g.strokeStyle = 'rgba(198,214,232,0.45)';
     g.lineWidth = 1.5 + rand() * 3.5;
     g.beginPath();
     g.moveTo(x0, y0);

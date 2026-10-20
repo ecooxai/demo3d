@@ -210,7 +210,7 @@ export function buildHair(M) {
     const n = 30;
     for (let i = 0; i < n; i++) {
       const t = i / (n - 1);
-      const beta = lerp(-1.62, 1.62, t) + (rand() - 0.5) * 0.05;
+      const beta = lerp(-1.74, 1.74, t) + (rand() - 0.5) * 0.05;
       const azRoot = Math.PI + beta;
 
       // the mane is heavier on the character's left (+X)
@@ -234,12 +234,12 @@ export function buildHair(M) {
         if (n.lengthSq() < 1e-6) n.set(0, 0, -1);
         return n.normalize();
       });
-      const w = 0.046 + 0.022 * Math.sin(t * Math.PI);
+      const w = 0.040 + 0.026 * Math.sin(t * Math.PI);
       const geo = lockMesh(pts, nrm, {
         width: w, thickness: 0.010, radial: 8,
         widthFn: (u) => {
-          const base = 0.62 + 0.38 * Math.sin(Math.PI * Math.pow(clamp(u, 0, 1), 0.4));
-          return w * base * (1 - smoothstep(0.90, 1.0, u));
+          const base = 0.66 + 0.34 * Math.sin(Math.PI * Math.pow(clamp(u, 0, 1), 0.4));
+          return w * base * (1 - smoothstep(0.80, 1.0, u));
         },
         twistFn: (u) => Math.sin(u * 2.6 + t * 4.0) * 0.26,
       });

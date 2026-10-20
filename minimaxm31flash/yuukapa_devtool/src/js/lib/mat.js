@@ -62,7 +62,7 @@ export function createMaterials() {
     collar: toon({ color: 0xfdfeff, gradientMap: softRamp }),
     button: new THREE.MeshPhysicalMaterial({ color: 0xfffaf4, roughness: 0.28, metalness: 0.0, sheen: 0.6, sheenColor: new THREE.Color(0xffe6d8) }),
 
-    pillow: toon({ color: 0xffffff, map: pillowMap, gradientMap: softRamp }),
+    pillow: toon({ color: 0xffffff, map: pillowMap }),
     cloth: toon({ color: PALETTE.cloth, gradientMap: softRamp, map: fabricMap }),
     slipper: toon({ color: 0xfdffff, gradientMap: softRamp }),
     slipperSole: toon({ color: 0xc3d2e4 }),
