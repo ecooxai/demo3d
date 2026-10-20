@@ -19,9 +19,9 @@ export function makeBow(M, {
   const loopPath = (side) => {
     const pts = [];
     const n = 32;
-    const cx = 0.050 + width * 0.40;
-    const rx = width * 0.38;
-    const ry = height * 0.46;
+    const cx = 0.044 + width * 0.36;
+    const rx = width * 0.34;
+    const ry = height * 0.40;
     for (let i = 0; i < n; i++) {
       const t = i / n;
       const a = t * Math.PI * 2;
@@ -47,7 +47,7 @@ export function makeBow(M, {
       profile: (t) => {
         // the ribbon is thin where it meets the knot
         const pinch = 0.34 + 0.66 * Math.sin(Math.PI * Math.min(1, Math.max(0, t)));
-        const band = Math.max(0.014, width * 0.30);
+        const band = Math.max(0.013, width * 0.34);
         return { rx: band * pinch + 0.004, ry: 0.0080 * pinch + 0.003 };
       },
       up: new THREE.Vector3(0, 0, 1),
@@ -59,13 +59,10 @@ export function makeBow(M, {
 
   // knot
   const knotMesh = new THREE.Mesh(
-    (() => {
-      const geo = superEllipsoid(knot * 0.62, knot * 0.5, knot * 0.45, 0.6, 0.6, 20, 14);
-      return geo;
-    })(),
+    superEllipsoid(knot * 0.58, knot * 0.62, knot * 0.55, 0.85, 0.85, 20, 14),
     color
   );
-  knotMesh.position.z = 0.004;
+  knotMesh.position.z = 0.012;
   knotMesh.castShadow = true;
   g.add(knotMesh);
 

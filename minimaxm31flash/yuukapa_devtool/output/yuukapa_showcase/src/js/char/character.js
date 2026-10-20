@@ -41,11 +41,12 @@ export function buildCharacter(M) {
   rig.headPivot.add(headband);
 
   const bow = makeBow(M, {
-    width: 0.125, height: 0.062, depth: 0.042,
-    knot: 0.030, tails: true, tailLen: 0.10, color: M.collar,
+    width: 0.105, height: 0.040, depth: 0.028,
+    knot: 0.026, tails: true, tailLen: 0.08, color: M.collar,
   });
-  bow.position.set(0, HEAD.center.y + 0.126, -0.016);
-  bow.rotation.set(-0.34, 0, 0.03);
+  bow.position.set(0, HEAD.center.y + 0.118, 0.008);
+  bow.rotation.set(-0.78, 0, 0.02);
+  bow.scale.set(1.2, 0.85, 1);
   bow.scale.set(1, 1, 1);
   rig.headPivot.add(bow);
 

@@ -132,7 +132,7 @@ capture.
   (60 s, 1280×1600, credit bar burned in), `review/` (iteration stills, UI
   and phone captures, live-deploy screenshot).
 
-**Fidelity work in the final pass (minimax build, iteration 59 / 96):**
+**Fidelity work in the final pass (minimax build, iteration 63 / 97):**
 * The reference figure is far slimmer than the first build — the whole garment
   and limb set was re-measured off the source PNG and slimmed (torso ≈0.15 m
   wide, hem ≈0.17 m, thighs/calves ≈0.05 m). This single change fixed the
@@ -147,6 +147,11 @@ capture.
   corner and widens as it falls), not a cushion.
 * The pose is a ¾ contrapposto: hips −0.105 rad, head turned and tilted,
   right arm raised with the hand beside the head, right leg forward.
+* The bow was rebuilt flat and compact (it read as rabbit ears when the loops
+  were upright and round), the fringe follows one soft swoop instead of a
+  ragged zigzag, and the chin crease was softened in the skull sculpt.
+* Camera presets were re-framed and flipped to the character's right so the
+  long mane never hides the face.
 
 **Extra notes for the next agent (from the minimax build):**
 * GitHub Pages is **blocked for this organisation** — both the App token and a

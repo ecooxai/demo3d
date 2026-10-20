@@ -12,14 +12,14 @@ import { buildCharacter } from '../char/character.js';
 const MODEL_NAME = 'minimax-m3.1-flash';
 
 export const VIEWS = {
-  front:   { az: -0.07,  el: 0.03, dist: 3.40, target: [0.05, 0.97, 0] },
-  back:    { az: Math.PI, el: 0.07, dist: 3.30, target: [0, 0.95, 0] },
-  left:    { az: -Math.PI / 2, el: 0.05, dist: 3.20, target: [0, 0.94, 0] },
-  right:   { az: Math.PI / 2,  el: 0.05, dist: 3.20, target: [0, 0.94, 0] },
-  three4:  { az: -0.30,  el: 0.09, dist: 3.25, target: [0.05, 0.98, 0] },
-  top:     { az: 0.55,   el: 0.95, dist: 3.30, target: [0, 0.92, 0] },
-  closeup: { az: -0.24,  el: 0.05, dist: 0.82, target: [0.02, 1.55, 0] },
-  wide:    { az: -0.55,  el: 0.15, dist: 4.20, target: [0, 0.92, 0] },
+  front:   { az: -0.07,  el: 0.04, dist: 3.90, target: [0.05, 0.95, 0] },
+  back:    { az: Math.PI, el: 0.07, dist: 3.85, target: [0, 0.95, 0] },
+  left:    { az: -Math.PI / 2, el: 0.05, dist: 3.60, target: [0, 0.94, 0] },
+  right:   { az: Math.PI / 2,  el: 0.05, dist: 3.60, target: [0, 0.94, 0] },
+  three4:  { az: -0.30,  el: 0.09, dist: 3.75, target: [0.05, 0.96, 0] },
+  top:     { az: 0.55,   el: 0.95, dist: 3.70, target: [0, 0.92, 0] },
+  closeup: { az: -0.24,  el: 0.05, dist: 0.92, target: [0.02, 1.53, 0] },
+  wide:    { az: -0.55,  el: 0.15, dist: 4.70, target: [0, 0.92, 0] },
 };
 
 export class App {
@@ -367,9 +367,9 @@ export class App {
       // cinematic turntable: slow orbit with a gentle breathing dolly
       const off = new THREE.Vector3().subVectors(this.camera.position, this.controls.target);
       off.applyAxisAngle(new THREE.Vector3(0, 1, 0), dt * 0.115);
-      off.setLength(3.25 + Math.sin(t * 0.21) * 0.30);
+      off.setLength(3.70 + Math.sin(t * 0.21) * 0.30);
       this.camera.position.copy(this.controls.target).add(off);
-      this.controls.target.y = 0.97 + Math.sin(t * 0.17) * 0.035;
+      this.controls.target.y = 0.95 + Math.sin(t * 0.17) * 0.035;
     } else if (this.options.autoRotate) {
       const off = new THREE.Vector3().subVectors(this.camera.position, this.controls.target);
       off.applyAxisAngle(new THREE.Vector3(0, 1, 0), dt * 0.25);

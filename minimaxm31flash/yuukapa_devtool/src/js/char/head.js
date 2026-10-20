@@ -40,6 +40,10 @@ export function headSculpt(v) {
     const t = (d.y + 0.72) / 0.28;
     y = lerp(-H.halfH * 0.70, y, t * t);
   }
+  // soften the crease where the jaw meets the chin
+  const chin = smoothstep(-0.55, -0.95, d.y) * smoothstep(0.55, 0.05, Math.abs(d.x));
+  z += 0.006 * chin;
+  y += 0.004 * chin;
 
   // flatten the face plane a touch
   const front = Math.max(0, d.z);

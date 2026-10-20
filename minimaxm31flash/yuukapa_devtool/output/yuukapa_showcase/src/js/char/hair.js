@@ -141,8 +141,10 @@ export function buildHair(M) {
       const jitter = (rand() - 0.5);
 
       // most locks stop just above the brow, a few fall past the cheek
-      const long = Math.abs(t - 0.16) < 0.12 || Math.abs(t - 0.84) < 0.10;
-      const elTip = long ? -0.06 - jitter * 0.16 : 0.26 + jitter * 0.16;
+      const long = Math.abs(t - 0.16) < 0.11 || Math.abs(t - 0.86) < 0.09;
+      // one soft swoop across the brow instead of a ragged edge
+      const swoop = 0.30 - 0.13 * Math.cos(azRoot * 1.25) - 0.05 * Math.abs(azRoot);
+      const elTip = long ? -0.05 - jitter * 0.10 : swoop + jitter * 0.05;
 
       const ctrl = [];
       ctrl.push(hairPoint(azRoot * 0.35, 1.22, 0.016));
@@ -253,12 +255,12 @@ export function buildHair(M) {
 
   /* ── 5. the crown volume + a springy curl ───────────────── */
   {
-    for (let i = 0; i < 5; i++) {
-      const a = -0.9 + i * 0.45;
+    for (let i = 0; i < 4; i++) {
+      const a = -0.75 + i * 0.50;
       const ctrl = [
-        hairPoint(a, 1.25, 0.015),
-        hairPoint(a * 0.8, 1.46, 0.020),
-        new THREE.Vector3(Math.sin(a) * 0.06, HEAD.center.y + 0.135, Math.cos(a) * 0.07),
+        hairPoint(a, 1.20, 0.014),
+        hairPoint(a * 0.8, 1.40, 0.018),
+        new THREE.Vector3(Math.sin(a) * 0.05, HEAD.center.y + 0.122, Math.cos(a) * 0.06),
       ];
       const pts = spline(ctrl, 10);
       const nrm = pts.map((p) => {
