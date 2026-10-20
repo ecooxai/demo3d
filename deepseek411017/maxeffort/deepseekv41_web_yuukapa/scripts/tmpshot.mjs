@@ -1,0 +1,14 @@
+import { chromium } from 'playwright-core';
+const browser = await chromium.launch({ executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', headless: true, args: ['--use-angle=metal','--ignore-gpu-blocklist'] });
+const page = await browser.newPage({ viewport: { width: 900, height: 1200 }, deviceScaleFactor: 1 });
+await page.goto('http://127.0.0.1:4180/?backend=webgl&res=900x1200&view=front&clean=1', { waitUntil: 'networkidle' });
+await page.waitForFunction('window.__YUU__ && window.__YUU__.ready');
+await page.waitForTimeout(1200);
+await page.evaluate(() => window.__YUU__.setOutlines(false));
+await page.waitForTimeout(500);
+const canvas = page.locator('#scene');
+await canvas.screenshot({ path: 'output/tmp_nooutline.png' });
+await page.evaluate(() => { window.__YUU__.setOutlines(true); window.__YUU__.setDust(false); });
+await page.waitForTimeout(300);
+await canvas.screenshot({ path: 'output/tmp_nodust.png' });
+await browser.close();

@@ -1,0 +1,3935 @@
+{
+  "iteration": 166,
+  "acceptedIteration": 164,
+  "acceptedScore": 78,
+  "provenance": "New Mac reconstruction of documented166 field after auxiliary executor outage; original local freeze not claimed byte-identical.",
+  "status": "Source essentials pass; native visual result pending",
+  "sourceFiles": {
+    "src/hair-groom.js": {
+      "bytes": 44537,
+      "sha256": "a7b04c16fd8e13277e9418954c996c2370895f84ef446ed295ccb942a73a002d"
+    },
+    "review/rear166-mac-helper.js": {
+      "bytes": 3001,
+      "sha256": "4e85b69f3c3c8eedcbfa8a0812308279112b0713b879c73894ee0eebd04e33d0"
+    },
+    "review/hair-groom-candidate166-mac.js": {
+      "bytes": 45634,
+      "sha256": "b53671c4ff26700d4ae94de67fb172f0cbd4faaca08a043fd3540777d00a448a"
+    },
+    "review/rear166-mac-source-check.mjs": {
+      "bytes": 6894,
+      "sha256": "7f210a4275ac8d717c28cdf13b6f00ffb48ed8341c1a0de4496c3f0744c5151d"
+    }
+  },
+  "zeroOriginalArraysAndMapsExact": true,
+  "ranges": {
+    "mass": [
+      {
+        "guide": 0,
+        "kind": "back",
+        "start": 0,
+        "count": 549,
+        "indexStart": 0,
+        "indexCount": 2880
+      },
+      {
+        "guide": 1,
+        "kind": "back",
+        "start": 549,
+        "count": 549,
+        "indexStart": 2880,
+        "indexCount": 2880
+      },
+      {
+        "guide": 2,
+        "kind": "back",
+        "start": 1098,
+        "count": 549,
+        "indexStart": 5760,
+        "indexCount": 2880
+      },
+      {
+        "guide": 3,
+        "kind": "back",
+        "start": 1647,
+        "count": 549,
+        "indexStart": 8640,
+        "indexCount": 2880
+      },
+      {
+        "guide": 4,
+        "kind": "back",
+        "start": 2196,
+        "count": 549,
+        "indexStart": 11520,
+        "indexCount": 2880
+      },
+      {
+        "guide": 5,
+        "kind": "back",
+        "start": 2745,
+        "count": 549,
+        "indexStart": 14400,
+        "indexCount": 2880
+      },
+      {
+        "guide": 6,
+        "kind": "back",
+        "start": 3294,
+        "count": 549,
+        "indexStart": 17280,
+        "indexCount": 2880
+      },
+      {
+        "guide": 7,
+        "kind": "back",
+        "start": 3843,
+        "count": 549,
+        "indexStart": 20160,
+        "indexCount": 2880
+      },
+      {
+        "guide": 8,
+        "kind": "back",
+        "start": 4392,
+        "count": 549,
+        "indexStart": 23040,
+        "indexCount": 2880
+      },
+      {
+        "guide": 9,
+        "kind": "back",
+        "start": 4941,
+        "count": 549,
+        "indexStart": 25920,
+        "indexCount": 2880
+      },
+      {
+        "guide": 10,
+        "kind": "back",
+        "start": 5490,
+        "count": 549,
+        "indexStart": 28800,
+        "indexCount": 2880
+      },
+      {
+        "guide": 11,
+        "kind": "back",
+        "start": 6039,
+        "count": 549,
+        "indexStart": 31680,
+        "indexCount": 2880
+      },
+      {
+        "guide": 12,
+        "kind": "back",
+        "start": 6588,
+        "count": 549,
+        "indexStart": 34560,
+        "indexCount": 2880
+      },
+      {
+        "guide": 13,
+        "kind": "back",
+        "start": 7137,
+        "count": 549,
+        "indexStart": 37440,
+        "indexCount": 2880
+      },
+      {
+        "guide": 14,
+        "kind": "back",
+        "start": 7686,
+        "count": 549,
+        "indexStart": 40320,
+        "indexCount": 2880
+      },
+      {
+        "guide": 15,
+        "kind": "back",
+        "start": 8235,
+        "count": 549,
+        "indexStart": 43200,
+        "indexCount": 2880
+      },
+      {
+        "guide": 16,
+        "kind": "back",
+        "start": 8784,
+        "count": 549,
+        "indexStart": 46080,
+        "indexCount": 2880
+      },
+      {
+        "guide": 17,
+        "kind": "back",
+        "start": 9333,
+        "count": 549,
+        "indexStart": 48960,
+        "indexCount": 2880
+      },
+      {
+        "guide": 18,
+        "kind": "back",
+        "start": 9882,
+        "count": 549,
+        "indexStart": 51840,
+        "indexCount": 2880
+      },
+      {
+        "guide": 19,
+        "kind": "back",
+        "start": 10431,
+        "count": 549,
+        "indexStart": 54720,
+        "indexCount": 2880
+      },
+      {
+        "guide": 20,
+        "kind": "back",
+        "start": 10980,
+        "count": 549,
+        "indexStart": 57600,
+        "indexCount": 2880
+      },
+      {
+        "guide": 21,
+        "kind": "back",
+        "start": 11529,
+        "count": 549,
+        "indexStart": 60480,
+        "indexCount": 2880
+      },
+      {
+        "guide": 22,
+        "kind": "back",
+        "start": 12078,
+        "count": 549,
+        "indexStart": 63360,
+        "indexCount": 2880
+      },
+      {
+        "guide": 23,
+        "kind": "back",
+        "start": 12627,
+        "count": 549,
+        "indexStart": 66240,
+        "indexCount": 2880
+      },
+      {
+        "guide": 24,
+        "kind": "back",
+        "start": 13176,
+        "count": 549,
+        "indexStart": 69120,
+        "indexCount": 2880
+      },
+      {
+        "guide": 25,
+        "kind": "back",
+        "start": 13725,
+        "count": 549,
+        "indexStart": 72000,
+        "indexCount": 2880
+      },
+      {
+        "guide": 26,
+        "kind": "back",
+        "start": 14274,
+        "count": 549,
+        "indexStart": 74880,
+        "indexCount": 2880
+      },
+      {
+        "guide": 27,
+        "kind": "back",
+        "start": 14823,
+        "count": 549,
+        "indexStart": 77760,
+        "indexCount": 2880
+      },
+      {
+        "guide": 28,
+        "kind": "back",
+        "start": 15372,
+        "count": 549,
+        "indexStart": 80640,
+        "indexCount": 2880
+      },
+      {
+        "guide": 29,
+        "kind": "back",
+        "start": 15921,
+        "count": 549,
+        "indexStart": 83520,
+        "indexCount": 2880
+      },
+      {
+        "guide": 30,
+        "kind": "back",
+        "start": 16470,
+        "count": 549,
+        "indexStart": 86400,
+        "indexCount": 2880
+      },
+      {
+        "guide": 31,
+        "kind": "back",
+        "start": 17019,
+        "count": 549,
+        "indexStart": 89280,
+        "indexCount": 2880
+      },
+      {
+        "guide": 32,
+        "kind": "back",
+        "start": 17568,
+        "count": 549,
+        "indexStart": 92160,
+        "indexCount": 2880
+      },
+      {
+        "guide": 33,
+        "kind": "back",
+        "start": 18117,
+        "count": 549,
+        "indexStart": 95040,
+        "indexCount": 2880
+      },
+      {
+        "guide": 34,
+        "kind": "back",
+        "start": 18666,
+        "count": 549,
+        "indexStart": 97920,
+        "indexCount": 2880
+      },
+      {
+        "guide": 35,
+        "kind": "back",
+        "start": 19215,
+        "count": 549,
+        "indexStart": 100800,
+        "indexCount": 2880
+      },
+      {
+        "guide": 36,
+        "kind": "back",
+        "start": 19764,
+        "count": 549,
+        "indexStart": 103680,
+        "indexCount": 2880
+      },
+      {
+        "guide": 37,
+        "kind": "back",
+        "start": 20313,
+        "count": 549,
+        "indexStart": 106560,
+        "indexCount": 2880
+      },
+      {
+        "guide": 38,
+        "kind": "back",
+        "start": 20862,
+        "count": 549,
+        "indexStart": 109440,
+        "indexCount": 2880
+      },
+      {
+        "guide": 39,
+        "kind": "back",
+        "start": 21411,
+        "count": 549,
+        "indexStart": 112320,
+        "indexCount": 2880
+      },
+      {
+        "guide": 40,
+        "kind": "back",
+        "start": 21960,
+        "count": 549,
+        "indexStart": 115200,
+        "indexCount": 2880
+      },
+      {
+        "guide": 41,
+        "kind": "back",
+        "start": 22509,
+        "count": 549,
+        "indexStart": 118080,
+        "indexCount": 2880
+      },
+      {
+        "guide": 42,
+        "kind": "back",
+        "start": 23058,
+        "count": 549,
+        "indexStart": 120960,
+        "indexCount": 2880
+      },
+      {
+        "guide": 43,
+        "kind": "back",
+        "start": 23607,
+        "count": 549,
+        "indexStart": 123840,
+        "indexCount": 2880
+      },
+      {
+        "guide": 44,
+        "kind": "back",
+        "start": 24156,
+        "count": 549,
+        "indexStart": 126720,
+        "indexCount": 2880
+      },
+      {
+        "guide": 45,
+        "kind": "back",
+        "start": 24705,
+        "count": 549,
+        "indexStart": 129600,
+        "indexCount": 2880
+      },
+      {
+        "guide": 46,
+        "kind": "back",
+        "start": 25254,
+        "count": 549,
+        "indexStart": 132480,
+        "indexCount": 2880
+      },
+      {
+        "guide": 47,
+        "kind": "back",
+        "start": 25803,
+        "count": 549,
+        "indexStart": 135360,
+        "indexCount": 2880
+      },
+      {
+        "guide": 48,
+        "kind": "back",
+        "start": 26352,
+        "count": 549,
+        "indexStart": 138240,
+        "indexCount": 2880
+      },
+      {
+        "guide": 49,
+        "kind": "back",
+        "start": 26901,
+        "count": 549,
+        "indexStart": 141120,
+        "indexCount": 2880
+      },
+      {
+        "guide": 50,
+        "kind": "back",
+        "start": 27450,
+        "count": 549,
+        "indexStart": 144000,
+        "indexCount": 2880
+      },
+      {
+        "guide": 51,
+        "kind": "back",
+        "start": 27999,
+        "count": 549,
+        "indexStart": 146880,
+        "indexCount": 2880
+      },
+      {
+        "guide": 52,
+        "kind": "back",
+        "start": 28548,
+        "count": 549,
+        "indexStart": 149760,
+        "indexCount": 2880
+      },
+      {
+        "guide": 53,
+        "kind": "back",
+        "start": 29097,
+        "count": 549,
+        "indexStart": 152640,
+        "indexCount": 2880
+      },
+      {
+        "guide": 54,
+        "kind": "back",
+        "start": 29646,
+        "count": 549,
+        "indexStart": 155520,
+        "indexCount": 2880
+      },
+      {
+        "guide": 55,
+        "kind": "back",
+        "start": 30195,
+        "count": 549,
+        "indexStart": 158400,
+        "indexCount": 2880
+      },
+      {
+        "guide": 56,
+        "kind": "back",
+        "start": 30744,
+        "count": 549,
+        "indexStart": 161280,
+        "indexCount": 2880
+      },
+      {
+        "guide": 57,
+        "kind": "back",
+        "start": 31293,
+        "count": 549,
+        "indexStart": 164160,
+        "indexCount": 2880
+      },
+      {
+        "guide": 228,
+        "kind": "inner-back",
+        "start": 125172,
+        "count": 549,
+        "indexStart": 656640,
+        "indexCount": 2880
+      },
+      {
+        "guide": 229,
+        "kind": "inner-back",
+        "start": 125721,
+        "count": 549,
+        "indexStart": 659520,
+        "indexCount": 2880
+      },
+      {
+        "guide": 230,
+        "kind": "inner-back",
+        "start": 126270,
+        "count": 549,
+        "indexStart": 662400,
+        "indexCount": 2880
+      },
+      {
+        "guide": 231,
+        "kind": "inner-back",
+        "start": 126819,
+        "count": 549,
+        "indexStart": 665280,
+        "indexCount": 2880
+      },
+      {
+        "guide": 232,
+        "kind": "inner-back",
+        "start": 127368,
+        "count": 549,
+        "indexStart": 668160,
+        "indexCount": 2880
+      },
+      {
+        "guide": 233,
+        "kind": "inner-back",
+        "start": 127917,
+        "count": 549,
+        "indexStart": 671040,
+        "indexCount": 2880
+      },
+      {
+        "guide": 234,
+        "kind": "inner-back",
+        "start": 128466,
+        "count": 549,
+        "indexStart": 673920,
+        "indexCount": 2880
+      },
+      {
+        "guide": 235,
+        "kind": "inner-back",
+        "start": 129015,
+        "count": 549,
+        "indexStart": 676800,
+        "indexCount": 2880
+      },
+      {
+        "guide": 236,
+        "kind": "inner-back",
+        "start": 129564,
+        "count": 549,
+        "indexStart": 679680,
+        "indexCount": 2880
+      },
+      {
+        "guide": 237,
+        "kind": "inner-back",
+        "start": 130113,
+        "count": 549,
+        "indexStart": 682560,
+        "indexCount": 2880
+      },
+      {
+        "guide": 238,
+        "kind": "inner-back",
+        "start": 130662,
+        "count": 549,
+        "indexStart": 685440,
+        "indexCount": 2880
+      },
+      {
+        "guide": 239,
+        "kind": "inner-back",
+        "start": 131211,
+        "count": 549,
+        "indexStart": 688320,
+        "indexCount": 2880
+      },
+      {
+        "guide": 240,
+        "kind": "inner-back",
+        "start": 131760,
+        "count": 549,
+        "indexStart": 691200,
+        "indexCount": 2880
+      },
+      {
+        "guide": 241,
+        "kind": "inner-back",
+        "start": 132309,
+        "count": 549,
+        "indexStart": 694080,
+        "indexCount": 2880
+      },
+      {
+        "guide": 242,
+        "kind": "inner-back",
+        "start": 132858,
+        "count": 549,
+        "indexStart": 696960,
+        "indexCount": 2880
+      },
+      {
+        "guide": 243,
+        "kind": "inner-back",
+        "start": 133407,
+        "count": 549,
+        "indexStart": 699840,
+        "indexCount": 2880
+      },
+      {
+        "guide": 244,
+        "kind": "inner-back",
+        "start": 133956,
+        "count": 549,
+        "indexStart": 702720,
+        "indexCount": 2880
+      },
+      {
+        "guide": 245,
+        "kind": "inner-back",
+        "start": 134505,
+        "count": 549,
+        "indexStart": 705600,
+        "indexCount": 2880
+      },
+      {
+        "guide": 246,
+        "kind": "inner-back",
+        "start": 135054,
+        "count": 549,
+        "indexStart": 708480,
+        "indexCount": 2880
+      },
+      {
+        "guide": 247,
+        "kind": "inner-back",
+        "start": 135603,
+        "count": 549,
+        "indexStart": 711360,
+        "indexCount": 2880
+      },
+      {
+        "guide": 248,
+        "kind": "inner-back",
+        "start": 136152,
+        "count": 549,
+        "indexStart": 714240,
+        "indexCount": 2880
+      },
+      {
+        "guide": 249,
+        "kind": "inner-back",
+        "start": 136701,
+        "count": 549,
+        "indexStart": 717120,
+        "indexCount": 2880
+      },
+      {
+        "guide": 250,
+        "kind": "inner-back",
+        "start": 137250,
+        "count": 549,
+        "indexStart": 720000,
+        "indexCount": 2880
+      },
+      {
+        "guide": 251,
+        "kind": "inner-back",
+        "start": 137799,
+        "count": 549,
+        "indexStart": 722880,
+        "indexCount": 2880
+      },
+      {
+        "guide": 252,
+        "kind": "inner-back",
+        "start": 138348,
+        "count": 549,
+        "indexStart": 725760,
+        "indexCount": 2880
+      },
+      {
+        "guide": 253,
+        "kind": "inner-back",
+        "start": 138897,
+        "count": 549,
+        "indexStart": 728640,
+        "indexCount": 2880
+      },
+      {
+        "guide": 254,
+        "kind": "inner-back",
+        "start": 139446,
+        "count": 549,
+        "indexStart": 731520,
+        "indexCount": 2880
+      },
+      {
+        "guide": 255,
+        "kind": "inner-back",
+        "start": 139995,
+        "count": 549,
+        "indexStart": 734400,
+        "indexCount": 2880
+      },
+      {
+        "guide": 256,
+        "kind": "inner-back",
+        "start": 140544,
+        "count": 549,
+        "indexStart": 737280,
+        "indexCount": 2880
+      },
+      {
+        "guide": 257,
+        "kind": "inner-back",
+        "start": 141093,
+        "count": 549,
+        "indexStart": 740160,
+        "indexCount": 2880
+      },
+      {
+        "guide": 258,
+        "kind": "inner-back",
+        "start": 141642,
+        "count": 549,
+        "indexStart": 743040,
+        "indexCount": 2880
+      },
+      {
+        "guide": 259,
+        "kind": "inner-back",
+        "start": 142191,
+        "count": 549,
+        "indexStart": 745920,
+        "indexCount": 2880
+      },
+      {
+        "guide": 260,
+        "kind": "inner-back",
+        "start": 142740,
+        "count": 549,
+        "indexStart": 748800,
+        "indexCount": 2880
+      },
+      {
+        "guide": 261,
+        "kind": "inner-back",
+        "start": 143289,
+        "count": 549,
+        "indexStart": 751680,
+        "indexCount": 2880
+      },
+      {
+        "guide": 262,
+        "kind": "inner-back",
+        "start": 143838,
+        "count": 549,
+        "indexStart": 754560,
+        "indexCount": 2880
+      },
+      {
+        "guide": 263,
+        "kind": "inner-back",
+        "start": 144387,
+        "count": 549,
+        "indexStart": 757440,
+        "indexCount": 2880
+      },
+      {
+        "guide": 264,
+        "kind": "inner-back",
+        "start": 144936,
+        "count": 549,
+        "indexStart": 760320,
+        "indexCount": 2880
+      },
+      {
+        "guide": 265,
+        "kind": "inner-back",
+        "start": 145485,
+        "count": 549,
+        "indexStart": 763200,
+        "indexCount": 2880
+      },
+      {
+        "guide": 266,
+        "kind": "inner-back",
+        "start": 146034,
+        "count": 549,
+        "indexStart": 766080,
+        "indexCount": 2880
+      },
+      {
+        "guide": 267,
+        "kind": "inner-back",
+        "start": 146583,
+        "count": 549,
+        "indexStart": 768960,
+        "indexCount": 2880
+      },
+      {
+        "guide": 268,
+        "kind": "inner-back",
+        "start": 147132,
+        "count": 549,
+        "indexStart": 771840,
+        "indexCount": 2880
+      },
+      {
+        "guide": 269,
+        "kind": "inner-back",
+        "start": 147681,
+        "count": 549,
+        "indexStart": 774720,
+        "indexCount": 2880
+      },
+      {
+        "guide": 270,
+        "kind": "inner-back",
+        "start": 148230,
+        "count": 549,
+        "indexStart": 777600,
+        "indexCount": 2880
+      },
+      {
+        "guide": 271,
+        "kind": "inner-back",
+        "start": 148779,
+        "count": 549,
+        "indexStart": 780480,
+        "indexCount": 2880
+      },
+      {
+        "guide": 272,
+        "kind": "inner-back",
+        "start": 149328,
+        "count": 549,
+        "indexStart": 783360,
+        "indexCount": 2880
+      },
+      {
+        "guide": 273,
+        "kind": "inner-back",
+        "start": 149877,
+        "count": 549,
+        "indexStart": 786240,
+        "indexCount": 2880
+      },
+      {
+        "guide": 274,
+        "kind": "inner-back",
+        "start": 150426,
+        "count": 549,
+        "indexStart": 789120,
+        "indexCount": 2880
+      },
+      {
+        "guide": 275,
+        "kind": "inner-back",
+        "start": 150975,
+        "count": 549,
+        "indexStart": 792000,
+        "indexCount": 2880
+      }
+    ],
+    "detail": [
+      {
+        "guide": 0,
+        "kind": "back",
+        "start": 0,
+        "count": 1972,
+        "indexStart": 0,
+        "indexCount": 5712
+      },
+      {
+        "guide": 1,
+        "kind": "back",
+        "start": 1972,
+        "count": 1972,
+        "indexStart": 5712,
+        "indexCount": 5712
+      },
+      {
+        "guide": 2,
+        "kind": "back",
+        "start": 3944,
+        "count": 1972,
+        "indexStart": 11424,
+        "indexCount": 5712
+      },
+      {
+        "guide": 3,
+        "kind": "back",
+        "start": 5916,
+        "count": 1972,
+        "indexStart": 17136,
+        "indexCount": 5712
+      },
+      {
+        "guide": 4,
+        "kind": "back",
+        "start": 7888,
+        "count": 1972,
+        "indexStart": 22848,
+        "indexCount": 5712
+      },
+      {
+        "guide": 5,
+        "kind": "back",
+        "start": 9860,
+        "count": 1972,
+        "indexStart": 28560,
+        "indexCount": 5712
+      },
+      {
+        "guide": 6,
+        "kind": "back",
+        "start": 11832,
+        "count": 1972,
+        "indexStart": 34272,
+        "indexCount": 5712
+      },
+      {
+        "guide": 7,
+        "kind": "back",
+        "start": 13804,
+        "count": 1972,
+        "indexStart": 39984,
+        "indexCount": 5712
+      },
+      {
+        "guide": 8,
+        "kind": "back",
+        "start": 15776,
+        "count": 1972,
+        "indexStart": 45696,
+        "indexCount": 5712
+      },
+      {
+        "guide": 9,
+        "kind": "back",
+        "start": 17748,
+        "count": 1972,
+        "indexStart": 51408,
+        "indexCount": 5712
+      },
+      {
+        "guide": 10,
+        "kind": "back",
+        "start": 19720,
+        "count": 1972,
+        "indexStart": 57120,
+        "indexCount": 5712
+      },
+      {
+        "guide": 11,
+        "kind": "back",
+        "start": 21692,
+        "count": 1972,
+        "indexStart": 62832,
+        "indexCount": 5712
+      },
+      {
+        "guide": 12,
+        "kind": "back",
+        "start": 23664,
+        "count": 1972,
+        "indexStart": 68544,
+        "indexCount": 5712
+      },
+      {
+        "guide": 13,
+        "kind": "back",
+        "start": 25636,
+        "count": 1972,
+        "indexStart": 74256,
+        "indexCount": 5712
+      },
+      {
+        "guide": 14,
+        "kind": "back",
+        "start": 27608,
+        "count": 1972,
+        "indexStart": 79968,
+        "indexCount": 5712
+      },
+      {
+        "guide": 15,
+        "kind": "back",
+        "start": 29580,
+        "count": 1972,
+        "indexStart": 85680,
+        "indexCount": 5712
+      },
+      {
+        "guide": 16,
+        "kind": "back",
+        "start": 31552,
+        "count": 1972,
+        "indexStart": 91392,
+        "indexCount": 5712
+      },
+      {
+        "guide": 17,
+        "kind": "back",
+        "start": 33524,
+        "count": 1972,
+        "indexStart": 97104,
+        "indexCount": 5712
+      },
+      {
+        "guide": 18,
+        "kind": "back",
+        "start": 35496,
+        "count": 1972,
+        "indexStart": 102816,
+        "indexCount": 5712
+      },
+      {
+        "guide": 19,
+        "kind": "back",
+        "start": 37468,
+        "count": 1972,
+        "indexStart": 108528,
+        "indexCount": 5712
+      },
+      {
+        "guide": 20,
+        "kind": "back",
+        "start": 39440,
+        "count": 1972,
+        "indexStart": 114240,
+        "indexCount": 5712
+      },
+      {
+        "guide": 21,
+        "kind": "back",
+        "start": 41412,
+        "count": 1972,
+        "indexStart": 119952,
+        "indexCount": 5712
+      },
+      {
+        "guide": 22,
+        "kind": "back",
+        "start": 43384,
+        "count": 1972,
+        "indexStart": 125664,
+        "indexCount": 5712
+      },
+      {
+        "guide": 23,
+        "kind": "back",
+        "start": 45356,
+        "count": 1972,
+        "indexStart": 131376,
+        "indexCount": 5712
+      },
+      {
+        "guide": 24,
+        "kind": "back",
+        "start": 47328,
+        "count": 1972,
+        "indexStart": 137088,
+        "indexCount": 5712
+      },
+      {
+        "guide": 25,
+        "kind": "back",
+        "start": 49300,
+        "count": 1972,
+        "indexStart": 142800,
+        "indexCount": 5712
+      },
+      {
+        "guide": 26,
+        "kind": "back",
+        "start": 51272,
+        "count": 1972,
+        "indexStart": 148512,
+        "indexCount": 5712
+      },
+      {
+        "guide": 27,
+        "kind": "back",
+        "start": 53244,
+        "count": 1972,
+        "indexStart": 154224,
+        "indexCount": 5712
+      },
+      {
+        "guide": 28,
+        "kind": "back",
+        "start": 55216,
+        "count": 1972,
+        "indexStart": 159936,
+        "indexCount": 5712
+      },
+      {
+        "guide": 29,
+        "kind": "back",
+        "start": 57188,
+        "count": 1972,
+        "indexStart": 165648,
+        "indexCount": 5712
+      },
+      {
+        "guide": 30,
+        "kind": "back",
+        "start": 59160,
+        "count": 1972,
+        "indexStart": 171360,
+        "indexCount": 5712
+      },
+      {
+        "guide": 31,
+        "kind": "back",
+        "start": 61132,
+        "count": 1972,
+        "indexStart": 177072,
+        "indexCount": 5712
+      },
+      {
+        "guide": 32,
+        "kind": "back",
+        "start": 63104,
+        "count": 1972,
+        "indexStart": 182784,
+        "indexCount": 5712
+      },
+      {
+        "guide": 33,
+        "kind": "back",
+        "start": 65076,
+        "count": 1972,
+        "indexStart": 188496,
+        "indexCount": 5712
+      },
+      {
+        "guide": 34,
+        "kind": "back",
+        "start": 67048,
+        "count": 1972,
+        "indexStart": 194208,
+        "indexCount": 5712
+      },
+      {
+        "guide": 35,
+        "kind": "back",
+        "start": 69020,
+        "count": 1972,
+        "indexStart": 199920,
+        "indexCount": 5712
+      },
+      {
+        "guide": 36,
+        "kind": "back",
+        "start": 70992,
+        "count": 1972,
+        "indexStart": 205632,
+        "indexCount": 5712
+      },
+      {
+        "guide": 37,
+        "kind": "back",
+        "start": 72964,
+        "count": 1972,
+        "indexStart": 211344,
+        "indexCount": 5712
+      },
+      {
+        "guide": 38,
+        "kind": "back",
+        "start": 74936,
+        "count": 1972,
+        "indexStart": 217056,
+        "indexCount": 5712
+      },
+      {
+        "guide": 39,
+        "kind": "back",
+        "start": 76908,
+        "count": 1972,
+        "indexStart": 222768,
+        "indexCount": 5712
+      },
+      {
+        "guide": 40,
+        "kind": "back",
+        "start": 78880,
+        "count": 1972,
+        "indexStart": 228480,
+        "indexCount": 5712
+      },
+      {
+        "guide": 41,
+        "kind": "back",
+        "start": 80852,
+        "count": 1972,
+        "indexStart": 234192,
+        "indexCount": 5712
+      },
+      {
+        "guide": 42,
+        "kind": "back",
+        "start": 82824,
+        "count": 1972,
+        "indexStart": 239904,
+        "indexCount": 5712
+      },
+      {
+        "guide": 43,
+        "kind": "back",
+        "start": 84796,
+        "count": 1972,
+        "indexStart": 245616,
+        "indexCount": 5712
+      },
+      {
+        "guide": 44,
+        "kind": "back",
+        "start": 86768,
+        "count": 1972,
+        "indexStart": 251328,
+        "indexCount": 5712
+      },
+      {
+        "guide": 45,
+        "kind": "back",
+        "start": 88740,
+        "count": 1972,
+        "indexStart": 257040,
+        "indexCount": 5712
+      },
+      {
+        "guide": 46,
+        "kind": "back",
+        "start": 90712,
+        "count": 1972,
+        "indexStart": 262752,
+        "indexCount": 5712
+      },
+      {
+        "guide": 47,
+        "kind": "back",
+        "start": 92684,
+        "count": 1972,
+        "indexStart": 268464,
+        "indexCount": 5712
+      },
+      {
+        "guide": 48,
+        "kind": "back",
+        "start": 94656,
+        "count": 1972,
+        "indexStart": 274176,
+        "indexCount": 5712
+      },
+      {
+        "guide": 49,
+        "kind": "back",
+        "start": 96628,
+        "count": 1972,
+        "indexStart": 279888,
+        "indexCount": 5712
+      },
+      {
+        "guide": 50,
+        "kind": "back",
+        "start": 98600,
+        "count": 1972,
+        "indexStart": 285600,
+        "indexCount": 5712
+      },
+      {
+        "guide": 51,
+        "kind": "back",
+        "start": 100572,
+        "count": 1972,
+        "indexStart": 291312,
+        "indexCount": 5712
+      },
+      {
+        "guide": 52,
+        "kind": "back",
+        "start": 102544,
+        "count": 1972,
+        "indexStart": 297024,
+        "indexCount": 5712
+      },
+      {
+        "guide": 53,
+        "kind": "back",
+        "start": 104516,
+        "count": 1972,
+        "indexStart": 302736,
+        "indexCount": 5712
+      },
+      {
+        "guide": 54,
+        "kind": "back",
+        "start": 106488,
+        "count": 1972,
+        "indexStart": 308448,
+        "indexCount": 5712
+      },
+      {
+        "guide": 55,
+        "kind": "back",
+        "start": 108460,
+        "count": 1972,
+        "indexStart": 314160,
+        "indexCount": 5712
+      },
+      {
+        "guide": 56,
+        "kind": "back",
+        "start": 110432,
+        "count": 1972,
+        "indexStart": 319872,
+        "indexCount": 5712
+      },
+      {
+        "guide": 57,
+        "kind": "back",
+        "start": 112404,
+        "count": 1972,
+        "indexStart": 325584,
+        "indexCount": 5712
+      },
+      {
+        "guide": 228,
+        "kind": "inner-back",
+        "start": 439350,
+        "count": 928,
+        "indexStart": 1272600,
+        "indexCount": 2688
+      },
+      {
+        "guide": 229,
+        "kind": "inner-back",
+        "start": 440278,
+        "count": 928,
+        "indexStart": 1275288,
+        "indexCount": 2688
+      },
+      {
+        "guide": 230,
+        "kind": "inner-back",
+        "start": 441206,
+        "count": 928,
+        "indexStart": 1277976,
+        "indexCount": 2688
+      },
+      {
+        "guide": 231,
+        "kind": "inner-back",
+        "start": 442134,
+        "count": 928,
+        "indexStart": 1280664,
+        "indexCount": 2688
+      },
+      {
+        "guide": 232,
+        "kind": "inner-back",
+        "start": 443062,
+        "count": 928,
+        "indexStart": 1283352,
+        "indexCount": 2688
+      },
+      {
+        "guide": 233,
+        "kind": "inner-back",
+        "start": 443990,
+        "count": 928,
+        "indexStart": 1286040,
+        "indexCount": 2688
+      },
+      {
+        "guide": 234,
+        "kind": "inner-back",
+        "start": 444918,
+        "count": 928,
+        "indexStart": 1288728,
+        "indexCount": 2688
+      },
+      {
+        "guide": 235,
+        "kind": "inner-back",
+        "start": 445846,
+        "count": 928,
+        "indexStart": 1291416,
+        "indexCount": 2688
+      },
+      {
+        "guide": 236,
+        "kind": "inner-back",
+        "start": 446774,
+        "count": 928,
+        "indexStart": 1294104,
+        "indexCount": 2688
+      },
+      {
+        "guide": 237,
+        "kind": "inner-back",
+        "start": 447702,
+        "count": 928,
+        "indexStart": 1296792,
+        "indexCount": 2688
+      },
+      {
+        "guide": 238,
+        "kind": "inner-back",
+        "start": 448630,
+        "count": 928,
+        "indexStart": 1299480,
+        "indexCount": 2688
+      },
+      {
+        "guide": 239,
+        "kind": "inner-back",
+        "start": 449558,
+        "count": 928,
+        "indexStart": 1302168,
+        "indexCount": 2688
+      },
+      {
+        "guide": 240,
+        "kind": "inner-back",
+        "start": 450486,
+        "count": 928,
+        "indexStart": 1304856,
+        "indexCount": 2688
+      },
+      {
+        "guide": 241,
+        "kind": "inner-back",
+        "start": 451414,
+        "count": 928,
+        "indexStart": 1307544,
+        "indexCount": 2688
+      },
+      {
+        "guide": 242,
+        "kind": "inner-back",
+        "start": 452342,
+        "count": 928,
+        "indexStart": 1310232,
+        "indexCount": 2688
+      },
+      {
+        "guide": 243,
+        "kind": "inner-back",
+        "start": 453270,
+        "count": 928,
+        "indexStart": 1312920,
+        "indexCount": 2688
+      },
+      {
+        "guide": 244,
+        "kind": "inner-back",
+        "start": 454198,
+        "count": 928,
+        "indexStart": 1315608,
+        "indexCount": 2688
+      },
+      {
+        "guide": 245,
+        "kind": "inner-back",
+        "start": 455126,
+        "count": 928,
+        "indexStart": 1318296,
+        "indexCount": 2688
+      },
+      {
+        "guide": 246,
+        "kind": "inner-back",
+        "start": 456054,
+        "count": 928,
+        "indexStart": 1320984,
+        "indexCount": 2688
+      },
+      {
+        "guide": 247,
+        "kind": "inner-back",
+        "start": 456982,
+        "count": 928,
+        "indexStart": 1323672,
+        "indexCount": 2688
+      },
+      {
+        "guide": 248,
+        "kind": "inner-back",
+        "start": 457910,
+        "count": 928,
+        "indexStart": 1326360,
+        "indexCount": 2688
+      },
+      {
+        "guide": 249,
+        "kind": "inner-back",
+        "start": 458838,
+        "count": 928,
+        "indexStart": 1329048,
+        "indexCount": 2688
+      },
+      {
+        "guide": 250,
+        "kind": "inner-back",
+        "start": 459766,
+        "count": 928,
+        "indexStart": 1331736,
+        "indexCount": 2688
+      },
+      {
+        "guide": 251,
+        "kind": "inner-back",
+        "start": 460694,
+        "count": 928,
+        "indexStart": 1334424,
+        "indexCount": 2688
+      },
+      {
+        "guide": 252,
+        "kind": "inner-back",
+        "start": 461622,
+        "count": 928,
+        "indexStart": 1337112,
+        "indexCount": 2688
+      },
+      {
+        "guide": 253,
+        "kind": "inner-back",
+        "start": 462550,
+        "count": 928,
+        "indexStart": 1339800,
+        "indexCount": 2688
+      },
+      {
+        "guide": 254,
+        "kind": "inner-back",
+        "start": 463478,
+        "count": 928,
+        "indexStart": 1342488,
+        "indexCount": 2688
+      },
+      {
+        "guide": 255,
+        "kind": "inner-back",
+        "start": 464406,
+        "count": 928,
+        "indexStart": 1345176,
+        "indexCount": 2688
+      },
+      {
+        "guide": 256,
+        "kind": "inner-back",
+        "start": 465334,
+        "count": 928,
+        "indexStart": 1347864,
+        "indexCount": 2688
+      },
+      {
+        "guide": 257,
+        "kind": "inner-back",
+        "start": 466262,
+        "count": 928,
+        "indexStart": 1350552,
+        "indexCount": 2688
+      },
+      {
+        "guide": 258,
+        "kind": "inner-back",
+        "start": 467190,
+        "count": 928,
+        "indexStart": 1353240,
+        "indexCount": 2688
+      },
+      {
+        "guide": 259,
+        "kind": "inner-back",
+        "start": 468118,
+        "count": 928,
+        "indexStart": 1355928,
+        "indexCount": 2688
+      },
+      {
+        "guide": 260,
+        "kind": "inner-back",
+        "start": 469046,
+        "count": 928,
+        "indexStart": 1358616,
+        "indexCount": 2688
+      },
+      {
+        "guide": 261,
+        "kind": "inner-back",
+        "start": 469974,
+        "count": 928,
+        "indexStart": 1361304,
+        "indexCount": 2688
+      },
+      {
+        "guide": 262,
+        "kind": "inner-back",
+        "start": 470902,
+        "count": 928,
+        "indexStart": 1363992,
+        "indexCount": 2688
+      },
+      {
+        "guide": 263,
+        "kind": "inner-back",
+        "start": 471830,
+        "count": 928,
+        "indexStart": 1366680,
+        "indexCount": 2688
+      },
+      {
+        "guide": 264,
+        "kind": "inner-back",
+        "start": 472758,
+        "count": 928,
+        "indexStart": 1369368,
+        "indexCount": 2688
+      },
+      {
+        "guide": 265,
+        "kind": "inner-back",
+        "start": 473686,
+        "count": 928,
+        "indexStart": 1372056,
+        "indexCount": 2688
+      },
+      {
+        "guide": 266,
+        "kind": "inner-back",
+        "start": 474614,
+        "count": 928,
+        "indexStart": 1374744,
+        "indexCount": 2688
+      },
+      {
+        "guide": 267,
+        "kind": "inner-back",
+        "start": 475542,
+        "count": 928,
+        "indexStart": 1377432,
+        "indexCount": 2688
+      },
+      {
+        "guide": 268,
+        "kind": "inner-back",
+        "start": 476470,
+        "count": 928,
+        "indexStart": 1380120,
+        "indexCount": 2688
+      },
+      {
+        "guide": 269,
+        "kind": "inner-back",
+        "start": 477398,
+        "count": 928,
+        "indexStart": 1382808,
+        "indexCount": 2688
+      },
+      {
+        "guide": 270,
+        "kind": "inner-back",
+        "start": 478326,
+        "count": 928,
+        "indexStart": 1385496,
+        "indexCount": 2688
+      },
+      {
+        "guide": 271,
+        "kind": "inner-back",
+        "start": 479254,
+        "count": 928,
+        "indexStart": 1388184,
+        "indexCount": 2688
+      },
+      {
+        "guide": 272,
+        "kind": "inner-back",
+        "start": 480182,
+        "count": 928,
+        "indexStart": 1390872,
+        "indexCount": 2688
+      },
+      {
+        "guide": 273,
+        "kind": "inner-back",
+        "start": 481110,
+        "count": 928,
+        "indexStart": 1393560,
+        "indexCount": 2688
+      },
+      {
+        "guide": 274,
+        "kind": "inner-back",
+        "start": 482038,
+        "count": 928,
+        "indexStart": 1396248,
+        "indexCount": 2688
+      },
+      {
+        "guide": 275,
+        "kind": "inner-back",
+        "start": 482966,
+        "count": 928,
+        "indexStart": 1398936,
+        "indexCount": 2688
+      },
+      {
+        "guide": 27,
+        "kind": "back",
+        "flyaway": true,
+        "start": 608194,
+        "count": 50,
+        "indexStart": 1760712,
+        "indexCount": 144
+      },
+      {
+        "guide": 26,
+        "kind": "back",
+        "flyaway": true,
+        "start": 608344,
+        "count": 50,
+        "indexStart": 1761144,
+        "indexCount": 144
+      },
+      {
+        "guide": 240,
+        "kind": "inner-back",
+        "flyaway": true,
+        "start": 608444,
+        "count": 50,
+        "indexStart": 1761432,
+        "indexCount": 144
+      },
+      {
+        "guide": 14,
+        "kind": "back",
+        "flyaway": true,
+        "start": 608594,
+        "count": 50,
+        "indexStart": 1761864,
+        "indexCount": 144
+      },
+      {
+        "guide": 37,
+        "kind": "back",
+        "flyaway": true,
+        "start": 608694,
+        "count": 50,
+        "indexStart": 1762152,
+        "indexCount": 144
+      },
+      {
+        "guide": 21,
+        "kind": "back",
+        "flyaway": true,
+        "start": 608944,
+        "count": 50,
+        "indexStart": 1762872,
+        "indexCount": 144
+      },
+      {
+        "guide": 55,
+        "kind": "back",
+        "flyaway": true,
+        "start": 609044,
+        "count": 50,
+        "indexStart": 1763160,
+        "indexCount": 144
+      },
+      {
+        "guide": 23,
+        "kind": "back",
+        "flyaway": true,
+        "start": 609344,
+        "count": 50,
+        "indexStart": 1764024,
+        "indexCount": 144
+      },
+      {
+        "guide": 244,
+        "kind": "inner-back",
+        "flyaway": true,
+        "start": 609444,
+        "count": 50,
+        "indexStart": 1764312,
+        "indexCount": 144
+      },
+      {
+        "guide": 266,
+        "kind": "inner-back",
+        "flyaway": true,
+        "start": 609494,
+        "count": 50,
+        "indexStart": 1764456,
+        "indexCount": 144
+      },
+      {
+        "guide": 6,
+        "kind": "back",
+        "flyaway": true,
+        "start": 610244,
+        "count": 50,
+        "indexStart": 1766616,
+        "indexCount": 144
+      },
+      {
+        "guide": 21,
+        "kind": "back",
+        "flyaway": true,
+        "start": 610594,
+        "count": 50,
+        "indexStart": 1767624,
+        "indexCount": 144
+      },
+      {
+        "guide": 16,
+        "kind": "back",
+        "flyaway": true,
+        "start": 610744,
+        "count": 50,
+        "indexStart": 1768056,
+        "indexCount": 144
+      },
+      {
+        "guide": 241,
+        "kind": "inner-back",
+        "flyaway": true,
+        "start": 610994,
+        "count": 50,
+        "indexStart": 1768776,
+        "indexCount": 144
+      },
+      {
+        "guide": 32,
+        "kind": "back",
+        "flyaway": true,
+        "start": 611094,
+        "count": 50,
+        "indexStart": 1769064,
+        "indexCount": 144
+      },
+      {
+        "guide": 5,
+        "kind": "back",
+        "flyaway": true,
+        "start": 611494,
+        "count": 50,
+        "indexStart": 1770216,
+        "indexCount": 144
+      },
+      {
+        "guide": 246,
+        "kind": "inner-back",
+        "flyaway": true,
+        "start": 611944,
+        "count": 50,
+        "indexStart": 1771512,
+        "indexCount": 144
+      },
+      {
+        "guide": 251,
+        "kind": "inner-back",
+        "flyaway": true,
+        "start": 611994,
+        "count": 50,
+        "indexStart": 1771656,
+        "indexCount": 144
+      },
+      {
+        "guide": 44,
+        "kind": "back",
+        "flyaway": true,
+        "start": 612044,
+        "count": 50,
+        "indexStart": 1771800,
+        "indexCount": 144
+      },
+      {
+        "guide": 252,
+        "kind": "inner-back",
+        "flyaway": true,
+        "start": 612094,
+        "count": 50,
+        "indexStart": 1771944,
+        "indexCount": 144
+      },
+      {
+        "guide": 26,
+        "kind": "back",
+        "flyaway": true,
+        "start": 612294,
+        "count": 50,
+        "indexStart": 1772520,
+        "indexCount": 144
+      },
+      {
+        "guide": 13,
+        "kind": "back",
+        "flyaway": true,
+        "start": 612344,
+        "count": 50,
+        "indexStart": 1772664,
+        "indexCount": 144
+      }
+    ]
+  },
+  "protectedChanges": [],
+  "results": [
+    {
+      "name": "Continuous parted crown with longitudinal fiber flow",
+      "ownedVertices": 0,
+      "changed": {
+        "position": 0,
+        "color": 0,
+        "uv": 0,
+        "normal": 0,
+        "index": 0
+      },
+      "newDegenerate": 0,
+      "newOpposed": 0,
+      "inheritedDegenerate": 0,
+      "inheritedOpposed": 0,
+      "affectedTriangles": 0,
+      "maximumDisplacement": 0,
+      "minimumAreaRatio": null
+    },
+    {
+      "name": "Overlapping layered S-wave hair around front back and shoulders",
+      "ownedVertices": 58194,
+      "changed": {
+        "position": 109666,
+        "color": 0,
+        "uv": 0,
+        "normal": 112558,
+        "index": 0
+      },
+      "newDegenerate": 0,
+      "newOpposed": 0,
+      "inheritedDegenerate": 0,
+      "inheritedOpposed": 280,
+      "affectedTriangles": 101760,
+      "maximumDisplacement": 0.20723029282502578,
+      "minimumAreaRatio": 0.9824540131207253
+    },
+    {
+      "name": "Independent fine crown lengths and silhouette strands",
+      "ownedVertices": 160020,
+      "changed": {
+        "position": 289635,
+        "color": 0,
+        "uv": 0,
+        "normal": 309875,
+        "index": 0
+      },
+      "newDegenerate": 0,
+      "newOpposed": 0,
+      "inheritedDegenerate": 0,
+      "inheritedOpposed": 3,
+      "affectedTriangles": 154496,
+      "maximumDisplacement": 0.20706422330986912,
+      "minimumAreaRatio": 0.9835728876353689
+    },
+    {
+      "name": "Dense fine bowed brown fringe strands",
+      "ownedVertices": 0,
+      "changed": {
+        "position": 0,
+        "color": 0,
+        "uv": 0,
+        "normal": 0,
+        "index": 0
+      },
+      "newDegenerate": 0,
+      "newOpposed": 0,
+      "inheritedDegenerate": 0,
+      "inheritedOpposed": 0,
+      "affectedTriangles": 0,
+      "maximumDisplacement": 0,
+      "minimumAreaRatio": null
+    },
+    {
+      "name": "Sparse short temple edge and hairline wisps",
+      "ownedVertices": 0,
+      "changed": {
+        "position": 0,
+        "color": 0,
+        "uv": 0,
+        "normal": 0,
+        "index": 0
+      },
+      "newDegenerate": 0,
+      "newOpposed": 0,
+      "inheritedDegenerate": 0,
+      "inheritedOpposed": 0,
+      "affectedTriangles": 0,
+      "maximumDisplacement": 0,
+      "minimumAreaRatio": null
+    }
+  ],
+  "helper": {
+    "version": "rear-flow-166-mac-recovery",
+    "strength": 1,
+    "guideCount": 106,
+    "outer": 58,
+    "inner": 48,
+    "maximumSampledDrop": 0.20060512783245463,
+    "maximumSampledDepth": 0.09785028743863275,
+    "minimumSampledDeterminant": 1,
+    "upperPointTangentIdentity": true,
+    "scope": "Guide field only; sampled bounds do not certify every swept triangle or interface.",
+    "elapsedMs": 5.208958000000166,
+    "ranges": {
+      "mass": [
+        {
+          "guide": 0,
+          "kind": "back",
+          "start": 0,
+          "count": 549,
+          "indexStart": 0,
+          "indexCount": 2880
+        },
+        {
+          "guide": 1,
+          "kind": "back",
+          "start": 549,
+          "count": 549,
+          "indexStart": 2880,
+          "indexCount": 2880
+        },
+        {
+          "guide": 2,
+          "kind": "back",
+          "start": 1098,
+          "count": 549,
+          "indexStart": 5760,
+          "indexCount": 2880
+        },
+        {
+          "guide": 3,
+          "kind": "back",
+          "start": 1647,
+          "count": 549,
+          "indexStart": 8640,
+          "indexCount": 2880
+        },
+        {
+          "guide": 4,
+          "kind": "back",
+          "start": 2196,
+          "count": 549,
+          "indexStart": 11520,
+          "indexCount": 2880
+        },
+        {
+          "guide": 5,
+          "kind": "back",
+          "start": 2745,
+          "count": 549,
+          "indexStart": 14400,
+          "indexCount": 2880
+        },
+        {
+          "guide": 6,
+          "kind": "back",
+          "start": 3294,
+          "count": 549,
+          "indexStart": 17280,
+          "indexCount": 2880
+        },
+        {
+          "guide": 7,
+          "kind": "back",
+          "start": 3843,
+          "count": 549,
+          "indexStart": 20160,
+          "indexCount": 2880
+        },
+        {
+          "guide": 8,
+          "kind": "back",
+          "start": 4392,
+          "count": 549,
+          "indexStart": 23040,
+          "indexCount": 2880
+        },
+        {
+          "guide": 9,
+          "kind": "back",
+          "start": 4941,
+          "count": 549,
+          "indexStart": 25920,
+          "indexCount": 2880
+        },
+        {
+          "guide": 10,
+          "kind": "back",
+          "start": 5490,
+          "count": 549,
+          "indexStart": 28800,
+          "indexCount": 2880
+        },
+        {
+          "guide": 11,
+          "kind": "back",
+          "start": 6039,
+          "count": 549,
+          "indexStart": 31680,
+          "indexCount": 2880
+        },
+        {
+          "guide": 12,
+          "kind": "back",
+          "start": 6588,
+          "count": 549,
+          "indexStart": 34560,
+          "indexCount": 2880
+        },
+        {
+          "guide": 13,
+          "kind": "back",
+          "start": 7137,
+          "count": 549,
+          "indexStart": 37440,
+          "indexCount": 2880
+        },
+        {
+          "guide": 14,
+          "kind": "back",
+          "start": 7686,
+          "count": 549,
+          "indexStart": 40320,
+          "indexCount": 2880
+        },
+        {
+          "guide": 15,
+          "kind": "back",
+          "start": 8235,
+          "count": 549,
+          "indexStart": 43200,
+          "indexCount": 2880
+        },
+        {
+          "guide": 16,
+          "kind": "back",
+          "start": 8784,
+          "count": 549,
+          "indexStart": 46080,
+          "indexCount": 2880
+        },
+        {
+          "guide": 17,
+          "kind": "back",
+          "start": 9333,
+          "count": 549,
+          "indexStart": 48960,
+          "indexCount": 2880
+        },
+        {
+          "guide": 18,
+          "kind": "back",
+          "start": 9882,
+          "count": 549,
+          "indexStart": 51840,
+          "indexCount": 2880
+        },
+        {
+          "guide": 19,
+          "kind": "back",
+          "start": 10431,
+          "count": 549,
+          "indexStart": 54720,
+          "indexCount": 2880
+        },
+        {
+          "guide": 20,
+          "kind": "back",
+          "start": 10980,
+          "count": 549,
+          "indexStart": 57600,
+          "indexCount": 2880
+        },
+        {
+          "guide": 21,
+          "kind": "back",
+          "start": 11529,
+          "count": 549,
+          "indexStart": 60480,
+          "indexCount": 2880
+        },
+        {
+          "guide": 22,
+          "kind": "back",
+          "start": 12078,
+          "count": 549,
+          "indexStart": 63360,
+          "indexCount": 2880
+        },
+        {
+          "guide": 23,
+          "kind": "back",
+          "start": 12627,
+          "count": 549,
+          "indexStart": 66240,
+          "indexCount": 2880
+        },
+        {
+          "guide": 24,
+          "kind": "back",
+          "start": 13176,
+          "count": 549,
+          "indexStart": 69120,
+          "indexCount": 2880
+        },
+        {
+          "guide": 25,
+          "kind": "back",
+          "start": 13725,
+          "count": 549,
+          "indexStart": 72000,
+          "indexCount": 2880
+        },
+        {
+          "guide": 26,
+          "kind": "back",
+          "start": 14274,
+          "count": 549,
+          "indexStart": 74880,
+          "indexCount": 2880
+        },
+        {
+          "guide": 27,
+          "kind": "back",
+          "start": 14823,
+          "count": 549,
+          "indexStart": 77760,
+          "indexCount": 2880
+        },
+        {
+          "guide": 28,
+          "kind": "back",
+          "start": 15372,
+          "count": 549,
+          "indexStart": 80640,
+          "indexCount": 2880
+        },
+        {
+          "guide": 29,
+          "kind": "back",
+          "start": 15921,
+          "count": 549,
+          "indexStart": 83520,
+          "indexCount": 2880
+        },
+        {
+          "guide": 30,
+          "kind": "back",
+          "start": 16470,
+          "count": 549,
+          "indexStart": 86400,
+          "indexCount": 2880
+        },
+        {
+          "guide": 31,
+          "kind": "back",
+          "start": 17019,
+          "count": 549,
+          "indexStart": 89280,
+          "indexCount": 2880
+        },
+        {
+          "guide": 32,
+          "kind": "back",
+          "start": 17568,
+          "count": 549,
+          "indexStart": 92160,
+          "indexCount": 2880
+        },
+        {
+          "guide": 33,
+          "kind": "back",
+          "start": 18117,
+          "count": 549,
+          "indexStart": 95040,
+          "indexCount": 2880
+        },
+        {
+          "guide": 34,
+          "kind": "back",
+          "start": 18666,
+          "count": 549,
+          "indexStart": 97920,
+          "indexCount": 2880
+        },
+        {
+          "guide": 35,
+          "kind": "back",
+          "start": 19215,
+          "count": 549,
+          "indexStart": 100800,
+          "indexCount": 2880
+        },
+        {
+          "guide": 36,
+          "kind": "back",
+          "start": 19764,
+          "count": 549,
+          "indexStart": 103680,
+          "indexCount": 2880
+        },
+        {
+          "guide": 37,
+          "kind": "back",
+          "start": 20313,
+          "count": 549,
+          "indexStart": 106560,
+          "indexCount": 2880
+        },
+        {
+          "guide": 38,
+          "kind": "back",
+          "start": 20862,
+          "count": 549,
+          "indexStart": 109440,
+          "indexCount": 2880
+        },
+        {
+          "guide": 39,
+          "kind": "back",
+          "start": 21411,
+          "count": 549,
+          "indexStart": 112320,
+          "indexCount": 2880
+        },
+        {
+          "guide": 40,
+          "kind": "back",
+          "start": 21960,
+          "count": 549,
+          "indexStart": 115200,
+          "indexCount": 2880
+        },
+        {
+          "guide": 41,
+          "kind": "back",
+          "start": 22509,
+          "count": 549,
+          "indexStart": 118080,
+          "indexCount": 2880
+        },
+        {
+          "guide": 42,
+          "kind": "back",
+          "start": 23058,
+          "count": 549,
+          "indexStart": 120960,
+          "indexCount": 2880
+        },
+        {
+          "guide": 43,
+          "kind": "back",
+          "start": 23607,
+          "count": 549,
+          "indexStart": 123840,
+          "indexCount": 2880
+        },
+        {
+          "guide": 44,
+          "kind": "back",
+          "start": 24156,
+          "count": 549,
+          "indexStart": 126720,
+          "indexCount": 2880
+        },
+        {
+          "guide": 45,
+          "kind": "back",
+          "start": 24705,
+          "count": 549,
+          "indexStart": 129600,
+          "indexCount": 2880
+        },
+        {
+          "guide": 46,
+          "kind": "back",
+          "start": 25254,
+          "count": 549,
+          "indexStart": 132480,
+          "indexCount": 2880
+        },
+        {
+          "guide": 47,
+          "kind": "back",
+          "start": 25803,
+          "count": 549,
+          "indexStart": 135360,
+          "indexCount": 2880
+        },
+        {
+          "guide": 48,
+          "kind": "back",
+          "start": 26352,
+          "count": 549,
+          "indexStart": 138240,
+          "indexCount": 2880
+        },
+        {
+          "guide": 49,
+          "kind": "back",
+          "start": 26901,
+          "count": 549,
+          "indexStart": 141120,
+          "indexCount": 2880
+        },
+        {
+          "guide": 50,
+          "kind": "back",
+          "start": 27450,
+          "count": 549,
+          "indexStart": 144000,
+          "indexCount": 2880
+        },
+        {
+          "guide": 51,
+          "kind": "back",
+          "start": 27999,
+          "count": 549,
+          "indexStart": 146880,
+          "indexCount": 2880
+        },
+        {
+          "guide": 52,
+          "kind": "back",
+          "start": 28548,
+          "count": 549,
+          "indexStart": 149760,
+          "indexCount": 2880
+        },
+        {
+          "guide": 53,
+          "kind": "back",
+          "start": 29097,
+          "count": 549,
+          "indexStart": 152640,
+          "indexCount": 2880
+        },
+        {
+          "guide": 54,
+          "kind": "back",
+          "start": 29646,
+          "count": 549,
+          "indexStart": 155520,
+          "indexCount": 2880
+        },
+        {
+          "guide": 55,
+          "kind": "back",
+          "start": 30195,
+          "count": 549,
+          "indexStart": 158400,
+          "indexCount": 2880
+        },
+        {
+          "guide": 56,
+          "kind": "back",
+          "start": 30744,
+          "count": 549,
+          "indexStart": 161280,
+          "indexCount": 2880
+        },
+        {
+          "guide": 57,
+          "kind": "back",
+          "start": 31293,
+          "count": 549,
+          "indexStart": 164160,
+          "indexCount": 2880
+        },
+        {
+          "guide": 228,
+          "kind": "inner-back",
+          "start": 125172,
+          "count": 549,
+          "indexStart": 656640,
+          "indexCount": 2880
+        },
+        {
+          "guide": 229,
+          "kind": "inner-back",
+          "start": 125721,
+          "count": 549,
+          "indexStart": 659520,
+          "indexCount": 2880
+        },
+        {
+          "guide": 230,
+          "kind": "inner-back",
+          "start": 126270,
+          "count": 549,
+          "indexStart": 662400,
+          "indexCount": 2880
+        },
+        {
+          "guide": 231,
+          "kind": "inner-back",
+          "start": 126819,
+          "count": 549,
+          "indexStart": 665280,
+          "indexCount": 2880
+        },
+        {
+          "guide": 232,
+          "kind": "inner-back",
+          "start": 127368,
+          "count": 549,
+          "indexStart": 668160,
+          "indexCount": 2880
+        },
+        {
+          "guide": 233,
+          "kind": "inner-back",
+          "start": 127917,
+          "count": 549,
+          "indexStart": 671040,
+          "indexCount": 2880
+        },
+        {
+          "guide": 234,
+          "kind": "inner-back",
+          "start": 128466,
+          "count": 549,
+          "indexStart": 673920,
+          "indexCount": 2880
+        },
+        {
+          "guide": 235,
+          "kind": "inner-back",
+          "start": 129015,
+          "count": 549,
+          "indexStart": 676800,
+          "indexCount": 2880
+        },
+        {
+          "guide": 236,
+          "kind": "inner-back",
+          "start": 129564,
+          "count": 549,
+          "indexStart": 679680,
+          "indexCount": 2880
+        },
+        {
+          "guide": 237,
+          "kind": "inner-back",
+          "start": 130113,
+          "count": 549,
+          "indexStart": 682560,
+          "indexCount": 2880
+        },
+        {
+          "guide": 238,
+          "kind": "inner-back",
+          "start": 130662,
+          "count": 549,
+          "indexStart": 685440,
+          "indexCount": 2880
+        },
+        {
+          "guide": 239,
+          "kind": "inner-back",
+          "start": 131211,
+          "count": 549,
+          "indexStart": 688320,
+          "indexCount": 2880
+        },
+        {
+          "guide": 240,
+          "kind": "inner-back",
+          "start": 131760,
+          "count": 549,
+          "indexStart": 691200,
+          "indexCount": 2880
+        },
+        {
+          "guide": 241,
+          "kind": "inner-back",
+          "start": 132309,
+          "count": 549,
+          "indexStart": 694080,
+          "indexCount": 2880
+        },
+        {
+          "guide": 242,
+          "kind": "inner-back",
+          "start": 132858,
+          "count": 549,
+          "indexStart": 696960,
+          "indexCount": 2880
+        },
+        {
+          "guide": 243,
+          "kind": "inner-back",
+          "start": 133407,
+          "count": 549,
+          "indexStart": 699840,
+          "indexCount": 2880
+        },
+        {
+          "guide": 244,
+          "kind": "inner-back",
+          "start": 133956,
+          "count": 549,
+          "indexStart": 702720,
+          "indexCount": 2880
+        },
+        {
+          "guide": 245,
+          "kind": "inner-back",
+          "start": 134505,
+          "count": 549,
+          "indexStart": 705600,
+          "indexCount": 2880
+        },
+        {
+          "guide": 246,
+          "kind": "inner-back",
+          "start": 135054,
+          "count": 549,
+          "indexStart": 708480,
+          "indexCount": 2880
+        },
+        {
+          "guide": 247,
+          "kind": "inner-back",
+          "start": 135603,
+          "count": 549,
+          "indexStart": 711360,
+          "indexCount": 2880
+        },
+        {
+          "guide": 248,
+          "kind": "inner-back",
+          "start": 136152,
+          "count": 549,
+          "indexStart": 714240,
+          "indexCount": 2880
+        },
+        {
+          "guide": 249,
+          "kind": "inner-back",
+          "start": 136701,
+          "count": 549,
+          "indexStart": 717120,
+          "indexCount": 2880
+        },
+        {
+          "guide": 250,
+          "kind": "inner-back",
+          "start": 137250,
+          "count": 549,
+          "indexStart": 720000,
+          "indexCount": 2880
+        },
+        {
+          "guide": 251,
+          "kind": "inner-back",
+          "start": 137799,
+          "count": 549,
+          "indexStart": 722880,
+          "indexCount": 2880
+        },
+        {
+          "guide": 252,
+          "kind": "inner-back",
+          "start": 138348,
+          "count": 549,
+          "indexStart": 725760,
+          "indexCount": 2880
+        },
+        {
+          "guide": 253,
+          "kind": "inner-back",
+          "start": 138897,
+          "count": 549,
+          "indexStart": 728640,
+          "indexCount": 2880
+        },
+        {
+          "guide": 254,
+          "kind": "inner-back",
+          "start": 139446,
+          "count": 549,
+          "indexStart": 731520,
+          "indexCount": 2880
+        },
+        {
+          "guide": 255,
+          "kind": "inner-back",
+          "start": 139995,
+          "count": 549,
+          "indexStart": 734400,
+          "indexCount": 2880
+        },
+        {
+          "guide": 256,
+          "kind": "inner-back",
+          "start": 140544,
+          "count": 549,
+          "indexStart": 737280,
+          "indexCount": 2880
+        },
+        {
+          "guide": 257,
+          "kind": "inner-back",
+          "start": 141093,
+          "count": 549,
+          "indexStart": 740160,
+          "indexCount": 2880
+        },
+        {
+          "guide": 258,
+          "kind": "inner-back",
+          "start": 141642,
+          "count": 549,
+          "indexStart": 743040,
+          "indexCount": 2880
+        },
+        {
+          "guide": 259,
+          "kind": "inner-back",
+          "start": 142191,
+          "count": 549,
+          "indexStart": 745920,
+          "indexCount": 2880
+        },
+        {
+          "guide": 260,
+          "kind": "inner-back",
+          "start": 142740,
+          "count": 549,
+          "indexStart": 748800,
+          "indexCount": 2880
+        },
+        {
+          "guide": 261,
+          "kind": "inner-back",
+          "start": 143289,
+          "count": 549,
+          "indexStart": 751680,
+          "indexCount": 2880
+        },
+        {
+          "guide": 262,
+          "kind": "inner-back",
+          "start": 143838,
+          "count": 549,
+          "indexStart": 754560,
+          "indexCount": 2880
+        },
+        {
+          "guide": 263,
+          "kind": "inner-back",
+          "start": 144387,
+          "count": 549,
+          "indexStart": 757440,
+          "indexCount": 2880
+        },
+        {
+          "guide": 264,
+          "kind": "inner-back",
+          "start": 144936,
+          "count": 549,
+          "indexStart": 760320,
+          "indexCount": 2880
+        },
+        {
+          "guide": 265,
+          "kind": "inner-back",
+          "start": 145485,
+          "count": 549,
+          "indexStart": 763200,
+          "indexCount": 2880
+        },
+        {
+          "guide": 266,
+          "kind": "inner-back",
+          "start": 146034,
+          "count": 549,
+          "indexStart": 766080,
+          "indexCount": 2880
+        },
+        {
+          "guide": 267,
+          "kind": "inner-back",
+          "start": 146583,
+          "count": 549,
+          "indexStart": 768960,
+          "indexCount": 2880
+        },
+        {
+          "guide": 268,
+          "kind": "inner-back",
+          "start": 147132,
+          "count": 549,
+          "indexStart": 771840,
+          "indexCount": 2880
+        },
+        {
+          "guide": 269,
+          "kind": "inner-back",
+          "start": 147681,
+          "count": 549,
+          "indexStart": 774720,
+          "indexCount": 2880
+        },
+        {
+          "guide": 270,
+          "kind": "inner-back",
+          "start": 148230,
+          "count": 549,
+          "indexStart": 777600,
+          "indexCount": 2880
+        },
+        {
+          "guide": 271,
+          "kind": "inner-back",
+          "start": 148779,
+          "count": 549,
+          "indexStart": 780480,
+          "indexCount": 2880
+        },
+        {
+          "guide": 272,
+          "kind": "inner-back",
+          "start": 149328,
+          "count": 549,
+          "indexStart": 783360,
+          "indexCount": 2880
+        },
+        {
+          "guide": 273,
+          "kind": "inner-back",
+          "start": 149877,
+          "count": 549,
+          "indexStart": 786240,
+          "indexCount": 2880
+        },
+        {
+          "guide": 274,
+          "kind": "inner-back",
+          "start": 150426,
+          "count": 549,
+          "indexStart": 789120,
+          "indexCount": 2880
+        },
+        {
+          "guide": 275,
+          "kind": "inner-back",
+          "start": 150975,
+          "count": 549,
+          "indexStart": 792000,
+          "indexCount": 2880
+        }
+      ],
+      "detail": [
+        {
+          "guide": 0,
+          "kind": "back",
+          "start": 0,
+          "count": 1972,
+          "indexStart": 0,
+          "indexCount": 5712
+        },
+        {
+          "guide": 1,
+          "kind": "back",
+          "start": 1972,
+          "count": 1972,
+          "indexStart": 5712,
+          "indexCount": 5712
+        },
+        {
+          "guide": 2,
+          "kind": "back",
+          "start": 3944,
+          "count": 1972,
+          "indexStart": 11424,
+          "indexCount": 5712
+        },
+        {
+          "guide": 3,
+          "kind": "back",
+          "start": 5916,
+          "count": 1972,
+          "indexStart": 17136,
+          "indexCount": 5712
+        },
+        {
+          "guide": 4,
+          "kind": "back",
+          "start": 7888,
+          "count": 1972,
+          "indexStart": 22848,
+          "indexCount": 5712
+        },
+        {
+          "guide": 5,
+          "kind": "back",
+          "start": 9860,
+          "count": 1972,
+          "indexStart": 28560,
+          "indexCount": 5712
+        },
+        {
+          "guide": 6,
+          "kind": "back",
+          "start": 11832,
+          "count": 1972,
+          "indexStart": 34272,
+          "indexCount": 5712
+        },
+        {
+          "guide": 7,
+          "kind": "back",
+          "start": 13804,
+          "count": 1972,
+          "indexStart": 39984,
+          "indexCount": 5712
+        },
+        {
+          "guide": 8,
+          "kind": "back",
+          "start": 15776,
+          "count": 1972,
+          "indexStart": 45696,
+          "indexCount": 5712
+        },
+        {
+          "guide": 9,
+          "kind": "back",
+          "start": 17748,
+          "count": 1972,
+          "indexStart": 51408,
+          "indexCount": 5712
+        },
+        {
+          "guide": 10,
+          "kind": "back",
+          "start": 19720,
+          "count": 1972,
+          "indexStart": 57120,
+          "indexCount": 5712
+        },
+        {
+          "guide": 11,
+          "kind": "back",
+          "start": 21692,
+          "count": 1972,
+          "indexStart": 62832,
+          "indexCount": 5712
+        },
+        {
+          "guide": 12,
+          "kind": "back",
+          "start": 23664,
+          "count": 1972,
+          "indexStart": 68544,
+          "indexCount": 5712
+        },
+        {
+          "guide": 13,
+          "kind": "back",
+          "start": 25636,
+          "count": 1972,
+          "indexStart": 74256,
+          "indexCount": 5712
+        },
+        {
+          "guide": 14,
+          "kind": "back",
+          "start": 27608,
+          "count": 1972,
+          "indexStart": 79968,
+          "indexCount": 5712
+        },
+        {
+          "guide": 15,
+          "kind": "back",
+          "start": 29580,
+          "count": 1972,
+          "indexStart": 85680,
+          "indexCount": 5712
+        },
+        {
+          "guide": 16,
+          "kind": "back",
+          "start": 31552,
+          "count": 1972,
+          "indexStart": 91392,
+          "indexCount": 5712
+        },
+        {
+          "guide": 17,
+          "kind": "back",
+          "start": 33524,
+          "count": 1972,
+          "indexStart": 97104,
+          "indexCount": 5712
+        },
+        {
+          "guide": 18,
+          "kind": "back",
+          "start": 35496,
+          "count": 1972,
+          "indexStart": 102816,
+          "indexCount": 5712
+        },
+        {
+          "guide": 19,
+          "kind": "back",
+          "start": 37468,
+          "count": 1972,
+          "indexStart": 108528,
+          "indexCount": 5712
+        },
+        {
+          "guide": 20,
+          "kind": "back",
+          "start": 39440,
+          "count": 1972,
+          "indexStart": 114240,
+          "indexCount": 5712
+        },
+        {
+          "guide": 21,
+          "kind": "back",
+          "start": 41412,
+          "count": 1972,
+          "indexStart": 119952,
+          "indexCount": 5712
+        },
+        {
+          "guide": 22,
+          "kind": "back",
+          "start": 43384,
+          "count": 1972,
+          "indexStart": 125664,
+          "indexCount": 5712
+        },
+        {
+          "guide": 23,
+          "kind": "back",
+          "start": 45356,
+          "count": 1972,
+          "indexStart": 131376,
+          "indexCount": 5712
+        },
+        {
+          "guide": 24,
+          "kind": "back",
+          "start": 47328,
+          "count": 1972,
+          "indexStart": 137088,
+          "indexCount": 5712
+        },
+        {
+          "guide": 25,
+          "kind": "back",
+          "start": 49300,
+          "count": 1972,
+          "indexStart": 142800,
+          "indexCount": 5712
+        },
+        {
+          "guide": 26,
+          "kind": "back",
+          "start": 51272,
+          "count": 1972,
+          "indexStart": 148512,
+          "indexCount": 5712
+        },
+        {
+          "guide": 27,
+          "kind": "back",
+          "start": 53244,
+          "count": 1972,
+          "indexStart": 154224,
+          "indexCount": 5712
+        },
+        {
+          "guide": 28,
+          "kind": "back",
+          "start": 55216,
+          "count": 1972,
+          "indexStart": 159936,
+          "indexCount": 5712
+        },
+        {
+          "guide": 29,
+          "kind": "back",
+          "start": 57188,
+          "count": 1972,
+          "indexStart": 165648,
+          "indexCount": 5712
+        },
+        {
+          "guide": 30,
+          "kind": "back",
+          "start": 59160,
+          "count": 1972,
+          "indexStart": 171360,
+          "indexCount": 5712
+        },
+        {
+          "guide": 31,
+          "kind": "back",
+          "start": 61132,
+          "count": 1972,
+          "indexStart": 177072,
+          "indexCount": 5712
+        },
+        {
+          "guide": 32,
+          "kind": "back",
+          "start": 63104,
+          "count": 1972,
+          "indexStart": 182784,
+          "indexCount": 5712
+        },
+        {
+          "guide": 33,
+          "kind": "back",
+          "start": 65076,
+          "count": 1972,
+          "indexStart": 188496,
+          "indexCount": 5712
+        },
+        {
+          "guide": 34,
+          "kind": "back",
+          "start": 67048,
+          "count": 1972,
+          "indexStart": 194208,
+          "indexCount": 5712
+        },
+        {
+          "guide": 35,
+          "kind": "back",
+          "start": 69020,
+          "count": 1972,
+          "indexStart": 199920,
+          "indexCount": 5712
+        },
+        {
+          "guide": 36,
+          "kind": "back",
+          "start": 70992,
+          "count": 1972,
+          "indexStart": 205632,
+          "indexCount": 5712
+        },
+        {
+          "guide": 37,
+          "kind": "back",
+          "start": 72964,
+          "count": 1972,
+          "indexStart": 211344,
+          "indexCount": 5712
+        },
+        {
+          "guide": 38,
+          "kind": "back",
+          "start": 74936,
+          "count": 1972,
+          "indexStart": 217056,
+          "indexCount": 5712
+        },
+        {
+          "guide": 39,
+          "kind": "back",
+          "start": 76908,
+          "count": 1972,
+          "indexStart": 222768,
+          "indexCount": 5712
+        },
+        {
+          "guide": 40,
+          "kind": "back",
+          "start": 78880,
+          "count": 1972,
+          "indexStart": 228480,
+          "indexCount": 5712
+        },
+        {
+          "guide": 41,
+          "kind": "back",
+          "start": 80852,
+          "count": 1972,
+          "indexStart": 234192,
+          "indexCount": 5712
+        },
+        {
+          "guide": 42,
+          "kind": "back",
+          "start": 82824,
+          "count": 1972,
+          "indexStart": 239904,
+          "indexCount": 5712
+        },
+        {
+          "guide": 43,
+          "kind": "back",
+          "start": 84796,
+          "count": 1972,
+          "indexStart": 245616,
+          "indexCount": 5712
+        },
+        {
+          "guide": 44,
+          "kind": "back",
+          "start": 86768,
+          "count": 1972,
+          "indexStart": 251328,
+          "indexCount": 5712
+        },
+        {
+          "guide": 45,
+          "kind": "back",
+          "start": 88740,
+          "count": 1972,
+          "indexStart": 257040,
+          "indexCount": 5712
+        },
+        {
+          "guide": 46,
+          "kind": "back",
+          "start": 90712,
+          "count": 1972,
+          "indexStart": 262752,
+          "indexCount": 5712
+        },
+        {
+          "guide": 47,
+          "kind": "back",
+          "start": 92684,
+          "count": 1972,
+          "indexStart": 268464,
+          "indexCount": 5712
+        },
+        {
+          "guide": 48,
+          "kind": "back",
+          "start": 94656,
+          "count": 1972,
+          "indexStart": 274176,
+          "indexCount": 5712
+        },
+        {
+          "guide": 49,
+          "kind": "back",
+          "start": 96628,
+          "count": 1972,
+          "indexStart": 279888,
+          "indexCount": 5712
+        },
+        {
+          "guide": 50,
+          "kind": "back",
+          "start": 98600,
+          "count": 1972,
+          "indexStart": 285600,
+          "indexCount": 5712
+        },
+        {
+          "guide": 51,
+          "kind": "back",
+          "start": 100572,
+          "count": 1972,
+          "indexStart": 291312,
+          "indexCount": 5712
+        },
+        {
+          "guide": 52,
+          "kind": "back",
+          "start": 102544,
+          "count": 1972,
+          "indexStart": 297024,
+          "indexCount": 5712
+        },
+        {
+          "guide": 53,
+          "kind": "back",
+          "start": 104516,
+          "count": 1972,
+          "indexStart": 302736,
+          "indexCount": 5712
+        },
+        {
+          "guide": 54,
+          "kind": "back",
+          "start": 106488,
+          "count": 1972,
+          "indexStart": 308448,
+          "indexCount": 5712
+        },
+        {
+          "guide": 55,
+          "kind": "back",
+          "start": 108460,
+          "count": 1972,
+          "indexStart": 314160,
+          "indexCount": 5712
+        },
+        {
+          "guide": 56,
+          "kind": "back",
+          "start": 110432,
+          "count": 1972,
+          "indexStart": 319872,
+          "indexCount": 5712
+        },
+        {
+          "guide": 57,
+          "kind": "back",
+          "start": 112404,
+          "count": 1972,
+          "indexStart": 325584,
+          "indexCount": 5712
+        },
+        {
+          "guide": 228,
+          "kind": "inner-back",
+          "start": 439350,
+          "count": 928,
+          "indexStart": 1272600,
+          "indexCount": 2688
+        },
+        {
+          "guide": 229,
+          "kind": "inner-back",
+          "start": 440278,
+          "count": 928,
+          "indexStart": 1275288,
+          "indexCount": 2688
+        },
+        {
+          "guide": 230,
+          "kind": "inner-back",
+          "start": 441206,
+          "count": 928,
+          "indexStart": 1277976,
+          "indexCount": 2688
+        },
+        {
+          "guide": 231,
+          "kind": "inner-back",
+          "start": 442134,
+          "count": 928,
+          "indexStart": 1280664,
+          "indexCount": 2688
+        },
+        {
+          "guide": 232,
+          "kind": "inner-back",
+          "start": 443062,
+          "count": 928,
+          "indexStart": 1283352,
+          "indexCount": 2688
+        },
+        {
+          "guide": 233,
+          "kind": "inner-back",
+          "start": 443990,
+          "count": 928,
+          "indexStart": 1286040,
+          "indexCount": 2688
+        },
+        {
+          "guide": 234,
+          "kind": "inner-back",
+          "start": 444918,
+          "count": 928,
+          "indexStart": 1288728,
+          "indexCount": 2688
+        },
+        {
+          "guide": 235,
+          "kind": "inner-back",
+          "start": 445846,
+          "count": 928,
+          "indexStart": 1291416,
+          "indexCount": 2688
+        },
+        {
+          "guide": 236,
+          "kind": "inner-back",
+          "start": 446774,
+          "count": 928,
+          "indexStart": 1294104,
+          "indexCount": 2688
+        },
+        {
+          "guide": 237,
+          "kind": "inner-back",
+          "start": 447702,
+          "count": 928,
+          "indexStart": 1296792,
+          "indexCount": 2688
+        },
+        {
+          "guide": 238,
+          "kind": "inner-back",
+          "start": 448630,
+          "count": 928,
+          "indexStart": 1299480,
+          "indexCount": 2688
+        },
+        {
+          "guide": 239,
+          "kind": "inner-back",
+          "start": 449558,
+          "count": 928,
+          "indexStart": 1302168,
+          "indexCount": 2688
+        },
+        {
+          "guide": 240,
+          "kind": "inner-back",
+          "start": 450486,
+          "count": 928,
+          "indexStart": 1304856,
+          "indexCount": 2688
+        },
+        {
+          "guide": 241,
+          "kind": "inner-back",
+          "start": 451414,
+          "count": 928,
+          "indexStart": 1307544,
+          "indexCount": 2688
+        },
+        {
+          "guide": 242,
+          "kind": "inner-back",
+          "start": 452342,
+          "count": 928,
+          "indexStart": 1310232,
+          "indexCount": 2688
+        },
+        {
+          "guide": 243,
+          "kind": "inner-back",
+          "start": 453270,
+          "count": 928,
+          "indexStart": 1312920,
+          "indexCount": 2688
+        },
+        {
+          "guide": 244,
+          "kind": "inner-back",
+          "start": 454198,
+          "count": 928,
+          "indexStart": 1315608,
+          "indexCount": 2688
+        },
+        {
+          "guide": 245,
+          "kind": "inner-back",
+          "start": 455126,
+          "count": 928,
+          "indexStart": 1318296,
+          "indexCount": 2688
+        },
+        {
+          "guide": 246,
+          "kind": "inner-back",
+          "start": 456054,
+          "count": 928,
+          "indexStart": 1320984,
+          "indexCount": 2688
+        },
+        {
+          "guide": 247,
+          "kind": "inner-back",
+          "start": 456982,
+          "count": 928,
+          "indexStart": 1323672,
+          "indexCount": 2688
+        },
+        {
+          "guide": 248,
+          "kind": "inner-back",
+          "start": 457910,
+          "count": 928,
+          "indexStart": 1326360,
+          "indexCount": 2688
+        },
+        {
+          "guide": 249,
+          "kind": "inner-back",
+          "start": 458838,
+          "count": 928,
+          "indexStart": 1329048,
+          "indexCount": 2688
+        },
+        {
+          "guide": 250,
+          "kind": "inner-back",
+          "start": 459766,
+          "count": 928,
+          "indexStart": 1331736,
+          "indexCount": 2688
+        },
+        {
+          "guide": 251,
+          "kind": "inner-back",
+          "start": 460694,
+          "count": 928,
+          "indexStart": 1334424,
+          "indexCount": 2688
+        },
+        {
+          "guide": 252,
+          "kind": "inner-back",
+          "start": 461622,
+          "count": 928,
+          "indexStart": 1337112,
+          "indexCount": 2688
+        },
+        {
+          "guide": 253,
+          "kind": "inner-back",
+          "start": 462550,
+          "count": 928,
+          "indexStart": 1339800,
+          "indexCount": 2688
+        },
+        {
+          "guide": 254,
+          "kind": "inner-back",
+          "start": 463478,
+          "count": 928,
+          "indexStart": 1342488,
+          "indexCount": 2688
+        },
+        {
+          "guide": 255,
+          "kind": "inner-back",
+          "start": 464406,
+          "count": 928,
+          "indexStart": 1345176,
+          "indexCount": 2688
+        },
+        {
+          "guide": 256,
+          "kind": "inner-back",
+          "start": 465334,
+          "count": 928,
+          "indexStart": 1347864,
+          "indexCount": 2688
+        },
+        {
+          "guide": 257,
+          "kind": "inner-back",
+          "start": 466262,
+          "count": 928,
+          "indexStart": 1350552,
+          "indexCount": 2688
+        },
+        {
+          "guide": 258,
+          "kind": "inner-back",
+          "start": 467190,
+          "count": 928,
+          "indexStart": 1353240,
+          "indexCount": 2688
+        },
+        {
+          "guide": 259,
+          "kind": "inner-back",
+          "start": 468118,
+          "count": 928,
+          "indexStart": 1355928,
+          "indexCount": 2688
+        },
+        {
+          "guide": 260,
+          "kind": "inner-back",
+          "start": 469046,
+          "count": 928,
+          "indexStart": 1358616,
+          "indexCount": 2688
+        },
+        {
+          "guide": 261,
+          "kind": "inner-back",
+          "start": 469974,
+          "count": 928,
+          "indexStart": 1361304,
+          "indexCount": 2688
+        },
+        {
+          "guide": 262,
+          "kind": "inner-back",
+          "start": 470902,
+          "count": 928,
+          "indexStart": 1363992,
+          "indexCount": 2688
+        },
+        {
+          "guide": 263,
+          "kind": "inner-back",
+          "start": 471830,
+          "count": 928,
+          "indexStart": 1366680,
+          "indexCount": 2688
+        },
+        {
+          "guide": 264,
+          "kind": "inner-back",
+          "start": 472758,
+          "count": 928,
+          "indexStart": 1369368,
+          "indexCount": 2688
+        },
+        {
+          "guide": 265,
+          "kind": "inner-back",
+          "start": 473686,
+          "count": 928,
+          "indexStart": 1372056,
+          "indexCount": 2688
+        },
+        {
+          "guide": 266,
+          "kind": "inner-back",
+          "start": 474614,
+          "count": 928,
+          "indexStart": 1374744,
+          "indexCount": 2688
+        },
+        {
+          "guide": 267,
+          "kind": "inner-back",
+          "start": 475542,
+          "count": 928,
+          "indexStart": 1377432,
+          "indexCount": 2688
+        },
+        {
+          "guide": 268,
+          "kind": "inner-back",
+          "start": 476470,
+          "count": 928,
+          "indexStart": 1380120,
+          "indexCount": 2688
+        },
+        {
+          "guide": 269,
+          "kind": "inner-back",
+          "start": 477398,
+          "count": 928,
+          "indexStart": 1382808,
+          "indexCount": 2688
+        },
+        {
+          "guide": 270,
+          "kind": "inner-back",
+          "start": 478326,
+          "count": 928,
+          "indexStart": 1385496,
+          "indexCount": 2688
+        },
+        {
+          "guide": 271,
+          "kind": "inner-back",
+          "start": 479254,
+          "count": 928,
+          "indexStart": 1388184,
+          "indexCount": 2688
+        },
+        {
+          "guide": 272,
+          "kind": "inner-back",
+          "start": 480182,
+          "count": 928,
+          "indexStart": 1390872,
+          "indexCount": 2688
+        },
+        {
+          "guide": 273,
+          "kind": "inner-back",
+          "start": 481110,
+          "count": 928,
+          "indexStart": 1393560,
+          "indexCount": 2688
+        },
+        {
+          "guide": 274,
+          "kind": "inner-back",
+          "start": 482038,
+          "count": 928,
+          "indexStart": 1396248,
+          "indexCount": 2688
+        },
+        {
+          "guide": 275,
+          "kind": "inner-back",
+          "start": 482966,
+          "count": 928,
+          "indexStart": 1398936,
+          "indexCount": 2688
+        },
+        {
+          "guide": 27,
+          "kind": "back",
+          "flyaway": true,
+          "start": 608194,
+          "count": 50,
+          "indexStart": 1760712,
+          "indexCount": 144
+        },
+        {
+          "guide": 26,
+          "kind": "back",
+          "flyaway": true,
+          "start": 608344,
+          "count": 50,
+          "indexStart": 1761144,
+          "indexCount": 144
+        },
+        {
+          "guide": 240,
+          "kind": "inner-back",
+          "flyaway": true,
+          "start": 608444,
+          "count": 50,
+          "indexStart": 1761432,
+          "indexCount": 144
+        },
+        {
+          "guide": 14,
+          "kind": "back",
+          "flyaway": true,
+          "start": 608594,
+          "count": 50,
+          "indexStart": 1761864,
+          "indexCount": 144
+        },
+        {
+          "guide": 37,
+          "kind": "back",
+          "flyaway": true,
+          "start": 608694,
+          "count": 50,
+          "indexStart": 1762152,
+          "indexCount": 144
+        },
+        {
+          "guide": 21,
+          "kind": "back",
+          "flyaway": true,
+          "start": 608944,
+          "count": 50,
+          "indexStart": 1762872,
+          "indexCount": 144
+        },
+        {
+          "guide": 55,
+          "kind": "back",
+          "flyaway": true,
+          "start": 609044,
+          "count": 50,
+          "indexStart": 1763160,
+          "indexCount": 144
+        },
+        {
+          "guide": 23,
+          "kind": "back",
+          "flyaway": true,
+          "start": 609344,
+          "count": 50,
+          "indexStart": 1764024,
+          "indexCount": 144
+        },
+        {
+          "guide": 244,
+          "kind": "inner-back",
+          "flyaway": true,
+          "start": 609444,
+          "count": 50,
+          "indexStart": 1764312,
+          "indexCount": 144
+        },
+        {
+          "guide": 266,
+          "kind": "inner-back",
+          "flyaway": true,
+          "start": 609494,
+          "count": 50,
+          "indexStart": 1764456,
+          "indexCount": 144
+        },
+        {
+          "guide": 6,
+          "kind": "back",
+          "flyaway": true,
+          "start": 610244,
+          "count": 50,
+          "indexStart": 1766616,
+          "indexCount": 144
+        },
+        {
+          "guide": 21,
+          "kind": "back",
+          "flyaway": true,
+          "start": 610594,
+          "count": 50,
+          "indexStart": 1767624,
+          "indexCount": 144
+        },
+        {
+          "guide": 16,
+          "kind": "back",
+          "flyaway": true,
+          "start": 610744,
+          "count": 50,
+          "indexStart": 1768056,
+          "indexCount": 144
+        },
+        {
+          "guide": 241,
+          "kind": "inner-back",
+          "flyaway": true,
+          "start": 610994,
+          "count": 50,
+          "indexStart": 1768776,
+          "indexCount": 144
+        },
+        {
+          "guide": 32,
+          "kind": "back",
+          "flyaway": true,
+          "start": 611094,
+          "count": 50,
+          "indexStart": 1769064,
+          "indexCount": 144
+        },
+        {
+          "guide": 5,
+          "kind": "back",
+          "flyaway": true,
+          "start": 611494,
+          "count": 50,
+          "indexStart": 1770216,
+          "indexCount": 144
+        },
+        {
+          "guide": 246,
+          "kind": "inner-back",
+          "flyaway": true,
+          "start": 611944,
+          "count": 50,
+          "indexStart": 1771512,
+          "indexCount": 144
+        },
+        {
+          "guide": 251,
+          "kind": "inner-back",
+          "flyaway": true,
+          "start": 611994,
+          "count": 50,
+          "indexStart": 1771656,
+          "indexCount": 144
+        },
+        {
+          "guide": 44,
+          "kind": "back",
+          "flyaway": true,
+          "start": 612044,
+          "count": 50,
+          "indexStart": 1771800,
+          "indexCount": 144
+        },
+        {
+          "guide": 252,
+          "kind": "inner-back",
+          "flyaway": true,
+          "start": 612094,
+          "count": 50,
+          "indexStart": 1771944,
+          "indexCount": 144
+        },
+        {
+          "guide": 26,
+          "kind": "back",
+          "flyaway": true,
+          "start": 612294,
+          "count": 50,
+          "indexStart": 1772520,
+          "indexCount": 144
+        },
+        {
+          "guide": 13,
+          "kind": "back",
+          "flyaway": true,
+          "start": 612344,
+          "count": 50,
+          "indexStart": 1772664,
+          "indexCount": 144
+        }
+      ]
+    }
+  },
+  "sourceScope": "Indexed accepted authored source fixture, with118 and99. Full actual164 prepared scene is the separate native gate. No global contact, self-intersection or interface certification.",
+  "elapsedMs": 7694.424416,
+  "rssMiB": 462.94732666015625
+}

@@ -1,0 +1,37 @@
+{
+  "iteration": 171,
+  "acceptedIteration": 164,
+  "acceptedScore": 78,
+  "goalAchieved": false,
+  "provenance": "Root Mac front-fiber construction after auxiliary executor outage and stalled background handoffs. Original167 capture/head lookup/index ownership only; no opaque167 emitter. Original image1 is the sole visual reference.",
+  "files": {
+    "review/front171-mac-core.js": {
+      "bytes": 12475,
+      "sha256": "850571aec6f3bf09d6b79072ec1ccc92da5d69e333e076fca448fa443f559a9a"
+    },
+    "review/hair-groom-candidate171-mac.js": {
+      "bytes": 45068,
+      "sha256": "d14e4d164fbce24af592d69c56189a44e3f410d747f4c143b4473557ea13c576"
+    },
+    "review/front171-mac-fibers.js": {
+      "bytes": 13857,
+      "sha256": "2abd0d0903a2dee73856af55d18f11bd9c107a0bf9027b660faa63bc6c4e218a"
+    },
+    "review/front171-mac-source-check.mjs": {
+      "bytes": 7958,
+      "sha256": "a096126eb0429c85554127ea8c30947cdbb3746f8c9c25a81214224e69b621f1"
+    },
+    "review/front171-mac-source-check.json": {
+      "bytes": 8133,
+      "sha256": "365bd43033098e6fb400824eb68e989c3cc716ff0bea48759a8353f57f349c04"
+    },
+    "review/front171-mac-qa.js": {
+      "bytes": 8210,
+      "sha256": "c472c45a40320c1d4d050c45af51f1e01cd7861e14cc3e3452ee54e0f284f585"
+    },
+    "review/front171-mac-native.mjs": {
+      "bytes": 17507,
+      "sha256": "92e8ed1adb74c9d7047512d1e845af2358b378e837610570213ac72a81888313"
+    }
+  }
+}

@@ -1,0 +1,271 @@
+{
+  "iteration": 171,
+  "acceptedIteration": 164,
+  "acceptedScore": 78,
+  "goalAchieved": false,
+  "status": "Source essentials pass; native art gate pending",
+  "provenance": "Root Mac construction after offline auxiliary executor and stalled agent handoffs. Uses only original image1-directed project geometry; no opaque167 emitter exists in the171 core.",
+  "files": {
+    "review/front171-mac-core.js": {
+      "bytes": 12475,
+      "sha256": "850571aec6f3bf09d6b79072ec1ccc92da5d69e333e076fca448fa443f559a9a"
+    },
+    "review/hair-groom-candidate171-mac.js": {
+      "bytes": 45068,
+      "sha256": "d14e4d164fbce24af592d69c56189a44e3f410d747f4c143b4473557ea13c576"
+    },
+    "review/front171-mac-fibers.js": {
+      "bytes": 13857,
+      "sha256": "2abd0d0903a2dee73856af55d18f11bd9c107a0bf9027b660faa63bc6c4e218a"
+    },
+    "review/front171-mac-source-check.mjs": {
+      "bytes": 7958,
+      "sha256": "a096126eb0429c85554127ea8c30947cdbb3746f8c9c25a81214224e69b621f1"
+    }
+  },
+  "zeroOriginalArraysAndMapsExact": true,
+  "legacyAttributesAndMaterialBindingsExact": true,
+  "changedLegacyIndices": [
+    {
+      "name": "Continuous parted crown with longitudinal fiber flow",
+      "before": {
+        "type": "Uint16Array",
+        "itemSize": 1,
+        "count": 143232,
+        "sha256": "8f13eae7318ba6620c8fb089144a4c682febe552e8f09352cf7defc120277976",
+        "indexLogicalSHA256": "85ff4f43d8bcded8caf36be79dc9e88178fa40faa856f1b4937bcae564a33ee2"
+      },
+      "after": {
+        "type": "Uint16Array",
+        "itemSize": 1,
+        "count": 106032,
+        "sha256": "7c73f259fa4506b46ab3981fbd29eaa9c6d4a6f5e09eb87314816202b35c905b",
+        "indexLogicalSHA256": "7ebebf1c9138deaea6e09a98bf8d02e4ee91f0f47440727ab59d8ff9199b5f55"
+      }
+    },
+    {
+      "name": "Independent fine crown lengths and silhouette strands",
+      "before": {
+        "type": "Uint32Array",
+        "itemSize": 1,
+        "count": 1871928,
+        "sha256": "a254d7ef6f9e1d548b32e558ad12c7843099f65b5826f864b7bf96f874da3c13",
+        "indexLogicalSHA256": "a254d7ef6f9e1d548b32e558ad12c7843099f65b5826f864b7bf96f874da3c13"
+      },
+      "after": {
+        "type": "Uint32Array",
+        "itemSize": 1,
+        "count": 1733868,
+        "sha256": "df54c16e2fe12cbb26dba729b8db921833995b03bbeff8d5cf7a4082838fc6c0",
+        "indexLogicalSHA256": "df54c16e2fe12cbb26dba729b8db921833995b03bbeff8d5cf7a4082838fc6c0"
+      }
+    },
+    {
+      "name": "Dense fine bowed brown fringe strands",
+      "before": {
+        "type": "Uint32Array",
+        "itemSize": 1,
+        "count": 399480,
+        "sha256": "ba1a6bd4f3e3397ee89ad5d414400596c4096983c8eed73e7335217d6350c63c",
+        "indexLogicalSHA256": "ba1a6bd4f3e3397ee89ad5d414400596c4096983c8eed73e7335217d6350c63c"
+      },
+      "after": {
+        "type": "Uint32Array",
+        "itemSize": 1,
+        "count": 59520,
+        "sha256": "77fd2e1e00bdaa060e81ee5fcb7eaf4fe7f1237bbdf820afbc94e2196c78ad17",
+        "indexLogicalSHA256": "77fd2e1e00bdaa060e81ee5fcb7eaf4fe7f1237bbdf820afbc94e2196c78ad17"
+      }
+    },
+    {
+      "name": "Sparse short temple edge and hairline wisps",
+      "before": {
+        "type": "Uint16Array",
+        "itemSize": 1,
+        "count": 94824,
+        "sha256": "7dda0c6142355b39ea41c187a73245da9222ae4574cdcc204bc4948899faf91b",
+        "indexLogicalSHA256": "7d5ba6d9045d67610302db2a62b54d61e7cd0575cec76b38c1bbc8a159713e93"
+      },
+      "after": {
+        "type": "Uint16Array",
+        "itemSize": 1,
+        "count": 25128,
+        "sha256": "6a3c2dda4ca85560b52c5f8decd2ec9c49a4d9b15557cd0cc592aacdd16b780a",
+        "indexLogicalSHA256": "65fbb285eea0efc7c6816e379b1f8b4432b2f053bba42030a5b693545d8cfdd2"
+      }
+    }
+  ],
+  "metrics": {
+    "version": "continuous-root-explicit-front-fibers-171-mac",
+    "strength": 1,
+    "applied": true,
+    "representation": "2700 tapered physical fiber ribbons with900 orthogonal cross ribbons; no opaque167 body",
+    "preparedTranslation": [
+      -0.233519084751606,
+      -0.04008519649505615,
+      -0.038236379623413086
+    ],
+    "translationAnchorResidual": 5.360568475409657e-8,
+    "physicalFibers": 2700,
+    "crossRibbons": 900,
+    "ribbons": 3600,
+    "vertices": 525600,
+    "triangles": 518400,
+    "geometryBytes": 29347200,
+    "steps": 72,
+    "lattice": [
+      {
+        "side": -1,
+        "routes": 65,
+        "maximumControlLift": 0.08833530104513143,
+        "maximumResidualPenetration": 0,
+        "sampledSupportHits": 3768,
+        "sampledSupportMisses": 262
+      },
+      {
+        "side": 1,
+        "routes": 65,
+        "maximumControlLift": 0,
+        "maximumResidualPenetration": 0,
+        "sampledSupportHits": 3428,
+        "sampledSupportMisses": 602
+      }
+    ],
+    "sampledSupport": {
+      "hits": 1639,
+      "misses": 155,
+      "minimumGap": 0.012988153716375517,
+      "maximumPenetration": 0,
+      "scope": "Sparse emitted center samples; not a global collision/clearance proof. Embedded root samples are excluded."
+    },
+    "nonfinite": 0,
+    "degenerateTriangles": 0,
+    "normalOpposedTriangles": 0,
+    "minimumNormalCosine": 0.98442109177178,
+    "minimumDoubleArea": 4.0535660752788744e-8,
+    "normalLengthError": 4.924434771069741e-8,
+    "elapsedMs": 650.1692500000008,
+    "addedTriangles": 518400,
+    "removedTriangles": 194972,
+    "removedCrownTriangles": 12400,
+    "removedUpstreamTriangles": 182572,
+    "addedGeometryBytes": 29347200,
+    "addedTextureBytes": 0,
+    "newMaterialCount": 0,
+    "materialSource": "Shared existing DETAIL material after single149 tint; no clone or repeated tint",
+    "castShadow": true,
+    "perFrameWork": 0,
+    "retainSourceForQA": true,
+    "support": {
+      "triangles": 115914,
+      "records": [
+        {
+          "name": "continuous-face",
+          "scalp": true,
+          "groups": [
+            [
+              0,
+              325224
+            ]
+          ]
+        },
+        {
+          "name": "scleral-globe",
+          "scalp": false,
+          "groups": [
+            [
+              0,
+              3180
+            ]
+          ]
+        },
+        {
+          "name": "transparent-corneal-dome",
+          "scalp": false,
+          "groups": [
+            [
+              0,
+              15360
+            ]
+          ]
+        },
+        {
+          "name": "sculpted-eyelids",
+          "scalp": false,
+          "groups": [
+            [
+              0,
+              9216
+            ]
+          ]
+        },
+        {
+          "name": "scleral-globe",
+          "scalp": false,
+          "groups": [
+            [
+              0,
+              3177
+            ]
+          ]
+        },
+        {
+          "name": "transparent-corneal-dome",
+          "scalp": false,
+          "groups": [
+            [
+              0,
+              15369
+            ]
+          ]
+        },
+        {
+          "name": "sculpted-eyelids",
+          "scalp": false,
+          "groups": [
+            [
+              0,
+              9216
+            ]
+          ]
+        },
+        {
+          "name": "ear-continuous-anatomical-shell",
+          "scalp": false,
+          "groups": [
+            [
+              0,
+              31680
+            ]
+          ]
+        },
+        {
+          "name": "ear-continuous-anatomical-shell",
+          "scalp": false,
+          "groups": [
+            [
+              0,
+              31680
+            ]
+          ]
+        }
+      ],
+      "indexBytes": 653896,
+      "queries": 19712,
+      "misses": 2145,
+      "buildMs": 94.46062500000062
+    }
+  },
+  "release": {
+    "released": true,
+    "privateGeometryDisposed": 1,
+    "sharedMaterialDisposed": 0,
+    "sourceCaptureReleased": true
+  },
+  "privateDisposals": 1,
+  "materialDisposals": 0,
+  "restoredExact": true,
+  "sourceScope": "Actual authored indexed source fixture with118/99 and prepared147/159 head support. Numeric149 fine tint supplied directly; full actual164 metadata/maps and post100 are a native gate. Sparse head-support samples do not certify global collision clearance.",
+  "elapsedMs": 8364.158583,
+  "rssMiB": 507.2652587890625
+}

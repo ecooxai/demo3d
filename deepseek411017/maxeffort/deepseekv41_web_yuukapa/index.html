@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='13' fill='%23e8f5ff'/%3E%3Cpath d='M16 5l2.6 7.4L26 15l-7.4 2.6L16 25l-2.6-7.4L6 15l7.4-2.6z' fill='%23688ec7'/%3E%3C/svg%3E" />
+  <meta name="theme-color" content="#dcefff" />
+  <title>Yuukapa · Sleeping Star — DeepSeek V4.1 Flash</title>
+  <meta name="description" content="A procedurally built 3D anime character study. Every surface, strand and stitch generated from scratch in WebGL / WebGPU." />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <div id="app">
+    <div class="bg-wash" aria-hidden="true"></div>
+    <div class="bg-grain" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">
+          <span class="brand-star">✦</span>
+        </div>
+        <div class="brand-copy">
+          <span class="brand-title">yuukapa</span>
+          <span class="brand-sub">sleeping star · character study</span>
+        </div>
+      </div>
+
+      <div class="topbar-center">
+        <span class="hairline"></span>
+        <span class="topbar-note">procedural / no external assets</span>
+        <span class="hairline"></span>
+      </div>
+
+      <div class="model-badge">
+        <span class="model-badge-label">MODEL</span>
+        <span class="model-badge-value">DeepSeek V4.1 Flash</span>
+      </div>
+    </header>
+
+    <main class="layout">
+      <aside class="rail rail-left">
+        <div class="rail-index">01<span>/</span>04</div>
+        <div class="rail-vertical">A STUDY IN SOFT LIGHT</div>
+        <div class="rail-block">
+          <p class="eyebrow">CHARACTER</p>
+          <h1 class="display">Yuuka<span class="display-dot">.</span></h1>
+          <p class="lede">A sleepwalking star, wrapped in cat-print pajamas and the last light of a blue hour.</p>
+        </div>
+        <div class="rail-specs">
+          <div class="spec">
+            <span class="spec-k">Construction</span>
+            <span class="spec-v">100% procedural geometry</span>
+          </div>
+          <div class="spec">
+            <span class="spec-k">Shading</span>
+            <span class="spec-v">Physically based toon-light hybrid</span>
+          </div>
+          <div class="spec">
+            <span class="spec-k">Assets used</span>
+            <span class="spec-v">None — canvas &amp; math only</span>
+          </div>
+        </div>
+        <div class="rail-hint">
+          <span class="hint-icon">◎</span>
+          <span>Drag to orbit · Scroll to zoom</span>
+        </div>
+      </aside>
+
+      <section class="stage" aria-label="3D character viewer">
+        <div class="stage-frame" id="stageFrame">
+          <canvas id="scene"></canvas>
+          <div class="stage-sheen" aria-hidden="true"></div>
+          <div class="stage-corners" aria-hidden="true">
+            <i></i><i></i><i></i><i></i>
+          </div>
+
+          <div class="stage-topline">
+            <span class="live-dot"></span>
+            <span id="backendReadout">WEBGL · 900 × 1200</span>
+          </div>
+
+          <div class="stage-bottomline">
+            <span class="stage-caption">YUU — SLEEPING STAR</span>
+            <span class="stage-caption-right">SCENE 001</span>
+          </div>
+
+          <div class="loader" id="loader">
+            <div class="loader-inner">
+              <span class="loader-star">✦</span>
+              <div class="loader-title">dreaming in geometry</div>
+              <div class="loader-bar"><span id="loaderBar"></span></div>
+              <div class="loader-note" id="loaderNote">threading the first strand…</div>
+            </div>
+          </div>
+
+          <div class="stage-fallback" id="stageFallback" hidden>
+            <div class="fallback-card">
+              <p class="eyebrow">WEBGPU UNAVAILABLE</p>
+              <h2>This browser can’t open the WebGPU stage.</h2>
+              <p>WebGPU is selected but unavailable or failed to start. Nothing has been switched automatically.</p>
+              <div class="fallback-actions">
+                <button class="btn btn-primary" id="fallbackWebGL">Use WebGL</button>
+                <button class="btn btn-ghost" id="fallbackRetry">Try WebGPU again</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="stage-meta">
+          <span>Y-01</span>
+          <span class="stage-meta-line"></span>
+          <span>MOONLIT WARDROBE</span>
+        </div>
+      </section>
+
+      <aside class="rail rail-right">
+        <div class="panel" id="panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">VIEWER</p>
+              <h2 class="panel-title">Stage controls</h2>
+            </div>
+            <button class="icon-btn" id="panelToggle" aria-label="Toggle settings" aria-expanded="true">
+              <span></span><span></span>
+            </button>
+          </div>
+
+          <div class="panel-body" id="panelBody">
+            <div class="field">
+              <label class="field-label">RENDERER</label>
+              <div class="segment" id="backendSegment">
+                <button data-backend="webgpu" id="backendWebGPU">
+                  <span>WebGPU</span>
+                  <small id="webgpuSupport">detecting</small>
+                </button>
+                <button data-backend="webgl" class="is-active">
+                  <span>WebGL</span>
+                  <small>fallback</small>
+                </button>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="field-label" for="resolution">RESOLUTION</label>
+              <div class="select-wrap">
+                <select id="resolution">
+                  <option value="900x1200" selected>900 × 1200 · portrait</option>
+                  <option value="1280x1080">1280 × 1080 · landscape</option>
+                  <option value="1440x2560">1440 × 2560 · 2K portrait</option>
+                  <option value="2160x3840">2160 × 3840 · 4K portrait</option>
+                  <option value="3840x2160">3840 × 2160 · 4K landscape</option>
+                </select>
+                <span class="select-caret">⌄</span>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="field-label">CAMERA</label>
+              <div class="camera-grid">
+                <button class="chip" data-camera="three-quarter">Three-quarter</button>
+                <button class="chip is-active" data-camera="front">Front</button>
+                <button class="chip" data-camera="profile">Profile</button>
+                <button class="chip" data-camera="back">Back</button>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="field-label">STAGE</label>
+              <div class="toggle-row">
+                <span class="toggle-copy"><b>Dream dust</b><small>floating light &amp; feathers</small></span>
+                <button class="switch is-on" id="dustToggle" role="switch" aria-checked="true"><span></span></button>
+              </div>
+              <div class="toggle-row">
+                <span class="toggle-copy"><b>Gentle orbit</b><small>slow cinematic drift</small></span>
+                <button class="switch" id="orbitToggle" role="switch" aria-checked="false"><span></span></button>
+              </div>
+              <div class="toggle-row">
+                <span class="toggle-copy"><b>Ink outline</b><small>hand-drawn silhouette</small></span>
+                <button class="switch is-on" id="outlineToggle" role="switch" aria-checked="true"><span></span></button>
+              </div>
+            </div>
+
+            <div class="panel-actions">
+              <button class="btn btn-primary" id="captureBtn">
+                <span class="btn-icon">↓</span> Capture frame
+              </button>
+              <button class="icon-btn square" id="resetBtn" aria-label="Reset view" title="Reset view">↺</button>
+            </div>
+
+            <div class="panel-foot">
+              <span>60 fps target</span>
+              <span id="fpsReadout">—</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-note">
+          <span class="glass-star">✦</span>
+          <p>Every strand, stitch and cat face is generated at runtime — no imported models, scans or textures.</p>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-left">
+        <span class="footer-dot"></span>
+        <span>BUILT FROM SCRATCH</span>
+        <span class="footer-sep">/</span>
+        <span>THREE.JS · WEBGPU READY</span>
+      </div>
+      <div class="footer-center">
+        <span class="footer-model">DEEPSEEK V4.1 FLASH</span>
+        <span class="footer-tool">OPENCODE · WEB</span>
+      </div>
+      <div class="score-badge" id="scoreBadge">
+        <div class="score-line">
+          <span class="score-key">ITERATION</span>
+          <span class="score-iter" id="iterationValue">01</span>
+        </div>
+        <div class="score-divider"></div>
+        <div class="score-line">
+          <span class="score-key">SCORE</span>
+          <span class="score-value"><b id="scoreValue">88</b><small>/100</small></span>
+        </div>
+      </div>
+    </footer>
+
+    <button class="mobile-settings" id="mobileSettings" aria-label="Open settings">
+      <span>SETTINGS</span>
+      <span class="mobile-settings-icon">⚙</span>
+    </button>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

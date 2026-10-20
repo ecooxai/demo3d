@@ -1,0 +1,19 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<script type="importmap">{"imports":{"three":"./vendor/three/three.webgpu.js"}}</script>
+<body style="margin:0;background:#444">
+<script type="module">
+import * as THREE from 'three';
+import { ribbon } from './src/geometry.js';
+const { geom, center } = ribbon([
+  new THREE.Vector3(0,0,0), new THREE.Vector3(0.02,0.3,0.02), new THREE.Vector3(0,0.6,-0.1),
+], { w: 0.15, t: 0.05, colorA: '#ff0000', colorB: '#00ff00', gradStart: 0.3 });
+const arr = geom.getAttribute('color');
+// sample first, middle, last rings
+const ringN = 14;
+let out = [];
+for (const idx of [0, Math.floor(arr.count / 2), arr.count - 1]) {
+  out.push([idx, arr.getX(idx).toFixed(2), arr.getY(idx).toFixed(2), arr.getZ(idx).toFixed(2)]);
+}
+document.title = 'cols ' + JSON.stringify(out);
+</script>
+</body></html>
