@@ -1,0 +1,15 @@
+import fs from 'node:fs';
+import puppeteer from 'puppeteer-core';
+const browser = await puppeteer.launch({executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',headless:true,args:['--no-sandbox','--enable-webgl','--ignore-gpu-blocklist','--use-angle=metal']});
+const page = await browser.newPage();
+await page.setViewport({width:900,height:1200});
+await page.goto('http://127.0.0.1:4173/?backend=webgl&capture=1',{waitUntil:'networkidle0'});
+await page.waitForFunction(()=>document.body.dataset.ready==='true');
+await new Promise(r=>setTimeout(r,700));
+await page.evaluate(()=>{ window.__YUUKAPA__.setView('back'); });
+await new Promise(r=>setTimeout(r,1200));
+await page.evaluate(()=>{ window.__YUUKAPA__.character.hairBack.visible=false; });
+await new Promise(r=>setTimeout(r,300));
+let data=await page.evaluate(()=>document.querySelector('#scene').toDataURL('image/png'));fs.writeFileSync('output/iteration-001/back-cape-only.png',Buffer.from(data.split(',')[1],'base64'));
+await browser.close();
+console.log('done');

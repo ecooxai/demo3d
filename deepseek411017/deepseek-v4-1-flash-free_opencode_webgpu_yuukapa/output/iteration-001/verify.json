@@ -1,0 +1,76 @@
+{
+  "webgpu": {
+    "hasGpuApi": true,
+    "hasAdapter": true,
+    "ready": true,
+    "backend": "webgpu",
+    "score": {
+      "iteration": 1,
+      "score": 96
+    },
+    "resolution": [
+      900,
+      1200
+    ],
+    "promptVisible": true,
+    "promptOpen": false,
+    "fatalVisible": false,
+    "logs": [
+      "error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ]
+  },
+  "webgl": {
+    "hasGpuApi": true,
+    "hasAdapter": true,
+    "ready": true,
+    "backend": "webgl",
+    "score": {
+      "iteration": 1,
+      "score": 96
+    },
+    "resolution": [
+      900,
+      1200
+    ],
+    "promptVisible": true,
+    "promptOpen": false,
+    "fatalVisible": false,
+    "logs": []
+  },
+  "auto": {
+    "hasGpuApi": true,
+    "hasAdapter": true,
+    "ready": true,
+    "backend": "webgpu",
+    "score": {
+      "iteration": 1,
+      "score": 96
+    },
+    "resolution": [
+      900,
+      1200
+    ],
+    "promptVisible": true,
+    "promptOpen": false,
+    "fatalVisible": false,
+    "logs": []
+  },
+  "mobile": {
+    "hasGpuApi": true,
+    "hasAdapter": true,
+    "ready": true,
+    "backend": "webgl",
+    "score": {
+      "iteration": 1,
+      "score": 96
+    },
+    "resolution": [
+      900,
+      1200
+    ],
+    "promptVisible": true,
+    "promptOpen": false,
+    "fatalVisible": false,
+    "logs": []
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "resolution": [
+      900,
+      1200
+    ],
+    "score": {
+      "iteration": 4,
+      "score": 90
+    },
+    "renderer": "webgl"
+  },
+  "logs": []
+}
