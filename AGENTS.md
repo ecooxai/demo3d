@@ -5,88 +5,96 @@ Each agent writes into its own folder and must not touch the other agents' folde
 
 ```
 demo3d/
-├── task.md                     # the verbatim brief every agent works from
+├── task.md                                      # the verbatim brief every agent works from
 ├── gpt6-astra_chatgpt_webgpu_reference-woman/   # previous agent (ChatGPT app)
-├── deepseek411017/             # previous agent
-├── glm53flashmax/              # previous agent
-└── minimaxm31flash/           # ← this build (minimax-m3.1-flash / opencode)
-    └── yuukapa_devtool/
+├── glm53flashmax/                               # previous agent
+├── minimaxm31flash/                             # previous agent (opencode)
+└── deepseek411017/
+    └── deepseek-v4-1-flash-free_opencode_webgpu_yuukapa/   # ← current build
 ```
 
 ---
 
-## This build — `minimaxm31flash/yuukapa_devtool`
+## Current build — `deepseek411017/deepseek-v4-1-flash-free_opencode_webgpu_yuukapa`
 
-**Agent:** opencode · **Model:** minimax-m3.1-flash · **Tool:** web (three.js r186, WebGPU + WebGL 2)
+**Agent:** opencode · **Model:** deepseek-v4-1-flash-free · **Tool:** web
+(three.js 0.186.1, Vite 8, WebGPU renderer + WebGL 2 fallback)
+
+**Branch:** `deepseek-v4-1-flash-free/opencode-webgpu-yuukapa`
 
 ### What it is
-`Yuukapa` — a real-time, fully procedural 3D reconstruction of the anime girl in
-`assets/reference.png` (halo, frilled headband + bow, long indigo mane, violet eyes,
-light-blue cat-print pyjamas, scalloped bloomer hem, fluffy slippers, big pillow).
-
-Everything — every vertex, every texture — is generated in code. No external assets.
+`Yuu-Kapa / Pillowlight Reverie` — a real-time, fully procedural 3D character
+built from the single reference image in `reference/yuukapa.png`: indigo mane,
+white headband bow, dark cyan-glow halo, light-blue cat-print pyjamas, scalloped
+bloomer hem, bunny slippers and a large pillow. Every vertex and every texture is
+generated in code; there are no imported meshes or image assets.
 
 ### Layout
 ```
-src/                     the viewer (ES modules, import-map → ../vendor/three)
-  index.html             UI shell, settings panel, HUD (iteration + score, bottom-right)
-  styles.css             glass UI, responsive down to phone width
-  js/main.js             boot, URL params, capability probe, WebGPU→WebGL prompt
-  js/core/app.js         renderer, scene, lights, camera rig, post FX, render loop
-  js/core/ui.js          settings panel, capture (png / webm), modal
-  js/core/meta.js        MODEL_NAME / ITERATION / SCORE shown in the HUD
-  js/char/character.js   assembly + the pose (world-space bone aiming)
-  js/char/head.js        sculpted skull + conforming face patch
-  js/char/hair.js        scalp shell, bangs, side locks, 30-lock mane
-  js/char/body.js        limbs, hands, feet, torso
-  js/char/outfit.js      shirt, bloomer shorts with scalloped hem, collar, placket
-  js/char/props.js       bow, headband, halo, pillow, slippers
-  js/lib/geom.js         geometry toolkit (sweep, loft, sculpted patch, super-ellipsoid)
-  js/lib/tex.js          all Canvas2D textures (anime face, cat print, fabric…)
-  js/lib/mat.js          material library, toon ramps, rim shells, ink outlines
-vendor/three/            three.js r186 (three.webgpu.js, three.core.js, three.tsl.js)
-tools/                   dev harness: static server, headless capture, geometry tests
-output/                  deliverables: showcase bundle, 60 s mp4, credit strip
+deepseek-v4-1-flash-free_opencode_webgpu_yuukapa/
+├── index.html                 UI shell, settings dialog, nameplate, score card
+├── src/
+│   ├── main.js                boot, backend selection, camera, render loop, debug API
+│   ├── character.js           all character geometry + pose + idle animation
+│   ├── environment.js         backdrop, arch, clouds, pedestal, motes, lights
+│   ├── geometry.js            loft / tube / hair-lock / fringe / cape / pillow toolkit
+│   ├── materials.js           toon + PBR material library and inverted-hull outlines
+│   ├── textures.js            Canvas2D cat print, face decal, iris, glow, shadow
+│   └── style.css              responsive glass UI (desktop + phone)
+├── scripts/
+│   ├── screenshot.mjs         front/left/back/right canvas + UI captures → report.json
+│   ├── verify.mjs             WebGPU / WebGL / auto / mobile backend probe
+│   ├── showcase.mjs           white-on-black credit versions of the renders
+│   ├── video.mjs              60 s turntable mp4 (title + orbit + credit)
+│   └── debug-*.mjs            face, back and cape inspection helpers
+├── output/iteration-004/      final stills, UI shots, verify.json
+├── output/showcase/           credited showcase copies
+└── output/…60s.mp4            final 60 s video
 ```
 
 ### Run it
 ```bash
-cd minimaxm31flash/yuukapa_devtool
-node tools/serve.mjs            # http://localhost:8123
+cd deepseek411017/deepseek-v4-1-flash-free_opencode_webgpu_yuukapa
+npm install
+npm run dev                     # http://127.0.0.1:5173
+npm run build
+npm run preview -- --port 4173
+npm run shot                    # requires the preview server on :4173
+node scripts/verify.mjs         # WebGPU/WebGL/auto/mobile checks
+node scripts/showcase.mjs
+node scripts/video.mjs          # 60 s, needs the preview server on :4173
 ```
 
-### Capture harness
-```bash
-node tools/shoot.mjs --out review/x --views front,three4,left,right,back --backend webgl
-node tools/shoot.mjs --out review/x --views front --backend webgpu
-node tools/uishot.mjs review/ui 1440 900        # full-page UI
-node tools/showcaseshot.mjs review/showcase    # showcase build with credit bar
-node tools/video.mjs 60 1280 1600 webgpu /output/yuukapa_showcase/src/index.html
-```
+### Architecture notes
+* `main.js` chooses WebGPU only when `navigator.gpu.requestAdapter()` succeeds.
+  If it fails the user is shown a modal and must explicitly choose WebGL — the
+  scene never switches renderers on its own.
+* `WebGPURenderer` is dynamically imported from `three/webgpu`, so the WebGL
+  path does not pay for the WGSL backend.
+* The character is built from custom lofts/tubes/hair locks (no primitives for
+  the body) with a 4-step toon ramp for skin/clothes and physical materials with
+  sheen for hair. Outlines are inverted-hull shells via `addOutline()`.
+* Runtime debug API: `window.__YUUKAPA__` exposes `scene`, `camera`, `controls`,
+  `character`, `environment`, `setView`, `setResolution`, `setScore`, `score`
+  and `resolution`.
 
-### Validation tools (use these before declaring a visual change good)
-* `tools/geomtest.mjs` — signed-volume test for `sweep()` / `loft()` winding.
-  A negative volume means inverted normals (invisible shading bugs).
-* `tools/normalcheck.mjs` — in-browser signed volume + normal direction per mesh.
-* `tools/attrcheck.mjs` — every attribute count must match the position count.
-* `tools/measure.mjs` — measures the reference PNG's regions for proportion checks.
-
-### Hard-won lessons (read before touching the geometry)
-1. **`sweep()` frames must be re-orthogonalised against the new tangent.**
-   Without it the parallel-transport frame flips 180° on nearly-straight curves,
-   which silently inverts limbs and shreds ribbons.
-2. **Row order decides loft winding.** `loft()` auto-detects top→bottom vs
-   bottom→top and flips the triangles; keep that behaviour.
-3. **`computeVertexNormals()` must run last**, after caps/closed stitching are
-   added, otherwise the normal buffer is shorter than the index range and
-   WebGL reports "Vertex buffer is not big enough for the draw call".
-4. **TSL `vec3(0xrrggbb)` splats the number** (→ white). Use `color(0xrrggbb)`.
-5. **three's `toonOutlinePass` misbehaves with these meshes** — the project uses
-   its own inverted-hull ink shells (CPU-expanded geometry, `addOutline`).
-6. **A point light 10 cm from the hair blows it out** (inverse square). The halo
-   glow is baked into the hair's vertex colours instead.
-7. **Rim shells need an explicit flat-face normal** (`frameNormals`), otherwise
-   tight loops (the bow) explode into shards.
+### Hard-won lessons (do not regress)
+1. **Loft winding depends on ring Y order.** `makeLoftGeometry` flips triangle
+   order when rings descend; otherwise clothing renders inside-out.
+2. **Hair locks must live *outside* the torso volume.** A side lock at
+   `x≈0.6, z≈0` is inside the shirt ellipsoid and shows as holes/clipping from
+   side views. Push front locks to `z ≥ 0.6`, back locks to `z ≤ -0.6`.
+3. **A horizontal headband torus must follow the head ellipse.** A round torus
+   pokes through the bangs in profile; scaling local Y to ≈0.88 keeps it hidden
+   at the front while remaining visible at the sides.
+4. **Hair highlights read as scratches when thin.** Use wide, low-opacity gloss
+   bands, not 1–2 px ribbons.
+5. **`computeVertexNormals()` must run after caps/stitching**, or the normal
+   buffer is shorter than the index range and WebGL throws a draw-call error.
+6. **The bow needs a visible knot.** Without it the two loops read as rabbit
+   ears; keep a raised knot sphere in front of the loop roots.
+7. **Toon ramp contrast matters.** `makeGradientMap([132,184,226,255])` gives
+   readable shadows; the old `[150,190,228,255]` washed out.
 
 ### Rules that apply to every build in this repo
 * Model the reference from the pixels — do not import any external asset.
@@ -96,29 +104,88 @@ node tools/video.mjs 60 1280 1600 webgpu /output/yuukapa_showcase/src/index.html
 * Prefer WebGPU; if it is unavailable, **ask** the user before falling back to
   WebGL — never fall back silently.
 * Default render resolution 900×1200, user-selectable up to 4K.
-* When the window is narrower than 900 px, the canvas is shown at half width.
+* When the browser window is narrower than 900 px, the canvas is scaled to fit
+  the viewport width (half-width rule).
 * Final deliverables: a showcase copy with a big white-on-black creator credit
   and a 60 s video of the work.
 
 ---
 
-## Summary of the last task (minimax-m3.1-flash / opencode — Yuukapa)
+## Previous build — `minimaxm31flash/yuukapa_devtool`
+
+**Agent:** opencode · **Model:** minimax-m3.1-flash · **Tool:** web (three.js r186, WebGPU + WebGL 2)
+
+`Yuukapa` — a 1.68 m stylised anime figure built from ~40 procedural meshes and
+9 Canvas2D textures, rendered with a 4-step toon ramp, inverted-hull ink outlines,
+fresnel rim shells and a painted face decal. The viewer offers WebGPU ⇄ WebGL 2
+(with an explicit prompt), eight resolutions from 900×1200 to 4K, eight camera
+presets, auto-orbit, idle animation, outline/rim/shadow toggles and PNG/webm
+capture.
+
+* **Branch:** `minimax-m31-flash/opencode-webgpu-yuukapa`
+* **Live deployment:** https://yuukapa-minimax-m31-flash.surge.sh/
+  (viewer at `/src/index.html`, landing page at `/`, 60 s clip at
+  `/yuukapa_minimax-m31-flash_opencode_showcase_web.mp4`) — verified headless
+  with the WebGPU backend at 60 fps, zero console errors.
+* **Deliverables:** `output/yuukapa_showcase/` (self-contained copy with the
+  creator credit), `output/yuukapa_minimax-m31-flash_opencode_showcase.mp4`
+  (60.0 s, 1280×1600, credit bar burned in), `review/` (iteration stills, UI
+  and phone captures, live-deploy screenshot).
+
+Its hard-won lessons (sweep re-orthogonalisation, loft row order,
+`computeVertexNormals()` ordering, TSL colour splatting, inverted-hull outlines,
+point-light falloff, rim-shell normals) remain valid for any build in this repo.
+
+**Extra notes for the next agent (from the minimax build):**
+* GitHub Pages is **blocked for this organisation** — both the App token and a
+  workflow's `GITHUB_TOKEN` get `403 Resource not accessible by integration` on
+  `POST /repos/{o}/{r}/pages`, so `actions/configure-pages` fails too.
+  jsDelivr is not a substitute: it serves every `.html`/`.css` as `text/plain`,
+  which breaks ES modules. The build here is therefore published to
+  **surge.sh** (`npx surge ./site --domain <name>.surge.sh`; a disposable
+  mailbox via `tools/mailbox.mjs` satisfies the e-mail verification).
+* A halo point light 10 cm above the hair blows the whole head out through
+  inverse-square falloff — bake the cyan glow into the hair's vertex colours
+  instead and keep the point light at ≈0.03 intensity.
+
+---
+
+## Summary of the last task (deepseek-v4-1-flash-free / opencode — Yuukapa)
 
 **Goal:** rebuild the reference illustration as a real-time 3D character in the
-browser, as close to the source as possible, with no borrowed assets.
+browser, as close to the source as possible, with no borrowed assets. Target
+98/100; must work on PC and phone, prefer WebGPU and never fall back silently.
 
-**Result:** a 1.68 m stylised anime figure built from ~40 procedural meshes and
-9 Canvas2D textures, rendered with a 4-step toon ramp, inverted-hull ink
-outlines, fresnel rim shells and a painted face decal that conforms exactly to
-the skull surface. A full settings panel offers WebGPU ⇄ WebGL 2 (with an
-explicit prompt before any fallback), eight resolutions from 900×1200 to 4K,
-eight camera presets, auto-orbit, idle animation, outlines/rim/shadow toggles
-and PNG/webm capture. 60 fps at 900×1200 on both backends.
+**Result (iteration 004, honest self-score 90/100):** a stylised, fully
+procedural chibi-proportioned Yuukapa assembled from custom lofts, tapered tubes
+and ribbon hair locks, with a painted face decal, layered fringe, 9-lock back
+mane + scalloped cape, white headband + fabric bow, dark halo with cyan glow,
+cat-print pyjamas with collar/placket/pocket/scalloped hems, bunny slippers and a
+bulged pillow. The viewer ships with:
+* WebGPU-first boot, explicit user choice before WebGL, never an automatic switch.
+* 8 render presets (900×1200 default) up to 4K portrait/landscape.
+* Front/left/back/right camera dock, orbit, reset, idle animation and blinking.
+* Model name above the stage; `ITERATION 004 · 90/100` at bottom-right.
+* Responsive layout verified at 1440×1200 and 390×844 (mobile UI screenshot).
+* Both backends verified headless: WebGPU and WebGL render the scene; `verify.json`
+  records the run.
 
-**Deliverables:** `output/yuukapa_showcase/` (self-contained copy with the
-creator credit), `output/yuukapa_minimax-m31-flash_opencode_showcase.mp4`
-(60 s turntable), `review/` (iteration stills and UI captures).
+**Deliverables:**
+* `output/iteration-004/` — front/left/back/right canvas stills, UI captures,
+  `verify.json`, `report.json`.
+* `output/showcase/` — five credited cards (big white model + agent text on black).
+* `output/yuukapa_deepseek-v4.1-flash-free_opencode_60s.mp4` — 60.0 s, 900×1200,
+  20 fps: 3 s title card, 54 s orbit, 3 s credit card.
 
-**Open threads for the next agent:** the pillow is still slightly too boxy, the
-bow's loops could read more like fabric petals, and the mane could use a few
-separated locks at the very bottom to match the reference's silhouette exactly.
+**Known open threads for the next agent:**
+1. **Proportions** are still more chibi (~6 heads) than the reference (~7.5).
+   Raising the hip line and lengthening the legs would close the biggest fidelity
+   gap; the raised hand and pillow grip are world-space and must be re-aimed.
+2. **Hair** reads as a smooth cape from behind; the reference has separated,
+   tapered locks at the tips and more volume at the crown.
+3. **Bow** loops are still slightly ear-like; a wider, flatter petal profile with
+   a visible inner fold would read more like fabric.
+4. **Pillow** is a soft rounded slab; stronger creases and a slightly smaller
+   scale would match the illustration's hanging cloth.
+5. **Face** is a flat painted decal; adding a little cheek/jaw shading and a
+   warmer skin response would reduce the pastel wash.

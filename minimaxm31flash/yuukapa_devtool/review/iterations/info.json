@@ -5,10 +5,15 @@
     "fps": 60,
     "res": "900x1200",
     "model": "minimax-m3.1-flash",
-    "view": "front"
+    "view": "closeup"
   },
   "views": [
-    "front"
+    "front",
+    "three4",
+    "left",
+    "right",
+    "back",
+    "closeup"
   ],
   "backend": "webgl",
   "W": 900,

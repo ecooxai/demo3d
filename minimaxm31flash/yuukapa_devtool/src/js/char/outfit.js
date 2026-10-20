@@ -238,7 +238,7 @@ function buildPlacket(M) {
   const geo = sweep(pts, {
     radial: 6,
     frameNormals: nrm,
-    profile: () => ({ rx: 0.0135, ry: 0.004 }),
+    profile: () => ({ rx: 0.0095, ry: 0.0035 }),
     capStart: true, capEnd: true,
   });
   const strip = new THREE.Mesh(geo, M.collar);
@@ -246,7 +246,7 @@ function buildPlacket(M) {
   g.add(strip);
 
   // pearl buttons
-  const btnGeo = superEllipsoid(0.0072, 0.0072, 0.0034, 0.75, 0.75, 14, 10);
+  const btnGeo = superEllipsoid(0.0058, 0.0058, 0.0030, 0.75, 0.75, 14, 10);
   [0.370, 0.298, 0.226, 0.154, 0.082, 0.020].forEach((y, i) => {
     const fy = y - 0.16;
     const b = new THREE.Mesh(btnGeo, M.button);

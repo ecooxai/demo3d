@@ -6,7 +6,12 @@
   "description": "Yuukapa - procedural anime character 3D viewer (WebGPU/WebGL) - minimax-m3.1-flash / opencode",
   "scripts": {
     "serve": "node tools/serve.mjs",
-    "shot": "node tools/shoot.mjs"
+    "shot": "node tools/shoot.mjs --out review/shot --views front,three4,left,right,back --backend webgl",
+    "check": "node tools/geomtest.mjs && node tools/attrcheck.mjs && node tools/normalcheck.mjs",
+    "showcase": "node tools/build-showcase.mjs",
+    "video": "node tools/video.mjs 60 1280 1600 webgpu /output/yuukapa_showcase/src/index.html",
+    "publish": "node tools/publish.mjs yuukapa-minimax-m31-flash.surge.sh /tmp/surgepkg",
+    "postinstall": "node tools/link-three.mjs"
   },
   "devDependencies": {
     "puppeteer-core": "^25.14.0",

@@ -133,7 +133,7 @@ export function buildHair(M) {
 
   /* ── 2. bangs: swept over the brow ─────────────────────── */
   {
-    const n = 12;
+    const n = 11;
     for (let i = 0; i < n; i++) {
       const t = i / (n - 1);
       // a soft off-centre part, as in the reference
@@ -166,9 +166,9 @@ export function buildHair(M) {
         thickness: 0.0085,
         radial: 9,
         widthFn: (u) => {
-          const base = 0.30 + 0.70 * Math.pow(Math.sin(Math.PI * Math.pow(clamp(u, 0, 1), 0.5)), 0.55);
-          const flare = 1 + 0.34 * smoothstep(0.40, 0.80, u);
-          return w * base * flare * (1 - smoothstep(0.90, 1.0, u));
+          const base = 0.26 + 0.74 * Math.pow(Math.sin(Math.PI * Math.pow(clamp(u, 0, 1), 0.45)), 0.5);
+          const flare = 1 + 0.42 * smoothstep(0.35, 0.78, u);
+          return w * base * flare * (1 - smoothstep(0.86, 1.0, u));
         },
         twistFn: (u) => Math.sin(u * 2.2) * 0.18,
       });

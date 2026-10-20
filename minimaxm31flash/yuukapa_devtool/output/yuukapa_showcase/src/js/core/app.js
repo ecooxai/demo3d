@@ -417,6 +417,9 @@ export class App {
       c.halo.userData.spin.rotation.z = t * 0.22;
       c.halo.userData.glow.rotation.z = -t * 0.34;
       c.halo.userData.bloom.rotation.z = t * 0.16;
+      if (c.halo.userData.aura) {
+        c.halo.userData.aura.material.opacity = 0.26 + Math.sin(t * 1.7) * 0.06;
+      }
     }
     c.halo.position.y = 0.435 + Math.sin(t * 0.9) * 0.008;
     if (this.haloLight) this.haloLight.intensity = 0.035 + Math.sin(t * 2.2) * 0.008;

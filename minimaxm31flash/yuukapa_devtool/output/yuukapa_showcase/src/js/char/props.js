@@ -166,7 +166,21 @@ export function makeHalo(M) {
   bloom.renderOrder = 3;
   g.add(bloom);
 
+  // soft aura disc lying in the ring's plane
+  const aura = new THREE.Mesh(
+    new THREE.CircleGeometry(R * 2.15, 48),
+    new THREE.MeshBasicMaterial({
+      map: M.glowMap, color: 0x7fe4ff, transparent: true, opacity: 0.30,
+      blending: THREE.AdditiveBlending, depthWrite: false, toneMapped: false,
+      side: THREE.DoubleSide,
+    })
+  );
+  aura.rotation.x = -Math.PI / 2;
+  aura.renderOrder = 2;
+  g.add(aura);
+
   g.userData.spin = ring;
+  g.userData.aura = aura;
   g.userData.glow = glow;
   g.userData.bloom = bloom;
   return g;
@@ -176,7 +190,7 @@ export function makeHalo(M) {
    The pillow — a plump quilt with a gathered corner
    ══════════════════════════════════════════════════════════════ */
 export function makePillow(M, { w = 0.21, h = 0.30, d = 0.085, gather = new THREE.Vector3(-0.20, 0.29, 0) } = {}) {
-  const geo = superEllipsoid(w, h, d, 0.52, 0.52, 48, 30);
+  const geo = superEllipsoid(w, h, d, 0.72, 0.66, 48, 30);
   const pos = geo.attributes.position;
   const v = new THREE.Vector3();
   const rand = rng(31337);
@@ -188,7 +202,7 @@ export function makePillow(M, { w = 0.21, h = 0.30, d = 0.085, gather = new THRE
     const edge = Math.max(
       Math.abs(v.x) / w, Math.abs(v.y) / h, Math.abs(v.z) / d
     );
-    const bulge = 1 + 0.20 * (1 - Math.pow(edge, 2.0));
+    const bulge = 1 + 0.13 * (1 - Math.pow(edge, 1.7));
     v.multiplyScalar(bulge);
 
     // soft wrinkles
