@@ -37,7 +37,7 @@ export function createMaterials() {
   const hairRamp = makeToonRamp([0.42, 0.62, 0.82, 1.0]);
 
   const pajamaMap = makePajamaTexture();
-  pajamaMap.repeat.set(2.6, 2.6);
+  pajamaMap.repeat.set(1.9, 1.9);
   const pillowMap = makePillowTexture();
   const fabricMap = makeFabricTexture();
   const faceMap = makeFaceTexture();
@@ -56,7 +56,7 @@ export function createMaterials() {
     hairSheen: toon({ color: 0xffffff, gradientMap: hairRamp, vertexColors: true, transparent: true, opacity: 0.5, depthWrite: false }),
 
     pajama: toon({ color: 0xffffff, map: pajamaMap }),
-    pajamaPlain: toon({ color: 0xd6ecf6 }),
+    pajamaPlain: toon({ color: 0xdceff8 }),
     pajamaTrim: toon({ color: 0xfdfeff }),
     scallop: toon({ color: 0xa9c7d8, gradientMap: softRamp }),
     collar: toon({ color: 0xfdfeff, gradientMap: softRamp }),

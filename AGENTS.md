@@ -47,7 +47,7 @@ deepseek-v4-1-flash-free_opencode_webgpu_yuukapa/
 │   ├── showcase.mjs           white-on-black credit versions of the renders
 │   ├── video.mjs              60 s turntable mp4 (title + orbit + credit)
 │   └── debug-*.mjs            face, back and cape inspection helpers
-├── output/iteration-004/      final stills, UI shots, verify.json
+├── output/iteration-005/      final stills, UI shots, verify.json
 ├── output/showcase/           credited showcase copies
 └── output/…60s.mp4            final 60 s video
 ```
@@ -129,12 +129,24 @@ capture.
   with the WebGPU backend at 60 fps, zero console errors.
 * **Deliverables:** `output/yuukapa_showcase/` (self-contained copy with the
   creator credit), `output/yuukapa_minimax-m31-flash_opencode_showcase.mp4`
-  (60.0 s, 1280×1600, credit bar burned in), `review/` (iteration stills, UI
+  (60 s, 1280×1600, credit bar burned in), `review/` (iteration stills, UI
   and phone captures, live-deploy screenshot).
 
-Its hard-won lessons (sweep re-orthogonalisation, loft row order,
-`computeVertexNormals()` ordering, TSL colour splatting, inverted-hull outlines,
-point-light falloff, rim-shell normals) remain valid for any build in this repo.
+**Fidelity work in the final pass (minimax build, iteration 59 / 96):**
+* The reference figure is far slimmer than the first build — the whole garment
+  and limb set was re-measured off the source PNG and slimmed (torso ≈0.15 m
+  wide, hem ≈0.17 m, thighs/calves ≈0.05 m). This single change fixed the
+  "reads like a dress" silhouette.
+* The pyjama top is now a straight, loose, folded tube with an open V neckline:
+  a skin-coloured neckline patch plus two white collar flaps that share the
+  V's edge, and a fabric-coloured button placket (the reference's placket is
+  the same cloth, only the collar is white).
+* The bloomer shorts are shorter and puffier with 15 scalloped lobes; the
+  cat print was enlarged to the reference's scale.
+* The pillow is a large draped sheet (a grid surface that gathers at the held
+  corner and widens as it falls), not a cushion.
+* The pose is a ¾ contrapposto: hips −0.105 rad, head turned and tilted,
+  right arm raised with the hand beside the head, right leg forward.
 
 **Extra notes for the next agent (from the minimax build):**
 * GitHub Pages is **blocked for this organisation** — both the App token and a
@@ -147,6 +159,9 @@ point-light falloff, rim-shell normals) remain valid for any build in this repo.
 * A halo point light 10 cm above the hair blows the whole head out through
   inverse-square falloff — bake the cyan glow into the hair's vertex colours
   instead and keep the point light at ≈0.03 intensity.
+* `tools/compare.mjs` renders the reference and the latest render at a matched
+  chin→feet scale; `tools/overlay.mjs` does the same with tinted silhouettes.
+  Both made the proportion work above far faster than eyeballing.
 
 ---
 
@@ -156,7 +171,7 @@ point-light falloff, rim-shell normals) remain valid for any build in this repo.
 browser, as close to the source as possible, with no borrowed assets. Target
 98/100; must work on PC and phone, prefer WebGPU and never fall back silently.
 
-**Result (iteration 004, honest self-score 90/100):** a stylised, fully
+**Result (iteration 005, honest self-score 91/100):** a stylised, fully
 procedural chibi-proportioned Yuukapa assembled from custom lofts, tapered tubes
 and ribbon hair locks, with a painted face decal, layered fringe, 9-lock back
 mane + scalloped cape, white headband + fabric bow, dark halo with cyan glow,
@@ -165,17 +180,35 @@ bulged pillow. The viewer ships with:
 * WebGPU-first boot, explicit user choice before WebGL, never an automatic switch.
 * 8 render presets (900×1200 default) up to 4K portrait/landscape.
 * Front/left/back/right camera dock, orbit, reset, idle animation and blinking.
-* Model name above the stage; `ITERATION 004 · 90/100` at bottom-right.
+* Model name above the stage; `ITERATION 005 · 91/100` at bottom-right.
 * Responsive layout verified at 1440×1200 and 390×844 (mobile UI screenshot).
 * Both backends verified headless: WebGPU and WebGL render the scene; `verify.json`
-  records the run.
+  records the run. The live site is on surge.sh (see the deployment notes above).
 
 **Deliverables:**
-* `output/iteration-004/` — front/left/back/right canvas stills, UI captures,
+* `output/iteration-005/` — front/left/back/right canvas stills, UI captures,
   `verify.json`, `report.json`.
 * `output/showcase/` — five credited cards (big white model + agent text on black).
 * `output/yuukapa_deepseek-v4.1-flash-free_opencode_60s.mp4` — 60.0 s, 900×1200,
   20 fps: 3 s title card, 54 s orbit, 3 s credit card.
+
+**Iteration-005 changes (why the score moved 90 → 91):**
+* Warmer peach skin (`0xf8c9b7`) and deeper shade so bare legs/arms stop reading
+  as white sticks; fixes the pastel wash.
+* Bow rebuilt as a flat ribbon: 3.2:1 petal profile, asymmetric loops, larger
+  visible knot, and the group laid back on the crown. The old upright loops read
+  as rabbit ears. **Do not raise the loops again.**
+* Face-framing locks thinned (0.185 → 0.135) and pushed to the temples; the
+  front curtain moved outward so the pyjama placket stays readable.
+* Head scaled to `0.92` and raised to `y=7.05` — a cheap proportion win that does
+  not touch the legs. The neck still reads; re-check the chin/neck seam if you
+  change it again.
+* Pillow shrunk to 1.5 × 1.84 × 0.58, dropped to `y=2.74`, and given four soft
+  crease tubes at the true bulged surface height (`z≈0.32–0.39`). Creases placed
+  at `z≈0.25` are **inside** the bulge and invisible.
+* Halo sprite opacity 0.34 → 0.22 and point light 2.2 → 0.9 so the ring stays
+  crisp instead of blowing out the hair.
+* The header's tool line now follows the active backend (`OPENCODE · WEBGL`).
 
 **Known open threads for the next agent:**
 1. **Proportions** are still more chibi (~6 heads) than the reference (~7.5).
@@ -183,9 +216,10 @@ bulged pillow. The viewer ships with:
    gap; the raised hand and pillow grip are world-space and must be re-aimed.
 2. **Hair** reads as a smooth cape from behind; the reference has separated,
    tapered locks at the tips and more volume at the crown.
-3. **Bow** loops are still slightly ear-like; a wider, flatter petal profile with
-   a visible inner fold would read more like fabric.
-4. **Pillow** is a soft rounded slab; stronger creases and a slightly smaller
-   scale would match the illustration's hanging cloth.
-5. **Face** is a flat painted decal; adding a little cheek/jaw shading and a
-   warmer skin response would reduce the pastel wash.
+3. **Pillow** is still a rigid rounded slab. A soft-body fold/displacement pass
+   (not just crease tubes) would match the illustration's hanging cloth; from a
+   3/4 back angle it reads a little like a suitcase.
+4. **Face** is a flat painted decal; adding a little cheek/jaw shading and a
+   warmer skin response would reduce the remaining pastel wash.
+5. **Bow tails** are still hidden inside the hair; bringing a short ribbon tail
+   out on the left side would complete the reference read.

@@ -7,5 +7,5 @@ export const AGENT_NAME = 'opencode';
 export const TOOL_NAME = 'web';
 export const PROJECT_NAME = 'yuukapa';
 
-export const ITERATION = 37;
-export const SCORE = 95;
+export const ITERATION = 59;
+export const SCORE = 96;

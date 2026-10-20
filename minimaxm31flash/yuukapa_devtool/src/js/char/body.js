@@ -31,7 +31,7 @@ function handGeometry(M, pose = 'relax') {
   const g = new THREE.Group();
 
   /* palm */
-  const palm = new THREE.Mesh(roundedBox(0.050, 0.082, 0.026, 0.012, 4), M.skin);
+  const palm = new THREE.Mesh(roundedBox(0.040, 0.078, 0.021, 0.010, 4), M.skin);
   palm.position.set(0, -0.042, 0);
   palm.castShadow = true;
   g.add(palm);
@@ -74,12 +74,12 @@ function footGeometry(M) {
   const g = new THREE.Group();
   const foot = new THREE.Mesh(
     (() => {
-      const geo = roundedBox(0.070, 0.048, 0.175, 0.022, 4);
+      const geo = roundedBox(0.050, 0.036, 0.155, 0.017, 4);
       const pos = geo.attributes.position;
       const v = new THREE.Vector3();
       for (let i = 0; i < pos.count; i++) {
         v.fromBufferAttribute(pos, i);
-        const t = clamp((v.z + 0.0875) / 0.175, 0, 1);   // 0 heel → 1 toe
+        const t = clamp((v.z + 0.0775) / 0.155, 0, 1);   // 0 heel → 1 toe
         v.x *= lerp(0.86, 1.06, t);
         v.y *= lerp(0.72, 0.95, t);
         pos.setXYZ(i, v.x, v.y, v.z);
@@ -101,15 +101,15 @@ function footGeometry(M) {
  */
 function torsoGeometry() {
   const rows = [
-    { y: -0.03, rx: 0.106, rz: 0.084, z: 0.004 },
-    { y: 0.05, rx: 0.114, rz: 0.088, z: 0.002 },
-    { y: 0.12, rx: 0.100, rz: 0.076, z: 0.000 },
-    { y: 0.20, rx: 0.101, rz: 0.075, z: 0.000 },
-    { y: 0.28, rx: 0.108, rz: 0.081, z: 0.002 },
-    { y: 0.35, rx: 0.115, rz: 0.086, z: 0.002 },
-    { y: 0.41, rx: 0.112, rz: 0.080, z: 0.000 },
-    { y: 0.455, rx: 0.072, rz: 0.064, z: -0.004 },
-    { y: 0.492, rx: 0.050, rz: 0.048, z: -0.004 },
+    { y: -0.03, rx: 0.070, rz: 0.056, z: 0.004 },
+    { y: 0.05, rx: 0.075, rz: 0.058, z: 0.002 },
+    { y: 0.12, rx: 0.066, rz: 0.050, z: 0.000 },
+    { y: 0.20, rx: 0.067, rz: 0.049, z: 0.000 },
+    { y: 0.28, rx: 0.071, rz: 0.053, z: 0.002 },
+    { y: 0.35, rx: 0.076, rz: 0.056, z: 0.002 },
+    { y: 0.41, rx: 0.074, rz: 0.052, z: 0.000 },
+    { y: 0.455, rx: 0.048, rz: 0.042, z: -0.004 },
+    { y: 0.492, rx: 0.035, rz: 0.033, z: -0.004 },
   ];
   const rings = rows.map((r) => ellipseRing(0, r.y, r.z, r.rx, r.rz, 24, { squashFront: 0.05 }));
   return loft(rings, { capStart: true, capEnd: true });
@@ -143,7 +143,7 @@ export function buildBody(M) {
 
   /* ── neck ──────────────────────────────────────────────── */
   const neckMesh = new THREE.Mesh(
-    limb(0.115, (t) => lerp(0.046, 0.036, t), { bend: 0.010, seg: 8, radial: 16 }),
+    limb(0.115, (t) => lerp(0.032, 0.026, t), { bend: 0.010, seg: 8, radial: 16 }),
     M.skin
   );
   neckMesh.name = 'neck';
@@ -158,13 +158,13 @@ export function buildBody(M) {
 
     const shoulder = new THREE.Group();
     shoulder.name = 'shoulder' + side;
-    shoulder.position.set(s * 0.106, 0.258, 0.004);
+    shoulder.position.set(s * 0.072, 0.258, 0.004);
     chest.add(shoulder);
 
     // deltoid
     const delt = new THREE.Mesh(
       (() => {
-        const geo = new THREE.SphereGeometry(0.045, 20, 16);
+        const geo = new THREE.SphereGeometry(0.036, 20, 16);
         const pos = geo.attributes.position;
         const v = new THREE.Vector3();
         for (let i = 0; i < pos.count; i++) {
@@ -182,7 +182,7 @@ export function buildBody(M) {
     shoulder.add(delt);
 
     const upper = new THREE.Mesh(
-      limb(0.250, (t) => lerp(0.040, 0.030, t) * (1 + 0.10 * Math.sin(t * Math.PI)), { bend: 0.006, seg: 12 }),
+      limb(0.250, (t) => lerp(0.025, 0.019, t) * (1 + 0.09 * Math.sin(t * Math.PI)), { bend: 0.006, seg: 12 }),
       M.skin
     );
     upper.name = 'upperArm' + side;
@@ -195,7 +195,7 @@ export function buildBody(M) {
     shoulder.add(elbow);
 
     const fore = new THREE.Mesh(
-      limb(0.230, (t) => lerp(0.032, 0.023, t) * (1 + 0.12 * Math.sin(t * Math.PI * 0.9)), { bend: 0.004, seg: 12 }),
+      limb(0.230, (t) => lerp(0.021, 0.015, t) * (1 + 0.11 * Math.sin(t * Math.PI * 0.9)), { bend: 0.004, seg: 12 }),
       M.skin
     );
     fore.name = 'foreArm' + side;
@@ -222,11 +222,11 @@ export function buildBody(M) {
 
     const hip = new THREE.Group();
     hip.name = 'hip' + side;
-    hip.position.set(s * 0.066, -0.005, 0);
+    hip.position.set(s * 0.046, -0.005, 0);
     hips.add(hip);
 
     const thigh = new THREE.Mesh(
-      limb(0.400, (t) => lerp(0.064, 0.043, t) * (1 + 0.07 * Math.sin(t * Math.PI)), { bend: 0.004, seg: 12, radial: 16 }),
+      limb(0.400, (t) => lerp(0.038, 0.025, t) * (1 + 0.06 * Math.sin(t * Math.PI)), { bend: 0.004, seg: 12, radial: 16 }),
       M.skin
     );
     thigh.name = 'thigh' + side;
@@ -239,7 +239,7 @@ export function buildBody(M) {
     hip.add(knee);
 
     const shin = new THREE.Mesh(
-      limb(0.340, (t) => lerp(0.045, 0.026, t) * (1 + 0.11 * Math.sin(t * Math.PI * 0.8)), { bend: 0.004, seg: 12, radial: 16 }),
+      limb(0.340, (t) => lerp(0.026, 0.016, t) * (1 + 0.10 * Math.sin(t * Math.PI * 0.8)), { bend: 0.004, seg: 12, radial: 16 }),
       M.skin
     );
     shin.name = 'shin' + side;

@@ -12,14 +12,14 @@ import { buildCharacter } from '../char/character.js';
 const MODEL_NAME = 'minimax-m3.1-flash';
 
 export const VIEWS = {
-  front:   { az: 0,      el: 0.03, dist: 3.35, target: [0, 0.97, 0] },
+  front:   { az: -0.07,  el: 0.03, dist: 3.40, target: [0.05, 0.97, 0] },
   back:    { az: Math.PI, el: 0.07, dist: 3.30, target: [0, 0.95, 0] },
   left:    { az: -Math.PI / 2, el: 0.05, dist: 3.20, target: [0, 0.94, 0] },
   right:   { az: Math.PI / 2,  el: 0.05, dist: 3.20, target: [0, 0.94, 0] },
-  three4:  { az: 0.58,   el: 0.10, dist: 3.20, target: [0, 0.98, 0] },
+  three4:  { az: -0.30,  el: 0.09, dist: 3.25, target: [0.05, 0.98, 0] },
   top:     { az: 0.55,   el: 0.95, dist: 3.30, target: [0, 0.92, 0] },
-  closeup: { az: 0.26,   el: 0.05, dist: 0.82, target: [0.02, 1.55, 0] },
-  wide:    { az: 0.85,   el: 0.16, dist: 4.20, target: [0, 0.92, 0] },
+  closeup: { az: -0.24,  el: 0.05, dist: 0.82, target: [0.02, 1.55, 0] },
+  wide:    { az: -0.55,  el: 0.15, dist: 4.20, target: [0, 0.92, 0] },
 };
 
 export class App {

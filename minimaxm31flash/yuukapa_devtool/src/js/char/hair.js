@@ -207,7 +207,7 @@ export function buildHair(M) {
 
   /* ── 4. the mane: long back hair past the knees ─────────── */
   {
-    const n = 30;
+    const n = 38;
     for (let i = 0; i < n; i++) {
       const t = i / (n - 1);
       const beta = lerp(-1.74, 1.74, t) + (rand() - 0.5) * 0.05;
@@ -216,7 +216,7 @@ export function buildHair(M) {
       // the mane is heavier on the character's left (+X)
       const sideBias = 0.036 * Math.sin(t * Math.PI * 1.05);
       const rootX = Math.sin(azRoot) * 0.098;
-      const endX = rootX * 1.30 + sideBias + (t - 0.5) * 0.13;
+      const endX = rootX * 1.45 + sideBias + (t - 0.5) * 0.17;
 
       const len = 0.62 + 0.60 * Math.sin(Math.PI * Math.pow(t, 0.85)) + (rand() - 0.5) * 0.08;
 
@@ -234,7 +234,7 @@ export function buildHair(M) {
         if (n.lengthSq() < 1e-6) n.set(0, 0, -1);
         return n.normalize();
       });
-      const w = 0.040 + 0.026 * Math.sin(t * Math.PI);
+      const w = 0.048 + 0.030 * Math.sin(t * Math.PI);
       const geo = lockMesh(pts, nrm, {
         width: w, thickness: 0.010, radial: 8,
         widthFn: (u) => {

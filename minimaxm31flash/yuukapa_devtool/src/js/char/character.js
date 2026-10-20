@@ -59,9 +59,9 @@ export function buildCharacter(M) {
   poseCharacter(rig);
 
   /* ── pillow (held in the left hand) ──────────────────────── */
-  const pillow = makePillow(M, { w: 0.165, h: 0.265, d: 0.075, gather: new THREE.Vector3(-0.155, 0.250, 0) });
-  pillow.position.set(0.335, 0.618, 0.105);
-  pillow.rotation.set(0.16, 0.42, 0.30);
+  const pillow = makePillow(M, { w: 0.36, h: 0.70, d: 0.075, gather: new THREE.Vector3(-0.150, 0.345, 0) });
+  pillow.position.set(0.215, 0.470, 0.150);
+  pillow.rotation.set(-0.10, 0.24, -0.34);
   rig.root.add(pillow);
 
   /* ── slippers ────────────────────────────────────────────── */
@@ -86,14 +86,14 @@ function poseCharacter(rig) {
 
   /* ── right arm: raised, hand beside the head ─────────────── */
   const rShoulder = chestWorld.clone().add(rig.arms.R.shoulder.position);
-  const rElbow = v(-0.302, 1.276, 0.132);
-  const rWrist = v(-0.166, 1.462, 0.098);
+  const rElbow = v(-0.288, 1.258, 0.048);
+  const rWrist = v(-0.182, 1.452, 0.026);
   aimChain(
     [rig.arms.R.shoulder, rig.arms.R.elbow, rig.arms.R.wrist],
     [
       rElbow.clone().sub(rShoulder).normalize(),
       rWrist.clone().sub(rElbow).normalize(),
-      v(0.10, 0.94, 0.32).normalize(),          // the hand points up
+      v(0.06, 0.97, 0.23).normalize(),          // the hand points up
     ]
   );
   // spread the relaxed fingers
@@ -101,8 +101,8 @@ function poseCharacter(rig) {
 
   /* ── left arm: down, holding the pillow ──────────────────── */
   const lShoulder = chestWorld.clone().add(rig.arms.L.shoulder.position);
-  const lElbow = v(0.168, 1.072, 0.030);
-  const lWrist = v(0.182, 0.845, 0.066);
+  const lElbow = v(0.146, 1.068, 0.030);
+  const lWrist = v(0.158, 0.842, 0.066);
   aimChain(
     [rig.arms.L.shoulder, rig.arms.L.elbow, rig.arms.L.wrist],
     [
@@ -112,10 +112,10 @@ function poseCharacter(rig) {
     ]
   );
 
-  /* ── legs ────────────────────────────────────────────────── */
+  /* ── legs: the right leg forward, the left one behind ──── */
   const legDirs = {
-    R: { hip: v(-0.066, 0.905, 0), knee: v(-0.074, 0.505, -0.014), ankle: v(-0.070, 0.105, -0.038) },
-    L: { hip: v(0.066, 0.905, 0), knee: v(0.060, 0.505, 0.032), ankle: v(0.032, 0.105, 0.014) },
+    R: { hip: v(-0.046, 0.905, 0), knee: v(-0.052, 0.505, 0.026), ankle: v(-0.038, 0.105, 0.044) },
+    L: { hip: v(0.046, 0.905, 0), knee: v(0.046, 0.505, -0.024), ankle: v(0.054, 0.105, -0.034) },
   };
   for (const side of ['L', 'R']) {
     const d = legDirs[side];
@@ -125,15 +125,16 @@ function poseCharacter(rig) {
       [
         d.knee.clone().sub(hipWorld).normalize(),
         d.ankle.clone().sub(d.knee).normalize(),
-        v(0, -0.22, 0.975).normalize(),
+        side === 'R' ? v(0.06, -0.20, 0.978).normalize() : v(-0.04, -0.21, 0.976).normalize(),
       ]
     );
   }
 
-  /* ── head: tilted to her right, chin slightly down ───────── */
-  rig.headPivot.rotation.set(0.035, -0.055, 0.125);
+  /* ── body: a relaxed 3/4 contrapposto ─────────────────── */
+  rig.hips.rotation.set(0.015, -0.105, 0.042);
+  rig.chest.rotation.set(0.020, 0.040, -0.018);
+  rig.neck.rotation.set(0.010, 0.045, 0.012);
 
-  /* ── a touch of spine curve ──────────────────────────────── */
-  rig.chest.rotation.set(0.012, 0.02, -0.012);
-  rig.hips.rotation.set(0, 0.03, 0.012);
+  /* ── head: tilted to her right, chin slightly down ─────── */
+  rig.headPivot.rotation.set(0.045, -0.070, 0.135);
 }

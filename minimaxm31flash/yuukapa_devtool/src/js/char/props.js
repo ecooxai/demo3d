@@ -187,50 +187,63 @@ export function makeHalo(M) {
 }
 
 /* ══════════════════════════════════════════════════════════════
-   The pillow — a plump quilt with a gathered corner
+   The pillow — a large soft quilt held by one corner, draping down
    ══════════════════════════════════════════════════════════════ */
-export function makePillow(M, { w = 0.21, h = 0.30, d = 0.085, gather = new THREE.Vector3(-0.20, 0.29, 0) } = {}) {
-  const geo = superEllipsoid(w, h, d, 0.72, 0.66, 48, 30);
-  const pos = geo.attributes.position;
-  const v = new THREE.Vector3();
-  const rand = rng(31337);
+export function makePillow(M, {
+  w = 0.34, h = 0.66, d = 0.10, gather = new THREE.Vector3(-0.16, 0.30, 0),
+} = {}) {
+  const rows = 34, cols = 26;
+  const verts = [], idx = [], uvs = [];
+  const rand = rng(2468);
 
-  for (let i = 0; i < pos.count; i++) {
-    v.fromBufferAttribute(pos, i);
+  for (let i = 0; i <= rows; i++) {
+    const t = i / rows;
+    // the sheet widens as it falls away from the gathered corner
+    const wid = lerp(0.035, w, Math.pow(t, 0.62));
+    const drop = t * h;
+    for (let j = 0; j <= cols; j++) {
+      const s = j / cols;
+      const u = (s - 0.5) * 2;              // -1 .. 1 across the sheet
 
-    // plump the middle, pinch the edges
-    const edge = Math.max(
-      Math.abs(v.x) / w, Math.abs(v.y) / h, Math.abs(v.z) / d
-    );
-    const bulge = 1 + 0.13 * (1 - Math.pow(edge, 1.7));
-    v.multiplyScalar(bulge);
+      // gather: everything collapses towards the pinch point
+      const gatherK = 1 - smoothstep(0.0, 0.16, t);
+      const pinch = new THREE.Vector3(gather.x, gather.y, gather.z);
 
-    // soft wrinkles
-    const wrinkle =
-      noise1(v.x * 7.0 + v.y * 3.0, 1) * 0.010 +
-      noise1(v.y * 6.0 - v.z * 4.0, 2) * 0.009 +
-      noise1(v.z * 9.0 + v.x * 2.0, 3) * 0.006;
-    v.addScaledVector(v.clone().normalize(), wrinkle * (0.35 + 0.65 * (1 - edge)));
+      // gentle drape waves across the cloth
+      const wave = Math.sin(u * 2.4 + t * 1.6) * 0.028 * smoothstep(0.05, 0.6, t);
+      const wave2 = Math.cos(s * Math.PI * 2.2) * 0.020 * smoothstep(0.1, 0.8, t);
 
-    // gather the corner that the hand holds
-    const dist = v.distanceTo(gather);
-    if (dist < 0.24) {
-      const t = 1 - smoothstep(0.0, 0.24, dist);
-      const pull = Math.pow(t, 1.7) * 0.30;
-      const dir = v.clone().sub(gather).normalize();
-      v.addScaledVector(dir, -pull * dist * 0.5);
-      // soft radial folds around the pinch
-      const ang = Math.atan2(v.y - gather.y, v.x - gather.x);
-      const fold = Math.sin(ang * 6.0) * t * 0.006;
-      v.z += fold;
-      v.y += Math.cos(ang * 6.0) * t * 0.005;
+      // the sheet bulges outwards in the middle
+      const bulge = Math.sin(Math.PI * Math.min(1, t * 1.05)) * (1 - u * u) * d;
+
+      let x = u * wid * 0.5 + wave * 0.4;
+      let y = -drop;
+      let z = bulge + wave2;
+
+      // pull the top rows into the pinch
+      x = lerp(x, pinch.x, gatherK * 0.92);
+      y = lerp(y, pinch.y, gatherK * 0.92);
+      z = lerp(z, pinch.z, gatherK * 0.92);
+
+      verts.push(x, y, z);
+      uvs.push(s, t);
     }
-
-    pos.setXYZ(i, v.x, v.y, v.z);
   }
+  for (let i = 0; i < rows; i++) {
+    for (let j = 0; j < cols; j++) {
+      const a = i * (cols + 1) + j, b = a + 1;
+      const c = (i + 1) * (cols + 1) + j + 1, d2 = (i + 1) * (cols + 1) + j;
+      idx.push(a, d2, b, b, d2, c);
+    }
+  }
+  const geo = new THREE.BufferGeometry();
+  geo.setAttribute('position', new THREE.Float32BufferAttribute(verts, 3));
+  geo.setAttribute('uv', new THREE.Float32BufferAttribute(uvs, 2));
+  geo.setIndex(idx);
   geo.computeVertexNormals();
 
   const mesh = new THREE.Mesh(geo, M.pillow);
+  mesh.name = 'pillow';
   mesh.castShadow = true;
   mesh.receiveShadow = true;
   return mesh;
@@ -246,12 +259,12 @@ export function makeSlipper(M) {
   // sole
   const sole = new THREE.Mesh(
     (() => {
-      const geo = superEllipsoid(0.070, 0.014, 0.088, 0.5, 0.6, 28, 16);
+      const geo = superEllipsoid(0.058, 0.012, 0.073, 0.5, 0.6, 28, 16);
       const pos = geo.attributes.position;
       const v = new THREE.Vector3();
       for (let i = 0; i < pos.count; i++) {
         v.fromBufferAttribute(pos, i);
-        const t = clamp((v.z + 0.088) / 0.176, 0, 1);
+        const t = clamp((v.z + 0.073) / 0.146, 0, 1);
         v.x *= lerp(0.88, 1.04, t);
         pos.setXYZ(i, v.x, v.y, v.z);
       }
@@ -260,19 +273,19 @@ export function makeSlipper(M) {
     })(),
     M.slipperSole
   );
-  sole.position.set(0, -0.093, 0.030);
+  sole.position.set(0, -0.090, 0.026);
   sole.castShadow = true;
   g.add(sole);
 
   // fluffy upper
   const upper = new THREE.Mesh(
     (() => {
-      const geo = superEllipsoid(0.072, 0.058, 0.090, 0.55, 0.62, 34, 22);
+      const geo = superEllipsoid(0.060, 0.048, 0.076, 0.55, 0.62, 34, 22);
       const pos = geo.attributes.position;
       const v = new THREE.Vector3();
       for (let i = 0; i < pos.count; i++) {
         v.fromBufferAttribute(pos, i);
-        const t = clamp((v.z + 0.09) / 0.18, 0, 1);
+        const t = clamp((v.z + 0.076) / 0.152, 0, 1);
         v.x *= lerp(0.86, 1.02, t);
         // fuzzy silhouette
         const bump = noise1(v.x * 22 + v.z * 15, 7) * 0.004 + noise1(v.y * 18 - v.z * 11, 9) * 0.004;
@@ -284,18 +297,18 @@ export function makeSlipper(M) {
     })(),
     M.slipper
   );
-  upper.position.set(0, -0.046, 0.028);
+  upper.position.set(0, -0.048, 0.024);
   upper.castShadow = true;
   upper.receiveShadow = true;
   g.add(upper);
 
   // ribbon bow on the vamp
   const bow = makeBow(M, {
-    width: 0.062, height: 0.034, depth: 0.020,
-    knot: 0.015, tails: false, color: M.pink,
+    width: 0.050, height: 0.028, depth: 0.017,
+    knot: 0.013, tails: false, color: M.pink,
   });
-  bow.position.set(0, 0.006, 0.070);
-  bow.rotation.x = -0.62;
+  bow.position.set(0, 0.002, 0.060);
+  bow.rotation.x = -0.70;
   g.add(bow);
 
   return g;

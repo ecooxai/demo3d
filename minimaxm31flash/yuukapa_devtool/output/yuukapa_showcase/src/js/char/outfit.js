@@ -9,30 +9,30 @@ import { loft, sweep, ellipseRing, roundedBox, superEllipsoid, clamp, lerp, smoo
 
 /* ── garment shells are described in "hips" space (y=0 at the hip line) ── */
 const SHIRT_ROWS = [
-  { y: 0.400, rx: 0.100, rz: 0.080, z: 0.000 },
-  { y: 0.372, rx: 0.121, rz: 0.092, z: 0.000 },
-  { y: 0.330, rx: 0.130, rz: 0.099, z: 0.002 },
-  { y: 0.270, rx: 0.129, rz: 0.098, z: 0.002 },
-  { y: 0.200, rx: 0.121, rz: 0.093, z: 0.000 },
-  { y: 0.140, rx: 0.118, rz: 0.092, z: 0.000 },
-  { y: 0.085, rx: 0.128, rz: 0.100, z: 0.002 },
-  { y: 0.045, rx: 0.142, rz: 0.110, z: 0.004 },
-  { y: 0.015, rx: 0.150, rz: 0.117, z: 0.005 },
-  { y: 0.000, rx: 0.152, rz: 0.119, z: 0.005 },  // hem
-  { y: -0.012, rx: 0.143, rz: 0.112, z: 0.005 }, // fold under
-  { y: -0.020, rx: 0.132, rz: 0.104, z: 0.005 },
+  { y: 0.412, rx: 0.092, rz: 0.066, z: 0.000 },
+  { y: 0.380, rx: 0.100, rz: 0.072, z: 0.000 },
+  { y: 0.340, rx: 0.103, rz: 0.076, z: 0.002 },
+  { y: 0.280, rx: 0.100, rz: 0.075, z: 0.002 },
+  { y: 0.210, rx: 0.094, rz: 0.072, z: 0.000 },
+  { y: 0.145, rx: 0.091, rz: 0.070, z: 0.000 },
+  { y: 0.100, rx: 0.093, rz: 0.072, z: 0.002 },
+  { y: 0.070, rx: 0.095, rz: 0.074, z: 0.004 },
+  { y: 0.048, rx: 0.095, rz: 0.075, z: 0.005 },
+  { y: 0.034, rx: 0.094, rz: 0.075, z: 0.005 },  // hem
+  { y: 0.022, rx: 0.088, rz: 0.070, z: 0.005 },  // fold under
+  { y: 0.010, rx: 0.081, rz: 0.065, z: 0.005 },
 ];
 
 const SHORTS_ROWS = [
-  { y: 0.150, rx: 0.120, rz: 0.092, z: 0.000 },
-  { y: 0.110, rx: 0.131, rz: 0.102, z: 0.000 },
-  { y: 0.065, rx: 0.143, rz: 0.113, z: 0.002 },
-  { y: 0.015, rx: 0.154, rz: 0.124, z: 0.004 },
-  { y: -0.035, rx: 0.162, rz: 0.134, z: 0.005 },
-  { y: -0.080, rx: 0.167, rz: 0.141, z: 0.005 },
-  { y: -0.115, rx: 0.169, rz: 0.144, z: 0.005 },  // scalloped hem
-  { y: -0.140, rx: 0.161, rz: 0.137, z: 0.005 },
-  { y: -0.152, rx: 0.150, rz: 0.128, z: 0.005 },  // fold under
+  { y: 0.150, rx: 0.088, rz: 0.070, z: 0.000 },
+  { y: 0.110, rx: 0.096, rz: 0.077, z: 0.000 },
+  { y: 0.065, rx: 0.104, rz: 0.084, z: 0.002 },
+  { y: 0.015, rx: 0.106, rz: 0.088, z: 0.004 },
+  { y: -0.034, rx: 0.111, rz: 0.093, z: 0.005 },
+  { y: -0.086, rx: 0.108, rz: 0.090, z: 0.005 },
+  { y: -0.128, rx: 0.100, rz: 0.084, z: 0.005 },  // scalloped hem
+  { y: -0.152, rx: 0.092, rz: 0.077, z: 0.005 },
+  { y: -0.166, rx: 0.084, rz: 0.070, z: 0.005 },  // fold under
 ];
 
 function sampleRows(rows, y) {
@@ -62,7 +62,20 @@ const RING = 40;
 
 /** Build the pyjama shirt. */
 function buildShirt(M) {
-  const rings = SHIRT_ROWS.map((r) => ellipseRing(0, r.y, r.z, r.rx, r.rz, RING, { squashFront: 0.04 }));
+  const rings = SHIRT_ROWS.map((r, ri) => {
+    const ring = [];
+    const t = ri / (SHIRT_ROWS.length - 1);
+    // soft vertical folds make the loose cotton read as cloth
+    const foldAmp = 0.020 * smoothstep(0.15, 0.9, 1 - t);
+    for (let j = 0; j < RING; j++) {
+      const a = (j / RING) * Math.PI * 2;
+      const fold = 1 + foldAmp * (Math.cos(a * 5 + 0.6) * 0.6 + Math.cos(a * 3 - 1.1) * 0.4);
+      const x = Math.sin(a) * r.rx * fold;
+      const z = Math.cos(a) * r.rz * fold + r.z;
+      ring.push(new THREE.Vector3(x, r.y, z));
+    }
+    return ring;
+  });
   const geo = loft(rings, {
     capStart: true, capEnd: true,
     colorFn: (rowT) => {
@@ -119,10 +132,10 @@ function buildShorts(M) {
   for (let i = 0; i < HEM_LOBES; i++) {
     const a = (i / HEM_LOBES) * Math.PI * 2 + 0.1;
     const lobe = new THREE.Mesh(
-      superEllipsoid(0.030, 0.026, 0.030, 0.85, 0.85, 16, 12),
+      superEllipsoid(0.026, 0.022, 0.026, 0.8, 0.8, 16, 12),
       M.scallop
     );
-    lobe.position.set(Math.sin(a) * hem.rx * 0.99, hem.y - 0.012, Math.cos(a) * hem.rz * 0.99);
+    lobe.position.set(Math.sin(a) * hem.rx * 1.01, hem.y - 0.010, Math.cos(a) * hem.rz * 1.01);
     lobe.scale.set(1, 1, 1);
     lobe.castShadow = true;
     lobe.receiveShadow = true;
@@ -137,7 +150,7 @@ function buildSleeve(M) {
   const pts = [];
   for (let i = 0; i <= 10; i++) {
     const t = i / 10;
-    pts.push(new THREE.Vector3(0, lerp(0.082, -0.150, t), 0));
+    pts.push(new THREE.Vector3(0, lerp(0.072, -0.140, t), 0));
   }
   const geo = sweep(pts, {
     radial: 24,
@@ -170,9 +183,9 @@ function buildCollar(M) {
       const a = (j / 40) * Math.PI * 2;
       const front = Math.max(0, Math.cos(a));
       // the front dips into the V opening
-      const dip = front * front * 0.055;
-      const rx = lerp(0.058, 0.074, t) * (1 + 0.10 * front * t);
-      const rz = lerp(0.055, 0.070, t) * (1 + 0.10 * front * t);
+      const dip = front * front * 0.075;
+      const rx = lerp(0.040, 0.058, t) * (1 + 0.10 * front * t);
+      const rz = lerp(0.038, 0.055, t) * (1 + 0.10 * front * t);
       const x = Math.sin(a) * rx;
       const z = Math.cos(a) * rz;
       const y = lerp(0.305, 0.268, t) - dip;
@@ -185,37 +198,92 @@ function buildCollar(M) {
   band.receiveShadow = true;
   g.add(band);
 
-  // lapels running down the chest
-  for (const s of [-1, 1]) {
-    const ctrl = [];
-    const steps = [
-      { x: 0.010, y: 0.284 },
-      { x: 0.022, y: 0.250 },
-      { x: 0.032, y: 0.210 },
-      { x: 0.039, y: 0.172 },
-      { x: 0.043, y: 0.140 },
-    ];
-    for (const st of steps) {
-      const fy = st.y - 0.16;               // chest-local → hips-local
-      const z = frontZ(SHIRT_ROWS, fy, st.x) + 0.004;
-      ctrl.push(new THREE.Vector3(s * st.x, st.y, z));
+  // the open neckline: a V of bare chest framed by the collar
+  const V = [
+    { x: 0.003, y: 0.288 },
+    { x: 0.010, y: 0.262 },
+    { x: 0.016, y: 0.232 },
+    { x: 0.021, y: 0.202 },
+    { x: 0.024, y: 0.176 },
+  ];
+  const vEdge = (t) => {
+    // sample the V polyline
+    const f = t * (V.length - 1);
+    const i = Math.min(V.length - 2, Math.floor(f));
+    const k = f - i;
+    return new THREE.Vector3(
+      lerp(V[i].x, V[i + 1].x, k),
+      lerp(V[i].y, V[i + 1].y, k),
+      0
+    );
+  };
+  {
+    const rows = 16;
+    const vp = [], vIdx = [];
+    for (let i = 0; i <= rows; i++) {
+      const t = i / rows;
+      const e = vEdge(t);
+      const halfW = e.x;
+      const fy = e.y - 0.16;
+      const zc = frontZ(SHIRT_ROWS, fy, 0) + 0.0035;
+      const zl = frontZ(SHIRT_ROWS, fy, halfW) + 0.0035;
+      vp.push(-halfW, e.y, zl, 0, e.y, zc, halfW, e.y, zl);
     }
-    const curve = new THREE.CatmullRomCurve3(ctrl, false, 'catmullrom', 0.5);
-    const pts = curve.getSpacedPoints(16);
-    const nrm = pts.map(() => new THREE.Vector3(s * 0.28, 0, 0.96).normalize());
-    const geo = sweep(pts, {
-      radial: 8,
-      frameNormals: nrm,
-      profile: (t) => {
-        const w = lerp(0.0135, 0.005, Math.pow(t, 0.85));
-        return { rx: w, ry: 0.0055 };
-      },
-      capStart: true, capEnd: true,
-    });
-    const m = new THREE.Mesh(geo, M.collar);
-    m.castShadow = true;
-    m.receiveShadow = true;
-    g.add(m);
+    for (let i = 0; i < rows; i++) {
+      for (let j = 0; j < 2; j++) {
+        const a = i * 3 + j, b = i * 3 + j + 1;
+        const c = (i + 1) * 3 + j + 1, d = (i + 1) * 3 + j;
+        vIdx.push(a, d, b, b, d, c);
+      }
+    }
+    const vGeo = new THREE.BufferGeometry();
+    vGeo.setAttribute('position', new THREE.Float32BufferAttribute(vp, 3));
+    vGeo.setAttribute('uv', new THREE.Float32BufferAttribute(new Array((vp.length / 3) * 2).fill(0), 2));
+    vGeo.setIndex(vIdx);
+    vGeo.computeVertexNormals();
+    const chest = new THREE.Mesh(vGeo, M.skin);
+    chest.name = 'neckline';
+    chest.receiveShadow = true;
+    g.add(chest);
+  }
+
+  // collar flaps: flat white strips that run along the V
+  for (const s of [-1, 1]) {
+    const rows = 16;
+    const fp = [], fIdx = [];
+    for (let i = 0; i <= rows; i++) {
+      const t = i / rows;
+      const e = vEdge(t);
+      // outward direction in the chest plane
+      const e2 = vEdge(Math.min(1, t + 0.02));
+      const dir = new THREE.Vector3(e2.x - e.x, e2.y - e.y, 0);
+      if (dir.lengthSq() < 1e-9) dir.set(s, -0.4, 0);
+      dir.normalize();
+      const out = new THREE.Vector3(-dir.y * s, dir.x * s, 0).normalize();
+      const w = lerp(0.021, 0.009, Math.pow(t, 0.7));
+      const fy = e.y - 0.16;
+      for (let j = 0; j <= 1; j++) {
+        const x = s * e.x + out.x * w * j;
+        const y = e.y + out.y * w * j;
+        const z = frontZ(SHIRT_ROWS, fy, Math.abs(x)) + 0.0045 + 0.002 * (1 - j);
+        fp.push(x, y, z);
+      }
+    }
+    for (let i = 0; i < rows; i++) {
+      const a = i * 2, b = i * 2 + 1, c = (i + 1) * 2 + 1, d = (i + 1) * 2;
+      if (s > 0) fIdx.push(a, d, b, b, d, c);
+      else fIdx.push(a, b, d, b, c, d);
+    }
+    const fGeo = new THREE.BufferGeometry();
+    fGeo.setAttribute('position', new THREE.Float32BufferAttribute(fp, 3));
+    fGeo.setAttribute('uv', new THREE.Float32BufferAttribute(new Array((fp.length / 3) * 2).fill(0), 2));
+    fGeo.setIndex(fIdx);
+    fGeo.computeVertexNormals();
+    const flap = new THREE.Mesh(fGeo, M.collar);
+    flap.name = 'collarFlap';
+    flap.castShadow = true;
+    flap.receiveShadow = true;
+    g.add(flap);
   }
 
   return g;
@@ -238,15 +306,15 @@ function buildPlacket(M) {
   const geo = sweep(pts, {
     radial: 6,
     frameNormals: nrm,
-    profile: () => ({ rx: 0.0095, ry: 0.0035 }),
+    profile: () => ({ rx: 0.0075, ry: 0.003 }),
     capStart: true, capEnd: true,
   });
-  const strip = new THREE.Mesh(geo, M.collar);
+  const strip = new THREE.Mesh(geo, M.pajamaPlain);
   strip.castShadow = true;
   g.add(strip);
 
   // pearl buttons
-  const btnGeo = superEllipsoid(0.0058, 0.0058, 0.0030, 0.75, 0.75, 14, 10);
+  const btnGeo = superEllipsoid(0.0048, 0.0048, 0.0026, 0.75, 0.75, 14, 10);
   [0.370, 0.298, 0.226, 0.154, 0.082, 0.020].forEach((y, i) => {
     const fy = y - 0.16;
     const b = new THREE.Mesh(btnGeo, M.button);
@@ -264,17 +332,17 @@ function buildPocket(M) {
   g.name = 'pocket';
 
   const y = 0.170;               // chest-local
-  const x = 0.052;
+  const x = 0.036;
   const fy = y - 0.16;
   const z = frontZ(SHIRT_ROWS, fy, x);
   const n = new THREE.Vector3(x / 0.13, 0, (z - 0.002) / 0.10).normalize();
 
-  const backing = new THREE.Mesh(roundedBox(0.082, 0.076, 0.007, 0.010, 3), M.collar);
+  const backing = new THREE.Mesh(roundedBox(0.062, 0.058, 0.006, 0.008, 3), M.collar);
   backing.position.set(x, y, z + 0.004);
   backing.lookAt(backing.position.clone().add(n));
   g.add(backing);
 
-  const face = new THREE.Mesh(roundedBox(0.073, 0.067, 0.009, 0.008, 3), M.pajama);
+  const face = new THREE.Mesh(roundedBox(0.055, 0.050, 0.008, 0.006, 3), M.pajama);
   face.position.copy(backing.position).addScaledVector(n, 0.004);
   face.quaternion.copy(backing.quaternion);
   g.add(face);
