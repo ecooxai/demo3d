@@ -123,8 +123,18 @@ export class App {
   /* ── environment: gradient sky, ground, lights ──────────── */
   buildEnvironment() {
     const scene = this.scene;
+    if (this.options.flatbg) {
+      this.renderer.setClearColor(0xff00ff, 1);
+      scene.background = null;
+      this.options.shadows = false;
+    }
 
     // vertical gradient backdrop
+    if (this.options.flatbg) {
+      const key = this.keyLight;
+      const amb = this.scene.children.find((c) => c.isAmbientLight);
+      this.ground && (this.ground.visible = false);
+    }
     const sky = new THREE.Mesh(
       new THREE.SphereGeometry(40, 32, 24),
       (() => {
@@ -139,7 +149,8 @@ export class App {
     );
     sky.name = 'sky';
     sky.renderOrder = -10;
-    scene.add(sky);
+    if (!this.options.flatbg) scene.add(sky);
+    this.sky = sky;
 
     // shadow catcher
     const ground = new THREE.Mesh(

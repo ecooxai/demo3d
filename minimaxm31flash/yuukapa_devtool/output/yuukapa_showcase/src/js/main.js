@@ -13,6 +13,7 @@ const canvas = document.getElementById('view');
 const boot = document.getElementById('boot');
 
 const app = new App(canvas);
+if (params.get('flatbg') === '1') app.options.flatbg = true;
 let ui = null;
 
 /* ── automation surface ───────────────────────────────────── */
@@ -119,6 +120,7 @@ async function start(backend) {
     document.getElementById('hud').style.display = 'none';
     document.getElementById('topbar').style.display = 'none';
   }
+  if (params.get('flatbg') === '1') { app.options.flatbg = true; }
   if (params.get('cine') === '1') {
     app.options.cine = true;
     document.getElementById('hud').style.display = 'none';

@@ -2,7 +2,7 @@
   "ready": true,
   "info": {
     "backend": "webgl",
-    "fps": 21,
+    "fps": 60,
     "res": "900x1200",
     "model": "minimax-m3.1-flash",
     "view": "closeup"

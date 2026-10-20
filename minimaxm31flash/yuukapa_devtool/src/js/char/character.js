@@ -60,8 +60,8 @@ export function buildCharacter(M) {
   poseCharacter(rig);
 
   /* ── pillow (held in the left hand) ──────────────────────── */
-  const pillow = makePillow(M, { w: 0.36, h: 0.70, d: 0.075, gather: new THREE.Vector3(-0.150, 0.345, 0) });
-  pillow.position.set(0.215, 0.470, 0.150);
+  const pillow = makePillow(M, { w: 0.26, h: 0.44, d: 0.060, gather: new THREE.Vector3(-0.120, 0.220, 0) });
+  pillow.position.set(0.238, 0.600, 0.130);
   pillow.rotation.set(-0.10, 0.24, -0.34);
   rig.root.add(pillow);
 

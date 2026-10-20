@@ -132,7 +132,7 @@ capture.
   (60 s, 1280×1600, credit bar burned in), `review/` (iteration stills, UI
   and phone captures, live-deploy screenshot).
 
-**Fidelity work in the final pass (minimax build, iteration 63 / 97):**
+**Fidelity work in the final pass (minimax build, iteration 66 / 97):**
 * The reference figure is far slimmer than the first build — the whole garment
   and limb set was re-measured off the source PNG and slimmed (torso ≈0.15 m
   wide, hem ≈0.17 m, thighs/calves ≈0.05 m). This single change fixed the
@@ -141,7 +141,7 @@ capture.
   a skin-coloured neckline patch plus two white collar flaps that share the
   V's edge, and a fabric-coloured button placket (the reference's placket is
   the same cloth, only the collar is white).
-* The bloomer shorts are shorter and puffier with 15 scalloped lobes; the
+* The bloomer shorts are longer and puffier with 15 scalloped lobes; the
   cat print was enlarged to the reference's scale.
 * The pillow is a large draped sheet (a grid surface that gathers at the held
   corner and widens as it falls), not a cushion.
@@ -152,6 +152,12 @@ capture.
   ragged zigzag, and the chin crease was softened in the skull sculpt.
 * Camera presets were re-framed and flipped to the character's right so the
   long mane never hides the face.
+* The mane now flares at chest height and tapers to points near the ankles,
+  matching the reference's silhouette instead of reading as a flat curtain.
+* `?flatbg=1` renders the scene on a magenta field; `tools/widths.mjs` then
+  extracts a silhouette width profile from both the reference and the render
+  and prints the per-height delta in metres. Every proportion fix above was
+  driven by that table.
 
 **Extra notes for the next agent (from the minimax build):**
 * GitHub Pages is **blocked for this organisation** — both the App token and a

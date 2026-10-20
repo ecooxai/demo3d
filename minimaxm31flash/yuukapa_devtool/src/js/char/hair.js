@@ -216,19 +216,19 @@ export function buildHair(M) {
       const azRoot = Math.PI + beta;
 
       // the mane is heavier on the character's left (+X)
-      const sideBias = 0.036 * Math.sin(t * Math.PI * 1.05);
+      const sideBias = 0.048 * Math.sin(t * Math.PI * 1.05);
       const rootX = Math.sin(azRoot) * 0.098;
-      const endX = rootX * 1.45 + sideBias + (t - 0.5) * 0.17;
+      const endX = rootX * 1.95 + sideBias + (t - 0.5) * 0.20;
 
-      const len = 0.62 + 0.60 * Math.sin(Math.PI * Math.pow(t, 0.85)) + (rand() - 0.5) * 0.08;
+      const len = 0.50 + 0.54 * Math.sin(Math.PI * Math.pow(t, 0.85)) + (rand() - 0.5) * 0.07;
 
       const ctrl = [];
       ctrl.push(hairPoint(azRoot, 0.98, 0.016));
       ctrl.push(hairPoint(azRoot, 0.42, 0.017));
-      ctrl.push(new THREE.Vector3(rootX * 1.04, HEAD.center.y - 0.01, -0.122 - 0.02 * Math.cos(beta)));
-      ctrl.push(new THREE.Vector3(endX * 0.94, HEAD.center.y - 0.22, -0.142 - 0.03 * Math.cos(beta)));
-      ctrl.push(new THREE.Vector3(endX * 1.02, HEAD.center.y - 0.24 - len * 0.52, -0.122 - 0.02 * Math.cos(beta)));
-      ctrl.push(new THREE.Vector3(endX * 1.10, HEAD.center.y - 0.26 - len, -0.078 - 0.01 * Math.cos(beta)));
+      ctrl.push(new THREE.Vector3(rootX * 1.10, HEAD.center.y - 0.01, -0.120 - 0.02 * Math.cos(beta)));
+      ctrl.push(new THREE.Vector3(endX * 0.92, HEAD.center.y - 0.19, -0.150 - 0.03 * Math.cos(beta)));
+      ctrl.push(new THREE.Vector3(endX * 0.80, HEAD.center.y - 0.24 - len * 0.55, -0.132 - 0.02 * Math.cos(beta)));
+      ctrl.push(new THREE.Vector3(endX * 0.66, HEAD.center.y - 0.26 - len, -0.086 - 0.01 * Math.cos(beta)));
 
       const pts = spline(ctrl, 24);
       const nrm = pts.map((p) => {
