@@ -1,8 +1,9 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><style>
   html,body{margin:0;background:#05070c;color:#fff;font-family:"Helvetica Neue",Arial,sans-serif}
   .wrap{display:flex;min-height:100vh}
-  .stage{flex:1;position:relative;display:grid;place-items:center;background:#cde9f7;overflow:hidden}
-  .credit{position:absolute;left:0;right:0;bottom:0;background:#05070c;color:#fff;
+  .stage{flex:1;position:relative;height:100vh;display:grid;place-items:center;background:#cde9f7;overflow:hidden}
+  .stage iframe{z-index:1}
+  .credit{position:absolute;left:0;right:0;bottom:0;z-index:5;background:#05070c;color:#fff;
           padding:26px 34px;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;
           border-top:3px solid #fff}
   .credit .who{font-family:"Arial Black","Helvetica Neue",Arial;font-size:44px;letter-spacing:.5px;line-height:1.1}
@@ -37,6 +38,8 @@
        rebuilt as a real-time 3D character from a single illustration.</p>
     <p><span class="k">Built from scratch:</span> custom lofts, ribbon strands, lathed garments,
        Canvas2D face and cat-print textures, inverted-hull ink outlines.</p>
+    <video src="./yuukapa_glm53flash_opencode_60s.mp4" controls loop muted playsinline
+           style="width:100%;border-radius:10px;border:1px solid #1d2530;background:#000"></video>
     <img src="./cards/front.png" alt="front view"/>
     <img src="./cards/face.png" alt="face close-up"/>
     <div class="links">Deliverables: 60 s showcase video · iteration stills · this interactive viewer</div>

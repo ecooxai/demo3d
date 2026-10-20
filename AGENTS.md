@@ -353,6 +353,10 @@ The viewer ships with:
   white-on-black credit cards.
 * `output/yuukapa_glm53flash_opencode_60s.mp4` — 60.0 s, 736×976, 10 fps:
   3 s title card, 54 s turntable with a burned-in credit bar, 3 s credit card.
+* **Live deployment:** https://yuukapa-glm53flash-opencode.surge.sh/
+  (interactive viewer, credited landing page, the video and the credit cards;
+  published with `node tools/publish.mjs`, which also verifies the surge
+  account through a disposable mail.tm mailbox).
 
 **Iteration-009 changes (why the score moved 78 → 82):**
 * Skin warmed (`0xf9e2d8`) and moved onto the soft ramp — the cold mauve arms

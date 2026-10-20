@@ -440,7 +440,7 @@ export function buildFigure(fx = {}) {
     const rTop = isRaised ? 0.0435 : 0.0495;
     const rBot = isRaised ? 0.047 : 0.0535;
     const len = isRaised ? 0.09 : 0.105;
-    const cyl = new THREE.Mesh(new THREE.CylinderGeometry(rTop, rBot, len, 22, 1, false), shirtSleeveMat);
+    const cyl = new THREE.Mesh(new THREE.CylinderGeometry(rTop, rBot, len, 32, 1, false), shirtSleeveMat);
     cyl.position.copy(new THREE.Vector3().addVectors(a1, a2).multiplyScalar(0.5));
     cyl.quaternion.setFromUnitVectors(V3(0, 1, 0), dir);
     slGroup.add(cyl);
@@ -511,7 +511,9 @@ export function buildFigure(fx = {}) {
     const r = prof.r(y) * 0.66 + 0.003;
     pktPts.push(new THREE.Vector2(r, y));
   }
-  const placket = new THREE.Mesh(new THREE.LatheGeometry(pktPts, 8, deg(-24), deg(48)), whiteMat);
+  // the reference placket is plain cloth with white buttons (no cat print)
+  const placketMat = new THREE.MeshToonMaterial({ color: 0xd5f1fb, gradientMap: toonRampCloth() });
+  const placket = new THREE.Mesh(new THREE.LatheGeometry(pktPts, 8, deg(-24), deg(48)), placketMat);
   placketGroup.add(placket);
   for (let i = 0; i < 5; i++) {
     const y = 1.128 + i * 0.040;
@@ -537,11 +539,11 @@ export function buildFigure(fx = {}) {
     pcx.fillStyle = 'rgba(137,205,228,0.95)';
     pcx.beginPath(); pcx.ellipse(52, 62, 3.6, 4.6, 0, 0, 7); pcx.fill();
     pcx.beginPath(); pcx.ellipse(80, 62, 3.6, 4.6, 0, 0, 7); pcx.fill();
-    const patchMat = new THREE.MeshToonMaterial({ color: 0xffffff, map: new THREE.CanvasTexture(pc), gradientMap: toonRamp() });
+    const patchMat = new THREE.MeshToonMaterial({ color: 0xffffff, map: new THREE.CanvasTexture(pc), gradientMap: toonRampCloth() });
     patchMat.map.colorSpace = THREE.SRGBColorSpace;
     const pk = new THREE.Mesh(new THREE.BoxGeometry(0.082, 0.062, 0.004), patchMat);
-    pk.position.set(-0.062, 1.185, 0.0815);
-    pk.rotation.y = deg(-9);
+    pk.position.set(0.062, 1.185, 0.0815);
+    pk.rotation.y = deg(9);
     body.add(pk);
     addOutline(pk, { t: 0.0016, color: P.outlineWhite });
   }

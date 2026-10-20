@@ -218,12 +218,13 @@ function applySize() {
 }
 window.addEventListener('resize', applySize);
 
-// debug: ?rect=1 reports the canvas layout rect in the document title
+// debug: ?rect=1 reports the canvas layout rect + backend in the document title
 if (qs.get('rect')) {
   setTimeout(() => {
     const r = canvas.getBoundingClientRect();
-    document.title = `canvas ${Math.round(r.width)}x${Math.round(r.height)} @${Math.round(r.left)},${Math.round(r.top)} inner ${window.innerWidth}x${window.innerHeight} buf ${canvas.width}x${canvas.height}`;
-  }, 1200);
+    const bk = (window.__APP__ && window.__APP__.backend) || 'none';
+    document.title = `canvas ${Math.round(r.width)}x${Math.round(r.height)} @${Math.round(r.left)},${Math.round(r.top)} inner ${window.innerWidth}x${window.innerHeight} buf ${canvas.width}x${canvas.height} backend ${bk}`;
+  }, 1500);
 }
 
 /* ================= UI ================= */
