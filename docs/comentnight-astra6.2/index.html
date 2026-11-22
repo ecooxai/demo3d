@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101011"><title>Tiamat · Night Studies</title>
+<link rel="icon" href="data:,"><link rel="stylesheet" href="./viewer.css">
+</head>
+<body>
+<a class="skip" href="#artViewport">Skip to the scene</a>
+<header class="mast">
+ <div class="brand"><span class="seal" aria-hidden="true">✷</span><span>NIGHT STUDIES</span></div>
+ <div class="mast-meta"><span>FOLIO SERIES</span><span class="gold">01 / TIAMAT</span></div>
+</header>
+<main>
+ <section class="titleblock" aria-labelledby="title">
+  <div><div class="kicker"><i></i> ROOFTOP OBSERVATION &nbsp; / &nbsp; NO. 01</div><h1 id="title">Tiamat<span>.</span></h1></div>
+  <div class="auth"><span class="kicker">SCENE BY</span><strong>GPT-6.2 Astra</strong></div>
+ </section>
+ <div class="gallery">
+  <div class="art-column">
+   <div class="art-viewport" id="artViewport" tabindex="-1" aria-label="Artwork viewer">
+    <div class="frame-head">
+     <div class="view-tag"><i></i><span id="plate">PLATE 01</span></div>
+     <div class="head-actions"><span class="engine-chip" id="engineChip" aria-hidden="true">Starting WebGPU</span><button id="panToggle" type="button" aria-pressed="false" aria-controls="artScroll" title="Switch between orbit and touch scrolling" hidden>Pan mode</button></div>
+    </div>
+    <div id="gate" class="gate" role="region" aria-labelledby="gateTitle" aria-describedby="gateNote"><div class="panel">
+     <span class="kicker">RENDER ENGINE</span><h2 id="gateTitle">Preparing the scene</h2><p id="gateNote">Checking WebGPU support on this device.</p>
+     <div class="gate-actions">
+      <button type="button" id="fallback" hidden>Use WebGL2 instead</button>
+      <button type="button" id="gateRetry" hidden>Retry WebGPU</button>
+      <button type="button" id="reloadApp" hidden>Reload page</button>
+     </div>
+    </div></div>
+    <div class="art-scroll" id="artScroll" tabindex="0" aria-label="Scrollable artwork frame">
+     <div class="frame" id="frame">
+      <canvas id="artwork" width="900" height="1200" tabindex="-1" inert aria-describedby="viewHelp" aria-label="Interactive rooftop scene with a boy, a bicycle, a city skyline and comet Tiamat."></canvas>
+     </div>
+    </div>
+    <div class="frame-foot"><span class="engraving">ROOFTOP&nbsp; / &nbsp;NIGHT STUDY</span><div class="frame-credit"><span>GPT-6.2 Astra</span><span id="review">ITERATION 10 · LAST REVIEW 95/100</span></div></div>
+   </div>
+   <div class="frame-navigation" id="frameNavigation" hidden><span>FRAME PAN</span><button type="button" id="scrollLeft" aria-label="Scroll artwork left">←</button><button type="button" id="scrollRight" aria-label="Scroll artwork right">→</button><button type="button" id="scrollUp" aria-label="Scroll artwork up">↑</button><button type="button" id="scrollDown" aria-label="Scroll artwork down">↓</button></div>
+   <p class="sr-only" id="renderAnnounce" role="status" aria-live="polite" aria-atomic="true"></p>
+  </div>
+  <aside aria-label="Viewer controls">
+   <div class="asidehead"><span class="kicker">VIEWFINDER</span><span class="numeral">I</span></div>
+   <div class="control-group"><h2>Camera studies</h2><div id="poses" role="group" aria-label="Camera presets"></div><p id="caption" class="caption" aria-live="polite"></p>
+   <div class="twobuttons"><button id="recenter" type="button">Recenter</button><button id="pause" type="button" aria-pressed="false">Pause motion</button></div></div>
+   <div class="control-group"><h2>Presentation</h2><label for="orientation">Format</label><select id="orientation"><option value="portrait">Portrait</option><option value="landscape">Landscape</option></select>
+   <label for="resolution">Resolution</label><select id="resolution"><option value="studio">Studio · 900 × 1200</option><option value="480">480p · 480 × 854</option><option value="1280">720p · 720 × 1280</option><option value="1080">1080p · 1080 × 1920</option><option value="2k">DCI 2K · 1080 × 2048</option><option value="4k">UHD 4K · 2160 × 3840</option></select><button id="wideHero" class="widescreen" type="button">Hero · 1920 × 1080 ↗</button><label class="fit-label" for="fitPreview"><input type="checkbox" id="fitPreview"> Fit preview to window</label><p class="subtle" id="sizeReadout">Canvas: 900 × 1200 px</p><button id="savePNG" class="widescreen" type="button" disabled>Save artwork PNG ↓</button><p id="saveStatus" class="subtle" role="status"></p>
+   </div>
+   <div class="control-group engine"><h2>Render engine</h2><div class="engine-line"><span class="dot"></span><span id="engine">Starting WebGPU</span></div><button id="engineSwitch" type="button" disabled>Switch renderer</button></div>
+   <div class="control-group key"><h2>Field guide</h2><p id="viewHelp">Drag to orbit. Scroll or pinch to zoom. Use Pan mode or press Esc from the scene to scroll the frame or page. On the scene, use arrow keys to orbit, + / − to zoom, and Home to reset.</p></div>
+  </aside>
+ </div>
+</main>
+<footer><span>NIGHT STUDIES</span><span>END OF PLATE&nbsp; / &nbsp;01</span></footer>
+<noscript>Enable JavaScript to view the interactive rooftop scene.</noscript>
+<script type="module">
+import('./viewer.js').catch(() => {
+ const find=id=>document.getElementById(id);
+ const message='Some scene files did not load. Reload this page. If it still fails, open the complete Night Studies folder through your local server.';
+ find('gate').hidden=false;
+ find('gateTitle').textContent='Scene files unavailable';
+ find('gateNote').textContent=message;
+ find('fallback').hidden=true;
+ find('gateRetry').hidden=true;
+ find('panToggle').hidden=true;
+ find('engine').textContent=find('engineChip').textContent='Scene files unavailable';
+ find('renderAnnounce').textContent=message;
+ const reload=find('reloadApp');
+ reload.hidden=false;
+ reload.addEventListener('click',()=>location.reload(),{once:true});
+});
+</script></body></html>
