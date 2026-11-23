@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#121725">
+  <meta name="description" content="The Empty Stop, a one-minute speculative anime film about who gets remembered when the world gets smarter.">
+  <title>The Empty Stop | An After AGI short</title>
+  <style>
+    :root{color-scheme:dark;--night:#121725;--shadow:#080d18;--text:#f8efd9;--muted:#b4c5d7;--line:#5e6b7c;--gold:#ffcf88;--panel:#1e293b}
+    *,*::before,*::after{box-sizing:border-box}
+    body{margin:0;min-width:0;min-height:100vh;background:radial-gradient(ellipse at 80% 0%,#30425a 0,transparent 42%),linear-gradient(168deg,var(--night),var(--shadow));color:var(--text);font:1rem/1.55 system-ui,sans-serif}
+    main{width:min(100% - 2rem,67rem);margin:auto;padding:clamp(2rem,6vw,5rem) 0 2.6rem}
+    .signal{display:flex;align-items:center;gap:.6rem;color:var(--gold);font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+    .signal::before{content:"";width:.63rem;height:.63rem;border:1px solid #ffe0aa;background:var(--gold);box-shadow:0 0 1rem #edaa64;border-radius:50%}
+    h1{margin:.65rem 0 .5rem;font:normal clamp(2.75rem,9vw,6.5rem)/.92 Georgia,serif;letter-spacing:-.05em;text-wrap:balance}
+    .lede{margin:1.2rem 0 0;max-width:53ch;color:var(--muted);text-wrap:pretty}
+    .screening{margin-top:clamp(1.8rem,4vw,3rem)}
+    .bar{display:flex;gap:.7rem 1rem;justify-content:space-between;align-items:center;flex-wrap:wrap;margin:0 0 .65rem}
+    .bar p{margin:0;color:var(--muted);font-size:.86rem}
+    .switches{display:flex;gap:.45rem}
+    .switches[hidden]{display:none}
+    button{min-height:44px;padding:.4rem .8rem;color:var(--muted);background:var(--panel);border:1px solid var(--line);border-radius:.4rem;font:inherit;font-size:.86rem;cursor:pointer}
+    button[aria-pressed=true]{color:var(--shadow);background:var(--gold);border-color:var(--gold);font-weight:700}
+    button:hover:not([aria-pressed=true]){color:var(--text);border-color:var(--text)}
+    a:focus-visible,button:focus-visible,video:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+    .stage{background:#070a10;border:1px solid var(--line);border-radius:.75rem;display:grid;place-items:center;overflow:clip;padding:0}
+    .stage video{display:block;width:100%;height:auto;aspect-ratio:8/5;max-height:80svh;object-fit:contain;background:#070a10}
+    .stage video:focus-visible{outline-offset:-4px}
+    .stage[data-format=portrait] video{aspect-ratio:5/6;width:min(100%,64svh);max-height:77svh}
+    .direct{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:.9rem 0 0;color:var(--muted);font-size:.85rem}
+    a{color:var(--text);text-decoration-color:var(--gold);text-underline-offset:.22em}
+    a:hover{color:var(--gold)}
+    .direct a{display:inline-flex;align-items:center;min-height:44px}
+    footer{margin-top:2rem;border-top:1px solid var(--line);padding-top:1.2rem;color:var(--muted);font-size:.85rem}
+    footer p{margin:0}
+    @media(max-width:32rem){main{width:calc(100% - 1.5rem)}.bar{align-items:start;flex-direction:column}.stage[data-format=portrait] video{width:min(100%,64svh)}}
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="signal">After AGI</div>
+      <h1>The Empty Stop</h1>
+      <p class="lede">On a dangerously hot day, an AI helps a teenager fix a fan and a dispatcher plan cooling routes. The technology can spot a missing stop. It takes people to put it back on the map.</p>
+    </header>
+    <section class="screening" aria-label="Watch the film">
+      <div class="bar">
+        <p>60 seconds · Two independently framed cuts</p>
+        <div class="switches" role="group" aria-label="Film format" hidden>
+          <button type="button" aria-pressed="true" aria-controls="film" data-format="landscape">Landscape</button>
+          <button type="button" aria-pressed="false" aria-controls="film" data-format="portrait">Portrait</button>
+        </div>
+      </div>
+      <div class="stage" data-format="landscape">
+        <video id="film" controls playsinline preload="none" tabindex="0" aria-label="The Empty Stop, landscape cut" src="the-empty-stop-1600x1000.mp4"
+          data-landscape-poster="poster-1600x1000.jpg" data-portrait-poster="poster-1000x1200.jpg" poster="poster-1600x1000.jpg">
+          Your browser does not support embedded video. Use the MP4 links below.
+        </video>
+      </div>
+      <div class="direct">
+        <a data-source="landscape" href="the-empty-stop-1600x1000.mp4">Open landscape MP4 (1600 × 1000)</a>
+        <a data-source="portrait" href="the-empty-stop-1000x1200.mp4">Open portrait MP4 (1000 × 1200)</a>
+      </div>
+    </section>
+    <footer><p>A fictional look at what smarter systems could make possible, and what they can't decide for us.</p><p class="direct"><a href="the-empty-stop-art-and-score.zip" download>Download the authored artwork and score (ZIP)</a></p></footer>
+  </main>
+  <script>
+    (() => {
+      const player = document.querySelector("#film");
+      const stage = document.querySelector(".stage");
+      const switches = document.querySelector(".switches");
+      const options = [...switches.querySelectorAll("button")];
+      const links = Object.fromEntries([...document.querySelectorAll("[data-source]")].map(a => [a.dataset.source, a.href]));
+      const posters = { landscape: player.dataset.landscapePoster, portrait: player.dataset.portraitPoster };
+      const select = format => {
+        if (stage.dataset.format === format) return;
+        player.pause();
+        if (posters[format]) player.setAttribute("poster",posters[format]);
+        else player.removeAttribute("poster");
+        player.src = links[format];
+        player.setAttribute("aria-label","The Empty Stop, " + format + " cut");
+        stage.dataset.format = format;
+        for (const button of options) button.setAttribute("aria-pressed", String(button.dataset.format === format));
+      };
+      for (const button of options) button.addEventListener("click", () => select(button.dataset.format));
+      switches.hidden = false;
+    })();
+  </script>
+</body>
+</html>
