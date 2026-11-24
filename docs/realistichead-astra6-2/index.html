@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f6f5f2"><title>Pearl / Portrait study No. 01</title><link rel="stylesheet" href="./viewer.css"></head>
+<body>
+<header class="masthead"><div class="identity"><span class="mark" aria-hidden="true"><i></i><i></i><i></i></span>FORM ATLAS</div><span class="mast-divider"></span><span class="folio">Digital sculpture archive</span><span class="edition">FIELD SERIES &nbsp; / &nbsp; 001</span></header>
+<main>
+<div class="rail"><section class="intro"><div class="eyebrow"><span></span> PORTRAIT STUDY Nº 01</div><h1>Pearl<span>.</span></h1><p>A procedural portrait in chestnut, porcelain and pearl.</p></section>
+<nav class="toolbar" aria-label="Portrait controls"><div class="presets" id="presets" aria-label="Camera views">
+<button data-shot="front" class="active" aria-pressed="true">Front</button><button data-shot="threequarter" aria-pressed="false">Three-quarter</button><button data-shot="profile" aria-pressed="false">Profile</button><button data-shot="back" aria-pressed="false">Reverse</button><button data-shot="detail" aria-pressed="false">Detail</button>
+</div><button class="settings-toggle" id="settingsToggle" aria-expanded="false" aria-controls="settings"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.35" aria-hidden="true"><path d="M1 4h4m4 0h6M1 12h8m4 0h2"/><circle cx="7" cy="4" r="2"/><circle cx="11" cy="12" r="2"/></svg>Settings</button></nav>
+<div class="settings" id="settings" hidden><label>Renderer<select id="backend"><option value="webgpu">WebGPU · preferred</option><option value="webgl2">WebGL 2</option></select></label><label>Resolution<select id="resolution"><option value="480">480 p</option><option selected value="studio">900 × 1200 · studio</option><option value="1080">1080 p</option><option value="1280">1280 p</option><option value="2k">2K</option><option value="4k">4K</option></select></label><label>Format<select id="orientation"><option value="portrait">Portrait</option><option value="landscape">Landscape</option></select></label><button class="plain" id="reset">Reset view</button></div>
+</div><div class="work-area"><div class="stage-label"><span><b>GPT-6.2 Astra</b> <span class="slash">/</span> Original 3D sculpture</span><span class="live"><i></i><span id="renderState" aria-live="polite">Preparing renderer</span></span></div>
+<div id="scrollFrame"><div id="artboard"><canvas id="portrait" width="900" height="1200" tabindex="0" aria-label="Interactive three-dimensional pearl portrait. Drag to orbit. Scroll or pinch to zoom. Arrow keys rotate."></canvas>
+<aside id="notice" role="status"><span class="eyebrow">RENDERER</span><h2 id="noticeTitle">Preparing the studio</h2><p id="noticeText">Building the portrait and its lighting.</p><button id="fallback" hidden>Use WebGL 2 instead</button></aside><div class="plate"><span>STUDY 001</span><span id="grade">Iteration 01 · review pending</span></div>
+</div></div>
+<footer><span>DRAG TO ORBIT <i>·</i> SCROLL TO ZOOM</span><span id="dimensions">900 × 1200 PX</span></footer></div>
+</main><script type="module" src="./viewer.js"></script></body></html>
