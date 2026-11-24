@@ -17,3 +17,5 @@ body:not(.clean) .settings{gap:9px 13px}
 body:not(.clean) .settings select{max-width:195px}
 }
 @media(min-width:900px) and (max-width:1199px){.intro{padding:16px 0 7px;display:grid;grid-template-columns:auto 1fr;gap:3px 23px;align-items:baseline}.intro .eyebrow{grid-column:1/-1}.intro h1{font-size:51px;margin:2px 0}.intro p{font-size:13px}.toolbar{padding:9px 0}.masthead{height:50px}.stage-label{padding:11px 0}}
+
+.release-media{display:flex;align-items:center;flex-wrap:wrap;gap:12px 24px;margin:24px 0 8px;padding:16px 0;border-top:1px solid var(--hairline);font:13px/1.5 system-ui,sans-serif}.release-media span{font-size:10px;letter-spacing:.17em;color:var(--muted)}.release-media a{color:var(--ink);text-underline-offset:4px}.clean .release-media{display:none}
